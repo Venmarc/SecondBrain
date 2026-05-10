@@ -1,0 +1,15 @@
+# Obsidian settings - ignore device-specific stuff
+.obsidian/workspace.json
+.obsidian/workspaces.json
+.obsidian/app.json
+.obsidian/cache/
+.obsidian/workspace-mobile.json
+
+# Optional but recommended
+.DS_Store
+Thumbs.db
+*.log
+
+# Large media (we can adjust later)
+Assets/*.mp4
+Assets/*.mov
