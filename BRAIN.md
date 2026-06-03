@@ -20,7 +20,19 @@
 - Suggest relevant links to existing notes.
 - Create or update Skill pages from agent chats, screenshots, or new learnings.
 
-**Current Main Project**: [[01-Projects/Tempire/Tempire|Tempire]] - Premium digital marketplace for templates, prompts, UI kits.
+Processing Prompt:
+	I have raw content from my Obsidian Inbox. Process it according to my BRAIN.md rules.
+
+	Content:
+	[paste everything here]
+
+	Do the following:
+	1. Suggest the best folder and filename for this note.
+	2. Give me the full cleaned-up Markdown version using proper wikilinks where it makes sense.
+	3. Extract any actionable steps for Tempire.
+	4. Suggest 2-3 relevant links to existing notes if possible.
+
+**Current Main Project**: [[01-Projects/Tempire/Logs|Tempire]] - Premium digital marketplace for templates, prompts, UI kits.
 
 ---
 Last updated: {{date:2026-06-03}}

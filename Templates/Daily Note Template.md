@@ -1,20 +1,23 @@
-
 # Daily Note - {{date:YYYY-MM-DD}}
 
-## Tempire Focus
-- Main goal today:
+**Project Focus:** [[01-Projects/Tempire/Logs|Tempire]]
 
-## What I Did
+## Today's Goal
+- 
+
+## What I Worked On
 - 
 
 ## Key Learnings / Insights
 - 
 
-## Inbox Items to Process
+## Agent / Gemini / Grok / AI Highlights
+- 
+
+## Inbox Items Processed
 - 
 
 ## Next Actions
 - 
 
-## Links
-- [[ ]]
+**Tags:** #daily 
