@@ -34,5 +34,8 @@ Processing Prompt:
 
 **Current Main Project**: [[01-Projects/Tempire/Logs|Tempire]] - Premium digital marketplace for templates, prompts, UI kits.
 
+# Important
+When ingesting or querying, if information is missing/ambiguous, ask the user targeted clarification questions before finalizing updates. Then incorporate answers into their respective files or folders.
+
 ---
 Last updated: {{date:2026-06-03}}
