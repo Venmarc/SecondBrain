@@ -1,6 +1,6 @@
 # BRAIN INSTRUCTIONS - Second Brain
 
-**Purpose**: This is my central knowledge hub for building Tempire.xyz and compounding my learning as a coder/creator.
+**Purpose**: This is my central knowledge hub for building my projects and compounding my learning as a coder/creator.
 
 ## Core Rules
 - Use PARA structure: Projects, Areas, Resources, Archive + Inbox for raw capture.
