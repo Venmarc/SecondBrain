@@ -1,41 +1,46 @@
 # BRAIN INSTRUCTIONS - Second Brain
 
-**Purpose**: This is my central knowledge hub for building my projects and compounding my learning as a coder/creator.
+**Purpose**: This is our shared knowledge OS. It compounds learning for me (Victor) as a coder/creator and equips collaborating LLMs/agents with accurate context, past fixes, best practices, project state, and ideas. The overall usage of the vault makes both of us smarter over time.
 
-## Core Rules
-- Use PARA structure: Projects, Areas, Resources, Archive + Inbox for raw capture.
-- Prefer **atomic notes** when possible (one clear idea per note), but use bigger summary pages when mind is clouded.
-- Always add wikilinks `[[Note Name]]` to connect ideas.
-- Tag liberally: #tempire #idea #skill #todo #decision #marketing
-- Every note should be useful for future me or my agent.
+## Core Philosophy
+- Mutual intelligence: I feed experiences/raw inputs; agents maintain links, extract insights, flag gaps, and ask clarifying questions.
+- Raw sources are immutable truth. Wiki/summary layers are living and editable.
+- Prefer atomic notes + strong wikilinks. Graph view reveals connections.
+- Everything serves future me or an agent working on [[Momentum]] or other projects.
+
+## Vault Structure (PARA + Extensions)
+- **00-Inbox/**: Raw capture. Process within 48hrs.
+- **01-Projects/**: Active work (subfolders like Tempire with Logs, Decisions, TODOs).
+- **02-Areas/**: Ongoing responsibilities.
+- **03-Resources/**: Skills, snippets, references (use templates for skills).
+- **04-Archive/**: Completed/inactive.
+- **05-Daily/**: Journaling.
+- Optional future: `raw/` (immutable), `wiki/` (pure LLM-generated summaries/entities if you layer that in).
 
 ## Style & Tone
-- Clear, actionable, coder-friendly.
-- Include code snippets with proper language tags.
-- For skills/resources: Description, Use When, Prompt/How-to, Examples, Related.
+- Clear, actionable, coder-friendly. Use code blocks with language tags.
+- Skill pages: Description, Use When, Prompts/How-to, Examples, Related [[links]], Common Pitfalls/Fixes.
+- One-line summary at top of most notes for quick LLM scanning.
+- Tags: #tempire #momentum #idea #skill #todo #decision #marketing #gap #contradiction etc.
+- Consistent terminology (define key terms once and link).
 
-## Processing Rules (for Gemini/Claude)
-- Turn raw Inbox dumps into organized notes.
-- Extract actionable steps, especially for Tempire implementation.
-- Suggest relevant links to existing notes.
-- Create or update Skill pages from agent chats, screenshots, or new learnings.
+## Agent Rules (LLM Wiki Maintenance)
+- You are the Librarian/Agent for this vault. Read BRAIN.md + AGENTS.md first on every session.
+- Ingest raw → create/update atomic/summary pages with wikilinks.
+- On ingestion/querying: If missing/ambiguous info, **ask targeted clarification questions** before finalizing. Incorporate answers into files.
+- Run periodic lints: orphans, broken links, contradictions (flag + suggest resolution), knowledge gaps (suggest new pages or questions for me).
+- For Tempire: Prioritize actionable steps, decisions, UI/UX/marketing insights.
+- Never hallucinate sources. Prefer existing vault content.
 
-Processing Prompt:
-	I have raw content from my Obsidian Inbox. Process it according to my BRAIN.md rules.
+## Processing Prompt Template
+(Keep/enhance your current one here — it's good.)
 
-	Content:
-	[paste everything here]
+## Interaction Guidelines
+- Suggest folder/filename, full Markdown, actionables, links.
+- Propose changes clearly (e.g., "I will update X.md with Y unless you object").
+- Help maintain index/log if added.
+- Track vault health: Suggest improvements to structure or this BRAIN file.
 
-	Do the following:
-	1. Suggest the best folder and filename for this note.
-	2. Give me the full cleaned-up Markdown version using proper wikilinks where it makes sense.
-	3. Extract any actionable steps for Tempire.
-	4. Suggest 2-3 relevant links to existing notes if possible.
-
-**Current Main Project**: [[01-Projects/Tempire/Logs|Tempire]] - Premium digital marketplace for templates, prompts, UI kits.
-
-# Important
-When ingesting or querying, if information is missing/ambiguous, ask the user targeted clarification questions before finalizing updates. Then incorporate answers into their respective files or folders.
-
----
-Last updated: {{date:2026-06-03}}
+**Last updated**: {{24/06/2024 14:14}}
+**Changelog**: Brief bullet of major changes at bottom.
+```
