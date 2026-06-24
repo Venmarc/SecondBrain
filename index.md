@@ -5,26 +5,26 @@
 ---
 
 ## 🧭 Quick Navigation
-- 🧠 **[BRAIN.md](file:///home/redmane/Documents/SecondBrain/BRAIN.md)** — Core vault philosophies, style guides, and templates.
-- ⚙️ **[AGENTS.md](file:///home/redmane/Documents/SecondBrain/AGENTS.md)** — Detailed agent job instructions, PARA guidelines, and workflows.
-- 📝 **[CHANGELOG.md](file:///home/redmane/Documents/SecondBrain/CHANGELOG.md)** — Append-only log of vault updates and structural changes.
+- 🧠 **[[BRAIN|BRAIN.md]]** — Core vault philosophies, style guides, and templates.
+- ⚙️ **[[AGENTS|AGENTS.md]]** — Detailed agent job instructions, PARA guidelines, and workflows.
+- 📝 **[[CHANGELOG|CHANGELOG.md]]** — Append-only log of vault updates and structural changes.
 
 ---
 
 ## ⚡ Active Projects (01-Projects)
 - 🔥 **[[01-Projects/Tempire/Tempire|Tempire]]** — Digital marketplace for creators (UI/UX polish phase, 89% complete).
-  - *Docs:* [Decisions](file:///home/redmane/Documents/SecondBrain/01-Projects/Tempire/Decisions.md) | [Logs](file:///home/redmane/Documents/SecondBrain/01-Projects/Tempire/Logs.md) | [TODO](file:///home/redmane/Documents/SecondBrain/01-Projects/Tempire/TODO.md)
-  - *Build Journey:* [Notes](file:///home/redmane/Documents/SecondBrain/01-Projects/Tempire/Notes.md)
-- 🌱 **[Momentum](file:///home/redmane/Documents/SecondBrain/01-Projects/Momentum)** — Adaptive fitness/habits operating system (Active focus).
-  - *Docs:* [PRD](file:///home/redmane/Documents/SecondBrain/01-Projects/Momentum/Docs/PRD.md) | [TRD](file:///home/redmane/Documents/SecondBrain/01-Projects/Momentum/Docs/TRD.md) | [SCHEMA](file:///home/redmane/Documents/SecondBrain/01-Projects/Momentum/Docs/SCHEMA.md) | [PHASES](file:///home/redmane/Documents/SecondBrain/01-Projects/Momentum/Docs/PHASES.md) | [DEV_NOTES](file:///home/redmane/Documents/SecondBrain/01-Projects/Momentum/Docs/DEV_NOTES.md)
-  - *Build Journey:* [Notes](file:///home/redmane/Documents/SecondBrain/01-Projects/Momentum/Notes.md) (Victor's personal log).
+  - *Docs:* [[01-Projects/Tempire/Decisions|Decisions]] | [[01-Projects/Tempire/Logs|Logs]] | [[01-Projects/Tempire/TODO|TODO]]
+  - *Build Journey:* [[01-Projects/Tempire/Notes|Notes]]
+- 🌱 [[01-Projects/Momentum/Docs/PRD|Momentum]] — Adaptive fitness/habits operating system (Active focus).
+  - *Docs:* [[01-Projects/Momentum/Docs/PRD|PRD]] | [[01-Projects/Momentum/Docs/TRD|TRD]] | [[01-Projects/Momentum/Docs/PAGE_SPECS|PAGE_SPECS]] | [[01-Projects/Momentum/Docs/APP_FLOW|APP_FLOW]] | [[01-Projects/Momentum/Docs/UIUX_BRIEF|UIUX_BRIEF]] | [[01-Projects/Momentum/Docs/SCHEMA|SCHEMA]] | [[01-Projects/Momentum/Docs/PHASES|PHASES]] | [[01-Projects/Momentum/Docs/DEV_NOTES|DEV_NOTES]]
+  - *Build Journey:* [[01-Projects/Momentum/Notes|Notes]] (Victor's personal log).
 
 ---
 
 ## 🗂️ Ongoing Areas (02-Areas)
-- 👤 **[Personal Growth](file:///home/redmane/Documents/SecondBrain/02-Areas/Personal-Growth)** — Core identity, working style, and goals.
+- 👤 **[[02-Areas/Personal-Growth/RedMane|Personal Growth]]** — Core identity, working style, and goals.
   - *Main Profile:* **[[02-Areas/Personal-Growth/RedMane|RedMane (Victor Mario)]]** (Consolidated user profile and agent instructions stack).
-- 📹 **[Content Creation](file:///home/redmane/Documents/SecondBrain/02-Areas/Content-Creation)** — Short-form clipping, strategy, and setup.
+- 📹 **[[02-Areas/Content-Creation/Content-Creation|Content Creation]]** — Short-form clipping, strategy, and setup.
   - *Overview:* [[02-Areas/Content-Creation/Content-Creation-Overview|Content Creation Overview]]
 
 ---
@@ -41,7 +41,7 @@
 ## 🩺 Vault Health & Maintenance
 - **Last Full Audit**: 2026-06-24
 - **Active Reports**:
-  - 📋 **[LINT-REPORT.md](file:///home/redmane/Documents/SecondBrain/LINT-REPORT.md)** — Vault health check report detailing links, orphans, standard doc gaps, and style consistency.
+  - 📋 **[[LINT-REPORT|LINT-REPORT.md]]** — Vault health check report detailing links, orphans, standard doc gaps, and style consistency.
 - **Knowledge Gaps & TODOs**:
   - [x] Set up Defuddle scraping skills guide.
   - [x] Complete first automated lint run.

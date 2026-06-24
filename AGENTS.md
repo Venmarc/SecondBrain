@@ -24,6 +24,7 @@ The vault is structured according to the PARA method, evolved lightly with a hyb
 - **Keep index and changelog current**: Update [index.md](file:///home/redmane/Documents/SecondBrain/index.md) and [CHANGELOG.md](file:///home/redmane/Documents/SecondBrain/CHANGELOG.md) upon any structural modification.
 - **Surgical edits**: Minimize changes to existing human-authored text; append or update specific sections, keeping one-line summaries at the top.
 - **No Agent-Specific Hardcoding**: Do not write instructions or rules that assume only one specific AI client is running.
+- **Empty Directory Placeholders**: Git does not track empty directories. Whenever creating a new empty folder that needs to be preserved in the repository, create a `.gitkeep` file inside it to ensure it is committed.
 
 ---
 

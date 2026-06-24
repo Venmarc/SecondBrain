@@ -5,7 +5,7 @@
 ## 📊 Summary Statistics
 - **Total Markdown Notes**: 39
 - **Broken Wikilinks**: 0
-- **Orphan Notes**: 14
+- **Orphan Notes**: 4
 - **Inbox Backlog Items**: 0
 
 ## 🔗 1. Broken Wikilinks
@@ -13,20 +13,10 @@
 
 ## 🕸️ 2. Orphan Notes
 The following files have no incoming links pointing to them:
-- [[01-Projects/Tempire/Notes.md]]
-- [[01-Projects/Momentum/Notes.md]]
 - [[01-Projects/Momentum/Momentum-original.md]]
-- [[01-Projects/Momentum/Docs/PAGE_SPECS.md]]
-- [[01-Projects/Momentum/Docs/PHASES.md]]
-- [[01-Projects/Momentum/Docs/APP_FLOW.md]]
-- [[01-Projects/Momentum/Docs/SCHEMA.md]]
-- [[01-Projects/Momentum/Docs/DEV_NOTES.md]]
-- [[01-Projects/Momentum/Docs/UIUX_BRIEF.md]]
-- [[01-Projects/Momentum/Docs/TRD.md]]
 - [[05-Daily/2026-05-11.md]]
 - [[05-Daily/2026-06-03.md]]
 - [[03-Resources/Code-Snippets/Supabase/Git-Recovery-Power-Loss.md]]
-- [[02-Areas/Content-Creation/Content-Creation.md]]
 
 ## 📥 3. Inbox & Clippings Backlog
 ✅ Inbox and Clippings are clean!
