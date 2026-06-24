@@ -6,7 +6,7 @@ Not started. Thinking stage only.
 ## The Opportunity (from X, 2026-06-03)
 World Cup 2026 runs June 11 – July 19. Short-form clipping (TikTok, IG Reels, YouTube Shorts) of highlights, reactions, and drama. Pay-per-view through platforms like Whop and Reach + platform monetization.
 
-Full breakdown → [[03-Resources/Saved-Threads/World-Cup-Clipping-Guide]]
+Full breakdown → [[04-Archive/World-Cup-Clipping/World-Cup-Clipping-Guide]]
 
 ## Tools Mentioned
 - CapCut (free editing)
@@ -23,7 +23,7 @@ Raw repost = flagged. Add commentary, text overlay, or analysis = generally safe
 - Which platform first?
 
 ## Related
-- [[02-Areas/Exams/Exam-Schedule]] — conflict window
-- [[03-Resources/Saved-Threads/World-Cup-Clipping-Guide]]
+- [[04-Archive/Exams/Exam-Schedule]] — conflict window
+- [[04-Archive/World-Cup-Clipping/World-Cup-Clipping-Guide]]
 
 **Tags:** #content-creation #area #idea

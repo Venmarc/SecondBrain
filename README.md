@@ -3,30 +3,26 @@
 > "Build your empire, one template at a time." — Tempire
 
 ## What This Is
-My personal knowledge OS. Everything I learn, build, and ship lives here. Powered by PARA + atomic notes + agent-ready skill pages.
+This is my personal knowledge OS and Second Brain. It contains everything I learn, build, and ship. It is structured around the PARA method and designed to collaborate cleanly with AI coding agents and human reviewers.
+
+For the developer/agent hub, see **[[index|index.md]]**.
 
 ## Current Focus
-- 🔥 **[[01-Projects/Tempire/Tempire|Tempire]]** — Premium digital marketplace. 89% done. UI/UX polish phase.
-- 📚 **[[02-Areas/Exams/Exam-Schedule|Exams]]** — 1/8 papers done. Last paper: June 19.
-- 🌱 **[[01-Projects/Momentum-Wellness/Momentum-Wellness|Momentum Wellness]]** — Wellness tracker. Setup done, paused.
+- 🔥 **[[01-Projects/Tempire/Tempire|Tempire]]** — Premium digital marketplace for creators. (UI/UX polish phase, 89% complete).
+- 🌱 **[[01-Projects/Momentum/Docs/PRD|Momentum]]** — Adaptive habits, fitness, and wellness logging operating system. (Active development phase).
 
-## Navigate
-| Folder | Purpose |
-|--------|---------|
-| [[00-Inbox/]] | Raw captures. Processed within 48hrs. |
-| [[01-Projects/]] | Active projects with logs, decisions, TODOs. |
-| [[02-Areas/]] | Ongoing responsibilities (no end date). |
-| [[03-Resources/]] | Skills, snippets, design refs, saved threads. |
-| [[04-Archive/]] | Dead things. Out of sight. |
-| [[05-Daily/]] | Daily notes. |
+## Vault Structure (PARA)
+- **[[00-Inbox/]]** — Inbox capture layer for temporary notes and web clips.
+- **[[01-Projects/]]** — Active projects with standardized documentation (9-Doc standard).
+- **[[02-Areas/]]** — Ongoing responsibilities (Personal Growth, Health, Content Creation).
+- **[[03-Resources/]]** — General interests, design references, saved threads, and technical skills.
+- **[[04-Archive/]]** — Completed projects, archived exams, and closed-window clippings.
+- **[[05-Daily/]]** — Log journals and chronological notes.
 
-## My Weaknesses (Actively Fixing)
-- UI/UX Design → [[03-Resources/Skills/Agent-Prompting-Masterclass]]
-- Prompting / AI Workflows → [[03-Resources/Skills/Agent-Prompting-Masterclass]]
-- SEO / Marketing → [[03-Resources/SEO-Marketing/]]
-
-## Processing Rule
-Every Inbox item gets processed within 48hrs using the prompt in [[BRAIN]].
+## Personal Learning Focus
+- UI/UX Design ➔ [[03-Resources/Skills/Agent-Prompting-Masterclass]]
+- Prompting & Agent Workflows ➔ [[03-Resources/Skills/Agent-Prompting-Masterclass]]
+- SEO & Marketing ➔ [[03-Resources/SEO-Marketing/]]
 
 ---
-*Last updated: 2026-06-03*
+*Last updated: 2026-06-24*

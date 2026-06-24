@@ -25,6 +25,6 @@ The value-add is the protection.
 June 11 – July 19, 2026. That's the big opportunity if content creation starts.
 
 ## Related
-- [[03-Resources/Saved-Threads/World-Cup-Clipping-Guide|World Cup Clipping Guide]] — the X thread breakdown
+- [[04-Archive/World-Cup-Clipping/World-Cup-Clipping-Guide|World Cup Clipping Guide]] — the X thread breakdown
 
 **Tags:** #content #area #clipping #youtube
