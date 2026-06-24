@@ -14,7 +14,7 @@
 - Category counters still showing mock data
 - Identified root cause of agent output quality issue: prompts, not tools. Grok confirmed.
 
-**Decisions:** None new. See [[Decisions#Pending]].
+**Decisions:** None new. See [[01-Projects/Tempire/Decisions#Pending|Decisions#Pending]].
 **Next:** UI/UX overhaul using proper agent prompting strategy from [[03-Resources/Skills/Agent-Prompting-Masterclass]]
 
 ---
@@ -31,7 +31,8 @@
 - Drafted product-marketing-context.md (paused)
 
 **Key learning:** Git reflogs save your life in power-unstable environments. Always.
-**Decisions:** [[Decisions#File Downloads Proxy]], [[Decisions#Wishlist Supabase-backed]]
+**Decisions:** [[01-Projects/Tempire/Decisions#File Downloads Proxy|Decisions#File Downloads Proxy]], [[01-Projects/Tempire/Decisions#Wishlist Supabase-backed|Decisions#Wishlist Supabase-backed]]
+
 
 ---
 

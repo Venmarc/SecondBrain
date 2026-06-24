@@ -1,19 +1,22 @@
 # Exam Schedule 2026
 
-**Status:** 1/8 papers done. Last paper: June 19.
+> **One-line Summary**: Academic exam timetable and study strategy tracker for Victor's 2026 university semester, archived upon completion.
+
+**Status:** 8/8 papers done. Last paper: June 19.
 **Tool:** NotebookLM for study sessions.
 
 ## Papers
 | # | Subject | Date | Status |
 |---|---------|------|--------|
 | 1 | CSC 221 | 02/06/2026 | ✅ Done |
-| 2 | CSC 222 | 04/06/2026 | ⬜ |
-| 3 | CSC 226 | 09/06/2026 | ⬜ |
-| 4 | STA 224 | 11/06/2026 | ⬜ |
-| 5 | MTH 222 | 16/06/2026 | ⬜ |
-| 6 | PHY 222 | 17/06/2026 | ⬜ |
-| 7 | GNT 221 | 18/06/2026 | ⬜ |
-| 8 | MTH 221 | 19/06/2026 | ⬜ |
+| 2 | CSC 222 | 04/06/2026 | ✅ Done |
+| 3 | CSC 226 | 09/06/2026 | ✅ Done |
+| 4 | STA 224 | 11/06/2026 | ✅ Done |
+| 5 | MTH 222 | 16/06/2026 | ✅ Done |
+| 6 | PHY 222 | 17/06/2026 | ✅ Done |
+| 7 | GNT 221 | 18/06/2026 | ✅ Done |
+| 8 | MTH 221 | 19/06/2026 | ✅ Done |
+
 
 > Fill in subject names and dates as they're confirmed.
 

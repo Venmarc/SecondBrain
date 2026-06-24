@@ -8,6 +8,9 @@ description: A convo with grok on error page best practices, and Canva color con
 tags:
   - clippings
 ---
+
+> **One-line Summary**: Raw grok conversation clipping discussing Next.js error page design and Canva color rendering issues, processed into [[03-Resources/Skills/Error-Pages-and-Canva-Colors|Error Page & Canva Color Conversion Guide]].
+
 (user)
 How is a 404 not-found page supposed to behave? What's it supposed to do? Any extra functions or should it just be simple? Should it have any buttons? Any other thing I should know? Best practices? Even worst practices? What to avoid? If an app uses sidebar navigation, should the page have the sidebar, or just have an array of links describing where to go?
 

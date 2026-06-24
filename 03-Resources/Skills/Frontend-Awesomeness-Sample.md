@@ -1,4 +1,6 @@
-# Skill: Frontend Awesomeness 
+# Skill: Frontend Awesomeness (Sample)
+
+> **One-line Summary**: Sample prompts and practical examples demonstrating the application of the Frontend Awesomeness skill rules.
 
 ## Description
 A baseline prompt to make my agent design better
@@ -55,6 +57,6 @@ Combine the master prompt with these.
 The real secret is explicitly banning mediocrity (“no generic AI slop”, “feels magical”, “ex-Principal level”) + forcing comparison to top-tier products. This dramatically raises the agent’s output quality.
 
 ## Related Skills
-- [[ ]]
+- [[03-Resources/Skills/Frontend-Awesomeness|Frontend Awesomeness Skill]]
 
-**Tags:** #skill 
+**Tags:** #skill #sample #frontend #design #ui-ux

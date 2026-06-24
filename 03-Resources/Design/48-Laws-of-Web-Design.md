@@ -1,5 +1,7 @@
 # Resource: 48 Laws of Web Design
 
+> **One-line Summary**: Aesthetic and design framework checklist for building and reviewing high-fidelity web experiences.
+
 ## Description
 The aesthetic framework Tempire is built on. Referenced in agent skills (ui-ux-pro-max) but not yet documented here. Fills this in as laws are applied and understood.
 

@@ -1,5 +1,7 @@
 # Skill: Agent Prompting Masterclass
 
+> **One-line Summary**: Comprehensive prompt engineering masterclass for eliciting high-quality, professional code from AI agents.
+
 ## Description
 The compiled system for getting non-generic, premium output from AI agents (Antigravity, Claude, Grok). The single biggest lever on output quality is the prompt — not the tool.
 

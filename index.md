@@ -32,6 +32,9 @@
 ## 📚 Resources & Guides (03-Resources)
 - 💾 **[Saved Threads](file:///home/redmane/Documents/SecondBrain/03-Resources/Saved-Threads)** — Curated educational/informational clips.
 - 🛠️ **[Templates](file:///home/redmane/Documents/SecondBrain/Templates)** — Reusable Obsidian structures.
+- ⚙️ **[[03-Resources/Skills/Frontend-Awesomeness|Frontend Awesomeness]]** — Master prompt system for premium UI/UX outputs.
+- 🎨 **[[03-Resources/Skills/Error-Pages-and-Canva-Colors|Error Page & Color Reference]]** — Guidelines for Next.js error page structure and Canva sRGB alignment.
+- 📥 **[[03-Resources/Skills/Defuddle-Clipping|Defuddle Web Ingestion]]** — Guide for using Defuddle CLI to clean and ingest clippings.
 
 ---
 
@@ -40,7 +43,7 @@
 - **Active Reports**:
   - 📋 **[LINT-REPORT.md](file:///home/redmane/Documents/SecondBrain/LINT-REPORT.md)** — Vault health check report detailing links, orphans, standard doc gaps, and style consistency.
 - **Knowledge Gaps & TODOs**:
-  - [ ] Set up Defuddle scraping skills guide.
-  - [ ] Complete first automated lint run.
+  - [x] Set up Defuddle scraping skills guide.
+  - [x] Complete first automated lint run.
 
 **Tags**: #index #hub #navigation

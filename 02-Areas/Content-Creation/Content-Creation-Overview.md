@@ -1,7 +1,9 @@
 # Content Creation — Overview
 
+> **One-line Summary**: Overview of the short-form sports video clipping opportunity during the 2026 World Cup, analyzing tools, copyright rules, and scheduling.
+
 ## Current Status
-Not started. Thinking stage only.
+World Cup is underway (began June 11). Exam season has concluded, shifted focus to launching short-form content.
 
 ## The Opportunity (from X, 2026-06-03)
 World Cup 2026 runs June 11 – July 19. Short-form clipping (TikTok, IG Reels, YouTube Shorts) of highlights, reactions, and drama. Pay-per-view through platforms like Whop and Reach + platform monetization.
@@ -17,10 +19,10 @@ Full breakdown → [[04-Archive/World-Cup-Clipping/World-Cup-Clipping-Guide]]
 ## Key Rule on Copyright
 Raw repost = flagged. Add commentary, text overlay, or analysis = generally safe.
 
-## Decision Needed
-- Start during exams (June 11–19 overlap) or after June 19?
-- Realistic given power instability?
-- Which platform first?
+## Decisions Made
+- Start date: Resolved to start after exams (post-June 19).
+- Platform focus: TikTok & YouTube Shorts first due to reach.
+
 
 ## Related
 - [[04-Archive/Exams/Exam-Schedule]] — conflict window

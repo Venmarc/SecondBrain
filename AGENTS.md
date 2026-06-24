@@ -47,7 +47,7 @@ The vault is structured according to the PARA method, evolved lightly with a hyb
 
 1. **Consult index.md First**: Read the master hub [index.md](file:///home/redmane/Documents/SecondBrain/index.md) to identify relevant entry points.
 2. **Drill Down**: Read specific files identified in the index.
-3. **Synthesize**: Formulate the response with clear wikilink citations (e.g. `[[My-Note]]`).
+3. **Synthesize**: Formulate the response with clear wikilink citations (e.g. `[[index|My-Note]]`).
 4. **Capture Insights**: If the synthesis represents a new useful connection, ask the user if they'd like to save it as a new note in the vault.
 
 ### C. Lint Workflow (Health Check & Gap-Finding)

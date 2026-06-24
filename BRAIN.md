@@ -6,7 +6,7 @@
 - Mutual intelligence: I feed experiences/raw inputs; agents maintain links, extract insights, flag gaps, and ask clarifying questions.
 - Raw sources are immutable truth. Wiki/summary layers are living and editable.
 - Prefer atomic notes + strong wikilinks. Graph view reveals connections.
-- Everything serves future me or an agent working on [[Momentum]] or other projects.
+- Everything serves future me or an agent working on [[01-Projects/Momentum/Docs/PRD|Momentum]] or other projects.
 
 ## Vault Structure (PARA + Extensions)
 - **00-Inbox/**: Raw capture. Process within 48hrs.
@@ -19,9 +19,10 @@
 
 ## Style & Tone
 - Clear, actionable, coder-friendly. Use code blocks with language tags.
-- Skill pages: Description, Use When, Prompts/How-to, Examples, Related [[links]], Common Pitfalls/Fixes.
+- Skill pages: Description, Use When, Prompts/How-to, Examples, Related links, Common Pitfalls/Fixes.
 - One-line summary at top of most notes for quick LLM scanning.
 - Tags: #tempire #momentum #idea #skill #todo #decision #marketing #gap #contradiction etc.
+
 - Consistent terminology (define key terms once and link).
 
 ## Agent Rules (LLM Wiki Maintenance)

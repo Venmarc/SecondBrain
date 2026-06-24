@@ -108,5 +108,9 @@ To resolve this mismatch and achieve color consistency, the deeper hex **`#10B98
 
 ---
 
+## Source Clipping
+- [[04-Archive/Clippings/Error-page and Color Conversion|Original Grok Clipping: Error-page and Color Conversion]]
+
 **Tags**: #skill #nextjs #design #color #canva #error-handling
+
 

@@ -1,5 +1,7 @@
 # Skill: Frontend Awesomeness
 
+> **One-line Summary**: Master prompt system for getting premium, non-generic frontend output from any AI agent.
+
 ## Description
 Master prompt system for getting premium, non-generic frontend output from any AI agent. The antidote to generic AI slop.
 
@@ -40,8 +42,10 @@ Explore 2-3 different approaches, then deliver the strongest one with: why it's 
 ## The Secret
 Explicitly ban mediocrity ("no generic AI slop", "feels magical", "ex-Principal level") + force comparison to top-tier products. This is what raises output quality — not better tools.
 
-## Related Skills
-- [[Agent-Prompting-Masterclass]]
-- [[03-Resources/Design/48-Laws-of-Web-Design]]
+## Related Skills & Samples
+- [[03-Resources/Skills/Agent-Prompting-Masterclass|Agent Prompting Masterclass]]
+- [[03-Resources/Design/48-Laws-of-Web-Design|48 Laws of Web Design]]
+- [[03-Resources/Skills/Frontend-Awesomeness-Sample|Frontend Awesomeness Sample]]
 
 **Tags:** #skill #frontend #design #ui-ux
+
