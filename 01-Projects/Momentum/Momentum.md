@@ -4,7 +4,7 @@
 **Document Type:** Product Requirements Document
 
 **Tagline:** Your personal operating system for habits, fitness, and wellness that actually adapts to your life and shows you why you’re winning or failing.
-**Repo URL:** Github [Momentum](https://github.com/Venmarc/Momentum)
+**Repo URL:** Github [Momentum](https://github.com/Venmarc/Momn)
 **Live URL:** Deployed on Vercel at [Momentum](https://peakmomentum.vercel.app)
 
 ## 1. Vision & Objectives
