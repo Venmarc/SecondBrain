@@ -87,6 +87,7 @@ export default function GlobalError({
 ---
 
 ## 3. Canva vs. Browser Color Rendering Mismatch
+**Using #22C55E for instance**
 
 ### A. The Core Rendering Discrepancy
 The exact same hex color code (e.g., `#22C55E`) displays differently inside Canva compared to a web browser's native HTML/CSS renderer:
