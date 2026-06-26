@@ -14,7 +14,7 @@
 - I had a chat with a bro on theme switching, and my past bad experiences. He said I should build sites with theme switching in mind from the beginning, so as not to run into patchy, black and white UI, and mistakes when I try to implement it later on.
 - Like I mentioned it's a problem I've had in my websites, especially the dark ones. Where I build with dark from the jump, and face problems trying to add theme switching capabilities.
 - The only instance where my fixes and reiteration worked out was my portfolio site. It successfully switches themes, and looks good doing it.
-- I just want to keep this in mind that for future projects, always build with the theme switch in mind from the get-go
+- I just want to keep this in mind that for future projects, always build with the theme switch as a foundation from the get-go
 
 ## Agent / Gemini / Grok / AI Highlights
 - None atm. Just a chat with another person

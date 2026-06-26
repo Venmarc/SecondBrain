@@ -13,7 +13,7 @@
 
 ## ⚡ Active Projects (01-Projects)
 - 🔥 **[[01-Projects/Tempire/Tempire|Tempire]]** — Digital marketplace for creators (UI/UX polish phase, 89% complete).
-  - *Docs:* [[01-Projects/Tempire/Decisions|Decisions]] | [[01-Projects/Tempire/Logs|Logs]] | [[01-Projects/Tempire/TODO|TODO]]
+  - *Docs:* [[01-Projects/Tempire/Docs/PRD|PRD]] | [[01-Projects/Tempire/Docs/TRD|TRD]] | [[01-Projects/Tempire/Docs/PAGE_SPECS|PAGE_SPECS]] | [[01-Projects/Tempire/Docs/APP_FLOW|APP_FLOW]] | [[01-Projects/Tempire/Docs/UIUX_BRIEF|UIUX_BRIEF]] | [[01-Projects/Tempire/Docs/SCHEMA|SCHEMA]] | [[01-Projects/Tempire/Docs/PHASES|PHASES]] | [[01-Projects/Tempire/Notes|NOTES]]
   - *Build Journey:* [[01-Projects/Tempire/Notes|Notes]]
 - 🌱 [[01-Projects/Momentum/Docs/PRD|Momentum]] — Adaptive fitness/habits operating system (Active focus).
   - *Docs:* [[01-Projects/Momentum/Docs/PRD|PRD]] | [[01-Projects/Momentum/Docs/TRD|TRD]] | [[01-Projects/Momentum/Docs/PAGE_SPECS|PAGE_SPECS]] | [[01-Projects/Momentum/Docs/APP_FLOW|APP_FLOW]] | [[01-Projects/Momentum/Docs/UIUX_BRIEF|UIUX_BRIEF]] | [[01-Projects/Momentum/Docs/SCHEMA|SCHEMA]] | [[01-Projects/Momentum/Docs/PHASES|PHASES]] | [[01-Projects/Momentum/Docs/DEV_NOTES|DEV_NOTES]]
@@ -35,6 +35,7 @@
 - ⚙️ **[[03-Resources/Skills/Frontend-Awesomeness|Frontend Awesomeness]]** — Master prompt system for premium UI/UX outputs.
 - 🎨 **[[03-Resources/Skills/Error-Pages-and-Canva-Colors|Error Page & Color Reference]]** — Guidelines for Next.js error page structure and Canva sRGB alignment.
 - 📥 **[[03-Resources/Skills/Defuddle-Clipping|Defuddle Web Ingestion]]** — Guide for using Defuddle CLI to clean and ingest clippings.
+- ⚙️ **[[03-Resources/Tools/Vault-Librarian-Interviewer|Vault Librarian Interviewer]]** — Guide and dashboard for the interactive vault population system.
 
 ---
 

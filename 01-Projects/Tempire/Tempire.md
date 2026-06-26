@@ -1,5 +1,7 @@
 # Tempire — Project Overview
 
+> **One-line Summary**: Central dashboard and active development tracker for Tempire, a premium template marketplace.
+
 > "Build your empire, one template at a time."
 > Live at: https://tempire.xyz/
 
@@ -26,9 +28,8 @@ Premium niche marketplace for vetted, production-ready digital assets — templa
 89% complete by Victor's standards. Core flows done. UI/UX polish is the remaining 10% — and the hardest part.
 
 ## Key Documents
-- [[01-Projects/Tempire/TODO]] — what's broken and what's next
-- [[01-Projects/Tempire/Decisions]] — every architectural why
-- [[01-Projects/Tempire/Logs]] — session history
+- **Core Specs**: [[01-Projects/Tempire/Docs/PRD|PRD]] | [[01-Projects/Tempire/Docs/TRD|TRD]] | [[01-Projects/Tempire/Docs/PAGE_SPECS|PAGE_SPECS]] | [[01-Projects/Tempire/Docs/APP_FLOW|APP_FLOW]] | [[01-Projects/Tempire/Docs/UIUX_BRIEF|UIUX_BRIEF]] | [[01-Projects/Tempire/Docs/SCHEMA|SCHEMA]] | [[01-Projects/Tempire/Docs/PHASES|PHASES]]
+- **Logs & Tracking**: [[01-Projects/Tempire/Notes|NOTES]] | [[01-Projects/Tempire/Decisions|Decisions]] | [[01-Projects/Tempire/Logs|Logs]] | [[01-Projects/Tempire/TODO|TODO]]
 
 ## Key Resources
 - [[03-Resources/Skills/Agent-Prompting-Masterclass]] — how to prompt the agent for UI work

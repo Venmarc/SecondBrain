@@ -1,28 +1,65 @@
-# Victor's Second Brain
+# Victor's Second Brain (Personal Knowledge OS)
 
-> "Build your empire, one template at a time." — Tempire
-
-## What This Is
-This is my personal knowledge OS and Second Brain. It contains everything I learn, build, and ship. It is structured around the PARA method and designed to collaborate cleanly with AI coding agents and human reviewers.
-
-For the developer/agent hub, see **[[index|index.md]]**.
-
-## Current Focus
-- 🔥 **[[01-Projects/Tempire/Tempire|Tempire]]** — Premium digital marketplace for creators. (UI/UX polish phase, 89% complete).
-- 🌱 **[[01-Projects/Momentum/Docs/PRD|Momentum]]** — Adaptive habits, fitness, and wellness logging operating system. (Active development phase).
-
-## Vault Structure (PARA)
-- **[[00-Inbox/]]** — Inbox capture layer for temporary notes and web clips.
-- **[[01-Projects/]]** — Active projects with standardized documentation (9-Doc standard).
-- **[[02-Areas/]]** — Ongoing responsibilities (Personal Growth, Health, Content Creation).
-- **[[03-Resources/]]** — General interests, design references, saved threads, and technical skills.
-- **[[04-Archive/]]** — Completed projects, archived exams, and closed-window clippings.
-- **[[05-Daily/]]** — Log journals and chronological notes.
-
-## Personal Learning Focus
-- UI/UX Design ➔ [[03-Resources/Skills/Agent-Prompting-Masterclass]]
-- Prompting & Agent Workflows ➔ [[03-Resources/Skills/Agent-Prompting-Masterclass]]
-- SEO & Marketing ➔ [[03-Resources/SEO-Marketing/]]
+> **One-line Summary**: Central dashboard and automated knowledge operating system managing active projects, learning synthesis, and interactive agent-librarian session history.
 
 ---
-*Last updated: 2026-06-24*
+
+## ⚡ Active Projects Dashboard
+- 🔥 **[Tempire](https://tempire.xyz/)** — Premium digital asset marketplace for vetted, production-ready templates.
+  - *Status*: UI/UX Polish Phase (~89% complete)
+  - *Docs*: [[01-Projects/Tempire/Docs/PRD|PRD]] | [[01-Projects/Tempire/Docs/TRD|TRD]] | [[01-Projects/Tempire/Docs/PAGE_SPECS|PAGE_SPECS]] | [[01-Projects/Tempire/Docs/APP_FLOW|APP_FLOW]] | [[01-Projects/Tempire/Docs/UIUX_BRIEF|UIUX_BRIEF]] | [[01-Projects/Tempire/Docs/SCHEMA|SCHEMA]] | [[01-Projects/Tempire/Docs/PHASES|PHASES]] | [[01-Projects/Tempire/Notes|NOTES]]
+- 🌱 **[Momentum](https://peakmomentum.vercel.app)** — Adaptive habits, fitness, and wellness logging operating system.
+  - *Status*: Active Development Phase
+  - *Docs*: [[01-Projects/Momentum/Docs/PRD|PRD]] | [[01-Projects/Momentum/Docs/TRD|TRD]] | [[01-Projects/Momentum/Docs/PAGE_SPECS|PAGE_SPECS]] | [[01-Projects/Momentum/Docs/APP_FLOW|APP_FLOW]] | [[01-Projects/Momentum/Docs/UIUX_BRIEF|UIUX_BRIEF]] | [[01-Projects/Momentum/Docs/SCHEMA|SCHEMA]] | [[01-Projects/Momentum/Docs/PHASES|PHASES]] | [[01-Projects/Momentum/Docs/DEV_NOTES|DEV_NOTES]]
+
+---
+
+## 🧭 Directory Layout (PARA + Extensions)
+
+```
+SecondBrain/
+├── 00-Inbox/             # Raw captures, quick thoughts, web clippings (process within 48h)
+├── 01-Projects/          # Active projects with standardized documentation (9-Doc Standard)
+│   ├── Momentum/
+│   └── Tempire/
+├── 02-Areas/             # Long-term responsibilities (Personal Growth, Content Creation)
+├── 03-Resources/         # Reusable skills, technical guides, saved threads, and tools
+├── 04-Archive/           # Completed projects, archived exams, and retired clippings
+├── 05-Daily/             # Chronological logs and journal reflections
+├── 06-Agent-Sessions/    # Completed agent librarian session logs and Q&A history
+├── Clippings/            # Raw, immutable web clips from browser clipper
+├── scripts/              # Local automation scripts (e.g. vault-librarian.js)
+└── Templates/            # Reusable markdown templates (Daily, Session Logs, Skills)
+```
+
+---
+
+## 🛠️ Automation & Tooling Stack
+The vault uses local script utilities and Obsidian command-line integration to maintain consistency:
+- **Node.js**: Runs the `vault-librarian.js` scanner script to audit state and handle Q&A tracking.
+- **[Obsidian CLI](https://help.obsidian.md/cli)**: Interacts with the running Obsidian app leaf for commands, page creation, and queries.
+- **[Defuddle CLI](https://github.com/kepano/defuddle)**: Strips HTML noise and formats external clippings into clean Markdown.
+- **Git**: Automatically tracks backups, index syncs, and the append-only `CHANGELOG.md`.
+
+---
+
+## ⚙️ Standard Workflows
+1. **Ingest Workflow**: Triggered on new inbox/clipper items. DISTILL raw contents ➔ CREATE atomic resources/skills ➔ CROSS-LINK in the graph.
+2. **Lint Workflow**: Triggered on command. Audit broken links, orphans, missing 9-doc files, and missing summaries ➔ UPDATE [[LINT-REPORT|LINT-REPORT.md]].
+3. **Librarian Interviewer Routine**: Triggered on demand via *"Run an interview session"*. Runs `vault-librarian.js` ➔ ASKS 3–7 state-aware questions ➔ DISTILLS Victor's responses ➔ CREATES new notes ➔ LOGS in `06-Agent-Sessions/` and history JSON.
+
+---
+
+## 🤖 AI Agent Session Quickstart
+If you are an AI agent collaborating in this vault, you **MUST** follow this routine on start:
+1. **Load Context**: Read [[BRAIN|BRAIN.md]], [[AGENTS|AGENTS.md]], [[index|index.md]], and [[LINT-REPORT|LINT-REPORT.md]] to align on project states and styling rules.
+2. **Run Librarian Scanner**:
+   Execute the librarian script to see the current state-based priority gaps and questions:
+   ```bash
+   node scripts/vault-librarian.js
+   ```
+3. **Trigger Interview**: If requested, present the questions to Victor and record his answers using:
+   ```bash
+   node scripts/vault-librarian.js --record "question-id1,question-id2,..."
+   ```
+4. **Follow Vault Standards**: Always include `> **One-line Summary**` at the top of new notes, save files to correct PARA folders (not Inbox), and add bidirectional wikilinks (`[[NoteName]]`) to preserve graph density.

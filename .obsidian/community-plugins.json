@@ -1,5 +1,8 @@
 [
   "templater-obsidian",
   "obsidian-git",
-  "dataview"
+  "dataview",
+  "calendar",
+  "obsidian-tasks-plugin",
+  "obsidian-linter"
 ]

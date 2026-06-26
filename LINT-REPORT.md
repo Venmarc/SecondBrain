@@ -24,14 +24,13 @@ The following files have no incoming links pointing to them:
 ## 🎯 4. Project 9-Doc Standard Gaps
 | Project Name | Missing Document Types |
 | :--- | :--- |
-| **Tempire** | TRD, PAGE_SPECS, APP_FLOW, UIUX_BRIEF, SCHEMA, PHASES, README |
+| **Tempire** | README |
 
 ## ✍️ 5. Style Consistency Gaps
 The following files are missing a `> **One-line Summary**` at the top:
 - [[01-Projects/Tempire/TODO.md]]
 - [[01-Projects/Tempire/Decisions.md]]
 - [[01-Projects/Tempire/Notes.md]]
-- [[01-Projects/Tempire/Tempire.md]]
 - [[01-Projects/Tempire/Logs.md]]
 - [[01-Projects/Momentum/Momentum-original.md]]
 - [[01-Projects/Momentum/Docs/PAGE_SPECS.md]]
