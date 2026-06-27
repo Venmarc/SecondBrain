@@ -7,10 +7,10 @@
 ## ⚡ Active Projects Dashboard
 - 🔥 **[Tempire](https://tempire.xyz/)** — Premium digital asset marketplace for vetted, production-ready templates.
   - *Status*: UI/UX Polish Phase (~89% complete)
-  - *Docs*: [[01-Projects/Tempire/Docs/PRD|PRD]] | [[01-Projects/Tempire/Docs/TRD|TRD]] | [[01-Projects/Tempire/Docs/PAGE_SPECS|PAGE_SPECS]] | [[01-Projects/Tempire/Docs/APP_FLOW|APP_FLOW]] | [[01-Projects/Tempire/Docs/UIUX_BRIEF|UIUX_BRIEF]] | [[01-Projects/Tempire/Docs/SCHEMA|SCHEMA]] | [[01-Projects/Tempire/Docs/PHASES|PHASES]] | [[01-Projects/Tempire/Notes|NOTES]]
+  - *Docs*: [PRD](01-Projects/Tempire/Docs/PRD) | [TRD](01-Projects/Tempire/Docs/TRD) | [PAGE_SPECS](01-Projects/Tempire/Docs/PAGE_SPECS) | [APP_FLOW](01-Projects/Tempire/Docs/APP_FLOW) | [UIUX_BRIEF](01-Projects/Tempire/Docs/UIUX_BRIEF) | [SCHEMA](01-Projects/Tempire/Docs/SCHEMA) | [PHASES](01-Projects/Tempire/Docs/PHASES) | [NOTES](01-Projects/Tempire/Notes)
 - 🌱 **[Momentum](https://peakmomentum.vercel.app)** — Adaptive habits, fitness, and wellness logging operating system.
   - *Status*: Active Development Phase
-  - *Docs*: [[01-Projects/Momentum/Docs/PRD|PRD]] | [[01-Projects/Momentum/Docs/TRD|TRD]] | [[01-Projects/Momentum/Docs/PAGE_SPECS|PAGE_SPECS]] | [[01-Projects/Momentum/Docs/APP_FLOW|APP_FLOW]] | [[01-Projects/Momentum/Docs/UIUX_BRIEF|UIUX_BRIEF]] | [[01-Projects/Momentum/Docs/SCHEMA|SCHEMA]] | [[01-Projects/Momentum/Docs/PHASES|PHASES]] | [[01-Projects/Momentum/Docs/DEV_NOTES|DEV_NOTES]]
+  - *Docs*: [PRD](01-Projects/Momentum/Docs/PRD) | [TRD](01-Projects/Momentum/Docs/TRD) | [PAGE_SPECS](01-Projects/Momentum/Docs/PAGE_SPECS) | [APP_FLOW](01-Projects/Momentum/Docs/APP_FLOW) | [UIUX_BRIEF](01-Projects/Momentum/Docs/UIUX_BRIEF) | [SCHEMA](01-Projects/Momentum/Docs/SCHEMA) | [PHASES](01-Projects/Momentum/Docs/PHASES) | [DEV_NOTES](01-Projects/Momentum/Docs/DEV_NOTES)
 
 ---
 
