@@ -7,7 +7,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.0-06B6D4?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 [![Supabase](https://img.shields.io/badge/Supabase-v2-3ECF8E?style=flat-square&logo=supabase)](https://supabase.com/)
 [![Clerk](https://img.shields.io/badge/Clerk-Auth-6C47FF?style=flat-square&logo=clerk)](https://clerk.com/)
-[![License](https://img.shields.io/badge/License-Personal_Portfolio-blue?style=flat-square)](#)
+[![License](https://img.shields.io/badge/License-Personal_Portfolio-blue?style=flat-square)](https://venmarcstudio.xyz/)
 
 Welcome to **Tempire**, a digital creator marketplace designed for buying, selling, and managing premium digital assets (AI prompts, Notion templates, Figma UI kits, ebooks, etc.). 
 
