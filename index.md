@@ -32,6 +32,8 @@
 ## 📚 Resources & Guides (03-Resources)
 - 💾 **[Saved Threads](file:///home/redmane/Documents/SecondBrain/03-Resources/Saved-Threads)** — Curated educational/informational clips.
 - 🛠️ **[Templates](file:///home/redmane/Documents/SecondBrain/Templates)** — Reusable Obsidian structures.
+- 🗺️ **[[03-Resources/MOC-UI-UX-Lessons|MOC: UI/UX Lessons]]** — Map of Content linking all UI/UX lessons, patterns, and traps.
+- 🛡️ **[[03-Resources/Skills/Pre-Launch-Security-Checklist|Pre-Launch Security Checklist]]** — Security audit checklist for pre-launch app validation.
 - ⚙️ **[[03-Resources/Skills/Frontend-Awesomeness|Frontend Awesomeness]]** — Master prompt system for premium UI/UX outputs.
 - ⚙️ **[[03-Resources/Skills/Theme-Switching-Foundation|Theme Switching Foundation]]** — Guidelines for theme tokens, hydration mismatch prevention, and Clerk role synchronization.
 - ⚙️ **[[03-Resources/Skills/Secure-Downloads-Middleware|Secure Downloads & Compliance]]** — Best practices for secure digital download proxying and RLS audits.

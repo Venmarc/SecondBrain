@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 ### Added
+- Ingested 9 atomic UI/UX lesson notes under `03-Resources/Skills/` and 1 Map of Content (MOC) note at `03-Resources/MOC-UI-UX-Lessons.md` to map them together.
+- Ingested the pre-launch security audit guide into a permanent skill note at `03-Resources/Skills/Pre-Launch-Security-Checklist.md`.
+- Staged and integrated the newly created notes into the Master Hub index.md and updated cross-links to projects.
 - Committed the premium digital creator marketplace README for `Tempire` under `01-Projects/Tempire/Docs/README.md`.
 - Processed and moved `00-Inbox/Future Projects.md` to `05-Daily/2026-06-25.md`.
 - Processed and moved `00-Inbox/Today's Notes.md` to `05-Daily/2026-06-27.md`.
