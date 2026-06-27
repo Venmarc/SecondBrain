@@ -1,5 +1,7 @@
 # Tempire — Architecture Decisions
 
+> **One-line Summary**: Central repository of architecture and stack decisions (ADRs) for the Tempire project, documenting the rationale and trade-offs of chosen technologies.
+
 > Every "why" behind every "what." Read this before asking the agent to change anything.
 
 ## Stack Decisions

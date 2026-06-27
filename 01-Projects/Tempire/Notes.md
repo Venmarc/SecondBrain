@@ -1,4 +1,7 @@
-*Agent*
+# Tempire — Project Notes
+
+> **One-line Summary**: Overview of Tempire's mission, unique value propositions, product ecosystem, and developer/creator features.
+
 **Tempire** is a premium, niche marketplace designed for the modern creator economy. Its mission is captured in its slogan: **"Build your empire, one template at a time."**
 
 At its core, Tempire solves the "blank page" problem for developers, designers, and founders. Instead of spending weeks building foundational infrastructure (like auth, database schemas, or accessible UI components), creators can buy **vetted, production-ready assets** to launch their ideas in days.

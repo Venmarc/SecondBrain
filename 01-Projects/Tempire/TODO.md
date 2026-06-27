@@ -1,5 +1,7 @@
 # Tempire — Current TODO
 
+> **One-line Summary**: Current task board and roadmap tracking critical fixes, UI polish, and completed milestones for Tempire.
+
 > Ordered by priority. Do not add items without removing or completing something first.
 
 ## 🔴 Critical (Broken in Production)

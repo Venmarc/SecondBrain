@@ -22,11 +22,13 @@ The vault is structured according to the PARA method, evolved lightly with a hyb
 - **`06-Agent-Sessions/`**: Repository for completed agent session logs and Q&A history logs.
 
 ### Rules for Editing
-- **Never modify raw files**: Any file in [Clippings](file:///home/redmane/Documents/SecondBrain/Clippings) or `raw/` is immutable.
+- **Never modify raw files**: Any file in Clippings or raw/ is immutable.
 - **Keep index and changelog current**: Update [index.md](file:///home/redmane/Documents/SecondBrain/index.md) and [CHANGELOG.md](file:///home/redmane/Documents/SecondBrain/CHANGELOG.md) upon any structural modification.
 - **Surgical edits**: Minimize changes to existing human-authored text; append or update specific sections, keeping one-line summaries at the top.
 - **No Agent-Specific Hardcoding**: Do not write instructions or rules that assume only one specific AI client is running.
 - **Empty Directory Placeholders**: Git does not track empty directories. Whenever creating a new empty folder that needs to be preserved in the repository, create a `.gitkeep` file inside it to ensure it is committed.
+- **Markdown Link Format (GitHub Compat)**: Do not use double-bracket wikilinks (e.g. `[[BRAIN|BRAIN.md]]`) in files intended for external/GitHub rendering (such as `README.md` files). Instead, write standard Markdown links (e.g. `[BRAIN](BRAIN.md)` or `[PRD](01-Projects/Tempire/Docs/PRD)`) so they hide properly across all previews, chat clients, and repositories.
+- **Prefer Immutables**: Prefer moving long sources, chat logs, transcripts, or articles to `raw/` or `Clippings/` as immutable originals.
 
 ---
 
@@ -82,6 +84,12 @@ Scan the entire vault and flag/fix:
      * *Daily*: Quick check-in on daily focus and blockers.
      * *Weekly*: Run full deep session on Sundays to clear backlogs, project gaps, and orphans.
      * *On-Demand*: Victor can invoke this anytime to record thoughts.
+
+### E. Quick Commands (Session Aliases)
+Agents should map these simple phrases in user prompts to their corresponding workflows:
+- **`/ingest [file]`** or **`Run ingest on [file]`** &rarr; Executes the **Ingest Workflow** for the specified source file in `00-Inbox/` or `Clippings/`.
+- **`/lint`** or **`Full lint`** &rarr; Runs the **Lint Workflow** (auditing orphans, missing summaries, project gaps) and compiles the results to `LINT-REPORT.md`.
+- **`/interview`** or **`Start interview session`** &rarr; Triggers the **Vault Librarian Interviewer Routine** (runs `vault-librarian.js`, asks questions, logs answers).
 
 ---
 

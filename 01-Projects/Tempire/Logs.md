@@ -1,5 +1,7 @@
 # Tempire — Session Logs
 
+> **One-line Summary**: Chronological developer log tracking session summaries, updates, next steps, and key learnings for Tempire.
+
 > Reverse chronological. One entry per session. Link decisions to [[Decisions]], tasks to [[TODO]].
 
 ---
