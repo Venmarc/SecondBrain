@@ -39,12 +39,24 @@
 - ⚙️ **[[03-Resources/Skills/Secure-Downloads-Middleware|Secure Downloads & Compliance]]** — Best practices for secure digital download proxying and RLS audits.
 - 🎨 **[[03-Resources/Skills/Error-Pages-and-Canva-Colors|Error Page & Color Reference]]** — Guidelines for Next.js error page structure and Canva sRGB alignment.
 - 📥 **[[03-Resources/Skills/Defuddle-Clipping|Defuddle Web Ingestion]]** — Guide for using Defuddle CLI to clean and ingest clippings.
-- ⚙️ **[[03-Resources/Tools/Vault-Librarian-Interviewer|Vault Librarian Interviewer]]** — Guide and dashboard for the interactive vault population system.
+- ⚙️ **[[03-Resources/Skills/Knowledge-Extraction-Interviewer|Knowledge Extraction Interviewer]]** — Prompting framework for dynamic knowledge extraction interviews.
+- ⚙️ **[[03-Resources/Skills/Skill-Router-Hook|Skill Router Hook]]** — PreInvocation classifier fixing lazy-agent skill skipping.
+- ⚙️ **[[03-Resources/Skills/Lazy-Agent-Failure-Mode|Lazy Agent Failure Mode]]** — Problem context + fix pattern for skill routing.
+- 🗺️ **[[03-Resources/Vault-LLM-Wiki-Patterns|Vault LLM Wiki Patterns]]** — Karpathy/SpikeCalls self-maintaining vault workflow.
+- 📋 **[[03-Resources/Clippings-Ingest-Log|Clippings Ingest Log]]** — Processed clipping → summary mapping.
+- ⚙️ **[[03-Resources/Tools/Vault-Librarian-Interviewer|Vault Librarian & Knowledge Extractor]]** — Guide and dashboard for the interactive vault population systems.
 
 ---
 
+## 🤖 Agent Sessions (06-Agent-Sessions)
+- **[[06-Agent-Sessions/2026-07-05-agy-task-2-reviewer-fixes|2026-07-05-agy-task-2-reviewer-fixes.md]]** — Task 2 reviewer feedback fixes.
+- **[[06-Agent-Sessions/2026-07-05-agy-supabase-migration-fix|2026-07-05-agy-supabase-migration-fix.md]]** — Task 1 database migration security fixes.
+- **[[06-Agent-Sessions/2026-07-05-agy-supabase-migration|2026-07-05-agy-supabase-migration.md]]** — Task 1 initial database migration setup.
+- Session logs: `06-Agent-Sessions/` — mandatory after every agent session ([[Templates/Agent-Session-Summary|template]]).
+- **agentmemory** boot: `memory_smart_search` · shutdown: `memory_save` (see [[AGENTS|AGENTS.md]] §E).
+
 ## 🩺 Vault Health & Maintenance
-- **Last Full Audit**: 2026-06-24
+- **Last Full Audit**: 2026-07-05
 - **Active Reports**:
   - 📋 **[[LINT-REPORT|LINT-REPORT.md]]** — Vault health check report detailing links, orphans, standard doc gaps, and style consistency.
 - **Knowledge Gaps & TODOs**:
