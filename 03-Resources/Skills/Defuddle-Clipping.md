@@ -47,3 +47,9 @@ When ingesting new web resources or processing browser clips:
 3. **Refining:** Update the file header with a `> **One-line Summary**` and format wikilinks to relevant concept or project notes.
 
 **Tags**: #skill #defuddle #ingest #clipping #documentation
+
+## Related
+- [[03-Resources/Clippings-Ingest-Log|Clippings Ingest Log]]
+- [[03-Resources/Vault-LLM-Wiki-Patterns|Vault LLM Wiki Patterns]]
+- [[AGENTS|AGENTS.md]]
+

@@ -99,3 +99,9 @@ Prevent implementation drift when working with AGY CLI (Gemini). Two failure mod
 ```
 Prompt → AGY CLI plans → /consolidate → Gemini chunks → /audit per chunk → repeat
 ```
+
+
+---
+## Related
+- [[01-Projects/Momentum/Momentum|Momentum hub]] · [[01-Projects/Momentum/Docs/PRD|PRD]] · [[01-Projects/Momentum/Lessons-from-DEV_NOTES|Lessons from DEV_NOTES]]
+- [[03-Resources/MOCs/MOC-Projects|MOC: Projects]]

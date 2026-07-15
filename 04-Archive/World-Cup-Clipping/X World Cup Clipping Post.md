@@ -7,3 +7,7 @@ Notable Comments:
 	- "brilliant thread i must say but if i decide to post on youtube, won't youtube flag my account for copyright?"
 	- "It depends on how you use the footage If you just repost raw match highlights with nothing added, yes you'll get flagged But if you add your own commentary, reaction, text overlay or analysis on top, you're generally safe."
 - 
+## Related
+- [[04-Archive/World-Cup-Clipping/World-Cup-Clipping-Guide|Guide]]
+- [[02-Areas/Content-Creation/Content-Creation-Overview|Content Overview]]
+

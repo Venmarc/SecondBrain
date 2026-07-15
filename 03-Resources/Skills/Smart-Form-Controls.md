@@ -100,7 +100,7 @@ understood actions (close, add, back, search).
 ---
 
 ## Where These Appeared
-- [[01-Projects/Momentum/Docs/DEV_NOTES]] — habit log save button always clickable (June 5), wellness emoji tabs (June 5)
+- [[01-Projects/Momentum/Lessons-from-DEV_NOTES]] — habit log save button always clickable (June 5), wellness emoji tabs (June 5)
 
 ## Related
 - [[03-Resources/Skills/Context-Aware-Form-Fields]]

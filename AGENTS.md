@@ -85,11 +85,30 @@ Scan the entire vault and flag/fix:
      * *Weekly*: Run full deep session on Sundays to clear backlogs, project gaps, and orphans.
      * *On-Demand*: Victor can invoke this anytime to record thoughts.
 
-### E. Quick Commands (Session Aliases)
+### E. Session Boot & Shutdown (mandatory — all agents)
+
+**Operating model:** Victor supervises. Agents assist. No multi-agent orchestration engine. See [[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|How Victor Works With Agents]].
+
+**Session boot:**
+1. If agentmemory is available: confirm health (`agentmemory status` / `:3111` or viewer `:3113`), then `memory_smart_search` for the task topic. **Do not block** the whole session if MCP is down.
+2. **Vault work:** read [[BRAIN|BRAIN.md]] and [[AGENTS|AGENTS.md]], then [[index|index.md]].
+3. **Project work:** read `01-Projects/<Name>/<Name>.md` hub + active `PHASES.md`. Product source of truth is usually the Port Sites codebase; vault docs are synced mirrors with a date banner.
+4. Do not auto-start round-table or multi-CLI pipelines unless Victor asks.
+
+**Session shutdown:**
+1. If agentmemory is up: `memory_save` — decisions, fixes, reusable patterns (`concepts` + `files`).
+2. Write `06-Agent-Sessions/YYYY-MM-DD-<agent>-<slug>.md` using [[Templates/Agent-Session-Summary|Agent-Session-Summary]] (mandatorily documenting user prompts verbatim, reference files/media with context, and failures/subagent snags).
+3. Append [[CHANGELOG|CHANGELOG.md]] if structure changed; update [[index|index.md]] if new notes were added.
+4. **Lesson extraction (minimal rule):** after project sessions, promote **0–3** reusable lessons to the project hub `## Lessons log` or an existing skill (grep first). See [[03-Resources/Vault-Ops/Session-Lesson-Extraction-Idea|Session Lesson Extraction]].
+
+**Bridge rule:** When a vault note documents a reusable fix (not journey-only), also `memory_save` the core insight when agentmemory is healthy.
+
+### F. Quick Commands (Session Aliases)
 Agents should map these simple phrases in user prompts to their corresponding workflows:
 - **`/ingest [file]`** or **`Run ingest on [file]`** &rarr; Executes the **Ingest Workflow** for the specified source file in `00-Inbox/` or `Clippings/`.
 - **`/lint`** or **`Full lint`** &rarr; Runs the **Lint Workflow** (auditing orphans, missing summaries, project gaps) and compiles the results to `LINT-REPORT.md`.
 - **`/interview`** or **`Start interview session`** &rarr; Triggers the **Vault Librarian Interviewer Routine** (runs `vault-librarian.js`, asks questions, logs answers).
+- **`/harvest`** or **`Run harvest script`** &rarr; Runs the knowledge extraction scanner (`harvest.js`) and triggers the **Knowledge Extraction Interview** session to capture undocumented lessons.
 
 ---
 
@@ -98,19 +117,24 @@ Agents should map these simple phrases in user prompts to their corresponding wo
 When executing actions, utilize these tools and capabilities:
 - **`defuddle`**: A command-line utility for managing markdown links and formatting. Set it up and verify availability before running lint tasks.
 - **Obsidian Skills**: Utilize any project-level templates or styles defined in `Templates/`.
-- **Long-Term Memory (agentmemory)**: Proactively recall and save context using long-term memory tools.
+- **Long-Term Memory (agentmemory)**: Session boot requires `memory_smart_search`; session shutdown requires `memory_save`. See **§E Session Boot & Shutdown**.
 
 ---
 
 ## 4. The 9-Doc Standard for Projects
 
-Active projects under [01-Projects](file:///home/redmane/Documents/SecondBrain/01-Projects) should follow this standardized document structure:
-1. **`PRD.md`**: Product Requirements Document. The primary entry point pointing to other project files.
-2. **`TRD.md`**: Tech Stack, Architecture Decisions, and Constitutions.
+Active projects under [01-Projects](file:///home/redmane/Documents/SecondBrain/01-Projects) should follow this standardized document structure (often under `Docs/`):
+
+1. **`PRD.md`**: Product Requirements Document.
+2. **`TRD.md`**: Tech stack, architecture, constitutions.
 3. **`PAGE_SPECS.md`**: Page layouts and functions.
-4. **`APP_FLOW.md`**: Complete user journey and navigation paths.
-5. **`UI/UX_BRIEF.md`**: UI style guides, color systems, micro-interactions, and component behavior.
-6. **`SCHEMA.md`**: Database schemas, models, and data flow.
-7. **`PHASES.md`**: Implementation roadmap split into clear verification steps.
-8. **`NOTES.md`**: Journey log, daily developer logs, and open issues (renamed to avoid collisions on case-insensitive filesystems).
-9. **`README.md`**: Public-facing overview generated/updated using the `readme-generator` skill.
+4. **`APP_FLOW.md`**: User journeys and navigation.
+5. **`UIUX_BRIEF.md`** (or `UI/UX_BRIEF.md`): Style, tokens, motion, components.
+6. **`SCHEMA.md`**: Database / data model.
+7. **`PHASES.md`**: Roadmap + phase gates (agents check this every session).
+8. **`NOTES.md`**: Journey log and open issues.
+9. **`README.md`**: Public/overview entry.
+
+**Also required in vault:** a project hub `01-Projects/<Name>/<Name>.md` (status, path to codebase, links to docs).
+
+**Sync rule:** When Port Sites project docs change, re-copy into vault `Docs/` and refresh the sync banner date. Do not invent a third PRD in the vault.

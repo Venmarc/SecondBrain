@@ -63,3 +63,11 @@ This is a **portfolio-grade production demo**. Every detail must feel like a rea
 **Primary Rule**: Always reference PRD.md + relevant supporting docs in every chat. Do not deviate from the defined stack or architecture without explicit approval.
 
 This PRD.md is the single source of truth for "what" we are building. Technical "how" lives in TRD.md and other files.
+
+---
+## Related
+- Hub: [[01-Projects/Tempire/Tempire|Tempire]]
+- Docs: [[01-Projects/Tempire/Docs/PRD|PRD]] · [[01-Projects/Tempire/Docs/TRD|TRD]] · [[01-Projects/Tempire/Docs/PHASES|PHASES]]
+- Skills: [[03-Resources/MOC-UI-UX-Lessons|UI/UX MOC]] · [[03-Resources/Design/48-Laws-of-Web-Design|48 Laws]]
+- Business: [[02-Areas/Business-Wealth/Revenue-Engines|Revenue Engines]]
+- Projects: [[03-Resources/MOCs/MOC-Projects|MOC: Projects]]

@@ -81,7 +81,7 @@ Add to every project's `AGENTS.md` under a "UI Constitution" section:
 > Never use `window.confirm()`, `window.alert()`, or `window.prompt()`. All confirmation flows use custom dialogs from the UI component library.
 
 ## Where This Appeared
-- [[01-Projects/Momentum/Docs/DEV_NOTES]] — wellness entry delete button (June 5 testing)
+- [[01-Projects/Momentum/Lessons-from-DEV_NOTES]] — wellness entry delete button (June 5 testing)
 
 ## Related
 - [[03-Resources/Skills/Frontend-Awesomeness]] — premium feel standards

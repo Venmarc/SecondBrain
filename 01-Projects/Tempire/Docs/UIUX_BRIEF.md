@@ -117,3 +117,11 @@ This document defines the complete visual identity, interaction patterns, micro-
 - Duration: 150–250ms for most transitions
 - Easing: `ease-out` or `cubic-bezier(0.4, 0, 0.2, 1)`
 - Disable heavy animations on low-end devices
+
+---
+## Related
+- Hub: [[01-Projects/Tempire/Tempire|Tempire]]
+- Docs: [[01-Projects/Tempire/Docs/PRD|PRD]] · [[01-Projects/Tempire/Docs/TRD|TRD]] · [[01-Projects/Tempire/Docs/PHASES|PHASES]]
+- Skills: [[03-Resources/MOC-UI-UX-Lessons|UI/UX MOC]] · [[03-Resources/Design/48-Laws-of-Web-Design|48 Laws]]
+- Business: [[02-Areas/Business-Wealth/Revenue-Engines|Revenue Engines]]
+- Projects: [[03-Resources/MOCs/MOC-Projects|MOC: Projects]]

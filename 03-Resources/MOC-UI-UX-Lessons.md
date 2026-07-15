@@ -25,6 +25,30 @@ When you're starting a new project, read this page. When you discover a new less
 
 ---
 
+## ⚡ Phase 0 focus (Momentum + Ledger, 2026-07)
+
+Prioritize these during foundation — not theme showcases or feature sprawl:
+
+**Momentum**
+- [[03-Resources/Skills/Back-Button-Hierarchy]] · [[03-Resources/Skills/Sticky-Top-Bar-Navigation]]
+- [[03-Resources/Skills/Dashboard-As-Overview]] · [[03-Resources/Skills/Navigation-Design-Basics]]
+- [[03-Resources/Skills/State-Isolation-Per-Record]] — habit log per-day state
+- [[03-Resources/Skills/Smart-Form-Controls]] — save disabled when unchanged
+- [[03-Resources/Skills/Nested-Route-Active-State]] — parent nav on sub-routes
+- [[03-Resources/Skills/Product-Vision-Integrity]] — one-goal PRD check
+- [[03-Resources/Skills/Frontend-Awesomeness]] — premium feel without game UI
+- [[03-Resources/Skills/AI-UI-Antipatterns-Watchlist]] — anti-slop review
+
+**Ledger**
+- [[01-Projects/Ledger/Docs/DESIGN]] — restraint, tabular nums, budget threshold colors
+- [[03-Resources/Skills/Sticky-Top-Bar-Navigation]] · [[03-Resources/Skills/Dashboard-As-Overview]]
+- [[03-Resources/Skills/Collapsible-Desktop-Sidebar]] — edge-to-edge shell, portal tooltips
+- [[03-Resources/Skills/Theme-Switching-Foundation]] — flash prevention, hydration guards
+- [[03-Resources/Skills/Responsive-Data-Viz]] — mobile-first charts later (Phase 2+)
+- [[03-Resources/Skills/Smart-Form-Controls]] — instant expense logging UX
+
+---
+
 ## 🔴 Agent Traps (Things Agents Consistently Get Wrong)
 
 These are patterns where Antigravity, Gemini, or any agent will produce the wrong output unless you explicitly specify otherwise in the prompt.
@@ -66,6 +90,8 @@ These are architectural traps that produce subtle bugs that are hard to reproduc
 
 - [[03-Resources/Skills/Product-Vision-Integrity]] — tagline drift and developer blindness
 - [[03-Resources/Skills/Frontend-Awesomeness]] — prompting for premium output
+- [[03-Resources/Skills/Reverse-Engineering-UI-Components]] — library → own component system
+- [[03-Resources/Skills/Clerk-Auth-Card-Contrast]] — auth UI readability
 - [[03-Resources/Skills/Agent-Prompting-Masterclass]] — full prompting system
 
 ---
@@ -79,12 +105,12 @@ These are architectural traps that produce subtle bugs that are hard to reproduc
 ## 🔗 Project Cross-References
 
 **Lessons discovered in Momentum:**
-- L01-L18 → [[01-Projects/Momentum/Docs/DEV_NOTES]]
+- L01-L18 → [[01-Projects/Momentum/Lessons-from-DEV_NOTES]]
 - Most lessons above sourced here
 
 **Lessons discovered in Tempire:**
-- Navigation link redirect bugs → [[01-Projects/Tempire/Logs]]
-- Product journey > marketing → [[01-Projects/Tempire/Logs]]
+- Navigation link redirect bugs → [[01-Projects/Tempire/Tempire#TODO (when revived)|Tempire TODO]]
+- Product journey > marketing → [[01-Projects/Tempire/Tempire#Session log (condensed)|Tempire sessions]]
 - Human-readable download filenames → [[03-Resources/Skills/Secure-Downloads-Middleware]]
 
 ---
@@ -93,7 +119,7 @@ These are architectural traps that produce subtle bugs that are hard to reproduc
 
 These lessons exist in the vault but haven't been written as atomic notes yet. Process when time allows:
 
-- [ ] **Back button hierarchy** (L10): sub-pages need back to parent, not back to Today
+- [ ] **Back button hierarchy** (L10): Victor defined 2026-07-09 — `/today` is tree root; top-level pages back → Today; nested pages back → parent (not browser history). Mobile needs in-app Back. Raw notes: `Documents/Research_files/Back_button_hierarchy.md` + Justinmind nav/dashboard articles (ingest after knowledge-extractor; do not distill yet).
 - [ ] **Sticky nav scroll pattern** (L02): data-heavy pages (Progress, Analytics) benefit from headers that become sticky nav on scroll
 - [ ] **Settings unsaved state detection** (L07): prompt on navigation when unsaved changes exist
 - [ ] **Agent skill activation** (L20): must explicitly name skill in prompt prefix (`Using your ui-ux-pro-max skill...`)

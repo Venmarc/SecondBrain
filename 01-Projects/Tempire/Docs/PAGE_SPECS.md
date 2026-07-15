@@ -185,3 +185,11 @@ Any change to page layout, functionality, or behavior must be updated here with 
 - Accessibility compliance
 - SEO metadata where applicable
 - Consistent navigation (top nav + mobile menu)
+
+---
+## Related
+- Hub: [[01-Projects/Tempire/Tempire|Tempire]]
+- Docs: [[01-Projects/Tempire/Docs/PRD|PRD]] · [[01-Projects/Tempire/Docs/TRD|TRD]] · [[01-Projects/Tempire/Docs/PHASES|PHASES]]
+- Skills: [[03-Resources/MOC-UI-UX-Lessons|UI/UX MOC]] · [[03-Resources/Design/48-Laws-of-Web-Design|48 Laws]]
+- Business: [[02-Areas/Business-Wealth/Revenue-Engines|Revenue Engines]]
+- Projects: [[03-Resources/MOCs/MOC-Projects|MOC: Projects]]

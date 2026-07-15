@@ -1,6 +1,6 @@
 # Daily Note - {{date:YYYY-MM-DD}}
 
-**Project Focus:** [[01-Projects/Tempire/Logs|Tempire]]
+**Project Focus:** [[01-Projects/Momentum/Momentum|Momentum]] · [[01-Projects/Ledger/Ledger|Ledger]]
 
 ## Today's Goal
 - 

@@ -105,7 +105,7 @@ what fields does each type require?"
 ```
 
 ## Where This Appeared
-- [[01-Projects/Momentum/Docs/DEV_NOTES]] — fitness logger testing, confusion about weight fields for bodyweight exercises (June 5)
+- [[01-Projects/Momentum/Lessons-from-DEV_NOTES]] — fitness logger testing, confusion about weight fields for bodyweight exercises (June 5)
 
 ## Related
 - [[03-Resources/Skills/State-Isolation-Per-Record]]

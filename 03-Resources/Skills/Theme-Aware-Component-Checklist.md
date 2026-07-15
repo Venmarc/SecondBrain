@@ -96,7 +96,7 @@ or broken, it is a defect, not a cosmetic issue.
 ```
 
 ## Where This Appeared
-- [[01-Projects/Momentum/Docs/DEV_NOTES]] — skeleton loaders (black in light mode), hover states gone, logo text invisible after June 19 theme toggle implementation
+- [[01-Projects/Momentum/Lessons-from-DEV_NOTES]] — skeleton loaders (black in light mode), hover states gone, logo text invisible after June 19 theme toggle implementation
 
 ## Related
 - [[03-Resources/Skills/Theme-Switching-Foundation]] — foundational architecture for themes

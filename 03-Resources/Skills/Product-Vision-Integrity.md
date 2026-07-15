@@ -81,8 +81,8 @@ Add to every project's `PRD.md` under a visible section:
 ---
 
 ## Where This Appeared
-- [[01-Projects/Momentum/Docs/DEV_NOTES]] — tagline drift observation and friend review (bottom section)
-- [[01-Projects/Tempire/Logs]] — "product journey > marketing" (2026-05-11)
+- [[01-Projects/Momentum/Lessons-from-DEV_NOTES]] — tagline drift observation and friend review (bottom section)
+- [[01-Projects/Tempire/Tempire#Session log (condensed)|Tempire sessions]] — "product journey > marketing" (2026-05-11)
 
 ## Related
 - [[01-Projects/Momentum/Docs/PRD]] — the tagline this note references

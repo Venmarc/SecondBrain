@@ -87,7 +87,7 @@ If your form has a `useEffect` that runs on selection change but doesn't reset t
 6. Switch categories or views — verify data persists (doesn't get wiped by view change)
 
 ## Where This Appeared
-- [[01-Projects/Momentum/Docs/DEV_NOTES]] — habit log form, data bleeding across days, data clearing on category switch (June 5 testing)
+- [[01-Projects/Momentum/Lessons-from-DEV_NOTES]] — habit log form, data bleeding across days, data clearing on category switch (June 5 testing)
 
 ## Related
 - [[03-Resources/Skills/Context-Aware-Form-Fields]]

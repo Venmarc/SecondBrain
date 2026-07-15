@@ -39,12 +39,27 @@ Use this skill when starting a new frontend project, configuring theme setups (T
     ```tsx
     const [mounted, setMounted] = useState(false);
     useEffect(() => {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setMounted(true);
     }, []);
 
     if (!mounted) return <SkeletonLoader />; // or null
     return <ThemeOrCartContent />;
     ```
+*   **Ledger pattern:** Strict `react-hooks/set-state-in-effect` ESLint rules flag deliberate mount-time `setState`. Use a targeted `eslint-disable-next-line` — this is intentional hydration sync, not a bug.
+
+### 5. Flash Prevention (Blocking Head Script)
+*   **The Trap:** Theme read from `localStorage` only in client effects causes a visible light→dark flash on first paint.
+*   **The Fix:** Inject a blocking inline script in `<head>` that reads the stored theme key and sets `data-theme` / classes before paint. Add `suppressHydrationWarning` on `<html>` because the script legitimately changes attributes before React hydrates.
+
+### 6. Theme Toggle Placement (Ledger pattern)
+*   **Rule:** On any top-bar icon cluster, the theme toggle sits **closest to center**; avatar, hamburger, and primary CTA push toward the corner. Applies to public and protected pages.
+*   **Default theme:** First visit defaults to **dark** regardless of OS `prefers-color-scheme` when portfolio/demo aesthetic matters — user opts into light explicitly.
+*   **Phase split:** Build the real toggle + persistence in Phase 0; later phases refine token **values** only, not the mechanism.
+
+### 7. Auth Footer Deferred Mount
+*   **The Trap:** Static "Back to home" links on auth pages appear before the Clerk card hydrates, creating awkward layout jumps.
+*   **The Fix:** Client-side `mounted` guard with CSS `@keyframes fadeIn` — render the footer only after mount so it appears with the Clerk card.
 
 ## Related Links
 *   [[03-Resources/Skills/Frontend-Awesomeness|Frontend Awesomeness]]

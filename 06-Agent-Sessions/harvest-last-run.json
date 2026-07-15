@@ -1,0 +1,75 @@
+{
+  "date": "2026-07-13",
+  "candidates": [
+    {
+      "type": "queue_follow_up",
+      "typeLabel": "Queue Follow-up",
+      "source": "03-Resources/MOC-UI-UX-Lessons.md",
+      "text": "Back button hierarchy: (L10): Victor defined 2026-07-09 — `/today` is tree root; top-level pages back → Today; nested pages back → parent (not browser history). Mobile needs in-app Back. Raw notes: `Documents/Research_files/Back_button_hierarchy.md` + Justinmind nav/dashboard articles (ingest after knowledge-extractor; do not distill yet).",
+      "weight": 7,
+      "labels": [
+        "queued"
+      ]
+    },
+    {
+      "type": "queue_follow_up",
+      "typeLabel": "Queue Follow-up",
+      "source": "03-Resources/MOC-UI-UX-Lessons.md",
+      "text": "Sticky nav scroll pattern: (L02): data-heavy pages (Progress, Analytics) benefit from headers that become sticky nav on scroll",
+      "weight": 7,
+      "labels": [
+        "queued"
+      ]
+    },
+    {
+      "type": "queue_follow_up",
+      "typeLabel": "Queue Follow-up",
+      "source": "03-Resources/MOC-UI-UX-Lessons.md",
+      "text": "Settings unsaved state detection: (L07): prompt on navigation when unsaved changes exist",
+      "weight": 7,
+      "labels": [
+        "queued"
+      ]
+    },
+    {
+      "type": "queue_follow_up",
+      "typeLabel": "Queue Follow-up",
+      "source": "03-Resources/MOC-UI-UX-Lessons.md",
+      "text": "Agent skill activation: (L20): must explicitly name skill in prompt prefix (`Using your ui-ux-pro-max skill...`)",
+      "weight": 7,
+      "labels": [
+        "queued"
+      ]
+    },
+    {
+      "type": "queue_follow_up",
+      "typeLabel": "Queue Follow-up",
+      "source": "03-Resources/MOC-UI-UX-Lessons.md",
+      "text": "45 Claude Design Skills distillation: (L28-L31): motion rules, taste dials, anti-pattern rules — distill from clipping",
+      "weight": 7,
+      "labels": [
+        "queued"
+      ]
+    },
+    {
+      "type": "clipping_distill",
+      "typeLabel": "Clipping Distillation",
+      "source": "Clippings/Dashboard Design best practices and examples.md",
+      "text": "\"Dashboard Design: best practices and examples\"",
+      "weight": 5,
+      "labels": [
+        "unprocessed"
+      ]
+    },
+    {
+      "type": "clipping_distill",
+      "typeLabel": "Clipping Distillation",
+      "source": "Clippings/Navigation Design  Patterns, tips & best practices.md",
+      "text": "\"Navigation Design | Patterns, tips & best practices\"",
+      "weight": 5,
+      "labels": [
+        "unprocessed"
+      ]
+    }
+  ]
+}

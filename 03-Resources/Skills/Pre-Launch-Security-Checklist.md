@@ -249,8 +249,8 @@ headers: async () => [{
 ## Related Resources in Vault
 - [[03-Resources/Skills/Secure-Downloads-Middleware]] — download proxy and RLS audit guide
 - [[03-Resources/Skills/Theme-Switching-Foundation]] — auth race condition patterns
-- [[01-Projects/Tempire/TODO]] — add rate limiting and ToS to 🔴 Critical
-- [[01-Projects/Tempire/Decisions]] — document CORS and rate limit decisions when implemented
-- [[01-Projects/Momentum/Docs/DEV_NOTES]] — mentions ToS gap and privacy policy concern
+- [[01-Projects/Tempire/Tempire#TODO (when revived)|Tempire TODO]] — add rate limiting and ToS to 🔴 Critical when revived
+- [[01-Projects/Tempire/Tempire#Architecture decisions (condensed)|Tempire decisions]] — document CORS and rate limit when implemented
+- [[01-Projects/Momentum/Lessons-from-DEV_NOTES]] — mentions ToS gap and privacy policy concern
 
 **Tags:** #security #tempire #momentum #todo #skill #compliance #supabase #rls

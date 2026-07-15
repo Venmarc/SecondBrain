@@ -106,7 +106,7 @@ After building any chart: test at 390px width (iPhone SE). The chart must either
 No silent overflow. No layout-breaking horizontal scrollbar on the page.
 
 ## Where This Appeared
-- [[01-Projects/Momentum/Docs/DEV_NOTES]] — habit heatmap and adherence trend horizontal scroll issue on mobile (June 5 testing, Progress page)
+- [[01-Projects/Momentum/Lessons-from-DEV_NOTES]] — habit heatmap and adherence trend horizontal scroll issue on mobile (June 5 testing, Progress page)
 
 ## Related
 - [[03-Resources/Skills/Tooltip-Edge-Overflow]]

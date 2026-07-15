@@ -1,3 +1,5 @@
+> **One-line Summary**: Recover corrupted git repo after power-loss mid-commit using reflog and object repair.
+
 # Snippet: Git Recovery After Power Loss
 
 **Problem:** Repo corrupted with "bad object HEAD" errors after power loss during commit.

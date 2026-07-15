@@ -6,10 +6,80 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-07-15 — Vault lint pass (Grok)
+#### Changed
+- [[LINT-REPORT|LINT-REPORT.md]] — full refresh via Obsidian CLI + wikilink scan
+- [[index|index.md]], [[BRAIN|BRAIN.md]], [[README|README.md]] — phase status, lint pointer, Effects tools
+- [[01-Projects/Momentum/Docs/AGENTS|Momentum AGENTS mirror]] — fixed dead Related links
+- [[03-Resources/Tools/Vault-Librarian-Interviewer|Vault Librarian]] — fixed MOC link
+- [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] · [[03-Resources/Tools/Effects_Playbook|Effects Playbook]] — cross-linked
+#### Removed
+- Empty orphan `Untitled.md`
+
+### 2026-07-15 — Ledger doc sync + NOTES lessons (Grok)
+#### Changed
+- Vault mirror: [[01-Projects/Ledger/Docs/APP_FLOW|APP_FLOW]], [[01-Projects/Ledger/Docs/PAGE_SPECS|PAGE_SPECS]], [[01-Projects/Ledger/Docs/PHASES|PHASES]], [[01-Projects/Ledger/Docs/UIUX_BRIEF|UIUX_BRIEF]], [[01-Projects/Ledger/Docs/NOTES|NOTES]] from Port Sites
+- [[01-Projects/Ledger/Ledger|Ledger hub]] — theme-toggle doc alignment + cross-project NOTES lessons
+- [[03-Resources/Skills/Theme-Switching-Foundation|Theme Switching Foundation]] — toggle placement + Phase 0/4 split
+- [[02-Areas/Agent-Ops/Victor-Standing-Directives|Victor standing directives]] — doc hierarchy, living docs, hero viewport pattern
+- [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] — hero viewport lock entry (untested)
+- [[index|index.md]] — Ledger sync date; removed dead Momentum/Notes link
+
+### 2026-07-14 — Handoff planning for 06-Agent-Sessions task (Grok)
+#### Added
+- Full session summary: [[06-Agent-Sessions/2026-07-14-grok-agent-sessions-handoff|2026-07-14-grok-agent-sessions-handoff.md]] (using new detailed template).
+- Comprehensive handoff prompt prepared for Composer 2.5 covering all extraction rules, order, destinations, and current vault state.
+
+### 2026-07-14 — Session log extraction + Port Sites AGENTS (Grok)
+#### Added
+- [[03-Resources/Skills/Collapsible-Desktop-Sidebar|Collapsible Desktop Sidebar]] skill
+- [[02-Areas/Agent-Ops/Victor-Standing-Directives|Victor standing directives]]
+- [[06-Agent-Sessions/extracted-sessions|Extracted sessions index]] (replaces 60+ raw session logs)
+#### Changed
+- [[ANTI_PATTERNS|ANTI_PATTERNS.md]] — Clerk, Next.js, Supabase, CSS token entries; sources point to project hubs
+- [[01-Projects/Momentum/Momentum|Momentum hub]] — Phase 0 complete; journey notes consolidated; `Notes.md` removed
+- [[01-Projects/Ledger/Ledger|Ledger hub]] — Phase 0 complete; layout/theme lessons
+- [[03-Resources/Skills/Theme-Switching-Foundation|Theme Switching Foundation]] — flash prevention, hydration guards
+- Port Sites: `Ledger/AGENTS.md` (full agent context); `Momentum/.agents/AGENTS.md` (auth + session conduct updates)
+- Vault mirror: [[01-Projects/Ledger/Docs/AGENTS|Ledger AGENTS]] synced 2026-07-14
+#### Removed
+- 63 files from `06-Agent-Sessions/` after knowledge extraction (see extracted-sessions index)
+
+### 2026-07-10 — Task 10 Brand Logo Green Color Alignment (Antigravity)
+#### Added
+- Session log: [[06-Agent-Sessions/2026-07-10-agy-logo-green-alignment|2026-07-10-agy-logo-green-alignment]].
+#### Changed
+- [[01-Projects/Momentum/Momentum|Momentum]]: Fixed reviewer findings for Brand Logo Green Color Alignment in `components/Logo.tsx`, including:
+  - Updated drop shadow glow colors from cyan to brand green in `logoVariants`.
+  - Enlarged touch target to >=48px by adding `p-2 -m-2 inline-flex items-center rounded-lg` and custom focus ring on parent `<Link>`.
+  - Moved `aria-label` from child component to parent `<Link>`.
+  - Updated outdated inline comment to green accent.
+- Project task report `.superpowers/sdd/task-10-report.md`: Appended findings, fixes, verification details, and git commit reference.
+
+### 2026-07-09 — Librarian interview (Grok)
+#### Added
+- [[05-Daily/2026-07-09]], skills: [[03-Resources/Skills/Clerk-Auth-Card-Contrast]], [[03-Resources/Skills/Reverse-Engineering-UI-Components]], [[03-Resources/Tools/External-Design-Skills]]
+- Session: [[06-Agent-Sessions/2026-07-09-grok-vault-interview]]
+#### Changed
+- Clippings processed → [[04-Archive/Clippings]]; deleted Prompts and Thoughts
+- [[01-Projects/Momentum/Momentum]] Phase 0 status + lessons; [[03-Resources/Clippings-Ingest-Log]]
+
+### 2026-07-09 — Phase B light (Grok)
+#### Added
+- [[03-Resources/MOCs/MOC-Projects|MOC-Projects.md]]
+- [[03-Resources/Vault-Ops/Vault-Health-2026-07-09|Vault health summary]]
+- Session log [[06-Agent-Sessions/2026-07-09-grok-phase-b|2026-07-09-grok-phase-b]]
+#### Changed
+- Refreshed [[LINT-REPORT|LINT-REPORT.md]]; repaired wikilinks after Tempire merge + DEV_NOTES archive
+- [[03-Resources/MOC-UI-UX-Lessons|MOC UI/UX]] Phase 0 section; project hub skill wiring
+- [[03-Resources/Vault-Ops/Session-Lesson-Extraction-Idea|Session extraction]] draft → active minimal rule
+- [[index|index.md]] health + MOC links
+
 ### 2026-07-09 — Reality reset (Grok) & Task 1 (Antigravity)
 #### Added
 - Session log [[06-Agent-Sessions/2026-07-09-agy-momentum-auth-route-protection|2026-07-09-agy-momentum-auth-route-protection]].
 - Session log [[06-Agent-Sessions/2026-07-09-agy-task-6-empty-state|2026-07-09-agy-task-6-empty-state]].
+- Session log [[06-Agent-Sessions/2026-07-09-agy-task-9-layout-optimization|2026-07-09-agy-task-9-layout-optimization]].
 - Project task report [[.superpowers/sdd/task-1-report|task-1-report.md]].
 - [[01-Projects/Momentum/Momentum|Momentum hub]] + full doc sync from Port Sites (banner dated 2026-07-09), including INSIGHTS/NOTES.
 - [[01-Projects/Ledger/Ledger|Ledger]] project onboarded with Docs mirror from Port Sites.

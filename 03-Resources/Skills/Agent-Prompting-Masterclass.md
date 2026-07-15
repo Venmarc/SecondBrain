@@ -85,6 +85,6 @@ Show me 2 approaches, build the stronger one, explain why.
 ## Related Skills / Notes
 - [[03-Resources/Skills/Frontend-Awesomeness]]
 - [[03-Resources/Design/48-Laws-of-Web-Design]]
-- [[01-Projects/Tempire/TODO]]
+- [[01-Projects/Tempire/Tempire#TODO (when revived)|Tempire TODO]]
 
 **Tags:** #skill #prompting #ai-workflow #tempire

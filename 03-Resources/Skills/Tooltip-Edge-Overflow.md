@@ -112,7 +112,7 @@ container boundary. Test by hovering near all four edges.
 ```
 
 ## Where This Appeared
-- [[01-Projects/Momentum/Docs/DEV_NOTES]] — heatmap tooltip causing horizontal scrollbar on right-edge cells (June 5 testing, Progress page)
+- [[01-Projects/Momentum/Lessons-from-DEV_NOTES]] — heatmap tooltip causing horizontal scrollbar on right-edge cells (June 5 testing, Progress page)
 
 ## Related
 - [[03-Resources/Skills/Responsive-Data-Viz]]

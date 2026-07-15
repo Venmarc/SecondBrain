@@ -68,7 +68,7 @@ When implementing sidebar navigation active states:
 After building any sidebar, manually navigate to every sub-page in the app. The correct parent icon must remain highlighted on all of them.
 
 ## Where This Appeared
-- [[01-Projects/Momentum/Docs/DEV_NOTES]] — `/fitness/exercises` sub-page, fitness sidebar icon not highlighted (June 19 section)
+- [[01-Projects/Momentum/Lessons-from-DEV_NOTES]] — `/fitness/exercises` sub-page, fitness sidebar icon not highlighted (June 19 section)
 
 ## Applies To
 Any app with sidebar navigation and nested routes. This is not Momentum-specific — it will appear in Tempire, future projects, anything with a dashboard layout.
