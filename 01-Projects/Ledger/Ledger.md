@@ -4,6 +4,7 @@
 
 **Status:** Active — **Phase 0 (Foundation)** — *complete as of 2026-07-14* (layout revisions merged; Phase 1 next)  
 **Codebase:** `/home/redmane/Documents/Port Sites/Category 5/Ledger`  
+**Live:** [Ledger](https://ledgerix.vercel.app)
 **Vault sync:** Docs mirrored from Port Sites on **2026-07-15** (APP_FLOW, PAGE_SPECS, PHASES, UIUX_BRIEF, NOTES). Edit project folder first.
 
 ## Purpose

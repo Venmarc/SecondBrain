@@ -6,7 +6,7 @@
 
 ## Active projects
 - **[Momentum](https://peakmomentum.vercel.app)** — Personal habit + fitness daily OS · Phase 0 ✓ · [hub](01-Projects/Momentum/Momentum.md)
-- **Ledger** — Personal expense/budget tracker · Phase 1 next · [hub](01-Projects/Ledger/Ledger.md)
+- **[Ledger](https://legderix.vercel.app)** — Personal expense/budget tracker · Phase 1 next · [hub](01-Projects/Ledger/Ledger.md)
 - **[Tempire](https://tempire.xyz/)** — Template marketplace · **later** · [hub](01-Projects/Tempire/Tempire.md)
 
 Product source of truth: `Documents/Port Sites/Category 5/<Project>/`. Vault `Docs/` are dated mirrors.

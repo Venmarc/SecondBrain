@@ -3,7 +3,7 @@
 # Tempire
 
 **Status:** Later / paused  
-**Live:** https://tempire.xyz/  
+**Live:** [Tempire](https://tempire.xyz/)
 **Slogan:** Build your empire, one template at a time.
 
 ## What it is

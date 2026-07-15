@@ -4,7 +4,7 @@
 
 **Status:** Active — **Phase 0 (Foundation)** — *complete as of 2026-07-12* (Victor confirmed; auth page card-only cleanup deferred)  
 **Codebase:** `/home/redmane/Documents/Port Sites/Category 5/Momentum`  
-**Live:** https://peakmomentum.vercel.app  
+**Live:** [Momentum](https://peakmomentum.vercel.app)
 **Vault sync:** Docs mirrored from Port Sites on **2026-07-09**. Edit project folder first.
 
 ## The one goal
