@@ -37,6 +37,7 @@ or follow its link if it's already been split out — before writing related cod
 | Use `userButtonPopoverActionButtonText` as a Clerk styling selector | Deprecated/ignored as of Clerk Core 2 — styles silently don't apply, no error thrown | Merge text/hover styles directly into the parent `userButtonPopoverActionButton` selector | [[01-Projects/Momentum/Momentum]] |
 | Call `getToken({ template: 'supabase' })` without error catching | Throws a raw `ClerkAPIResponseError: Not Found` if the Supabase template is missing or inactive in Clerk dashboard, crashing the page/action | Wrap `getToken` in a `try/catch` block and fall back to public client queries | [[01-Projects/Ledger/Ledger]] |
 | Render empty `<UserButton.MenuItems>` container | Causes unnecessary blank separators or runtime console warnings in the Clerk UserButton dropdown | Conditionally wrap the entire `<UserButton.MenuItems>` block (e.g., `{isMobile && <UserButton.MenuItems>...</UserButton.MenuItems>}`) | [[01-Projects/Ledger/Ledger]] |
+| Assume a Clerk JWT template named `supabase` exists after only wiring env keys | Template is separate dashboard config; zero templates → `getToken` returns null → every RLS data action fails even when Supabase is healthy (including after project resume) | Create JWT template `supabase` with HS256 custom signing key = Supabase JWT Secret (`scripts/setup-clerk-supabase-jwt.mjs`); optional service-role fallback only after Clerk `auth()` + always scope by `user_id` | [[01-Projects/Ledger/Ledger]] |
 
 ## Next.js
 

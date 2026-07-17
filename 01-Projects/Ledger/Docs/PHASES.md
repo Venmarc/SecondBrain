@@ -1,9 +1,7 @@
-> **Vault sync:** Copied from `Documents/Port Sites/Category 5/Ledger/` on **2026-07-15**. Edit the project folder first; re-sync the vault after doc changes.
-
 # PHASES.md — Implementation Roadmap
 **Project:** Ledger
-**Last Updated:** 13/07/2026
-**Status:** Pre-build. Docs phase complete.
+**Last Updated:** 16/07/2026
+**Status:** Phase 1 **implementation complete** — gate pending Victor verification (do not start Phase 2 until gate passes).
  
 **References:** PRD.md · TRD.md · SCHEMA.md · APP_FLOW.md · PAGE_SPECS.md · UI/UX_BRIEF.md · NOTES.md
  
@@ -137,7 +135,14 @@ The app's only job at the end of Phase 1 is to let you log transactions fast and
 - Month selector functional (changes summary numbers)
 - Empty states per PAGE_SPECS.md
 - FAB wired
+### Phase 1 implementation note (2026-07-16)
+
+Built in chunks P1-A→P1-H: foundations, data layer, shared UI, Quick Add, list/filters, edit/delete/undo, categories, dashboard v1. Auth bridge: Clerk JWT template preferred; service-role fallback after Clerk auth if template missing (post-pause fix). Category auto-seed when user has zero categories.
+
+**Agent verification (not the product gate):** `npx tsc --noEmit`, `npm run lint`, `npm run build` pass as of 2026-07-16.
+
 ### Phase 1 Gate — All Must Pass
+*(Victor only — agents must not check these off or start Phase 2 without explicit sign-off.)*
 - [ ] Log a transport expense on your phone. Tap to saved in under 10 seconds. Time it.
 - [ ] Log an income transaction. Appears in list with green amount. Dashboard income total updates.
 - [ ] Edit a transaction. Changes reflected immediately in list and dashboard.
@@ -302,6 +307,7 @@ All doc changes are logged here. Most recent first.
  
 | Date | Document | Change |
 |---|---|---|
+| 16/07/2026 | PHASES.md, NOTES.md | Phase 1 implementation marked complete (gate pending Victor). Documented Supabase pause/resume vs Clerk JWT template root cause + auth fallback + category auto-seed. |
 | 07/07/2026 | APP_FLOW.md, PAGE_SPECS.md, UIUX_BRIEF.md, PHASES.md | Added Theme Toggle as a global component. Fixed placement rule (closest to center, every page, public + protected). Corrected Phase 0/4 split — toggle is real and permanent from Phase 0 with localStorage persistence, not a dev-only placeholder rebuilt later. Added component spec (icon, size, transition, flash-prevention) to UIUX_BRIEF §6.10. |
 | 06/07/2026 | PHASES.md, TRD.md, UIUX_BRIEF.md | Fixed dark/light theme contradiction. NOTES.md and TRD §6.1 required theme switching architected at project start, but Phase 0 never verified it and Phase 4 read like the initial build. Phase 0 now requires a working dev-only toggle + hex-value grep gate. Phase 4 reworded to "refinement only." UIUX_BRIEF §2.7 reworded from "Future — Structure Only" to explicit phase ownership. |
 | 06/07/2026 | PHASES.md | Patched Phase 3 currency widget deliverable — route handler pattern documented, provider confirmed as exchangerate-api.com. |

@@ -1,5 +1,3 @@
-> **Vault sync:** Copied from `Documents/Port Sites/Category 5/Ledger/` on **2026-07-15**. Edit the project folder first; re-sync the vault after doc changes.
-
 # DEV_NOTES
 
 ## CREATED: 05/07/2026
@@ -35,6 +33,25 @@ I reverted Momentum back to it's freshest state. I have some important info that
 
 ---
 
+## 16/07/2026 — Supabase pause/resume + Clerk JWT
+
+**What pause does / does not do**
+- Pause does **not** invalidate SQL migrations or drop tables. After resume, schema was verified intact (`profiles`, `categories`, `transactions`, `budgets`, `savings_goals`, `recurring_templates` all HTTP 200).
+- Pause **does** block API traffic while stopped (looks like total outage). After resume, keys stay valid.
+- Pause does **not** create a Clerk JWT template. If Custom Session Tokens were never finished, data actions fail with “Could not authorize database access…” even when Supabase is healthy.
+
+**Root cause of post-resume Transactions error (2026-07-16)**
+- Clerk JWT templates count was **0** — no template named `supabase`.
+- App requires `getToken({ template: 'supabase' })` for RLS.
+- Fix path:
+  1. Server fallback: if JWT missing, use service-role client **only after** Clerk `auth()` and always scope by `user_id` (`lib/actions/auth-context.ts`).
+  2. Proper bridge: `SUPABASE_JWT_SECRET=... node scripts/setup-clerk-supabase-jwt.mjs` (HS256 custom signing key = Supabase JWT Secret).
+  3. Empty category table auto-seeds 13 defaults on first `listCategories` for a user.
+
+**Not a migration replay problem.** Re-running old seed scripts is optional; use ensureDefaultCategories / open Categories page once auth works.
+
+---
+
 ## 15/07/2026
 
 In my portfolio site [Venmarcstudio](https://venmarcstudio.xyz), I implemented this "hero page always occupies the viewport until scrolled" feature on my hero page. Here's what I can describe it as rn:
@@ -47,6 +64,7 @@ In my portfolio site [Venmarcstudio](https://venmarcstudio.xyz), I implemented t
 - It's a way of introducing the hero page of ur website without cluttering the view with other page sections.
 - I will want to use this feature in the landing page of all my projects, but only if my agent can define it in code, cos I can't rn.
 - Maybe a little clue `min-height: vh100` or something similar.
+- This feature can be applied in phase 0 or 1 of my projects, depending on what phase they are in when this suggestion came in.
 
 **THE DOCS ARE THE SOURCE OF TRUTH**
 

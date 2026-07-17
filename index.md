@@ -1,6 +1,6 @@
 # Victor's Second Brain (Master Hub)
 
-> **One-line Summary**: Central index of Victor's knowledge OS — Momentum + Ledger past Phase 0, Ledger entering Phase 1, Tempire later, skills and agent ops without multi-agent orchestration.
+> **One-line Summary**: Central index of Victor's knowledge OS — Momentum Phase 0 ✓, Ledger Phase 1 implemented (gate pending Victor), Tempire later, skills and agent ops without multi-agent orchestration.
 
 ---
 
@@ -22,10 +22,10 @@ Personal daily habit + fitness OS. One goal: use it daily; show wins/fails.
 **Docs (synced 2026-07-09):** [[01-Projects/Momentum/Docs/PRD|PRD]] · [[01-Projects/Momentum/Docs/PHASES|PHASES]] · [[01-Projects/Momentum/Docs/TRD|TRD]] · [[01-Projects/Momentum/Docs/PAGE_SPECS|PAGE_SPECS]] · [[01-Projects/Momentum/Docs/APP_FLOW|APP_FLOW]] · [[01-Projects/Momentum/Docs/UIUX_BRIEF|UIUX_BRIEF]] · [[01-Projects/Momentum/Docs/SCHEMA|SCHEMA]] · [[01-Projects/Momentum/Docs/INSIGHTS|INSIGHTS]] · [[01-Projects/Momentum/Docs/NOTES|NOTES]]  
 **Lessons:** [[01-Projects/Momentum/Lessons-from-DEV_NOTES|from DEV_NOTES]] · hub [[01-Projects/Momentum/Momentum|Momentum.md]]
 
-### 📒 [[01-Projects/Ledger/Ledger|Ledger]] — Phase 1 next
+### 📒 [[01-Projects/Ledger/Ledger|Ledger]] — Phase 1 (gate pending)
 Personal expense / budget tracker (NG realities). Precision + speed; serious UI.  
-**Code:** `Documents/Port Sites/Category 5/Ledger`  
-**Docs (synced 2026-07-15):** [[01-Projects/Ledger/Docs/PRODUCT|PRODUCT]] · [[01-Projects/Ledger/Docs/PRD|PRD]] · [[01-Projects/Ledger/Docs/PHASES|PHASES]] · [[01-Projects/Ledger/Docs/TRD|TRD]] · [[01-Projects/Ledger/Docs/PAGE_SPECS|PAGE_SPECS]] · [[01-Projects/Ledger/Docs/APP_FLOW|APP_FLOW]] · [[01-Projects/Ledger/Docs/UIUX_BRIEF|UIUX_BRIEF]] · [[01-Projects/Ledger/Docs/DESIGN|DESIGN]] · [[01-Projects/Ledger/Docs/SCHEMA|SCHEMA]] · [[01-Projects/Ledger/Docs/NOTES|NOTES]]
+**Code:** `Documents/Port Sites/Category 5/Ledger` · **Live:** https://ledgerix.vercel.app  
+**Docs (synced 2026-07-16):** [[01-Projects/Ledger/Docs/PRODUCT|PRODUCT]] · [[01-Projects/Ledger/Docs/PRD|PRD]] · [[01-Projects/Ledger/Docs/PHASES|PHASES]] · [[01-Projects/Ledger/Docs/TRD|TRD]] · [[01-Projects/Ledger/Docs/PAGE_SPECS|PAGE_SPECS]] · [[01-Projects/Ledger/Docs/APP_FLOW|APP_FLOW]] · [[01-Projects/Ledger/Docs/UIUX_BRIEF|UIUX_BRIEF]] · [[01-Projects/Ledger/Docs/DESIGN|DESIGN]] · [[01-Projects/Ledger/Docs/SCHEMA|SCHEMA]] · [[01-Projects/Ledger/Docs/NOTES|NOTES]]
 
 ### ⏸️ [[01-Projects/Tempire/Tempire|Tempire]] — Later
 Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. Formal specs remain under `Docs/`.

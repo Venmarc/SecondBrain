@@ -48,6 +48,34 @@ Do **not** open with only a jargon title (“progressive multi-layer blur”, �
 
 ---
 
+## Motion tokens (use, don't redefine)
+
+Every extracted Technique should tag the easing/duration it uses by **token name**, not an ad-hoc `cubic-bezier(...)`. The canonical tokens live in the shared motion reference at `~/.agents/skills/_shared/MOTION-STANDARDS.md` (the file the `motion-router`, `improve-animations`, and `review-animations` skills all load):
+
+```css
+:root {
+  --ease-out:    cubic-bezier(0.23, 1, 0.32, 1);   /* strong ease-out — entrances, UI interactions */
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);    /* on-screen movement / morph */
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);     /* iOS-like drawer / sheet */
+}
+
+:root {
+  --duration-fast:   150ms;   /* press feedback */
+  --duration-normal: 200ms;   /* default UI transition */
+  --duration-slow:   280ms;   /* entrances / larger surfaces */
+}
+```
+
+Rules:
+
+- When an extracted effect specifies a transition, write the **token name** (e.g. `transition: transform var(--duration-normal) var(--ease-out)`), not the raw curve. This keeps extracted curves consistent with what the build will ship.
+- If the source site uses a curve that genuinely differs from these tokens (e.g. a drawer with a specific Ionic curve), document the literal `cubic-bezier(...)` once in the Technique line **and** add a note: `differs from --ease-* — adopt as a new token only if shipped to a real project`.
+- Don't add new `--ease-*` tokens to this file casually — they propagate from `MOTION-STANDARDS.md`. If a new token is warranted, raise it as a standards change, not a glossary edit.
+
+**Framer Motion / Motion library:** avoid by default, justify to use — see the library rule at the top of `MOTION-STANDARDS.md`. Most extracted effects use CSS + WAAPI + IntersectionObserver; document any Framer Motion use with the justification (gesture-driven interruptible motion, multi-element orchestration the View Transitions API can't cover).
+
+---
+
 **Identification cheat sheet** (eye vs devtools):
 
 - Sharp at any zoom = vector (CSS/SVG). Soft/blurry when zoomed = raster image.
