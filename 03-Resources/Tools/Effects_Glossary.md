@@ -280,9 +280,26 @@ Rules:
   **Cost:** Cheaper than a second WebGL scene; throttle redraw if needed.
   — `tried`
 
-- **Investigation note:** Canvas/WebGL has no useful “computed style story” — read scripts, network, and the canvas context type.
+- **[Depth+Motion] Living-organism particle swarm with mid-page morph pair** (antigravity.google) —
+  **Literal:** A dense field of fine bright points that drift and clump like a school of fish or a living cell in the hero; deeper down, two side-by-side swarms fluidly reshape through each other — not flying toward you, not exploding, just continuously reorganising like a breath.
+  **Technique:** Three.js r180 + custom `ShaderMaterial` extending `PointsMaterial` (`isPointsMaterial=!0`, `sizeAttenuation=!0`, fog on). Each particle is a vertex in a `BufferGeometry` (`BufferAttribute` ×64, so multiple attributes — at least `position`, plus colour and a per-particle velocity or seed). The vertex shader uses **Simplex noise 2D + 3D** (`snoise`, Ashima Arts snippet present) to displace each point over time — that's the "living" drift; the uniform animation is `requestAnimationFrame` (30 refs), **not** GSAP/Lenis (`hasGSAP=false`, `hasLenis=false`, only 18 `ScrollTrigger`-named helpers but no library fingerprint match). Up to **4 canvases on one page**: one full-viewport hero swarm (`main-particles-container`, 1366×768 parent, `position:absolute`, parent `overflow:hidden`) + **two paired morph swarms** (`morphing-particles-container`, each 611×728, side-by-side at y≈6175 mid-page, class `morphing-particles`) + one dynamically-sized main canvas (1354×852). A `worker` constructor hint is present (`visibleWorkers: "available"`) but not on the critical path — looks pre-warmed not required. CSS contact: parent `.main-particles-component-section` is `position:absolute; inset:0; overflow:hidden` and the canvas is `position:absolute; inset:0; width:100%; height:100%` — the swarm canvas itself never moves; the "scroll reveals more swarm" feel comes from the long page body scrolling over a tall absolute hero, not from animating the canvas. Identification: canvas with `data-engine="three.js r180"`, parent class `*-particles-container`, library fingerprint Three r180. Not TresJS, not COBE.
+  **Cost:** Heavy GPU + 600 KB main bundle (`main-WM7D6D2M.js`, 598 KB transfer — Angular production sizes). Two simultaneous particle shaders mid-page doubles draw cost; mobile fallback plan mandatory. WebGLRenderer was SwiftShader in the audit (CPU fallback) — works but is the perf floor.
+  **Mobile/touch fallback:** Disable or shrink the morph pair under `(max-width: 1024px)`; hero swarm can scale particle count down with `devicePixelRatio` clamp. Decide purpose.
+  **Not the same as:** static particle wallpaper, single-pulse "twinkle" sprites, or the spinning planet (camera moves, points don't drift).
+  — `extracted`
+
+- **[Investigation note:** Canvas/WebGL has no useful “computed style story” — read scripts, network, and the canvas context type.
 
 ## JS animation libraries / performance
+
+- **[Motion] Blinking typewriter cursor over static text** (antigravity.google) —
+  **Literal:** A thin vertical bar (or grain-of-rice image shape) sits at the end of a line of text and blinks — the text itself isn't typed character-by-character; the cursor just decorates already-rendered copy like a prompt waiting for input.
+  **Technique:** Inline `<img class="blinking-cursor" src="assets/image/antigravity-cursor.png" alt="" aria-hidden="true">` after the text — an image glyph (not a `|` character or pure CSS box, not a styled caret), so the cursor stroke can have a custom drawn shape and antialiasing. CSS: `animation: blink .5s infinite ease; height: 1em` (scales with the text's `em`, drops into a centered baseline via `transform: translate3d(var(--cursor-pos-x), var(--cursor-pos-y), 0)` on a wrapping `.cursor-container` — the container tracks current typewriter position; the cursor image itself only animates `opacity`). Keyframes: `0%{opacity:0} 10%{opacity:1} 100%{opacity:0}` — i.e. sharp on near the start (10%), then mostly off for the rest of the cycle; the blink is **not** symmetric (an actual `|` on a 50-50 duty cycle would feel like a metronome, not a wait cursor). Angular build — `_ngcontent-*` attribute selectors per component (`_ngcontent-ng-c1084985811` on the cursor + its keyframes), so the animation and keyframes are component-scoped by Angular's view encapsulation, not global. The "typed" content lives in a `<span class="typed-content">` next to the cursor with a parallel `.visually-hidden` copy for screen readers; no JS per-keystroke reveal was found (`typewriter: 0` keyword hits, `writeZones: []` in the audit). It's a presentational typewriter, not a behavioural one.
+  **Cost:** Free — 4 IMG tags total on the page reused, one keyframe, one transform var on scroll; no JS, no library.
+  **Mobile/touch fallback:** None needed — pure CSS. Apply as-is under `(pointer: coarse)`.
+  **Not the same as:** a real JS typewriter (per-character `setTimeout` reveal), a contenteditable browser caret, or a hero "scramble decrypt" effect. The text is static; only the cursor blinks.
+  **Options (not base form):** duty cycle (default mostly-off), blink duration (default `.5s`), cursor shape (image glyph vs `|` character vs CSS-drawn bar), `prefers-reduced-motion: reduce` should kill the animation and keep the cursor visible (set `opacity: 1`).
+  — `extracted`
 
 - **[Motion] Whole pages sliding over each other** —
   **Literal:** Navigating feels like sheets of paper sliding, not a hard cut.
@@ -367,6 +384,18 @@ Implementation notes: GlobeScene.tsx JumpingGlobeArcs; JumpingArcs2D.tsx; pages 
 Performance check: not lighthouse; visual verified in lab
 Result: tried
 Project applied: Pastries fin-website-audit
+```
+
+```
+Date: 2026-07-18
+Source: https://antigravity.google + ~/Pastries/rep-antigravity-swarm-typewriter
+Entry: NEW — Living-organism particle swarm with mid-page morph pair; blinking typewriter cursor over static text
+Literal: Particle field that drifts/breathes like a school of fish (hero) + two side-by-side swarms that morph through each other mid-page; a thin image-glyph cursor that blinks at the end of already-rendered copy
+Technique: Three.js r180 + custom ShaderMaterial extending PointsMaterial + snoise GLSL (Simplex 2D/3D) vertex displacement, rAF-driven, no GSAP/Lenis. 4 canvases total (1 hero + 2 morph pair + 1 dynamic). Cursor: inline IMG glyph with .5s asymmetric blink (10% on), position via translate3d CSS vars; Angular component-scoped keyframes; text doesn't reveal keystroke-by-keystroke (writeZones empty)
+Implementation notes: report.json + deep-audit.json parsed; bundle keyword-grepped not full-read to avoid prior server-error crash mode; audit-antigravity-deep.mjs produced the data, audit-antigravity.mjs has a broken page.evaluate and was not re-run
+Performance check: not lighthouse on source (transfer-only: 598 KB main bundle, SwiftShader CPU rasterizer). Save Lighthouse for the Pastries rep.
+Result: extracted (both)
+Project applied: none yet — awaiting Build lane
 ```
 
 ## Open gaps

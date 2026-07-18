@@ -29,6 +29,19 @@ Source: impeccable `antipatterns.mjs` registry
 | Gradient text / purple-cyan AI palette / cream-beige default | Intentional brand colors |
 | Nested cards | Flatten with space/type, not card-in-card |
 
+## Polish tells (flag when defaulted)
+Source: [[Clippings/Rules on UI Polish]] via distilled lesson [[03-Resources/Skills/UI-Polish-Ten-Rules|UI-Polish-Ten-Rules]]
+
+| Pattern | Avoid |
+|---------|--------|
+| Single flat `box-shadow` (no layered light) | Use hairline ring + contact + ambient stack, opacities 2–8% |
+| `1px` border instead of hairline ring | Use `0 0 0 0.5px rgba(0,0,0,0.08)` — edge defined by light, not stroke |
+| Default `ease` / `ease-in-out` built-in | Use shared tokens `--ease-out` / `--ease-in-out` (strong custom curves) |
+| `max-height: 9999px` for expand/collapse | Static, jitters, times wrong — use `grid-template-rows: 0fr ↔ 1fr` |
+| Entrance with opacity-only fade | Add 6px rise + 2px blur-that-clears; fade alone is the least premium |
+| No `:active` scale on pressable elements | `transform: scale(0.97)` — feels heard, not ignored |
+| State list ends at hover/active; missing working/loading/discovered states | Build surfaces unknown states through use — see Rule 10 |
+
 ## The Fix
 - Prefer local design-skills + vault UI lessons over reinventing.
 - On UI review: scan for **frequency/uniformity** of the same motion or chrome pattern.
@@ -40,6 +53,7 @@ Source: impeccable `antipatterns.mjs` registry
 - `~/.agents/design-skills/`
 
 ## Related
+- [[03-Resources/Skills/UI-Polish-Ten-Rules]] — distilled from [[Clippings/Rules on UI Polish|Kevin's X article]]; the "Polish tells" section above sources from this note.
 - [[03-Resources/MOC-Design-Skills-External|MOC External Design Skills]]
 - [[03-Resources/Skills/Frontend-Awesomeness|Frontend Awesomeness]]
 - [[03-Resources/MOC-UI-UX-Lessons|MOC UI/UX]]

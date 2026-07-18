@@ -3,6 +3,9 @@
 > **One-line Summary**: Step-by-step effect reverse-engineering workflow with mandatory performance gates — companion to [[03-Resources/Tools/Effects_Glossary|Effects Glossary]].
 
 Companion to [[03-Resources/Tools/Effects_Glossary|Effects Glossary]]. The glossary is the dictionary — what an effect is called and how it's technically made. This is the procedure — what order you do things in, and what gates you're not allowed to skip.
+
+The **build half** of the system is documented in the sibling file: [[03-Resources/Tools/Effects_Build_Playbook|Effects Build Playbook]]. This playbook owns extraction (live site → glossary entry, status `extracted`); the Build playbook owns replication (glossary entry → Pastries rep, status `tried`). For agent-driven audits against a live site, see `~/.agents/playwright-core/AGENTS.md`. For agent-driven builds, see `~/Pastries/AGENTS.md`. The dispatcher entry point for both halves is `~/.agents/skills/feel-router/SKILL.md`.
+
  
 Read this before starting a session. Point your agent at both files at the start of a session, not just this one — the glossary is what it needs to name techniques correctly; this is what it needs to know the workflow.
 

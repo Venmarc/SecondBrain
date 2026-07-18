@@ -99,6 +99,7 @@ These are architectural traps that produce subtle bugs that are hard to reproduc
 ## 📐 Design Reference
 
 - [[03-Resources/Design/48-Laws-of-Web-Design]] — aesthetic framework Tempire is built on
+- [[03-Resources/Skills/UI-Polish-Ten-Rules]] — distilled from Kevin's X article; snap points, layered shadows, triple entrance, state-discovery, prompting recipes. The motion-skills half lives in `~/.agents/skills/feel-router`; the philosophy half lives here.
 
 ---
 

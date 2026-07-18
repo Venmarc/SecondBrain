@@ -6,6 +6,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-07-17 — Feel router system (OpenCode)
+#### Added
+- `~/.agents/skills/_shared/MOTION-STANDARDS.md` — merged from `improve-animations/AUDIT.md` + `review-animations/STANDARDS.md`; single canonical motion reference. Adds Framer Motion avoid-by-default rule + Apple damping/response table + emil's full-transform-string caveat.
+- `~/.agents/skills/feel-router/SKILL.md` — dispatcher for any UI feel work (motion, depth, materials, layout, gesture, performance-as-polish, taste). 13 routing lanes into the 6 motion skills + the glossary/playbook system + the X article lesson.
+- [[03-Resources/Tools/Effects_Build_Playbook|Effects Build Playbook]] — sibling to [[03-Resources/Tools/Effects_Playbook|Effects Playbook]]. Codifies the replication workflow (extraction's build half): intake → token setup → scaffold → primitives → compose → mobile/touch gate → Lighthouse 95+ → feel check → rep README/tests → glossary `tried`. Plus the Adopt phase (`tried` → project `adopted`).
+- [[03-Resources/Tools/Effects_Glossary|Effects_Glossary]] — new "Motion tokens" section: extracted techniques now tag the easing/duration by token name (`--ease-out`, `--ease-in-out`, `--ease-drawer`) instead of ad-hoc cubic-beziers. Cross-references `_shared/MOTION-STANDARDS.md`.
+- `~/.agents/playwright-core/AGENTS.md` — audit-half entry contract for agent-driven extraction sessions. ASCII diagram of the system network, load manifest, hard rules.
+- `~/Pastries/AGENTS.md` — build-half entry contract for agent-driven replication sessions. Same diagram viewed from the build side, naming convention, default stack recipe, hard rules.
+- [[03-Resources/Skills/UI-Polish-Ten-Rules]] — distilled from the [[Clippings/Rules on UI Polish|Kevin X article]], one vault lesson note carrying the parts the motion skills don't cover: two-zone magnetic snap, triple-entrance recipe, layered shadow stack, state-driven design as discovery, prompting recipes, Figma handoff discipline.
+
+#### Changed
+- `~/.agents/skills/improve-animations/SKILL.md` — AUDIT.md references → `../_shared/MOTION-STANDARDS.md` (4 link edits)
+- `~/.agents/skills/improve-animations/PLAN-TEMPLATE.md` — AUDIT.md reference → shared file
+- `~/.agents/skills/review-animations/SKILL.md` — STANDARDS.md references → shared file (3 link edits)
+- [[03-Resources/Tools/Effects_Playbook|Effects_Playbook]] — gained a top-of-file backref to the new Build Playbook and the two external AGENTS.md files.
+- [[index|index.md]] — added Effects Build Playbook next to the existing Effects tools.
+- [[03-Resources/Skills/AI-UI-Antipatterns-Watchlist]] — new "Polish tells" section (single-blur shadow, 1px border, default easing, max-height hack, fade-only entrance, no press state, missing discovered states); added Related link to UI-Polish-Ten-Rules.
+- [[03-Resources/MOC-UI-UX-Lessons]] — added UI-Polish-Ten-Rules to the 📐 Design Reference section.
+- `~/.agents/playwright-core/BROWSER.md` — top-of-file backref to AGENTS.md.
+- `~/Pastries/README.md` — top-of-file backref to AGENTS.md.
+
+#### Removed
+- `~/.agents/skills/improve-animations/AUDIT.md` (was 116 lines — now in shared file)
+- `~/.agents/skills/review-animations/STANDARDS.md` (was 188 lines — now in shared file)
+
 ### 2026-07-15 — Vault lint pass (Grok)
 #### Changed
 - [[LINT-REPORT|LINT-REPORT.md]] — full refresh via Obsidian CLI + wikilink scan

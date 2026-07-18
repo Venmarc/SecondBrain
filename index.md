@@ -45,7 +45,7 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 - 🧰 **[[03-Resources/Vault-Ops/Session-Lesson-Extraction-Idea|Session lesson extraction (draft)]]**
 - 🧰 **[[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault improvement backlog]]**
 - 🗺️ **[[03-Resources/Vault-LLM-Wiki-Patterns|Vault LLM Wiki Patterns]]**
-- 🛠️ **[[03-Resources/Tools/Vault-Librarian-Interviewer|Vault Librarian]]** · [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] · [[03-Resources/Tools/Effects_Playbook|Effects Playbook]]
+- 🛠️ **[[03-Resources/Tools/Vault-Librarian-Interviewer|Vault Librarian]]** · [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] · [[03-Resources/Tools/Effects_Playbook|Effects Playbook]] · [[03-Resources/Tools/Effects_Build_Playbook|Effects Build Playbook]]
 
 ---
 
