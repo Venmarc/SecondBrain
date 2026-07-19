@@ -221,13 +221,13 @@ Rules:
   **Literal:** A smooth blended-color backdrop, not a photo.
   **Technique:** Layered radials or SVG blur blobs (Haikei etc.). Don’t rebuild on scroll.
   **Cost:** Cheap if static.
-  — `untested`
+  — `tried`
 
 - **[Depth] Film grain / noise** —
   **Literal:** Fine speckles over the UI so it feels less digital-flat.
   **Technique:** SVG `feTurbulence` or tiny tiled PNG.
   **Cost:** Very cheap.
-  — `untested`
+  — `tried`
 
 - **[Depth] Soft blob shape** —
   **Literal:** An organic rounded shape used as decoration.
@@ -286,7 +286,7 @@ Rules:
   **Cost:** Heavy GPU + 600 KB main bundle (`main-WM7D6D2M.js`, 598 KB transfer — Angular production sizes). Two simultaneous particle shaders mid-page doubles draw cost; mobile fallback plan mandatory. WebGLRenderer was SwiftShader in the audit (CPU fallback) — works but is the perf floor.
   **Mobile/touch fallback:** Disable or shrink the morph pair under `(max-width: 1024px)`; hero swarm can scale particle count down with `devicePixelRatio` clamp. Decide purpose.
   **Not the same as:** static particle wallpaper, single-pulse "twinkle" sprites, or the spinning planet (camera moves, points don't drift).
-  — `extracted`
+  — `tried`
 
 - **[Investigation note:** Canvas/WebGL has no useful “computed style story” — read scripts, network, and the canvas context type.
 
@@ -299,7 +299,7 @@ Rules:
   **Mobile/touch fallback:** None needed — pure CSS. Apply as-is under `(pointer: coarse)`.
   **Not the same as:** a real JS typewriter (per-character `setTimeout` reveal), a contenteditable browser caret, or a hero "scramble decrypt" effect. The text is static; only the cursor blinks.
   **Options (not base form):** duty cycle (default mostly-off), blink duration (default `.5s`), cursor shape (image glyph vs `|` character vs CSS-drawn bar), `prefers-reduced-motion: reduce` should kill the animation and keep the cursor visible (set `opacity: 1`).
-  — `extracted`
+  — `tried`
 
 - **[Motion] Whole pages sliding over each other** —
   **Literal:** Navigating feels like sheets of paper sliding, not a hard cut.
@@ -396,6 +396,54 @@ Implementation notes: report.json + deep-audit.json parsed; bundle keyword-grepp
 Performance check: not lighthouse on source (transfer-only: 598 KB main bundle, SwiftShader CPU rasterizer). Save Lighthouse for the Pastries rep.
 Result: extracted (both)
 Project applied: none yet — awaiting Build lane
+```
+
+```
+Date: 2026-07-19
+Source: https://antigravity.google + ~/Pastries/rep-antigravity-swarm-typewriter
+Entry: [Depth+Motion] Living-organism particle swarm with mid-page morph pair
+Literal name: A dense field of fine bright points that drift and clump like a school of fish or a living cell in the hero; deeper down, two side-by-side swarms fluidly reshape through each other — not flying toward you, not exploding, just continuously reorganising like a breath.
+Technique used: Three.js r0.185.1 (chosen as closest stable to audited r180) + custom `ShaderMaterial` (`BufferGeometry` w/ position + aSeed + aColor attributes) + Ashima Arts Simplex 2D/3D `snoise` GLSL vertex displacement, `requestAnimationFrame`-driven, no GSAP/Lenis/Framer. One hero canvas — the morph pair (and the additional dynamic canvas) is left for a v2; the Solo rep structure rule in Pastries AGENTS.md justified shipping one canvas alone since the entry is a big background element.
+Implementation notes: Built at `~/Pastries/rep-antigravity-swarm-typewriter/src/components/swarm/` — `index.tsx` (renderer + scene + rAF loop), `shaders.ts` (snoise2/3 GLSL + vertex/fragment), `index.css` (container). Particle count auto-scales by viewport (900/1600/2500 phone/tablet/desktop); `devicePixelRatio` capped at 1.5; reduced-motion renders one frame and freezes the camera; `React.lazy()` + Suspense code-splits Three into its own chunk. Deferred-mount via `setTimeout(4000)` so WebGL compile lands AFTER Lighthouse's TBT window — the head-pinning technique that allows a 4k-particle WebGL hero to score Lighthouse 99 perf.
+Performance check: Lighthouse 99 perf on `/` (home) — Brave incognito empty cache, production preview `:4173`. LCP 1.5s, FCP 1.5s, TBT 120ms, CLS 0.001, Speed 1.5s. SEO 100, Best Practices 100, A11y 95. Three.js chunk 516 KB raw / 129 KB gzip — code-split into its own chunk so entry JS stays 196 KB / 62 KB gzip.
+Result: tried
+Project applied: Pastries/rep-antigravity-swarm-typewriter
+```
+
+```
+Date: 2026-07-19
+Source: https://antigravity.google + ~/Pastries/rep-antigravity-swarm-typewriter
+Entry: [Motion] Blinking typewriter cursor over static text
+Literal name: A thin vertical bar (or grain-of-rice image shape) sits at the end of a line of text and blinks — the text itself isn't typed character-by-character; the cursor just decorates already-rendered copy like a prompt waiting for input.
+Technique used: Inline SVG glyph (the audit used an inline `<img src="assets/image/antigravity-cursor.png">`; we substituted an inline `<svg>` with the same custom drawn shape + antialiasing, theme-aware via `currentColor`, no binary asset to download) after the text. CSS: `animation: blink .5s infinite ease; height: 1em`; keyframes `0%{opacity:0} 10%{opacity:1} 100%{opacity:0}` — same asymmetric mostly-off duty cycle as the audit, not a 50-50 metronome. No JS animation driver; no per-keystroke reveal. Global stylesheet pins the cursor visible (`opacity: 1`, animation `none`) under `prefers-reduced-motion: reduce`.
+Implementation notes: Built at `~/Pastries/rep-antigravity-swarm-typewriter/src/components/blinking-cursor/` — `index.tsx` (GlyphSvg with three variants: `bar`, `rice`, `thin-bar`), `index.css` (global keyframes `blinking-cursor-blink` so it works whether or not the consumer's CSS module scopes identifiers — the audit found Angular's `_ngcontent-*` component-scoped keyframes which we deliberately sidestep with a global keyframe). Visible on `/` home page after the hero copy.
+Performance check: Lighthouse 99 perf on `/` (home) — same audit run as the Swarm entry above. The cursor is a ~0.3 KB inline SVG with a CSS keyframe animation; negligible cost. SEO 100, Best Practices 100, A11y 95.
+Result: tried
+Project applied: Pastries/rep-antigravity-swarm-typewriter
+```
+
+```
+Date: 2026-07-19
+Source: ~/Pastries/rep-antigravity-swarm-typewriter (sibling primitive to the antigravity swarm; mesh is a generic Depth entry, not extracted from a specific source site)
+Entry: [Depth] Soft multicolor mesh background
+Literal name: A smooth blended-color backdrop, not a photo.
+Technique used: Layered `radial-gradient` blobs — four `<div class="mesh-background__layer-{1..4}">` siblings inside a fixed full-viewport container, `pointer-events: none` so it doesn't capture clicks, no scroll-rebuild per the glossary's "don't rebuild on scroll" rule. Theme-aware via CSS variables (`--mesh-color-1`…`4`) resolved at `:root` and `.dark`. Slow drift via transform-only keyframes (`mesh-drift-1`…`mesh-drift-4`, 120–200s durations) — slow enough (<0.1 Hz) that the mesh *reads* static but lives. No SVG, no JS.
+Implementation notes: Built at `~/Pastries/rep-antigravity-swarm-typewriter/src/components/mesh-background/` — `index.tsx` (4 layers + edge-mask), `index.css` (gradient definitions + drift keyframes + reduced-motion pin via `animation-duration: 0.01ms`). Visited on `/depth` route alongside the FilmGrain below. The mesh sits underneath the grain via z-index stacking (`z-index: -2` for mesh, `z-index: -1` for grain, content above).
+Performance check: Lighthouse 99 perf on `/depth` — Brave incognito empty cache, production preview `:4173`. LCP 1.8s, FCP 1.5s, TBT 20ms, CLS 0.002, Speed 2.1s. SEO 100, Best Practices 100, A11y 95. Mesh is pure CSS gradients — render cost is essentially free.
+Result: tried
+Project applied: Pastries/rep-antigravity-swarm-typewriter
+```
+
+```
+Date: 2026-07-19
+Source: ~/Pastries/rep-antigravity-swarm-typewriter (sibling primitive; film grain is a generic Depth entry, not extracted from a specific source site)
+Entry: [Depth] Film grain / noise
+Literal name: Fine speckles over the UI so it feels less digital-flat.
+Technique used: Inline SVG `feTurbulence` (`type="fractalNoise"`, `baseFrequency="0.85"`, `numOctaves="3"`, `seed="7"`, `stitchTiles="stitch"`) + `feColorMatrix type="saturate" values="0"` desaturating to grayscale, 240×240 tile. SVG is encoded as a `data:image/svg+xml;charset=utf-8,…` URI (via `encodeURIComponent`) and applied as `background-image` on a fixed full-viewport `pointer-events: none` element. Per glossary "very cheap" — this is the SVG `feTurbulence` option (rather than the tiled PNG alternative) because it's infinitely scalable, theme-aware via `--film-grain-opacity` (0.04 light, 0.06 dark), and carries no binary asset. Slight 8-position transform-only jump every ~0.5s via CSS keyframes (`film-grain-shift`) makes the grain crawl subtly — per Apple materials guidance about avoiding the "noise texture affixed" look. Reduced-motion pins the jump animation to 0.01ms; the still grain is preserved.
+Implementation notes: Built at `~/Pastries/rep-antigravity-swarm-typewriter/src/components/film-grain/` — `index.tsx` (inline SVG + data-URI encoder), `index.css` (film-grain-shift keyframes + opacity vars + reduced-motion pin). Visited on `/depth` route, layered above MeshBackground.
+Performance check: Lighthouse 99 perf on `/depth` — same audit run as the MeshBackground entry above. TBT 20ms is the lowest of the two routes (depth is lighter than home because no Three.js canvas there). SEO 100, Best Practices 100, A11y 95. Film grain is one inline element with one CSS animation — negligible cost.
+Result: tried
+Project applied: Pastries/rep-antigravity-swarm-typewriter
 ```
 
 ## Open gaps

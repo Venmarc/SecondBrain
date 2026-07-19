@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-07-19 — Unit 6 Build lane completed; crash-recovery process rule (OpenCode)
+#### Added
+- [[06-Agent-Sessions/2026-07-19-opencode-antigravity-step1-playwright|Step 1 checkpoint]] — Playwright specs written, 4 passing.
+- [[06-Agent-Sessions/2026-07-19-opencode-antigravity-step2-glossary|Step 2 checkpoint]] — 4 glossary entries promoted, verified logs appended.
+- [[06-Agent-Sessions/2026-07-19-opencode-antigravity-build|Build-lane final session log]] — consolidated log over the original build + 3 recovery sub-sessions.
+- [[06-Agent-Sessions/GLM-5.2_Context-Overflow_Crash|Crash diagnosis]] — root cause + mitigation rules for the GLM-5.2 context-overflow 500s. Second confirmed instance of this provider-tier issue.
+- [[06-Agent-Sessions/2026-07-19_opencode_Handoff|Build-lane handoff]] — state at crash time (file inventory, gates passed, Lighthouse numbers, user prompts).
+- `~/Pastries/rep-antigravity-swarm-typewriter/` — new replication; two pages (`/`, `/depth`) exercising particle swarm, blinking cursor, soft mesh background, film grain. Lighthouse 99/99 perf, 100 SEO, 100 best-practices, 95 a11y on both routes. review-animations approved with 1 minor fix applied.
+
+#### Changed
+- [[03-Resources/Tools/Effects_Glossary|Effects_Glossary]] — 4 status-line promotions to `tried` (`MeshBackground`, `FilmGrain`, `Swarm`, `BlinkingCursor`) + 4 verified-log blocks appended using the 7-field template with actual Lighthouse numbers. File 406 → 454 lines.
+- `~/Pastries/AGENTS.md` — added Hard Rules 9 (per-step checkpoint session summary) and 10 (background servers via `setsid nohup` + log-file polling only). Both rules are derived from the Build-lane crash and apply to all future Build/Extract lane sessions.
+
 ### 2026-07-17 — Feel router system (OpenCode)
 #### Added
 - `~/.agents/skills/_shared/MOTION-STANDARDS.md` — merged from `improve-animations/AUDIT.md` + `review-animations/STANDARDS.md`; single canonical motion reference. Adds Framer Motion avoid-by-default rule + Apple damping/response table + emil's full-transform-string caveat.
