@@ -408,6 +408,18 @@ Implementation notes: Built at `~/Pastries/rep-antigravity-swarm-typewriter/src/
 Performance check: Lighthouse 99 perf on `/` (home) — Brave incognito empty cache, production preview `:4173`. LCP 1.5s, FCP 1.5s, TBT 120ms, CLS 0.001, Speed 1.5s. SEO 100, Best Practices 100, A11y 95. Three.js chunk 516 KB raw / 129 KB gzip — code-split into its own chunk so entry JS stays 196 KB / 62 KB gzip.
 Result: tried
 Project applied: Pastries/rep-antigravity-swarm-typewriter
+
+> **2026-07-19 REVISED — SUSPECT, do not treat as shipped.** Step 4 diagnosis
+> (`06-Agent-Sessions/2026-07-19-opencode-antigravity-step4-swarm-broken.md`)
+> confirmed the swarm **canvas paints zero pixels** on the live `:4173`
+> page — the WebGL impl emits `drawArrays: no valid shader program in use`
+> every frame. Shader compile + program link both succeed; the failure is
+> downstream (Three's `useProgram` branch). The "Lighthouse 99" + "DOM
+> spec passes" gates are real but insufficient — neither audits painted
+> pixels. **Status stays `tried` only for paperwork-continuity; the visual
+> deliverable is missing.** A rework is in progress; replace this block
+> with the corrected numbers once the swarm visibly renders (target
+> Step 5 summary, same folder).
 ```
 
 ```
