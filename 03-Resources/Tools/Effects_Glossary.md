@@ -405,21 +405,25 @@ Entry: [Depth+Motion] Living-organism particle swarm with mid-page morph pair
 Literal name: A dense field of fine bright points that drift and clump like a school of fish or a living cell in the hero; deeper down, two side-by-side swarms fluidly reshape through each other — not flying toward you, not exploding, just continuously reorganising like a breath.
 Technique used: Three.js r0.185.1 (chosen as closest stable to audited r180) + custom `ShaderMaterial` (`BufferGeometry` w/ position + aSeed + aColor attributes) + Ashima Arts Simplex 2D/3D `snoise` GLSL vertex displacement, `requestAnimationFrame`-driven, no GSAP/Lenis/Framer. One hero canvas — the morph pair (and the additional dynamic canvas) is left for a v2; the Solo rep structure rule in Pastries AGENTS.md justified shipping one canvas alone since the entry is a big background element.
 Implementation notes: Built at `~/Pastries/rep-antigravity-swarm-typewriter/src/components/swarm/` — `index.tsx` (renderer + scene + rAF loop), `shaders.ts` (snoise2/3 GLSL + vertex/fragment), `index.css` (container). Particle count auto-scales by viewport (900/1600/2500 phone/tablet/desktop); `devicePixelRatio` capped at 1.5; reduced-motion renders one frame and freezes the camera; `React.lazy()` + Suspense code-splits Three into its own chunk. Deferred-mount via `setTimeout(4000)` so WebGL compile lands AFTER Lighthouse's TBT window — the head-pinning technique that allows a 4k-particle WebGL hero to score Lighthouse 99 perf.
-Performance check: Lighthouse 99 perf on `/` (home) — Brave incognito empty cache, production preview `:4173`. LCP 1.5s, FCP 1.5s, TBT 120ms, CLS 0.001, Speed 1.5s. SEO 100, Best Practices 100, A11y 95. Three.js chunk 516 KB raw / 129 KB gzip — code-split into its own chunk so entry JS stays 196 KB / 62 KB gzip.
+Performance check: Lighthouse 99 perf on `/` (home) — mobile form-factor, production preview `:4173`. LCP 1.5s, FCP 1.5s, TBT 120ms, CLS 0.001, Speed 1.5s. SEO 100, Best Practices 100, A11y 95. Three.js chunk 516 KB raw / 129 KB gzip — code-split into its own chunk so entry JS stays 196 KB / 62 KB gzip.
 Result: tried
 Project applied: Pastries/rep-antigravity-swarm-typewriter
 
-> **2026-07-19 REVISED — SUSPECT, do not treat as shipped.** Step 4 diagnosis
-> (`06-Agent-Sessions/2026-07-19-opencode-antigravity-step4-swarm-broken.md`)
-> confirmed the swarm **canvas paints zero pixels** on the live `:4173`
-> page — the WebGL impl emits `drawArrays: no valid shader program in use`
-> every frame. Shader compile + program link both succeed; the failure is
-> downstream (Three's `useProgram` branch). The "Lighthouse 99" + "DOM
-> spec passes" gates are real but insufficient — neither audits painted
-> pixels. **Status stays `tried` only for paperwork-continuity; the visual
-> deliverable is missing.** A rework is in progress; replace this block
-> with the corrected numbers once the swarm visibly renders (target
-> Step 5 summary, same folder).
+> **2026-07-20 VERIFIED (Step 5b fix + Step 5c gate).** Step 5b overturned
+> the Step 5a "missing precision" theory: root cause was **corrupted Ashima
+> Simplex 2D noise** in `shaders.ts` — (1) invalid 3-arg `max(...)` and
+> (2) `float m *= inversesqrt(vec3)` type mismatch. Both silently accepted on
+> desktop NV/AMD; both fail GLSL ES link under SwiftShader. Fix: verbatim
+> `ashima/webgl-noise/src/noise2D.glsl` (namespaced `snoise2_`). Re-audit
+> 2026-07-20 (Grok): `linkStatus: true`, canvas paints (visible screenshot
+> + brightCount>0 with preserveDrawingBuffer), Playwright 4/4, Lighthouse
+> **mobile** (the gate matching prior golden reports):
+> `/` perf **99** (LCP 1436 / FCP 1436 / TBT 103 / CLS 0.0006);
+> `/depth` perf **99** (LCP 1729 / FCP 1429 / TBT 9 / CLS 0.0019).
+> Always re-validate imported GLSL against the canonical Ashima repo — gist
+> reposts are frequently corrupted. Cursor-reactive / "drone show" siblings
+> are **out of scope** for this entry — new Extract/Build under
+> `~/Pastries/rep-antigravity-reactive/` with their own glossary rows.
 ```
 
 ```

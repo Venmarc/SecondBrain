@@ -64,4 +64,12 @@ or follow its link if it's already been split out — before writing related cod
 |---|---|---|---|
 | Use semantic `text-text-inverse` on fixed orange brand buttons | In light mode `text-inverse` resolves to white (`#FAFAFA`) on orange (`#F97316`) — ~2.61:1 contrast, fails WCAG AA | Define a theme-independent token (e.g. `--color-orange-btn-text: #0A0A0A`) and use `text-orange-btn-text` on orange CTAs | [[01-Projects/Ledger/Ledger]] |
 | Pair `text-azure` with `bg-azure-muted` in light mode without checking contrast | Default azure (`#38BDF8`) on sky-100 (`#E0F2FE`) is ~1.75:1 — fails WCAG AA for active nav states | Override `--color-azure` to a darker shade (e.g. sky-700 `#0369A1`) inside the light-theme block | [[01-Projects/Ledger/Ledger]] |
- 
+
+## WebGL / Three.js
+
+| Never Do This | Why | Do This Instead | Source |
+|---|---|---|---|
+| Paste gist/reposted Ashima Simplex 2D noise into a `THREE.ShaderMaterial` without re-checking the canonical source | Public copies often carry (1) 3-arg `max(...)` and (2) `float m *= inversesqrt(vec3)` — invalid GLSL ES 1.00; desktop NV/AMD accept them; SwiftShader (Chromium headless / Lighthouse) fails the link silently → black canvas, Lighthouse still green | Copy verbatim from `ashima/webgl-noise/src/noise2D.glsl`; on `LINK_STATUS: false` compile the shader strings via raw WebGL2 and read `getShaderInfoLog` / `getProgramInfoLog` (see Pastries `scripts/_get-link-log.mjs`) | [[06-Agent-Sessions/2026-07-20-opencode-antigravity-step5b-swarm-real-rootcause]] |
+| Treat missing `precision` in custom ShaderMaterial as the root cause of a silent SwiftShader link failure without reading the info log | Three already injects `precision highp float;` for ShaderMaterial; precision-only "fixes" can look plausible but leave the real invalid GLSL untouched | Always capture the program/shader info log before declaring root cause; keep extra precision only as belt-and-suspenders | [[06-Agent-Sessions/2026-07-20-opencode-antigravity-step5b-swarm-real-rootcause]] |
+| Gate canvas/WebGL deliverables only on Lighthouse + DOM `toBeVisible` | Neither checks painted pixels — a failed shader link can ship with LH 95+ and a visible empty canvas | Add a Playwright brightCount / pixel-sample assertion (drawImage → getImageData, assert threshold) per Effects Build Playbook feel check | [[06-Agent-Sessions/2026-07-20-opencode-antigravity-step5b-swarm-real-rootcause]] |
+

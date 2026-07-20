@@ -301,4 +301,15 @@ final `memory_save` still **PENDING** (deferred per user stop directive).
 
 **Next up:** A fresh agent reads this file, runs `node scripts/_diagnose-swarm.mjs` to confirm `linkStatus: true` and `brightCount > 50`, takes a screenshot, runs Lighthouse on both routes (must be ≥ 95), updates Spec 1, updates the glossary, writes Step 5c summary, and `memory_save`s the four-lesson set above. Then the antigravity swarm unit is closed.
 
+**Final goal (Build lane unit):** Swarm visibly renders under SwiftShader + Lighthouse ≥95 on both routes + glossary verified-log updated + brightCount pixel assertion in Spec 1. Cursor-reactive "living organism" feel is **out of scope for 5c** — that is the next Extract/Build vision pass (Grok + screencasts), not a silent extra inside the shader link fix.
+
+## Grok coordination close (2026-07-20, same calendar day)
+
+Victor parked Step 5b as the Build-lane hard-part checkpoint and will finish OpenCode residual tasks (Step 5c list above) before diving into screencasts. Two tracks after 5c:
+
+1. **Build-lane close (OpenCode/next agent):** probe → screenshot → Lighthouse → Spec 1 brightCount → glossary → Step 5c summary → `memory_save` of the four-lesson set.
+2. **Feel / living-organism pass (Grok + vision):** ~4 screencasts; mouse-attractor GPU physics as the canonical "moves with the cursor, behaves like a living organism" pattern; two-site-of-use extraction + "drone show" sibling as a separate Extract-lane job per Effects Build Playbook. Do not fold that into the shader-link unit.
+
+Grok session log for this coordination: [[06-Agent-Sessions/2026-07-20-grok-antigravity-step5b-handoff-close]].
+
 **Tags:** #session-summary #build-lane #pastries #antigravity #swarm #webgl #swiftshader #glm-glsl-es #ashima-noise #gist-corruption #silent-link-failure #inversesqrt-type-mismatch #three-arg-max #handoff-ready #context-overflow-protected
