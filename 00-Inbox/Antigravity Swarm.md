@@ -5,7 +5,7 @@
 - SIMPLY PICK A A SEGMENT U WANT TO ANALYZE, SEARCH THE HEADER FOR IT, AND VIEW THE IMAGE OR SCREENCAST FOR IT. IT'S BETTER THIS WAY.
 - THE FILE IS AVAILABLE, SO U CAN REVISIT IT ANYTIME U WANT.
 **REFERENCE FILES:**
-- [[2026-07-20-opencode-antigravity-step5b-swarm-real-rootcause]]
+- [[2026-07-20-grok-antigravity-step5c-perf-gate]]
 ## Brief Intro
 Today, I saw my version of the [Antigravity](https://antigravity.google) swarm, and it looked better than I expected. The swarm is working now, I haven't noticed a pattern in the particle movement. they seem to have a mind of their own. But, they are not yet moving around together, like an actual swarm. A description of the swarm rn will be Brownian Motion, cos the particles ARE brown, and move erratically.
 - ![[Pasted image 20260720020800.png]] ![[Pasted image 20260720040348.png]]*my version of the antigravity swarm with brown partcles*
