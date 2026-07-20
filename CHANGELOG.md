@@ -6,12 +6,44 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-07-20 — Vault cleanup (GLM-5.2)
+Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowledge; orphans → MOCs). Master prompt lives at `~/prompt.txt`; session handoff: `~/Documents/Research_files/vault-cleanup-handoff-2026-07-20.md`.
+
+#### Added
+- [[03-Resources/Skills/Discrete-State-Control-Selection]] — segmented control vs slider for bounded discrete states (extracted from Ledger Transaction_UI_Spec §4 build, 2026-07-19). Wired from [[03-Resources/MOC-UI-UX-Lessons]] (Phase 0 Ledger + Agent Traps sections).
+- [[03-Resources/Tools/AgentMemory-Dual-Store-Tab-Write-Paths]] — new Tools note covering the dual-store trap (`standalone.json` orphan vs live `state_store.db`) + per-tab write-path map (sessions need `session/start`+`observe`, not `memory_save`; graph needs full-shape observations; consolidate needs Gemini free-tier quota). Cites all three 2026-07-19 agentmemory sessions as one continuous thread.
+- [[ANTI_PATTERNS]] §Clerk row — `127.0.0.1` vs `localhost` dev handshake. Source: Ledger UI polish audit-fix 2026-07-19.
+- [[06-Agent-Sessions/extracted-sessions]] — 3 new rows: antigravity erratic-swarm thread 2026-07-18→20 (already closed); Ledger UI polish 2026-07-19; agentmemory infra thread 2026-07-19 (closed except semantic/procedural consolidate pending Gemini quota). Processor line credits GLM-5.2 2026-07-20.
+
+#### Changed
+- [[01-Projects/Ledger/Ledger]] `## Lessons log` — appended 2026-07-19 UI polish block (dual SnapSlider month picker — abs overlay not in-flow push; Transactions filter rebuild per Transaction_UI_Spec — search + filter sheet + chips + Type segmented per new skill; `MIN_YEAR = 2025` product-start bound; 4 audit-fix regressions: tablet header crush, sidebar icon drift, Clerk localhost-vs-127.0.0.1, `keepPreviousData` skeleton flash). Wikilinks to `Discrete-State-Control-Selection` + `ANTI_PATTERNS` §Clerk.
+- [[01-Projects/Ledger/Docs/PAGE_SPECS]] — Transactions FILTER BAR build-revision block aligned with Transaction_UI_Spec §4 (segmented Type, abs overlay month, sheet pattern). Wikilinks to `Discrete-State-Control-Selection`.
+- [[03-Resources/MOC-UI-UX-Lessons]] — 2 new skill links (Phase 0 Ledger + §Agent Traps).
+- [[04-Archive/Inbox/Transaction_UI_Spec]] — moved here from `00-Inbox/` (extracted spec for the 2026-07-19 build; kept as historical reference, not active inbox).
+- [[00-Inbox/Bug In Ledger]] — status lines updated (audited under extract-work; bugs resolved/relocated to `ANTI_PATTERNS.md` §Clerk).
+- [[ANTI_PATTERNS]] — Phase 3a added §Clerk row (Clerk dev-handshake requires `localhost`). Phase 2 left §WebGL/Three.js alone (already closed lane). File at 76 lines — split threshold 200 not triggered.
+- [[index]] — refreshed lint pointer to 2026-07-20 pass; added new AgentMemory Tools note to the Tools row.
+- [[CHANGELOG]] — historical lint pointer repaired: 2026-07-19 "Unit 6 Build lane" entry's wikilink to the old crash doc path `06-Agent-Sessions/GLM-5.2_Context-Overflow_Crash` repointed to the new permanent home `[[02-Areas/Agent-Ops/GLM-5.2-Context-Overflow]]` (see also §Moved below).
+- [[LINT-REPORT]] — full refresh against post-extraction vault state (see file dated 2026-07-20).
+
+#### Moved
+- `00-Inbox/Transaction_UI_Spec.md` → [[04-Archive/Inbox/Transaction_UI_Spec]] (Phase 1 — extracted spec consumed by Ledger 2026-07-19 build, then archived).
+- `06-Agent-Sessions/GLM-5.2_Context-Overflow_Crash.md` → [[02-Areas/Agent-Ops/GLM-5.2-Context-Overflow]] (Phase 2 — promoted to permanent Agent-Ops reference; recurring provider-tier failure mode; survival rules).
+
+#### Removed
+- **10 raw antigravity session logs** (Phase 2) — built/extract/crash/Step-1/Step-2/Step-4/Step-5a/Step-5b×2/handoff — extracted to [[03-Resources/Tools/Effects_Glossary]] (4 promotions), [[ANTI_PATTERNS]] §WebGL (3 rows), `~/Pastries/AGENTS.md` Hard Rules 9–10 (outside vault), [[02-Areas/Agent-Ops/GLM-5.2-Context-Overflow]] crash doc moved-not-deleted. Combined row in `extracted-sessions`.
+- **2 raw Ledger UI polish logs** (Phase 3d) — `2026-07-19-grok-ledger-ui-polish.md` + `2026-07-19-grok-ledger-ui-polish-audit-fixes.md` — single thread, 1 combined row in `extracted-sessions`, 1 block in `Ledger.md` `## Lessons log`.
+- **3 raw agentmemory session logs** (Phase 4) — `2026-07-19-grok-agentmemory-search-import-ui-handoff.md` + `2026-07-19-grok-agentmemory-viewer-nav-chrome-fix.md` + `2026-07-19-grok-agentmemory-turn-rest-on.md` — single thread → new `03-Resources/Tools/AgentMemory-Dual-Store-Tab-Write-Paths.md` Tools note (durable pattern warranted) + combined row in `extracted-sessions`.
+- **NOT touched (active handoffs):** `2026-07-19-grok-portfolio-phase-0-tokens.md` + `2026-07-19-grok-portfolio-phase-1-identity.md` + `2026-07-16-grok-ledger-phase-1.md` + `2026-07-16-grok-ledger-phase-1-full.md` remain in `06-Agent-Sessions/` (different threads; portfolio Phase 2/3 still open). Pre-existing pending file `2026-07-15-agy-phase-0-layout-revisions.md` left as-is — known lint item from 2026-07-15 pass, not in scope for this cleanup.
+
+**Files in `06-Agent-Sessions/` after this pass:** 16 raw session logs (active threads + pre-existing pending) + `extracted-sessions.md` index + 3 JSON tooling artifacts.
+
 ### 2026-07-19 — Unit 6 Build lane completed; crash-recovery process rule (OpenCode)
 #### Added
 - [[06-Agent-Sessions/2026-07-19-opencode-antigravity-step1-playwright|Step 1 checkpoint]] — Playwright specs written, 4 passing.
 - [[06-Agent-Sessions/2026-07-19-opencode-antigravity-step2-glossary|Step 2 checkpoint]] — 4 glossary entries promoted, verified logs appended.
 - [[06-Agent-Sessions/2026-07-19-opencode-antigravity-build|Build-lane final session log]] — consolidated log over the original build + 3 recovery sub-sessions.
-- [[06-Agent-Sessions/GLM-5.2_Context-Overflow_Crash|Crash diagnosis]] — root cause + mitigation rules for the GLM-5.2 context-overflow 500s. Second confirmed instance of this provider-tier issue.
+- [[06-Agent-Sessions/GLM-5.2_Context-Overflow_Crash|Crash diagnosis]] — root cause + mitigation rules for the GLM-5.2 context-overflow 500s. Second confirmed instance of this provider-tier issue. *(Note 2026-07-20: crash doc promoted to permanent reference at [[02-Areas/Agent-Ops/GLM-5.2-Context-Overflow]]; this historical wikilink kept as audit trail — see §Moved in the 2026-07-20 cleanup entry.)*
 - [[06-Agent-Sessions/2026-07-19_opencode_Handoff|Build-lane handoff]] — state at crash time (file inventory, gates passed, Lighthouse numbers, user prompts).
 - `~/Pastries/rep-antigravity-swarm-typewriter/` — new replication; two pages (`/`, `/depth`) exercising particle swarm, blinking cursor, soft mesh background, film grain. Lighthouse 99/99 perf, 100 SEO, 100 best-practices, 95 a11y on both routes. review-animations approved with 1 minor fix applied.
 

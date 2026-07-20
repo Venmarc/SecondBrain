@@ -42,6 +42,46 @@ My next order of business is conclude the "erratic" swarm, I think that's what I
 - Screencast of the drone-show-worms-pixels ![[Screencast From 2026-07-20 01-14-05.mp4]]
 - Screencast of bottom session swarm ![[Screencast From 2026-07-20 01-14-46.mp4]]
 - Screencast of my version of antigravity swarm ![[Screencast From 2026-07-20 01-28-55.mp4]]
-- Screenshot of antigravity.google hero swarm ![[Screencast From 2026-07-20 01-29-43.mp4]]
+- Screencast of antigravity.google hero swarm ![[Screencast From 2026-07-20 01-29-43.mp4]]
 - Closer view at the drone-show-pixel swarm ![[Screencast From 2026-07-20 04-37-04.mp4]]
 - View this one last. It is 40 secs long and could take time ingesting ![[Screencast From 2026-07-20 04-34-10.mp4]]
+
+## Extract findings (2026-07-20 Grok — do not re-ingest all media)
+
+**Folder:** `~/Pastries/rep-antigravity-reactive/`  
+**Glossary:** Erratic entry renamed; **two new rows** at `extracted` — organism cursor-reactive + drone-show morph.  
+**Rebuild rule:** Reactive swarm **base** copies source particle feel (soft short dashes / ellipses). Triangles/squares are **Options** only after the base works.
+
+### Hero organism (cursor-reactive)
+- Canvas: `.main-particles-container` + Three.js r180.
+- **Not** the same as the erratic noise-only rep — this one has a real **GPGPU sim**: `uMousePos`, `uIsHovering`, `uRingRadius` (wobbles with sin/cos), position textures 256², `uColorScheme` light/dark.
+- Particles: multi-hue soft **dashes/ellipses** (blue/purple denser; orange/red sparser). Pixel-zoom crops look blocky; full-frame they read as tiny elongated lozenges.
+- Color pattern to tweak: density ↔ cool/warm, not “sentience.”
+
+### Flicker (screencasts processed once — no need to rewatch)
+Sources:
+- `/home/redmane/Videos/Screencasts/Screencast From 2026-07-20 07-19-15.mp4` (hero/light multi-color)
+- `/home/redmane/Videos/Screencasts/Screencast From 2026-07-20 07-20-06.mp4` (dark/footer blue-only)
+Frames extracted at 5 fps → `rep-antigravity-reactive/screenshots/flicker-frames/` + `output/flicker-analysis.json`.
+- **f19 (light):** nonwhite sample count drifts ~13589→14027 across 3s; blue bin count jumps around (16→69). Matches rapid small-particle flash.
+- **f20 (dark mono):** almost no orange; blue sample count **92→9** across frames while overall nonwhite stays ~2000 — strong **flicker/dim pulse** on sparse blue particles.
+- **Build implication:** per-particle alpha or `gl_PointSize` oscillation from `seeds + time` (hash), not a second system. Too fast for still screenshots (Victor was right).
+
+### Mid drone-show
+- Two `.morphing-particles-container` canvases side by side (~y 6175).
+- Idle = soft mesh (micro-motion = Victor’s “worms” *feel*; not a separate teleporter class found by name).
+- Shape morph is **literally** image → nearest points:
+  - Dev: `assets/textures/icons/individual.png` = **curly braces**
+  - Org: `assets/textures/icons/cube.png` = **six rings**
+  - Saved under `rep-antigravity-reactive/output/textures/`.
+- Hover swaps `uPosNearest` via `setPointsTextureFromIndex` + `hoverProgress`/`pushProgress` tweens. Does **not** follow the cursor like the hero.
+
+### Footer / download section
+- Second `.main-particles-container` inside `.download-section-container`.
+- **Same organism system as hero**, mono **blue** on black (`colorScheme` dark). Cursor ring still applies; particles stay inside the dark rounded card.
+- Teaches palette Options: multi (hero) vs mono-blue (footer).
+
+### Scripts
+- `scripts/audit-reactive-segment-a.mjs`
+- `scripts/audit-reactive-segment-bc.mjs`
+- Outputs: `output/segment-a-hero.json`, `segment-a-bundle-extra.json`, `segment-bc.json`, `flicker-analysis.json`

@@ -10,7 +10,7 @@
 - 📝 **[[CHANGELOG|CHANGELOG.md]]** — Structural changes
 - 🧰 **[[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|How Victor works with agents]]** — Supervisor model
 - 📋 **[[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault improvement backlog]]** — Deferred expansion work
-- 🩺 **[[LINT-REPORT|LINT-REPORT.md]]** — Latest vault lint (2026-07-15)
+- 🩺 **[[LINT-REPORT|LINT-REPORT.md]]** — Latest vault lint (2026-07-20)
 
 ---
 
@@ -45,7 +45,7 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 - 🧰 **[[03-Resources/Vault-Ops/Session-Lesson-Extraction-Idea|Session lesson extraction (draft)]]**
 - 🧰 **[[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault improvement backlog]]**
 - 🗺️ **[[03-Resources/Vault-LLM-Wiki-Patterns|Vault LLM Wiki Patterns]]**
-- 🛠️ **[[03-Resources/Tools/Vault-Librarian-Interviewer|Vault Librarian]]** · [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] · [[03-Resources/Tools/Effects_Playbook|Effects Playbook]] · [[03-Resources/Tools/Effects_Build_Playbook|Effects Build Playbook]]
+- 🛠️ **[[03-Resources/Tools/Vault-Librarian-Interviewer|Vault Librarian]]** · [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] · [[03-Resources/Tools/Effects_Playbook|Effects Playbook]] · [[03-Resources/Tools/Effects_Build_Playbook|Effects Build Playbook]] · [[03-Resources/Tools/AgentMemory-Dual-Store-Tab-Write-Paths|AgentMemory dual-store + tab write paths]]
 
 ---
 
@@ -56,7 +56,7 @@ Pending processing: [[06-Agent-Sessions/2026-07-15-agy-phase-0-layout-revisions|
 ---
 
 ## 🩺 Vault Health
-- **Last lint:** 2026-07-15 — [[LINT-REPORT|LINT-REPORT.md]]  
+- **Last lint:** 2026-07-20 — [[LINT-REPORT|LINT-REPORT.md]]  (post Phase 1–4 cleanup, post-extraction)
 - **Prior pass:** [[03-Resources/Vault-Ops/Vault-Health-2026-07-09|Vault health 2026-07-09]] (Phase B)
 - **Backlog:** [[03-Resources/Vault-Ops/Vault-Improvement-Backlog|full skills expansion deferred]]  
 - **Projects MOC:** [[03-Resources/MOCs/MOC-Projects|MOC: Projects]]

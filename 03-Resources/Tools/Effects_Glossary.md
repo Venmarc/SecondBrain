@@ -286,8 +286,28 @@ Rules:
   **Technique:** Three.js r180 + custom `ShaderMaterial` extending `PointsMaterial` (`isPointsMaterial=!0`, `sizeAttenuation=!0`, fog on). Each particle is a vertex in a `BufferGeometry` (`BufferAttribute` ×64, so multiple attributes — at least `position`, plus colour and a per-particle velocity or seed). The vertex shader uses **Simplex noise 2D + 3D** (`snoise`, Ashima Arts snippet present) to displace each point over time — that's the "living" drift; the uniform animation is `requestAnimationFrame` (30 refs), **not** GSAP/Lenis (`hasGSAP=false`, `hasLenis=false`, only 18 `ScrollTrigger`-named helpers but no library fingerprint match). Up to **4 canvases on one page**: one full-viewport hero swarm (`main-particles-container`, 1366×768 parent, `position:absolute`, parent `overflow:hidden`) + **two paired morph swarms** (`morphing-particles-container`, each 611×728, side-by-side at y≈6175 mid-page, class `morphing-particles`) + one dynamically-sized main canvas (1354×852). A `worker` constructor hint is present (`visibleWorkers: "available"`) but not on the critical path — looks pre-warmed not required. CSS contact: parent `.main-particles-component-section` is `position:absolute; inset:0; overflow:hidden` and the canvas is `position:absolute; inset:0; width:100%; height:100%` — the swarm canvas itself never moves; the "scroll reveals more swarm" feel comes from the long page body scrolling over a tall absolute hero, not from animating the canvas. Identification: canvas with `data-engine="three.js r180"`, parent class `*-particles-container`, library fingerprint Three r180. Not TresJS, not COBE.
   **Cost:** Heavy GPU + 600 KB main bundle (`main-WM7D6D2M.js`, 598 KB transfer — Angular production sizes). Two simultaneous particle shaders mid-page doubles draw cost; mobile fallback plan mandatory. WebGLRenderer was SwiftShader in the audit (CPU fallback) — works but is the perf floor.
   **Mobile/touch fallback:** Disable or shrink the morph pair under `(max-width: 1024px)`; hero swarm can scale particle count down with `devicePixelRatio` clamp. Decide purpose.
-  **Not the same as:** static particle wallpaper, single-pulse "twinkle" sprites, or the spinning planet (camera moves, points don't drift).
+  **Not the same as:** static particle wallpaper, single-pulse "twinkle" sprites, the spinning planet (camera moves, points don't drift), **or** the cursor-reactive organism / drone-show morph entries below (those live in `rep-antigravity-reactive`).
   — `tried`
+
+- **[Depth+Motion] Organism-like cursor-reactive particle swarm** (antigravity.google hero + download section) —
+  **Literal:** A field of tiny multi-colored soft dashes (short ellipses / lozenges) that keep drifting on their own, then **pull into a living ring/cluster around the cursor** when you move. Dense regions go cooler (blue/purple); sparse outliers stay warmer (orange/red). Smaller particles **flicker** (rapid alpha/size pulse). Same system appears again in the dark download band — **blue only**, still cursor-reactive, clipped to that rounded container.
+  **Technique (verified 2026-07-20 Extract):** Three.js r180 **GPGPU particle sim**, not pure vertex-noise wallpaper. `simMaterial` + ping-pong position textures (`posTex`, size **256²** → up to 65k slots), uniforms `uMousePos`, `uIsHovering`, `uRingRadius` (animated `0.175 + sin/cos` wobble), `uRingWidth` / `uRingWidth2`, `uRingDisplacement`, `uPosNearest`, `uDeltaTime`, `uTime`. Cursor drives a **ring attractor** in the sim pass; render pass uses `gl_PointSize` + size attenuation, `attribute vec4 seeds`, `uColorScheme` (0 dark / 1 light), `uParticleScale`. Parent: `.main-particles-container` (hero full viewport + second instance in `.download-section-container`). Identification: `data-engine="three.js r180"`, bundle hits `uMousePos`/`simMaterial`/`colorScheme`. **Base particle shape:** soft short dashes / elliptical point sprites (pixel-zoom crops look blocky/rect; full-frame they read as tiny multi-hue ellipses). Rebuild the **base** as that soft ellipse/dash; **Options** only after base feels right: square / triangle point sprites if they pass the feel check.
+  **Cost:** One WebGL sim + draw per instance; 256² float textures; keep DPR clamp + particle scale. Two instances on one page (hero + download) — share shader code, don't double-init wastefully.
+  **Mobile/touch:** No hover → idle organism only, or use a fixed attractor / disable ring; reduce count under coarse pointer.
+  **Options (not base form):** `palette: multi | mono-blue` (hero vs download); `theme: light | dark` (`colorScheme`); particle **shape** (base = soft ellipse/dash; trial square/triangle); ring radius/width; flicker amount (per-seed alpha/size noise); container clip.
+  **Not the same as:** Erratic swarm (noise-only, no cursor ring); drone-show morph (image nearest-point targets, no cursor follow).
+  — `tried`
+  Artifacts: `~/Pastries/rep-antigravity-reactive/` (`src/components/organism-swarm/`, extract `output/segment-a-*.json`, screenshots `A*`, `C*`, `build-check/`).
+
+- **[Depth+Motion] Drone-show CTA morph particle field** (antigravity.google mid-page) —
+  **Literal:** Two side-by-side particle fields rest as a quiet mesh (particles still tick — short “worm” stretches / micro-moves). Hovering a CTA does **not** make them chase the mouse; they **reassemble into an icon silhouette** (developer → curly braces; organization → six rings / group). Feel is a drone show forming a picture.
+  **Technique (verified 2026-07-20 Extract):** Same Three.js points family, but targets come from **icon PNG → nearest-point fields**, not free cursor attraction. Content maps `morphingParticle` textures: `/assets/textures/icons/individual.png` (braces) and `cube.png` (six rings). Runtime: `createPointsFromImage` → Worker `createPointsDistanceDataWorker` builds `nearestPointsData[]` → `setPointsTextureFromIndex(i)` swaps `uPosNearest` data texture; hover uses `hoverProgress` / `pushProgress` tweens (`ut.to` / `ut.fromTo` — GSAP-style). DOM: two `.morphing-particles-container` canvases (~611×728 at y≈6175). Victor’s “PNG shredded into pixels” feel is **literally** correct for the shape-taking step; “worm teleporters” remain a **feel description** of idle micro-motion / target reassignment, not a separate named class system in the bundle.
+  **Cost:** Precompute nearest maps (workers help); two morph canvases mid-page — heavy; lazy-init when section nears viewport.
+  **Mobile/touch:** Show static icon or idle mesh only; skip hover morph under coarse pointer.
+  **Options:** target icon PNGs; hover ease; idle motion intensity; particle shape shared with organism base.
+  **Not the same as:** cursor-reactive organism (ring around mouse); erratic noise-only field.
+  — `tried`
+  Artifacts: `~/Pastries/rep-antigravity-reactive/` (`src/components/drone-show-morph/`, `public/textures/{individual,cube}.png`, extract `output/segment-bc.json`, screenshots `B*`).
 
 - **[Investigation note:** Canvas/WebGL has no useful “computed style story” — read scripts, network, and the canvas context type.
 
@@ -425,6 +445,32 @@ Project applied: Pastries/rep-antigravity-swarm-typewriter
 > reposts are frequently corrupted. Cursor-reactive / "drone show" siblings
 > are **out of scope** for this entry — new Extract/Build under
 > `~/Pastries/rep-antigravity-reactive/` with their own glossary rows.
+> **2026-07-20:** Entry retitled **Erratic swarm of particles** (noise-only).
+> Reactive + drone-show Extract completed same day — see log block below.
+```
+
+```
+Date: 2026-07-20
+Source: https://antigravity.google + ~/Pastries/rep-antigravity-reactive
+Entry: NEW — Organism-like cursor-reactive particle swarm; Drone-show CTA morph particle field
+Literal: (1) Multi-hue soft-dash particles with cursor ring attractor + flicker; footer instance mono-blue. (2) Dual mid fields that morph to braces / six-rings from icon PNGs on CTA hover — no cursor chase.
+Technique: (1) Three.js r180 GPGPU simMaterial — uMousePos, uIsHovering, uRingRadius wobble, 256² posTex, uColorScheme light/dark, gl_PointSize render. Base shape = soft ellipse/dash; square/triangle only as Options after base. (2) createPointsFromImage + workers → nearestPointsData; setPointsTextureFromIndex; hoverProgress/pushProgress; textures individual.png (braces) + cube.png (6 rings).
+Implementation notes: audit-reactive-segment-a.mjs + audit-reactive-segment-bc.mjs; flicker frames from Victor screencasts documented in Antigravity Swarm.md; WebGL readback without preserveDrawingBuffer is white — use PNG screenshots for color.
+Performance check: not lighthouse on source (Extract only).
+Result: extracted (both)
+Project applied: none yet — Build lane → rep-antigravity-reactive
+```
+
+```
+Date: 2026-07-20
+Source: https://antigravity.google + ~/Pastries/rep-antigravity-reactive
+Entry: [Depth+Motion] Organism-like cursor-reactive particle swarm; [Depth+Motion] Drone-show CTA morph particle field
+Literal name: (1) Multi-hue soft dashes + cursor ring attractor + flicker; mono-blue Option. (2) Dual CTA morph to braces / six rings from PNG nearest maps.
+Technique used: Three.js r0.185 GPGPU ping-pong sim + soft ellipse/dash Points; organism ring via uMousePos/uIsHovering/uRingRadius wobble; drone-show sampleImageToPoints + binned nearest map + rAF hoverProgress (no GSAP). Hero uses [Layout] min-h 100dvh + flex center. Lazy Three + 5.5s hero defer; morph/download IO-gated; offscreen rAF pause; ~30fps on narrow viewports.
+Implementation notes: src/components/organism-swarm/ + drone-show-morph/; Standard compose on Home; Playwright 4/4; Lighthouse mobile variance 93–96 — golden gatec.report.json perf 96 (LCP 2.6s / TBT 90ms / CLS 0). a11y 95 after contrast + link underline fix (final.report.json).
+Performance check: Lighthouse mobile Brave incognito :4173 — perf **96** (gatec), a11y **95**, BP **100**, SEO **100**. LCP 2.6s, FCP 1.5s, TBT 90ms, CLS ~0. Reports: output/lighthouse/home.report.json (+ gatec / final / run2).
+Result: tried (both)
+Project applied: Pastries/rep-antigravity-reactive
 ```
 
 ```

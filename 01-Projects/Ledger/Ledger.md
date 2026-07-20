@@ -74,6 +74,8 @@ Read [[01-Projects/Ledger/Docs/PHASES|PHASES]] every session.
 
 - **2026-07-17 — Deferred month control:** Dashboard month control redesign blocked until UI polish rules extracted from Victor’s X-article summary. Target UX: no modal — expandable dropdown; year + month **sliders** (mobile: sliders only; desktop: sliders + edge buttons). Phase 1 gate still open.
 
+- **2026-07-19 — UI polish pass:** Replaced calendar Dialog month picker with dual SnapSlider (month primary at pill width; year eases in on tap; month drops as **absolute overlay** under pill — `top-full` z-30, never in-flow push). Transactions filter rebuilt per Transaction_UI_Spec (search + filter icon → bottom sheet; chips only when active; Type stays segmented control, not slider — see [[03-Resources/Skills/Discrete-State-Control-Selection|Discrete-State-Control-Selection]]). `MIN_YEAR = 2025` as product-start bound, not max. Audit-fix regressions: tablet header crush (`sm:flex-row` → stack until `lg`); sidebar icon drift on collapse (`justify-center` → fixed left rail `pl-3.5` + label `max-w` clip); Clerk dev-handshake requires `localhost`, not `127.0.0.1` (see [[ANTI_PATTERNS|ANTI_PATTERNS]] §Clerk); list skeleton flash on search/month change → `keepPreviousData` on infinite + recent + month summary queries.
+
 ## Parallel build note
 
 Built **alongside Momentum**. Victor supervises; agents execute under phase gates.

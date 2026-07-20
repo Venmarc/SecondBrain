@@ -379,6 +379,13 @@ Desktop: list rows are wider with more visible columns (payment method visible w
 - Active filters highlighted (amber pill or indicator).
 - "Clear all" button appears when any non-default filter is active.
 - Filter state persists in Zustand for the session. Navigating away and back restores last filter state.
+
+> **Build revision (2026-07-19, per [[04-Archive/Inbox/Transaction_UI_Spec|archived Transaction_UI_Spec]]):** As-built replaces the inline horizontal filter row with a **control row + bottom sheet**:
+> - Control row = search bar (flex-grow) + filter icon button (~40–44px, fixed). Filter icon shows a badge when filters are non-default.
+> - Active-filter chips render below the control row **only when** filters differ from default; the row may scroll horizontally as overflow valve; zero height when idle.
+> - All heavy filters (Date Range / Type / Category / Payment Method) live in the bottom sheet, opened from the filter icon. Type is a **3-way segmented control** (see [[03-Resources/Skills/Discrete-State-Control-Selection]]); Date Range is segmented + optional Custom; Category list is reactive to Type (Income-only / Expense-only / both-with-sticky-sections for `All`).
+> - Reset (secondary) and Apply (primary) pin to the sheet bottom. Reset does NOT clear the search box.
+> - Old "horizontally scrollable filter row" approach above is superseded — kept here for spec history only.
 ### TRANSACTION LIST
 - Sorted by `transaction_date desc`, then `created_at desc` within a day.
 - Grouped by date: date label row ("Today", "Yesterday", "Monday 30 Jun") above each day's transactions.

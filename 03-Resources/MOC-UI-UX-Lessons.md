@@ -46,6 +46,7 @@ Prioritize these during foundation — not theme showcases or feature sprawl:
 - [[03-Resources/Skills/Theme-Switching-Foundation]] — flash prevention, hydration guards
 - [[03-Resources/Skills/Responsive-Data-Viz]] — mobile-first charts later (Phase 2+)
 - [[03-Resources/Skills/Smart-Form-Controls]] — instant expense logging UX
+- [[03-Resources/Skills/Discrete-State-Control-Selection]] — Transaction_UI_Spec §4; Type/Date Range as segmented, month picker as slider (same screen, two correct answers)
 
 ---
 
@@ -59,6 +60,7 @@ These are patterns where Antigravity, Gemini, or any agent will produce the wron
 - [[03-Resources/Skills/Tooltip-Edge-Overflow]] — fixed-direction tooltips cause horizontal scroll at edges
 - [[03-Resources/Skills/Smart-Form-Controls]] — always-enabled save button, icon-only labels
 - [[03-Resources/Skills/Context-Aware-Form-Fields]] — same input fields for all entity types regardless of their nature
+- [[03-Resources/Skills/Discrete-State-Control-Selection]] — slider for bounded discrete states (3 fixed options) — fake discretization via snap points costs motion surface + a11y for nothing
 
 ---
 
