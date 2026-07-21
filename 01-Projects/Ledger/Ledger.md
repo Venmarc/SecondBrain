@@ -1,11 +1,11 @@
-> **One-line Summary**: Personal expense / budget tracker for Nigerian realities — Phase 1 core transactions implemented; gate pending Victor.
+> **One-line Summary**: Personal expense / budget tracker for Nigerian realities — Phase 1 gate passed 2026-07-21; next is Phase 2 (budgets & goals).
 
 # Ledger
 
-**Status:** Active — **Phase 1 (Core Transactions)** — *implementation complete 2026-07-16*; **gate not closed until Victor verifies**  
+**Status:** Active — **Phase 2 next** — Phase 1 **gate passed** (Victor, 2026-07-21). Multi-select transaction filters are a backlog design note in NOTES.md (not blocking).  
 **Codebase:** `/home/redmane/Documents/Port Sites/Category 5/Ledger`  
 **Live:** [Ledger](https://ledgerix.vercel.app)  
-**Vault sync:** Port Sites docs are origin. Hub updated **2026-07-16**.
+**Vault sync:** Port Sites docs are origin. Hub updated **2026-07-21**.
 
 ## Purpose
 
@@ -21,17 +21,12 @@ Lightweight, fast expense logging, category budgets, and clear money-leak visibi
 
 Read [[01-Projects/Ledger/Docs/PHASES|PHASES]] every session.
 
-**Phase 1 (current):** Quick Add, transaction list/filters, edit/delete/undo, categories, dashboard v1.  
-**Do not start Phase 2** until Phase 1 gate is explicitly passed by Victor.
+**Phase 1:** Complete (gate passed 2026-07-21).  
+**Phase 2 (next):** Budgets + savings goals per [[01-Projects/Ledger/Docs/PHASES|PHASES]].
 
-### Phase 1 gate (Victor checklist)
+### Phase 1 gate — closed
 
-- Phone: log transport expense under 10s  
-- Income green; dashboard updates  
-- Edit / delete + 5s undo  
-- Draft restore  
-- 20 real transactions; filter + month math checks  
-- `tsc` clean; zero console errors  
+Victor sign-off 2026-07-21 after delete-confirm fix + polish; no open Phase 1 bugs.
 
 ## Doc set (synced)
 
@@ -72,12 +67,16 @@ Read [[01-Projects/Ledger/Docs/PHASES|PHASES]] every session.
 
 - **Open:** Prefer finishing proper JWT template (HS256) over long-term service-role fallback; Tooltip Escape dismissal; minor sidebar hydration if expanded.
 
-- **2026-07-17 — Deferred month control:** Dashboard month control redesign blocked until UI polish rules extracted from Victor’s X-article summary. Target UX: no modal — expandable dropdown; year + month **sliders** (mobile: sliders only; desktop: sliders + edge buttons). Phase 1 gate still open.
+- **2026-07-17 — Month control (spec):** Target UX locked (no full modal; year + month sliders). Implemented 07-19 — see below.
 
-- **2026-07-19 — UI polish pass:** Replaced calendar Dialog month picker with dual SnapSlider (month primary at pill width; year eases in on tap; month drops as **absolute overlay** under pill — `top-full` z-30, never in-flow push). Transactions filter rebuilt per Transaction_UI_Spec (search + filter icon → bottom sheet; chips only when active; Type stays segmented control, not slider — see [[03-Resources/Skills/Discrete-State-Control-Selection|Discrete-State-Control-Selection]]). `MIN_YEAR = 2025` as product-start bound, not max. Audit-fix regressions: tablet header crush (`sm:flex-row` → stack until `lg`); sidebar icon drift on collapse (`justify-center` → fixed left rail `pl-3.5` + label `max-w` clip); Clerk dev-handshake requires `localhost`, not `127.0.0.1` (see [[ANTI_PATTERNS|ANTI_PATTERNS]] §Clerk); list skeleton flash on search/month change → `keepPreviousData` on infinite + recent + month summary queries.
+- **2026-07-19 — UI polish pass:** Replaced calendar Dialog month picker with dual SnapSlider (month primary at pill width; year eases in on tap; month drops as **absolute overlay** under pill — `top-full` z-30, never in-flow push). Transactions filter rebuilt per Transaction_UI_Spec (search + filter icon → bottom sheet; chips only when active; Type stays segmented control, not slider — see [[03-Resources/Skills/Discrete-State-Control-Selection|Discrete-State-Control-Selection]]). `MIN_YEAR = 2025` as product-start bound, not max. Audit-fix regressions: tablet header crush (`sm:flex-row` → stack until `lg`); sidebar icon drift on collapse (`justify-center` → fixed left rail `pl-3.5` + label `max-w` clip); Clerk dev-handshake requires `localhost`, not `127.0.0.1` (see [[ANTI_PATTERNS|ANTI_PATTERNS]] §Clerk); list skeleton flash on search/month change → `keepPreviousData` on infinite + recent + month summary queries. Victor later added nav `pl-2` for icon optical center.
+
+- **2026-07-21 — Delete confirm fix:** Edit freeze = AlertDialog `z-50` under BottomSheet `z-[100]` → `z-[130]`. ⋮ Delete no-op = menu outside-click unmounted portaled confirm → hoist delete confirm to list parent (`onDeleteRequest`). Sheet Escape defers while alert overlay open. See Port Sites NOTES 21/07.
+
+- **2026-07-21 — Phase 1 gate passed** (Victor). Multi-select filters (OR within categories/payments) design note in Port Sites NOTES — backlog, not Phase 2 scope.
 
 ## Parallel build note
 
 Built **alongside Momentum**. Victor supervises; agents execute under phase gates.
 
-**Tags:** #ledger #project #active #phase-1
+**Tags:** #ledger #project #active #phase-2-next

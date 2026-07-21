@@ -66,6 +66,13 @@ or follow its link if it's already been split out — before writing related cod
 | Use semantic `text-text-inverse` on fixed orange brand buttons | In light mode `text-inverse` resolves to white (`#FAFAFA`) on orange (`#F97316`) — ~2.61:1 contrast, fails WCAG AA | Define a theme-independent token (e.g. `--color-orange-btn-text: #0A0A0A`) and use `text-orange-btn-text` on orange CTAs | [[01-Projects/Ledger/Ledger]] |
 | Pair `text-azure` with `bg-azure-muted` in light mode without checking contrast | Default azure (`#38BDF8`) on sky-100 (`#E0F2FE`) is ~1.75:1 — fails WCAG AA for active nav states | Override `--color-azure` to a darker shade (e.g. sky-700 `#0369A1`) inside the light-theme block | [[01-Projects/Ledger/Ledger]] |
 
+## UI overlays (sheets / menus / dialogs)
+
+| Never Do This | Why | Do This Instead | Source |
+|---|---|---|---|
+| Leave default Radix `AlertDialog` at `z-50` when custom sheets use `z-[100]+` | Confirm opens **under** the sheet → UI looks frozen; focus trap makes the page unusable | Set confirm overlay/content **above** all app sheets (Ledger: `z-[130]` > BottomSheet `z-[100]`) | [[01-Projects/Ledger/Ledger]] |
+| Nest ConfirmDialog inside a popover/menu that closes on outside `mousedown` | Portaled dialog is outside the menu root → confirm click unmounts menu + dialog before action runs | Hoist confirm to parent list/page state; menu only calls `onDeleteRequest` then closes | [[01-Projects/Ledger/Ledger]] |
+
 ## WebGL / Three.js
 
 | Never Do This | Why | Do This Instead | Source |
