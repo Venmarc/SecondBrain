@@ -1,4 +1,0 @@
-- **/Assets** Created for storing images and videos that I paste in anywhere in the vault.
-- This file will be an MOC of all images and where they are used/located.
-- A file might not necessarily contain the attachments physically, but can have a link pointing to them here in Assets.
-- All attachments will be listed in this file, but their physical form will be in the folder.
