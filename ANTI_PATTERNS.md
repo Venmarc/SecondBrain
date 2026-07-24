@@ -50,6 +50,7 @@ or follow its link if it's already been split out — before writing related cod
 | Protect routes via a growing public-route exclusion list | Hard to maintain; 404/legal/static pages may incorrectly redirect to login | Use Clerk `createRouteMatcher` for explicit protected app prefixes only (e.g. `/today`, `/habits`) | [[01-Projects/Momentum/Momentum]] |
 | Add `middleware.ts` when `proxy.ts` already exists (Next.js 16) | Duplicate middleware detection; `middleware` convention is deprecated | Use `proxy.ts` as the sole middleware entry point | [[01-Projects/Ledger/Ledger]] |
 | Run Supabase/Clerk native CLI binaries on Ivy Bridge CPUs without AVX2 | Precompiled Bun binaries throw `SIGILL` (Illegal Instruction) | Fall back to manual quickstart / Node `fetch`-based migration scripts | [[01-Projects/Ledger/Ledger]] · [[01-Projects/Momentum/Momentum]] |
+| `export type { ... }` from a `'use server'` module | Turbopack emits a runtime reference to the erased TypeScript interface/type, throwing `ReferenceError: <Type> is not defined` during server module evaluation on Vercel (while local Webpack dev suppresses it) | Import and export types directly from dedicated type files (`lib/types/database.ts`), never re-export types from server action files | [[01-Projects/Ledger/Ledger]] |
 
 ## Supabase
 
