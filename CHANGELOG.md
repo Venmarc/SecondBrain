@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-07-24 — Ledger Icon Category System Documentation Patches (AGY)
+Applied confirmed documentation patches for the Lucide icon category system across core Ledger project docs and synchronized to vault mirrors.
+
+#### Changed
+- [[01-Projects/Ledger/Docs/APP_FLOW|APP_FLOW]] — Added §3.3 Back Navigation Pattern; updated Category pill selector description in Flow 1.
+- [[01-Projects/Ledger/Docs/PAGE_SPECS|PAGE_SPECS]] — Updated Goal Detail and Category Management back links to icon-only chevrons; updated row icon circle specs; updated Add Category sheet to require curated Lucide icon picker split by type.
+- [[01-Projects/Ledger/Docs/UIUX_BRIEF|UIUX_BRIEF]] — Added §6.11 Category Pill / Selector spec, §8.1 Default Category Icon Assignments table (13 icons), §8.2 Curated Icon Picker table (14 expense + 8 income options), and updated category icons rendering paragraph.
+- [[01-Projects/Ledger/Docs/SCHEMA|SCHEMA]] — Dropped `color` column from `categories` table DDL; made `icon` required text; updated default seed table with Lucide import names.
+- [[01-Projects/Ledger/Docs/PHASES|PHASES]] — Added 24/07/2026 Documentation Changelog entry.
+- [[01-Projects/Ledger/Ledger|Ledger]] — Updated Vault sync date banner to 2026-07-24.
+- [[06-Agent-Sessions/2026-07-24-agy-ledger-icon-category-doc-patches]] — Session summary created.
+
 ### 2026-07-20 — Vault cleanup (GLM-5.2)
 Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowledge; orphans → MOCs). Master prompt lives at `~/prompt.txt`; session handoff: `~/Documents/Research_files/vault-cleanup-handoff-2026-07-20.md`.
 

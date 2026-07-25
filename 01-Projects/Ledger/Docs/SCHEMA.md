@@ -1,5 +1,3 @@
-> **Vault sync:** Copied from `Documents/Port Sites/Category 5/Ledger/` on 2026-07-09. Edit the project folder first; re-sync the vault after doc changes.
-
 # SCHEMA.md — Database Schema
 **Project:** Ledger
 **Last Updated:** 05/07/2026
@@ -50,8 +48,7 @@ create table public.categories (
   user_id     text not null references public.profiles(id) on delete cascade,
   name        text not null,
   type        text not null check (type in ('income', 'expense')),
-  color       text not null default '#3b82f6',
-  icon        text,
+  icon        text not null,               -- Lucide import name, e.g. 'Smartphone'
   is_default  boolean not null default false,
   is_archived boolean not null default false,
   created_at  timestamptz not null default now()
@@ -60,21 +57,21 @@ create table public.categories (
  
 **Default seed (applied per user on account creation):**
  
-| Name | Type |
-|---|---|
-| Transport | expense |
-| Feeding | expense |
-| Rent | expense |
-| Airtime / Data | expense |
-| NEPA / Electricity | expense |
-| College / School | expense |
-| Groceries | expense |
-| Household | expense |
-| Health | expense |
-| Misc | expense |
-| Salary | income |
-| Freelance | income |
-| Gift | income |
+| Name | Type | Icon |
+|---|---|---|
+| Transport | expense | `Car` |
+| Feeding | expense | `UtensilsCrossed` |
+| Rent | expense | `Building2` |
+| Airtime / Data | expense | `Smartphone` |
+| NEPA / Electricity | expense | `Zap` |
+| College / School | expense | `GraduationCap` |
+| Groceries | expense | `ShoppingCart` |
+| Household | expense | `House` |
+| Health | expense | `HeartPulse` |
+| Misc | expense | `MoreHorizontal` |
+| Salary | income | `Banknote` |
+| Freelance | income | `Briefcase` |
+| Gift | income | `Gift` |
  
 **Notes:**
 - `is_archived` replaces hard delete. Archived categories are hidden from the UI but retained for historical transaction accuracy.
