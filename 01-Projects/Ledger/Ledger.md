@@ -4,7 +4,8 @@
 
 **Status:** Active — **Phase 2 next** — Phase 1 **gate passed** (Victor, 2026-07-21). Multi-select transaction filters are a backlog design note in NOTES.md (not blocking).  
 **Codebase:** `/home/redmane/Documents/Port Sites/Category 5/Ledger`  
-**Live:** [Ledger](https://ledgerix.vercel.app)  
+**Live:** [Ledger](https://ledgerix.vercel.app)
+**Repo URL:** [Ledger](https://github.com/Venmarc/Ledger)
 **Vault sync:** Port Sites docs are origin. Hub updated **2026-07-24** (icon category system doc patches applied).
 
 ## Purpose
