@@ -1,12 +1,12 @@
-> **One-line Summary**: Personal expense / budget tracker for Nigerian realities — Phase 1 gate passed 2026-07-21; next is Phase 2 (budgets & goals).
+> **One-line Summary**: Personal expense / budget tracker for Nigerian realities — Phase 1 gate passed 2026-07-21; **Phase 2 gate passed** (Victor, 2026-07-28); Phase 3 in progress — **P3-A done** 2026-07-30, P3-B onward pending.
 
 # Ledger
 
-**Status:** Active — **Phase 2 next** — Phase 1 **gate passed** (Victor, 2026-07-21). Multi-select transaction filters are a backlog design note in NOTES.md (not blocking).  
+**Status:** Active — **Phase 3 in progress** — Phase 1 **gate passed** (Victor, 2026-07-21). Phase 2 **gate passed** (Victor, 2026-07-28). Phase 3 P3-A (Analytics foundations) **complete** 2026-07-30; awaiting Victor sign-off on P3-A then P3-B (Analytics UI). Multi-select transaction filters remain a backlog design note in NOTES.md (not blocking).  
 **Codebase:** `/home/redmane/Documents/Port Sites/Category 5/Ledger`  
 **Live:** [Ledger](https://ledgerix.vercel.app)
 **Repo URL:** [Ledger](https://github.com/Venmarc/Ledger)
-**Vault sync:** Port Sites docs are origin. Hub updated **2026-07-24** (icon category system doc patches applied).
+**Vault sync:** Port Sites docs are origin. Hub updated **2026-07-30** (P3-A foundations shipped + lint baseline cleared).
 
 ## Purpose
 
@@ -23,11 +23,16 @@ Lightweight, fast expense logging, category budgets, and clear money-leak visibi
 Read [[01-Projects/Ledger/Docs/PHASES|PHASES]] every session.
 
 **Phase 1:** Complete (gate passed 2026-07-21).  
-**Phase 2 (next):** Budgets + savings goals per [[01-Projects/Ledger/Docs/PHASES|PHASES]].
+**Phase 2:** Complete (gate passed 2026-07-28).  
+**Phase 3 (current):** Analytics, Recurring & Completion. P3-A (foundations) **complete** 2026-07-30; P3-B (Analytics UI) next. Full chunk map in `docs/PHASE-3-OVERVIEW.md` (Port Sites) and the Phase 3 implementation log in [[01-Projects/Ledger/Docs/PHASES|PHASES]].
 
 ### Phase 1 gate — closed
 
 Victor sign-off 2026-07-21 after delete-confirm fix + polish; no open Phase 1 bugs.
+
+### Phase 2 gate — closed
+
+Victor sign-off 2026-07-28 ("I declare phase 2 complete for now"). 8 chunks (P2-A through P2-H) landed; see [[01-Projects/Ledger/Docs/PHASES|PHASES]] Phase 2 implementation log.
 
 ## Doc set (synced)
 
