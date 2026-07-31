@@ -30,6 +30,8 @@ Captured from verbatim prompts in agent sessions. Update when Victor states a ne
 - Prioritize **frontend awesomeness, speed, and security** on Phase 0 foundation work.
 - Use vault skills (ui-ux, sticky top bar, etc.) when implementing frontend foundation.
 - **Port Sites `AGENTS.md` is canonical** for project standing rules (Ledger root; Momentum `.agents/AGENTS.md`). Vault copies mirror with sync date.
+- **Plan-review-before-implement:** for any non-trivial chunk of work, draft the plan to its own doc, then run a separate "implementer-hat" self-review pass ("list every assumption/ambiguity/edge case you'd guess at with zero context — don't fix, just list") and close every hole before a (possibly different) agent implements. Used across Ledger P3-A (×2) and P3-B — removes the gaps a weak model would otherwise fill with its own taste. See [[01-Projects/Ledger/Ledger]] 2026-07-29/30.
+- **Don't run the `readme-generator` skill on portfolio/personal sites** — it's tuned for products/codebases (install/clone/architecture) and produces the wrong voice for a personal site. Write from the site's own copy instead (projects+images, approach, skills, contact). Rejected once on `mario-dev-portfolio`, 2026-07-31.
 
 ## Related
 

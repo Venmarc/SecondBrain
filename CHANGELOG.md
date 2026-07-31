@@ -6,6 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-07-31 — Vault maintenance pass (Claude)
+Full lint/cleanup pass: refreshed hub docs to current project state, closed a second leftover pocket of unprocessed session logs, fixed a dangling wikilink, wired two long-orphaned skill notes, and flagged a spec/code contradiction for Victor rather than silently resolving it.
+
+#### Added
+- [[06-Agent-Sessions/extracted-sessions]] — new row for second orphan pocket (5 files: agent-sessions-handoff, phase-0-layout-revisions, fin-com-effects-audit/lab, vault-lint-venmarc-pastries-lighthouse); Processor line updated to credit Claude 2026-07-31 for this batch.
+- [[AGENTS]] §3 — wikilink from the `defuddle` bullet to [[03-Resources/Skills/Defuddle-Clipping|Defuddle skill guide]] (previously-orphaned note now has an inbound link).
+- [[03-Resources/MOC-UI-UX-Lessons]] — new bullet under 🔵 Product Thinking linking [[03-Resources/Skills/Pre-Launch-Security-Checklist]] (previously-orphaned note now has an inbound link).
+- [[01-Projects/Ledger/Ledger]] `## Lessons log` — new 2026-07-15 bullet flagging an unresolved theme-toggle icon spec/code discrepancy (session reversed the toggle ternary; [[01-Projects/Ledger/Docs/UIUX_BRIEF]] §6.10 / [[01-Projects/Ledger/Docs/APP_FLOW]] §3.2 still document the opposite behavior) — surfaced for Victor's decision, not resolved unilaterally.
+
+#### Changed
+- [[BRAIN]] — `## Active focus` refreshed from stale 2026-07-15 snapshot to 2026-07-31 (Momentum sidebar+auth done/hydration issue open; Ledger Phase 1/2 gates passed, P3-A complete, P3-B paused on Victor's "STOP"); footer last-updated date + changelog summary refreshed.
+- [[index]] — top summary, Momentum/Ledger project headings, Vault Health lint date, and LINT-REPORT pointer all refreshed to 2026-07-31 state; stale "pending processing" line (pointing at an already-resolved file) replaced, then after this session's deletion pass replaced again with a closed-out note pointing at `extracted-sessions.md`.
+- [[00-Inbox/Antigravity Swarm]] — dangling reference to deleted `2026-07-20-grok-antigravity-step5c-perf-gate` repointed to [[06-Agent-Sessions/extracted-sessions]].
+
+#### Removed
+- `06-Agent-Sessions/2026-07-14-grok-agent-sessions-handoff.md`, `2026-07-15-agy-phase-0-layout-revisions.md`, `2026-07-15-grok-fin-com-effects-audit.md`, `2026-07-15-grok-fin-com-effects-lab.md`, `2026-07-15-grok-vault-lint-venmarc-pastries-lighthouse.md` — second orphan pocket, triaged via background agent and confirmed redundant with already-extracted content in [[01-Projects/Ledger/Ledger]], [[ANTI_PATTERNS]], [[03-Resources/Skills/Collapsible-Desktop-Sidebar]], [[03-Resources/Tools/Effects_Glossary]], [[03-Resources/Tools/Effects_Playbook]].
+
+#### Method note
+Obsidian CLI (`unresolved`/`orphans`/`deadends`) was unavailable this session (`Command line interface is not enabled`); fell back to the documented filesystem wikilink scanner per [[AGENTS]] §C item 9. Fixed a self-authored basename-ambiguity bug in the scanner's incoming-link resolution (was misattributing links when multiple files share a basename, e.g. `AGENTS.md`/`PRD.md` across project `Docs/` folders — first-match-wins on an unordered set produced false-positive orphans). Fixed scanner: 14 real orphans (down from 20 in the 2026-07-20 report), 65 unresolved unique targets / 84 instances, 32 dead-ends. Full breakdown in [[LINT-REPORT]].
+
 ### 2026-07-24 — Ledger Icon Category System Documentation Patches (AGY)
 Applied confirmed documentation patches for the Lucide icon category system across core Ledger project docs and synchronized to vault mirrors.
 

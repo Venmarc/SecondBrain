@@ -62,6 +62,12 @@ Read [[01-Projects/Momentum/Docs/PHASES|PHASES]] every session. Agents: state th
 
 - **2026-07-09:** Landing — sticky glass nav, logo swing-in from ~45°. Clerk contrast bug root-caused and fixed 2026-07-12. Auth via dedicated `/login` + `/register` pages (not modals). `proxy.ts` protects explicit app prefixes only. Logo links to `/today` when authed, `/` when guest. Touch targets ≥48px (`h-12` buttons; `p-2 -m-2` on inline logo link).
 
+- **2026-07-15/17 — Sidebar + auth refinement:** Collapsible desktop sidebar via persisted Zustand (`lib/sidebarStore.ts`, `isCollapsed` default `true`) driving `--sidebar-width` CSS var (`72px`/`240px`) on `LayoutShell`; portal tooltips to `document.body` positioned via `getBoundingClientRect()`, 75ms mouseleave debounce, and `document.activeElement === target` check before hiding (WCAG 1.4.13 — don't dismiss on mouseleave if focus retained). Auth pages: stripped Clerk card wrappers, centered `<SignIn/>`/`<SignUp/>`, removed `footer: "hidden"` to restore native switch links, added keyboard-accessible Back-to-Home (`focus-visible:ring-1`).
+
+- **Logo:** SVG `fill` hardcoded per-path (`#10b981`→`#22C55E`) — brand color independent of CSS token system; text `hidden md:inline` to stay solo on mobile.
+
+- **Open (carried forward):** hydration jank when sidebar animates 72→240px on mount if previously expanded; `ensureProfile()` still blocks in a Server Component (flagged for client/middleware refactor, not yet done).
+
 ## Journey notes (vault)
 
 - **2026-07-09:** Vault realigned to Port Sites rewrite. Product truth = Phase 0 personal daily OS, not SaaS wellness. DEV_NOTES extracted and archived.

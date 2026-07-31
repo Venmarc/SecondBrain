@@ -59,6 +59,7 @@ or follow its link if it's already been split out — before writing related cod
 | Use `.single()` on queries that check for optional record existence | Throws a postgREST `PGRST116` error if the record is missing, filling application logs with false errors | Use `.maybeSingle()` or perform a direct `.upsert()` if checking before insert/update is not strictly necessary | [[01-Projects/Ledger/Ledger]] |
 | RLS on child/log tables without parent ownership check | User could insert logs referencing another user's parent record | Policy must join to parent table and verify `auth.jwt() ->> 'sub'` matches parent `user_id` | [[01-Projects/Momentum/Momentum]] |
 | Re-run SQL migrations without `drop policy if exists` | Duplicate policy errors on second apply | Prepend `drop policy if exists` for idempotent local migration runs | [[01-Projects/Momentum/Momentum]] |
+| Drop/rename a DB column without grepping every raw `SELECT`/column-list constant across `lib/actions/*.ts` | PostgREST throws `column X does not exist` at runtime, not build time — silent until the query fires | Grep all `*_SELECT` string constants for the column name before running any schema migration that drops/renames it | [[01-Projects/Ledger/Ledger]] |
 
 ## CSS / Design Tokens
 
@@ -81,4 +82,11 @@ or follow its link if it's already been split out — before writing related cod
 | Paste gist/reposted Ashima Simplex 2D noise into a `THREE.ShaderMaterial` without re-checking the canonical source | Public copies often carry (1) 3-arg `max(...)` and (2) `float m *= inversesqrt(vec3)` — invalid GLSL ES 1.00; desktop NV/AMD accept them; SwiftShader (Chromium headless / Lighthouse) fails the link silently → black canvas, Lighthouse still green | Copy verbatim from `ashima/webgl-noise/src/noise2D.glsl`; on `LINK_STATUS: false` compile the shader strings via raw WebGL2 and read `getShaderInfoLog` / `getProgramInfoLog` (see Pastries `scripts/_get-link-log.mjs`) | [[06-Agent-Sessions/2026-07-20-opencode-antigravity-step5b-swarm-real-rootcause]] |
 | Treat missing `precision` in custom ShaderMaterial as the root cause of a silent SwiftShader link failure without reading the info log | Three already injects `precision highp float;` for ShaderMaterial; precision-only "fixes" can look plausible but leave the real invalid GLSL untouched | Always capture the program/shader info log before declaring root cause; keep extra precision only as belt-and-suspenders | [[06-Agent-Sessions/2026-07-20-opencode-antigravity-step5b-swarm-real-rootcause]] |
 | Gate canvas/WebGL deliverables only on Lighthouse + DOM `toBeVisible` | Neither checks painted pixels — a failed shader link can ship with LH 95+ and a visible empty canvas | Add a Playwright brightCount / pixel-sample assertion (drawImage → getImageData, assert threshold) per Effects Build Playbook feel check | [[06-Agent-Sessions/2026-07-20-opencode-antigravity-step5b-swarm-real-rootcause]] |
+
+## React (Compiler / Hooks lint)
+
+| Never Do This | Why | Do This Instead | Source |
+|---|---|---|---|
+| Use `useState(false)` + `useEffect(() => setMounted(true))` as a mount-detection guard | Trips `react-hooks/set-state-in-effect` — an extra render cycle for state a first render already knows | Use `useSyncExternalStore(() => () => {}, () => true, () => false)` — single render, no effect cycle | [[01-Projects/Ledger/Ledger]] |
+| Derive a component variable per-render (`const Icon = getIconComponent(name)`) and render it as a JSX tag (`<Icon/>`) | Trips `react-hooks/static-components` — React Compiler can't verify the component identity is stable across renders | Use `React.createElement(getIconComponent(name), props)` instead of a JSX tag-cased const | [[01-Projects/Ledger/Ledger]] |
 

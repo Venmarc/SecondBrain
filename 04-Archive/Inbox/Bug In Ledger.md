@@ -1,3 +1,5 @@
+> **Archived 2026-07-31:** Both bugs resolved and verified (Phase 1 gate passed 2026-07-21, see [[01-Projects/Ledger/Ledger|Ledger hub]]). Moved from `00-Inbox/`.
+
 **Tried to delete a transaction but the screen froze, just stuck there**
 I opened a transaction entry that my agent made during an audit, and tried to delete it, but the screen froze after licking the button. I'm guessing a modal is supposed to show up, maybe it showed up behind the edit card and got stuck. The delete modal is supposed to overlay on the screen where it was called.
 Also, I tried to delete the transaction from the transaction page, using the 3 dots' delete button. The modal came out, i clicked it, but nothing happened. is this a latter feature that's not completed?

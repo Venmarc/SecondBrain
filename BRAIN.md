@@ -17,9 +17,9 @@
 - **05-Daily/** — journal
 - **06-Agent-Sessions/** — session logs (kept; history is good)
 
-## Active focus (2026-07-15)
-- **Momentum** — Phase 0 complete; maintenance + deferred auth-page cleanup
-- **Ledger** — Phase 0 complete; **Phase 1** (transactions) next
+## Active focus (2026-07-31)
+- **Momentum** — Phase 0 complete; sidebar + auth refinement done (07-17); hydration jank + `ensureProfile()` blocking issue open
+- **Ledger** — Phase 1 & 2 gates passed (Victor, 07-21 / 07-28); Phase 3 P3-A (analytics foundations) complete 07-30, P3-B (analytics UI) plan paused mid-review on Victor's "STOP"
 - **Tempire** — later (frontend skill-up first)
 - **Victor supervises agents** — see [[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|How Victor Works With Agents]]
 
@@ -44,5 +44,5 @@
 - Keep [[index|index.md]] and [[CHANGELOG|CHANGELOG.md]] current on structural change.
 - Deferred density work: [[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault Improvement Backlog]]
 
-**Last updated**: 2026-07-15  
-**Changelog**: Phase 0 complete on Momentum + Ledger; session logs extracted to skills/hubs; vault lint refreshed.
+**Last updated**: 2026-07-31  
+**Changelog**: Ledger Phase 1 & 2 gates closed, Phase 3 P3-A complete; Momentum sidebar+auth refinement closed; 26 session logs extracted to hubs/ANTI_PATTERNS/Standing-Directives (see [[06-Agent-Sessions/extracted-sessions|extracted-sessions]]); new ANTI_PATTERNS §React section.

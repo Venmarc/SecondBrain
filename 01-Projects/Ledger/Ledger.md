@@ -69,6 +69,8 @@ Victor sign-off 2026-07-28 ("I declare phase 2 complete for now"). 8 chunks (P2-
 
 - **2026-07-14 — Layout revisions:** Collapsible sidebar via `--sidebar-width` + `LayoutShell` + portal tooltips. Mobile-only Settings link in Clerk `UserButton.MenuItems`. Auth layout stripped. WCAG: orange button text token, light-mode azure override.
 
+- **2026-07-15 — Theme toggle icon (resolved 2026-07-31):** A 2026-07-15 session had reversed the toggle ternary to show the target mode, contradicting [[01-Projects/Ledger/Docs/UIUX_BRIEF|UIUX_BRIEF]] §6.10 and [[01-Projects/Ledger/Docs/APP_FLOW|APP_FLOW]] §3.2 ("icon shows current active mode"). Victor fixed the toggle back to spec — icon shows current state, not target. Docs were correct as written; no doc changes needed.
+
 - **2026-07-16 — Phase 1 build + auth bridge:** Chunked P1-A→H (Quick Add, list, edit/delete/undo, categories, dashboard v1). Supabase pause does not wipe migrations; post-resume “authorize” error was **zero Clerk JWT templates** named `supabase`. Fix: service-role fallback after Clerk auth + `scripts/setup-clerk-supabase-jwt.mjs` for HS256 JWT secret. Auto-seed 13 categories when user has none. See [[ANTI_PATTERNS|ANTI_PATTERNS]] Clerk row.
 
 - **Open:** Prefer finishing proper JWT template (HS256) over long-term service-role fallback; Tooltip Escape dismissal; minor sidebar hydration if expanded.
@@ -80,6 +82,20 @@ Victor sign-off 2026-07-28 ("I declare phase 2 complete for now"). 8 chunks (P2-
 - **2026-07-21 — Delete confirm fix:** Edit freeze = AlertDialog `z-50` under BottomSheet `z-[100]` → `z-[130]`. ⋮ Delete no-op = menu outside-click unmounted portaled confirm → hoist delete confirm to list parent (`onDeleteRequest`). Sheet Escape defers while alert overlay open. See Port Sites NOTES 21/07.
 
 - **2026-07-21 — Phase 1 gate passed** (Victor). Multi-select filters (OR within categories/payments) design note in Port Sites NOTES — backlog, not Phase 2 scope.
+
+- **2026-07-21 — UI polish floor + category picker parked (Phase 2 kickoff):** All new Phase-2 UI must use house motion tokens (`--duration-slow`, `--ease-smooth`) from `globals.css`, never invented magic numbers; cards use `.pressable` (`scale(0.98)`) only, hover-lift banned. Category picker iterated native-select → pills → nested scrollable modal → **reverted to pills**; Victor parked a custom scrollable text-only list modal as backlog polish (not done).
+
+- **2026-07-23 — Budget query invalidation chokepoint:** FAB-driven transaction mutations must invalidate `queryKeys.budgets.all()` inside `invalidateTransactionReads` (`lib/hooks/use-transactions.ts`), not just `transactions`/`summary` — budget cards are query-time sums and go stale silently otherwise.
+
+- **2026-07-24/25 — Category icon system migration:** Dropped `categories.color` column, `icon` now `text not null` (`scripts/migrations/20260724_category_icons.sql`); every raw `CATEGORY_SELECT` string in `lib/actions/{budgets,transactions}.ts` must be updated in lockstep with schema migrations — missed column caused prod `column categories_1.color does not exist`. Neutral icon-circle bg via `--color-neutral*` tokens; dark-mode contrast fix `#57534E`→`#A8A29E` (Stone-400, ~4.6:1) after icons were unreadable in dark theme. See [[ANTI_PATTERNS|ANTI_PATTERNS]] §Supabase.
+
+- **2026-07-28 — Phase 2 gate passed** (Victor: "I declare phase 2 complete for now"). Budget mini-card + transaction-row date fix landed; 8 chunks P2-A→H complete.
+
+- **2026-07-29/30 — Plan-review-before-implement workflow:** Every Phase 3 chunk gets its own `docs/P#-#.md` (never inline in a session). Before saving: run an "implementer-hat" self-review prompt ("list every assumption/ambiguity/edge case you'd guess at with zero context — don't fix, just list") and close every hole with an explicit `closes X` reference; only then does a separate agent implement. Recharts chart colors must be **resolved hex literals**, not `var(--...)` — Recharts SVG `fill` doesn't reliably resolve CSS custom properties cross-browser. See [[02-Areas/Agent-Ops/Victor-Standing-Directives|Victor Standing Directives]].
+
+- **2026-07-30 — Lint fix:** `react-hooks/set-state-in-effect`, `react-hooks/static-components` — see [[ANTI_PATTERNS|ANTI_PATTERNS]] §React.
+
+- **2026-07-31 — README + LICENSE:** Regenerated `README.md` from Next.js boilerplate (features, screenshots, tech stack, quick start); added MIT `LICENSE`.
 
 ## Parallel build note
 

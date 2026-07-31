@@ -48,7 +48,7 @@ This note has no content of its own. Its job is to make the `Assets/` folder gra
 | `Pasted image 20260720040348.png` | [[00-Inbox/Antigravity Swarm]] | my version of the antigravity swarm with brown particles (paired with `20260720020800.png`) |
 | `Pasted image 20260720040514.png` | [[00-Inbox/Antigravity Swarm]] | particles come together to form braces that represent developers (paired with `20260720023051.png`) |
 | `Pasted image 20260720041439.png` | [[00-Inbox/Antigravity Swarm]] | some worms going up, down, left, right or appear stagnant, because of screenshot (paired with `20260720034357.png`) |
-| `Pasted image 20260720062129.png` | [[00-Inbox/Bug In Ledger]] | sidebar icon drift before fix — Bug In Ledger evidence screenshot |
+| `Pasted image 20260720062129.png` | [[04-Archive/Inbox/Bug In Ledger]] | sidebar icon drift before fix — Bug In Ledger evidence screenshot |
 
 ### MP4 screencasts — 6 files
 
@@ -67,7 +67,7 @@ This note has no content of its own. Its job is to make the `Assets/` folder gra
 
 All 20 assets in `Assets/` are currently embedded in exactly **2 vault notes**:
 - [[00-Inbox/Antigravity Swarm]] — 13 png + 6 mp4 (the antigravity.google research thread — Victor's visual reference set for the erratic-swarm Extract/Build lane that closed 2026-07-20 with Lighthouse 99/99). Knowledge extracted to [[03-Resources/Tools/Effects_Glossary]] (`MeshBackground`, `FilmGrain`, `Swarm`, `BlinkingCursor` promoted to `tried`); raw research notes still in inbox pending processing.
-- [[00-Inbox/Bug In Ledger]] — 1 png (sidebar icon drift bug, fixed 2026-07-19; bug note status lines confirm resolution → [[ANTI_PATTERNS]] §Clerk).
+- [[04-Archive/Inbox/Bug In Ledger]] — 1 png (sidebar icon drift bug, fixed 2026-07-19; both bugs resolved and verified, archived 2026-07-31).
 
 When the Antigravity Swarm inbox note is eventually processed (see [[LINT-REPORT|2026-07-20 lint Suggestions §5]]), the captions above are the canonical record of what each image shows — don't delete this MOC row when the inbox note is archived.
 

@@ -67,6 +67,8 @@ Scan the entire vault and flag/fix:
 6. **Knowledge Gaps**: Missing project docs or core topics mentioned but unwritten.
 7. **Inconsistent Style**: Missing frontmatter, tags, or one-line summaries.
 8. **Suggestions**: Propose new links, pages, or questions to ask the user.
+9. **Method note**: Obsidian CLI `unresolved`/`orphans`/`deadends` and the filesystem wikilink-scanner surface different counts for the same category by design — CLI's orphan total counts *all* files (templates/scripts/assets included), the scanner filters to real `.md` notes only. Document both numbers and the scope difference rather than picking one.
+10. **On any file move/rename**: grep historical `CHANGELOG.md` entries for the old path too, not just live wikilinks — a "Moved" log entry itself can leave a dangling link one line above it.
 
 ### D. Vault Librarian Interviewer Routine
 *Triggered on demand when the user requests to "run an interview session", "run a librarian session", or "populate the vault".*
@@ -115,7 +117,7 @@ Agents should map these simple phrases in user prompts to their corresponding wo
 ## 3. Obsidian Skills & Tooling Integration
 
 When executing actions, utilize these tools and capabilities:
-- **`defuddle`**: A command-line utility for managing markdown links and formatting. Set it up and verify availability before running lint tasks.
+- **`defuddle`**: A command-line utility for managing markdown links and formatting. Set it up and verify availability before running lint tasks. See [[03-Resources/Skills/Defuddle-Clipping|Defuddle skill guide]] for commands.
 - **Obsidian Skills**: Utilize any project-level templates or styles defined in `Templates/`.
 - **Long-Term Memory (agentmemory)**: Session boot requires `memory_smart_search`; session shutdown requires `memory_save`. See **§E Session Boot & Shutdown**.
 

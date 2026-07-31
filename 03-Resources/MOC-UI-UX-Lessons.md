@@ -95,6 +95,7 @@ These are architectural traps that produce subtle bugs that are hard to reproduc
 - [[03-Resources/Skills/Reverse-Engineering-UI-Components]] — library → own component system
 - [[03-Resources/Skills/Clerk-Auth-Card-Contrast]] — auth UI readability
 - [[03-Resources/Skills/Agent-Prompting-Masterclass]] — full prompting system
+- [[03-Resources/Skills/Pre-Launch-Security-Checklist]] — 30-min pre-launch security pass (secrets, RLS, rate limits, CORS) cross-referenced against Tempire/Momentum gaps
 
 ---
 
