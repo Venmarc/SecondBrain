@@ -52,7 +52,7 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 
 ## 🤖 Agent Sessions (06-Agent-Sessions)
 New sessions: `YYYY-MM-DD-<agent>-<slug>.md` via [[Templates/Agent-Session-Summary|template]]. Processed logs index: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].  
-All known pockets processed as of 2026-07-31 — folder now holds only `extracted-sessions.md` + harvest/session JSON tooling artifacts (see [[06-Agent-Sessions/extracted-sessions|extracted-sessions]] "Remaining in folder" note).
+Latest: [[06-Agent-Sessions/2026-08-03-opencode-secondbrain-first-impressions|SecondBrain first impressions]] — diagnosed the vault as strong engineering memory but weak personal synthesis; August playbook deferred to a fresh session. Historical processed logs: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].
 
 ---
 

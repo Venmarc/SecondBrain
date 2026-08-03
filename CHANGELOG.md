@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-08-03 — SecondBrain first-impressions critique (OpenCode)
+
+#### Added
+- [[06-Agent-Sessions/2026-08-03-opencode-secondbrain-first-impressions]] — ruthless vault review diagnosing strong engineering/agent continuity but weak personal synthesis, decision support, and behavior evidence; records Victor's August goal to make the vault contain more of him.
+
+#### Changed
+- [[index]] — Agent Sessions now points to the new critique and its deferred fresh-session playbook work instead of claiming the folder contains only tooling artifacts.
+
 ### 2026-07-31 — Vault maintenance pass (Claude)
 Full lint/cleanup pass: refreshed hub docs to current project state, closed a second leftover pocket of unprocessed session logs, fixed a dangling wikilink, wired two long-orphaned skill notes, and flagged a spec/code contradiction for Victor rather than silently resolving it.
 
