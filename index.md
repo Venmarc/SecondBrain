@@ -1,6 +1,6 @@
 # Victor's Second Brain (Master Hub)
 
-> **One-line Summary**: Central index of Victor's knowledge OS — Momentum Phase 0 ✓ + sidebar/auth refinement done, Ledger Phase 1 & 2 gates passed / Phase 3 P3-A done, Tempire later, skills and agent ops without multi-agent orchestration.
+> **One-line Summary**: Central index of Victor's knowledge OS — **skill-router is now TOP priority** (reframed late last week; agent-agnostic architecture resolved 2026-08-02 — one shared brain, two thin adapters for Antigravity + Claude Code), Ledger/Momentum demoted to medium/side-project, Tempire later, skills and agent ops without multi-agent orchestration.
 
 ---
 
@@ -16,13 +16,17 @@
 
 ## ⚡ Active Projects (01-Projects)
 
-### 🌱 [[01-Projects/Momentum/Momentum|Momentum]] — Phase 0 ✓ + sidebar/auth refinement done
+### 🚀 [[01-Projects/skill-router/skill-router|skill-router]] — TOP priority ✅ architecture resolved
+Agent-agnostic skill-routing system — install once per machine, all agent CLIs use it. Architecture reconciled 2026-08-02: shared catalog+classifier behind thin per-harness adapters (Antigravity + Claude Code for MVP); dedup rule and MVP diagram locked. Still open: Claude Code hook-coexistence spike (unrun) and pricing model.  
+**Code:** `~/Projects/skill-router` · no git remote yet · no README/PRD yet (below documentation bar for a top-priority project)
+
+### 🌱 [[01-Projects/Momentum/Momentum|Momentum]] — Phase 0 ✓ + sidebar/auth refinement done (medium priority)
 Personal daily habit + fitness OS. One goal: use it daily; show wins/fails.  
 **Code:** `Documents/Port Sites/Category 5/Momentum` · **Live:** https://peakmomentum.vercel.app  
 **Docs (synced 2026-07-09):** [[01-Projects/Momentum/Docs/PRD|PRD]] · [[01-Projects/Momentum/Docs/PHASES|PHASES]] · [[01-Projects/Momentum/Docs/TRD|TRD]] · [[01-Projects/Momentum/Docs/PAGE_SPECS|PAGE_SPECS]] · [[01-Projects/Momentum/Docs/APP_FLOW|APP_FLOW]] · [[01-Projects/Momentum/Docs/UIUX_BRIEF|UIUX_BRIEF]] · [[01-Projects/Momentum/Docs/SCHEMA|SCHEMA]] · [[01-Projects/Momentum/Docs/INSIGHTS|INSIGHTS]] · [[01-Projects/Momentum/Docs/NOTES|NOTES]]  
 **Lessons:** [[01-Projects/Momentum/Lessons-from-DEV_NOTES|from DEV_NOTES]] · hub [[01-Projects/Momentum/Momentum|Momentum.md]]
 
-### 📒 [[01-Projects/Ledger/Ledger|Ledger]] — Phase 3 in progress (P3-A done)
+### 📒 [[01-Projects/Ledger/Ledger|Ledger]] — Phase 3 in progress (P3-A done) (medium priority)
 Personal expense / budget tracker (NG realities). Precision + speed; serious UI.  
 **Code:** `Documents/Port Sites/Category 5/Ledger` · **Live:** https://ledgerix.vercel.app  
 Phase 1 gate passed 07-21; Phase 2 gate passed 07-28; Phase 3 P3-A (analytics foundations) complete 07-30; P3-B plan paused mid-review on Victor's "STOP".  

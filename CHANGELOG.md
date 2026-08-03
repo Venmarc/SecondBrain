@@ -14,6 +14,35 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 #### Changed
 - [[index]] — Agent Sessions now points to the new critique and its deferred fresh-session playbook work instead of claiming the folder contains only tooling artifacts.
 
+### 2026-08-02 — skill-router: agent-agnostic architecture resolved, AGENTS.md hardcoded paths actually fixed (Claude)
+Reconciled skill-router's vault doc with the resolved MVP architecture (one shared brain, two thin adapters — Antigravity + Claude Code), replaced Victor's single-pipeline overnight MVP diagram with a runtime-loop/product-loop split, and closed out the prior pass's `AGENTS.md` hardcoded-path fix, which the 2026-08-02 CHANGELOG entry below claimed was done but wasn't — 7 `file:///home/redmane/...` links were still live in `AGENTS.md` at the start of this session.
+
+#### Changed
+- [[01-Projects/skill-router/skill-router]] — full rewrite: locked MVP scope (Antigravity + Claude Code only; AI-classifier stays for v1; keyword/regex fallback deferred to v2; ≤10s latency ceiling), resolved the Claude-native-matcher collision question (both systems are pointer-injection, not full-content inlining — no format conflict), set the dedup rule (`router_matches − claude_native_matches`, canonical-name set-diff, replacing an earlier position-based ranking idea), and replaced the linear MVP diagram with a two-loop mermaid flowchart (fast per-turn runtime loop vs. slow outer product loop). Corrected an unverified timeline claim ("reframed 2026-08-01"/"three weeks ago") to "late last week" per Victor directly.
+- [[AGENTS]] — actually removed the remaining `file:///home/redmane/Documents/SecondBrain/...` absolute links (7 instances, in the Ingest Workflow, Query Workflow, Lint Workflow, and 9-Doc Standard sections) that survived the prior pass's fix claim. Replaced with vault-relative links.
+- [[index]] — skill-router entry updated from "⚠️ gap open" to "✅ architecture resolved"; one-line summary at top updated to match.
+
+#### Added
+- [[06-Agent-Sessions/2026-08-02-claude-skill-router-mvp-architecture]] — session summary for this pass, per `Templates/Agent-Session-Summary.md`.
+
+#### Known gaps (not actioned this pass, flagged for later)
+- The Claude Code hook-coexistence spike (does skill-router's injected pointers interact badly with Claude Code's own native skill matcher?) is still unrun — this is the actual remaining blocker for the Claude Code adapter, not a documentation gap.
+- Pricing model for skill-router (subscription/one-time/annual) still undecided.
+- The ~15 other vault files flagged in the prior pass as still containing `/home/redmane/...` hardcodes were not touched this pass — still open.
+
+### 2026-08-02 — Vault reconciliation: skill-router priority reframe (Claude)
+Closed the 4 open items from the 2026-08-01 memory-migration session: reconciled index.md with the skill-router priority reframe, created skill-router's first vault project doc, de-hardcoded AGENTS.md's machine-specific paths, and logged this pass.
+
+#### Added
+- [[01-Projects/skill-router/skill-router]] — new project hub doc (skill-router had zero vault presence despite being named top priority three weeks ago). Documents current file inventory, and flags an **unresolved architecture gap**: the existing spec (`skill-router-specification.md`, 2026-07-01) is Antigravity/Gemini-specific (Gemini API classifier, Gemini-only hook registration), but the 2026-08-01 reframing calls for an agent-agnostic system usable by all CLIs on a machine. Nothing has reconciled that gap yet — surfaced for Victor's decision, not resolved unilaterally.
+- [[AGENTS]] — new "No Machine-Specific Hardcoding" rule under Rules for Editing, added after finding the vault (git-synced across `venmarc@open-claw` and `redmane@latitude-e6320`, per MEMORY host-path table) still had `redmane`-only absolute paths baked into agent instructions.
+
+#### Changed
+- [[index]] — top summary and Active Projects section updated: skill-router added as TOP priority with its architecture-gap flag; Momentum and Ledger headings now explicitly marked "(medium priority)" to match the 2026-08-01 reframing (previously the index still implied they were the lead projects).
+- [[AGENTS]] — replaced all `file:///home/redmane/Documents/SecondBrain/...` absolute links with vault-relative links (`00-Inbox`, `01-Projects`, `index.md`, `CHANGELOG.md`, etc.) so the doc works correctly on any machine the vault is cloned to.
+
+#### Known gaps (not actioned this pass, flagged for later)
+- ~15 other vault files still contain `/home/redmane/...` hardcodes (mostly historical session logs under `06-Agent-Sessions/`, plus a few live project docs — `01-Projects/Ledger/Ledger.md` "Codebase:" line, `01-Projects/Momentum/Momentum.md` "Codebase:" line, `01-Projects/Ledger/Docs/AGENTS.md`, `01-Projects/Ledger/Docs/DESIGN.md`, `01-Projects/Tempire/Docs/README.md`, `03-Resources/Skills/Skill-Router-Hook.md`, `03-Resources/Skills/UI-Polish-Ten-Rules.md`, `03-Resources/Skills/Defuddle-Clipping.md`). Out of scope for this pass (only AGENTS.md was requested) — worth a dedicated pass since Port Sites codebase paths genuinely live on the PC and need either the host-table treatment or a policy decision on whether project "Codebase:" lines should stay machine-specific by design.
 ### 2026-07-31 — Vault maintenance pass (Claude)
 Full lint/cleanup pass: refreshed hub docs to current project state, closed a second leftover pocket of unprocessed session logs, fixed a dangling wikilink, wired two long-orphaned skill notes, and flagged a spec/code contradiction for Victor rather than silently resolving it.
 
