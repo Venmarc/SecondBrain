@@ -17,9 +17,10 @@
 - **05-Daily/** — journal
 - **06-Agent-Sessions/** — session logs (kept; history is good)
 
-## Active focus (2026-07-31)
-- **Momentum** — Phase 0 complete; sidebar + auth refinement done (07-17); hydration jank + `ensureProfile()` blocking issue open
-- **Ledger** — Phase 1 & 2 gates passed (Victor, 07-21 / 07-28); Phase 3 P3-A (analytics foundations) complete 07-30, P3-B (analytics UI) plan paused mid-review on Victor's "STOP"
+## Active focus (2026-08-03)
+- **skill-router** — top priority; agent-agnostic architecture proposed/decided, implementation unverified against the unfinished Gemini/Antigravity-specific source snapshot
+- **Momentum** — medium priority; Phase 0 complete; sidebar + auth refinement done (07-17); hydration jank + `ensureProfile()` blocking issue open
+- **Ledger** — medium priority; Phase 1 & 2 gates passed (Victor, 07-21 / 07-28); Phase 3 P3-A (analytics foundations) complete 07-30, P3-B (analytics UI) plan paused mid-review on Victor's "STOP"
 - **Tempire** — later (frontend skill-up first)
 - **Victor supervises agents** — see [[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|How Victor Works With Agents]]
 
@@ -37,12 +38,12 @@
 ## Session Continuity
 - **agentmemory** — machine layer (when healthy)
 - **Vault** — human-readable journey + skills
-- Boot/shutdown: see [[AGENTS|AGENTS.md]] §E. Soft-fail if agentmemory is down.
+- Boot/shutdown: see [[AGENTS|AGENTS.md]] §F. Soft-fail if agentmemory is down.
 
 ## Interaction
 - Propose changes clearly; surgical edits to human text.
 - Keep [[index|index.md]] and [[CHANGELOG|CHANGELOG.md]] current on structural change.
 - Deferred density work: [[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault Improvement Backlog]]
 
-**Last updated**: 2026-07-31  
-**Changelog**: Ledger Phase 1 & 2 gates closed, Phase 3 P3-A complete; Momentum sidebar+auth refinement closed; 26 session logs extracted to hubs/ANTI_PATTERNS/Standing-Directives (see [[06-Agent-Sessions/extracted-sessions|extracted-sessions]]); new ANTI_PATTERNS §React section.
+**Last updated**: 2026-08-03
+**Changelog**: skill-router promoted to top priority with architecture/implementation evidence states; Better Me, Better Vault decision-support and publishing loop added.

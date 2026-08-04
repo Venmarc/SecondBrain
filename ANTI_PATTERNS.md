@@ -90,3 +90,9 @@ or follow its link if it's already been split out — before writing related cod
 | Use `useState(false)` + `useEffect(() => setMounted(true))` as a mount-detection guard | Trips `react-hooks/set-state-in-effect` — an extra render cycle for state a first render already knows | Use `useSyncExternalStore(() => () => {}, () => true, () => false)` — single render, no effect cycle | [[01-Projects/Ledger/Ledger]] |
 | Derive a component variable per-render (`const Icon = getIconComponent(name)`) and render it as a JSX tag (`<Icon/>`) | Trips `react-hooks/static-components` — React Compiler can't verify the component identity is stable across renders | Use `React.createElement(getIconComponent(name), props)` instead of a JSX tag-cased const | [[01-Projects/Ledger/Ledger]] |
 
+## OpenCode / Custom AI Providers
+
+| Never Do This | Why | Do This Instead | Source |
+|---|---|---|---|
+| Copy an Anthropic-compatible provider's documented base URL into OpenCode without checking the SDK's final request path | OpenCode's `@ai-sdk/anthropic` adapter appends `/messages` directly; AgentRouter's documented `https://agentrouter.org` therefore produced `/messages`, while its working route was `/v1/messages` | Capture a redacted request path or consult the adapter behavior, then set the base URL so the composed path matches the provider; AgentRouter required `https://agentrouter.org/v1` | [[06-Agent-Sessions/2026-08-04-opencode-agentrouter-claude-routes]] |
+| Treat `opencode models <custom-provider>` as live provider discovery | For custom providers, the command lists model IDs manually declared in `opencode.json(c)`; it does not prove the backend's full catalog or account entitlements | Compare dashboard/docs cautiously, manually declare the exact candidate ID in a temporary config, and verify it through a supported client request before adding it permanently | [[06-Agent-Sessions/2026-08-04-opencode-agentrouter-claude-routes]] |

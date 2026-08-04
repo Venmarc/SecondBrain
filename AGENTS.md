@@ -23,6 +23,7 @@ The vault is structured according to the PARA method, evolved lightly with a hyb
 
 ### Rules for Editing
 - **Never modify raw files**: Any file in Clippings or raw/ is immutable.
+- **Vault Means Consent**: Material Victor deliberately places and pushes into this vault is available for agent-assisted reading and processing. Material he is uncomfortable sharing stays outside the vault. Do not add privacy lanes, redaction routines, encryption workflows, or private-vault bureaucracy unless Victor requests them.
 - **Keep index and changelog current**: Update [index.md](index.md) and [CHANGELOG.md](CHANGELOG.md) upon any structural modification.
 - **Surgical edits**: Minimize changes to existing human-authored text; append or update specific sections, keeping one-line summaries at the top.
 - **No Agent-Specific Hardcoding**: Do not write instructions or rules that assume only one specific AI client is running.
@@ -56,7 +57,17 @@ The vault is structured according to the PARA method, evolved lightly with a hyb
 3. **Synthesize**: Formulate the response with clear wikilink citations (e.g. `[[index|My-Note]]`).
 4. **Capture Insights**: If the synthesis represents a new useful connection, ask the user if they'd like to save it as a new note in the vault.
 
-### C. Lint Workflow (Health Check & Gap-Finding)
+### C. Better Me, Better Vault Workflow
+*Triggered when Victor brings personal material, faces a meaningful choice, runs a weekly review, or wants to turn development into X/LinkedIn posts. See [[03-Resources/Vault-Ops/Better-Me-Better-Vault|Better Me, Better Vault]].*
+
+1. **Selective Intake**: Process personal notes and voice notes that Victor deliberately pushes into the vault. Do not attempt exhaustive migration.
+2. **Usefulness Test**: Ask whether a source improves a decision, behavior, future retrieval, or publishable explanation. If none apply, do not create a permanent synthesis merely to prove ingestion worked.
+3. **Decision Loop**: Surface options, evidence, constraints, rationale, and a concrete next action. If a decision is not ready, name the missing evidence and a review condition/date.
+4. **Weekly Review**: Support one approximately 30-minute review. It must end with a decision, next action, or evidence-gathering condition; otherwise record that the review failed.
+5. **Publishing Loop**: Help Victor select at least two X posts or threads and one LinkedIn post each week. Once selected, each post ships within 48 hours after no more than one assisted revision, or is explicitly killed with a reason.
+6. **No Maintenance Theatre**: Do not count folders, backlinks, lint fixes, generated drafts, or cleaned inboxes as progress toward this workflow. Do not turn it into autonomous orchestration or additional bureaucracy.
+
+### D. Lint Workflow (Health Check & Gap-Finding)
 *Triggered on command (e.g., "Run a full lint pass").*
 
 Scan the entire vault and flag/fix:
@@ -71,7 +82,7 @@ Scan the entire vault and flag/fix:
 9. **Method note**: Obsidian CLI `unresolved`/`orphans`/`deadends` and the filesystem wikilink-scanner surface different counts for the same category by design — CLI's orphan total counts *all* files (templates/scripts/assets included), the scanner filters to real `.md` notes only. Document both numbers and the scope difference rather than picking one.
 10. **On any file move/rename**: grep historical `CHANGELOG.md` entries for the old path too, not just live wikilinks — a "Moved" log entry itself can leave a dangling link one line above it.
 
-### D. Vault Librarian Interviewer Routine
+### E. Vault Librarian Interviewer Routine
 *Triggered on demand when the user requests to "run an interview session", "run a librarian session", or "populate the vault".*
 
 1. **Role Activation**: Activate the `vault-librarian-interviewer` skill.
@@ -88,7 +99,7 @@ Scan the entire vault and flag/fix:
      * *Weekly*: Run full deep session on Sundays to clear backlogs, project gaps, and orphans.
      * *On-Demand*: Victor can invoke this anytime to record thoughts.
 
-### E. Session Boot & Shutdown (mandatory — all agents)
+### F. Session Boot & Shutdown (mandatory — all agents)
 
 **Operating model:** Victor supervises. Agents assist. No multi-agent orchestration engine. See [[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|How Victor Works With Agents]].
 
@@ -119,7 +130,7 @@ Scan the entire vault and flag/fix:
 
 **Bridge rule:** When a vault note documents a reusable fix (not journey-only), also `memory_save` the core insight when agentmemory is healthy.
 
-### F. Quick Commands (Session Aliases)
+### G. Quick Commands (Session Aliases)
 Agents should map these simple phrases in user prompts to their corresponding workflows:
 - **`/ingest [file]`** or **`Run ingest on [file]`** &rarr; Executes the **Ingest Workflow** for the specified source file in `00-Inbox/` or `Clippings/`.
 - **`/lint`** or **`Full lint`** &rarr; Runs the **Lint Workflow** (auditing orphans, missing summaries, project gaps) and compiles the results to `LINT-REPORT.md`.
