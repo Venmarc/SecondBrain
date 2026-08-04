@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Jellyfish Ring Swarm — canvas port of css-houdini-ringparticles</title>
+<style>
+  html, body { margin:0; padding:0; background:#020406; overflow:hidden; height:100%; width:100%; }
+  canvas { display:block; }
+  .panel {
+    position:fixed; top:16px; right:16px; width:300px;
+    background:rgba(10,15,20,.85); backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,.1); border-radius:10px;
+    padding:14px 16px; color:#9fb6c7; font:12px/1.4 -apple-system,Segoe UI,Roboto,sans-serif;
+    max-height:92vh; overflow-y:auto; z-index:10;
+  }
+  .panel h1 { font-size:13px; color:#fff; margin:0 0 10px; letter-spacing:.5px; }
+  .row { display:flex; flex-direction:column; margin-bottom:9px; }
+  .row label { display:flex; justify-content:space-between; margin-bottom:3px; }
+  .row span { color:#00d2ff; font-family:monospace; }
+  input[type=range] { width:100%; accent-color:#00d2ff; }
+  .hint { color:#607484; margin-top:10px; border-top:1px solid rgba(255,255,255,.08); padding-top:8px; }
+  code { color:#c8d8e2; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+ 
+<div class="panel">
+  <h1>Ring Geometry</h1>
+  <div class="row"><label>Inner radius <span id="v-innerRadius"></span></label><input id="innerRadius" type="range" min="20" max="400" value="140"></div>
+  <div class="row"><label>Thickness <span id="v-thickness"></span></label><input id="thickness" type="range" min="20" max="400" value="150"></div>
+  <div class="row"><label>Rows <span id="v-numRows"></span></label><input id="numRows" type="range" min="5" max="100" value="35"></div>
+  <div class="row"><label>Particles / row <span id="v-numParticles"></span></label><input id="numParticles" type="range" min="10" max="240" value="90"></div>
+  <div class="row"><label>Particle size <span id="v-particleSize"></span></label><input id="particleSize" type="range" min="0.5" max="6" step="0.1" value="2"></div>
+ 
+  <h1 style="margin-top:14px">Wave / "Breathing"</h1>
+  <div class="row"><label>Amplitude <span id="v-amplitude"></span></label><input id="amplitude" type="range" min="0" max="60" value="14"></div>
+  <div class="row"><label>Wave 1 freq <span id="v-w1Freq"></span></label><input id="w1Freq" type="range" min="1" max="12" value="4"></div>
+  <div class="row"><label>Wave 2 freq <span id="v-w2Freq"></span></label><input id="w2Freq" type="range" min="1" max="12" value="6"></div>
+  <div class="row"><label>Row twist <span id="v-rowTwist"></span></label><input id="rowTwist" type="range" min="0" max="1" step="0.01" value="0.5"></div>
+  <div class="row"><label>Speed <span id="v-speed"></span></label><input id="speed" type="range" min="0" max="3" step="0.05" value="1"></div>
+ 
+  <h1 style="margin-top:14px">Fade / Alpha</h1>
+  <div class="row"><label>Min alpha <span id="v-minAlpha"></span></label><input id="minAlpha" type="range" min="0" max="1" step="0.01" value="0.05"></div>
+  <div class="row"><label>Max alpha <span id="v-maxAlpha"></span></label><input id="maxAlpha" type="range" min="0" max="1" step="0.01" value="1"></div>
+ 
+  <h1 style="margin-top:14px">Cursor</h1>
+  <div class="row"><label>Follow ease (s) <span id="v-ease"></span></label><input id="ease" type="range" min="0.1" max="3" step="0.1" value="1"></div>
+  <div class="row"><label>Disturbance gain <span id="v-distGain"></span></label><input id="distGain" type="range" min="0" max="0.3" step="0.005" value="0.05"></div>
+  <div class="row"><label>Disturbance decay <span id="v-distDecay"></span></label><input id="distDecay" type="range" min="0.001" max="0.3" step="0.001" value="0.05"></div>
+  <div class="row"><label>Disturbance cap <span id="v-distCap"></span></label><input id="distCap" type="range" min="0" max="80" value="40"></div>
+ 
+  <div class="hint">
+    Drag until it matches your two screenshots (max extent / min extent) —
+    those bound <code>innerRadius</code> + <code>thickness</code> + <code>amplitude</code>.
+    Move mouse to test cursor-follow (position, ~1s ease) vs. disturbance
+    (amplitude spike on fast movement, decays in a few hundred ms) — they're
+    two independent signals, that's why it reads as "react, then follow"
+    instead of "just follow." This is a straight port of
+    bramus/css-houdini-ringparticles' <code>paint()</code> loop, run on
+    canvas + rAF instead of the CSS Paint API (broader browser support, same math).
+  </div>
+</div>
+ 
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+function resize(){ canvas.width = innerWidth; canvas.height = innerHeight; }
+resize(); addEventListener('resize', resize);
+ 
+// ---- controls ----
+const params = {
+  innerRadius: 140, thickness: 150, numRows: 35, numParticles: 90, particleSize: 2,
+  amplitude: 14, w1Freq: 4, w2Freq: 6, rowTwist: 0.5, speed: 1,
+  minAlpha: 0.05, maxAlpha: 1, ease: 1,
+  distGain: 0.05, distDecay: 0.05, distCap: 40,
+};
+Object.keys(params).forEach(key => {
+  const el = document.getElementById(key);
+  const disp = document.getElementById('v-' + key);
+  const update = () => { params[key] = parseFloat(el.value); disp.textContent = el.value; };
+  el.addEventListener('input', update);
+  update();
+});
+ 
+// ---- seeded PRNG (mulberry32, same as the worklet) ----
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+const seed = 42;
+const rand = mulberry32(seed);
+function hash(n){ const x = Math.sin(n) * 43758.5453123; return x - Math.floor(x); }
+ 
+// direction + twist derived once from seed, like the worklet does
+const w1Dir = hash(seed + 10) > 0.5 ? 1 : -1;
+const w2Dir = -w1Dir;
+ 
+// ---- bezier edge-fade easing (ease-in, matches worklet default) ----
+const [bx1, by1, bx2, by2] = [0.42, 0, 1, 1];
+function bezierY(t, p0,p1,p2,p3){ const u=1-t; return u*u*u*p0 + 3*u*u*t*p1 + 3*u*t*t*p2 + t*t*t*p3; }
+function solveBezierX(targetX, x1, x2){
+  let t = targetX;
+  for (let i=0;i<8;i++){
+    const cur = bezierY(t,0,x1,x2,1);
+    const slope = (bezierY(t+0.001,0,x1,x2,1) - cur) / 0.001;
+    if (slope === 0) break;
+    t -= (cur - targetX) / slope;
+  }
+  return Math.max(0, Math.min(1, t));
+}
+ 
+// ---- cursor-follow center (single point, eased toward mouse — not per-particle) ----
+let targetCx = innerWidth/2, targetCy = innerHeight/2;
+let cx = targetCx, cy = targetCy;
+ 
+// ---- cursor DISTURBANCE (separate signal: speed-driven, decays fast — this is the "influence" part) ----
+let prevMouseX = targetCx, prevMouseY = targetCy;
+let disturbance = 0;
+let hasMouse = false;
+ 
+addEventListener('mousemove', e => {
+  if (hasMouse){
+    const dx = e.clientX - prevMouseX;
+    const dy = e.clientY - prevMouseY;
+    const speed = Math.hypot(dx, dy);
+    disturbance = Math.min(disturbance + speed * params.distGain, params.distCap);
+  }
+  hasMouse = true;
+  prevMouseX = e.clientX; prevMouseY = e.clientY;
+  targetCx = e.clientX; targetCy = e.clientY;
+});
+ 
+let last = performance.now();
+let tick = 0;
+ 
+function frame(now){
+  const dt = Math.min((now - last)/1000, 0.05);
+  last = now;
+ 
+  // ease center toward cursor (approximates the 1s CSS transition) — the FOLLOW signal
+  const followRate = 1 - Math.pow(0.01, dt / Math.max(params.ease, 0.05));
+  cx += (targetCx - cx) * followRate;
+  cy += (targetCy - cy) * followRate;
+ 
+  // decay disturbance toward zero — the INFLUENCE signal, independent time constant from the follow above
+  disturbance *= Math.pow(Math.max(params.distDecay, 0.001), dt);
+  const liveAmplitude = params.amplitude + disturbance;
+ 
+  // continuous phase, equivalent to the looping --animation-tick 0->1 / 6s
+  tick += dt * (Math.PI*2/6) * params.speed;
+  const t = tick;
+ 
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = '#00d2ff';
+ 
+  const { innerRadius, thickness, numRows, numParticles, particleSize,
+          w1Freq, w2Freq, rowTwist, minAlpha, maxAlpha } = params;
+  const outerRadius = innerRadius + thickness;
+  const halfThick = thickness / 2;
+ 
+  for (let r = 0; r < numRows; r++){
+    const rowProgress = numRows > 1 ? r / (numRows - 1) : 0;
+    const baseRadius = innerRadius + rowProgress * thickness;
+ 
+    for (let i = 0; i < numParticles; i++){
+      const angle = (i / numParticles) * Math.PI * 2;
+ 
+      const w1 = Math.sin(angle * w1Freq + t * w1Dir);
+      const w2 = Math.sin(angle * w2Freq + t * w2Dir);
+      const rowOffset = Math.sin(r * rowTwist + t);
+      const waveHeight = w1 + w2 + rowOffset;
+ 
+      let normalized = Math.pow(Math.max(0, (waveHeight + 3) / 6), 1.5);
+      let alpha = minAlpha + normalized * (maxAlpha - minAlpha);
+ 
+      const distortion = waveHeight * liveAmplitude;
+      const finalRadius = baseRadius + distortion;
+      const x = cx + Math.cos(angle) * finalRadius;
+      const y = cy + Math.sin(angle) * finalRadius;
+ 
+      const distFromInner = finalRadius - innerRadius;
+      const distFromOuter = outerRadius - finalRadius;
+      let visibility = Math.min(distFromInner, distFromOuter) / halfThick;
+      visibility = Math.max(0, Math.min(1, visibility));
+ 
+      const easeT = solveBezierX(visibility, bx1, bx2);
+      const easedVisibility = bezierY(easeT, 0, by1, by2, 1);
+      alpha = Math.max(0, Math.min(1, alpha * easedVisibility));
+ 
+      if (alpha > 0.01){
+        ctx.globalAlpha = alpha;
+        ctx.beginPath();
+        ctx.arc(x, y, particleSize, 0, Math.PI*2);
+        ctx.fill();
+      }
+    }
+  }
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>
