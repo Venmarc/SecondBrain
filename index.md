@@ -19,7 +19,7 @@
 
 ### 🚀 [[01-Projects/skill-router/skill-router|skill-router]] — TOP priority; architecture decided, implementation unverified
 Agent-agnostic skill-routing system intended to install once per machine. The proposed MVP uses a shared catalog/classifier behind thin Antigravity and Claude Code adapters, but the current source snapshot remains Gemini/Antigravity-specific and unfinished.
-**Code:** `~/Documents/skill-router` · **Source snapshot:** `cc53641` · **Open verification:** shared-core rewrite, Claude Code coexistence, latency
+**Code:** two clones, same project — see `MACHINES.md` in the skill-router repo (github.com/Venmarc/skill-router) for current machine → path mapping. Do not hardcode a single path here. · **Open verification:** shared-core rewrite, Claude Code coexistence, latency
 
 ### 🌱 [[01-Projects/Momentum/Momentum|Momentum]] — Phase 0 ✓ + sidebar/auth refinement done (medium priority)
 Personal daily habit + fitness OS. One goal: use it daily; show wins/fails.  
