@@ -6,6 +6,46 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-08-04 — Ledger landing-page audit (OpenCode)
+
+Added the raw, unchanged audit of the Ledger landing page, including browser evidence, prioritized findings, and remediation order.
+
+#### Added
+- [[raw/2026-08-04-ledger-landing-page-audit]] — immutable audit source.
+
+### 2026-08-04 — AgentRouter Claude routing and model-catalog correction (OpenCode)
+
+Diagnosed AgentRouter's empty Claude completions in OpenCode as a client-specific request-path mismatch, then corrected an initial false conclusion about the provider catalog by proving the dashboard's `claude-opus-5` alias works through the supported OpenCode route.
+
+#### Added
+- [[06-Agent-Sessions/2026-08-04-opencode-agentrouter-claude-routes]] — full journey log covering the redacted path probe, `/v1` fix, documentation drift, failed discovery attempts, Opus 5 verification, configuration changes, and unresolved upstream-identity caveat.
+- [[ANTI_PATTERNS]] §OpenCode / Custom AI Providers — confirmed lessons on validating final Anthropic request paths and not mistaking custom-provider `opencode models` output for live backend discovery.
+
+#### Changed
+- [[index]] — latest Agent Sessions pointer now links to the AgentRouter/OpenCode investigation.
+- External global OpenCode config — AgentRouter Claude now uses the `/v1` base URL and lists both `claude-opus-4-8` and verified `claude-opus-5`.
+
+### 2026-08-03 — Better Me, Better Vault operating system (OpenCode)
+
+Added the first behavior-driven vault layer: a decision-support loop and a development-publishing loop measured by decisions, actions, and shipped X/LinkedIn posts rather than note volume or graph maintenance.
+
+#### Added
+- [[03-Resources/Vault-Ops/Better-Me-Better-Vault]] — operational playbook for weekly decisions, selective personal-source intake, publishing deadlines, promotion/retirement, and organized-avoidance detection.
+- [[Templates/Decision Record Template]] — compact rationale, evidence, action, and outcome-review record.
+- [[Templates/Publishing Record Template]] — compact source, deadline, one-revision, publication, and learning record.
+- [[01-Projects/skill-router/skill-router]] — restored the missing project hub from verifiable repository state after cloning `https://github.com/Venmarc/skill-router`; records architecture as decided but implementation as unverified.
+- [[05-Daily/weekly/2026-08-09]] — prepared the first live review and three-input trial without inventing decisions, sources, or publication results.
+
+#### Changed
+- [[AGENTS]] — added the Better Me, Better Vault workflow and the rule that deliberately pushed vault material is available for agent processing.
+- [[BRAIN]] and [[index]] — aligned current focus with skill-router as top priority while distinguishing a decided architecture from an unfinished Gemini/Antigravity-specific implementation.
+- [[02-Areas/Content-Creation/Content-Creation]] — expanded from sports clipping alone to X-first/LinkedIn-second personal and technical development publishing; existing clipping history remains.
+
+#### Truth correction
+- The pulled August 2 commit referenced `01-Projects/skill-router/skill-router.md` and `06-Agent-Sessions/2026-08-02-claude-skill-router-mvp-architecture.md`, but neither file was present in that commit. This pass restored only the project hub from the cloned source repository and left the missing historical session artifact absent rather than fabricating it.
+- Historical August 2 changelog entries remain unchanged as audit history; current status now uses `proposed`, `decided`, `implemented`, and `verified` as distinct evidence states.
+- The weekly trial and posting targets are not claimed complete. They require real inputs, decisions, and published URLs.
+
 ### 2026-08-03 — SecondBrain first-impressions critique (OpenCode)
 
 #### Added

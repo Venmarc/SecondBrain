@@ -1,6 +1,6 @@
 # Victor's Second Brain (Master Hub)
 
-> **One-line Summary**: Central index of Victor's knowledge OS — **skill-router is now TOP priority** (reframed late last week; agent-agnostic architecture resolved 2026-08-02 — one shared brain, two thin adapters for Antigravity + Claude Code), Ledger/Momentum demoted to medium/side-project, Tempire later, skills and agent ops without multi-agent orchestration.
+> **One-line Summary**: Central index of Victor's knowledge OS — **skill-router is TOP priority** with agent-agnostic architecture proposed/decided but implementation unverified; Ledger/Momentum are medium-priority, Tempire is later, and August adds decision support plus development publishing.
 
 ---
 
@@ -8,6 +8,7 @@
 - 🧠 **[[BRAIN|BRAIN.md]]** — Vault philosophy and style
 - ⚙️ **[[AGENTS|AGENTS.md]]** — Agent workflows (ingest, lint, interview, sessions)
 - 📝 **[[CHANGELOG|CHANGELOG.md]]** — Structural changes
+- 🧾 **[[raw/2026-08-04-ledger-landing-page-audit]]** — Raw Ledger landing-page audit
 - 🧰 **[[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|How Victor works with agents]]** — Supervisor model
 - 📋 **[[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault improvement backlog]]** — Deferred expansion work
 - 🩺 **[[LINT-REPORT|LINT-REPORT.md]]** — Latest vault lint (2026-07-31)
@@ -16,9 +17,9 @@
 
 ## ⚡ Active Projects (01-Projects)
 
-### 🚀 [[01-Projects/skill-router/skill-router|skill-router]] — TOP priority ✅ architecture resolved
-Agent-agnostic skill-routing system — install once per machine, all agent CLIs use it. Architecture reconciled 2026-08-02: shared catalog+classifier behind thin per-harness adapters (Antigravity + Claude Code for MVP); dedup rule and MVP diagram locked. Still open: Claude Code hook-coexistence spike (unrun) and pricing model.  
-**Code:** `~/Projects/skill-router` · no git remote yet · no README/PRD yet (below documentation bar for a top-priority project)
+### 🚀 [[01-Projects/skill-router/skill-router|skill-router]] — TOP priority; architecture decided, implementation unverified
+Agent-agnostic skill-routing system intended to install once per machine. The proposed MVP uses a shared catalog/classifier behind thin Antigravity and Claude Code adapters, but the current source snapshot remains Gemini/Antigravity-specific and unfinished.
+**Code:** `~/Documents/skill-router` · **Source snapshot:** `cc53641` · **Open verification:** shared-core rewrite, Claude Code coexistence, latency
 
 ### 🌱 [[01-Projects/Momentum/Momentum|Momentum]] — Phase 0 ✓ + sidebar/auth refinement done (medium priority)
 Personal daily habit + fitness OS. One goal: use it daily; show wins/fails.  
@@ -40,7 +41,7 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 ## 🗂️ Ongoing Areas (02-Areas)
 - 👤 **[[02-Areas/Personal-Growth/RedMane|RedMane (Victor)]]** — Profile and working style
 - 🤖 **[[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|Agent Ops]]** — How agents are used now
-- 📹 **[[02-Areas/Content-Creation/Content-Creation|Content Creation]]**
+- 📣 **[[02-Areas/Content-Creation/Content-Creation|Content Creation]]** — X/LinkedIn development publishing; sports clipping retained as an earlier lane
 
 ---
 
@@ -49,6 +50,8 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 - ⚙️ Skills under `03-Resources/Skills/` (nav shell, dashboard, anti-slop watchlist, Frontend Awesomeness, …)
 - 🧰 **[[03-Resources/Vault-Ops/Session-Lesson-Extraction-Idea|Session lesson extraction (draft)]]**
 - 🧰 **[[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault improvement backlog]]**
+- 🧭 **[[03-Resources/Vault-Ops/Better-Me-Better-Vault|Better Me, Better Vault]]** — Decision support + development publishing
+- 📝 **[[Templates/Decision Record Template|Decision record]]** · **[[Templates/Publishing Record Template|Publishing record]]**
 - 🗺️ **[[03-Resources/Vault-LLM-Wiki-Patterns|Vault LLM Wiki Patterns]]**
 - 🛠️ **[[03-Resources/Tools/Vault-Librarian-Interviewer|Vault Librarian]]** · [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] · [[03-Resources/Tools/Effects_Playbook|Effects Playbook]] · [[03-Resources/Tools/Effects_Build_Playbook|Effects Build Playbook]] · [[03-Resources/Tools/AgentMemory-Dual-Store-Tab-Write-Paths|AgentMemory dual-store + tab write paths]]
 
@@ -56,11 +59,12 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 
 ## 🤖 Agent Sessions (06-Agent-Sessions)
 New sessions: `YYYY-MM-DD-<agent>-<slug>.md` via [[Templates/Agent-Session-Summary|template]]. Processed logs index: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].  
-Latest: [[06-Agent-Sessions/2026-08-03-opencode-secondbrain-first-impressions|SecondBrain first impressions]] — diagnosed the vault as strong engineering memory but weak personal synthesis; August playbook deferred to a fresh session. Historical processed logs: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].
+Latest: [[06-Agent-Sessions/2026-08-04-opencode-agentrouter-claude-routes|AgentRouter Claude routes]] — fixed OpenCode's Anthropic `/v1/messages` path, corrected a false two-model catalog conclusion, and verified/added `claude-opus-5`. Historical processed logs: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].
 
 ---
 
 ## 🩺 Vault Health
+- **Weekly review:** [[05-Daily/weekly/2026-08-09|2026-08-09 first live trial]] — prepared, not yet run
 - **Last lint:** 2026-07-31 — [[LINT-REPORT|LINT-REPORT.md]]  (post 26-file orphan extraction, post Ledger P1-P3A/Momentum closure)
 - **Prior pass:** [[03-Resources/Vault-Ops/Vault-Health-2026-07-09|Vault health 2026-07-09]] (Phase B)
 - **Backlog:** [[03-Resources/Vault-Ops/Vault-Improvement-Backlog|full skills expansion deferred]]  
