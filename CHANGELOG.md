@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-08-13 — Claude Pro OAuth → Hermes bridge working (Hermes)
+
+Wired Victor's Claude Pro OAuth login into Hermes via a local Anthropic-compatible bridge (`~/claude-proxy/bridge.py`, provider `claude-bridge` in `~/.hermes/config.yaml`). Three confirmed root causes killed: a silent 240s CLI hang (sync generator typed as async), "400 tool use concurrency" on history replay (SDK-type MCP servers), and "400 extra usage" (Anthropic classifies system prompts naming non-Claude tool IDs like `skill_manage` as third-party). End-to-end verified: `hermes --provider claude-bridge -m claude-sonnet-5 -z "Say exactly: BRIDGE-OK"` → `BRIDGE-OK`.
+
+#### Added
+- [[06-Agent-Sessions/2026-08-13-hermes-claude-bridge-oauth]] — full session log: repro matrix, system-prompt bisection trail, fixes, verification.
+- [[ANTI_PATTERNS]] §Claude Code / Anthropic (claude-agent-sdk, OAuth bridge) — 3 confirmed rows (sync-generator hang, SDK-MCP replay 400, system-prompt tool-name classifier 400).
+
+### 2026-08-04 — Supply-chain antipatterns added to AI-UI-Antipatterns-Watchlist
+
+Added a "Supply-chain / dependency antipatterns" section to the watchlist, covering the npm `keyv`/`cacheable` namespace compromise (Socket.dev, 2026-08-04): `npm ci` vs `npm install` discipline, lockfile-as-source-of-truth, freeze-updates-after-disclosure, transitive-dependency exposure checks, and cloned-repo `.claude`/`.vscode` hook inspection.
+
+#### Changed
+- [[03-Resources/Skills/AI-UI-Antipatterns-Watchlist]] — added supply-chain section, updated one-line summary and tags to reflect broadened scope beyond UI.
+
 ### 2026-08-04 — Ledger landing-page audit (OpenCode)
 
 Added the raw, unchanged audit of the Ledger landing page, including browser evidence, prioritized findings, and remediation order.
