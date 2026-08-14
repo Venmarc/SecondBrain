@@ -59,7 +59,7 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 
 ## 🤖 Agent Sessions (06-Agent-Sessions)
 New sessions: `YYYY-MM-DD-<agent>-<slug>.md` via [[Templates/Agent-Session-Summary|template]]. Processed logs index: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].  
-Latest: [[06-Agent-Sessions/2026-08-04-opencode-agentrouter-claude-routes|AgentRouter Claude routes]] — fixed OpenCode's Anthropic `/v1/messages` path, corrected a false two-model catalog conclusion, and verified/added `claude-opus-5`. Historical processed logs: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].
+Latest: [[06-Agent-Sessions/2026-08-14-hermes-claude-bridge-webui-anthropic-lane|Claude bridge: WebUI Anthropic lane]] — made the bridge reboot-proof (systemd user unit) and fixed the WebUI "Anthropic" models 400 by routing them through the bridge via `model.base_url` + `/anthropic` route. Historical processed logs: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].
 
 ---
 

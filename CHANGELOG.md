@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-08-14 — Claude bridge: systemd durability + WebUI "Anthropic" lane fixed (Hermes)
+
+Made the Claude↔Hermes bridge survive reboots and crashes via a systemd user unit (`claude-bridge.service`, enabled, `Restart=always`). Then killed a fourth root cause: the WebUI model switcher's built-in "Anthropic" provider sent `CLAUDE_CODE_OAUTH_TOKEN` straight to api.anthropic.com → "400 extra usage" — the request never reached the bridge. Fixed by routing the whole built-in lane through the bridge: `model.base_url = http://127.0.0.1:3456/anthropic` plus a new `/anthropic/v1/messages` alias route in `bridge.py` (the runtime only honors base-URL overrides that look like an Anthropic-compatible proxy — `/anthropic` suffix required). Verified: `provider anthropic` with claude-sonnet-5 AND claude-sonnet-4-6 both → `BRIDGE-OK`; Victor confirmed working in the WebUI.
+
+#### Added
+- [[06-Agent-Sessions/2026-08-14-hermes-claude-bridge-webui-anthropic-lane]] — full session log: root-cause table, two failed attempts (plugin override, `ANTHROPIC_BASE_URL`) so they're not repeated, fix, verification.
+- [[ANTI_PATTERNS]] §Claude Code / Anthropic — 4th confirmed row: built-in anthropic provider + OAuth → 400; redirect via `model.base_url` + `/anthropic` route.
+
+#### Changed
+- `~/claude-proxy/HANDOFF.md` — systemd management commands; `/anthropic/v1/messages` alias; `model.base_url` requirement.
+- Skill `claude-agent-sdk-bridge` — "WebUI Anthropic lane — root cause 4 + the fix" section.
+
 ### 2026-08-13 — Claude Pro OAuth → Hermes bridge working (Hermes)
 
 Wired Victor's Claude Pro OAuth login into Hermes via a local Anthropic-compatible bridge (`~/claude-proxy/bridge.py`, provider `claude-bridge` in `~/.hermes/config.yaml`). Three confirmed root causes killed: a silent 240s CLI hang (sync generator typed as async), "400 tool use concurrency" on history replay (SDK-type MCP servers), and "400 extra usage" (Anthropic classifies system prompts naming non-Claude tool IDs like `skill_manage` as third-party). End-to-end verified: `hermes --provider claude-bridge -m claude-sonnet-5 -z "Say exactly: BRIDGE-OK"` → `BRIDGE-OK`.
