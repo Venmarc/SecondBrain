@@ -68,3 +68,52 @@
 ## Follow-ups
 - Restart `hermes-webui.service` at leisure so the provider-plugin override loads (cosmetic; the config fix already works without it).
 - Models outside the Pro plan (Opus-tier) will fail with a proper plan error from the CLI — expected, not the 400.
+
+---
+
+# Part 2 (same day): Attachments don't reach Claude — root causes 5 & 6
+
+**Date:** 2026-08-14 (afternoon)
+**Trigger:** Victor: "Bug found. Attachments don't work. Claude responds fine but can't see attachments, they probably don't go through. Claude side waiting for it or did u block it?" (phone session, screenshot attached).
+
+## Goal
+Make pasted attachments (files, images, voice notes, videos) actually visible to Claude through the bridge.
+
+## Diagnosis (what was actually happening)
+- The failing phone session ran `claude-sonnet-5` → the request DID flow through the bridge (8 POSTs in the journal; `read_file` tool calls returned full 7,470-char results). The model replied "just paste the text directly" — as if it never saw the content.
+- Two distinct bugs, two fixes. DO NOT re-derive either.
+
+## Root Cause Log (continued)
+| Symptom | Root Cause | Fix Applied | Confidence |
+|---|---|---|---|
+| Model calls `read_file`, Hermes returns the file content, but the model acts as if it saw nothing ("just paste the text directly") | **RC5: tool results dropped on history replay.** The Claude Code CLI treats EVERY stream-json `tool_use` block as a LIVE call — it re-fires the PreToolUse defer hook with a FRESH id and re-executes; injected `tool_result` blocks (foreign id) are orphaned, so the content never reaches the model. Verified empirically across variants A–F (parent_tool_use_id, top-level `tool_use_result`, flattening; `message_parser.py` only accepts text/tool_use/tool_result blocks) | In `_normalize_content()`: DROP replayed `tool_use` blocks; FLATTEN replayed `tool_result` blocks into user-role text labeled `[Tool result: <name>]` (id→name registry). Plus `_system_to_prompt_with_framing()` appends a `[Bridge note]` telling the model these blocks are authoritative host tool output — WITHOUT it the model treats them as injected/untrusted text and refuses (3/3 fail → 3/3 pass) | Confirmed (repro + real-shape tests pass repeatedly) |
+| Pasted images in the WebUI/TUI never reach Claude | **RC6: image content blocks cannot pass through the bridge — ever.** The Claude Agent SDK's `message_parser` silently drops any block that isn't text/tool_use/tool_result. Tested passthrough in bridge.py → still IMAGE-NOT-SEEN (the block dies in the SDK before the CLI sees it). Native vision through the bridge is architecturally impossible | `hermes config set agent.image_input_mode text` → Hermes routes pasted images through `vision_analyze` (aux model) and sends TEXT descriptions (`[The user attached an image. Here's what it contains: ...]`) — same mechanism the Telegram/WhatsApp gateway already uses. Verified `decide_image_input_mode('anthropic','claude-sonnet-5',cfg) → 'text'`; text-description flow → model describes the image correctly | Confirmed (IMAGE-NOT-SEEN with passthrough; text mode works) |
+
+## Attachment type map (what works now)
+| Attachment | Path through Hermes | Bridge handling | Status |
+|---|---|---|---|
+| Files/docs/PDFs/code | Model reads via `read_file`/tools | tool_result → flattened text (RC5 fix) | ✅ works |
+| Telegram photos | Gateway auto-vision-enriches to TEXT before agent loop | plain text | ✅ works (was already fine) |
+| WebUI/TUI pasted images | `image_input_mode: text` → vision_analyze description | plain text | ✅ works (RC6 fix) |
+| Voice notes | STT-transcribed to text by gateway | plain text | ✅ works (transcribed; raw audio never reaches Claude — same as any provider) |
+| Videos | Cached to disk, model extracts frames via tools | tool_result → flattened text (RC5 fix) | ✅ works |
+
+## Failed Attempts (do NOT repeat)
+- **Passing image blocks through bridge.py** (`elif bt == "image": out.append(...)`) — looks like it should work, but the SDK parser drops non-text/tool_use/tool_result blocks BEFORE the CLI. Reverted; documented in code comment.
+- **Trusting the flattened text without the `[Bridge note]` framing** — the model treats `[Tool result: ...]` user text as injection and refuses (deterministic for real shapes, 3/3 fail). The framing paragraph is REQUIRED.
+
+## Verification
+- `/tmp/repro_tool_result.py` → model quotes the file content exactly (PASS, repeated 3×).
+- Real Hermes shapes (`[User attached file: ...]`, `[The user sent a document: ...]`) → PASS 3/3 each.
+- Text-description image flow → model correctly describes the image.
+- `test_bridge.py` (stream + non-stream plumbing) → PASS; `hermes --provider anthropic -m claude-sonnet-5 -z "Say exactly: BRIDGE-OK..."` → BRIDGE-OK.
+
+## Persisted
+- Skill `claude-agent-sdk-bridge`: root causes 5+6 sections added.
+- `HANDOFF.md`: history-replay flattening + framing + image_input_mode documented.
+- Memory: bridge entry updated with RC5/RC6 summary (skill remains the canonical reference).
+- This log (Part 2) + ANTI_PATTERNS rows + CHANGELOG.
+
+## Follow-ups
+- Watch the first real WebUI/Telegram attachment round-trip after the fixes; confirm no regression.
+- If a vision description is too lossy (e.g. OCR-heavy screenshots), the model can still call `vision_analyze` itself on the cached path — that tool_result now arrives correctly (RC5 fix).

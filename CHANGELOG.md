@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-08-14 (pm) — Claude bridge: attachments fixed — tool-result replay + image routing (Hermes)
+
+Second fix on the same day. Victor reported "Claude responds fine but can't see attachments" — the model called `read_file`, Hermes returned the content, but the model acted as if it saw nothing. Root cause 5: the Claude Code CLI treats every stream-json `tool_use` block as a LIVE call (re-fires the PreToolUse defer hook with a fresh id, re-executes), so injected `tool_result` blocks are orphaned and the content never reaches the model. Fix: drop replayed `tool_use` blocks and flatten replayed `tool_result` blocks into user-role text labeled `[Tool result: <name>]`, plus a `[Bridge note]` framing paragraph in the system prompt so the model trusts them as authoritative tool output (without it, the model refused as injected text — verified 3/3 fail → 3/3 pass). Root cause 6: image content blocks CANNOT pass through the Claude Agent SDK at all (message_parser silently drops non-text/tool_use/tool_result blocks) — native vision through the bridge is impossible. Fix: `agent.image_input_mode: text` routes pasted images through `vision_analyze` as text descriptions. Verified: repro + real Hermes shapes pass repeatedly, text-image flow works, plumbing tests pass.
+
+#### Added
+- [[06-Agent-Sessions/2026-08-14-hermes-claude-bridge-webui-anthropic-lane]] — Part 2: root causes 5 & 6, attachment type map (files/images/voice/videos), failed attempts (image passthrough, unframed flattening), verification.
+- [[ANTI_PATTERNS]] §Claude Code / Anthropic — 5th and 6th confirmed rows: (a) replaying tool_use/tool_result blocks into the CLI orphans the result — flatten instead; (b) image blocks can't cross the SDK — use `image_input_mode: text`.
+
+#### Changed
+- `~/claude-proxy/bridge.py` — `_normalize_content` drops tool_use + flattens tool_result; `_system_to_prompt_with_framing` appends the `[Bridge note]`.
+- `~/claude-proxy/HANDOFF.md` — history-replay flattening + framing + `image_input_mode` documented.
+- Skill `claude-agent-sdk-bridge` — "Root causes 5 + 6 — attachments through the bridge" section.
+- `~/.hermes/config.yaml` — `agent.image_input_mode: text` (via `hermes config set`).
+
 ### 2026-08-14 — Claude bridge: systemd durability + WebUI "Anthropic" lane fixed (Hermes)
 
 Made the Claude↔Hermes bridge survive reboots and crashes via a systemd user unit (`claude-bridge.service`, enabled, `Restart=always`). Then killed a fourth root cause: the WebUI model switcher's built-in "Anthropic" provider sent `CLAUDE_CODE_OAUTH_TOKEN` straight to api.anthropic.com → "400 extra usage" — the request never reached the bridge. Fixed by routing the whole built-in lane through the bridge: `model.base_url = http://127.0.0.1:3456/anthropic` plus a new `/anthropic/v1/messages` alias route in `bridge.py` (the runtime only honors base-URL overrides that look like an Anthropic-compatible proxy — `/anthropic` suffix required). Verified: `provider anthropic` with claude-sonnet-5 AND claude-sonnet-4-6 both → `BRIDGE-OK`; Victor confirmed working in the WebUI.
