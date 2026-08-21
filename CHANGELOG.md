@@ -17,6 +17,16 @@ Victor challenged the audit's false precision: Vercel's earlier 2-model result w
 - [[02-Areas/Agent-Ops/Provider-Model-Audit]] — corrected Vercel/NVIDIA claims and removed the implication that catalog access equals quality or billing safety.
 - [[index]] — linked the routing playbook from Agent Ops.
 
+### 2026-08-21 — Vision tool default backend → MiMo-V2.5 Free via OpenCode Zen (OpenCode)
+
+Made OpenCode Zen's free `mimo-v2.5-free` model the **first** backend of the vision-tool provider (images + videos), with Gemini and all other providers kept as fallbacks. No new API key: the tool now reuses the opencode key already stored in `~/.local/share/opencode/auth.json` (`opencode-go`). Discovered two non-obvious requirements: a Chrome-like `User-Agent` header (Cloudflare returns `403 error 1010` on urllib's default UA) and reasoning-field extraction (MiMo returns `content: null`, answer in `message.reasoning`). Zen free tier rate-limits hard (`429 FreeUsageLimitError`); the existing parallel-fallback + 24h backend-memory cooldown absorbs that.
+
+#### Added
+- [[03-Resources/Tools/OpenCode-Vision-Provider-Default]] — reusable recipe for making any opencode-served model the vision tool's default backend.
+
+#### Changed
+- [[index]] — Resources → Tools list now links the new recipe.
+
 ### 2026-08-18 — Founder playbooks ingested: YC + AI-era operator advice (Hermes)
 
 Victor asked for a persistent 02-Areas add-on from the four videos he studied (Diana Hu's AI-native company, Hormozi ×2, Codie Sanchez) plus the YC Pocket Guide. All sources re-fetched for accuracy (youtubesummary.com + third-party talk notes for Diana Hu; Pocket Guide re-transcribed from Victor's screenshot) — every point extracted, with **[solo]** application sections mapped to his 11-day opencode window.
@@ -89,6 +99,27 @@ Added a "Supply-chain / dependency antipatterns" section to the watchlist, cover
 
 #### Changed
 - [[03-Resources/Skills/AI-UI-Antipatterns-Watchlist]] — added supply-chain section, updated one-line summary and tags to reflect broadened scope beyond UI.
+
+### 2026-08-14 — AgentRouter "sensitive words" block diagnosed + `.env` parse fix (Hermes)
+
+Root-caused the Hermes desktop's recurring `HTTP 500: sensitive words detected` (7 failed attempts, gpt-5.6-sol via `custom:agentrouter`) to AgentRouter's upstream content filter, which rejects raw IP addresses, email addresses, and domain names in prompts — confirmed by live curl bisection against the real endpoint (`400 content-blocked` fires pre-auth). `~/Documents/AGENTS.md` was ruled out as the cause. Also fixed the `.env` line-489 colon bug (`AGENTROUTER_BASE_URL:` → `=`) that printed a python-dotenv parse warning on every `hermes` command. AgentRouter key 401 (dead vs flagged) left as an open question.
+
+#### Added
+- [[06-Agent-Sessions/2026-08-14-hermes-agentrouter-sensitive-words-block]] — full session log (trigger-token bisection table, root-cause log, `.env` fix, open key question).
+
+#### Changed
+- [[ANTI_PATTERNS]] — new row under `## OpenCode / Custom AI Providers`: never send raw IPs/emails/domains to AgentRouter-backed models; use aliases or a filter-free provider.
+- [[index]] — latest Agent Sessions pointer now links to this session.
+
+### 2026-08-12 — Ledger Recurring nav placement + top-bar refactor + Next 16.3 directive (OpenCode)
+
+Made `/recurring` reachable by fixing the desktop sidebar (missing nav item per APP_FLOW §3.1) and adding a mobile-only Settings row, with a coordinated mobile top-bar Settings icon button replacing the `UserButton.MenuItems` link. Also captured Victor's Next 16.3 + Turbopack migration as a standing directive (no more `next dev --webpack`) and updated Ledger's `AGENTS.md` §1.3/§1.5/§2 to match.
+
+#### Added
+- [[06-Agent-Sessions/2026-08-12-opencode-ledger-recurring-nav-placement]] — full session log (reframe, Q&A decisions, file-by-file, two backlog items deferred to phase-gate-out).
+
+#### Changed
+- [[index]] — latest Agent Sessions pointer now links to this Recurring-nav session.
 
 ### 2026-08-04 — Ledger landing-page audit (OpenCode)
 
