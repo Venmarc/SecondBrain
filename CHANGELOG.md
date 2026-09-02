@@ -6,6 +6,49 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-08-26 — Provider audit corrected into routing policy
+
+Victor challenged the audit's false precision: Vercel's earlier 2-model result was incomplete, many Vercel free-tagged modes consume the monthly $5 credit, NVIDIA's accessible set is much larger than its consistently useful set, and Nous LongCat's 1M context does not establish intelligence. The historical audit is now explicitly labeled as a canary/accessibility snapshot, and a new routing playbook separates listed, accessible, zero-cost, responsive, capable, and reliable states. It defaults bounded delegated work to a real-probed Nous Step 3.7 Flash Free lane while reserving scarce OpenCodeGo models for explicit overrides.
+
+#### Added
+- [[02-Areas/Agent-Ops/Provider-Routing-Playbook]] — operational routing table, dispatch algorithm, budgets, fallback rules, and open measurements.
+
+#### Changed
+- [[02-Areas/Agent-Ops/Provider-Model-Audit]] — corrected Vercel/NVIDIA claims and removed the implication that catalog access equals quality or billing safety.
+- [[index]] — linked the routing playbook from Agent Ops.
+
+### 2026-08-18 — Founder playbooks ingested: YC + AI-era operator advice (Hermes)
+
+Victor asked for a persistent 02-Areas add-on from the four videos he studied (Diana Hu's AI-native company, Hormozi ×2, Codie Sanchez) plus the YC Pocket Guide. All sources re-fetched for accuracy (youtubesummary.com + third-party talk notes for Diana Hu; Pocket Guide re-transcribed from Victor's screenshot) — every point extracted, with **[solo]** application sections mapped to his 11-day opencode window.
+
+#### Added
+- [[02-Areas/Founder-Playbooks/Founder-Playbooks]] — full extraction: Diana Hu (AI as operating system, closed loops, queryable company, software factories → specs+tests, 1,000x engineer / token-maxing, middle management → IC/DRI/AI-founder, startup edge); Hormozi (leverage stack that AI doesn't cancel, wrong-bottleneck trap, "has AI made me more money?", decisions as highest leverage; six-step first-$100K roadmap: cut costs → time blocks → research paid skill → deliberate practice → three spend buckets → no lifestyle creep; 1-1-1 rule, 444 split); Codie Sanchez (six C's with real attribution: newsletter 30% / YouTube 27%+11% / TikTok <12 tickets at 2M followers / LinkedIn ~2.4% / X ~1%; per-platform KPIs; product ladder $0→$5k+; ship at 85%); YC Pocket Guide 22/22; cross-cutting thesis + distilled 8-rule operating system for the 11-day window; decision hooks (fight/kill on photographer-gallery, avatar selection, channel choice).
+
+#### Changed
+- [[index]] — registered Founder Playbooks under Ongoing Areas (02-Areas).
+
+### 2026-08-15 — X algorithm ranking signals ingested + verified against source (Hermes)
+
+Victor pasted a Grok extraction of "how to go viral on X" derived from the newly open-sourced X ranking code. Rather than storing it as-is, the published source (`home-mixer/params/param.rs`, `home-mixer/scorers/ranking_scorer.rs`, README/filter tables) was pulled and checked line-by-line. Most weights matched, but three material claims were wrong and are corrected in the synthesis note: (1) author-diversity decay is `(1-floor)·decay^k + floor` → the 2nd post is discounted ~37%, not "halved", and `k` is an occurrence index within a single score-ordered candidate slate — **not** a time-based posting-cadence penalty, so the extraction's "rapid-fire posting hurts" mechanism does not exist in the code; (2) the +15 reply boost requires the candidate to be an original post (not a reply, not a retweet) from a mutual-follow author — it's a property of the post/viewer pair, not a reward for replying to people, and the parallel dwell boost defaults to 0.0 (inactive); (3) the 48-hour rule is a candidate-pipeline `AgeFilter` dropping posts older than 48h, not advice about posting cadence. Also captured the repo's own explicit warning that weights multiply *predicted probabilities*, not engagement counts (so "one report cancels N likes" is wrong), and that block/report brigading does not meaningfully suppress reach. Unsupported claims ("early traction matters", author-side new-author boosts — the new-user OON override is viewer-side) flagged rather than absorbed as fact.
+
+#### Added
+- [[raw/2026-08-15-grok-x-algorithm-viral-tactics]] — immutable raw Grok extraction, headed with an accuracy warning pointing to the verified synthesis.
+- [[03-Resources/SEO-Marketing/X-Algorithm-Ranking-Signals]] — verified synthesis: full default-weight table, the probability-vs-counts caveat, three corrections with source excerpts, unverified-claims section, and implications for Victor's publishing lane. First note in the previously empty `03-Resources/SEO-Marketing/`.
+
+#### Changed
+- [[index]] — registered the synthesis under Resources and the raw source under Quick Navigation.
+- [[02-Areas/Content-Creation/Content-Creation]] — added a "Distribution Reality (X)" section linking the verified signals.
+
+### 2026-08-15 — Full Hermes provider audit: global base_url root cause + working-model matrix (Hermes)
+
+Every default-lane model was failing (500s then connection errors) and the suspected cause was the Claude bridge "contaminating" other providers. Root cause found and fixed: a global `model.base_url: http://127.0.0.1:3456/anthropic` (set 08-14 for the WebUI Anthropic lane) redirected the default lane of EVERY provider to the bridge; DeepSeek's real API was never consulted. `hermes config unset model.base_url` → default deepseek-v4-flash lane verified OK. All providers then live-tested through the real Hermes lane: agentrouter.org fully working (gpt-5.6-sol, claude-opus-5, claude-opus-4-8 — exact names confirmed), deepseek direct 2/2, opencode-go 11 OK (kimi-k2.7 401 → use kimi-k2.7-code; grok-4.5 503), NVIDIA full 102-model sweep (29 OK incl. gpt-oss-120b, nemotron-3-super, laguna-xs-2.1, inkling; ~60 404 = not on the key), Nous Portal 5 free models (vendor-prefixed IDs; step-3.7-flash:free = 262k ctx), Copilot 13 OK on gh token (frontier models 400), Vercel AI Gateway 2 usable (qwen flashes), Anthropic lane dead (sub expired). Dead Gemini credential removed.
+
+#### Added
+- [[06-Agent-Sessions/2026-08-15-hermes-provider-audit]] — full audit log: root-cause table, per-provider working-model matrix, sweep methodology, decisions, follow-ups.
+- [[ANTI_PATTERNS]] §Hermes / Provider Config — 1st confirmed row: global `model.base_url` poisons the default lane of all providers; scope per-lane.
+- [[02-Areas/Agent-Ops/Provider-Model-Audit]] — X-ready audit doc: 868 catalog models → 65 working across 9 providers; exact IDs, context windows, latency, rate-limit behavior, Victor's model preferences.
+
+
 ### 2026-08-14 (pm) — Claude bridge: attachments fixed — tool-result replay + image routing (Hermes)
 
 Second fix on the same day. Victor reported "Claude responds fine but can't see attachments" — the model called `read_file`, Hermes returned the content, but the model acted as if it saw nothing. Root cause 5: the Claude Code CLI treats every stream-json `tool_use` block as a LIVE call (re-fires the PreToolUse defer hook with a fresh id, re-executes), so injected `tool_result` blocks are orphaned and the content never reaches the model. Fix: drop replayed `tool_use` blocks and flatten replayed `tool_result` blocks into user-role text labeled `[Tool result: <name>]`, plus a `[Bridge note]` framing paragraph in the system prompt so the model trusts them as authoritative tool output (without it, the model refused as injected text — verified 3/3 fail → 3/3 pass). Root cause 6: image content blocks CANNOT pass through the Claude Agent SDK at all (message_parser silently drops non-text/tool_use/tool_result blocks) — native vision through the bridge is impossible. Fix: `agent.image_input_mode: text` routes pasted images through `vision_analyze` as text descriptions. Verified: repro + real Hermes shapes pass repeatedly, text-image flow works, plumbing tests pass.
