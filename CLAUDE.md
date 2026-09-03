@@ -82,3 +82,17 @@ SecondBrain/
 Full details on all of the above — including the 9-Doc Standard for projects, defuddle/clipping
 tooling, and the lint-workflow method notes — live in `AGENTS.md`. Treat it as the source of truth;
 this file is only a pointer into it.
+
+## Agent skills
+
+### Issue tracker
+
+Issues and specs live as GitHub issues; use the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+The five canonical roles (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`) map 1:1 to GitHub labels. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: one `CONTEXT.md` + `docs/adr/` at the repo root. See `docs/agents/domain.md`.

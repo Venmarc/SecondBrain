@@ -9,6 +9,7 @@
 - ⚙️ **[[AGENTS|AGENTS.md]]** — Agent workflows (ingest, lint, interview, sessions)
 - 📝 **[[CHANGELOG|CHANGELOG.md]]** — Structural changes
 - 🧾 **[[raw/2026-08-04-ledger-landing-page-audit]]** — Raw Ledger landing-page audit
+- 🧾 **[[raw/2026-08-15-grok-x-algorithm-viral-tactics]]** — Raw Grok X-algorithm extraction (see verified synthesis before use)
 - 🧰 **[[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|How Victor works with agents]]** — Supervisor model
 - 📋 **[[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault improvement backlog]]** — Deferred expansion work
 - 🩺 **[[LINT-REPORT|LINT-REPORT.md]]** — Latest vault lint (2026-07-31)
@@ -40,8 +41,9 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 
 ## 🗂️ Ongoing Areas (02-Areas)
 - 👤 **[[02-Areas/Personal-Growth/RedMane|RedMane (Victor)]]** — Profile and working style
-- 🤖 **[[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|Agent Ops]]** — How agents are used now
+- 🤖 **[[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|Agent Ops]]** — How agents are used now · **[[02-Areas/Agent-Ops/Provider-Model-Audit|Provider-Model-Audit]]** — historical canary audit · **[[02-Areas/Agent-Ops/Provider-Routing-Playbook|Provider Routing Playbook]]** — current cost/latency/quality dispatch policy
 - 📣 **[[02-Areas/Content-Creation/Content-Creation|Content Creation]]** — X/LinkedIn development publishing; sports clipping retained as an earlier lane
+- 🧠 **[[02-Areas/Founder-Playbooks/Founder-Playbooks|Founder Playbooks]]** — Diana Hu AI-native + Hormozi leverage/first-$100K + Codie content business + YC Pocket Guide (extracted 2026-08-18)
 
 ---
 
@@ -53,13 +55,14 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 - 🧭 **[[03-Resources/Vault-Ops/Better-Me-Better-Vault|Better Me, Better Vault]]** — Decision support + development publishing
 - 📝 **[[Templates/Decision Record Template|Decision record]]** · **[[Templates/Publishing Record Template|Publishing record]]**
 - 🗺️ **[[03-Resources/Vault-LLM-Wiki-Patterns|Vault LLM Wiki Patterns]]**
+- 📣 **[[03-Resources/SEO-Marketing/X-Algorithm-Ranking-Signals|X Algorithm Ranking Signals]]** — what the open-sourced X For You ranking actually rewards; weights verified against source, 3 corrections to the original extraction
 - 🛠️ **[[03-Resources/Tools/Vault-Librarian-Interviewer|Vault Librarian]]** · [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] · [[03-Resources/Tools/Effects_Playbook|Effects Playbook]] · [[03-Resources/Tools/Effects_Build_Playbook|Effects Build Playbook]] · [[03-Resources/Tools/AgentMemory-Dual-Store-Tab-Write-Paths|AgentMemory dual-store + tab write paths]]
 
 ---
 
 ## 🤖 Agent Sessions (06-Agent-Sessions)
 New sessions: `YYYY-MM-DD-<agent>-<slug>.md` via [[Templates/Agent-Session-Summary|template]]. Processed logs index: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].  
-Latest: [[06-Agent-Sessions/2026-08-04-opencode-agentrouter-claude-routes|AgentRouter Claude routes]] — fixed OpenCode's Anthropic `/v1/messages` path, corrected a false two-model catalog conclusion, and verified/added `claude-opus-5`. Historical processed logs: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].
+Latest: [[06-Agent-Sessions/2026-08-15-hermes-provider-audit|Provider audit]] — full Hermes provider audit: the "everything failing" cascade traced to a global `model.base_url` override (not bridge contamination), unset and verified; every provider live-tested and the working-model matrix recorded (agentrouter OK, NVIDIA 29/102, Copilot 13, Nous 5 free, Vercel 2, Gemini removed). Historical processed logs: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].
 
 ---
 
