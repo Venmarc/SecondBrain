@@ -24,6 +24,7 @@ Hermes in SPEC: server service-role writes, Activity feed, Telegram/chat, not in
 ## 2. Could Jeremi serve the 31 Aug-1 Sep content system?
 
 Plan (Clarity ramble): curate notes from last week and this week into X and maybe LinkedIn; wire Hermes, maybe WebMCP.
+Vault loop already written: X first, LinkedIn second; 2 X + 1 LinkedIn per week; ship in 48h; one revision; kill with a reason. August success test (overdue): 8 X + 4 LinkedIn. Likes are not the test. First story already named: the vault remembered agents better than Victor.
 
 Verdict: **No as the full pipeline. Yes as the ledger after a human or Hermes-in-chat already drafted and posted.**
 
