@@ -95,6 +95,9 @@ Activity empty state: "Hermes hasn't touched anything yet." No Hermes connect UI
 
 Verdict holds: cannot curate Apple Notes into posts. Manual Idea → Posted ledger only.
 
+Repo extras (unsigned + gh, no clone): Clerk Development mode. `/api/entries` returns 401 when logged out; signed-in client appears to persist in localStorage and never GET that route. Swipe-to-archive is copy only. `RESEARCH_BLUEPRINT.md` treats Apple Notes as a scattered capture habit Jeremi should *replace*, not import. X, LinkedIn, Apple Notes, and WebMCP are never named in the UI. `fastball/jeremi` snapshot is docs/logos; app code tracks `main`.
+
+
 ## 7. Signed-in LinkedIn walk (Next Steps)
 
 https://www.linkedin.com/in/venmarc — Victor Mario, Umuahia, Abia State. Headline: Full Stack Developer @ Pixel Creative Agency | Web Development, Web Design, and Graphic Design. 192 connections, 213 followers. Open to work (Nigeria, on-site/hybrid/remote, visible to everyone). Unverified.
