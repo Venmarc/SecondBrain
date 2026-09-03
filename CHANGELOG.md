@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-03 — Overnight Jeremi / Mario X / LinkedIn review (Bossman)
+
+#### Added
+- [[06-Agent-Sessions/2026-09-03-bossman-overnight-jeremi-review]] — Jeremi is a posting almanac not an auto-poster; Mario X and LinkedIn skip-test; HALDEN as the public fix.
+
+
 ### 2026-08-26 — Provider audit corrected into routing policy
 
 Victor challenged the audit's false precision: Vercel's earlier 2-model result was incomplete, many Vercel free-tagged modes consume the monthly $5 credit, NVIDIA's accessible set is much larger than its consistently useful set, and Nous LongCat's 1M context does not establish intelligence. The historical audit is now explicitly labeled as a canary/accessibility snapshot, and a new routing playbook separates listed, accessible, zero-cost, responsive, capable, and reliable states. It defaults bounded delegated work to a real-probed Nous Step 3.7 Flash Free lane while reserving scarce OpenCodeGo models for explicit overrides.
