@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-03 — Overnight review, signed-in pass (Next Steps)
+
+#### Changed
+- [[06-Agent-Sessions/2026-09-03-bossman-overnight-jeremi-review]] — added signed-in Jeremi / LinkedIn / Mario X walks. LinkedIn is empty-and-live, not unloadable. Jeremi cannot ingest Notes or post.
+
 ### 2026-09-03 — Overnight Jeremi / Mario X / LinkedIn review (Bossman)
 
 #### Added

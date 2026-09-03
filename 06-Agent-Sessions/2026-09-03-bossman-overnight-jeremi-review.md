@@ -49,15 +49,14 @@ Recent Aug 2026 posts: AI-tool promo, Grok launch, round-table agents, agent-mem
 Original ramble listed Jeremi, X, and linux account as three things, and LinkedIn as a posting destination. Do not infer from that wording alone.
 Next Steps recorded 2026-09-03: Emmanuel confirmed linux account = LinkedIn.
 Published URL in his own portfolio Contact.tsx and GitHub README: https://www.linkedin.com/in/venmarc/
-A live fetch of that LinkedIn page from this computer returned HTTP 500. Do not claim the live page was read.
-Lookalikes emma-en and victor-mario-220a9171 are not his published URL. Not used.
+Signed-in Chrome walk of https://www.linkedin.com/in/venmarc/ (Next Steps, 2026-09-03 ~02:50 WAT): profile is live. Lookalikes emma-en and victor-mario-220a9171 are not his published URL. Not used.
 
 ## 5. Recruiter or client skip-test (public only)
 
 If hiring or buying from the public surface, skip triggers:
 - GitHub Venmarc: 1 follower, ~34 public repos mixing games (Number-G-G) with product repos. HALDEN and Jeremi are not the first impression.
 - Mario X: 7 followers, joke pin, AI-tool posts, near-zero engagement. Looks like a student feed, not a ship log.
-- LinkedIn venmarc: URL exists in his sites; this pass could not load the page (500). Empty or missing LinkedIn is a skip for recruiters.
+- LinkedIn /in/venmarc: live. No About, no Featured, no GitHub/HALDEN/LiveTrack. One post (~5 months old) burying https://venmarc.vercel.app. #OPENTOWORK on an otherwise empty profile. Skills have no React/TS/Node. Recruiter search for “full stack” will miss him.
 - jeremi-cm.vercel.app: Clerk Development mode login wall. Looks unfinished.
 - Portfolio (venmarcstudio.xyz / mario-dev-portfolio): AI-augmented generic framing. HALDEN live URL not listed there as of this review.
 - Several listed products still say in development (Momentum, Ledger).
@@ -80,3 +79,48 @@ What vault and projects could fix that, without inventing a new persona:
 - X API: both connected accounts forbidden without Pay-per-use (not used as a source of counts)
 
 Parked: HALDEN footer desktop polish until morning. Not started this pass.
+
+## 6. Signed-in Jeremi walk (Next Steps)
+
+Walked https://jeremi-cm.vercel.app as Victor Mario (Clerk session already live). Account is empty: 0 entries, 0 ideas, 0 posted, 0 Hermes entries.
+
+Screens that exist and work as empty shells: /dashboard, /board, /calendar (Sept 2026, backdating allowed), /journal, /activity, /settings, plus ⌘K Quick capture.
+
+Composer is only Quick capture: text, KIND Idea/Posted, day stepper, optional topic, Save. No platform picker, scheduling, or AI draft.
+
+404: /notes, /inbox, /compose, /composer, /connections, /integrations, /hermes, /mcp, /webmcp, /api/mcp, /apple-notes, /x, /linkedin.
+
+Settings, verbatim: "No social networks are connected. Jeremi tracks what you post manually; direct platform integrations are future work."
+Activity empty state: "Hermes hasn't touched anything yet." No Hermes connect UI. Themes and delete-everything are stubbed.
+
+Verdict holds: cannot curate Apple Notes into posts. Manual Idea → Posted ledger only.
+
+## 7. Signed-in LinkedIn walk (Next Steps)
+
+https://www.linkedin.com/in/venmarc — Victor Mario, Umuahia, Abia State. Headline: Full Stack Developer @ Pixel Creative Agency | Web Development, Web Design, and Graphic Design. 192 connections, 213 followers. Open to work (Nigeria, on-site/hybrid/remote, visible to everyone). Unverified.
+
+No About. No Featured. No projects/media.
+Experience: Full Stack Developer, Pixel Creative Firm (Freelance, Feb 2022–present) and Fashion Design Apprentice, Danny Stitches (Aug 2023–Aug 2024). Both have skill tags only, no bullets.
+Skills: Web Development, Web Design, Logo Design, Graphic Design, Teamwork, Rapid Learning, Problem Solving, Account Management, Research Skills, English. No frameworks.
+Activity: one post, ~5 months old, 4 reactions / 2 comments / 101 impressions, links venmarc.vercel.app. Headline says Agency; company entry says Firm.
+
+## 8. Signed-in Mario X walk (Next Steps)
+
+https://x.com/mario_d3v — session is this account. 97 posts, 46 following, 7 followers. No website field.
+Pinned Jul 16: GTA VI + Kimi K3 tokens joke (~1K views).
+Originals are thin (~11). Substance: Aug 11 four-part round-table thread (promised open-source repo never appeared on the timeline); Aug 4 vault/graph reflection; Jul 16 Vercel subdomain TIL; Mar 8 intro with venmarc.vercel.app; Aug 20 Google student-AI promo. Engagement on originals typically 3–40 views, 0 likes. Higher views (hundreds–1.3K) are replies under bigger accounts. No HALDEN posts.
+
+## 9. What would make a client/recruiter skip (combined)
+
+Skip:
+- LinkedIn empty (no About, no proof, no tech keywords, dead activity) while Open to Work is on.
+- X: 7 followers, joke pin, no link in bio, HALDEN not posted, round-table repo promised and not shipped on the timeline.
+- Jeremi live URL is a Clerk login wall.
+- GitHub mix of toys and products; HALDEN not pinned; portfolio (venmarcstudio.xyz / venmarc.vercel.app) does not yet lead with HALDEN.
+
+Fix from work that already exists:
+- Put https://halden-513.pages.dev on LinkedIn Featured, X bio, GitHub pin, and the studio site.
+- Pin GitHub Venmarc/halden.
+- Replace the X pin with the round-table thread or HALDEN, and drop the student-promo posts from the first screen.
+- One LinkedIn About of shipped URLs (HALDEN, LiveTrack, Ledger, Momentum, Tempire) plus actual stack.
+- Use Jeremi only as the private heatmap after posting, not as the public content system. Weekly 2 X + 1 LinkedIn already written in [[02-Areas/Content-Creation/Content-Creation]].
