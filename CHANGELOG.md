@@ -448,3 +448,29 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 - Initialized `CHANGELOG.md` at vault root to track structural modifications, metadata schemas, and index updates.
 - Staged, committed, and pushed the pre-overhaul vault state to remote repository.
 - Commenced the Vault Overhaul implementation to align the vault with the LLM-Wiki pattern.
+
+## 2026-08-14
+
+- docs: Claude bridge attachments fix — root causes 5 (tool-result replay flattening) + 6 (image_input (6c6f336)
+- docs: Claude bridge durability (systemd) + WebUI Anthropic-lane 400 fix — root cause 4, session log, (293326a)
+- docs: Claude-Hermes bridge (OAuth, no API keys) — session log + ANTI_PATTERNS §Claude Code / Anthrop (716481c)
+
+
+## 2026-08-21
+
+- docs: OpenCode vision provider default recipe + AgentRouter sensitive-words anti-pattern + session l (4d0d16c)
+
+
+## 2026-09-02
+
+- wip: snapshot 2026-09-02 — push-all backup (1ce2784)
+
+
+## 2026-09-03
+
+- docs: record overdue August X/LinkedIn success test. (13a9cab)
+- docs: Jeremi does not import Apple Notes; capture is local. (7297dab)
+- docs: signed-in Jeremi, LinkedIn, and Mario X walks. (239af24)
+- docs: overnight Jeremi / Mario X / LinkedIn review (007f4e6)
+- Merge pull request #1 from Venmarc/fastball/secondbrain (98aba3a)
+
