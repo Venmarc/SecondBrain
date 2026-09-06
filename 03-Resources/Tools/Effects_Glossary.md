@@ -280,34 +280,25 @@ Rules:
   **Cost:** Cheaper than a second WebGL scene; throttle redraw if needed.
   — `tried`
 
-- **[Depth+Motion] Erratic swarm of particles** (antigravity.google; formerly "Living-organism particle swarm with mid-page morph pair") —
-  **Scope note (2026-07-20):** This entry is the **noise-drift / Brownian “just exist”** field only — what shipped in `~/Pastries/rep-antigravity-swarm-typewriter`. Cursor-reactive organism feel, multi-color density shifts, drone-show CTA morphs, and footer mono variant are a **new Extract/Build** under `~/Pastries/rep-antigravity-reactive/` with their own glossary rows. Do not fold those into this entry.
-  **Literal (erratic only):** A dense field of fine bright points that drift and clump like a school of fish or a living cell in the hero; deeper down, two side-by-side swarms fluidly reshape through each other — not flying toward you, not exploding, just continuously reorganising like a breath.
-  **Technique:** Three.js r180 + custom `ShaderMaterial` extending `PointsMaterial` (`isPointsMaterial=!0`, `sizeAttenuation=!0`, fog on). Each particle is a vertex in a `BufferGeometry` (`BufferAttribute` ×64, so multiple attributes — at least `position`, plus colour and a per-particle velocity or seed). The vertex shader uses **Simplex noise 2D + 3D** (`snoise`, Ashima Arts snippet present) to displace each point over time — that's the "living" drift; the uniform animation is `requestAnimationFrame` (30 refs), **not** GSAP/Lenis (`hasGSAP=false`, `hasLenis=false`, only 18 `ScrollTrigger`-named helpers but no library fingerprint match). Up to **4 canvases on one page**: one full-viewport hero swarm (`main-particles-container`, 1366×768 parent, `position:absolute`, parent `overflow:hidden`) + **two paired morph swarms** (`morphing-particles-container`, each 611×728, side-by-side at y≈6175 mid-page, class `morphing-particles`) + one dynamically-sized main canvas (1354×852). A `worker` constructor hint is present (`visibleWorkers: "available"`) but not on the critical path — looks pre-warmed not required. CSS contact: parent `.main-particles-component-section` is `position:absolute; inset:0; overflow:hidden` and the canvas is `position:absolute; inset:0; width:100%; height:100%` — the swarm canvas itself never moves; the "scroll reveals more swarm" feel comes from the long page body scrolling over a tall absolute hero, not from animating the canvas. Identification: canvas with `data-engine="three.js r180"`, parent class `*-particles-container`, library fingerprint Three r180. Not TresJS, not COBE.
-  **Cost:** Heavy GPU + 600 KB main bundle (`main-WM7D6D2M.js`, 598 KB transfer — Angular production sizes). Two simultaneous particle shaders mid-page doubles draw cost; mobile fallback plan mandatory. WebGLRenderer was SwiftShader in the audit (CPU fallback) — works but is the perf floor.
-  **Mobile/touch fallback:** Disable or shrink the morph pair under `(max-width: 1024px)`; hero swarm can scale particle count down with `devicePixelRatio` clamp. Decide purpose.
-  **Not the same as:** static particle wallpaper, single-pulse "twinkle" sprites, the spinning planet (camera moves, points don't drift), **or** the cursor-reactive organism / drone-show morph entries below (those live in `rep-antigravity-reactive`).
+- **[Depth+Motion] GPGPU particle swarm with a cursor-reactive ring** (antigravity.google) —
+  **Literal:** A dense field of fine bright pills that drift and re-clump on their own like a living organism. Move the cursor and a ring of them swells and ripples around it; the field always relaxes back to its own permanent homes. Denser regions run cool (blue/purple), sparse outliers warm (orange/red). Reads as a school of fish, not an explosion.
+  **Technique (accurate — `rep-antigravity-particles`, 2026-08-24):** Three.js **GPGPU ping-pong sim**. 65,536 particles = one 256×256 Float32 RGBA `DataTexture` (xy=position, z=scale, w=velocity). Each frame a fullscreen "sim" shader reads the previous state texture and writes new state to a render target; two targets alternate. Render pass = `THREE.Points` (one vertex per texel); `gl_PointSize` scales with per-particle scale. Initial layout: `poisson-disk-sampling` (500×500 grid, minDistance mapped from density). Every particle has a **permanent home** (`refPos`, baked once into a static `uPosRefs` texture): `pos *= 0.8; final = refPos + noiseDisp + pos * 0.25`. The cursor does **not** attract — it reveals a field that already exists: a ring attractor with anchor lerping at 0.02/frame (hover) / 0.01 (idle), radius breathing `.175 + sin(t)*.03 + cos(3t)*.02`, three smoothstep annuli (`t² + t2³*3 + t3*.4 + hiFreq*t3*.5`), radial-outward push inside the ring shell only. Sprites are **rotated pills** (`sdRoundBox(uv, vec2(.5,.2), r=.25)`), rotation = angle-to-cursor + `snoise*0.5` wobble; alpha = `uAlpha * pillMask * smoothstep(0.1, 0.2, vScale)`; `discard` when alpha < 0.01 (particles pop in/out by scale — the "replacement" feel). Color = slow low-freq spatial noise field, two-segment mix split at h=0.8 (**not** distance-from-cursor): dark `#7189ff → #3074f9 → black`, light `#2c64ed → #f84242 → #ffcf03`.
+  **Cost:** One WebGL sim + draw; 256² float textures; render scale 0.75 + MSAA off (pills are SDF-antialiased in-shader); DPR clamp; raycast every other frame; IntersectionObserver pauses offscreen. Three.js code-split + deferred first frame (0.8s hardware GL / 10s software GL + 900ms fade-in) keeps Lighthouse TBT quiet.
+  **Mobile/touch:** no hover → drag on the canvas stirs the field (`pointermove` on host, not window); `prefers-reduced-motion` → engine never constructed.
+  **Options (not base form):** theme (`light|dark` via `engine.setTheme` live uniform swap, no rebuild); palette; particle shape (base = SDF pill; square/triangle trial only after base feels right); ring radius/width; particle scale (0.6 = reference); flicker amount.
+  **Not the same as:** the morph field (glyph reassembly — next entry); boids; a cursor-attracting "swarm following the mouse" (structurally wrong: homes + relaxation, not attraction).
   — `tried`
+  Artifacts: `~/Pastries/rep-antigravity-particles/` (`src/components/particle-swarm/engine.ts`, `research/FINDINGS.md`, `screenshots/build-check/`).
 
-- **[Depth+Motion] Organism-like cursor-reactive particle swarm** (antigravity.google hero + download section) —
-  **Literal:** A field of tiny multi-colored soft dashes (short ellipses / lozenges) that keep drifting on their own, then **pull into a living ring/cluster around the cursor** when you move. Dense regions go cooler (blue/purple); sparse outliers stay warmer (orange/red). Smaller particles **flicker** (rapid alpha/size pulse). Same system appears again in the dark download band — **blue only**, still cursor-reactive, clipped to that rounded container.
-  **Technique (verified 2026-07-20 Extract):** Three.js r180 **GPGPU particle sim**, not pure vertex-noise wallpaper. `simMaterial` + ping-pong position textures (`posTex`, size **256²** → up to 65k slots), uniforms `uMousePos`, `uIsHovering`, `uRingRadius` (animated `0.175 + sin/cos` wobble), `uRingWidth` / `uRingWidth2`, `uRingDisplacement`, `uPosNearest`, `uDeltaTime`, `uTime`. Cursor drives a **ring attractor** in the sim pass; render pass uses `gl_PointSize` + size attenuation, `attribute vec4 seeds`, `uColorScheme` (0 dark / 1 light), `uParticleScale`. Parent: `.main-particles-container` (hero full viewport + second instance in `.download-section-container`). Identification: `data-engine="three.js r180"`, bundle hits `uMousePos`/`simMaterial`/`colorScheme`. **Base particle shape:** soft short dashes / elliptical point sprites (pixel-zoom crops look blocky/rect; full-frame they read as tiny multi-hue ellipses). Rebuild the **base** as that soft ellipse/dash; **Options** only after base feels right: square / triangle point sprites if they pass the feel check.
-  **Cost:** One WebGL sim + draw per instance; 256² float textures; keep DPR clamp + particle scale. Two instances on one page (hero + download) — share shader code, don't double-init wastefully.
-  **Mobile/touch:** No hover → idle organism only, or use a fixed attractor / disable ring; reduce count under coarse pointer.
-  **Options (not base form):** `palette: multi | mono-blue` (hero vs download); `theme: light | dark` (`colorScheme`); particle **shape** (base = soft ellipse/dash; trial square/triangle); ring radius/width; flicker amount (per-seed alpha/size noise); container clip.
-  **Not the same as:** Erratic swarm (noise-only, no cursor ring); drone-show morph (image nearest-point targets, no cursor follow).
+- **[Depth+Motion] Morphing particle field (glyph / emoji reassembly)** (antigravity.google mid-page) —
+  **Literal:** A quiet particle mesh that, on demand, streams into the silhouette of a shape — curly braces, rings, any letter or emoji — like a drone show forming a picture. No cursor chase; the shape is the target.
+  **Technique (accurate — `rep-antigravity-particles`, 2026-08-24):** Same GPGPU base. Targets = any glyph `fillText` can draw, rasterized to an offscreen canvas and sampled by **alpha/luminance** (draw white-on-black, sample alpha — red-channel sampling misbehaves for full-color emoji). **Variable-density Poisson sampling** (density ∝ pixel brightness³). Each particle assigned its nearest shape point in a Web Worker (random 25% skip). Per-particle **life cycle**: `lifeTime = mod(seed*100 + t*.5, ~3s)` — spawn at home, grow, shrink, die, respawn (double smoothstep envelope). Assemble: `targetPos = mix(refPos, nearestPos, hoverProgress²)`; particles stream with `direction * .01 * smoothstep(.15, 0, dist)`; scale boost ×1.5 near target while hovering.
+  **Cost:** Precompute nearest maps (workers help); one morph canvas; lazy-init when section nears viewport; same sim/render pass as the swarm (share shader code).
+  **Mobile/touch:** static glyph or idle mesh only; skip hover morph under coarse pointer.
+  **Options:** target glyphs/emoji; assemble ease; idle motion intensity; theme; particle shape shared with the swarm base.
+  **Not the same as:** the cursor-reactive swarm ring (no homes-ring attraction here — the target is a rasterized shape).
   — `tried`
-  Artifacts: `~/Pastries/rep-antigravity-reactive/` (`src/components/organism-swarm/`, extract `output/segment-a-*.json`, screenshots `A*`, `C*`, `build-check/`).
-
-- **[Depth+Motion] Drone-show CTA morph particle field** (antigravity.google mid-page) —
-  **Literal:** Two side-by-side particle fields rest as a quiet mesh (particles still tick — short “worm” stretches / micro-moves). Hovering a CTA does **not** make them chase the mouse; they **reassemble into an icon silhouette** (developer → curly braces; organization → six rings / group). Feel is a drone show forming a picture.
-  **Technique (verified 2026-07-20 Extract):** Same Three.js points family, but targets come from **icon PNG → nearest-point fields**, not free cursor attraction. Content maps `morphingParticle` textures: `/assets/textures/icons/individual.png` (braces) and `cube.png` (six rings). Runtime: `createPointsFromImage` → Worker `createPointsDistanceDataWorker` builds `nearestPointsData[]` → `setPointsTextureFromIndex(i)` swaps `uPosNearest` data texture; hover uses `hoverProgress` / `pushProgress` tweens (`ut.to` / `ut.fromTo` — GSAP-style). DOM: two `.morphing-particles-container` canvases (~611×728 at y≈6175). Victor’s “PNG shredded into pixels” feel is **literally** correct for the shape-taking step; “worm teleporters” remain a **feel description** of idle micro-motion / target reassignment, not a separate named class system in the bundle.
-  **Cost:** Precompute nearest maps (workers help); two morph canvases mid-page — heavy; lazy-init when section nears viewport.
-  **Mobile/touch:** Show static icon or idle mesh only; skip hover morph under coarse pointer.
-  **Options:** target icon PNGs; hover ease; idle motion intensity; particle shape shared with organism base.
-  **Not the same as:** cursor-reactive organism (ring around mouse); erratic noise-only field.
-  — `tried`
-  Artifacts: `~/Pastries/rep-antigravity-reactive/` (`src/components/drone-show-morph/`, `public/textures/{individual,cube}.png`, extract `output/segment-bc.json`, screenshots `B*`).
+  Artifacts: `~/Pastries/rep-antigravity-particles/` (`src/pages/Playground.tsx`, `src/components/particle-swarm/engine.ts` morph shaders, `screenshots/build-check/`).
 
 - **[Investigation note:** Canvas/WebGL has no useful “computed style story” — read scripts, network, and the canvas context type.
 
@@ -352,6 +343,17 @@ Rules:
   **Technique:** GSAP ScrollTrigger (+ Lenis on fin.com). Use only when CSS scroll timelines aren’t enough.
   **Cost:** Moderate JS.
   — `extracted`
+
+- **[Motion] Momentum-smoothed page scroll** (antigravity.google) —
+  **Literal:** The whole page glides behind your wheel or trackpad with a short catch-up — a flick starts the page moving almost instantly, then it settles over about half a second like it has weight. Link clicks still land on their anchors.
+  **Technique (accurate — live probe + bundle read, 2026-09-01):** GSAP **ScrollSmoother 3.15.0** + ScrollTrigger, code-split as ESM chunks loaded by an Astro `SmoothScrollLayout` island. DOM split: `#smooth-wrapper` becomes `position: fixed; overflow: hidden; height: 100%` (viewport cover); `#smooth-content` gets `overflow: visible; width: 100%; box-sizing: border-box` and a per-frame `matrix3d` transform. Body gets an inline height equal to full content length, so the native scrollbar, keyboard paging, and find-in-page still work. Internals: `scrollerProxy` on the wrapper + a dummy 100s tween with `scrub: 0.6` — the scrub duration **is** the smoothing; ease `expo` (expo-out ≈ `cubic-bezier(0.19, 1, 0.22, 1)`; differs from `--ease-out` — adopt as a token only if shipped to a real project). Site config: `{ wrapper: "#smooth-wrapper", content: "#smooth-content", smooth: 0.6, effects: true, smoothTouch: 0.1, normalizeScroll: { allowNestedScroll: true } }`. **Measured feel:** wheel flick of 2400px → ~74% of travel within ~200ms, settled by ~500ms (fast start, exponential tail — responsive, not floaty). **Device gate:** created only when `ScrollTrigger.isTouch !== 1`; touch-only devices get no smoother at all — native scroll + `scrollIntoView({behavior: "smooth"})` for hashes (so `smoothTouch: 0.1` only ever fires on hybrid pointer-primary devices). **Their hardening beyond stock:** wrapper `scroll` listener zeroing stray scrollTop/scrollLeft; same-page hash links intercepted on `click`/`hashchange`/`popstate`/load → `preventDefault` + `history.pushState` + `smoother.scrollTo(target, true, "top 80px")` (fixes anchor jumps under virtual scroll); `window.ScrollSmootherInstance` exposed for debugging; built-in `focusin` handler scrolls focused elements into view (keyboard a11y); `scroll-behavior: auto` forced on html/body. **`effects: true` is a no-op on the live page — a DOM query finds zero `data-speed`/`data-lag` elements**; the parallax pipeline is enabled but unused. No `prefers-reduced-motion` gate in their init.
+  **Cost:** gsap core + ScrollTrigger + ScrollSmoother chunks (scroll module is 13.9KB min, plus the two library chunks); one composited transform layer for the whole page; ScrollTrigger recalc on resize + a ResizeObserver on content + a 250ms velocity interval. Canvas heroes stay scroll-independent (fixed ambient layer; the page scrolls over them).
+  **Options (not base form):** smoothing duration (`smooth`: 0.6 here; ~0.3 snappier, ~1 floatier); `data-speed`/`data-lag` parallax per element (pipeline present in the config, unused on source); anchor offset (`"top 80px"` header clearance); `speed` multiplier (whole-page scroll speed — different axis from smoothness).
+  **Not the same as:** CSS `scroll-behavior: smooth` (only animates programmatic jumps, not wheel momentum); Lenis (same effect family, different library — the common free alternative); scroll-snap; the fin.com scroll-controlled stage (choreography *triggered by* scroll; this is the scroll *itself*).
+  **Build gotchas:** `position: fixed` breaks inside the transformed content — fixed elements must live outside `#smooth-content`; anchor jumps need interception (~40 lines on source); images need explicit dimensions (transform scroll + lazy load = layout drift); decide a `prefers-reduced-motion` path (source ships none).
+  — `extracted`
+  Artifacts: `~/Pastries/rep-antigravity-particles/research/ag-smooth.js` (saved bundle, byte-identical to the live `_astro/SmoothScrollLayout…js` chunk).
+
 
 - **[Perf] Heavy page that still feels fast** (fin.com) —
   **Literal:** Lots of motion and 3D, but first paint and scroll don’t feel like a slideshow of loading.
@@ -498,6 +500,18 @@ Project applied: Pastries/rep-antigravity-swarm-typewriter
 ```
 
 ```
+Date: 2026-08-24
+Source: https://antigravity.google + ~/Pastries/rep-antigravity-particles
+Entry: [Depth+Motion] GPGPU particle swarm with a cursor-reactive ring; [Depth+Motion] Morphing particle field (glyph / emoji reassembly)
+Literal name: A dense field of fine bright pills that drift and re-clump; a ring swells around the cursor and the field relaxes back to permanent homes. A second field streams into a glyph/emoji silhouette on demand.
+Technique used: Three.js r0.170 GPGPU ping-pong sim — 256² Float32 RGBA DataTexture (xy/scale/vel), alternating render targets, THREE.Points render pass. Poisson-disc layout (500×500). Per-particle permanent home (`uPosRefs`): `pos*=0.8; final = refPos + noiseDisp + pos*0.25`. Ring attractor (anchor lerp 0.02/0.01, breathing radius, 3 smoothstep annuli, radial-outward push). SDF pill sprites (`sdRoundBox`, rotation = angle-to-cursor + snoise wobble, alpha smoothstep(0.1,0.2,vScale) discard). Color = low-freq noise field two-segment mix (dark #7189ff→#3074f9→black; light #2c64ed→#f84242→#ffcf03). Morph: offscreen glyph raster → alpha sample → variable-density Poisson → Web Worker nearest-point assign → lifecycle + hoverProgress² ease.
+Implementation notes: Solo rep, three routes — OX (dark ring hero), Signal (light blue→red), Playground (glyph/emoji morph + draggable control panel + theme toggle). `engine.setTheme(theme, colors?)` live uniform swap. Tuning deviations from the original documented in the README table (particlesScale 0.6, ringWidth2 0.14, rim `pow(t2,6)`/`t+=t2*5`, render scale 0.75 MSAA off, deferred first frame).
+Performance check: Lighthouse production preview `:4173` Brave incognito — Perf 99 (98–99 across runs), A11y 100, BP 100, SEO 100. Specs `tests/effects.spec.mjs` 6/6. Feel check round 1 passed (Victor: "closest ever"); round 2 on real GPU pending.
+Result: tried (replaces the prior three-entry drift/organism/morph split)
+Project applied: Pastries/rep-antigravity-particles
+```
+
+```
 Date: 2026-07-19
 Source: ~/Pastries/rep-antigravity-swarm-typewriter (sibling primitive; film grain is a generic Depth entry, not extracted from a specific source site)
 Entry: [Depth] Film grain / noise
@@ -507,6 +521,18 @@ Implementation notes: Built at `~/Pastries/rep-antigravity-swarm-typewriter/src/
 Performance check: Lighthouse 99 perf on `/depth` — same audit run as the MeshBackground entry above. TBT 20ms is the lowest of the two routes (depth is lighter than home because no Three.js canvas there). SEO 100, Best Practices 100, A11y 95. Film grain is one inline element with one CSS animation — negligible cost.
 Result: tried
 Project applied: Pastries/rep-antigravity-swarm-typewriter
+```
+
+```
+Date: 2026-09-01
+Source: https://antigravity.google (live Playwright probe + ~/Pastries/rep-antigravity-particles/research/ag-smooth.js)
+Entry: NEW — [Motion] Momentum-smoothed page scroll
+Literal name: Whole page glides behind the wheel with ~0.5s catch-up; anchor links still land via intercepted hash navigation.
+Technique used: GSAP ScrollSmoother 3.15.0 ({smooth: .6, effects: true, smoothTouch: .1, normalizeScroll: {allowNestedScroll: true}}) behind a ScrollTrigger.isTouch !== 1 gate; fixed #smooth-wrapper + transformed #smooth-content + body inline height = full content length; own hash-link interception (click/hashchange/popstate/load → pushState + scrollTo(target, true, "top 80px")); touch fallback = native scrollIntoView smooth.
+Implementation notes: ag-smooth.js is byte-identical (13,971 bytes) to the live _astro/SmoothScrollLayout…js chunk — the saved bundle contains the full ScrollSmoother class plus their ~40-line init. Live probe (Brave incognito, 1440×900): wrapper fixed/hidden/900px, body inline height 9668px, content carries the matrix transform, html scroll-behavior forced auto, 0 data-speed/data-lag elements in the DOM (effects enabled but unused), window.ScrollSmootherInstance.smooth() = 0.6. Wheel flick 2400px: ~74% of travel in ~200ms, settled ~500ms (expo-out tail — matches scrub 0.6 + expo default). Programmatic scrollTop() jumps instantly (no animation); only user input is smoothed. No prefers-reduced-motion gate found in their init.
+Performance check: not lighthouse on source (Extract only).
+Result: extracted
+Project applied: none yet — awaiting Build lane
 ```
 
 ## Open gaps
