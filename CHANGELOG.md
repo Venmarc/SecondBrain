@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-06 — Jeremy CoS board
+
+#### Added
+- [[02-Areas/Ops/Jeremy-Board]] — ticket board for Chief of Staff (SecondBrain source of record).
+
+
 ### 2026-09-03 — Overnight review, signed-in pass (Next Steps)
 
 #### Changed

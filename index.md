@@ -40,6 +40,7 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 ---
 
 ## 🗂️ Ongoing Areas (02-Areas)
+- 🧭 **[[02-Areas/Ops/Jeremy-Board|Jeremy Board]]** — Chief of Staff ticket board (Ready → Done)
 - 👤 **[[02-Areas/Personal-Growth/RedMane|RedMane (Victor)]]** — Profile and working style
 - 🤖 **[[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|Agent Ops]]** — How agents are used now · **[[02-Areas/Agent-Ops/Provider-Model-Audit|Provider-Model-Audit]]** — historical canary audit · **[[02-Areas/Agent-Ops/Provider-Routing-Playbook|Provider Routing Playbook]]** — current cost/latency/quality dispatch policy
 - 📣 **[[02-Areas/Content-Creation/Content-Creation|Content Creation]]** — X/LinkedIn development publishing; sports clipping retained as an earlier lane
