@@ -18,6 +18,12 @@
 
 ## ⚡ Active Projects (01-Projects)
 
+### 🏎️ [[01-Projects/Driving-Game/Driving-Game|Driving Game]] — Stage 1 in progress (Schipper / DG-S1)
+
+**Code:** `Documents/Driving-Game` · **Ticket:** [[02-Areas/Ops/Jeremy-Board|Jeremy Board]] `DG-S1`  
+**Docs (imported 2026-09-07):** [[01-Projects/Driving-Game/Docs/driving-game-stage-1-goal|Stage 1 goal]] · [[01-Projects/Driving-Game/Docs/low-poly-driving-game-brainstorm|Brainstorm]] · [[01-Projects/Driving-Game/Docs/low-poly-driving-game-brainstorm-raw-responses|Raw responses]] · hub [[01-Projects/Driving-Game/Driving-Game|Driving-Game.md]]
+
+
 ### 🚀 [[01-Projects/skill-router/skill-router|skill-router]] — TOP priority; architecture decided, implementation unverified
 Agent-agnostic skill-routing system intended to install once per machine. The proposed MVP uses a shared catalog/classifier behind thin Antigravity and Claude Code adapters, but the current source snapshot remains Gemini/Antigravity-specific and unfinished.
 **Code:** two clones, same project — see `MACHINES.md` in the skill-router repo (github.com/Venmarc/skill-router) for current machine → path mapping. Do not hardcode a single path here. · **Open verification:** shared-core rewrite, Claude Code coexistence, latency

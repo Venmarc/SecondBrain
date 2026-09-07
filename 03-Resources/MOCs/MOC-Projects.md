@@ -31,3 +31,5 @@ tags:
 - Session lessons: [[03-Resources/Vault-Ops/Session-Lesson-Extraction-Idea]]
 
 **Tags:** #moc #projects
+
+- [[01-Projects/Driving-Game/Driving-Game|Driving Game]] — Stage 1 (Godot / Linux)
