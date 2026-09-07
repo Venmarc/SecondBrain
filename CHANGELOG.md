@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-07 — Web design garnish collection (footer/landing art direction)
+
+#### Added
+- [[03-Resources/Design/Web-Garnish/_index]] — collected X posts on hand-crafted footer/landing garnish. Theme notes: [[03-Resources/Design/Web-Garnish/01-Engraved-Vignette-Footer|engraved vignette footer]], [[03-Resources/Design/Web-Garnish/02-Sticker-Scrapbook-Footer|sticker/scrapbook footer]], [[03-Resources/Design/Web-Garnish/03-Rubber-Stamp-Mark|rubber-stamp mark]], [[03-Resources/Design/Web-Garnish/04-Watercolor-Art-Print|watercolor art print]], [[03-Resources/Design/Web-Garnish/05-Perspective-Typography|perspective typography]], [[03-Resources/Design/Web-Garnish/06-Hermes-Skill-Stack|Hermes skill stack]]. Full copy-paste image prompts preserved for the prompt-backed styles.
+
 ### 2026-09-06 — Jeremy CoS board
 
 #### Added

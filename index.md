@@ -50,6 +50,7 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 
 ## 📚 Resources (03-Resources)
 - 🗺️ **[[03-Resources/MOC-UI-UX-Lessons|MOC: UI/UX Lessons]]** · [[03-Resources/MOCs/MOC-Projects|MOC: Projects]]
+- 🖼️ **[[03-Resources/Design/Web-Garnish/_index|Web design garnish]]** — footer/landing art direction collection (engraved vignette, sticker/scrapbook, rubber-stamp mark, watercolor art print, perspective typography)
 - ⚙️ Skills under `03-Resources/Skills/` (nav shell, dashboard, anti-slop watchlist, Frontend Awesomeness, …)
 - 🧰 **[[03-Resources/Vault-Ops/Session-Lesson-Extraction-Idea|Session lesson extraction (draft)]]**
 - 🧰 **[[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault improvement backlog]]**
