@@ -6,7 +6,8 @@ Status moves: Ready → Doing → Blocked → Review → Done (or Cancelled).
 
 | ID | Title | Owner | Status | Next check | Block reason | Notes |
 |----|-------|-------|--------|------------|--------------|-------|
-| DG-S1 | Driving Game Stage 1 — crash/scrape + clean start | Schipper | Review | Victor retesting | | 1c250db. Run: cd Documents/Driving-Game && ./run.sh. Feel gate still Victor. |
+| FOOTER-1 | Non-boring footer deep-dives (1+3+2) | Schipper | Review | Victor picks build next | | Vault: `03-Resources/Design/Footer-Non-Boring/` (INDEX + mascot + pen-line + oil pipeline). Session: `06-Agent-Sessions/2026-09-07-footer-1-research-brief.md`. Awaiting which demo to build first. |
+| DG-S1 | Driving Game Stage 1 — paused (hardware) | Schipper | Blocked | when better device | Latitude E6320 overheats under Godot; Victor paused. Last Review 1c250db. No Stage 1/2 until he reopens. |
 
 ## Conventions
 - Owner is a bot name (Schipper, Clarity, Next Steps, Critiquito, figma bro, Copy Humanizer, Game Art Director, dr eggbot, Alfred) or Emmanuel.
