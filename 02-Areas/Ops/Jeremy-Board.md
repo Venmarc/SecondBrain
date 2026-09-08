@@ -6,7 +6,8 @@ Status moves: Ready → Doing → Blocked → Review → Done (or Cancelled).
 
 | ID | Title | Owner | Status | Next check | Block reason | Notes |
 |----|-------|-------|--------|------------|--------------|-------|
-| FOOTER-1 | North Loft mascot polish | Schipper | Review | Victor feel | | Blink fixed · meta stripped · Humanizer lede · run `demo/mascot-css-mvp/index.html`. Alternate mascot route not started. |
+| SLOTH-1 | Yellowcoil sloth footer | Schipper | Review | Victor feel | | Run `~/Pastries/rep-sloth-footer/index.html` · BINDING in folder · Humanizer done · ref `rep-mascot-css-mvp` |
+| FOOTER-1 | North Loft blue mascot | Schipper | Done | — | | Closed; reference only in Pastries |
 | DG-S1 | Driving Game Stage 1 — paused (hardware) | Schipper | Blocked | when better device | Latitude E6320 overheats under Godot; Victor paused. Last Review 1c250db. No Stage 1/2 until he reopens. |
 
 ## Conventions
