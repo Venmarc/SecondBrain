@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Footer mascot MVP — cursor eyes</title>
+  <style>
+    :root {
+      --ink: #1a1c1e;
+      --muted: #5c6570;
+      --paper: #f4f1ea;
+      --band: #e8e2d6;
+      --blue-fur: #6ba3d4;
+      --blue-fur-deep: #4a7fad;
+      --blue-fur-light: #9bc4e4;
+      --eye-white: #f7f5f0;
+      --pupil: #1e2430;
+      --link: #2a3340;
+      --accent: #c45c26;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      background:
+        radial-gradient(1200px 600px at 70% -10%, #fff8ee 0%, transparent 55%),
+        linear-gradient(180deg, #faf7f2 0%, var(--paper) 40%, #ebe4d8 100%);
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .page {
+      flex: 1;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 2rem;
+    }
+    .kicker {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.75rem;
+    }
+    h1 {
+      font-weight: 600;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.15;
+      margin: 0 0 1rem;
+      letter-spacing: -0.02em;
+    }
+    .lede {
+      max-width: 36rem;
+      font-size: 1.05rem;
+      line-height: 1.55;
+      color: var(--muted);
+      margin: 0;
+    }
+    .hint {
+      margin-top: 2rem;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .hint strong { color: var(--ink); font-weight: 600; }
+
+    /* ——— Footer ——— */
+    .site-footer {
+      position: relative;
+      margin-top: auto;
+      background: linear-gradient(180deg, transparent 0%, var(--band) 28%, #ddd4c4 100%);
+      border-top: 1px solid rgba(26, 28, 30, 0.08);
+      overflow: hidden;
+    }
+    .footer-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2.25rem 1.5rem 1.25rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem 2rem;
+      align-items: end;
+      position: relative;
+      z-index: 1;
+    }
+    .footer-cols {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+      min-width: 0;
+    }
+    .footer-cols h2 {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.65rem;
+      font-weight: 600;
+    }
+    .footer-cols ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .footer-cols a {
+      color: var(--link);
+      text-decoration: none;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      border-bottom: 1px solid transparent;
+    }
+    .footer-cols a:hover,
+    .footer-cols a:focus-visible {
+      border-bottom-color: var(--accent);
+      outline: none;
+    }
+    .legal {
+      grid-column: 1 / -1;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin: 0.25rem 0 0;
+    }
+
+    /* Mascot — pointer-events none so links stay clickable */
+    .mascot {
+      width: 168px;
+      height: 168px;
+      flex-shrink: 0;
+      pointer-events: none;
+      user-select: none;
+      transform-origin: 50% 80%;
+    }
+    .mascot svg { width: 100%; height: 100%; display: block; overflow: visible; }
+
+    .pupil {
+      transform-box: fill-box;
+      transform-origin: center;
+      transition: transform 40ms linear;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .mascot.is-alive {
+        animation: breathe 3.6s ease-in-out infinite;
+      }
+      .lid {
+        transform-box: fill-box;
+        transform-origin: center top;
+        animation: blink 5.5s ease-in-out infinite;
+      }
+      .lid-right { animation-delay: 0.12s; }
+    }
+
+    @keyframes breathe {
+      0%, 100% { transform: translateY(0) scale(1, 1); }
+      50% { transform: translateY(2px) scale(1.015, 0.985); }
+    }
+    @keyframes blink {
+      0%, 92%, 100% { transform: scaleY(0.08); }
+      94%, 96% { transform: scaleY(1); }
+    }
+
+    @media (max-width: 640px) {
+      .footer-inner {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: left;
+      }
+      .footer-cols { width: 100%; }
+      .mascot { width: 140px; height: 140px; order: -1; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <p class="kicker">FOOTER-1 · craft demo</p>
+    <h1>Move your cursor.<br />The footer is watching — barely.</h1>
+    <p class="lede">
+      Blue fluffy nonchalant mascot. CSS/JS dual-eye MVP (no Rive yet).
+      Links stay clickable. Eyes park if you prefer reduced motion.
+    </p>
+    <p class="hint"><strong>Try:</strong> sweep the pointer across the page, then hover the footer links.</p>
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-cols">
+        <div>
+          <h2>Studio</h2>
+          <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#journal">Journal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Visit</h2>
+          <ul>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#careers">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Elsewhere</h2>
+          <ul>
+            <li><a href="#x">X</a></li>
+            <li><a href="#li">LinkedIn</a></li>
+            <li><a href="#gh">GitHub</a></li>
+          </ul>
+        </div>
+        <p class="legal">Demo only · FOOTER-1 mascot MVP · not posted</p>
+      </div>
+
+      <div class="mascot" id="mascot" aria-hidden="true">
+        <!-- Soft blue fluffy blob — bored-cute -->
+        <svg viewBox="0 0 200 200" role="img">
+          <defs>
+            <radialGradient id="fur" cx="40%" cy="35%" r="65%">
+              <stop offset="0%" stop-color="var(--blue-fur-light)" />
+              <stop offset="55%" stop-color="var(--blue-fur)" />
+              <stop offset="100%" stop-color="var(--blue-fur-deep)" />
+            </radialGradient>
+            <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="1.2" result="b" />
+              <feOffset dy="1" result="o" />
+              <feMerge>
+                <feMergeNode in="o" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- body fluff -->
+          <ellipse cx="100" cy="118" rx="72" ry="58" fill="url(#fur)" filter="url(#soft)" />
+          <ellipse cx="48" cy="108" rx="22" ry="28" fill="var(--blue-fur)" opacity="0.9" />
+          <ellipse cx="152" cy="108" rx="22" ry="28" fill="var(--blue-fur)" opacity="0.9" />
+          <!-- head bump -->
+          <ellipse cx="100" cy="78" rx="58" ry="48" fill="url(#fur)" />
+          <!-- ear tufts -->
+          <ellipse cx="52" cy="48" rx="16" ry="20" fill="var(--blue-fur-deep)" transform="rotate(-18 52 48)" />
+          <ellipse cx="148" cy="48" rx="16" ry="20" fill="var(--blue-fur-deep)" transform="rotate(18 148 48)" />
+          <ellipse cx="54" cy="50" rx="9" ry="11" fill="var(--blue-fur-light)" transform="rotate(-18 54 50)" opacity="0.7" />
+          <ellipse cx="146" cy="50" rx="9" ry="11" fill="var(--blue-fur-light)" transform="rotate(18 146 50)" opacity="0.7" />
+
+          <!-- snout -->
+          <ellipse cx="100" cy="98" rx="22" ry="16" fill="var(--blue-fur-light)" opacity="0.55" />
+          <ellipse cx="100" cy="100" rx="5" ry="3.5" fill="#3a4554" />
+          <!-- bored smirk -->
+          <path d="M88 112 Q100 118 118 108" fill="none" stroke="#3a4554" stroke-width="2.2" stroke-linecap="round" />
+
+          <!-- eyes -->
+          <g class="eye" data-eye>
+            <ellipse cx="78" cy="72" rx="14" ry="16" fill="var(--eye-white)" />
+            <circle class="pupil" cx="78" cy="74" r="6.5" fill="var(--pupil)" />
+            <circle cx="80" cy="71" r="2" fill="#fff" opacity="0.55" />
+            <rect class="lid" x="64" y="56" width="28" height="16" rx="4" fill="var(--blue-fur)" />
+          </g>
+          <g class="eye" data-eye>
+            <ellipse cx="122" cy="72" rx="14" ry="16" fill="var(--eye-white)" />
+            <circle class="pupil" cx="122" cy="74" r="6.5" fill="var(--pupil)" />
+            <circle cx="124" cy="71" r="2" fill="#fff" opacity="0.55" />
+            <rect class="lid lid-right" x="108" y="56" width="28" height="16" rx="4" fill="var(--blue-fur)" />
+          </g>
+
+          <!-- unimpressed brow -->
+          <path d="M64 58 Q78 54 90 60" fill="none" stroke="var(--blue-fur-deep)" stroke-width="3" stroke-linecap="round" />
+          <path d="M110 60 Q122 52 138 58" fill="none" stroke="var(--blue-fur-deep)" stroke-width="3" stroke-linecap="round" />
+        </svg>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const mascot = document.getElementById('mascot');
+      const pupils = Array.from(document.querySelectorAll('.pupil'));
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      function setAlive(on) {
+        mascot.classList.toggle('is-alive', on && !reduce.matches);
+      }
+      setAlive(true);
+      reduce.addEventListener('change', () => setAlive(true));
+
+      const MAX = 5.5; // px pupil travel — footer-scale
+
+      function park() {
+        pupils.forEach((p) => { p.style.transform = 'translate(0px, 0px)'; });
+      }
+
+      function onMove(e) {
+        if (reduce.matches) {
+          park();
+          return;
+        }
+        pupils.forEach((pupil) => {
+          const eye = pupil.closest('[data-eye]');
+          const rect = eye.getBoundingClientRect();
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          const dx = e.clientX - cx;
+          const dy = e.clientY - cy;
+          const dist = Math.min(Math.hypot(dx, dy), MAX);
+          const angle = Math.atan2(dy, dx);
+          const x = Math.cos(angle) * dist;
+          const y = Math.sin(angle) * dist;
+          pupil.style.transform = 'translate(' + x.toFixed(2) + 'px, ' + y.toFixed(2) + 'px)';
+        });
+      }
+
+      if (!reduce.matches) {
+        window.addEventListener('pointermove', onMove, { passive: true });
+      } else {
+        park();
+      }
+    })();
+  </script>
+</body>
+</html>

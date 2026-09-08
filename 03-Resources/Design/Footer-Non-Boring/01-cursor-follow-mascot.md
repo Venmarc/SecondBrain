@@ -246,3 +246,18 @@ Export: mascot-footer.riv ≤ ~150KB if possible
 3. **Record a 8s GIF** (cursor sweep + blink) and draft the X caption; post as craft study.
 4. **If engagement warrants:** redraw into layered SVG → import to Rive → add `lookX`/`lookY` blend + blink trigger; swap MVP canvas for `.riv`.
 5. **Optional study hour:** open Valley Adventures Codrops article + Rive marketplace eyes file; mirror their input naming in your file for less JS friction.
+
+## Built (2026-09-08) — CSS dual-eye MVP
+
+**Runnable demo:** [[demo/mascot-css-mvp/index.html|demo/mascot-css-mvp/index.html]] (single file, no build).
+
+**Open on PC:**
+```bash
+xdg-open ~/Documents/SecondBrain/03-Resources/Design/Footer-Non-Boring/demo/mascot-css-mvp/index.html
+```
+
+**What it does:** inline SVG blue fluffy bored-cute mascot (~168px); pupils track `pointermove` with clamp; idle breathe + blink only under `prefers-reduced-motion: no-preference`; mascot `pointer-events: none` so footer links stay clickable.
+
+**Not yet:** Rive `.riv` upgrade (optional next). No external post.
+
+**How-to / notes:** [[demo/mascot-css-mvp/README|README]]

@@ -47,3 +47,6 @@ Filenames keep the original numbering (`01`, `03`, `02`); **execution order is n
 ---
 
 *Generated for craft research — expand beyond the technique map; each deep-dive has Goal, How it works, Pipeline, Prompts, Sources, Post angle, Effort/pitfalls, Next steps.*
+
+## Demo
+- **Mascot CSS MVP (2026-09-08):** [[demo/mascot-css-mvp/index.html]] — open locally; eyes follow cursor.
