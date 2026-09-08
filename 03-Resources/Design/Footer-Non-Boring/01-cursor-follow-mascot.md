@@ -265,3 +265,7 @@ xdg-open ~/Documents/SecondBrain/03-Resources/Design/Footer-Non-Boring/demo/masc
 **Screenshot:** [[demo/mascot-css-mvp/shot-footer-eyes.webp|shot-footer-eyes.webp]]
 
 **More shots:** [[demo/mascot-css-mvp/shots/01-full.png|full]], [[demo/mascot-css-mvp/shots/02-eyes-top-left.png|eyes top-left]], [[demo/mascot-css-mvp/shots/03-eyes-near-mascot.png|eyes near mascot]].
+
+## Polish (2026-09-08) — North Loft
+
+Product page now reads as **North Loft** (no demo/meta chrome). Blink fixed. Copy Humanizer pass on visible strings. See session `06-Agent-Sessions/2026-09-08-footer-1-north-loft-polish.md`.
