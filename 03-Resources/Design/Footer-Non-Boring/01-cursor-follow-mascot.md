@@ -261,3 +261,5 @@ xdg-open ~/Documents/SecondBrain/03-Resources/Design/Footer-Non-Boring/demo/masc
 **Not yet:** Rive `.riv` upgrade (optional next). No external post.
 
 **How-to / notes:** [[demo/mascot-css-mvp/README|README]]
+
+**Screenshot:** [[demo/mascot-css-mvp/shot-footer-eyes.webp|shot-footer-eyes.webp]]
