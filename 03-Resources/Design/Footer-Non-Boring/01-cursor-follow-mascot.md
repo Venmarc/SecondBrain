@@ -263,3 +263,5 @@ xdg-open ~/Documents/SecondBrain/03-Resources/Design/Footer-Non-Boring/demo/masc
 **How-to / notes:** [[demo/mascot-css-mvp/README|README]]
 
 **Screenshot:** [[demo/mascot-css-mvp/shot-footer-eyes.webp|shot-footer-eyes.webp]]
+
+**More shots:** [[demo/mascot-css-mvp/shots/01-full.png|full]], [[demo/mascot-css-mvp/shots/02-eyes-top-left.png|eyes top-left]], [[demo/mascot-css-mvp/shots/03-eyes-near-mascot.png|eyes near mascot]].
