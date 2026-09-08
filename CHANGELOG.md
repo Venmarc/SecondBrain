@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-08 — Assets consolidation (attachments → Assets/)
+
+#### Changed
+- Moved 22 stray attachments into `Assets/`: 18 root-level `Pasted image 2026-09-06/07` pngs (embedded by [[00-Inbox/Update_Update]], lamalama.com research) and 4 mascot-demo images out of `03-Resources/Design/Footer-Non-Boring/demo/mascot-css-mvp/` + its `shots/` subfolder (embedded by [[03-Resources/Design/Footer-Non-Boring/01-cursor-follow-mascot]]). Caller links rewritten to path-qualified `![[Assets/<file>]]` form. `raw/` PDF untouched (immutable).
+- [[Assets/ASSETS.md]] — inventory 20 → 42; corrected stale "binaries are gitignored" claim (they are git-tracked; no `.gitignore` exists); maintenance log entry added.
+
 ### 2026-09-07 — Web design garnish collection (footer/landing art direction)
 
 #### Added

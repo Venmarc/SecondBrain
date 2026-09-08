@@ -300,6 +300,40 @@ Rules:
   — `tried`
   Artifacts: `~/Pastries/rep-antigravity-particles/` (`src/pages/Playground.tsx`, `src/components/particle-swarm/engine.ts` morph shaders, `screenshots/build-check/`).
 
+- **[Depth+Motion] Logo-cell grain intro** (lamalama.com) —
+  **Literal:** The first screen is a field of blocky grains that start large, then multiply into a much finer grid until they look like dust over a looping picture. The grains are tiny copies of the L mark, not random noise.
+  **Technique:** Custom WebGL 2 (`#version 300 es`), no Three. Shader `drawLLLogo` paints a 4×4 cell of the L mark. Intro class: `LOGO_START_GRID_SIZE=160` → `LOGO_GRID_SIZE=16`, `GRID_SIZE=16`. Pixel size is the uniform (`u_logo_pixel_size` / `u_pixel_size`). A progress pass writes logo/full/hide channels; a second pass tints those cells with the theme. Intro delay 3.2s (3.8s on the extended hero). Desktop only: `IS_WEBGL=!hasTouch`.
+  **Cost:** One fullscreen compositor + one progress target. Cheap if paused after the intro. Mobile: static first frame, no WebGL.
+  **Options:** start/end cell size; theme RGB; overlay a still or a short loop.
+  — `extracted`
+
+- **[Motion] Cursor velocity-field trail** (lamalama.com) —
+  **Literal:** Moving the pointer leaves a pale grain trail that closes slowly, not a particle that chases the cursor. The trail is a reveal of the grain field, not a follow.
+  **Technique:** Ping-pong RG float textures (`EXT_color_buffer_float`). Inject shader: radial falloff `exp(-d² / r²)` with `radius=0.04`, `strength=0.04`, adds `u_vector` (pointer delta) into velocity. Decay shader: `previous.rg * (1.0 - min(0.5, delta / 250.0))` — at 60fps that is ~6% loss per frame, so the trail lingers about a second. Cursor layer is sampled by later compositors (`texture(u_cursor).rg`). `CURSOR_SCALE_FACTOR=36`. WebGL off on touch.
+  **Cost:** Two float targets, one extra pass. Fail closed if the float extension is missing.
+  **Not the same as:** a sprite trail or a particle chase.
+  — `extracted`
+
+- **[Motion] Dusty vs gel image warp** (lamalama.com) —
+  **Literal:** Pointer over a photo either scuffs it like dust (you see the page color in the scuff) or bends it like gel. Both use the same grain cells.
+  **Technique:** Same compositor as the intro (`segment` fragment). Dusty (`defaultHover=0`): `u_distort_content=1`, `u_invert=0`, `u_gap=0.3` — cursor RG offsets UVs (`0.02–0.10`) so the photo tears and the grid shows through. Gel (`defaultHover>0`): `u_distort_content=0`, `u_invert=1`, `u_gap=0.6`, `u_nocursor=1` — no UV tear; inverted grain mask with a wider hover radius reads as a melt. `GRID_SIZE=8`. `drawLLLogo` gates both the cursor mask and the reveal. Cursor position is GSAP `quickTo` `power4.out` 0.55s on source; rebuild with the same curve via rAF (`--ease-power4`, differs from `--ease-out`).
+  **Cost:** One WebGL canvas per photo in view. Gate with IntersectionObserver. JPEG srcset on source, not AVIF.
+  **Mobile/touch:** disable WebGL; show the still.
+  — `extracted`
+
+- **[Motion] Click-spread grain hover** (lamalama.com) —
+  **Literal:** Press the photo and the grain disc grows from the press point until it can cover the frame; release and it shrinks back. Rapid presses stack because the tween restarts from the current size.
+  **Technique:** `mousedown` kills the last tween and runs `hover: 0→1` in **3.75s** `power4.out`. `mouseup` tweens `hover` back to `defaultHover` in **1.25s** `power4.out`. Shader: `hover = u_hover * full_length`; `affected_area = smoothstep(hover - gap*hover, hover, mouse_pct / (1.0+gap) / full_length)`; `drawLLLogo(..., min(1.0, u_hover*10.0) * (1.0 - affected_area), 1.0)`. Not pressure-sensitive — hold time is the tween clock.
+  **Cost:** Same canvas as the warp. No extra pass.
+  **Options:** dusty vs gel uniforms stay as set for that photo.
+  — `extracted`
+
+- **[Motion] Mono cipher scramble** (lamalama.com) —
+  **Literal:** Button and bar copy flicker through a short set of marks (`# $ * @ ( 0 % 1 >`) then land on the real letters. Spaces become `_`.
+  **Technique:** Custom `mono_text_reveal` (not GSAP SplitText). Charset array with extra `#` weight. `duration = (duration??0.25) + length*0.005`. Timeline: count `shownChars` 0→length with `power2.out`, then from `0.2+delay` replace those glyphs with the original (`power2.out`). Hide reverses with `power3.out`. Buttons also swap a hover copy (`.js-text-hover`) and scale the arrow 0↔1 in 0.45s `power4.out`. Touch: no hover scramble.
+  **Cost:** Per-character DOM writes on a short label. Cheap. Do not scramble long body copy.
+  — `extracted`
+
 - **[Investigation note:** Canvas/WebGL has no useful “computed style story” — read scripts, network, and the canvas context type.
 
 ## JS animation libraries / performance
