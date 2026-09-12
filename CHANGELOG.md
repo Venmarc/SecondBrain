@@ -491,3 +491,9 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 - docs: overnight Jeremi / Mario X / LinkedIn review (007f4e6)
 - Merge pull request #1 from Venmarc/fastball/secondbrain (98aba3a)
 
+
+## 2026-09-12
+
+- docs: Node v20→v24.21.0 upgrade session log; new ANTI_PATTERNS Node.js/nvm section (timeout-killed reinstall, systemd PATH pin)
+
+
