@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "6aa4a0c8ca2781e0",
+        "id": "a8c89497e6d208a2",
         "type": "tabs",
         "children": [
           {
-            "id": "8f2565796d0bc550",
+            "id": "631c0f81ff80feeb",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "00-Inbox/Sites To Extract.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Sites To Extract"
             }
           }
         ]
@@ -204,8 +218,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e62603f6e77f1f11",
+  "active": "631c0f81ff80feeb",
   "lastOpenFiles": [
+    "00-Inbox/2026-08-04_brainstorm-cross-machine-session-awareness.md",
+    "00-Inbox/Untitled.md",
+    "05-Daily/weekly/2026-08-09.md",
+    "ANTI_PATTERNS.md",
+    "01-Projects/Ledger/Ledger.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "00-Inbox/Pet Clone Website.md",
+    "Recording 20260912185218.m4a",
+    "Recording 20260912185026.m4a",
+    "Recording 20260912184851.m4a",
+    "Recording 20260912184736.m4a",
+    "Recording 20260912184632.m4a",
+    "Recording 20260912184347.m4a",
+    "Recording 20260912183933.m4a",
+    "Recording 20260912184016.m4a",
+    "Recording 20260912182927.m4a",
     "06-Agent-Sessions/2026-09-09-grok-sloth-footer.md",
     "06-Agent-Sessions/2026-09-09-grok-lamalama-rooms.md",
     "06-Agent-Sessions/2026-09-08-grok-lamalama-rooms.md",
@@ -233,25 +264,8 @@
     "06-Agent-Sessions/2026-09-08-footer-1-north-loft-polish.md",
     "index.md",
     "demo/mascot-css-mvp/index.html.md",
-    "demo/mascot-css-mvp",
     "03-Resources/Design/Footer-Non-Boring/00-FOOTER-1-research-brief.md",
     "03-Resources/Design/Footer-Non-Boring/03-pen-line-architecture-strip.md",
-    "03-Resources/Design/Footer-Non-Boring/02-oil-prompt-pipeline.md",
-    "03-Resources/Design/Footer-Non-Boring/01-cursor-follow-mascot.md",
-    "00-Inbox/Update_Update.md",
-    "03-Resources/Design/Footer-Non-Boring/demo/mascot-css-mvp",
-    "03-Resources/Design/Footer-Non-Boring/demo",
-    "raw/2026-09-08-lamalama-site-teardown.md",
-    "03-Resources/Design/Footer-Non-Boring/03-pen-line-architecture-strip.md.1845905604",
-    "03-Resources/Design/Footer-Non-Boring/02-oil-prompt-pipeline.md.932188634",
-    "03-Resources/Design/Footer-Non-Boring/01-cursor-follow-mascot.md.1756962554",
-    "03-Resources/Design/Footer-Non-Boring/INDEX.md.815263801",
-    "06-Agent-Sessions/2026-09-07-footer-1-research-brief.md",
-    "03-Resources/Design/Footer-Non-Boring",
-    "Assets/Screencast From 2026-07-20 04-37-04.mp4",
-    "03-Resources/Design/Web-Garnish/_index.md",
-    "03-Resources/Design/Web-Garnish/06-Hermes-Skill-Stack.md",
-    "03-Resources/Design/Web-Garnish/05-Perspective-Typography.md",
     "Attachments/Untitled.canvas",
     "03-Resources/Skills/Frontend Awesomeness.canvas"
   ]

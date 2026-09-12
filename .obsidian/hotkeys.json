@@ -2,19 +2,9 @@
   "audio-recorder:start": [
     {
       "modifiers": [
-        "Alt",
-        "Shift"
+        "Mod"
       ],
-      "key": "R"
-    }
-  ],
-  "audio-recorder:stop": [
-    {
-      "modifiers": [
-        "Alt",
-        "Shift"
-      ],
-      "key": "S"
+      "key": " "
     }
   ],
   "obsidian-git:commit": [
@@ -60,6 +50,15 @@
         "Mod"
       ],
       "key": "F"
+    }
+  ],
+  "audio-recorder:stop": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": " "
     }
   ]
 }

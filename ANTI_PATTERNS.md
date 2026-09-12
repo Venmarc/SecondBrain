@@ -1,17 +1,15 @@
 <!--
 AGENT: Read this file at the start of any session that touches code — unconditional,
-not just "vault work" (see GEMINI.md boot sequence).
+not just "vault work" (see ~/AGENTS.md boot sequence).
 THIS FILE BECOMES AN INDEX ONCE SPLIT. A section that's already been split will
 contain a one-line pointer to /SecondBrain/03-Resources/Principles/<slug>.md
 instead of a table. Follow the link if your task touches that technology — do not
 treat the short pointer line as the whole answer, the entries live in the linked file.
 ADDING A NEW ENTRY:
-1. Find the header matching the technology (## Clerk, ## Supabase, ## Next.js etc). If none
-   exists, create one. Use the most specific reasonable name — don't pre-split by
-   version or sub-feature until a header itself gets long.
+1. Find the header matching the technology (## Clerk, ## Supabase, ## Next.js etc). If none exists, create one. Use the most specific reasonable name — don't pre-split by version or sub-feature until a header itself gets long.
 2. Add one row to that header's table (the one here, or the split-off file if this
    header has already been split — check for a pointer first).
-3. Only log Confirmed root causes, not hypotheses. See GEMINI.md Memory Rules for
+3. Only log Confirmed root causes, not hypotheses. See ~/AGENTS.md Memory Rules for
    exactly when a new row is required.
 SPLIT THRESHOLD — mandatory self-check before ending any session that edited this file:
 Count total lines in this file. If >= 200:
@@ -26,8 +24,7 @@ Count total lines in this file. If >= 200:
  
 # Anti-Patterns — Do Not Repeat (Index)
  
-Cross-project. If your task touches a technology listed below, read that section —
-or follow its link if it's already been split out — before writing related code.
+Cross-project. If your task touches a technology listed below, read that section — or follow its link if it's already been split out — before writing related code.
  
 ## Clerk
  
