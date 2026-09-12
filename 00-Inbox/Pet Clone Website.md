@@ -13,3 +13,8 @@ It didn't click for me at first cos I wasn't thinking of building something in t
 ![[Recording 20260912185026.m4a]]
 
 ![[Recording 20260912185218.m4a]]
+
+Damn. it's raining here, and my PC battery is low, so I can't continue for long.
+
+## Vision
+I want the site to look, behave, function, tnteract, attract, like a real company's website

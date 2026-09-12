@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-Inbox/Sites To Extract.md",
+                "file": "00-Inbox/Pet Clone Website.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Sites To Extract"
+              "title": "Pet Clone Website"
             }
           }
         ]
@@ -220,6 +220,7 @@
   },
   "active": "631c0f81ff80feeb",
   "lastOpenFiles": [
+    "00-Inbox/Sites To Extract.md",
     "00-Inbox/2026-08-04_brainstorm-cross-machine-session-awareness.md",
     "00-Inbox/Untitled.md",
     "05-Daily/weekly/2026-08-09.md",
@@ -265,7 +266,6 @@
     "index.md",
     "demo/mascot-css-mvp/index.html.md",
     "03-Resources/Design/Footer-Non-Boring/00-FOOTER-1-research-brief.md",
-    "03-Resources/Design/Footer-Non-Boring/03-pen-line-architecture-strip.md",
     "Attachments/Untitled.canvas",
     "03-Resources/Skills/Frontend Awesomeness.canvas"
   ]
