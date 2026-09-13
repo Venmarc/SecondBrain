@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-13 — Web-Garnish: ACQUIRE particle footer rebuilt as antigravity morph-field (v2)
+
+- [[03-Resources/Design/Web-Garnish/09-Particle-Footer|09-Particle-Footer]] — v2 recipe: silhouette-sampled handshake pair replaces stickman; interaction model moved to the Effects_Glossary "Morphing particle field" mechanics (permanent homes, 3s life cycle, hoverProgress² assembly, 25% non-joiners). Pitfalls documented (nearest-home assignment starvation, per-axis bbox squash, aura artifact, clip-art busts, virtual-time screenshot lies).
+- `demos/acquire-particle-footer/` — index.html (self-contained: embedded silhouette mask, no network), preview.png (hover state), preview-idle.png (resting field).
+- `assets/` +2: `handshake-silhouette-pair.png` (generated target pair, AGY-verified proportions) + `handshake-silhouette-pair-mask.png` (thresholded binary mask, the sampling input).
+- [[03-Resources/Design/Web-Garnish/07-Build-Runbook|07-Build-Runbook]] — sand-particles row updated to v2.
+
 ### 2026-09-13 — Web-Garnish batch 2: living & editorial footers
 
 #### Added
