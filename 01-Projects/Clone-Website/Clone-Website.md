@@ -6,14 +6,16 @@ tags: [project, active, clone-website, web-design, fiction-site]
 
 > **One-line Summary**: Fictional-but-believable human cloning company website, White Desert's skeleton with lab aesthetics, Lamalama motion effects, AI-generated twins imagery frontloaded before the SuperGrok sub expires. Brainstorm complete; planning next.
 
-**Status:** Brainstorm complete (2026-09-13) → planning. Code: not started.
-**Raw sources:** [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|brainstorm raw archive]] (6 voice transcripts + phone note + seed note). White Desert reference shots in `Docs/assets/white-desert/`.
+**Status:** Brainstorm complete (2026-09-13) → research dig complete (2026-09-13) → awaiting name + pricing fork. Code: not started.
+**Raw sources:** [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|brainstorm raw archive]] (6 voice transcripts + phone note + seed note). White Desert reference shots in `Docs/assets/white-desert/`. Research digest: [[01-Projects/Clone-Website/Docs/research-cloning-shabang|The Whole Cloning Shabang]] (42 sources).
 
 ## What this is
 
 A fake company site for cloning **human beings** (not pets — see D2), played 100% straight. No "this is a demo" anywhere in visitor-visible copy, same as White Desert sells Antarctica: luxury-biofiction, plausible-scientific, cinematic. The fiction breaks only in the waitlist signup email.
 
 **North star:** White Desert (white-desert.com) — luxury travel to the harshest place on Earth; ours is luxury biotech at the frontier of reproduction. Awwwards-level feel.
+
+**Core narrative (settled by research, 2026-09-13):** The honest company sells the delayed twin; the customer buys the second chance; the site holds both without lying. The science is all real except the one fictional breakthrough (epigenetic reprogramming solved). Clone output is always a baby (adult clones would be a different, darker fiction — see D8).
 
 ## Decision log
 
@@ -26,6 +28,10 @@ A fake company site for cloning **human beings** (not pets — see D2), played 1
 | D5 | ALL imagery/video AI-generated (Grok + Gemini), frontloaded before SuperGrok expires (3-4 day window from 2026-09-12) | Voice note 4: "assets, images and videos will be AI generated… GROC and Gemini seem to be close to making real looking images and videos." Asset generation is the deadline-bearing work; site build is not. |
 | D6 | Effects ported from `rep-lamalama` (github.com/Venmarc/rep-lamalama, public) + Web-Garnish footer kit + Effects_Glossary — not rebuilt from scratch | Cursor trail, image-click-distortion, logo-grain loading already reverse-engineered with working GLSL (`tried` status in glossary). Original ~/Pastries copy died with the PC; GitHub is the source of truth. |
 | D7 | Two-step realism: linked pages exist but nothing deeper (link → real page → maybe one more real page → dead end) | Phone note: "a two-step realism feel… and nothing else after that." |
+| D8 | **Pricing fork resolved by research: $5M = child donor / $10M = adult donor pricing (donor-age reading), clone output is always a baby.** Fallback ladder $1M/$5M if $5/10 reads too steep. | Real anchors: dog clone $50k, horse $85k, elite surrogacy $250k–$300k, genome sequencing $500. $5M is ~20x the top real-world reproduction price = believable first-of-its-kind premium. Output-adult clones (The Prestige/Moon) rejected as a different fiction. Victor's call whether to accept donor-age reading. |
+| D9 | Footer = **engraved vignette** (Web-Garnish style 01) | Victor approved 2026-09-13. Bio-luxury fit, LCP-safe, pure SVG + hatch pattern per runbook. |
+| D10 | Code lives in a **GitHub repo**; locally at `~/Projects` on this machine, `Documents` folder on Victor's PC | Victor 2026-09-13: "Code lives in GitHub. Here it lives in ~/Projects. When working on my PC, it'll be stored in the Documents folder." |
+| D11 | Name shortlist: **Codon** (preferred — no biotech collision found) vs **Chrom** (near-collisions: Chroma Medicine, nChroma Bio) | Victor researching names 2026-09-13; Tavily verification confirmed Codon is the cleaner mark. Victor's final call. |
 
 ## Page structure (White Desert skeleton, remapped)
 
