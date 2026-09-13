@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-13 — Web-Garnish batch 2: living & editorial footers
+
+#### Added
+- [[03-Resources/Design/Web-Garnish/08-Editorial-Scene-Footer]] — white page + warm arch-bridge scene at the bottom edge + animated smoke layer (replication recipe: photo/illustration/SVG scene, canvas smoke emitter, reduced-motion rules).
+- [[03-Resources/Design/Web-Garnish/09-Particle-Footer]] — near-black page, sand-particle text/shape on canvas (getImageData targets, 600–2000 grains), static feTurbulence fallback, perf rules.
+- [[03-Resources/Design/Web-Garnish/10-Night-Scene-Footer]] — 100% CSS night scene: navy gradient, one radial glow, flat silhouettes, star field, grain.
+- [[03-Resources/Design/Web-Garnish/11-Minimal-Gold-Footer]] — cream + muted-gold, pure CSS, palette-and-proportion only.
+- `assets/` +6: `alim-editorial-train-bridge.jpg`, `alim-editorial-alt.jpg`, `alim-smoke-animation.mp4`, `benjamin-sand-particles.jpg`, `andrii-night-footer.jpg`, `amna-gold-footer.jpg`. Pixel-sampled palettes in each note.
+- [[03-Resources/Design/Web-Garnish/07-Build-Runbook]] — Batch 2 section: per-style build approach + the motion-layer rule (off-viewport pause, reduced-motion killing, subtlety).
+- Note: `benjamin-sand-particles.jpg` and `andrii-night-footer.jpg` scene subjects are marked "verify against asset" — vision lane was text-only at capture.
+
 ### 2026-09-13 — Clone-Website project created (brainstorm consolidated)
 
 #### Added
