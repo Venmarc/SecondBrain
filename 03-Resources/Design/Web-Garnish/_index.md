@@ -26,8 +26,8 @@ Victor wants the hand-made, iconic art element in web footers/landing pages inst
 | [[06-Hermes-Skill-Stack\|Hermes skill stack]] | [painn](https://x.com/painn_x/status/2095060006127149480) | 19-skill Hermes rebuild list (agent ops, not design) |
 | **[[07-Build-Runbook]]** | — | How to recreate any of these in code: fonts, swatches, SVG/CSS idioms, asset pipeline. Reference images in `assets/`. |
 | [[08-Editorial-Scene-Footer]] | [alim 1](https://x.com/alimdesigner_/status/2097218379480232086) · [alim 2 (smoke)](https://x.com/alimdesigner_/status/2098305548508684373) | White page + warm arch-bridge scene at the bottom edge + animated smoke layer |
-| [[09-Particle-Footer]] | [BenjaminUIX](https://x.com/BenjaminUIX/status/2071245795995836437) | Near-black page, shape/text rendered as drifting sand particles (canvas) |
-| [[10-Night-Scene-Footer]] | [andrii](https://x.com/andriidesign1/status/2079542301966135441) | Full-bleed dark navy night scene, one glow, flat silhouettes (pure CSS) |
+| [[09-Particle-Footer]] | [BenjaminUIX](https://x.com/BenjaminUIX/status/2071245795995836437) | Near-black page, particle silhouettes (handshake figures) + particle-text headline, canvas. ACQUIRE |
+| [[10-Night-Scene-Footer]] | [andrii](https://x.com/andriidesign1/status/2079542301966135441) | Dark navy + electric-blue glows, FAQ tier + rounded CTA/footer card, pure CSS. Afford |
 | [[11-Minimal-Gold-Footer]] | [amna](https://x.com/amnadesignn/status/2075962836036300876) | Cream + muted-gold strip, tiny tracked type, pure CSS |
 
 ## The key design insight (SVG vs image)

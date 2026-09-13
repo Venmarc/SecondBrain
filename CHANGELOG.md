@@ -15,7 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - [[03-Resources/Design/Web-Garnish/11-Minimal-Gold-Footer]] — cream + muted-gold, pure CSS, palette-and-proportion only.
 - `assets/` +6: `alim-editorial-train-bridge.jpg`, `alim-editorial-alt.jpg`, `alim-smoke-animation.mp4`, `benjamin-sand-particles.jpg`, `andrii-night-footer.jpg`, `amna-gold-footer.jpg`. Pixel-sampled palettes in each note.
 - [[03-Resources/Design/Web-Garnish/07-Build-Runbook]] — Batch 2 section: per-style build approach + the motion-layer rule (off-viewport pause, reduced-motion killing, subtlety).
-- Note: `benjamin-sand-particles.jpg` and `andrii-night-footer.jpg` scene subjects are marked "verify against asset" — vision lane was text-only at capture.
+- Reference images verified via AGY gemini lane: benjamin = ACQUIRE particle-figures footer (handshake silhouettes + particle-text headline); andrii = Afford dark-mode FAQ tier + rounded CTA/footer card with electric-blue glows.
 
 ### 2026-09-13 — Clone-Website project created (brainstorm consolidated)
 

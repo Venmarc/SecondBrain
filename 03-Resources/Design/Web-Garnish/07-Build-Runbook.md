@@ -111,8 +111,8 @@ Layer: base silhouette in ink at 15% opacity + hatch pattern = engraved vignette
 | Style | Note | Build approach | Heavy? |
 |---|---|---|---|
 | Editorial scene + smoke | [[08-Editorial-Scene-Footer]] | White page, warm-taupe arch-bridge strip at bottom edge; canvas smoke emitter (60–150 blobs, `screen` blend) or prerendered smoke clip | Smoke = light canvas loop; must pause off-viewport |
-| Sand particles | [[09-Particle-Footer]] | Canvas particle text/shape: offscreen `getImageData` targets, 600–2000 grains lerping + jitter; static fallback = SVG grain clip | Loop = rAF; stop off-screen, respect reduced-motion |
-| Night scene | [[10-Night-Scene-Footer]] | 100% CSS: navy gradient, one radial glow, 3–4 flat silhouettes, star dots, grain overlay | Zero JS if no flicker |
+| Sand particles | [[09-Particle-Footer]] | Canvas particle figures/text: offscreen `getImageData` targets, 600–2000 grains lerping + jitter; highlight one headline word bright-white; static fallback = SVG grain clip | Loop = rAF; stop off-screen, respect reduced-motion |
+| Night scene | [[10-Night-Scene-Footer]] | 100% CSS: black + deep-navy surfaces, electric-blue radial glows, rounded CTA/footer card, accordion FAQ tier, white pill buttons | Zero JS if no flicker |
 | Minimal gold | [[11-Minimal-Gold-Footer]] | Pure CSS: ivory page + muted-gold strip, tiny tracked type, big padding | Zero JS |
 
 Rule for batch 2: any motion layer must (1) pause when off-viewport, (2) die under `prefers-reduced-motion`, (3) be subtle enough that a screenshot still looks good. Motion is garnish, not the product.

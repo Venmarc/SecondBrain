@@ -13,8 +13,8 @@ tags:
 
 **Source:** [Andrii](https://x.com/andriidesign1/status/2079542301966135441) — "Footer design" (178 likes).
 
-## What it is (evidence)
-2048×2018 tall frame, near-black base with a blue family throughout: mid-left band `#0f192a` / `#1c2738` / `#182331` (dark navy), top-right hint of luminance, rest black. Reads as a night landscape with a lit zone on the left. Exact scene subject not visually confirmable (vision lane down at capture) — **verify against `assets/andrii-night-footer.jpg`.**
+## What it is (evidence, verified via AGY gemini lane)
+Real design: **Afford**, "the AI finance OS for startups" — a dark-mode landing section, not a literal night landscape. Two visual tiers: (1) FAQ tier, two columns — pill tag "FAIR QUESTIONS", headline *"Asked before you asked."*, a founder-support card ("a human replies within a day – usually one of the founders") + "Ask us anything" button; right side an accordion of 5 question cards, one expanded; (2) a large rounded CTA + footer card — *"Stop guessing. Start asking."* + "Get early access", then footer nav: brand column (chevron `^` logo, tagline, AICPA SOC2 Type 2 badge), Product / Company / Stay in Touch columns, legal bar (© 2026 afford | Privacy | Terms). Palette: pitch black + deep navy surfaces, **electric/steel-blue and cyan radial glows** (the lit zone my pixel sampling caught at left-mid, `#0f192a`/`#1c2738`), pure white headings, white pill buttons.
 
 ## Replication recipe (100% CSS/SVG, zero images)
 1. **Sky:** body of the footer = `linear-gradient(180deg, #050a14 0%, #0f192a 60%, #1c2738 100%)`.

@@ -13,12 +13,12 @@ tags:
 
 **Source:** [BenjaminUIX](https://x.com/BenjaminUIX/status/2071245795995836437) — "Simple but meaningful footer design!" (432 likes).
 
-## What it is (evidence — partially unverified)
-Near-black page (`#0c0c0c` dominates at 74%); the only lit region is a mid-right zone in dim olive-sand tones (`rgb(45,51,41)`-family) — i.e. a subtle particle/grain field, not a bright scene. Exact subject (particle text vs. particle dune/logo) could not be visually confirmed: my vision lane was down at capture time. **Verify against `assets/benjamin-sand-particles.jpg`.**
+## What it is (evidence, verified via AGY gemini lane)
+Real design: **ACQUIRE** (chat/automation SaaS) dark footer. Two human silhouettes built from glowing point-cloud particles stand on a rolling dune ridge, reaching toward each other in a handshake-grasp; luminous particle trails stream across the landscape into a black void with sparse star-dust. Below the particle visual: headline *"Provide your customers the assistance they need"* — the word "customers" rendered bright white while the rest is dim grey particle texture — plus a solid white "Schedule a demo" button. Then four clean link columns (System / Items / Help Center / Get Started Today) and a © 2026 copyright bar. Monochrome: near-black `#0c0c0c` canvas, white/silver particles. Pixel-sampled: lit particle zone sits mid-frame (`rgb(45,51,41)` olive-grey at capture scale).
 
 ## Replication recipe
 **Canvas particle system (the honest way)**
-1. Offscreen canvas: render the *target* (a word, logo, or dune-shape path) in white on black at footer resolution.
+1. Offscreen canvas: render the *target* — two figure silhouettes (or a glyph, logo, word) — in white on black at footer resolution.
 2. `getImageData` → collect pixel positions where alpha > 0 → those are the particles' targets. Cap N (`600–2000`).
 3. Each particle: random start position, target position, `pos += (target - pos) * 0.02`, plus small per-particle jitter/gravity so grains feel loose (they should *settle*, not weld).
 4. Draw 1–2px rects in sand tones (`#b8a277`, `#9a8a63`, `#7d7054`) on `#0c0c0c`.
