@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-13 — Web-Garnish: build kit (runbook + reference assets)
+
+#### Added
+- [[03-Resources/Design/Web-Garnish/07-Build-Runbook]] — recreate-any-style runbook: sampled swatches (duotone `#fdf9ef`/`#466eb4`, vermilion `#ee4032`), Google Fonts stacks, paste-ready SVG/CSS idioms (hatch pattern, duotone filter, paper grain, torn-paper, stamp perforation, sticker tilt), per-style readiness matrix.
+- `03-Resources/Design/Web-Garnish/assets/` — 21 reference images + interactive-stickers demo video from all 7 source posts (footers, stamp posters, watercolor prints, perspective-type posters).
+
 ### 2026-09-08 — Assets consolidation (attachments → Assets/)
 
 #### Changed
