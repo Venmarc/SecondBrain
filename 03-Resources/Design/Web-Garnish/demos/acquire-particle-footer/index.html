@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACQUIRE — Provide your customers the assistance they need</title>
+<link rel="icon" href="data:,">
+<style>
+  :root {
+    --bg: #0c0c0c;
+    --ink: #f2f2f2;
+    --grey: #8f959d;
+    --grey-dim: #6a6f76;
+    --rule: #202326;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--ink); font-family: -apple-system, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  .page { min-height: 100vh; display: flex; flex-direction: column; position: relative; }
+  .scene { position: relative; width: 100%; height: clamp(340px, 44vh, 560px); overflow: hidden; }
+  #scene { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .scene::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(to bottom, transparent 84%, #0c0c0c 99%);
+  }
+  .content { position: relative; width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+  .cta-row { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 48px 0 40px; flex-wrap: wrap; }
+  h1 {
+    font-size: clamp(26px, 3.4vw, 42px);
+    font-weight: 720;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+    color: var(--grey);
+    max-width: 12em;
+    text-rendering: optimizeLegibility;
+  }
+  h1 .hl { color: #ffffff; }
+  .btn {
+    flex: 0 0 auto;
+    background: #ffffff; color: #0c0c0c;
+    font-size: 15px; font-weight: 620; letter-spacing: 0.01em;
+    padding: 14px 30px; border-radius: 999px;
+    border: none; cursor: pointer; text-decoration: none; display: inline-block;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 28px rgba(255,255,255,.14); }
+  .cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding: 40px 0 64px; }
+  .col h2 { font-size: 12px; font-weight: 680; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey-dim); margin-bottom: 18px; }
+  .col a { display: block; font-size: 14px; line-height: 2.1; color: #b6bac0; text-decoration: none; transition: color .12s ease; }
+  .col a:hover { color: #ffffff; }
+  .legal { border-top: 1px solid var(--rule); padding: 22px 0 30px; font-size: 12px; letter-spacing: 0.05em; color: var(--grey-dim); }
+  .grain {
+    position: absolute; inset: 0; pointer-events: none; opacity: .045; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @media (max-width: 860px) {
+    .cols { grid-template-columns: repeat(2, 1fr); }
+    .cta-row { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="scene">
+    <canvas id="scene"></canvas>
+    <div class="grain"></div>
+  </div>
+  <div class="content">
+    <div class="cta-row">
+      <h1>Provide your <span class="hl">customers</span> the assistance they need</h1>
+      <a class="btn" href="#">Schedule a demo</a>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <h2>System</h2>
+        <a href="#">Interactive Chat</a><a href="#">Video &amp; Audio Calling</a><a href="#">Task Management</a><a href="#">Call Handling</a><a href="#">Email Support</a>
+      </div>
+      <div class="col">
+        <h2>Items</h2>
+        <a href="#">Chat Support</a><a href="#">Audio &amp; Video Calls</a><a href="#">Processes</a><a href="#">Call Redirection</a><a href="#">Messages</a>
+      </div>
+      <div class="col">
+        <h2>Help Center</h2>
+        <a href="#">Support Chat</a><a href="#">Video Calling &amp; Voice</a><a href="#">Task Flows</a><a href="#">Call Management</a><a href="#">Email Communication</a>
+      </div>
+      <div class="col">
+        <h2>Get Started Today</h2>
+        <a href="#">Customer Chat</a><a href="#">Video &amp; Voice Calls</a><a href="#">Automated Workflows</a><a href="#">Call Routing</a><a href="#">Correspondence</a>
+      </div>
+    </div>
+    <div class="legal">© 2026 ACQUIRE. ALL RIGHTS RESERVED.</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var canvas = document.getElementById("scene");
+  var ctx = canvas.getContext("2d");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var W = 0, H = 0, dpr = 1;
+  var figureBoxes = [];
+  var groups = { fig: [], crest: [], fill: [] };
+  var particles = [];
+  var trails = [];
+  var stars = [];
+  var emitters = [];
+  var runner = null;
+
+  // ---------- geometry ----------
+  function drawFigure(g, mirror) {
+    var s = H / 520;
+    var cx = mirror ? W * 0.56 : W * 0.44;
+    var feetY = H * 0.84;
+    var mL = function (x) { return mirror ? -x : x; };
+    function pt(x, y) { return [cx + mL(x) * s, feetY + y * s]; }
+    var P = {};
+    P.head = pt(-6, -208); P.hip = pt(0, -118); P.neck = pt(-3, -182);
+    P.shL = pt(-22, -176); P.elL = pt(-52, -142); P.haL = pt(-66, -110);
+    P.shR = pt(13, -178); P.elR = pt(46, -162); P.haR = pt(92, -150);
+    P.kF = pt(9, -54); P.fF = pt(14, 0);
+    P.kB = pt(-9, -60); P.fB = pt(-13, 0);
+    function cap(a, b, w) {
+      g.lineCap = g.lineJoin = "round";
+      g.strokeStyle = "#fff"; g.lineWidth = w * s;
+      g.beginPath(); g.moveTo(P[a][0], P[a][1]); g.lineTo(P[b][0], P[b][1]); g.stroke();
+    }
+    cap("hip", "neck", 34);
+    g.fillStyle = "#fff";
+    g.beginPath(); g.arc(P.head[0], P.head[1], 17 * s, 0, Math.PI * 2); g.fill();
+    cap("shR", "elR", 13.5); cap("elR", "haR", 12);
+    cap("shL", "elL", 12); cap("elL", "haL", 10.5);
+    cap("hip", "kF", 17); cap("kF", "fF", 14);
+    cap("hip", "kB", 16); cap("kB", "fB", 13);
+    figureBoxes.push({ x: cx - 100 * s, y: feetY - 232 * s, w: 220 * s, h: 236 * s });
+  }
+
+  function duneTopY(x, depth, ampScale, s) {
+    var t = H * (0.80 - depth);
+    var A = (24 + 26 * ampScale) * s * 0.5;
+    var B = (10 + 8 * ampScale) * s * 0.5;
+    var C = 6 * s * 0.5;
+    return t - A * Math.sin(x * 0.004 + depth * 3.1)
+             - B * Math.sin(x * 0.013 + depth * 5.7)
+             - C * Math.sin(x * 0.0011 + depth * 7.3);
+  }
+
+  function strokeCrest(g, depth, ampScale, s, width) {
+    g.strokeStyle = "#fff"; g.lineWidth = Math.max(2, width * s * 0.5); g.lineCap = "round";
+    g.beginPath();
+    for (var x = 0; x <= W; x += 3) {
+      var y = duneTopY(x, depth, ampScale, s);
+      if (x === 0) g.moveTo(x, y); else g.lineTo(x, y);
+    }
+    g.stroke();
+  }
+
+  // ---------- mask layers ----------
+  function buildMask() {
+    var s = H / 520;
+    var fig = document.createElement("canvas"), crest = document.createElement("canvas"), fill = document.createElement("canvas");
+    [fig, crest, fill].forEach(function (c) { c.width = W; c.height = H; });
+    var gf = fig.getContext("2d"), gc = crest.getContext("2d"), gl = fill.getContext("2d");
+    gf.fillStyle = gc.strokeStyle = gl.fillStyle = "#fff";
+
+    // dunes: fill band under each crest
+    [0.10, 0.0].forEach(function (depth, idx) {
+      var amp = idx === 0 ? 0.5 : 1.0;
+      var w = idx === 0 ? 2.5 : 5.5;
+      gl.beginPath(); gl.moveTo(0, H);
+      for (var x = 0; x <= W; x += 3) gl.lineTo(x, duneTopY(x, depth, amp, s));
+      gl.lineTo(W, H); gl.closePath(); gl.fill();
+      strokeCrest(gc, depth, amp, s, w);
+    });
+
+    drawFigure(gf, false); drawFigure(gf, true);
+    var meetX = W * 0.5, meetY = H * 0.84 - 150 * s;
+    gf.beginPath(); gf.ellipse(meetX, meetY, 15 * s, 9 * s, 0, 0, Math.PI * 2); gf.fill();
+    return { fig: fig, crest: crest, fill: fill };
+  }
+
+  function collectFrom(cvs, step, budget, out) {
+    var g = cvs.getContext("2d");
+    var img = g.getImageData(0, 0, W, H).data;
+    var pts = [];
+    for (var y = 0; y < H; y += step) {
+      for (var x = 0; x < W; x += step) {
+        if (img[(y * W + x) * 4 + 3] !== 0) pts.push(x, y);
+      }
+    }
+    // shuffle and cap
+    for (var i = pts.length / 2 - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t1 = pts[i * 2], t2 = pts[i * 2 + 1];
+      pts[i * 2] = pts[j * 2]; pts[i * 2 + 1] = pts[j * 2 + 1];
+      pts[j * 2] = t1; pts[j * 2 + 1] = t2;
+    }
+    var n = Math.min(budget, pts.length / 2);
+    for (i = 0; i < n; i++) out.push(pts[i * 2], pts[i * 2 + 1]);
+  }
+
+  function rebuild() {
+    var masks = buildMask();
+    groups = { fig: [], crest: [], fill: [] };
+    collectFrom(masks.fig, 2, 5800, groups.fig);
+    collectFrom(masks.crest, 2, 1700, groups.crest);
+    collectFrom(masks.fill, 5, 2000, groups.fill);
+
+    particles = [];
+    function push(list, bright, sizeBase, alphaMax) {
+      for (var i = 0; i < list.length / 2; i++) {
+        var tx = list[i * 2], ty = list[i * 2 + 1];
+        particles.push({
+          tx: tx, ty: ty, x: tx, y: ty, sx: Math.random() * W, sy: Math.random() * H,
+          t0: Math.random() * 800, dur: 900 + Math.random() * 800,
+          size: sizeBase + Math.random() * 1.4,
+          ph: Math.random() * Math.PI * 2, sp: 0.4 + Math.random() * 0.9,
+          a: alphaMax * (0.45 + Math.random() * 0.55),
+          col: bright ? (Math.random() < 0.78 ? "#ffffff" : "#d4dade")
+                      : (Math.random() < 0.5 ? "#aab1ba" : "#8a919a")
+        });
+      }
+    }
+    push(groups.fig, true, 2.3, 0.95);
+    push(groups.crest, true, 1.8, 0.85);
+    push(groups.fill, false, 1.4, 0.6);
+
+    // stream emitter behind the left figure
+    emitters = [{ x: W * 0.29, y: H * 0.56 }];
+    trails = [];
+    stars = [];
+    for (var i = 0; i < 100; i++) {
+      stars.push({ x: Math.random() * W, y: Math.random() * H * 0.62, r: 0.4 + Math.random() * 0.9, ph: Math.random() * 6.28, sp: 0.4 + Math.random() * 1.1 });
+    }
+  }
+
+  // ---------- sizing ----------
+  function sizeCanvas() {
+    var r = canvas.parentElement.getBoundingClientRect();
+    dpr = Math.min(2, window.devicePixelRatio || 1);
+    W = Math.max(320, Math.round(r.width));
+    H = Math.max(260, Math.round(r.height));
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    canvas.style.width = W + "px"; canvas.style.height = H + "px";
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    rebuild();
+    ctx.clearRect(0, 0, W, H);
+    if (reduceMotion) { drawFrame(0); return; }
+    if (runner) { cancelAnimationFrame(runner); }
+    runner = requestAnimationFrame(frame);
+  }
+
+  function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+  // ---------- frame ----------
+  function drawFrame(now) {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = "lighter";
+    // aura behind figures
+    var grd = ctx.createRadialGradient(W * 0.5, H * 0.58, 20, W * 0.5, H * 0.58, W * 0.52);
+    grd.addColorStop(0, "rgba(130,150,170,0.05)");
+    grd.addColorStop(1, "rgba(130,150,170,0)");
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, W, H);
+
+    // stars
+    for (var i = 0; i < stars.length; i++) {
+      var st = stars[i];
+      var tw = reduceMotion ? 0.45 : 0.2 + 0.35 * (0.5 + 0.5 * Math.sin(now * 0.001 * st.sp + st.ph));
+      ctx.fillStyle = "rgba(238,242,246," + tw.toFixed(3) + ")";
+      ctx.fillRect(st.x, st.y, st.r, st.r);
+    }
+
+    // stream trails
+    if (!reduceMotion) {
+      var e = emitters[0];
+      while (trails.length < 340) {
+        trails.push({
+          x: e.x + (Math.random() - 0.5) * 16, y: e.y + (Math.random() - 0.5) * 12,
+          vx: 1.0 + Math.random() * 1.4, vy: 0.02 + Math.random() * 0.18,
+          ph: Math.random() * 6.28,
+          life: 0, max: 150 + Math.random() * 110, a0: 0.1 + Math.random() * 0.12
+        });
+      }
+      ctx.strokeStyle = "#c9d2dc";
+      for (i = trails.length - 1; i >= 0; i--) {
+        var tr = trails[i];
+        tr.life++;
+        if (tr.life > tr.max || tr.x > W + 20) { trails.splice(i, 1); continue; }
+        var fade = 1 - tr.life / tr.max;
+        ctx.globalAlpha = tr.a0 * fade;
+        ctx.lineWidth = 1;
+        var wy = tr.y + Math.sin(tr.life * 0.05 + tr.ph) * 0.6;
+        ctx.beginPath(); ctx.moveTo(tr.x - 7, wy + 2);
+        ctx.lineTo(tr.x, wy - 1); ctx.stroke();
+        tr.x += tr.vx; tr.y += tr.vy + tr.life * 0.0003;
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    // particles
+    for (i = 0; i < particles.length; i++) {
+      var p = particles[i];
+      var prog = reduceMotion ? 1 : Math.min(1, (now - p.t0) / p.dur);
+      var e2 = easeOut(prog);
+      var jx = reduceMotion ? 0 : Math.sin(now * 0.001 * p.sp + p.ph) * 0.7;
+      var jy = reduceMotion ? 0 : Math.cos(now * 0.001 * p.sp * 0.9 + p.ph) * 0.7;
+      var x = p.sx + (p.tx - p.sx) * e2 + jx;
+      var y = p.sy + (p.ty - p.sy) * e2 + jy;
+      ctx.fillStyle = p.col;
+      ctx.globalAlpha = p.a * (0.5 + 0.5 * e2);
+      ctx.fillRect(x, y, p.size, p.size);
+    }
+    ctx.globalCompositeOperation = "source-over";
+    ctx.globalAlpha = 1;
+  }
+
+  function frame(now) {
+    drawFrame(now);
+    if (!reduceMotion) runner = requestAnimationFrame(frame);
+  }
+
+  // visibility control
+  function start() {
+    if (runner) return;
+    if (reduceMotion) { if (!started) { started = true; drawFrame(0); } return; }
+    started = true;
+    runner = requestAnimationFrame(frame);
+  }
+  function stop() { if (runner) { cancelAnimationFrame(runner); runner = null; } }
+  var started = false;
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) start(); else stop(); });
+    }, { rootMargin: "200px 0px" }).observe(canvas.parentElement);
+  }
+  var rz;
+  window.addEventListener("resize", function () { clearTimeout(rz); rz = setTimeout(sizeCanvas, 150); });
+  sizeCanvas();
+  if (!("IntersectionObserver" in window)) start();
+  else {
+    var r = canvas.parentElement.getBoundingClientRect();
+    if (r.bottom > 0 && r.top < window.innerHeight) start();
+  }
+})();
+</script>
+</body>
+</html>

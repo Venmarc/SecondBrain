@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `assets/` +6: `alim-editorial-train-bridge.jpg`, `alim-editorial-alt.jpg`, `alim-smoke-animation.mp4`, `benjamin-sand-particles.jpg`, `andrii-night-footer.jpg`, `amna-gold-footer.jpg`. Pixel-sampled palettes in each note.
 - [[03-Resources/Design/Web-Garnish/07-Build-Runbook]] — Batch 2 section: per-style build approach + the motion-layer rule (off-viewport pause, reduced-motion killing, subtlety).
 - Reference images verified via AGY gemini lane: benjamin = ACQUIRE particle-figures footer (handshake silhouettes + particle-text headline); andrii = Afford dark-mode FAQ tier + rounded CTA/footer card with electric-blue glows.
+- **First working replication**: `demos/acquire-particle-footer/index.html` — the ACQUIRE particle footer rebuilt as a single self-contained HTML file (canvas particles: two figure silhouettes + hand-clasp knot, dune crests, starfield, flowing stream, gather-in animation, off-viewport pause, reduced-motion static). Verified frame-stable via real-time Chromium capture + AGY vision review.
 
 ### 2026-09-13 — Clone-Website project created (brainstorm consolidated)
 
