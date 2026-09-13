@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-13 — Clone-Website project created (brainstorm consolidated)
+
+#### Added
+- [[01-Projects/Clone-Website/Clone-Website|Clone-Website hub]] — structured plan + decision log (D1–D7) from the 2026-09-12 voice notes and the phone continuation: human-clone fiction company site, White Desert skeleton, zero on-site fiction-break (reveal only in waitlist email), assets AI-generated inside the SuperGrok window, effects ported from rep-lamalama.
+- [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|brainstorm raw archive]] — verbatim transcripts of the six 2026-09-12 voice recordings (transcribed via Hermes STT), the phone "Clone Website" continuation, provenance; 7 White Desert reference screenshots in `01-Projects/Clone-Website/Docs/assets/white-desert/`.
+
+#### Changed
+- [[00-Inbox/Pet Clone Website.md]] — added completion pointer to the raw archive (note truncated mid-sentence when the PC battery died; lives on in the phone continuation).
+
 ### 2026-09-13 — Web-Garnish: build kit (runbook + reference assets)
 
 #### Added

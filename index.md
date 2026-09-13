@@ -18,6 +18,10 @@
 
 ## ⚡ Active Projects (01-Projects)
 
+### 🧬 [[01-Projects/Clone-Website/Clone-Website|Clone-Website]] — Brainstorm complete → planning (asset window urgent)
+Fictional human-cloning company site played straight (White Desert skeleton, lab imagery, Lamalama motion). Raw: [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|voice notes + phone archive]]. SuperGrok asset-generation window expires ~09-15/16.
+**Blocker:** company name + footer style undecided.
+
 ### 🏎️ [[01-Projects/Driving-Game/Driving-Game|Driving Game]] — Stage 1 in progress (Schipper / DG-S1)
 
 **Code:** `Documents/Driving-Game` · **Ticket:** [[02-Areas/Ops/Jeremy-Board|Jeremy Board]] `DG-S1`  
