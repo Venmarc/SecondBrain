@@ -37,6 +37,8 @@ Real design: **ACQUIRE** (chat/automation SaaS) dark footer. Two human silhouett
 
 **Working build**: `demos/acquire-particle-footer/index.html` (+ `preview.png` = hover state, `preview-idle.png` = resting field).
 
+**Wind layer (v2.1)**: gust envelope `0.35–1.3` (slow sin² surges ~18s + fast flutter — never calm, never storm); height-weighted downstream lean `wind·(1.2+2.8·sin)·(0.35+0.65·heightFraction)` so the pair streams like cloth; plucked grains (streak 4.5×1px, gravity 0.045, respawn at post) at `wind·0.0022`/frame; saltation streaks in a 26px band above the crests + air haze above. Dunes got a mid-frequency harmonic (`x·0.011`) + third (`x·0.026`) so ridges roll instead of reading flat. Bigger picture (environments: trees sway, people work, birds fly, billboards move) captured in [[00-Inbox/2026-09-13_active-particle-environments|00-Inbox/2026-09-13_active-particle-environments]].
+
 **v1 recipe (static stickman, kept for reference)**: offscreen canvas drew capsule-limb figures, sampled lit pixels → home targets, grains lerp in + jitter; reads as stickmen — superseded by the silhouette-sampling v2 above.
 
 **Cheap variant (static)** — SVG `feTurbulence` grain (see [[07-Build-Runbook]] §grain) clipped to the word/phrase, sand fill on near-black. Same vibe, zero JS, no motion.

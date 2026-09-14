@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-13 — Web-Garnish: desert-wind layer on the ACQUIRE particle footer
+
+- `demos/acquire-particle-footer/` — windy-desert pass: dusk backdrop with warm horizon haze + layered dune masses, gust envelope (18s surges + flutter), saltation streaks (short two-segment curls riding the crests), grains plucked off the formed pair mid-gust and streaming downwind, height-weighted wind lean (figures ripple like cloth, hold structure). Previews refreshed (hover + idle).
+- `00-Inbox/2026-09-13_active-particle-environments.md` — Victor's bigger-picture capture: structure-mask + force-field + churn engine applied to whole environments (swaying trees, working figures, bird flocks, animated billboards); scene menu + force vocabulary; open decisions parked.
+
 ### 2026-09-13 — Web-Garnish: ACQUIRE particle footer rebuilt as antigravity morph-field (v2)
 
 - [[03-Resources/Design/Web-Garnish/09-Particle-Footer|09-Particle-Footer]] — v2 recipe: silhouette-sampled handshake pair replaces stickman; interaction model moved to the Effects_Glossary "Morphing particle field" mechanics (permanent homes, 3s life cycle, hoverProgress² assembly, 25% non-joiners). Pitfalls documented (nearest-home assignment starvation, per-axis bbox squash, aura artifact, clip-art busts, virtual-time screenshot lies).

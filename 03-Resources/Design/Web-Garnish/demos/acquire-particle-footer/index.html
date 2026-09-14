@@ -14,11 +14,11 @@
   #scene { position:absolute; inset:0; width:100%; height:100%; display:block; }
   .scene::after {
     content:""; position:absolute; inset:0; pointer-events:none;
-    background:linear-gradient(to bottom, transparent 84%, #0c0c0c 99%);
+    background:linear-gradient(to bottom, transparent 72%, #0c0c0c 99%);
   }
   .hint {
     position:absolute; bottom:18px; left:50%; transform:translateX(-50%);
-    font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#4c4c4c;
+    font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#756f66;
     pointer-events:none; transition:opacity .6s ease;
   }
   .hint.gone { opacity:0; }
@@ -159,6 +159,13 @@
     for (var i = 0; i < 110; i++) {
       stars.push({ x: Math.random() * W, y: Math.random() * H * 0.62, r: .4 + Math.random() * .9, ph: Math.random() * 6.92, sp: .4 + Math.random() * 1.1 });
     }
+    streaks = [];
+    for (var s2 = 0; s2 < 240; s2++) {
+      var sy2 = Math.random() < 0.7
+        ? duneTopY(Math.random() * W, Math.random() < 0.5 ? 0 : 0.10, 1.0) - Math.random() * 26  // saltation band
+        : H * (0.25 + Math.random() * 0.35);                                                    // air haze
+      streaks.push({ x: Math.random() * W, y: sy2, len: 5 + Math.random() * 7, sp: 55 + Math.random() * 85, al: 0.04 + Math.random() * 0.08, wob: Math.random() * 6.28, arc: 0.6 + Math.random() * 1.4 });
+    }
     particles = [];
     var budget = Math.min(5200, Math.max(2600, Math.round(W * 3.4)));
     for (var j = 0; j < budget; j++) particles.push(makeParticle(true));
@@ -166,8 +173,12 @@
 
   function duneTopY(x, depth, amp) {
     var t0 = H * (0.80 - depth), s = H / 520;
-    var A = (24 + 26 * amp) * s * .5, B = (10 + 8 * amp) * s * .5, C = 6 * s * .5;
-    return t0 - A * Math.sin(x * .004 + depth * 3.1) - B * Math.sin(x * .013 + depth * 5.7) - C * Math.sin(x * .0011 + depth * 7.3);
+    var A = (26 + 30 * amp) * s * .5, B = (16 + 14 * amp) * s * .5,
+        C = 7 * s * .5, D = 8 * s * .5;
+    return t0 - A * Math.sin(x * .004 + depth * 3.1)
+             - B * Math.sin(x * .011 + depth * 5.7)
+             - C * Math.sin(x * .026 + depth * 9.4)
+             - D * Math.sin(x * .0011 + depth * 7.3);
   }
 
   function makeParticle(scatter) {
@@ -188,7 +199,10 @@
       tone: sandTones[(Math.random() * 6) | 0],
       seed: Math.random(),
       joins: Math.random() < 0.80,
-      target: null
+      target: null,
+      hf: 0.5,          // height fraction on the shape (1 = head, 0 = feet)
+      pluck: 0,         // frames left streaming as a plucked grain
+      pvx: 0, pvy: 0
     };
   }
 
@@ -213,6 +227,7 @@
     for (var a = 0; a < order.length && a < joiners.length; a++) {
       var sp = shape[order[a]];
       particles[joiners[a]].target = { x: sp.sx, y: sp.sy };
+      particles[joiners[a]].hf = 1 - sp.y; // sp.y normalized 0=top
     }
   }
 
@@ -234,6 +249,45 @@
     return null;
   }
 
+  /* ---------- desert wind ---------- */
+  var streaks = [];
+
+  // gust envelope: slow surges + fast flutter; 0.35..1.3, never calm, never storm
+  function windAt(time) {
+    var surge = Math.pow(0.5 + 0.5 * Math.sin(time * 0.35), 2);          // ~18s breathing
+    var flutter = 0.5 + 0.5 * Math.sin(time * 2.3 + Math.sin(time * 0.8) * 1.5);
+    return 0.35 + surge * 0.75 + flutter * 0.2;
+  }
+
+  // static desert backdrop: dusk sky + dune masses + horizon glow (also used by reduced-motion)
+  function drawBackdrop() {
+    var sky = ctx.createLinearGradient(0, 0, 0, H);
+    sky.addColorStop(0, "#0c0c0c");
+    sky.addColorStop(0.58, "#0f0d0b");
+    sky.addColorStop(0.82, "#221a10");   // warm haze low over the dunes
+    sky.addColorStop(1, "#161209");
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = sky;
+    ctx.fillRect(0, 0, W, H);
+    // dusk glow riding the far crest
+    var glow = ctx.createLinearGradient(0, H * 0.60, 0, H * 0.80);
+    glow.addColorStop(0, "rgba(140,100,55,0)");
+    glow.addColorStop(0.65, "rgba(150,108,58,0.10)");
+    glow.addColorStop(1, "rgba(140,100,55,0)");
+    ctx.fillStyle = glow;
+    ctx.fillRect(0, H * 0.60, W, H * 0.20);
+    // dune bodies: warm dark masses below each crest (far first, near over it)
+    var dunes2 = [{ depth: 0.10, amp: 0.5, fill: "rgba(38,29,17,0.85)" },
+                  { depth: 0.0, amp: 1.0, fill: "rgba(52,39,23,0.80)" }];
+    for (var d = 0; d < 2; d++) {
+      var du = dunes2[d];
+      ctx.beginPath(); ctx.moveTo(0, H);
+      for (var x = 0; x <= W; x += 6) ctx.lineTo(x, duneTopY(x, du.depth, du.amp));
+      ctx.lineTo(W, H); ctx.closePath();
+      ctx.fillStyle = du.fill; ctx.fill();
+    }
+  }
+
   /* ---------- frame ---------- */
   function frame() {
     if (!running) return;
@@ -243,6 +297,7 @@
     if (hoverProg > 0.02) hint.classList.add("gone");
 
     ctx.clearRect(0, 0, W, H);
+    drawBackdrop();
 
     // stars
     for (var s = 0; s < stars.length; s++) {
@@ -262,12 +317,42 @@
       var env = Math.max(0, Math.sin((cyc / 3) * Math.PI));
       var env2 = env * env;
 
+      var wind = windAt(t);
       var tx = p.home.x, ty = p.home.y, boost = 1;
+
+      // plucked grain: blown off the shape mid-gust, streams downwind, respawns at post
+      if (p.pluck > 0) {
+        p.pluck--;
+        p.pos.x += p.pvx * (0.6 + wind * 0.7);
+        p.pos.y += p.pvy;
+        p.pvy += 0.045;
+        ctx.globalAlpha = Math.min(1, 0.5 * p.pluck / 30) * (0.4 + env2 * 0.4);
+        ctx.fillStyle = "#d8c9a3";
+        ctx.fillRect(p.pos.x, p.pos.y, 4.5, 1); // streak while airborne
+        if (p.pluck === 0) {
+          p.pos.x = p.target ? p.target.x : p.home.x;
+          p.pos.y = p.target ? p.target.y : p.home.y;
+        }
+        continue;
+      }
+      // gusts occasionally pluck grains off the formed pair (sand blowing off the figures)
+      if (p.joins && p.target && hoverProg > 0.6 && Math.random() < wind * 0.0022) {
+        p.pluck = 30 + (Math.random() * 40) | 0;
+        p.pvx = 2.5 + Math.random() * 3.5;
+        p.pvy = -(0.2 + Math.random() * 0.5);
+        continue;
+      }
+
       if (p.joins && p.target && hoverProg > 0.01) {
         var hp2 = hoverProg * hoverProg;
         tx = p.home.x + (p.target.x - p.home.x) * hp2;
         ty = p.home.y + (p.target.y - p.home.y) * hp2;
+        // wind: gusty downstream lean, stronger toward the heads (cloth-like ripple)
+        tx += wind * (1.2 + 2.8 * Math.sin(t * 1.7 + p.seed * 9.4)) * (0.35 + 0.65 * p.hf);
         boost = 1 + 0.5 * hoverProg;
+      } else {
+        // idle field: crests stream downwind (dunes migrating)
+        tx += wind * (1.0 + 1.6 * Math.sin(t * 0.5 + p.seed * 6.28)) * 0.9;
       }
       // wander
       var wob = Math.sin(t * .8 + p.seed * 12.56) * 1.4;
@@ -280,6 +365,26 @@
       ctx.globalAlpha = Math.min(1, al);
       ctx.fillStyle = p.tone;
       ctx.fillRect(p.pos.x - sz / 2, p.pos.y - sz / 2, sz, sz);
+    }
+
+    // saltation: thin wind streaks OVER the picture (the scanty moving layer)
+    for (var k3 = 0; k3 < streaks.length; k3++) {
+      var sk = streaks[k3];
+      sk.x += sk.sp * (0.45 + windAt(t) * 0.9) * 0.016;
+      if (sk.x - sk.len > W) {
+        sk.x = -sk.len - Math.random() * 60;
+        sk.y = Math.random() < 0.7
+          ? duneTopY(Math.random() * W, Math.random() < 0.5 ? 0 : 0.10, 1.0) - Math.random() * 26
+          : H * (0.25 + Math.random() * 0.35);
+      }
+      var yy = sk.y + Math.sin(t * 3 + sk.wob) * 1.2;
+      // slight arc: two short segments with a curl instead of a flat dash
+      var bend = Math.sin(t * 2.2 + sk.wob) * sk.arc;
+      ctx.globalAlpha = sk.al * (0.30 + windAt(t) * 0.55);
+      ctx.fillStyle = "#d8c9a3";
+      ctx.fillRect(sk.x, yy - bend, sk.len * 0.55, 1);
+      ctx.globalAlpha *= 0.75;
+      ctx.fillRect(sk.x + sk.len * 0.55, yy + bend * 0.7, sk.len * 0.45, 1);
     }
 
     ctx.globalAlpha = 1;
@@ -310,6 +415,7 @@
       particles[k].pos.y = particles[k].home.y;
     }
     ctx.clearRect(0, 0, W, H);
+    drawBackdrop();
     for (var k2 = 0; k2 < particles.length; k2++) {
       var p2 = particles[k2];
       ctx.globalAlpha = 0.5;
