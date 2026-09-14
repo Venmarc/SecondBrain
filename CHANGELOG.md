@@ -544,4 +544,48 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 
 - docs: Node v20→v24.21.0 upgrade session log; new ANTI_PATTERNS Node.js/nvm section (timeout-killed reinstall, systemd PATH pin)
 
+## 2026-09-06
+
+- docs: add Jeremy Chief of Staff ticket board (869b77f)
+- docs: Effects Glossary rework, Jeremy board, Antigravity IDE guide + halden-seed/particles session l (d5fccb0)
+
+
+## 2026-09-07
+
+- vault backup: 2026-09-07 04:01:46 (a5a7740)
+- docs: Web-Garnish collection — footer/landing art direction (engraved vignette, sticker, rubber-stam (fa83182)
+
+
+## 2026-09-08
+
+- vault backup: 2026-09-08 20:46:02 (f7318a2)
+- vault backup: 2026-09-08 20:45:12 (f96b123)
+- docs(SLOTH-1): Yellowcoil session note + board Review (e231299)
+- feat(FOOTER-1): North Loft polish — blink, story copy, Humanizer (bddee6f)
+- docs: resolve Jeremy-Board FOOTER-1 Review conflict (61e223f)
+- docs(FOOTER-1): add mascot MVP gaze angle screenshots (b137f2e)
+- docs(FOOTER-1): mascot MVP screenshot + board Review (da73ba0)
+- feat(FOOTER-1): CSS dual-eye mascot footer MVP demo (903f672)
+- docs(FOOTER-1): expand footer deep-dives with sources and pipelines (fa2ed58)
+- docs(FOOTER-1): non-boring footer deep-dives into Design vault (b9fe418)
+
+
+## 2026-09-13
+
+- build: ACQUIRE particle footer v2 — antigravity morph-field (real human handshake pair, hover-assemb (413d6e7)
+- build: ACQUIRE particle footer replication (handshake figures, dunes, stream, gather-in) + preview + (f64547e)
+- docs: verify benjamin/andrii reference scenes via AGY gemini lane — ACQUIRE particle figures, Afford (98a43ed)
+- docs: Clone-Website — research dig 'The Whole Cloning Shabang' (42 sources, Tavily) + hub decisions  (9048d0a)
+- docs: Web-Garnish batch 2 — living & editorial footers (editorial scene + smoke, sand particles, nig (5f3ce6d)
+- docs: Clone-Website project — brainstorm consolidated (voice transcripts + phone continuation, hub + (e3c03d0)
+- vault backup: 2026-09-13 02:31:57 (9d3e1d7)
+- docs: Web-Garnish build kit — runbook (fonts, swatches, SVG/CSS idioms) + 21 reference assets + stic (565aea9)
+- vault backup: 2026-09-13 01:04:22 (bb188ba)
+
+
+## 2026-09-14
+
+- docs: Clone-Website — copy deck v1 (voice spec, world facts, all sections, FAQ, reveal email) + D13  (d94ace3)
+- docs: Clone-Website — decisions D11-D17 (name Codon Labs, baby output, $2M lean, FAQ registers, imag (ca25345)
+- build: ACQUIRE particle footer desert-wind layer (dusk dunes, gust envelope, saltation, plucked grai (d201579)
 
