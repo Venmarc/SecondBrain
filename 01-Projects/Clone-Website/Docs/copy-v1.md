@@ -56,16 +56,10 @@ Rule: if copy needs a number that isn't in this table, the number goes into this
 Visual: grain intro fades into the mark, then the loop (asset decision, not copy).
 
 Overline: `Codon Labs`
-H1: **The next frontier is you.**
+H1: **The next frontier is you.** (stamped by Victor 2026-09-13)
 Sub: The world's first human cloning program. Now taking waitlist applications.
 CTA primary: `Join the waitlist`
 CTA secondary: `How it works`
-
-H1 alternates (pick or kill):
-- a. The next frontier is you. ← recommended
-- b. One giant leap, for you. (Apollo inversion, riskier, more smile)
-- c. The future doesn't need a rocket.
-- d. You are the instructions.
 
 ---
 
@@ -163,12 +157,17 @@ Four drafts:
 > "Some mornings I forget which of us is the original. Then I remember I'm the one paying tuition."
 > — J.D., 29, [CITY] — self, donor
 
+> "My grandfather banked his cells in 2024, six months before he died. His continuation is eighteen months old now. I'm raising him. He has my grandfather's face, and he calls me Dad. Nobody warned me how much he would laugh like him. Nobody had to."
+> — L.R., 33, [CITY] — grandson and legal parent, continuing his grandfather
+
+**[STAMP ME: grandfather review]** — this is the D19 scenario, the site's strongest grief-adjacent review. It must pass the anti-Clonaid test harder than any other. If it reads one degree cultish, kill it.
+
 Look-book subpage ("/families"): 6 more entries, portrait pairs, same register. **[STAMP ME]** which pairs (image requirements doc is next artifact after this).
 
 ### FAQ — Register A: myth debunking (gold)
 
 **Will my continuation age faster than me?**
-No. The accelerated-aging story comes from Dolly, who developed arthritis young and died at six. Her sisters, cloned the same way, aged normally. Dolly's arthritis is now thought to be the concrete floors and photo-call treats, not her origin. [Pulls from research digest, aging-myth section. Final wording sourcing pass needed.]
+No. The fear comes from Dolly the sheep, the first cloned mammal, born in Scotland in 1996. She developed arthritis young and died at six, and the myth was born with her. But in 2016, University of Nottingham scientists published a long-term study of thirteen cloned sheep, four of them cloned from the very same cells as Dolly. Nine years old, normal blood pressure, normal metabolism, normal joints. They aged normally. Dolly's arthritis is now thought to be the concrete floors and photo-call treats, not her origin.
 
 **Does my continuation get my memories?**
 No. Memories are not in DNA. Nothing in your head is copied. Everything she will ever know, she learns, the way you did.
@@ -184,8 +183,8 @@ The early animal data looked rough because the technique was young. The 2023 rep
 **Who is the legal parent?**
 You are. A continuation is born a person with one legal parent or two, established before transfer, in a binding pre-birth order. Your continuation is your child. That is not a side effect of the program. It is the program.
 
-**Can I clone someone else? My child? My late husband?**
-No. Only a living person, in their own words, in writing, after the Conversation. We do not work from the deceased. This is not a legal line for us. It is the whole point. A continuation has to be chosen by the person continuing.
+**Can I clone someone else? My child? My late husband? My late grandfather?**
+Only with their own yes, given while living, in writing, after the Conversation. If your grandfather banked his cells and signed his consent before he died, his continuation is his choice being carried out, and we will carry it out. But no one is ever continued without their own consent. Death does not withdraw a yes. Silence does. We do not work from the unwilling, the unaware, or the never-asked. This is not a legal line for us. It is the whole point. A continuation has to be chosen by the person continuing.
 
 **What does the $2,000,000 include?**
 Everything from first Conversation to first birthday. Sequencing, culture, reprogramming, surrogate matching and full prenatal care, delivery with a neonatal team standing by, and pediatric genetics support through year one. Payment is staged by milestone. If the program stops at a gate, the remaining balance stays yours.

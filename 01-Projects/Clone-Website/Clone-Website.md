@@ -38,6 +38,9 @@ A fake company site for cloning **human beings** (not pets — see D2), played 1
 | D15 | Hero metaphor: frontier/space register, NOT continent talk. "The next frontier" direction; Apollo-line inversion candidate ("one giant leap… for him") | Victor 2026-09-13 rejected continent phrasing, kept the move. |
 | D16 | Image pipeline: requirements list → Tavily reference search → generate (Grok/Gemini) → Agy review/edit against requirements | Victor 2026-09-13. First reference haul done (twin portraits genre: Zlewski, Brunelle, Collette; embryo microscopy; lab interiors). |
 | D17 | Footer: engraved vignette stays baseline; Victor cracking a NEW footer style in a separate session, may supersede | Victor 2026-09-13. |
+| D18 | Hero H1: **"The next frontier is you."** stamped. Sub + CTAs locked. | Victor stamped 2026-09-13. |
+| D19 | **Consent rule: a continuation requires the donor's own written yes, given while living. Death does not withdraw a yes. Silence does.** No continuation of the unwilling, unaware, or never-asked. Grandfather scenario (banked cells + signed consent while alive) is valid in-world. | Victor 2026-09-13: "your grandpa died, and you cloned him as a kid and watched him grow as a new person" — validated via the consent-while-living frame rather than cloning-the-unconsenting. Grief-mill register (cloning the never-asked deceased) explicitly rejected. |
+| D20 | **In-world imagery law: no grown continuation appears in any present-day context** (first birth March 2025 in-world; oldest continuation ~18 months). Grown-continuation fantasy lives only as clearly-labeled age-progression projection. Multi-clone lineup imagery banned outside the movies-satire panel. | Copy-v1 world facts + imagery-v1 Three Laws, Victor informed. |
 
 ## Page structure (White Desert skeleton, remapped)
 
