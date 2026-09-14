@@ -4,7 +4,7 @@ date: 2026-09-13
 tags: [project, clone-website, imagery, video, requirements]
 ---
 
-> Every visual slot on the site, what fits it, what must not appear, and the generation budget. Pipeline per D16: requirements (this doc) → Tavily reference search → generate (Grok/Gemini) → Agy review against the checklist. No image ships without passing its gate.
+> Every visual slot on the site, what fits it, what must not appear, and the motion budget. Companion to the generation ledger [[01-Projects/Clone-Website/Docs/image-requirements-v1|image-requirements-v1.md]] (sibling session, paste-ready prompts + sprint order): this doc maps WHERE assets live, that doc says HOW each gets made. Pipeline per D16: requirements → Tavily references → generate → Agy review. No image ships without passing its gate.
 
 ---
 
@@ -58,9 +58,9 @@ Stills total: **about 30 finals** (including pairs and the conditional).
 
 | Slot | Location | Requirement | Format |
 |---|---|---|---|
-| V-1 | Hero loop | Abstract cell-division loop, warm, slow, seamless, no faces. 8 to 12 seconds. Muted tones matching palette | video, loop |
+| V-1 | Hero loop | Abstract cell-division loop, warm, slow, seamless, no faces. 8 to 12 seconds. Muted tones matching palette. Built by interpolating the A1 keyframes from the generation ledger (image-requirements-v1.md) | video, loop |
 | V-2 | Preloader | 2-3 seconds: grain resolves into the mark (build from code once the mark exists; only generated footage if code fails) | code first |
-| V-3 | Culture strip (process step 5) | Abstract time-lapse of cell division, 6-10 seconds, the hero loop's little sibling | video, loop |
+| V-3 | Culture strip (process step 5) | Abstract time-lapse of cell division, 6-10 seconds, the hero loop's little sibling. Can reuse A1 keyframe 3 lineage | video, loop |
 | V-4 | Sample-to-birth journey | THE White Desert flight-map mirror: a single line traveling skin cell → egg → blastocyst → transfer → birth across a wide band. Built, not generated (SVG line animation) | build |
 | V-5 | Cursor trail, click distortion, grain | Ported from rep-lamalama, no new assets | port |
 
