@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-13 — Clone-Website: research dig, decisions D8–D17, copy deck v1
+
+#### Added
+- [[01-Projects/Clone-Website/Docs/research-cloning-shabang|Research digest "The Whole Cloning Shabang"]] — 42 sourced sources (Tavily): Clonaid anti-pattern (credibility recipe), grief register (ViaGen customers, Streisand), twins' lived reality (Psychiatric Times twin-perspective), law/jurisdiction, science failure modes + aging-myth debunk, Colossal/ViaGen brand registers, elite-reproduction price anchors, self-cloning demand (Theos/YouGov 11%/4%), fiction reference points (Never Let Me Go's Hailsham, Mortyplicity).
+- [[01-Projects/Clone-Website/Docs/copy-v1|Copy Deck v1]] — voice spec (14 rules), world facts table, all 5 sections drafted to final quality, 14-item FAQ (myth + plausible registers), pricing + speed-roadmap module, fictional founder quote, two-step realism page map (layers 0–2), the reveal email drafted in full. Red-ink pass pending: hero H1 pick, world numbers, geography, terms-disclosure clause.
+
+#### Changed
+- Hub decision log D8–D17: name **Codon Labs** (codonlabs.com squatter-held; .io/.ai/codon-labs.com open, trademark check pending), clone output always a baby (one product, one price), $2M price stamped, roadmap = speed (14 months → 9 by 2028), FAQ dual registers, frontier metaphor (not continents), image pipeline (requirements → Tavily refs → generate → Agy review), footer baseline engraved vignette with sibling footer session as live alternative.
+
 ### 2026-09-13 — Web-Garnish: desert-wind layer on the ACQUIRE particle footer
 
 - `demos/acquire-particle-footer/` — windy-desert pass: dusk backdrop with warm horizon haze + layered dune masses, gust envelope (18s surges + flutter), saltation streaks (short two-segment curls riding the crests), grains plucked off the formed pair mid-gust and streaming downwind, height-weighted wind lean (figures ripple like cloth, hold structure). Previews refreshed (hover + idle).

@@ -18,7 +18,7 @@
 
 ## ⚡ Active Projects (01-Projects)
 
-### 🧬 [[01-Projects/Clone-Website/Clone-Website|Clone-Website]] — Brainstorm complete → planning (asset window urgent)
+### 🧬 [[01-Projects/Clone-Website/Clone-Website|Clone-Website]] — Research dig done, copy v1 drafted, awaiting red-ink + world-number stamps
 Fictional human-cloning company site played straight (White Desert skeleton, lab imagery, Lamalama motion). Raw: [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|voice notes + phone archive]]. SuperGrok asset-generation window expires ~09-15/16.
 **Blocker:** company name + footer style undecided.
 
