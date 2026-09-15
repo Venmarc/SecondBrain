@@ -34,17 +34,20 @@ tags: [project, clone-website, copy, red-ink]
 | Fact | Value | Status |
 |---|---|---|
 | Company | Codon Labs | locked (D11) |
-| Price | $2,000,000 | **[STAMP ME]** Victor leaned 2M. My concurrence. |
-| End-to-end timeline | 14 months, sample to birth | **[STAMP ME]** proposed |
-| Roadmap goal | 9 months by 2028 | **[STAMP ME]** speed roadmap, Victor stamped direction |
-| Clones born to date | 14 | **[STAMP ME]** proposed |
-| Samples in culture | 400 | **[STAMP ME]** proposed |
-| Founded | 2019, by [FOUNDER NAME] | **[STAMP ME]** name needed |
-| Reprogramming solved | 2023 | **[STAMP ME]** proposed |
-| Waitlist opened | 2024 | **[STAMP ME]** proposed |
-| First birth | March 2025, a girl, 7 lb 4 oz, [CITY] | **[STAMP ME]** |
-| Operations | [JURISDICTION] | **[STAMP ME]** geography still open |
-| Staff | 61 geneticists, embryologists and physicians | **[STAMP ME]** proposed |
+| Founded | **1973, Basel** — lab adjacent to the Biozentrum (Petersplatz) | stamped 2026-09-13 (D21) |
+| Animal division | 1980s–90s, Allschwil (BL) or Saint-Louis (Alsace), 15 min from HQ | [STAMP ME] pick one site |
+| Price | $2,000,000 | **stamped** |
+| End-to-end timeline | 14 months, sample to birth | proposed |
+| Roadmap goal | 9 months by 2028 | stamped (speed) |
+| Clones born to date | 14 | proposed |
+| Samples in culture | 400 | proposed |
+| Reprogramming solved | 2023, the company's 50th year | proposed |
+| Waitlist opened | 2024 | proposed |
+| First birth | March 2025, a girl, 7 lb 4 oz, [CITY] | [STAMP ME] city |
+| HQ / program | Research HQ: Basel. Clinical program jurisdiction: open (Switzerland bans reproductive cloning — flagged) | [STAMP ME] |
+| Staff | 61 geneticists, embryologists and physicians | proposed; Gemini roster pending delivery |
+| Founders | Bea Vogel-Keller (founder/CEO, early 80s) + 2 co-founders (one alive early 90s, one died 2000s) | name-to-role assignment pending (D22) |
+| Terms clause | Fiction disclosure buried at /terms clause 14 of 14 | recommended, pending (D24) |
 | Product | Human genetic continuation. The donor's genome, carried by a new person. Always born a baby. | locked (D12) |
 
 Rule: if copy needs a number that isn't in this table, the number goes into this table first.
@@ -236,11 +239,18 @@ Roadmap module (speed story, in-world):
 ## 8. Founder quote (fictional, for the quote block)
 
 > "Dolly proved it was possible. We made it survivable."
-> — [FOUNDER NAME], founder and chief scientist, Codon Labs
 
-Name and credentials: **[STAMP ME]**. Recommendation: invented name with plausible but unnamed credentials ("trained in reproductive endocrinology and embryology"). Do not name real institutions as employers of the fictional founder. It keeps the fiction clean and real institutions out of it.
+Attribution options: **[STAMP ME]**
+- **A.** Dr. Beatrix "Bea" Vogel-Keller, founder and chief executive. The survivor's voice, present tense.
+- **B.** The deceased co-founder, dated 1999. The prophecy device: the company quotes the man who never saw it work.
 
-Founder bio beats for the /about subpage: a career spent in fertility medicine, a sibling lost young (the motivation, told once, quietly), the Roslin papers on the office wall. 3 short paragraphs.
+Founder roster (canon lives in [[01-Projects/Clone-Website/Docs/world-history-v1|world-history-v1]]): Bea = founder and CEO, early 80s, recommended without a doctorate (two doctors plus one operator-friend). One co-founder alive, early 90s, emeritus. One co-founder, the professor who coached the other two, died in the 2000s.
+
+Founder portraits: **[STAMP ME]**
+- The early-50s woman portrait is **historical**: circa 1993, the animal-division years, three years before Dolly. Archive-photo treatment.
+- A **current** portrait of Bea at 82 is needed for /about. A founder still at work after 53 years is the brand's human proof of "continuation".
+
+/about beats: two campuses fifteen minutes apart; the Roslin papers on the office wall; the empty chair at the annual founders' lunch; the fifty-year wait.
 
 ---
 

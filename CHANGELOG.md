@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-15 — Clone-Website: world canon anchored (Basel 1973), founder trio, copy stamps
+
+#### Added
+- [[01-Projects/Clone-Website/Docs/world-history-v1|World history canon v1]] — 1973 Basel founding adjacent to the Biozentrum (Petersplatz), 1980s–90s animal division (Allschwil or Saint-Louis, 15 min from HQ), the Dolly-era beat, the three founders (Bea Vogel-Keller + two co-founders, one deceased 2000s), two campuses, open world questions. Translated from Victor's Gemini/Google Earth research (Gemini was told only "genetics and cell research company that later had an animal division", never "clone company").
+- [[01-Projects/Clone-Website/Docs/image-requirements-v1|Generation ledger v1]] — sibling session: paste-ready per-asset prompts, A/B/C tiers, sprint order against the SuperGrok window. Companion to the slot map.
+
+#### Changed
+- Copy deck: H1 stamped ("The next frontier is you"), Dolly FAQ given an identifying clause + verified Nottingham 13-sheep sourcing, consent FAQ gains the grandfather carve-out (D19: "Death does not withdraw a yes. Silence does."), grandfather review drafted, world facts table re-anchored to the 1973 Basel canon, founder quote attribution options added.
+- Hub decision log D18–D26 (H1 stamp, consent rule, imagery law, Basel canon, founder roster, portrait plan, terms clause, FAQ count, quote candidates).
+
 ### 2026-09-15 — Backdrop Supply: new design collection (code recipes + shader engine + cached freebies)
 
 #### Added

@@ -6,8 +6,8 @@ tags: [project, active, clone-website, web-design, fiction-site]
 
 > **One-line Summary**: Fictional-but-believable human cloning company website, White Desert's skeleton with lab aesthetics, Lamalama motion effects, AI-generated twins imagery frontloaded before the SuperGrok sub expires. Brainstorm complete; planning next.
 
-**Status:** Brainstorm complete (2026-09-13) → research dig complete (2026-09-13) → awaiting name + pricing fork. Code: not started.
-**Raw sources:** [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|brainstorm raw archive]] (6 voice transcripts + phone note + seed note). White Desert reference shots in `Docs/assets/white-desert/`. Research digest: [[01-Projects/Clone-Website/Docs/research-cloning-shabang|The Whole Cloning Shabang]] (42 sources).
+**Status:** Name locked (Codon Labs, D11) · price stamped $2M + speed roadmap (D13) · H1 stamped (D18) · copy v1 + imagery ledgers drafted · world canon anchored to Basel 1973 (D21). Awaiting: founder name-to-role assignment, program jurisdiction, terms clause yes/no, staff list, Section 1 quote pick. Code: not started.
+**Raw sources:** [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|brainstorm raw archive]] (6 voice transcripts + phone note + seed note). White Desert reference shots in `Docs/assets/white-desert/`. Research digest: [[01-Projects/Clone-Website/Docs/research-cloning-shabang|The Whole Cloning Shabang]] (42 sources). World canon: [[01-Projects/Clone-Website/Docs/world-history-v1|world-history-v1]]. Copy: [[01-Projects/Clone-Website/Docs/copy-v1|copy-v1]]. Imagery: [[01-Projects/Clone-Website/Docs/slotmap-motion-v1|slotmap-motion-v1]] + `image-requirements-v1.md`.
 
 ## What this is
 
@@ -41,6 +41,12 @@ A fake company site for cloning **human beings** (not pets — see D2), played 1
 | D18 | Hero H1: **"The next frontier is you."** stamped. Sub + CTAs locked. | Victor stamped 2026-09-13. |
 | D19 | **Consent rule: a continuation requires the donor's own written yes, given while living. Death does not withdraw a yes. Silence does.** No continuation of the unwilling, unaware, or never-asked. Grandfather scenario (banked cells + signed consent while alive) is valid in-world. | Victor 2026-09-13: "your grandpa died, and you cloned him as a kid and watched him grow as a new person" — validated via the consent-while-living frame rather than cloning-the-unconsenting. Grief-mill register (cloning the never-asked deceased) explicitly rejected. |
 | D20 | **In-world imagery law: no grown continuation appears in any present-day context** (first birth March 2025 in-world; oldest continuation ~18 months). Grown-continuation fantasy lives only as clearly-labeled age-progression projection. Multi-clone lineup imagery banned outside the movies-satire panel. | Copy-v1 world facts + imagery-v1 Three Laws, Victor informed. |
+| D21 | **Company history anchored: founded 1973 in Basel**, lab adjacent to the Biozentrum (Petersplatz). Animal Research Division + Preclinical Vivarium established 1980s–90s in **Allschwil (BL) or Saint-Louis (Alsace)**, 15-min commute to HQ. | Victor's Gemini/Google Earth research 2026-09-13 (Gemini deliberately told only "genetics and cell research company that later had an animal division"). Translated to clone canon in [[01-Projects/Clone-Website/Docs/world-history-v1|world-history-v1]]. Site pick (Allschwil vs Saint-Louis) pending. |
+| D22 | Founder roster: **Bea Vogel-Keller** (founder, CEO, early 80s) + two co-founders: one alive early 90s, one professor/coach who died in the 2000s. Recommended: Bea has no doctorate (two doctors plus one operator-friend reads better than three doctors). | Victor 2026-09-13. Name-to-role assignment pending: recommended Schönbächler = the deceased professor, de Montmollin = alive emeritus. |
+| D23 | Founder portraits: the **early-50s woman is the HISTORICAL portrait** (circa 1993, animal-division years, three years before Dolly); a current portrait of Bea at 82 is needed for /about. | Age math from D21 + D22 (founded 1973, Bea early 80s today). Pending Victor confirm. |
+| D24 | **Terms disclosure clause**: the fictional-company line buried at /terms clause 14 of 14. Recommended: include. | Pending Victor's yes (explained 2026-09-13). |
+| D25 | FAQ ships **16** (the 14 written + 2 Register-B extras: sample-after-death, meeting other families). | Decided 2026-09-13, low-stakes. |
+| D26 | Section 1 real-quote candidates (numbered in the research digest's source list): (1) Wilmut regret quote [38, NYT obituary], (2) Sinclair/Nottingham 13-sheep finding [11][12], (3) "delayed identical twin" phrasing [2, Psychology Today 1997]. | Pending Victor's pick. |
 
 ## Page structure (White Desert skeleton, remapped)
 
