@@ -6,7 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
-### 2026-09-15 — Clone-Website: world canon anchored (Basel 1973), founder trio, copy stamps
+### 2026-09-15 — Clone-Website: New York jurisdiction, workforce reconciliation, founder swap, founder's continuation
+
+#### Added
+- [[01-Projects/Clone-Website/Docs/world-history-v1|World canon v2]] — rewritten: timeline re-anchored to 1973, the two-campi legal table (Basel research, Allschwil 1988, Saint-Louis 2004, New York program), the re-anchored workforce table, the founder's continuation (D32), open questions.
+
+#### Changed
+- Copy deck: world facts table (clinical program = New York State, staff 1,850 group + ~90 program, funding line), FAQ answers for geography, legality and legal parentage rewritten on real law, the review line de-"61 scientists"-ed, founder quote section (attribution B recommended, two Bea portraits plus the founder's continuation image, use-once rule), /terms clause 14 drafted.
+- Hub decisions D27–D34. Slot map: intention rule added (images are arguments), AB-1 split into historical/current, AB-4 added, V-4 gained the Basel-to-New-York leg.
+
+#### Notes
+- **Lesson**: AI-researched material supplied without the project frame (Gemini did not know Codon Labs clones humans) arrives coherent but wrongly anchored. It placed the founding at 1975; canon is 1973. Re-anchor every number to the world facts table before it enters the vault.
+- **Lesson**: two agent sessions drafted imagery documents in parallel under near-identical names. Name docs by function (slot map vs generation ledger) and cross-link them.
 
 #### Added
 - [[01-Projects/Clone-Website/Docs/world-history-v1|World history canon v1]] — 1973 Basel founding adjacent to the Biozentrum (Petersplatz), 1980s–90s animal division (Allschwil or Saint-Louis, 15 min from HQ), the Dolly-era beat, the three founders (Bea Vogel-Keller + two co-founders, one deceased 2000s), two campuses, open world questions. Translated from Victor's Gemini/Google Earth research (Gemini was told only "genetics and cell research company that later had an animal division", never "clone company").

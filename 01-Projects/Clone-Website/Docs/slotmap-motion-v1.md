@@ -6,6 +6,8 @@ tags: [project, clone-website, imagery, video, requirements]
 
 > Every visual slot on the site, what fits it, what must not appear, and the motion budget. Companion to the generation ledger [[01-Projects/Clone-Website/Docs/image-requirements-v1|image-requirements-v1.md]] (sibling session, paste-ready prompts + sprint order): this doc maps WHERE assets live, that doc says HOW each gets made. Pipeline per D16: requirements → Tavily references → generate → Agy review. No image ships without passing its gate.
 
+**Victor's intention rule (2026-09-15): images are arguments, not decoration.** No galleries, no look-book padding, no decorative photography. Every image must be doing an evidentiary job in its section. If a slot can be deleted without weakening the argument it was making, delete it.
+
 ---
 
 ## 0. The Three In-World Laws (every asset is checked against these)
@@ -46,9 +48,11 @@ tags: [project, clone-website, imagery, video, requirements]
 | PR-1 | The Program | Facility exterior, golden hour, restrained, no signage close-ups | 1 | 21:9 |
 | PR-2 | The Program | Interior corridor, clean warm, deep perspective | 1 | 21:9 |
 | PR-3 | The Program | Lab wide shot, few people in motion, documentary feel | 1 | 16:9 |
-| AB-1 | /about founder | Fictional founder portrait: 50s, warm, credible, editorial lighting. No real-person likeness | 1 | 4:5 |
+| AB-1a | /about founder, historical | Bea Vogel-Keller at about 50, circa 1993, the animal-division years, three years before Dolly. Archive treatment, one placement. Fictional person, no real likeness | 1 | 4:5 |
+| AB-1b | /about founder, current | Bea Vogel-Keller at 82. Warm, credible, editorial. The founder still at work after 53 years | 1 | 4:5 |
 | AB-2 | /about | Team candid at work, natural light | 1 | 3:2 |
 | AB-3 | /about | The Roslin papers on the office wall, detail shot | 1 | 3:2 |
+| AB-4 | /about, the founder's continuation | Antoine de Montmollin's archive portrait beside his eighteen-month-old continuation. Used once, never in the look-book (D32, intention rule) | 1 pair | 4:5 x2 |
 | OG-1 | Everywhere (share card) | 1200x630 link-share image: mark + hero line typography | 1 | 1.91:1 |
 | FT-1 | Footer (conditional) | Wide scene asset ONLY if the sibling footer session lands a scene-based footer. Otherwise footer is pure SVG and needs nothing | 0-1 | 21:9 |
 
@@ -61,7 +65,7 @@ Stills total: **about 30 finals** (including pairs and the conditional).
 | V-1 | Hero loop | Abstract cell-division loop, warm, slow, seamless, no faces. 8 to 12 seconds. Muted tones matching palette. Built by interpolating the A1 keyframes from the generation ledger (image-requirements-v1.md) | video, loop |
 | V-2 | Preloader | 2-3 seconds: grain resolves into the mark (build from code once the mark exists; only generated footage if code fails) | code first |
 | V-3 | Culture strip (process step 5) | Abstract time-lapse of cell division, 6-10 seconds, the hero loop's little sibling. Can reuse A1 keyframe 3 lineage | video, loop |
-| V-4 | Sample-to-birth journey | THE White Desert flight-map mirror: a single line traveling skin cell → egg → blastocyst → transfer → birth across a wide band. Built, not generated (SVG line animation) | build |
+| V-4 | Sample-to-birth journey | THE White Desert flight-map mirror, two legs. Leg one: the line from Basel to the Program in New York (coordinates, distance, flight time, the CPT-WFR stat register). Leg two: skin cell → egg → blastocyst → transfer → birth across a wide band. Built, not generated (SVG line animation) | build |
 | V-5 | Cursor trail, click distortion, grain | Ported from rep-lamalama, no new assets | port |
 
 ## 4. Build-not-generate assets (code/SVG, no AI spend)

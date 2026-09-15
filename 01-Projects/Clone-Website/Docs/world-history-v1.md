@@ -1,10 +1,10 @@
 ---
-title: Codon Labs — World History (Fiction Canon) v1
-date: 2026-09-13
+title: Codon Labs — World History (Fiction Canon) v2
+date: 2026-09-15
 tags: [project, clone-website, canon, world-history, basel]
 ---
 
-> One-line: the in-world history of Codon Labs, 1973 to today. Every date here is canon and every number comes from here or the copy deck. Derived from Victor's Gemini/Google Earth research (Gemini was deliberately told only "genetics and cell research company that later had an animal division", never "clone company") translated into the clone-fiction canon.
+> One-line: the in-world history, structure, workforce and law of Codon Labs. Every date and number here is canon, and every number on the site comes from here or the copy deck's world facts table. Built from Victor's Gemini/Google Earth research (Gemini was told only "genetics and cell research company that later had an animal division", never "clone company") re-anchored to canon.
 
 ---
 
@@ -12,38 +12,66 @@ tags: [project, clone-website, canon, world-history, basel]
 
 | Year | Event | Notes |
 |---|---|---|
-| **1973** | Founded in Basel: a rented multi-story laboratory adjacent to the University of Basel's Biozentrum (Petersplatz). Three founders. | 1973 is also the year recombinant DNA was invented. The company began as molecular biology became an industry. [canon] |
-| **1970s** | Early work: human chromosomal anomalies, DNA hybridization, collaborating with university molecular biologists. | The prehistory of the fiction: they studied the machinery of copying before anyone could copy. |
-| **1980s to 1990s** | Animal Research Division and Preclinical Vivarium established outside the city: **Allschwil (Basel-Landschaft) or Saint-Louis (Alsace)**, campus acreage, containment-grade, **15 minutes from the Basel HQ**. | The inner city became too constrained and expensive for animal housing and containment. [STAMP ME: pick one site] |
-| **1996** | Dolly the sheep announced by the Roslin Institute. | [RECOMMENDED CANON: Codon Labs was pursuing the same result and was beaten to publication. The humility beat. Alternative: they contributed to the science. Pick one.] |
-| **2000s** | Co-founder [the professor/coach, name TBD] dies. | [STAMP ME: exact year, proposal 2004]. Never saw 2023. |
-| **2013** | Tachibana et al: human SCNT embryos for stem cells (real-world event). | Keep as canon: the field moves. |
-| **2018** | First primates cloned (Zhong Zhong and Hua Hua) (real-world event). | Canon. |
-| **2023** | Our science team solves human reprogramming. | The company's 50th year. The whole story turns here. |
+| **1973** | Founded in Basel: a rented multi-story laboratory adjacent to the Biozentrum (Petersplatz). Twelve people, three of them founders. First work: karyotyping, chromosomal anomalies, DNA hybridization. | Also the year recombinant DNA was invented. The company starts exactly as molecular biology becomes an industry. [Gemini modelled 1975 and 25 staff; re-anchored to Victor's 1973 stamp, headcount [STAMP ME]] |
+| **1970s** | The founding question is asked: what makes a cell remember what it is, and can it be made to forget. | The thread the company pulls for the next fifty years. |
+| **1982** | Dedicated laboratory building, Basel-Stadt. About 60 people. | Recombinant era: restriction mapping, DNA cloning. |
+| **1988** | Animal Research Division founded. First vivarium at **Allschwil (Basel-Landschaft)**. First transgenic mouse lines. About 130 people. | The inner city could not host animal housing or containment. |
+| **1996** | Dolly announced by the Roslin Institute. Automated Sanger sequencing arrives in Basel. About 290 people. | [RECOMMENDED CANON, see Open Questions: Dolly proved the egg could host an adult nucleus. Codon Labs had spent twenty years on the opposite half of the problem, how a nucleus is made to forget. That last mile is what took them until 2023.] |
+| **2004** | Cross-border vivarium campus established in **Saint-Louis, Alsace (France)**. About 620 people. | Post-Human-Genome-Project scale: high-throughput knockout models. |
+| **2000s** | Co-founder **Antoine de Montmollin** dies. | [STAMP ME: exact year, proposal 2004]. He banked his cells and left written consent. He never saw 2023. |
+| **2013 to 2014** | iPSC and cellular reprogramming era. Tachibana's human SCNT embryos; the wider field moves. About 1,150 people. | Tri-national campus network: Basel HQ, Allschwil labs, Alsace animal hub. |
+| **2018** | First primates cloned (Zhong Zhong and Hua Hua). | Real-world event, canon. |
+| **2023** | Human reprogramming solved, in house. | The company's 50th year. The story turns here. |
 | **2024** | The Continuation Program opens. Waitlist opens. | |
 | **2025, March** | First birth. A girl, 7 lb 4 oz, [CITY]. | [STAMP ME: city] |
-| **2026** | 14 born. 400 samples in culture. 61 staff. | Numbers from copy deck world facts. |
+| **2026** | 14 born. 400 samples in culture. 1,850 people. | |
 
-## The three founders
+## The three founders (stamped 2026-09-15, D27)
 
-| Person | Role | Status |
+| Person | Role | Notes |
 |---|---|---|
-| **Dr. Beatrix "Bea" Vogel-Keller** | Founder, current CEO. The corporate face. Early 80s. | Alive. [STAMP ME: doctorate — recommended DROP it, making her the operator-outsider: two doctors plus one friend outlasts three doctors.] |
-| **[Prof. Dr. Markus Schönbächler]** | Co-founder. The professor who coached the other two. | Died 2000s. Recommended assignment: the deceased mentor. [STAMP ME: swap if wrong] |
-| **[Dr. Antoine de Montmollin]** | Co-founder. The bench scientist, emeritus. Early 90s. | Alive. Recommended assignment. [STAMP ME: swap if wrong] |
+| **Dr. Beatrix "Bea" Vogel-Keller** | Founder. Current CEO. Early 80s. The corporate face. | Doctorate kept (Victor's stamp). Still at work after 53 years. |
+| **Prof. Dr. Markus Schönbächler** | Co-founder. Alive, early 90s. Emeritus. The academic heavyweight. | Took the living-emeritus role in the swap. |
+| **Antoine de Montmollin** | Co-founder. The mentor who taught the other two. Died in the 2000s. **No doctorate.** | The outlier friend: three founders, two doctors and him. [FLAG: he cannot carry "Professor" without a doctorate. Recommended framing: a Swiss engineer (ETH diploma, no doctorate) who built the micromanipulation rigs and taught the others technique. One word from Victor settles it.] |
 
-Optional thread parked for a decision: the deceased co-founder banked his cells under the D19 consent rule. His continuation would be a toddler. Powerful story, requires absolute care. [STAMP ME]
+## Campuses, and where each thing happens (stamped D21, D29)
 
-## The two campuses
+| Site | What happens there | Legal footing |
+|---|---|---|
+| **Basel** (Petersplatz, next to the Biozentrum) | Founding site, research, the archive, family liaison | Switzerland. Research on cells is lawful; Switzerland bans reproductive cloning, so no Program here. |
+| **Allschwil (BL)** | Animal Research Division and Preclinical Vivarium since 1988 | Switzerland. Licensed animal research. |
+| **Saint-Louis (Alsace, FR)** | Cross-border vivarium campus since 2004 | France. Licensed animal research. |
+| **New York State, United States** | The Continuation Program: sample receipt, reprogramming, culture, transfer, birth, follow-up | No US federal prohibition on human reproductive cloning. New York does not directly prohibit it (state stem-cell funding rules bar funding reproductive cloning, which is a funding rule, not a ban). Parentage runs through New York's Child-Parent Security Act (effective 15 February 2021): pre-birth parentage orders, licensed gestational surrogacy organizations, escrow requirements. Source: The New Atlantis state-law appendix; NY DOH CPSA materials. |
 
-- **Basel (Petersplatz)**: headquarters, research, the archive, family liaison. Adjacent to the Biozentrum.
-- **Allschwil / Saint-Louis**: Animal Research Division, Preclinical Vivarium. Campus acreage. 15 minutes away.
+**No invented law, no fictional licence** (Victor's stamp): every legal claim above is checkable in the real world.
+
+## Workforce (reconciled from the Gemini model, D31)
+
+| Era | Total | Human Genetics | Animal Research | Bio-Data and AI | Corporate, Legal, Bioethics, Ops |
+|---|---|---|---|---|---|
+| 1973 founding | 12 | 8 | 0 | 0 | 4 |
+| 1982 | 60 | 42 | 0 | 3 | 15 |
+| 1988 (Allschwil vivarium) | 130 | 70 | 25 | 8 | 27 |
+| 1996 (genomics transition) | 290 | 140 | 75 | 25 | 50 |
+| 2004 (Saint-Louis campus) | 620 | 280 | 170 | 70 | 100 |
+| 2014 (reprogramming era) | 1,150 | 480 | 320 | 160 | 190 |
+| 2026 (today) | **1,850** | 720 | 530 | 290 | 310 |
+
+- **The Continuation Program itself is about 90 people**: physicians, embryologists, genetic counsellors, surrogacy coordinators, family liaison. Drawn from the Human Genetics Division. [STAMP ME]
+- **The funding story, and the economics fix**: the group's contract research work (sequencing for hospitals, cell lines for pharmaceutical companies, animal models for researchers) has funded the long problem since the 1970s. The Program is priced to cover the cost of one continuation, not to what the market would bear. Without this, $2M x 14 births cannot carry 1,850 people. With it, the fiction closes. [STAMP ME]
+- **Animal welfare**: the Animal Research Division works under the 3Rs framework (Replacement, Reduction, Refinement). Worth one line on /docs; it preempts the first criticism a serious reader will raise about a 530-person animal division.
+
+## The founder's continuation (stamped D32)
+
+Antoine de Montmollin banked his cells and left written consent, the first person to do so under what later became the consent rule (D19). He died in the 2000s. His continuation was among the first born, and is eighteen months old today. One of the 14. Carried by the family named in his directive [STAMP ME].
+
+Where it appears: /about, once, with intention. Not in the families look-book. The company continuing its own founder is the most on-theme story available and it must never read as a stunt.
 
 ## Open world questions
 
-1. **Program jurisdiction.** Basel is the research heritage, but Switzerland bans reproductive cloning outright. The clinical continuation program needs a jurisdiction: options are (a) an in-world legal instrument (a fictional licence / a changed law — bold, gives the site a licence number to show), or (b) the program operates where the law is silent, named and specific, per the researched real-world patchwork (the FAQ already promises "legal where we operate").
-2. Site pick: Allschwil or Saint-Louis.
-3. Dolly beat: scooped or contributed.
-4. Founder name-to-role assignment.
-5. Deceased co-founder continuation thread: yes or no.
-6. Staff roster: pending Victor's Gemini list (attachment not yet delivered).
+1. **Dolly beat**: recommended canon is the complementary-half framing (they worked on forgetting, Roslin proved hosting). Alternative: they were scooped. Both are humble; the first is more specific. [STAMP ME]
+2. **First-birth city**: which city. [STAMP ME]
+3. **Antoine's framing**: ETH engineer without a doctorate (recommended), or a professor with one (which would move the no-doctorate to Schönbächler). [STAMP ME]
+4. **Founding headcount 12**: from 25 in the Gemini model. [STAMP ME]
+5. **Program team size ~90**. [STAMP ME]
+6. Exact death year for Antoine (proposal 2004). [STAMP ME]

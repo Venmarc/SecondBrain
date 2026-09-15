@@ -34,8 +34,10 @@ tags: [project, clone-website, copy, red-ink]
 | Fact | Value | Status |
 |---|---|---|
 | Company | Codon Labs | locked (D11) |
-| Founded | **1973, Basel** — lab adjacent to the Biozentrum (Petersplatz) | stamped 2026-09-13 (D21) |
-| Animal division | 1980s–90s, Allschwil (BL) or Saint-Louis (Alsace), 15 min from HQ | [STAMP ME] pick one site |
+| Founded | **1973, Basel** — lab adjacent to the Biozentrum (Petersplatz); 12 people | stamped (D21); founding headcount [STAMP ME] |
+| Headquarters | Basel (research, archive, family liaison) | locked |
+| Animal division | Allschwil (BL) from 1988; Saint-Louis (Alsace) from 2004; 15 minutes from Basel | Saint-Louis stamped 2026-09-15 |
+| Clinical program | **New York State, United States**: no federal prohibition, New York does not directly prohibit it, parentage via the 2021 Child-Parent Security Act | stamped 2026-09-15 (D29). No invented law, no licence |
 | Price | $2,000,000 | **stamped** |
 | End-to-end timeline | 14 months, sample to birth | proposed |
 | Roadmap goal | 9 months by 2028 | stamped (speed) |
@@ -44,10 +46,12 @@ tags: [project, clone-website, copy, red-ink]
 | Reprogramming solved | 2023, the company's 50th year | proposed |
 | Waitlist opened | 2024 | proposed |
 | First birth | March 2025, a girl, 7 lb 4 oz, [CITY] | [STAMP ME] city |
-| HQ / program | Research HQ: Basel. Clinical program jurisdiction: open (Switzerland bans reproductive cloning — flagged) | [STAMP ME] |
-| Staff | 61 geneticists, embryologists and physicians | proposed; Gemini roster pending delivery |
-| Founders | Bea Vogel-Keller (founder/CEO, early 80s) + 2 co-founders (one alive early 90s, one died 2000s) | name-to-role assignment pending (D22) |
-| Terms clause | Fiction disclosure buried at /terms clause 14 of 14 | recommended, pending (D24) |
+| Staff | 1,850 group-wide (Human Genetics 720, Animal Research 530, Bio-Data and AI 290, Corporate 310); the Program about 90 | proposed from the Gemini workforce model, re-anchored (D31) |
+| Funding | Contract research funds the Program. The Program is priced to cover the cost of one continuation, not to what the market would bear | proposed (closes the economics) |
+| Founders | Dr. Beatrix "Bea" Vogel-Keller (founder, CEO, early 80s) · Prof. Dr. Markus Schönbächler (co-founder, alive, early 90s, emeritus) · Antoine de Montmollin (co-founder, mentor, died 2000s, no doctorate) | stamped 2026-09-15 (D27); one framing flag |
+| Founder's continuation | Antoine de Montmollin banked and consented while alive. His continuation is 18 months old. One of the 14 | stamped 2026-09-15 (D32) |
+| Quote slot | Section 1: the Wilmut regret quote. Reserved for a later page: the Sinclair/Nottingham finding | stamped 2026-09-15 (D33) |
+| Terms clause | Fiction disclosure at /terms clause 14 of 14 | stamped 2026-09-15 (D30) |
 | Product | Human genetic continuation. The donor's genome, carried by a new person. Always born a baby. | locked (D12) |
 
 Rule: if copy needs a number that isn't in this table, the number goes into this table first.
@@ -151,7 +155,7 @@ Four drafts:
 > "The face is exactly hers. The person is entirely her own. We understood the first part going in. The second part is the point."
 > — R.O., 51, [CITY] — twin sister, donor
 
-> "I came in expecting a cult with pipettes. What I found was 61 scientists and a legal team thicker than my bank's. The clone was the least surprising part of the whole year."
+> "I came in expecting a cult with pipettes. What I found was a research group with more scientists than my old university, and a legal team thicker than my bank's. The clone was the least surprising part of the whole year."
 > — M.V., 44, [CITY] — self, donor
 
 > "You don't do this to replace anyone. Replacement was never on offer. We did it because a story we loved deserved another beginning. That's all this is. Another beginning."
@@ -184,7 +188,7 @@ The early animal data looked rough because the technique was young. The 2023 rep
 ### FAQ — Register B: plausible questions (good)
 
 **Who is the legal parent?**
-You are. A continuation is born a person with one legal parent or two, established before transfer, in a binding pre-birth order. Your continuation is your child. That is not a side effect of the program. It is the program.
+You are. Parentage is established before transfer, by pre-birth order under the law where the Program operates. Your continuation is legally your child before she is born. That is not a side effect of the program. It is the program.
 
 **Can I clone someone else? My child? My late husband? My late grandfather?**
 Only with their own yes, given while living, in writing, after the Conversation. If your grandfather banked his cells and signed his consent before he died, his continuation is his choice being carried out, and we will carry it out. But no one is ever continued without their own consent. Death does not withdraw a yes. Silence does. We do not work from the unwilling, the unaware, or the never-asked. This is not a legal line for us. It is the whole point. A continuation has to be chosen by the person continuing.
@@ -196,7 +200,7 @@ Everything from first Conversation to first birthday. Sequencing, culture, repro
 Fourteen months from sample to birth, today. Our 2028 goal is nine. We are not getting cheaper. We are getting faster. **[roadmap: SPEED, per stamp]**
 
 **Where does this happen?**
-[JURISDICTION — geography still open. Recommended shape: "Our clinical program operates in [place], under [legal instrument]. The program is not offered to residents of jurisdictions where it is prohibited." Decision doc next.]
+The research is in Basel, where the company began in 1973. The animal research is in Allschwil and Saint-Louis, across the border. The Continuation Program operates in New York State, in the United States, where no federal statute prohibits human reproductive cloning and the state does not prohibit it. We do not accept residents of the countries or the states that have banned it.
 
 **Do you clone pets?**
 No. Pets are how this science got funded, and we are fond of them. Humans are the hard problem, and the one we chose.
@@ -208,7 +212,7 @@ The program re-attempts at no additional cost until a live birth. Your cells rem
 You might. A child is the best thing most people ever make. But a child is a stranger you get to meet. A continuation is a particular stranger: yours, doubled. People apply when the second one is the answer to something the first one cannot be. We don't explain it better than that.
 
 **Is it legal?**
-It is legal where we operate, and we decline residents of everywhere else. The legal review is part of the Conversation, with counsel on both sides. [Flag: real-world T&Cs page carries the fictional-company disclosure. See Section 10.]
+Human reproductive cloning is prohibited in about forty-six countries, including Switzerland and France, which is why the science and the Program live in different places. In the United States there is no federal prohibition, and New York does not prohibit it. Parentage runs through New York's Child-Parent Security Act, which licenses surrogacy organizations and issues pre-birth parentage orders. We decline residents of every jurisdiction that has banned cloning. The full legal review is public.
 
 **14 items total. Two more register-B candidates if wanted: "What happens to my sample if I die?" (stays in culture, per consent directives) and "Can I meet other families?" (yes, the look-book community, invite only). [STAMP ME]**
 
@@ -240,17 +244,19 @@ Roadmap module (speed story, in-world):
 
 > "Dolly proved it was possible. We made it survivable."
 
-Attribution options: **[STAMP ME]**
-- **A.** Dr. Beatrix "Bea" Vogel-Keller, founder and chief executive. The survivor's voice, present tense.
-- **B.** The deceased co-founder, dated 1999. The prophecy device: the company quotes the man who never saw it work.
+Attribution: **recommended B, the deceased co-founder, dated 1999.** With the D32 story in canon, the quote becomes the hinge of /about: the man who never saw it work, and whose continuation is eighteen months old. Option A (Bea, present tense) stays as the fallback if you want the living voice instead. **[STAMP ME: A or B]**
 
-Founder roster (canon lives in [[01-Projects/Clone-Website/Docs/world-history-v1|world-history-v1]]): Bea = founder and CEO, early 80s, recommended without a doctorate (two doctors plus one operator-friend). One co-founder alive, early 90s, emeritus. One co-founder, the professor who coached the other two, died in the 2000s.
+Final roster (canon: [[01-Projects/Clone-Website/Docs/world-history-v1|world-history-v1]]):
+- **Dr. Beatrix "Bea" Vogel-Keller** — founder, CEO, early 80s. Survivor, corporate face.
+- **Prof. Dr. Markus Schönbächler** — co-founder, alive, early 90s, emeritus.
+- **Antoine de Montmollin** — co-founder, the mentor, died in the 2000s, no doctorate.
 
-Founder portraits: **[STAMP ME]**
-- The early-50s woman portrait is **historical**: circa 1993, the animal-division years, three years before Dolly. Archive-photo treatment.
-- A **current** portrait of Bea at 82 is needed for /about. A founder still at work after 53 years is the brand's human proof of "continuation".
+Founder portraits (both, with intention, per D28):
+- **Historical**: Bea at about 50, circa 1993, the animal-division years, three years before Dolly. Archive treatment. One placement.
+- **Current**: Bea at 82, /about. A founder still at work after 53 years is the brand's human proof of "continuation".
+- **One more, used once**: the founder's continuation. Antoine's archive portrait beside the eighteen-month-old. /about only, never in the look-book.
 
-/about beats: two campuses fifteen minutes apart; the Roslin papers on the office wall; the empty chair at the annual founders' lunch; the fifty-year wait.
+/about beats: two campuses fifteen minutes apart; the Roslin papers on the office wall; the empty chair at the annual founders' lunch; the fifty-year wait; the boy who has the dead man's face.
 
 ---
 
@@ -276,7 +282,9 @@ Layer 1 (linked from home):
 5. /waitlist (the form)
 6. /about (founder, staff numbers, the lab)
 7. /docs (the legal-set: eligibility, consent framework, surrogacy standards, the pediatric follow-up protocol. Written as real institutional documents, shorter than they look.)
-8. /terms (Ts & Cs. The one page carrying the in-fiction disclosure: "Codon Labs is a fictional company presented as a design and writing exercise." Buried at clause 14 of 14. It keeps the two-step realism and covers the honesty base. **[STAMP ME]**)
+8. /terms (Ts & Cs. **Stamped: the fiction disclosure lives here, clause 14 of 14, in plain language.** Draft:
+> **14. About this company.** Codon Labs is a fictional company. This website is a design and writing exercise. No service is offered, no payment is accepted, and no continuation can be purchased. If you joined the waitlist you received one email explaining this, and nothing further will be sent. Your email address was used once, to send that message, and is not stored, sold, or added to any list. Nothing on this site is medical advice.
+Clauses 1 to 13 read as a real clinic's terms.)
 
 Layer 2 (linked from layer 1 only):
 1. /no-decoys (the Mortyplicity homage, from the process page)
