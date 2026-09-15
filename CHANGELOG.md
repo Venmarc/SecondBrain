@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-15 — Backdrop Supply: new design collection (code recipes + shader engine + cached freebies)
+
+#### Added
+- [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply index]] — new design collection built around `backgrounds.supply/freebies` (31 collections, 1359 backgrounds, 117 offered free). Splits the site into two kinds of asset: procedural looks that can be rebuilt in code, and rendered/composed looks that cannot. Carries the live preview URL pattern and the finding that every free preview serves at 1200px, not the advertised 3K.
+- Family notes `01-Gradient-Mesh`, `02-Glass-and-Iridescent`, `03-Cosmic-and-Cavern`, `04-Stylized-Landscape`, `05-Dither-ASCII-Stipple`, `06-Surreal-Collage`, `07-Animated-Loops` — one per style family, each with the source collections, the sampled palette from the cached files, a code-replicability verdict with the evidence behind it, and a build recipe.
+- [[03-Resources/Design/Backdrop-Supply/08-Build-Runbook|08-Build-Runbook]] — readiness matrix across the eight families, three build routes (pure CSS, fragment shader, generate), the pitfalls hit for real while building the demo, and the verification recipe.
+- `engine/` — the generator's shader system pulled out of its public client bundle: `FRAG_HEADER.glsl` (simplex, fbm, `paletteAt`, `writeColor`), `VERTEX.glsl`, `modes.json` (32 modes, full GLSL plus 164 typed uniforms with ranges and defaults), `presets.json` (61 artist-tuned named presets).
+- `assets/` — one free preview cached per collection (31 files, ~3 MB) with `manifest.json` (local path, source URL, resolution, sampled palette) and `inventory-all-previews.json` (all 117 free filenames), so nothing needs re-scraping.
+- `demos/backdrop-foundry/index.html` — self-contained demo, no network, no images, no libraries: seven backdrop panels, one pure CSS and six WebGL2, plus `preview.png` and three reference-versus-built comparison images.
+
+#### Findings
+- Verified by an independent vision pass on the captured demo: six of seven panels read as polished designed backdrops. The holographic foil mode reads as faceted at this scale.
+- Two independent comparisons confirmed the limit: a 2D fragment shader reproduces the *material language* of the volumetric glass renders (gloss, sheen, refraction) but not the geometry or depth. Chromatica-style ribbons and landscapes must be generated or modelled, not shader-built. Recorded as a hard boundary in `04-Stylized-Landscape` and `02-Glass-and-Iridescent`.
+- The dither family is confirmed same-family: the built halftone shader matched the cached ASCII stipple reference on technique, differing only in subject and palette.
+
+#### Changed
+- [[index|index.md]] — Design section now lists the Backdrop Supply collection alongside Web-Garnish.
+
 ### 2026-09-13 — Clone-Website: research dig, decisions D8–D17, copy deck v1
 
 #### Added
