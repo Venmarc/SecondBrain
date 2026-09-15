@@ -52,7 +52,7 @@ tags: [project, clone-website, imagery, video, requirements]
 | AB-1b | /about founder, current | Bea Vogel-Keller at 82. Warm, credible, editorial. The founder still at work after 53 years | 1 | 4:5 |
 | AB-2 | /about | Team candid at work, natural light | 1 | 3:2 |
 | AB-3 | /about | The Roslin papers on the office wall, detail shot | 1 | 3:2 |
-| AB-4 | /about, the founder's continuation | Antoine de Montmollin's archive portrait beside his eighteen-month-old continuation. Used once, never in the look-book (D32, intention rule) | 1 pair | 4:5 x2 |
+| AB-4 | /about, the founder's continuation | Markus Schönbächler's archive portrait beside his eighteen-month-old continuation. Used once, never in the look-book (D32 corrected by D35, intention rule) | 1 pair | 4:5 x2 |
 | OG-1 | Everywhere (share card) | 1200x630 link-share image: mark + hero line typography | 1 | 1.91:1 |
 | FT-1 | Footer (conditional) | Wide scene asset ONLY if the sibling footer session lands a scene-based footer. Otherwise footer is pure SVG and needs nothing | 0-1 | 21:9 |
 

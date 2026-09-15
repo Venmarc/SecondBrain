@@ -6,7 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
-### 2026-09-15 — Clone-Website: New York jurisdiction, workforce reconciliation, founder swap, founder's continuation
+### 2026-09-15 — Clone-Website: founder roster corrected (D35) + staff figure conflict surfaced
+
+#### Fixed
+- **Roster, everywhere**: Bea (doctor, founder, CEO, early 80s) · Schönbächler (middle name, the oldest, mentor professor, died in the 2000s) · Antoine (alive, early 90s, no doctorate, the engineer). "Swap." meant the doctorate, not the mentor role.
+- The founder's continuation, the 1999 line, and the /about image are all Schönbächler's. Added 1999 to the timeline: the archive begins, and Schönbächler is the first person banked.
+- Swept: world canon, copy deck (world facts, quote attribution, roster, portraits, /about beats), slot map AB-4, hub D27/D32, new D35, index blockers.
+
+#### Surfaced
+- **Two sessions are writing the same documents.** The copy deck was edited at 16:21 by a second session which stamped a staff figure of 1,600 (700/340/260/300) citing **D37**, and cited **D36**. Neither row ever existed. Both are now written as orphaned citations; canon is aligned to 1,600 pending Victor's confirmation (it had been 1,850).
+
+#### Notes
+- **Lesson**: cite a decision number only after its row exists. Orphaned citations made a parallel session's stamp untraceable.
+- **Lesson**: two writers in one file need one owner per document. Edits landed mid-sweep and had to be reconciled twice.
 
 #### Added
 - [[01-Projects/Clone-Website/Docs/world-history-v1|World canon v2]] — rewritten: timeline re-anchored to 1973, the two-campi legal table (Basel research, Allschwil 1988, Saint-Louis 2004, New York program), the re-anchored workforce table, the founder's continuation (D32), open questions.

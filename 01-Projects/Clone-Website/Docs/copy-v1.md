@@ -6,7 +6,9 @@ tags: [project, clone-website, copy, red-ink]
 
 # Codon Labs — Copy Deck v1
 
-> Red-ink pass 1. Every **[STAMP ME]** block needs Victor's decision. Copy is final draft quality but nothing ships without your ink.
+> **Status:** stamped through D38 (2026-09-15). Remaining opens live in the hub's Open decisions list. Copy is final draft quality; nothing ships without Victor's ink.
+>
+> **Voice rule 13 (Victor, 2026-09-15): no authority-stamp phrasing.** No internal labels, no codenames, no phrases that seal authority while informing nobody ("the Dolly beat", "the fifty quiet years", "complementary"). State the years and the events instead. If a phrase does not inform the reader, it goes.
 
 ---
 
@@ -46,10 +48,10 @@ tags: [project, clone-website, copy, red-ink]
 | Reprogramming solved | 2023, the company's 50th year | proposed |
 | Waitlist opened | 2024 | proposed |
 | First birth | March 2025, a girl, 7 lb 4 oz, [CITY] | [STAMP ME] city |
-| Staff | 1,850 group-wide (Human Genetics 720, Animal Research 530, Bio-Data and AI 290, Corporate 310); the Program about 90 | proposed from the Gemini workforce model, re-anchored (D31) |
-| Funding | Contract research funds the Program. The Program is priced to cover the cost of one continuation, not to what the market would bear | proposed (closes the economics) |
-| Founders | Dr. Beatrix "Bea" Vogel-Keller (founder, CEO, early 80s) · Prof. Dr. Markus Schönbächler (co-founder, alive, early 90s, emeritus) · Antoine de Montmollin (co-founder, mentor, died 2000s, no doctorate) | stamped 2026-09-15 (D27); one framing flag |
-| Founder's continuation | Antoine de Montmollin banked and consented while alive. His continuation is 18 months old. One of the 14 | stamped 2026-09-15 (D32) |
+| Staff | **1,600** group-wide (Human Genetics 700, Animal Research 340, Bio-Data and AI 260, Corporate 300); the Program about 90 | stamped 2026-09-15 (D37) |
+| Funding | The group's contract research funds the Program. The Program is priced to cover the cost of one continuation, not to what the market would bear | proposed (closes the economics) |
+| Founders | Dr. Beatrix "Bea" Vogel-Keller (founder, CEO, early 80s) · Prof. Dr. Markus Schönbächler (the mentor professor, the oldest, died in the 2000s) · Antoine de Montmollin (alive, early 90s, no doctorate, the engineer who built the rig the work stands on) | stamped (D27, corrected D35) |
+| Founder's continuation | Markus Schönbächler banked and consented (1999, the first person banked). His continuation is 18 months old. One of the 14 | stamped 2026-09-15 (D32, corrected D35) |
 | Quote slot | Section 1: the Wilmut regret quote. Reserved for a later page: the Sinclair/Nottingham finding | stamped 2026-09-15 (D33) |
 | Terms clause | Fiction disclosure at /terms clause 14 of 14 | stamped 2026-09-15 (D30) |
 | Product | Human genetic continuation. The donor's genome, carried by a new person. Always born a baby. | locked (D12) |
@@ -233,7 +235,8 @@ Pricing card:
 Roadmap module (speed story, in-world):
 
 > 2023: reprogramming solved.
-> 2024: first birth. **[STAMP ME]**
+> 2024: the waitlist opens.
+> 2025: the first birth.
 > 2026: 14 born, 400 banked.
 > 2028: nine months, sample to birth.
 > The price does not fall. The wait does.
@@ -244,19 +247,20 @@ Roadmap module (speed story, in-world):
 
 > "Dolly proved it was possible. We made it survivable."
 
-Attribution: **recommended B, the deceased co-founder, dated 1999.** With the D32 story in canon, the quote becomes the hinge of /about: the man who never saw it work, and whose continuation is eighteen months old. Option A (Bea, present tense) stays as the fallback if you want the living voice instead. **[STAMP ME: A or B]**
+Attribution: **B stamped, in the future tense.** The line is **Schönbächler's**, dated 1999: "Dolly proved it was possible. We will make it survivable." A man who was not there when it happened does not get to claim it. He gets to say what he believed. That sentence becomes the hinge of /about, above his portrait and the photograph of his eighteen-month-old continuation.
 
 Final roster (canon: [[01-Projects/Clone-Website/Docs/world-history-v1|world-history-v1]]):
 - **Dr. Beatrix "Bea" Vogel-Keller** — founder, CEO, early 80s. Survivor, corporate face.
-- **Prof. Dr. Markus Schönbächler** — co-founder, alive, early 90s, emeritus.
-- **Antoine de Montmollin** — co-founder, the mentor, died in the 2000s, no doctorate.
+- **Prof. Dr. Markus Schönbächler** — the middle name, the oldest, the mentor professor. Died in the 2000s. The 1999 line is his, and so is the eighteen-month-old.
+- **Antoine de Montmollin** — alive, early 90s, no doctorate. The engineer who built the machine the rest of the work stands on.
+Copy rule: never frame Antoine by what he does not have. Describe what he built.
 
 Founder portraits (both, with intention, per D28):
 - **Historical**: Bea at about 50, circa 1993, the animal-division years, three years before Dolly. Archive treatment. One placement.
 - **Current**: Bea at 82, /about. A founder still at work after 53 years is the brand's human proof of "continuation".
-- **One more, used once**: the founder's continuation. Antoine's archive portrait beside the eighteen-month-old. /about only, never in the look-book.
+- **One more, used once**: the founder's continuation. Schönbächler's archive portrait beside the eighteen-month-old. /about only, never in the look-book.
 
-/about beats: two campuses fifteen minutes apart; the Roslin papers on the office wall; the empty chair at the annual founders' lunch; the fifty-year wait; the boy who has the dead man's face.
+/about beats: two campuses fifteen minutes apart; the Roslin papers on the office wall; the empty chair at the annual founders' lunch; the boy who has the dead man's face. State the years and what happened in them. Never "the quiet years" or any phrase that works like a label.
 
 ---
 
@@ -281,7 +285,17 @@ Layer 1 (linked from home):
 4. /program (pricing card + roadmap)
 5. /waitlist (the form)
 6. /about (founder, staff numbers, the lab)
-7. /docs (the legal-set: eligibility, consent framework, surrogacy standards, the pediatric follow-up protocol. Written as real institutional documents, shorter than they look.)
+7. /docs (the legal-set: eligibility, consent framework, surrogacy standards, the pediatric follow-up protocol, **and an Animal Research page**. Written as real institutional documents, shorter than they look.)
+
+**Animal Research page (the resolution of the animal-division problem, drafted):**
+> **Animal research**
+> Codon Labs has run an animal division since 1988. We are not going to pretend otherwise.
+> Where: Allschwil, in Switzerland, and Saint-Louis, in France. Swiss cantonal permits on one side; EU Directive 2010/63/EU on the other. Both regimes are among the strictest in the world. Every protocol is reviewed and permitted before it begins.
+> What: rodents and zebrafish. We have never used non-human primates. We have never cloned one.
+> The three Rs: Replacement, Reduction, Refinement. Cell-based models are used wherever a cell model can answer the question.
+> The trend: the division is smaller every year. It was 35 percent of this company in the 1990s. It is 21 percent today. No new protocol has been opened since 2019.
+> The debt: the techniques that made Dolly possible were built on animals, including some of ours. We can only pay that back by needing fewer animals, not more.
+Numbers: **[STAMP ME]** (35 percent, 21 percent, the 2019 date, the no-primates claim).
 8. /terms (Ts & Cs. **Stamped: the fiction disclosure lives here, clause 14 of 14, in plain language.** Draft:
 > **14. About this company.** Codon Labs is a fictional company. This website is a design and writing exercise. No service is offered, no payment is accepted, and no continuation can be purchased. If you joined the waitlist you received one email explaining this, and nothing further will be sent. Your email address was used once, to send that message, and is not stored, sold, or added to any list. Nothing on this site is medical advice.
 Clauses 1 to 13 read as a real clinic's terms.)

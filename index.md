@@ -20,7 +20,7 @@
 
 ### 🧬 [[01-Projects/Clone-Website/Clone-Website|Clone-Website]] — World canon complete (Basel 1973 research · New York program · founder trio · 1,850 staff); copy v1 stamped through D34; asset sprint pending
 Fictional human-cloning company site played straight (White Desert skeleton, lab imagery, Lamalama motion). Raw: [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|voice notes + phone archive]]. SuperGrok asset-generation window expires ~09-15/16.
-**Blockers:** Dolly beat, first-birth city, Antoine's framing, workforce numbers; SuperGrok asset window closing now.
+**Blockers:** Dolly beat, first-birth city, Antoine's role + Schönbächler's discipline, workforce numbers; SuperGrok asset window closing now.
 
 ### 🏎️ [[01-Projects/Driving-Game/Driving-Game|Driving Game]] — Stage 1 in progress (Schipper / DG-S1)
 
