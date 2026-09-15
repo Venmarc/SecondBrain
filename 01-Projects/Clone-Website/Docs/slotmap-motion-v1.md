@@ -4,7 +4,7 @@ date: 2026-09-13
 tags: [project, clone-website, imagery, video, requirements]
 ---
 
-> Every visual slot on the site, what fits it, what must not appear, and the motion budget. Companion to the generation ledger [[01-Projects/Clone-Website/Docs/image-requirements-v1|image-requirements-v1.md]] (sibling session, paste-ready prompts + sprint order): this doc maps WHERE assets live, that doc says HOW each gets made. Pipeline per D16: requirements → Tavily references → generate → Agy review. No image ships without passing its gate.
+> Every visual slot on the site, what fits it, what must not appear, and the motion budget. Companion to the generation ledger [[01-Projects/Clone-Website/Docs/image-requirements-v1|image-requirements-v1.md]] (paste-ready prompts + sprint order): this doc maps WHERE assets live, that doc says HOW each gets made. Pipeline per D16: requirements → Tavily references → generate → Agy review. No image ships without passing its gate.
 
 **Victor's intention rule (2026-09-15): images are arguments, not decoration.** No galleries, no look-book padding, no decorative photography. Every image must be doing an evidentiary job in its section. If a slot can be deleted without weakening the argument it was making, delete it.
 

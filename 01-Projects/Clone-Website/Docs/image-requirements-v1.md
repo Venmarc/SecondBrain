@@ -31,7 +31,9 @@ Base warm near-black `#141210`, bone `#F4EFE6`, amber practicals `#D9A441`, one 
 | A3 | The Sample | Process step 2 | A | pending |
 | A4 | The Reprogramming | Process step 4 | A | pending |
 | P1 to P6 | Family pairs (reviews 4 + look-book starters 2) | Section 4 reviews + /families | A | pending |
-| A11 | Founder portrait | Founder quote + /about | A | pending |
+| A11a | Founder portrait, historical (Bea at about 50, circa 1993, archive) | Founder quote + /about | A | pending |
+| A11b | Founder portrait, current (Bea at 82) | /about | A | pending |
+| A11c | The founder's continuation (Schönbächler archive portrait + his 18-month-old) | /about, once, never in the look-book | A | pending |
 | A12 | Lab exterior at dusk | /about | A | pending |
 | A13 | Culture room interior | /program + /about | A | pending |
 | P7 to P10 | Look-book depth pairs | /families | B | pending |
@@ -73,10 +75,16 @@ Prompt (paste into image tool, run 3 times, swap the stage sentence):
 | P5 | man, 60s | newborn | look-book, legacy register |
 | P6 | woman, mid 30s | 6-month girl | look-book, second-generation tease |
 
-**A11. Founder portrait.** Slot: founder quote + /about. Default founder is a woman (default, not stamped; say the word and it flips).
-> Editorial portrait photograph, a scientist in her late fifties, silver-grey hair pulled back plainly, dark knit sweater, steady warm expression, standing in a softly blurred laboratory with warm practical lights, medium format look, shallow depth of field, magazine profile aesthetic. No text, no logos, no lab coat, no watermark.
+**A11a. Founder portrait, historical (stamped: Bea).** Slot: founder quote + /about. Archive photograph, circa 1993, the animal-division years, three years before Dolly.
+> Editorial portrait photograph, a scientist in her early fifties, late 1993, dark knit sweater, plain pulled-back hair, steady warm expression, standing in a softly blurred laboratory with warm practical lights, medium format look with visible film grain and slightly faded archive colour, shallow depth of field, magazine profile aesthetic. No text, no logos, no lab coat, no watermark.
 
-**A12. Lab exterior at dusk.** Slot: /about. Jurisdiction-agnostic on purpose (geography still unstamped).
+**A11b. Founder portrait, current (stamped: Bea at 82).** Slot: /about. Same woman, today. The founder still at work after 53 years.
+> Editorial portrait photograph, a woman in her early eighties, silver hair pulled back plainly, dark knit sweater, steady warm expression with deep laugh lines, standing in a softly blurred laboratory with warm practical lights, medium format look, shallow depth of field, magazine profile aesthetic. No text, no logos, no lab coat, no watermark.
+
+**A11c. The founder's continuation (stamped: Schönbächler).** Slot: /about, used once, never in the look-book. A 1990s archive portrait of the professor beside his eighteen-month-old continuation. Same feature family, never uncanny sameness (R2).
+> Two photographs presented as a pair: first an archival portrait of a distinguished man in his sixties, early 1990s, warm faded colour, slight grain; second an honest photograph of a healthy eighteen-month-old child, warm lab-adjacent light, plain clothing, no props. The child's eye shape and brow line echo the man's. Neither image staged. No text, no logos, no watermark.
+
+**A12. Lab exterior at dusk.** Slot: /about (the Basel campus; the Program's New York site is described, not shown, keeping to one exterior asset per the intention rule).
 > Architectural photograph at blue hour, a low modern research building with floor-to-ceiling glass glowing warm from inside, wetland landscaping reflecting the light, minimalist architecture, quiet and expensive, editorial architecture magazine style. No text, no signage, no logos, no watermark.
 
 **A13. Culture room interior.** Slot: /program + /about.
@@ -113,7 +121,7 @@ Failures get one Agy edit pass against the same criteria, then regenerate rather
 1. A2 The Hand (the site's most important single image)
 2. A1 keyframes (the hero is the first thing anyone sees)
 3. P1 and P2 (reviews anchor the emotional core)
-4. A11 founder, A13 culture room (trust surfaces)
+4. A11a-c founder assets, A13 culture room (trust surfaces)
 5. A3, A4 (process texture)
 6. P3 to P6, A12 (depth)
 7. Tier B only if the window still lives
@@ -122,4 +130,4 @@ Tavily reference searches run per asset at generation time (D16 pipeline: requir
 
 ---
 
-*End of requirements v1. Defaults used where unstamped: H1 option a, world numbers as proposed in copy-v1.md, female founder. All flippable without regenerating anything except A11.*
+*End of requirements v1. Founder assets split into A11a-c (Bea circa 1993, Bea at 82, and the Schönbächler continuation pair). No blocking defaults remain.*

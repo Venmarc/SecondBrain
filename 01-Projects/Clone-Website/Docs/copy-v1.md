@@ -47,8 +47,8 @@ tags: [project, clone-website, copy, red-ink]
 | Samples in culture | 400 | proposed |
 | Reprogramming solved | 2023, the company's 50th year | proposed |
 | Waitlist opened | 2024 | proposed |
-| First birth | March 2025, a girl, 7 lb 4 oz, [CITY] | [STAMP ME] city |
-| Staff | **1,600** group-wide (Human Genetics 700, Animal Research 340, Bio-Data and AI 260, Corporate 300); the Program about 90 | stamped 2026-09-15 (D37) |
+| First birth | March 2025, a girl, 7 lb 4 oz, **New York City** | stamped 2026-09-15 |
+| Staff | **1,650** group-wide (Human Genetics 710, Animal Research 350, Bio-Data and AI 270, Corporate 320); the Program about 90 | **stamped 2026-09-15** |
 | Funding | The group's contract research funds the Program. The Program is priced to cover the cost of one continuation, not to what the market would bear | proposed (closes the economics) |
 | Founders | Dr. Beatrix "Bea" Vogel-Keller (founder, CEO, early 80s) · Prof. Dr. Markus Schönbächler (the mentor professor, the oldest, died in the 2000s) · Antoine de Montmollin (alive, early 90s, no doctorate, the engineer who built the rig the work stands on) | stamped (D27, corrected D35) |
 | Founder's continuation | Markus Schönbächler banked and consented (1999, the first person banked). His continuation is 18 months old. One of the 14 | stamped 2026-09-15 (D32, corrected D35) |
@@ -250,8 +250,8 @@ Roadmap module (speed story, in-world):
 Attribution: **B stamped, in the future tense.** The line is **Schönbächler's**, dated 1999: "Dolly proved it was possible. We will make it survivable." A man who was not there when it happened does not get to claim it. He gets to say what he believed. That sentence becomes the hinge of /about, above his portrait and the photograph of his eighteen-month-old continuation.
 
 Final roster (canon: [[01-Projects/Clone-Website/Docs/world-history-v1|world-history-v1]]):
-- **Dr. Beatrix "Bea" Vogel-Keller** — founder, CEO, early 80s. Survivor, corporate face.
-- **Prof. Dr. Markus Schönbächler** — the middle name, the oldest, the mentor professor. Died in the 2000s. The 1999 line is his, and so is the eighteen-month-old.
+- **Dr. Beatrix "Bea" Vogel-Keller** — founder, CEO, early 80s. Embryologist, reproductive biology. Survivor, corporate face.
+- **Prof. Dr. Markus Schönbächler** — the middle name, the oldest, the mentor professor. Professor of cytogenetics and chromatin biology. Died in the 2000s. The 1999 line is his, and so is the eighteen-month-old.
 - **Antoine de Montmollin** — alive, early 90s, no doctorate. The engineer who built the machine the rest of the work stands on.
 Copy rule: never frame Antoine by what he does not have. Describe what he built.
 

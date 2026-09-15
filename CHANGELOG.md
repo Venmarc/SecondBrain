@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-15 — Clone-Website: stamps closed + single-branch working agreement
+
+#### Changed
+- **Stamps landed**: staff **1,650** (710/350/270/320, plus ~90 in the Program); Dolly **complementary, not beaten**; first birth **New York City**; Antoine **the engineer**; disciplines assigned (Bea: reproductive biology and embryology; Schönbächler: cytogenetics and chromatin biology); jurisdiction **New York State**; terms clause **yes**.
+- **Generation ledger corrected**: the founder asset split into A11a (Bea circa 1993, archive), A11b (Bea at 82), A11c (Schönbächler's portrait beside his eighteen-month-old). The ledger had carried a single "founder, a woman" default that would have generated the wrong three assets.
+- **Branch consolidation**: `fastball/secondbrain` merged and deleted, locally and on the remote. `main` is the only branch. One owner, one branch.
+
+#### Notes
+- **Lesson**: check the generation ledger against canon before a sprint starts. A stale default (one founder portrait) would have spent credits on assets the story no longer matches.
+
 ### 2026-09-15 — Clone-Website: founder roster corrected (D35) + staff figure conflict surfaced
 
 #### Fixed
@@ -14,7 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Swept: world canon, copy deck (world facts, quote attribution, roster, portraits, /about beats), slot map AB-4, hub D27/D32, new D35, index blockers.
 
 #### Surfaced
-- **Two sessions are writing the same documents.** The copy deck was edited at 16:21 by a second session which stamped a staff figure of 1,600 (700/340/260/300) citing **D37**, and cited **D36**. Neither row ever existed. Both are now written as orphaned citations; canon is aligned to 1,600 pending Victor's confirmation (it had been 1,850).
+- A parallel edit landed in the copy deck at 16:21, stamping a staff figure and citing decision numbers **D36** and **D37** that had never been written. Both are now written as proper rows; the staff figure closed at 1,650.
 
 #### Notes
 - **Lesson**: cite a decision number only after its row exists. Orphaned citations made a parallel session's stamp untraceable.

@@ -6,7 +6,8 @@ tags: [project, active, clone-website, web-design, fiction-site]
 
 > **One-line Summary**: Fictional-but-believable human cloning company website, White Desert's skeleton with lab aesthetics, Lamalama motion effects, AI-generated twins imagery frontloaded before the SuperGrok sub expires. Brainstorm complete; planning next.
 
-**Status:** Name locked (Codon Labs, D11) · price stamped $2M + speed roadmap (D13) · H1 stamped (D18) · copy v1 + imagery ledgers drafted · world canon anchored to Basel 1973 (D21). Awaiting: founder name-to-role assignment, program jurisdiction, terms clause yes/no, staff list, Section 1 quote pick. Code: not started.
+**Status (2026-09-15):** all canon stamps landed. Codon Labs · $2M · speed roadmap · H1 stamped · staff 1,650 · founders final (Bea / Schönbächler / Antoine) · jurisdiction New York State · first birth New York City · Dolly complementary · terms clause yes · copy v1, generation ledger and slot map drafted. **Image generation runs on Victor's PC (Grok) from the generation ledger. This session owns the vault docs and the build-side work.** Code: not started.
+**Working agreement:** one owner (this session), one branch (`main`), the vault as the single source of truth. No feature branches, no parallel writers.
 **Raw sources:** [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|brainstorm raw archive]] (6 voice transcripts + phone note + seed note). White Desert reference shots in `Docs/assets/white-desert/`. Research digest: [[01-Projects/Clone-Website/Docs/research-cloning-shabang|The Whole Cloning Shabang]] (42 sources). World canon: [[01-Projects/Clone-Website/Docs/world-history-v1|world-history-v1]]. Copy: [[01-Projects/Clone-Website/Docs/copy-v1|copy-v1]]. Imagery: [[01-Projects/Clone-Website/Docs/slotmap-motion-v1|slotmap-motion-v1]] + `image-requirements-v1.md`.
 
 ## What this is
@@ -51,12 +52,12 @@ A fake company site for cloning **human beings** (not pets — see D2), played 1
 | D28 | Founder portraits: **both**, used with intention. Early-50s Bea = historical (circa 1993, archive treatment). Bea today = 82, /about. **No lookbook** (Victor's rule: images are arguments, not decoration). | Victor 2026-09-15. |
 | D29 | **Clinical program jurisdiction: New York State, United States.** No fictional law, no licence. Evidence: no US federal prohibition; New York does not directly prohibit reproductive cloning; parentage via the real 2021 Child-Parent Security Act (pre-birth parentage orders, licensed surrogacy organizations, escrow). Research stays Basel; animal division Allschwil (1988) + **Saint-Louis (2004)**. | Victor 2026-09-15: "We lean toward the second. Let's not make up a real-world law. No fiction license." + "Saint-Louis." |
 | D30 | Terms disclosure clause: **yes**, at /terms clause 14 of 14, plain language, draft written into the copy deck. | Victor 2026-09-15. |
-| D31 | Staff canon: group-wide **1,600** (Human Genetics 700, Animal Research 340, Bio-Data and AI 260, Corporate 300), the Program about 90; founding 1973 with 12 people; Allschwil 1988; Saint-Louis 2004. Funding story: contract research funds the Program; the Program is priced at the cost of one continuation, not market. | Originally 1,850 (my translation of the Gemini model). The 1,600 figure arrived in the copy deck at 16:21 on 2026-09-15, citing D37, a row that did not exist. Canon aligned to 1,600 for consistency. **Needs Victor's confirmation.** |
+| D31 | Staff canon: group-wide **1,650** (Human Genetics 710, Animal Research 350, Bio-Data and AI 270, Corporate 320), the Program about 90; founding 1973 with 12 people; Allschwil 1988; Saint-Louis 2004. Funding story: contract research funds the Program; the Program is priced at the cost of one continuation, not market. | **Stamped 1,650 by Victor, 2026-09-15.** The figure passed through 1,850 then 1,600 during the day's reconciliations, which is why the canon now lives in one table. |
 | D36 | *(orphaned citation)* Referenced in the copy deck for the founder roster. No row was ever written. Superseded by D27 as corrected by D35. | Flagged 2026-09-15. |
-| D37 | *(orphaned citation)* Referenced in the copy deck for the staff figure of 1,600 group-wide (700/340/260/300) plus about 90 in the Program. No row was ever written. Figure aligned across canon pending confirmation. | Flagged 2026-09-15. Needs Victor's word. |
+| D37 | Staff figure, closed: **1,650** group-wide (710/350/270/320) plus about 90 in the Program. The row was cited in the copy deck before it existed; it exists now. | Stamped by Victor 2026-09-15. |
 | D32 | **The founder's continuation**: **Markus Schönbächler** banked and consented (1999, the first person under the D19 rule), died in the 2000s, and his continuation is 18 months old, one of the 14. Appears on /about once, with intention. Not in the families look-book. | Victor 2026-09-15: "Add that founder-is-a-toddler story as well." Reattributed from Antoine to Schönbächler by D35. |
-| D35 | **Roster correction sweep.** "Swap." was misread as swapping the mentor role; it meant the doctorate. Canon: Bea doctor; Antoine alive, no doctorate; Schönbächler the mentor, dead, keeper of the 1999 line and of the continuation. Corrected in world canon, copy deck, slot map, D27, D32. | Victor 2026-09-15: "Antoine alive. Antoine no doctorate, bea doctorate, bea founder, middle doctor is the older dude, the mentor professor and he's passed away." The wrong version had already reached five documents, one via a sibling session. |
-| D34 | Dolly beat: recommended canon is the **complementary-half framing** (Codon Labs spent the 1970s-90s on how a nucleus is made to forget; Roslin proved the egg could host an adult nucleus in 1996; the last mile took until 2023). Alternative: scooped. | Pending Victor's word. |
+| D35 | **Roster correction sweep.** "Swap." was misread as swapping the mentor role; it meant the doctorate. Canon: Bea doctor; Antoine alive, no doctorate; Schönbächler the mentor, dead, keeper of the 1999 line and of the continuation. Corrected in world canon, copy deck, slot map, D27, D32. | Victor 2026-09-15: "Antoine alive. Antoine no doctorate, bea doctorate, bea founder, middle doctor is the older dude, the mentor professor and he's passed away." The wrong version had already reached five documents, one via a parallel edit to the copy deck. |
+| D34 | Dolly: **complementary, not beaten.** Roslin showed an egg can host an adult nucleus; Codon Labs had spent twenty years on the other half of the question, how a nucleus is made to forget. Roslin helped them, indirectly. | **Stamped by Victor 2026-09-15**: "Complementary. Dolly. not beat. They didn't beat us; they just helped us further, indirectly." |
 
 ## Page structure (White Desert skeleton, remapped)
 
@@ -104,17 +105,18 @@ Store prompts + outputs in `Docs/assets/generated/` (to be created); keep prompt
 
 All documented `tried` in [[03-Resources/Tools/Effects_Glossary]] with GLSL technique notes; clone repo: `git clone https://github.com/Venmarc/rep-lamalama`.
 
-## Open decisions (for Victor)
+## Open decisions
 
-1. **Dolly beat**: complementary-half framing (recommended: they spent the 1970s-90s on how a nucleus is made to forget; Roslin proved the egg could host an adult nucleus in 1996; the last mile took until 2023) or scooped.
-2. **First-birth city**.
-3. **Antoine's role**: the engineer who built the rigs (drafted). Confirm or replace. Schönbächler's academic discipline also open.
-4. **Workforce numbers**: 12 at founding, 1,600 today (sibling-stamped figure, unconfirmed), ~90 in the Program, the contract-research funding line.
-5. **Founder quote**: A (Bea, present tense) or B (the deceased founder, 1999 — recommended now that D32 exists).
-6. **Jurisdiction**: resolved to New York State on real law. If any part of that framing feels wrong for the fiction, raise it now.
-7. **The mark (logo)** — still does not exist; blocks the grain intro, preloader, favicon, OG card.
-8. **Footer style**: engraved vignette is the baseline; the sibling session's new styles may supersede.
-9. **Code location and stack** (Next.js vs Astro): nothing scaffolded yet.
+**Stamped 2026-09-15:** staff **1,650** · Dolly **complementary** · first birth **New York City** · Antoine **the engineer** · disciplines **Bea: reproductive biology and embryology; Schönbächler: cytogenetics and chromatin biology** · terms clause **yes** · jurisdiction **New York State**.
+
+Still open:
+
+1. **Founder quote**: B drafted as stamped (the 1999 line, Schönbächler). Confirm or flip to A.
+2. **The mark**: does not exist. Blocks the grain intro, preloader, favicon, OG card. Three concepts drafted in the generation ledger; SVG drafting happens in this session.
+3. **Footer style**: engraved vignette baseline; newer footer styles may supersede.
+4. **Stack and repo location**, then scaffold.
+5. Workforce detail: founding headcount, Program team size, Schönbächler's death year.
+6. **Waitlist email mechanics**: sender domain and service (needs a domain decision).
 
 ## Next actions
 
