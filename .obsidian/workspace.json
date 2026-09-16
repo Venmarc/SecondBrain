@@ -67,7 +67,7 @@
               "state": {
                 "query": "",
                 "matchingCase": false,
-                "explainSearch": false,
+                "explainSearch": true,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
@@ -90,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 212.5
+    "width": 292.6311378479004
   },
   "right": {
     "id": "e53b3649d4d785ff",
@@ -218,13 +218,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "631c0f81ff80feeb",
+  "active": "3a113242ab7071ae",
   "lastOpenFiles": [
+    "06-Agent-Sessions/2026-09-16-grok-logo-tab-tester.md",
+    "00-Inbox/2026-08-04_brainstorm-cross-machine-session-awareness.md",
+    "06-Agent-Sessions/2026-09-16-grok-dna-c-logo-5color.md",
+    "CHANGELOG.md",
+    "01-Projects/Clone-Website/Clone-Website.md",
+    "01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw.md",
     "01-Projects/Driving-Game/Driving-Game.md",
     "01-Projects/Driving-Game/Docs/driving-game-stage-1-goal.md",
     "00-Inbox/2026-09-13_active-particle-environments.md",
-    "00-Inbox/2026-08-04_brainstorm-cross-machine-session-awareness.md",
-    "CHANGELOG.md",
     "00-Inbox/Pet Clone Website.md",
     "conflict-files-obsidian-git.md",
     "03-Resources/Design/Web-Garnish/demos/acquire-particle-footer/preview-idle.png",
@@ -262,10 +266,6 @@
     "01-Projects/Clone-Website/Docs/copy-v1.md",
     "06-Agent-Sessions/2026-09-14-opencode-antigravity-day-page-smoothscroll.md",
     "03-Resources/Design/Web-Garnish/11-Minimal-Gold-Footer.md",
-    "03-Resources/Design/Web-Garnish/10-Night-Scene-Footer.md",
-    "03-Resources/Design/Web-Garnish/09-Particle-Footer.md",
-    "03-Resources/Design/Web-Garnish/08-Editorial-Scene-Footer.md",
-    "01-Projects/Clone-Website/Docs/research-cloning-shabang.md",
     "Attachments/Untitled.canvas",
     "03-Resources/Skills/Frontend Awesomeness.canvas"
   ]
