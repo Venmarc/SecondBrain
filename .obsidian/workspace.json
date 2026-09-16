@@ -11,10 +11,14 @@
             "id": "ad82aac91fb17681",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "split-diff-view",
+              "state": {
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ]
@@ -206,8 +210,18 @@
   },
   "active": "ad82aac91fb17681",
   "lastOpenFiles": [
+    "Assets/logo_variant_8.jpg",
+    "Assets/logo_variant_7.jpg",
+    "Assets/logo_variant_6.png",
+    "Assets/logo_variant_5.jpg",
+    "Assets/logo_variant_4.svg",
+    "Assets/logo_variant_3.jpg",
+    "Assets/logo_variant_2.jpg",
+    "Assets/logo_variant_1.png",
+    "Assets/lgo_variant6.png",
+    "Assets/logo-helix-fixed.png",
+    "Assets/logo_variant7.jpg",
     "06-Agent-Sessions/2026-09-16-opencode-codon-labs-astro-scaffold.md",
-    "01-Projects/Clone-Website/Docs/assets/white-desert/Screenshot_From_2026-09-13_02-11-21.png",
     "01-Projects/Clone-Website/Clone-Website.md",
     "06-Agent-Sessions/2026-09-16-grok-logo-tab-tester.md",
     "00-Inbox/2026-08-04_brainstorm-cross-machine-session-awareness.md",
@@ -219,16 +233,7 @@
     "00-Inbox/2026-09-13_active-particle-environments.md",
     "00-Inbox/Pet Clone Website.md",
     "conflict-files-obsidian-git.md",
-    "03-Resources/Design/Web-Garnish/demos/acquire-particle-footer/preview-idle.png",
-    "03-Resources/Design/Web-Garnish/assets/handshake-silhouette-pair.png",
-    "03-Resources/Design/Web-Garnish/assets/handshake-silhouette-pair-mask.png",
-    "03-Resources/Design/Backdrop-Supply/demos/backdrop-foundry/preview.png",
-    "03-Resources/Design/Backdrop-Supply/demos/backdrop-foundry/mesh-vs-gradientbgs.png",
     "03-Resources/Design/Backdrop-Supply/demos/backdrop-foundry/index.html",
-    "03-Resources/Design/Backdrop-Supply/demos/backdrop-foundry/holo-vs-chromatica.png",
-    "03-Resources/Design/Backdrop-Supply/demos/backdrop-foundry/halftone-vs-ascii.png",
-    "03-Resources/Design/Backdrop-Supply/demos/backdrop-foundry/glass-vs-velvoura.png",
-    "03-Resources/Design/Backdrop-Supply/assets/zephyr/image-6.webp",
     "03-Resources/Design/Backdrop-Supply/engine/presets.json",
     "03-Resources/Design/Backdrop-Supply/engine/modes.json",
     "03-Resources/Design/Backdrop-Supply/engine/VERTEX.glsl",
@@ -251,7 +256,6 @@
     "01-Projects/Clone-Website/Docs/slotmap-motion-v1.md",
     "01-Projects/Clone-Website/Docs/image-requirements-v1.md",
     "01-Projects/Clone-Website/Docs/copy-v1.md",
-    "06-Agent-Sessions/2026-09-14-opencode-antigravity-day-page-smoothscroll.md",
     "Attachments/Untitled.canvas",
     "03-Resources/Skills/Frontend Awesomeness.canvas"
   ]
