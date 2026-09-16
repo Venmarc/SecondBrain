@@ -6,7 +6,7 @@ tags: [project, active, clone-website, web-design, fiction-site]
 
 > **One-line Summary**: Fictional-but-believable human cloning company website, White Desert's skeleton with lab aesthetics, Lamalama motion effects, AI-generated twins imagery frontloaded before the image-gen sub expires. Brainstorm complete; planning next.
 
-**Status (2026-09-15):** all canon stamps landed. Codon Labs · $2M · speed roadmap · H1 stamped · staff 1,650 · founders final (Bea / Schönbächler / Antoine) · jurisdiction New York State · first birth New York City · Dolly complementary · terms clause yes · copy v1, generation ledger and slot map drafted. **Image generation runs on Victor's PC (Grok) from the generation ledger. This session owns the vault docs and the build-side work.** Code: not started.
+**Status (2026-09-15):** all canon stamps landed. Codon Labs · $2M · speed roadmap · H1 stamped · staff 1,650 · founders final (Bea / Schönbächler / Antoine) · jurisdiction New York State · first birth New York City · Dolly complementary · terms clause yes · copy v1, generation ledger and slot map drafted. **Image generation runs on Victor's PC (Grok) from the generation ledger. This session owns the vault docs and the build-side work.** Code: **Astro scaffold live, 2026-09-16** at `~/Documents/Codon-Labs` (local git, not pushed).
 **Working agreement:** one owner (this session), one branch (`main`), the vault as the single source of truth. No feature branches, no parallel writers.
 **Raw sources:** [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|brainstorm raw archive]] (6 voice transcripts + phone note + seed note). White Desert reference shots in `Docs/assets/white-desert/`. Research digest: [[01-Projects/Clone-Website/Docs/research-cloning-shabang|The Whole Cloning Shabang]] (42 sources). World canon: [[01-Projects/Clone-Website/Docs/world-history-v1|world-history-v1]]. Copy: [[01-Projects/Clone-Website/Docs/copy-v1|copy-v1]]. Imagery: [[01-Projects/Clone-Website/Docs/slotmap-motion-v1|slotmap-motion-v1]] + `image-requirements-v1.md`.
 
@@ -31,7 +31,7 @@ A fake company site for cloning **human beings** (not pets — see D2), played 1
 | D7 | Two-step realism: linked pages exist but nothing deeper (link → real page → maybe one more real page → dead end) | Phone note: "a two-step realism feel… and nothing else after that." |
 | D8 | **Pricing fork resolved by research: $5M = child donor / $10M = adult donor pricing (donor-age reading), clone output is always a baby.** Fallback ladder $1M/$5M if $5/10 reads too steep. | Real anchors: dog clone $50k, horse $85k, elite surrogacy $250k–$300k, genome sequencing $500. $5M is ~20x the top real-world reproduction price = believable first-of-its-kind premium. Output-adult clones (The Prestige/Moon) rejected as a different fiction. Victor's call whether to accept donor-age reading. |
 | D9 | Footer = **engraved vignette** (Web-Garnish style 01) | Victor approved 2026-09-13. Bio-luxury fit, LCP-safe, pure SVG + hatch pattern per runbook. |
-| D10 | Code lives in a **GitHub repo**; locally at `~/Projects` on this machine, `Documents` folder on Victor's PC | Victor 2026-09-13: "Code lives in GitHub. Here it lives in ~/Projects. When working on my PC, it'll be stored in the Documents folder." |
+| D10 | Code lives in a **GitHub repo** named **Codon Labs**, built on Victor's PC at `~/Documents/Codon-Labs`. The earlier `~/Projects` location belonged to the brainstorm machine and is retired (folder deleted 2026-09-16). | Victor 2026-09-13: "Code lives in GitHub. Here it lives in ~/Projects. When working on my PC, it'll be stored in the Documents folder." → **Resolved 2026-09-16:** this machine *is* the PC, so the build lives at `~/Documents/Codon-Labs`. |
 | D11 | Name: **Codon Labs** (Victor locked 2026-09-13) | "Codon inc / probably codon labs." Domain: codonlabs.com taken (Sav.com squatter, parked, registered 2024-10-18); codonlabs.io, codonlabs.ai, codon-labs.com OPEN. Formal trademark check still pending (defunct Codon Devices existed 2000s). |
 | D12 | Clone output is ALWAYS a baby; one product, one price. Adult-output clones (movies' version) explicitly rejected | Victor 2026-09-13: "they always start out as babies, not full-grown people. Movies make it seem like they start out as whatever result you want." |
 | D13 | Price: **$2,000,000 stamped**. Roadmap: **speed** (14 months today → 9 by 2028). Price-cut roadmap rejected (wasteful register). | Victor stamped 2026-09-13: "Roadmap: speed. 2M price." Copy drafted in copy-v1.md. |
@@ -105,6 +105,18 @@ Store prompts + outputs in `Docs/assets/generated/` (to be created); keep prompt
 
 All documented `tried` in [[03-Resources/Tools/Effects_Glossary]] with GLSL technique notes; clone repo: `git clone https://github.com/Venmarc/rep-lamalama`.
 
+## Build (2026-09-16)
+
+Repo folder `Codon-Labs` at `~/Documents/Codon-Labs` (Victor's PC; D10 resolved). Local git, no remote yet. Stack: **Astro 7 static + React 19 islands for the WebGL only + Tailwind v4**. Deploys to Vercel with no adapter. The rep's scroll-hijacking `SmoothRoot` was deliberately not ported.
+
+**The mark is a slot, not a blocker.** `src/brand/mark.ts` exports `markSvg: string | null`; paste the finished SVG and nav, footer, preloader, favicon source and OG composite all inherit it. Until then a type wordmark renders. Nothing else in the build depends on the logo.
+
+**Effects are ported but gated** (`src/theme.ts`): `intro` and `trail` draw the mark shape (`drawLLLogo` in the compositor shader) so they need `markSvg`; `photo` needs the generated imagery. The port lives in `src/gl/` + `src/lib/` + `src/components/effects/`.
+
+**Build-not-generate assets shipped** (no AI spend, no logo dependency): flight line V-4, genome-cost chart, roadmap timeline, consent flow, genome-match graphic, engraved footer vignette (D9 baseline).
+
+**Verified:** 13 routes, `astro build` passes, `astro check` 0 errors / 0 warnings / 0 hints (34 files), browser run with zero console errors and no horizontal overflow.
+
 ## Open decisions
 
 **Stamped 2026-09-15:** staff **1,650** · Dolly **complementary** · first birth **New York City** · Antoine **the engineer** · disciplines **Bea: reproductive biology and embryology; Schönbächler: cytogenetics and chromatin biology** · terms clause **yes** · jurisdiction **New York State**.
@@ -121,17 +133,19 @@ Still open:
 ## Next actions
 
 1. Asset sprint in the SuperGrok window (closing now): the generation ledger's A-tier order, starting with the register test batch (the money macro, one portrait pair, the hand).
-2. Design the mark.
-3. Red-ink the copy deck (the stamps above).
-4. Clone rep-lamalama to this machine; port the four effects.
-5. Scaffold the site once assets exist.
-6. Waitlist form plus transactional email with the reveal copy. No mailing-list subscription.
+2. **Design the mark.** Does not block the build: it is a drop-in slot at `src/brand/mark.ts`. Victor has candidates in flight (see the 2026-09-16 logo session logs).
+3. Red-ink the copy deck (the stamps above). One open stamp: founder quote A or B.
+4. ~~Clone rep-lamalama to this machine; port the four effects.~~ **Done, gated** (see Build). Flip `effects.*` in `src/theme.ts` when the mark and imagery land.
+5. ~~Scaffold the site once assets exist.~~ **Done, 2026-09-16** on Astro. Remaining routes and polish are open.
+6. Waitlist form plus transactional email with the reveal copy. No mailing-list subscription. Blocked on the sender domain and service (open decision 6).
 
 ## Lessons log
 
 - AI research supplied without the project frame arrives coherent but wrongly anchored (Gemini placed the founding at 1975; canon is 1973, and it assumed a pure research enterprise). Re-anchor every number to the world facts table on entry.
 - Two agent sessions drafted imagery docs under near-identical names. Name docs by function and cross-link them (slot map vs generation ledger).
 - **One ambiguous stamp, five documents wrong.** "Swap." meant the doctorate, not the mentor role. When a stamp is a single word, restate the interpretation in one line and get a yes before cascading it into canon.
+- **A missing logo is a design dependency, not a build dependency.** Isolate the mark behind one data slot (`markSvg`) and a type fallback, and nav/footer/preloader/favicon/OG stop waiting on it. Same for the ported effects: gate them behind flags instead of blocking the scaffold.
+- **Do not port a scroll-hijacking smoother into a real site.** The rep's `SmoothRoot` breaks native scroll, anchors, and keyboard access. Reuse the effect engines, drop the scroll hijack.
 
 ## Related
 

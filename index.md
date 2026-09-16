@@ -18,9 +18,9 @@
 
 ## ⚡ Active Projects (01-Projects)
 
-### 🧬 [[01-Projects/Clone-Website/Clone-Website|Clone-Website]] — World canon complete (Basel 1973 research · New York program · founder trio · 1,850 staff); copy v1 stamped through D34; asset sprint pending
-Fictional human-cloning company site played straight (White Desert skeleton, lab imagery, Lamalama motion). Raw: [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|voice notes + phone archive]]. SuperGrok asset-generation window expires ~09-15/16.
-**Blockers:** Dolly beat, first-birth city, Antoine's role + Schönbächler's discipline, workforce numbers; SuperGrok asset window closing now.
+### 🧬 [[01-Projects/Clone-Website/Clone-Website|Clone-Website]] — Canon complete; **Astro build scaffolded** (repo `codon-labs`); mark isolated as a drop-in slot so the logo does not block the build; effects ported but gated; PC-side asset sprint pending
+Fictional human-cloning company site played straight (White Desert skeleton, lab imagery, Lamalama motion). Raw: [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|voice notes + phone archive]]. Build: [[06-Agent-Sessions/2026-09-16-opencode-codon-labs-astro-scaffold|Astro scaffold session]].
+**Blockers:** the mark (Victor, in flight; the build proceeds without it), generated imagery, and the waitlist sender domain.
 
 ### 🏎️ [[01-Projects/Driving-Game/Driving-Game|Driving Game]] — Stage 1 in progress (Schipper / DG-S1)
 
@@ -75,7 +75,7 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 
 ## 🤖 Agent Sessions (06-Agent-Sessions)
 New sessions: `YYYY-MM-DD-<agent>-<slug>.md` via [[Templates/Agent-Session-Summary|template]]. Processed logs index: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].  
-Latest: [[06-Agent-Sessions/2026-09-12-opencode-node24-upgrade|Node v24 upgrade]] — machine Node v20→v24.21.0 (nvm), global CLIs carried over, hermes-gateway systemd PATH pin fixed; nvm/systemd traps logged to ANTI_PATTERNS. Prior: [[06-Agent-Sessions/2026-09-03-bossman-overnight-jeremi-review|Overnight Jeremi / X / LinkedIn]] — content-system verdict + recruiter skip-test. Prior: [[06-Agent-Sessions/2026-08-15-hermes-provider-audit|Provider audit]] — full Hermes provider audit: the "everything failing" cascade traced to a global `model.base_url` override (not bridge contamination), unset and verified; every provider live-tested and the working-model matrix recorded (agentrouter OK, NVIDIA 29/102, Copilot 13, Nous 5 free, Vercel 2, Gemini removed). Prior: [[06-Agent-Sessions/2026-08-14-hermes-agentrouter-sensitive-words-block|AgentRouter sensitive-words block]]. Historical processed logs: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].
+Latest: [[06-Agent-Sessions/2026-09-16-opencode-codon-labs-astro-scaffold|Codon Labs Astro scaffold]] — logo isolated as a drop-in mark slot so the missing logo stops blocking the build; effects ported but gated; `astro check` clean. Prior: [[06-Agent-Sessions/2026-09-12-opencode-node24-upgrade|Node v24 upgrade]] — machine Node v20→v24.21.0 (nvm), global CLIs carried over, hermes-gateway systemd PATH pin fixed; nvm/systemd traps logged to ANTI_PATTERNS. Prior: [[06-Agent-Sessions/2026-09-03-bossman-overnight-jeremi-review|Overnight Jeremi / X / LinkedIn]] — content-system verdict + recruiter skip-test. Prior: [[06-Agent-Sessions/2026-08-15-hermes-provider-audit|Provider audit]] — full Hermes provider audit: the "everything failing" cascade traced to a global `model.base_url` override (not bridge contamination), unset and verified; every provider live-tested and the working-model matrix recorded (agentrouter OK, NVIDIA 29/102, Copilot 13, Nous 5 free, Vercel 2, Gemini removed). Prior: [[06-Agent-Sessions/2026-08-14-hermes-agentrouter-sensitive-words-block|AgentRouter sensitive-words block]]. Historical processed logs: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].
 
 ---
 

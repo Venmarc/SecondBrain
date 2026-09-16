@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-16 — Clone-Website: build scaffolded on Astro, logo unblocked
+
+#### Added
+- **`Codon-Labs` repo** (new; built on Victor's PC at `~/Documents/Codon-Labs`; local git): Astro 7 static + React 19 islands for the WebGL only + Tailwind v4. 13 routes. `astro check` 0 errors / 0 warnings / 0 hints.
+- **Mark as a drop-in slot** (`src/brand/mark.ts`, `markSvg`): nav, footer, preloader, favicon source and OG composite all inherit it; a type wordmark renders until it exists. The logo no longer blocks the build.
+- **Build-not-generate assets**: flight line V-4, genome-cost chart, roadmap timeline, consent flow, genome-match graphic, engraved footer vignette.
+- Hub section **Build (2026-09-16)** and session log `2026-09-16-opencode-codon-labs-astro-scaffold`.
+
+#### Changed
+- Framework decision: **Astro, not Next.js** (Victor's call, 2026-09-16). Overrode an initial Vite+React scaffold.
+- Clone-Website hub: status line ("Code: not started" → scaffold live), Next actions 4 and 5 closed, lessons log extended.
+
+#### Notes
+- **Lesson**: a missing logo is a design dependency, not a build dependency. Isolate the mark behind one data slot and a type fallback; gate the ported effects behind flags.
+- **Lesson**: do not port a scroll-hijacking smoother into a real site. The rep's `SmoothRoot` breaks native scroll, anchors and keyboard access; reuse only the effect engines.
+- Effects ported but gated off: `intro` and `trail` draw the mark shape, `photo` needs the generated imagery.
+
 ### 2026-09-15 — Clone-Website: stamps closed + single-branch working agreement
 
 #### Changed
