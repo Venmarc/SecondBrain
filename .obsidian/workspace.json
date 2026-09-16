@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-Projects/Driving-Game/Driving-Game.md",
+                "file": "01-Projects/Clone-Website/Clone-Website.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Driving-Game"
+              "title": "Clone-Website"
             }
           }
         ]
@@ -220,8 +220,8 @@
   },
   "active": "631c0f81ff80feeb",
   "lastOpenFiles": [
-    "01-Projects/Driving-Game/Docs/driving-game-stage-1-goal.md",
     "01-Projects/Driving-Game/Driving-Game.md",
+    "01-Projects/Driving-Game/Docs/driving-game-stage-1-goal.md",
     "00-Inbox/2026-09-13_active-particle-environments.md",
     "00-Inbox/2026-08-04_brainstorm-cross-machine-session-awareness.md",
     "CHANGELOG.md",

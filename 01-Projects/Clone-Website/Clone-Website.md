@@ -4,7 +4,7 @@ date: 2026-09-13
 tags: [project, active, clone-website, web-design, fiction-site]
 ---
 
-> **One-line Summary**: Fictional-but-believable human cloning company website, White Desert's skeleton with lab aesthetics, Lamalama motion effects, AI-generated twins imagery frontloaded before the SuperGrok sub expires. Brainstorm complete; planning next.
+> **One-line Summary**: Fictional-but-believable human cloning company website, White Desert's skeleton with lab aesthetics, Lamalama motion effects, AI-generated twins imagery frontloaded before the image-gen sub expires. Brainstorm complete; planning next.
 
 **Status (2026-09-15):** all canon stamps landed. Codon Labs · $2M · speed roadmap · H1 stamped · staff 1,650 · founders final (Bea / Schönbächler / Antoine) · jurisdiction New York State · first birth New York City · Dolly complementary · terms clause yes · copy v1, generation ledger and slot map drafted. **Image generation runs on Victor's PC (Grok) from the generation ledger. This session owns the vault docs and the build-side work.** Code: not started.
 **Working agreement:** one owner (this session), one branch (`main`), the vault as the single source of truth. No feature branches, no parallel writers.
