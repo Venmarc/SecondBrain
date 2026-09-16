@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-14 — Pastries rep: Day page fixes + smooth-scroll performance
+
+#### Added
+- [[06-Agent-Sessions/2026-09-14-opencode-antigravity-day-page-smoothscroll]] — session log: fixed the `/day` invisible-background bug (fixed ScrollSmoother wrapper collapsed the page root → white body under light dark-theme text) and restored the rep's Lighthouse gate to a stable 99 (interaction-gated GSAP init; conservative hardware-GPU probe).
+
+#### Changed
+- [[ANTI_PATTERNS.md]] — new `## GSAP (ScrollSmoother / ScrollTrigger)` section (3 rows) and 2 new WebGL rows: load-time vs timer-deferral cost of gsap init; `position: fixed` wrapper collapsing a parent's painted background; empty renderer-probe string reading as "hardware". Line count 119 → 128 (no split needed).
+- [[03-Resources/Tools/Effects_Glossary.md]] — [Motion] Momentum-smoothed page scroll: rep build + Lighthouse 99 recorded via the session log; status left `extracted` pending the feel check.
+
 ### 2026-09-13 — Web-Garnish batch 2: living & editorial footers
 
 #### Added
