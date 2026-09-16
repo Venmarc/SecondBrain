@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CHANGELOG.md",
+                "file": "01-Projects/Driving-Game/Driving-Game.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "CHANGELOG"
+              "title": "Driving-Game"
             }
           }
         ]
@@ -220,6 +220,11 @@
   },
   "active": "631c0f81ff80feeb",
   "lastOpenFiles": [
+    "01-Projects/Driving-Game/Docs/driving-game-stage-1-goal.md",
+    "01-Projects/Driving-Game/Driving-Game.md",
+    "00-Inbox/2026-09-13_active-particle-environments.md",
+    "00-Inbox/2026-08-04_brainstorm-cross-machine-session-awareness.md",
+    "CHANGELOG.md",
     "00-Inbox/Pet Clone Website.md",
     "conflict-files-obsidian-git.md",
     "03-Resources/Design/Web-Garnish/demos/acquire-particle-footer/preview-idle.png",
@@ -255,17 +260,12 @@
     "01-Projects/Clone-Website/Docs/slotmap-motion-v1.md",
     "01-Projects/Clone-Website/Docs/image-requirements-v1.md",
     "01-Projects/Clone-Website/Docs/copy-v1.md",
-    "00-Inbox/2026-09-13_active-particle-environments.md",
     "06-Agent-Sessions/2026-09-14-opencode-antigravity-day-page-smoothscroll.md",
     "03-Resources/Design/Web-Garnish/11-Minimal-Gold-Footer.md",
     "03-Resources/Design/Web-Garnish/10-Night-Scene-Footer.md",
     "03-Resources/Design/Web-Garnish/09-Particle-Footer.md",
     "03-Resources/Design/Web-Garnish/08-Editorial-Scene-Footer.md",
     "01-Projects/Clone-Website/Docs/research-cloning-shabang.md",
-    "01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw.md",
-    "01-Projects/Clone-Website/Clone-Website.md",
-    "03-Resources/Design/Web-Garnish/07-Build-Runbook.md",
-    "00-Inbox/Sites To Extract.md",
     "Attachments/Untitled.canvas",
     "03-Resources/Skills/Frontend Awesomeness.canvas"
   ]

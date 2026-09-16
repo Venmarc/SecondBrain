@@ -2,7 +2,7 @@
 
 # Driving Game
 
-**Status:** Active — **Stage 1** (first playable asphalt) — **Review** (Victor retesting / DG-S1)
+**Status:** Inactive — **Stage 1:** Paused due to device heating up and loud fan spinning when Driving game is tested through Godot.
 **Codebase:** `/home/redmane/Documents/Driving-Game`  
 **Ticket:** [[02-Areas/Ops/Jeremy-Board|Jeremy Board]] → `DG-S1`  
 **Platform:** Godot 4 native Linux desktop · keyboard + standard controller
