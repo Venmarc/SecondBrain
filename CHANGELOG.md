@@ -6,6 +6,67 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-15 — Clone-Website: stamps closed + single-branch working agreement
+
+#### Changed
+- **Stamps landed**: staff **1,650** (710/350/270/320, plus ~90 in the Program); Dolly **complementary, not beaten**; first birth **New York City**; Antoine **the engineer**; disciplines assigned (Bea: reproductive biology and embryology; Schönbächler: cytogenetics and chromatin biology); jurisdiction **New York State**; terms clause **yes**.
+- **Generation ledger corrected**: the founder asset split into A11a (Bea circa 1993, archive), A11b (Bea at 82), A11c (Schönbächler's portrait beside his eighteen-month-old). The ledger had carried a single "founder, a woman" default that would have generated the wrong three assets.
+- **Branch consolidation**: `fastball/secondbrain` merged and deleted, locally and on the remote. `main` is the only branch. One owner, one branch.
+
+#### Notes
+- **Lesson**: check the generation ledger against canon before a sprint starts. A stale default (one founder portrait) would have spent credits on assets the story no longer matches.
+
+### 2026-09-15 — Clone-Website: founder roster corrected (D35) + staff figure conflict surfaced
+
+#### Fixed
+- **Roster, everywhere**: Bea (doctor, founder, CEO, early 80s) · Schönbächler (middle name, the oldest, mentor professor, died in the 2000s) · Antoine (alive, early 90s, no doctorate, the engineer). "Swap." meant the doctorate, not the mentor role.
+- The founder's continuation, the 1999 line, and the /about image are all Schönbächler's. Added 1999 to the timeline: the archive begins, and Schönbächler is the first person banked.
+- Swept: world canon, copy deck (world facts, quote attribution, roster, portraits, /about beats), slot map AB-4, hub D27/D32, new D35, index blockers.
+
+#### Surfaced
+- A parallel edit landed in the copy deck at 16:21, stamping a staff figure and citing decision numbers **D36** and **D37** that had never been written. Both are now written as proper rows; the staff figure closed at 1,650.
+
+#### Notes
+- **Lesson**: cite a decision number only after its row exists. Orphaned citations made a parallel session's stamp untraceable.
+- **Lesson**: two writers in one file need one owner per document. Edits landed mid-sweep and had to be reconciled twice.
+
+#### Added
+- [[01-Projects/Clone-Website/Docs/world-history-v1|World canon v2]] — rewritten: timeline re-anchored to 1973, the two-campi legal table (Basel research, Allschwil 1988, Saint-Louis 2004, New York program), the re-anchored workforce table, the founder's continuation (D32), open questions.
+
+#### Changed
+- Copy deck: world facts table (clinical program = New York State, staff 1,850 group + ~90 program, funding line), FAQ answers for geography, legality and legal parentage rewritten on real law, the review line de-"61 scientists"-ed, founder quote section (attribution B recommended, two Bea portraits plus the founder's continuation image, use-once rule), /terms clause 14 drafted.
+- Hub decisions D27–D34. Slot map: intention rule added (images are arguments), AB-1 split into historical/current, AB-4 added, V-4 gained the Basel-to-New-York leg.
+
+#### Notes
+- **Lesson**: AI-researched material supplied without the project frame (Gemini did not know Codon Labs clones humans) arrives coherent but wrongly anchored. It placed the founding at 1975; canon is 1973. Re-anchor every number to the world facts table before it enters the vault.
+- **Lesson**: two agent sessions drafted imagery documents in parallel under near-identical names. Name docs by function (slot map vs generation ledger) and cross-link them.
+
+#### Added
+- [[01-Projects/Clone-Website/Docs/world-history-v1|World history canon v1]] — 1973 Basel founding adjacent to the Biozentrum (Petersplatz), 1980s–90s animal division (Allschwil or Saint-Louis, 15 min from HQ), the Dolly-era beat, the three founders (Bea Vogel-Keller + two co-founders, one deceased 2000s), two campuses, open world questions. Translated from Victor's Gemini/Google Earth research (Gemini was told only "genetics and cell research company that later had an animal division", never "clone company").
+- [[01-Projects/Clone-Website/Docs/image-requirements-v1|Generation ledger v1]] — sibling session: paste-ready per-asset prompts, A/B/C tiers, sprint order against the SuperGrok window. Companion to the slot map.
+
+#### Changed
+- Copy deck: H1 stamped ("The next frontier is you"), Dolly FAQ given an identifying clause + verified Nottingham 13-sheep sourcing, consent FAQ gains the grandfather carve-out (D19: "Death does not withdraw a yes. Silence does."), grandfather review drafted, world facts table re-anchored to the 1973 Basel canon, founder quote attribution options added.
+- Hub decision log D18–D26 (H1 stamp, consent rule, imagery law, Basel canon, founder roster, portrait plan, terms clause, FAQ count, quote candidates).
+
+### 2026-09-15 — Backdrop Supply: new design collection (code recipes + shader engine + cached freebies)
+
+#### Added
+- [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply index]] — new design collection built around `backgrounds.supply/freebies` (31 collections, 1359 backgrounds, 117 offered free). Splits the site into two kinds of asset: procedural looks that can be rebuilt in code, and rendered/composed looks that cannot. Carries the live preview URL pattern and the finding that every free preview serves at 1200px, not the advertised 3K.
+- Family notes `01-Gradient-Mesh`, `02-Glass-and-Iridescent`, `03-Cosmic-and-Cavern`, `04-Stylized-Landscape`, `05-Dither-ASCII-Stipple`, `06-Surreal-Collage`, `07-Animated-Loops` — one per style family, each with the source collections, the sampled palette from the cached files, a code-replicability verdict with the evidence behind it, and a build recipe.
+- [[03-Resources/Design/Backdrop-Supply/08-Build-Runbook|08-Build-Runbook]] — readiness matrix across the eight families, three build routes (pure CSS, fragment shader, generate), the pitfalls hit for real while building the demo, and the verification recipe.
+- `engine/` — the generator's shader system pulled out of its public client bundle: `FRAG_HEADER.glsl` (simplex, fbm, `paletteAt`, `writeColor`), `VERTEX.glsl`, `modes.json` (32 modes, full GLSL plus 164 typed uniforms with ranges and defaults), `presets.json` (61 artist-tuned named presets).
+- `assets/` — one free preview cached per collection (31 files, ~3 MB) with `manifest.json` (local path, source URL, resolution, sampled palette) and `inventory-all-previews.json` (all 117 free filenames), so nothing needs re-scraping.
+- `demos/backdrop-foundry/index.html` — self-contained demo, no network, no images, no libraries: seven backdrop panels, one pure CSS and six WebGL2, plus `preview.png` and three reference-versus-built comparison images.
+
+#### Findings
+- Verified by an independent vision pass on the captured demo: six of seven panels read as polished designed backdrops. The holographic foil mode reads as faceted at this scale.
+- Two independent comparisons confirmed the limit: a 2D fragment shader reproduces the *material language* of the volumetric glass renders (gloss, sheen, refraction) but not the geometry or depth. Chromatica-style ribbons and landscapes must be generated or modelled, not shader-built. Recorded as a hard boundary in `04-Stylized-Landscape` and `02-Glass-and-Iridescent`.
+- The dither family is confirmed same-family: the built halftone shader matched the cached ASCII stipple reference on technique, differing only in subject and palette.
+
+#### Changed
+- [[index|index.md]] — Design section now lists the Backdrop Supply collection alongside Web-Garnish.
+
 ### 2026-09-14 — Pastries rep: Day page fixes + smooth-scroll performance
 
 #### Added
@@ -14,6 +75,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 #### Changed
 - [[ANTI_PATTERNS.md]] — new `## GSAP (ScrollSmoother / ScrollTrigger)` section (3 rows) and 2 new WebGL rows: load-time vs timer-deferral cost of gsap init; `position: fixed` wrapper collapsing a parent's painted background; empty renderer-probe string reading as "hardware". Line count 119 → 128 (no split needed).
 - [[03-Resources/Tools/Effects_Glossary.md]] — [Motion] Momentum-smoothed page scroll: rep build + Lighthouse 99 recorded via the session log; status left `extracted` pending the feel check.
+
+### 2026-09-13 — Clone-Website: research dig, decisions D8–D17, copy deck v1
+
+#### Added
+- [[01-Projects/Clone-Website/Docs/research-cloning-shabang|Research digest "The Whole Cloning Shabang"]] — 42 sourced sources (Tavily): Clonaid anti-pattern (credibility recipe), grief register (ViaGen customers, Streisand), twins' lived reality (Psychiatric Times twin-perspective), law/jurisdiction, science failure modes + aging-myth debunk, Colossal/ViaGen brand registers, elite-reproduction price anchors, self-cloning demand (Theos/YouGov 11%/4%), fiction reference points (Never Let Me Go's Hailsham, Mortyplicity).
+- [[01-Projects/Clone-Website/Docs/copy-v1|Copy Deck v1]] — voice spec (14 rules), world facts table, all 5 sections drafted to final quality, 14-item FAQ (myth + plausible registers), pricing + speed-roadmap module, fictional founder quote, two-step realism page map (layers 0–2), the reveal email drafted in full. Red-ink pass pending: hero H1 pick, world numbers, geography, terms-disclosure clause.
+- [[01-Projects/Clone-Website/Docs/slotmap-motion-v1|Slot map & motion requirements v1]] — every visual slot by page/section with aspects and counts (companion to the sibling session's generation ledger `image-requirements-v1.md`), the Three In-World Laws (no grown continuations in present-day, no doubles site-wide, fictional faces only), motion/video slots, build-not-generate asset list, Agy gate checklist, generation budget and sequencing.
+
+#### Changed
+- Hub decision log D8–D17: name **Codon Labs** (codonlabs.com squatter-held; .io/.ai/codon-labs.com open, trademark check pending), clone output always a baby (one product, one price), $2M price stamped, roadmap = speed (14 months → 9 by 2028), FAQ dual registers, frontier metaphor (not continents), image pipeline (requirements → Tavily refs → generate → Agy review), footer baseline engraved vignette with sibling footer session as live alternative.
+
+### 2026-09-13 — Web-Garnish: desert-wind layer on the ACQUIRE particle footer
+
+- `demos/acquire-particle-footer/` — windy-desert pass: dusk backdrop with warm horizon haze + layered dune masses, gust envelope (18s surges + flutter), saltation streaks (short two-segment curls riding the crests), grains plucked off the formed pair mid-gust and streaming downwind, height-weighted wind lean (figures ripple like cloth, hold structure). Previews refreshed (hover + idle).
+- `00-Inbox/2026-09-13_active-particle-environments.md` — Victor's bigger-picture capture: structure-mask + force-field + churn engine applied to whole environments (swaying trees, working figures, bird flocks, animated billboards); scene menu + force vocabulary; open decisions parked.
+
+### 2026-09-13 — Web-Garnish: ACQUIRE particle footer rebuilt as antigravity morph-field (v2)
+
+- [[03-Resources/Design/Web-Garnish/09-Particle-Footer|09-Particle-Footer]] — v2 recipe: silhouette-sampled handshake pair replaces stickman; interaction model moved to the Effects_Glossary "Morphing particle field" mechanics (permanent homes, 3s life cycle, hoverProgress² assembly, 25% non-joiners). Pitfalls documented (nearest-home assignment starvation, per-axis bbox squash, aura artifact, clip-art busts, virtual-time screenshot lies).
+- `demos/acquire-particle-footer/` — index.html (self-contained: embedded silhouette mask, no network), preview.png (hover state), preview-idle.png (resting field).
+- `assets/` +2: `handshake-silhouette-pair.png` (generated target pair, AGY-verified proportions) + `handshake-silhouette-pair-mask.png` (thresholded binary mask, the sampling input).
+- [[03-Resources/Design/Web-Garnish/07-Build-Runbook|07-Build-Runbook]] — sand-particles row updated to v2.
 
 ### 2026-09-13 — Web-Garnish batch 2: living & editorial footers
 
@@ -532,4 +615,48 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 
 - docs: Node v20→v24.21.0 upgrade session log; new ANTI_PATTERNS Node.js/nvm section (timeout-killed reinstall, systemd PATH pin)
 
+## 2026-09-06
+
+- docs: add Jeremy Chief of Staff ticket board (869b77f)
+- docs: Effects Glossary rework, Jeremy board, Antigravity IDE guide + halden-seed/particles session l (d5fccb0)
+
+
+## 2026-09-07
+
+- vault backup: 2026-09-07 04:01:46 (a5a7740)
+- docs: Web-Garnish collection — footer/landing art direction (engraved vignette, sticker, rubber-stam (fa83182)
+
+
+## 2026-09-08
+
+- vault backup: 2026-09-08 20:46:02 (f7318a2)
+- vault backup: 2026-09-08 20:45:12 (f96b123)
+- docs(SLOTH-1): Yellowcoil session note + board Review (e231299)
+- feat(FOOTER-1): North Loft polish — blink, story copy, Humanizer (bddee6f)
+- docs: resolve Jeremy-Board FOOTER-1 Review conflict (61e223f)
+- docs(FOOTER-1): add mascot MVP gaze angle screenshots (b137f2e)
+- docs(FOOTER-1): mascot MVP screenshot + board Review (da73ba0)
+- feat(FOOTER-1): CSS dual-eye mascot footer MVP demo (903f672)
+- docs(FOOTER-1): expand footer deep-dives with sources and pipelines (fa2ed58)
+- docs(FOOTER-1): non-boring footer deep-dives into Design vault (b9fe418)
+
+
+## 2026-09-13
+
+- build: ACQUIRE particle footer v2 — antigravity morph-field (real human handshake pair, hover-assemb (413d6e7)
+- build: ACQUIRE particle footer replication (handshake figures, dunes, stream, gather-in) + preview + (f64547e)
+- docs: verify benjamin/andrii reference scenes via AGY gemini lane — ACQUIRE particle figures, Afford (98a43ed)
+- docs: Clone-Website — research dig 'The Whole Cloning Shabang' (42 sources, Tavily) + hub decisions  (9048d0a)
+- docs: Web-Garnish batch 2 — living & editorial footers (editorial scene + smoke, sand particles, nig (5f3ce6d)
+- docs: Clone-Website project — brainstorm consolidated (voice transcripts + phone continuation, hub + (e3c03d0)
+- vault backup: 2026-09-13 02:31:57 (9d3e1d7)
+- docs: Web-Garnish build kit — runbook (fonts, swatches, SVG/CSS idioms) + 21 reference assets + stic (565aea9)
+- vault backup: 2026-09-13 01:04:22 (bb188ba)
+
+
+## 2026-09-14
+
+- docs: Clone-Website — copy deck v1 (voice spec, world facts, all sections, FAQ, reveal email) + D13  (d94ace3)
+- docs: Clone-Website — decisions D11-D17 (name Codon Labs, baby output, $2M lean, FAQ registers, imag (ca25345)
+- build: ACQUIRE particle footer desert-wind layer (dusk dunes, gust envelope, saltation, plucked grai (d201579)
 

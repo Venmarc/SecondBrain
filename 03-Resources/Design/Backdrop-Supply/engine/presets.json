@@ -1,0 +1,3843 @@
+[
+ {
+  "slug": "aurora-mesh",
+  "name": null,
+  "state": {
+   "mode": "mesh",
+   "colors": [
+    "#0d2447",
+    "#1d4f7a",
+    "#3aa9b6",
+    "#7bd9b8",
+    "#c6f4cf",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0.32,
+     0
+    ],
+    [
+     0.09888543819998319,
+     0.30433808521444916
+    ],
+    [
+     -0.25888543819998316,
+     0.18809128073359144
+    ],
+    [
+     -0.25888543819998316,
+     -0.18809128073359138
+    ],
+    [
+     0.09888543819998312,
+     -0.30433808521444916
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.05,
+   "saturation": 1.1,
+   "grain": 0.02,
+   "params": {
+    "u_noiseScale": 1.4,
+    "u_softness": 0.7,
+    "u_warp": 0.18,
+    "u_flowSpeed": 0.18
+   }
+  }
+ },
+ {
+  "slug": "sunset-mesh",
+  "name": null,
+  "state": {
+   "mode": "mesh",
+   "colors": [
+    "#2b0a3d",
+    "#7a1d63",
+    "#e0476a",
+    "#f78d4f",
+    "#ffd29c",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0.36,
+     0
+    ],
+    [
+     0.11124611797498107,
+     0.34238034586625526
+    ],
+    [
+     -0.291246117974981,
+     0.21160269082529037
+    ],
+    [
+     -0.29124611797498107,
+     -0.2116026908252903
+    ],
+    [
+     0.111246117974981,
+     -0.3423803458662553
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.05,
+   "saturation": 1.05,
+   "grain": 0.018,
+   "params": {
+    "u_noiseScale": 1.1,
+    "u_softness": 0.78,
+    "u_warp": 0.22,
+    "u_flowSpeed": 0.15
+   }
+  }
+ },
+ {
+  "slug": "subtle-mesh",
+  "name": null,
+  "state": {
+   "mode": "mesh",
+   "colors": [
+    "#0d0d0f",
+    "#15151a",
+    "#1c1d22",
+    "#28292e",
+    "#000000",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0.4,
+     0
+    ],
+    [
+     2.4492935982947065e-17,
+     0.4
+    ],
+    [
+     -0.4,
+     4.898587196589413e-17
+    ],
+    [
+     -7.347880794884119e-17,
+     -0.4
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 4,
+   "brightness": 1,
+   "contrast": 1,
+   "saturation": 1,
+   "grain": 0.03,
+   "params": {
+    "u_noiseScale": 0.9,
+    "u_softness": 0.85,
+    "u_warp": 0.1,
+    "u_flowSpeed": 0.06
+   }
+  }
+ },
+ {
+  "slug": "candy-mesh",
+  "name": null,
+  "state": {
+   "mode": "mesh",
+   "colors": [
+    "#ff61d2",
+    "#fe9090",
+    "#ffe2a4",
+    "#a4f3c7",
+    "#7ed4ff",
+    "#b39bff",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0.36,
+     0
+    ],
+    [
+     0.18000000000000002,
+     0.31176914536239786
+    ],
+    [
+     -0.1799999999999999,
+     0.3117691453623979
+    ],
+    [
+     -0.36,
+     4.4087284769304716e-17
+    ],
+    [
+     -0.18000000000000016,
+     -0.31176914536239786
+    ],
+    [
+     0.18000000000000002,
+     -0.31176914536239786
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 6,
+   "brightness": 1,
+   "contrast": 1,
+   "saturation": 1.15,
+   "grain": 0.012,
+   "params": {
+    "u_noiseScale": 1.2,
+    "u_softness": 0.7,
+    "u_warp": 0.22,
+    "u_flowSpeed": 0.25
+   }
+  }
+ },
+ {
+  "slug": "neon-mesh",
+  "name": null,
+  "state": {
+   "mode": "mesh",
+   "colors": [
+    "#04000a",
+    "#1a0040",
+    "#5a00aa",
+    "#ff00aa",
+    "#00f0ff",
+    "#9affc4",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0.32,
+     0
+    ],
+    [
+     0.16000000000000003,
+     0.27712812921102037
+    ],
+    [
+     -0.15999999999999992,
+     0.27712812921102037
+    ],
+    [
+     -0.32,
+     3.91886975727153e-17
+    ],
+    [
+     -0.16000000000000014,
+     -0.2771281292110203
+    ],
+    [
+     0.16000000000000003,
+     -0.27712812921102037
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 6,
+   "brightness": 1,
+   "contrast": 1.18,
+   "saturation": 1.3,
+   "grain": 0.015,
+   "params": {
+    "u_noiseScale": 1.6,
+    "u_softness": 0.55,
+    "u_warp": 0.28,
+    "u_flowSpeed": 0.32
+   }
+  }
+ },
+ {
+  "slug": "ink",
+  "name": null,
+  "state": {
+   "mode": "smoke",
+   "colors": [
+    "#020203",
+    "#0a0a14",
+    "#3a3f5a",
+    "#7d8aa8",
+    "#dde3ee",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.15,
+   "saturation": 0.9,
+   "grain": 0.025,
+   "params": {
+    "u_density": 1.6,
+    "u_octaves": 5,
+    "u_contrast2": 1.5,
+    "u_speed": 0.1,
+    "u_swirl": 0.6
+   }
+  }
+ },
+ {
+  "slug": "ember-smoke",
+  "name": null,
+  "state": {
+   "mode": "smoke",
+   "colors": [
+    "#0a0303",
+    "#3a0a06",
+    "#a3231b",
+    "#ed7530",
+    "#ffd28a",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1.1,
+   "grain": 0.025,
+   "params": {
+    "u_density": 1.8,
+    "u_octaves": 5,
+    "u_contrast2": 1.6,
+    "u_speed": 0.14,
+    "u_swirl": 0.4
+   }
+  }
+ },
+ {
+  "slug": "fog",
+  "name": null,
+  "state": {
+   "mode": "smoke",
+   "colors": [
+    "#070b14",
+    "#1f3148",
+    "#587897",
+    "#a3c2dc",
+    "#e8eef5",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.05,
+   "saturation": 0.95,
+   "grain": 0.03,
+   "params": {
+    "u_density": 1.2,
+    "u_octaves": 5,
+    "u_contrast2": 1.2,
+    "u_speed": 0.08,
+    "u_swirl": 0.3
+   }
+  }
+ },
+ {
+  "slug": "aurora-classic",
+  "name": null,
+  "state": {
+   "mode": "aurora",
+   "colors": [
+    "#020512",
+    "#0a2148",
+    "#0d6f6a",
+    "#5dffac",
+    "#c6ffe3",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1.15,
+   "grain": 0.025,
+   "params": {
+    "u_bandWidth": 1.6,
+    "u_curtains": 1,
+    "u_glow": 0.6,
+    "u_speed": 0.18,
+    "u_wave": 0.18
+   }
+  }
+ },
+ {
+  "slug": "magenta-curtains",
+  "name": null,
+  "state": {
+   "mode": "aurora",
+   "colors": [
+    "#040414",
+    "#26064f",
+    "#7e1bb5",
+    "#ff5cd4",
+    "#ffe0f7",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1.15,
+   "grain": 0.02,
+   "params": {
+    "u_bandWidth": 1.8,
+    "u_curtains": 1.2,
+    "u_glow": 0.7,
+    "u_speed": 0.22,
+    "u_wave": 0.22
+   }
+  }
+ },
+ {
+  "slug": "plasma-classic",
+  "name": null,
+  "state": {
+   "mode": "plasma",
+   "colors": [
+    "#1e0b3d",
+    "#5b21b6",
+    "#e0476a",
+    "#fb923c",
+    "#fde68a",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.05,
+   "saturation": 1.1,
+   "grain": 0.015,
+   "params": {
+    "u_zoom": 1.4,
+    "u_complexity": 3,
+    "u_smooth": 0.6,
+    "u_speed": 0.4
+   }
+  }
+ },
+ {
+  "slug": "vapor-plasma",
+  "name": null,
+  "state": {
+   "mode": "plasma",
+   "colors": [
+    "#0a1230",
+    "#a8327d",
+    "#3acaff",
+    "#ff77c0",
+    "#ffd56b",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1.2,
+   "grain": 0.018,
+   "params": {
+    "u_zoom": 1.6,
+    "u_complexity": 3.5,
+    "u_smooth": 0.5,
+    "u_speed": 0.5
+   }
+  }
+ },
+ {
+  "slug": "godrays",
+  "name": null,
+  "state": {
+   "mode": "rays",
+   "colors": [
+    "#fff7d6",
+    "#ffd58a",
+    "#a64a1c",
+    "#3d1208",
+    "#0a0204",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1.05,
+   "grain": 0.025,
+   "params": {
+    "u_density": 24,
+    "u_intensity": 1,
+    "u_falloff": 1.6,
+    "u_focusJitter": 0.18,
+    "u_speed": 0.4,
+    "u_twist": 0.2
+   }
+  }
+ },
+ {
+  "slug": "neon-rays",
+  "name": null,
+  "state": {
+   "mode": "rays",
+   "colors": [
+    "#aaffff",
+    "#33aaff",
+    "#7016c8",
+    "#0d0235",
+    "#020014",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.15,
+   "saturation": 1.25,
+   "grain": 0.02,
+   "params": {
+    "u_density": 32,
+    "u_intensity": 1.1,
+    "u_falloff": 2,
+    "u_focusJitter": 0.22,
+    "u_speed": 0.55,
+    "u_twist": 0.32
+   }
+  }
+ },
+ {
+  "slug": "pool",
+  "name": null,
+  "state": {
+   "mode": "caustics",
+   "colors": [
+    "#e8fdff",
+    "#7dd3e8",
+    "#1a7da3",
+    "#0a3d52",
+    "#02161e",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1.1,
+   "grain": 0.02,
+   "params": {
+    "u_zoom": 2.5,
+    "u_complexity": 3,
+    "u_brightness2": 1.4,
+    "u_speed": 0.35,
+    "u_chaos": 0.4
+   }
+  }
+ },
+ {
+  "slug": "molten-gold",
+  "name": null,
+  "state": {
+   "mode": "caustics",
+   "colors": [
+    "#fffceb",
+    "#ffd76b",
+    "#a8650b",
+    "#3d1f02",
+    "#0a0500",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.12,
+   "saturation": 1.15,
+   "grain": 0.022,
+   "params": {
+    "u_zoom": 3,
+    "u_complexity": 4,
+    "u_brightness2": 1.6,
+    "u_speed": 0.3,
+    "u_chaos": 0.5
+   }
+  }
+ },
+ {
+  "slug": "carrara",
+  "name": null,
+  "state": {
+   "mode": "marble",
+   "colors": [
+    "#f5f3ee",
+    "#cccac3",
+    "#7a7770",
+    "#2e2c28",
+    "#0a0908",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 0.95,
+   "grain": 0.03,
+   "params": {
+    "u_zoom": 1.6,
+    "u_turbulence": 1.8,
+    "u_veining": 2.2,
+    "u_sharpness": 8,
+    "u_speed": 0.05
+   }
+  }
+ },
+ {
+  "slug": "ink-marble",
+  "name": null,
+  "state": {
+   "mode": "marble",
+   "colors": [
+    "#0e0a14",
+    "#28233d",
+    "#534773",
+    "#a397c4",
+    "#ece6f7",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.08,
+   "saturation": 1,
+   "grain": 0.025,
+   "params": {
+    "u_zoom": 1.4,
+    "u_turbulence": 2.2,
+    "u_veining": 1.8,
+    "u_sharpness": 10,
+    "u_speed": 0.04
+   }
+  }
+ },
+ {
+  "slug": "halftone-print",
+  "name": null,
+  "state": {
+   "mode": "halftone",
+   "colors": [
+    "#ffe89c",
+    "#ff7575",
+    "#9a3df0",
+    "#1c1144",
+    "#040218",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1.15,
+   "grain": 0.015,
+   "params": {
+    "u_dotDensity": 32,
+    "u_dotScale": 0.95,
+    "u_zoom": 1.4,
+    "u_speed": 0.18,
+    "u_warp": 0.15,
+    "u_invert": 0
+   }
+  }
+ },
+ {
+  "slug": "halftone-mono",
+  "name": null,
+  "state": {
+   "mode": "halftone",
+   "colors": [
+    "#f4f4f4",
+    "#a8a8a8",
+    "#3a3a3a",
+    "#0d0d0d",
+    "#000000",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1,
+   "grain": 0.015,
+   "params": {
+    "u_dotDensity": 50,
+    "u_dotScale": 1,
+    "u_zoom": 1.6,
+    "u_speed": 0.22,
+    "u_warp": 0.18,
+    "u_invert": 0
+   }
+  }
+ },
+ {
+  "slug": "ripple",
+  "name": null,
+  "state": {
+   "mode": "waves",
+   "colors": [
+    "#020a14",
+    "#1a3d6a",
+    "#3a8bbf",
+    "#a3d4e8",
+    "#f0f9fc",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.05,
+   "saturation": 1,
+   "grain": 0.02,
+   "params": {
+    "u_zoom": 1.6,
+    "u_frequency": 14,
+    "u_decay": 1,
+    "u_count": 3,
+    "u_speed": 0.7,
+    "u_drift": 0.18
+   }
+  }
+ },
+ {
+  "slug": "lava-waves",
+  "name": null,
+  "state": {
+   "mode": "waves",
+   "colors": [
+    "#1c0405",
+    "#5a0d08",
+    "#bf3a18",
+    "#ed8434",
+    "#ffe09c",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.08,
+   "saturation": 1.1,
+   "grain": 0.02,
+   "params": {
+    "u_zoom": 1.4,
+    "u_frequency": 18,
+    "u_decay": 0.8,
+    "u_count": 3,
+    "u_speed": 0.5,
+    "u_drift": 0.2
+   }
+  }
+ },
+ {
+  "slug": "diagonals",
+  "name": null,
+  "state": {
+   "mode": "bands",
+   "colors": [
+    "#1a0040",
+    "#5a00aa",
+    "#ff00aa",
+    "#00f0ff",
+    "#9affc4",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.05,
+   "saturation": 1.15,
+   "grain": 0.012,
+   "params": {
+    "u_angle": 30,
+    "u_softness": 0.85,
+    "u_repeats": 1,
+    "u_speed": 0.18,
+    "u_wobble": 0.08
+   }
+  }
+ },
+ {
+  "slug": "soft-bands",
+  "name": null,
+  "state": {
+   "mode": "bands",
+   "colors": [
+    "#0d0d12",
+    "#2c2839",
+    "#5a4d72",
+    "#a89fc1",
+    "#ece6f7",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1,
+   "saturation": 0.95,
+   "grain": 0.025,
+   "params": {
+    "u_angle": 60,
+    "u_softness": 1,
+    "u_repeats": 0.8,
+    "u_speed": 0.1,
+    "u_wobble": 0.05
+   }
+  }
+ },
+ {
+  "slug": "soft-dream",
+  "name": null,
+  "state": {
+   "mode": "soft",
+   "colors": [
+    "#0a0210",
+    "#3a0e3f",
+    "#a01477",
+    "#ec3e6c",
+    "#fb8a3a",
+    "#fde072",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0.42,
+     0
+    ],
+    [
+     0.21000000000000005,
+     0.3637306695894642
+    ],
+    [
+     -0.2099999999999999,
+     0.36373066958946426
+    ],
+    [
+     -0.42,
+     5.143516556418883e-17
+    ],
+    [
+     -0.2100000000000002,
+     -0.36373066958946415
+    ],
+    [
+     0.21000000000000005,
+     -0.3637306695894642
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 6,
+   "brightness": 1,
+   "contrast": 1.05,
+   "saturation": 1.05,
+   "grain": 0.018,
+   "params": {
+    "u_blur": 0.7,
+    "u_spread": 1,
+    "u_speed": 0.05
+   }
+  }
+ },
+ {
+  "slug": "soft-ocean",
+  "name": null,
+  "state": {
+   "mode": "soft",
+   "colors": [
+    "#020a14",
+    "#0f3854",
+    "#3a7ca0",
+    "#9bcadc",
+    "#ecf6fa",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0.4,
+     0
+    ],
+    [
+     0.12360679774997899,
+     0.3804226065180614
+    ],
+    [
+     -0.32360679774997897,
+     0.2351141009169893
+    ],
+    [
+     -0.323606797749979,
+     -0.23511410091698923
+    ],
+    [
+     0.1236067977499789,
+     -0.3804226065180615
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1,
+   "saturation": 1,
+   "grain": 0.018,
+   "params": {
+    "u_blur": 0.85,
+    "u_spread": 1.1,
+    "u_speed": 0.04
+   }
+  }
+ },
+ {
+  "slug": "reeded-glass",
+  "name": null,
+  "state": {
+   "mode": "glass",
+   "colors": [
+    "#062236",
+    "#1a5b6e",
+    "#65b8c5",
+    "#cce8ec",
+    "#f7fafa",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.05,
+   "saturation": 0.95,
+   "grain": 0.02,
+   "params": {
+    "u_ribFreq": 30,
+    "u_refract": 0.07,
+    "u_highlight": 0.4,
+    "u_angle": 90,
+    "u_speed": 0.06
+   }
+  }
+ },
+ {
+  "slug": "fluted-warm",
+  "name": null,
+  "state": {
+   "mode": "glass",
+   "colors": [
+    "#1f0a07",
+    "#5a1814",
+    "#b9442e",
+    "#f0a86d",
+    "#ffe6b8",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.08,
+   "saturation": 1.05,
+   "grain": 0.02,
+   "params": {
+    "u_ribFreq": 22,
+    "u_refract": 0.09,
+    "u_highlight": 0.45,
+    "u_angle": 90,
+    "u_speed": 0.05
+   }
+  }
+ },
+ {
+  "slug": "fingerprint",
+  "name": null,
+  "state": {
+   "mode": "concentric",
+   "colors": [
+    "#1a3852",
+    "#2d6e8a",
+    "#a35e3e",
+    "#cf3a36",
+    "#fcd66f",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.06,
+   "saturation": 1,
+   "grain": 0.025,
+   "params": {
+    "u_ringFreq": 80,
+    "u_ringDepth": 0.12,
+    "u_centerX": 0,
+    "u_centerY": -0.2,
+    "u_speed": 0.18,
+    "u_warp": 0.06
+   }
+  }
+ },
+ {
+  "slug": "rings-mono",
+  "name": null,
+  "state": {
+   "mode": "concentric",
+   "colors": [
+    "#000000",
+    "#1a1a1a",
+    "#3a3a3a",
+    "#7a7a7a",
+    "#dcdcdc",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1,
+   "grain": 0.03,
+   "params": {
+    "u_ringFreq": 120,
+    "u_ringDepth": 0.1,
+    "u_centerX": 0,
+    "u_centerY": 0,
+    "u_speed": 0.12,
+    "u_warp": 0.04
+   }
+  }
+ },
+ {
+  "slug": "ribbon-classic",
+  "name": null,
+  "state": {
+   "mode": "ribbon",
+   "colors": [
+    "#fbb04a",
+    "#e0476a",
+    "#7e1bb5",
+    "#0d6f6a",
+    "#020512",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.08,
+   "saturation": 1.1,
+   "grain": 0.018,
+   "params": {
+    "u_thickness": 0.12,
+    "u_amplitude": 0.22,
+    "u_frequency": 1.4,
+    "u_complexity": 0.5,
+    "u_speed": 0.45,
+    "u_glow": 0.55
+   }
+  }
+ },
+ {
+  "slug": "ribbon-cold",
+  "name": null,
+  "state": {
+   "mode": "ribbon",
+   "colors": [
+    "#a3d4f7",
+    "#3a8bc8",
+    "#5b21b6",
+    "#1a0a30",
+    "#040114",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1.15,
+   "grain": 0.018,
+   "params": {
+    "u_thickness": 0.08,
+    "u_amplitude": 0.28,
+    "u_frequency": 2,
+    "u_complexity": 0.7,
+    "u_speed": 0.35,
+    "u_glow": 0.65
+   }
+  }
+ },
+ {
+  "slug": "light-shaft",
+  "name": null,
+  "state": {
+   "mode": "prism",
+   "colors": [
+    "#fef9e9",
+    "#a8d3ff",
+    "#ff9ec1",
+    "#1a0a30",
+    "#000000",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1.15,
+   "grain": 0.025,
+   "params": {
+    "u_position": 0,
+    "u_width": 0.18,
+    "u_intensity": 1.5,
+    "u_chroma": 0.12,
+    "u_streaks": 0.6,
+    "u_fade": 0.4,
+    "u_speed": 0.7
+   }
+  }
+ },
+ {
+  "slug": "spectrum",
+  "name": null,
+  "state": {
+   "mode": "prism",
+   "colors": [
+    "#ffffff",
+    "#ffd28a",
+    "#ff7575",
+    "#7d5cff",
+    "#020014",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.12,
+   "saturation": 1.25,
+   "grain": 0.018,
+   "params": {
+    "u_position": 0,
+    "u_width": 0.14,
+    "u_intensity": 1.8,
+    "u_chroma": 0.18,
+    "u_streaks": 0.7,
+    "u_fade": 0.35,
+    "u_speed": 0.85
+   }
+  }
+ },
+ {
+  "slug": "torus",
+  "name": null,
+  "state": {
+   "mode": "vortex",
+   "colors": [
+    "#fff1de",
+    "#ff8aa8",
+    "#9a3ddc",
+    "#3b0a72",
+    "#020010",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1.15,
+   "grain": 0.022,
+   "params": {
+    "u_radius": 0.32,
+    "u_thickness": 0.04,
+    "u_perspective": 0.42,
+    "u_arms": 8,
+    "u_glow": 1,
+    "u_chroma": 0.012,
+    "u_speed": 1
+   }
+  }
+ },
+ {
+  "slug": "halo",
+  "name": null,
+  "state": {
+   "mode": "vortex",
+   "colors": [
+    "#fbf8e8",
+    "#a8e6ff",
+    "#5a32f2",
+    "#0a0235",
+    "#000000",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1.2,
+   "grain": 0.018,
+   "params": {
+    "u_radius": 0.36,
+    "u_thickness": 0.02,
+    "u_perspective": 0.38,
+    "u_arms": 12,
+    "u_glow": 1.1,
+    "u_chroma": 0.018,
+    "u_speed": 0.7
+   }
+  }
+ },
+ {
+  "slug": "honeycomb",
+  "name": null,
+  "state": {
+   "mode": "voronoi",
+   "colors": [
+    "#1a1f2e",
+    "#2c5466",
+    "#5fa49a",
+    "#fbb04a",
+    "#fde072",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.05,
+   "saturation": 1.05,
+   "grain": 0.02,
+   "params": {
+    "u_zoom": 5,
+    "u_softness": 0.55,
+    "u_jitter": 0.85,
+    "u_speed": 0.18
+   }
+  }
+ },
+ {
+  "slug": "stained-glass",
+  "name": null,
+  "state": {
+   "mode": "voronoi",
+   "colors": [
+    "#1a0a4a",
+    "#7a1bb5",
+    "#e0476a",
+    "#fb923c",
+    "#fde68a",
+    "#bce3a8",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 6,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1.2,
+   "grain": 0.018,
+   "params": {
+    "u_zoom": 6.5,
+    "u_softness": 0.4,
+    "u_jitter": 0.95,
+    "u_speed": 0.22
+   }
+  }
+ },
+ {
+  "slug": "silk",
+  "name": null,
+  "state": {
+   "mode": "strands",
+   "colors": [
+    "#ffd58a",
+    "#ff7b9d",
+    "#9e6bff",
+    "#3a8bd9",
+    "#62e0c4",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1.18,
+   "grain": 0.02,
+   "params": {
+    "u_thickness": 0.018,
+    "u_amplitude": 0.18,
+    "u_frequency": 1.6,
+    "u_glow": 0.6,
+    "u_speed": 0.4
+   }
+  }
+ },
+ {
+  "slug": "fiber",
+  "name": null,
+  "state": {
+   "mode": "strands",
+   "colors": [
+    "#fff2c4",
+    "#a8e6ff",
+    "#3a8bc8",
+    "#5b21b6",
+    "#1a0a30",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.12,
+   "saturation": 1.15,
+   "grain": 0.02,
+   "params": {
+    "u_thickness": 0.012,
+    "u_amplitude": 0.22,
+    "u_frequency": 2.2,
+    "u_glow": 0.7,
+    "u_speed": 0.55
+   }
+  }
+ },
+ {
+  "slug": "hyperspace",
+  "name": null,
+  "state": {
+   "mode": "tunnel",
+   "colors": [
+    "#fff7d6",
+    "#a8d3ff",
+    "#5b21b6",
+    "#0a0235",
+    "#000000",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.15,
+   "saturation": 1.18,
+   "grain": 0.025,
+   "params": {
+    "u_density": 6,
+    "u_spokes": 16,
+    "u_centerGlow": 0.85,
+    "u_speed": 1,
+    "u_swirl": 0.4
+   }
+  }
+ },
+ {
+  "slug": "warp",
+  "name": null,
+  "state": {
+   "mode": "tunnel",
+   "colors": [
+    "#ffffff",
+    "#ff5cd4",
+    "#7e1bb5",
+    "#1a0530",
+    "#000000",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.18,
+   "saturation": 1.25,
+   "grain": 0.02,
+   "params": {
+    "u_density": 9,
+    "u_spokes": 0,
+    "u_centerGlow": 1.4,
+    "u_speed": 1.6,
+    "u_swirl": 0.7
+   }
+  }
+ },
+ {
+  "slug": "oilslick",
+  "name": null,
+  "state": {
+   "mode": "iridescent",
+   "colors": [
+    "#0a0218",
+    "#3a1454",
+    "#6e2bd1",
+    "#1a8aff",
+    "#3afff2",
+    "#caffd6",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 6,
+   "brightness": 1,
+   "contrast": 1.08,
+   "saturation": 1.15,
+   "grain": 0.018,
+   "params": {
+    "u_zoom": 1.2,
+    "u_swirl": 0.16,
+    "u_filmDensity": 4.5,
+    "u_shimmer": 0.55,
+    "u_speed": 0.18
+   }
+  }
+ },
+ {
+  "slug": "abalone",
+  "name": null,
+  "state": {
+   "mode": "iridescent",
+   "colors": [
+    "#1a2030",
+    "#3a5a6e",
+    "#9ad8bf",
+    "#e6c4f0",
+    "#fbe6a3",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.05,
+   "saturation": 1,
+   "grain": 0.018,
+   "params": {
+    "u_zoom": 1.4,
+    "u_swirl": 0.12,
+    "u_filmDensity": 5.5,
+    "u_shimmer": 0.45,
+    "u_speed": 0.14
+   }
+  }
+ },
+ {
+  "slug": "stone",
+  "name": null,
+  "state": {
+   "mode": "soft",
+   "colors": [
+    "#1d1c1a",
+    "#2e2c28",
+    "#5e5b54",
+    "#a39d92",
+    "#000000",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0.4,
+     0
+    ],
+    [
+     2.4492935982947065e-17,
+     0.4
+    ],
+    [
+     -0.4,
+     4.898587196589413e-17
+    ],
+    [
+     -7.347880794884119e-17,
+     -0.4
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 4,
+   "brightness": 1,
+   "contrast": 1.05,
+   "saturation": 0.92,
+   "grain": 0.025,
+   "params": {
+    "u_blur": 0.85,
+    "u_spread": 1,
+    "u_speed": 0.03
+   }
+  }
+ },
+ {
+  "slug": "linen",
+  "name": null,
+  "state": {
+   "mode": "soft",
+   "colors": [
+    "#f0eadc",
+    "#dcd1b8",
+    "#a89878",
+    "#5c5040",
+    "#000000",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0.42,
+     0
+    ],
+    [
+     2.5717582782094416e-17,
+     0.42
+    ],
+    [
+     -0.42,
+     5.143516556418883e-17
+    ],
+    [
+     -7.715274834628324e-17,
+     -0.42
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 4,
+   "brightness": 1,
+   "contrast": 1,
+   "saturation": 0.85,
+   "grain": 0.022,
+   "params": {
+    "u_blur": 0.9,
+    "u_spread": 1.05,
+    "u_speed": 0.025
+   }
+  }
+ },
+ {
+  "slug": "midnight",
+  "name": null,
+  "state": {
+   "mode": "soft",
+   "colors": [
+    "#02030a",
+    "#0a1130",
+    "#1d2c5e",
+    "#3a4a8a",
+    "#000000",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0.38,
+     0
+    ],
+    [
+     2.3268289183799712e-17,
+     0.38
+    ],
+    [
+     -0.38,
+     4.6536578367599424e-17
+    ],
+    [
+     -6.980486755139913e-17,
+     -0.38
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 4,
+   "brightness": 1,
+   "contrast": 1.05,
+   "saturation": 0.95,
+   "grain": 0.026,
+   "params": {
+    "u_blur": 0.88,
+    "u_spread": 0.95,
+    "u_speed": 0.04
+   }
+  }
+ },
+ {
+  "slug": "sage",
+  "name": null,
+  "state": {
+   "mode": "mesh",
+   "colors": [
+    "#1a2418",
+    "#3a4a30",
+    "#7d8a62",
+    "#c5cca8",
+    "#000000",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0.4,
+     0
+    ],
+    [
+     2.4492935982947065e-17,
+     0.4
+    ],
+    [
+     -0.4,
+     4.898587196589413e-17
+    ],
+    [
+     -7.347880794884119e-17,
+     -0.4
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 4,
+   "brightness": 1,
+   "contrast": 1.04,
+   "saturation": 0.92,
+   "grain": 0.022,
+   "params": {
+    "u_noiseScale": 1,
+    "u_softness": 0.88,
+    "u_warp": 0.12,
+    "u_flowSpeed": 0.08
+   }
+  }
+ },
+ {
+  "slug": "earth-bands",
+  "name": null,
+  "state": {
+   "mode": "bands",
+   "colors": [
+    "#2a1a12",
+    "#5a3a26",
+    "#a8744a",
+    "#d8a878",
+    "#000000",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 4,
+   "brightness": 1,
+   "contrast": 1,
+   "saturation": 0.9,
+   "grain": 0.022,
+   "params": {
+    "u_angle": 70,
+    "u_softness": 1,
+    "u_repeats": 0.8,
+    "u_speed": 0.08,
+    "u_wobble": 0.04
+   }
+  }
+ },
+ {
+  "slug": "holo-foil",
+  "name": null,
+  "state": {
+   "mode": "holographic",
+   "colors": [
+    "#140a2e",
+    "#6a2ff7",
+    "#f72585",
+    "#4cc9f0",
+    "#ffd166",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.08,
+   "saturation": 1.2,
+   "grain": 0.016,
+   "params": {
+    "u_sheen": 6,
+    "u_crinkle": 1.2,
+    "u_angle": 35,
+    "u_speed": 0.55
+   }
+  }
+ },
+ {
+  "slug": "embers-bonfire",
+  "name": null,
+  "state": {
+   "mode": "embers",
+   "colors": [
+    "#0a0402",
+    "#3d0c02",
+    "#b23a0a",
+    "#ff7b00",
+    "#ffd27f",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.08,
+   "saturation": 1.05,
+   "grain": 0.02,
+   "params": {
+    "u_count": 60,
+    "u_sizeMin": 0.004,
+    "u_sizeMax": 0.02,
+    "u_trail": 0.09,
+    "u_spread": 0.9,
+    "u_glowShape": 1,
+    "u_bed": 1,
+    "u_angle": 0,
+    "u_rise": 1,
+    "u_glow": 1.4,
+    "u_bedFlicker": 0.15,
+    "u_speed": 1.2
+   }
+  }
+ },
+ {
+  "slug": "kaleido-mandala",
+  "name": null,
+  "state": {
+   "mode": "kaleidoscope",
+   "colors": [
+    "#06121f",
+    "#0e7490",
+    "#7c3aed",
+    "#ec4899",
+    "#fde68a",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.06,
+   "saturation": 1.12,
+   "grain": 0.018,
+   "params": {
+    "u_segments": 10,
+    "u_zoom": 1.8,
+    "u_detail": 2.6,
+    "u_speed": 0.3
+   }
+  }
+ },
+ {
+  "slug": "lava-magma",
+  "name": null,
+  "state": {
+   "mode": "lava",
+   "colors": [
+    "#120303",
+    "#5a0d08",
+    "#bf3a18",
+    "#ed8434",
+    "#ffe09c",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.08,
+   "saturation": 1.08,
+   "grain": 0.022,
+   "params": {
+    "u_zoom": 1.6,
+    "u_glow": 1.2,
+    "u_crust": 0.55,
+    "u_speed": 0.2
+   }
+  }
+ },
+ {
+  "slug": "nebula-deepspace",
+  "name": null,
+  "state": {
+   "mode": "nebula",
+   "colors": [
+    "#03020a",
+    "#2a1a5e",
+    "#7c3aed",
+    "#22d3ee",
+    "#e0f2fe",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.1,
+   "saturation": 1.1,
+   "grain": 0.02,
+   "params": {
+    "u_zoom": 1.5,
+    "u_warp": 1.6,
+    "u_gasContrast": 1.5,
+    "u_stars": 1.2,
+    "u_speed": 0.12
+   }
+  }
+ },
+ {
+  "slug": "raindrops-rain",
+  "name": null,
+  "state": {
+   "mode": "raindrops",
+   "colors": [
+    "#02060f",
+    "#0b3d5c",
+    "#1d6e8c",
+    "#5eb3c9",
+    "#dff3fb",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1,
+   "contrast": 1.05,
+   "saturation": 1,
+   "grain": 0.02,
+   "params": {
+    "u_count": 8,
+    "u_freq": 26,
+    "u_depth": 0.5,
+    "u_speed": 1
+   }
+  }
+ },
+ {
+  "slug": "aura-dusk",
+  "name": null,
+  "state": {
+   "mode": "aura",
+   "colors": [
+    "#2a1a5e",
+    "#5606ff",
+    "#b06ab3",
+    "#fe8989",
+    "#ffd9c0",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1.05,
+   "contrast": 1.02,
+   "saturation": 1.05,
+   "grain": 0.014,
+   "params": {
+    "u_freq": 2.4,
+    "u_strength": 1.2,
+    "u_sheen": 0.5,
+    "u_angle": 45,
+    "u_speed": 0.18
+   }
+  }
+ },
+ {
+  "slug": "bloom-halo",
+  "name": null,
+  "state": {
+   "mode": "bloom",
+   "colors": [
+    "#fef2df",
+    "#f5c98f",
+    "#e08fb0",
+    "#7c5cc4",
+    "#241a4a",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1.03,
+   "contrast": 1.02,
+   "saturation": 1.05,
+   "grain": 0.014,
+   "params": {
+    "u_spread": 1.1,
+    "u_offX": 0,
+    "u_offY": 0,
+    "u_warp": 0.22,
+    "u_speed": 0.14
+   }
+  }
+ },
+ {
+  "slug": "drape-silk",
+  "name": null,
+  "state": {
+   "mode": "drape",
+   "colors": [
+    "#3a1c3a",
+    "#8a4a6e",
+    "#d98fa0",
+    "#f2c9c9",
+    "#fdeede",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1.02,
+   "contrast": 1.02,
+   "saturation": 1.05,
+   "grain": 0.014,
+   "params": {
+    "u_folds": 4,
+    "u_depth": 0.4,
+    "u_shade": 0.45,
+    "u_speed": 0.16
+   }
+  }
+ },
+ {
+  "slug": "conic-prism",
+  "name": null,
+  "state": {
+   "mode": "conic",
+   "colors": [
+    "#4a2a8a",
+    "#7c3aed",
+    "#ec4899",
+    "#f59e0b",
+    "#fde68a",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1.02,
+   "contrast": 1.03,
+   "saturation": 1.08,
+   "grain": 0.014,
+   "params": {
+    "u_arms": 1,
+    "u_warp": 0.4,
+    "u_zoom": 1,
+    "u_speed": 0.2
+   }
+  }
+ },
+ {
+  "slug": "duo-twin",
+  "name": null,
+  "state": {
+   "mode": "duo",
+   "colors": [
+    "#1a3a4a",
+    "#2d8a8a",
+    "#7ec9b0",
+    "#f0a58f",
+    "#f7d9c4",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1.03,
+   "contrast": 1.02,
+   "saturation": 1.05,
+   "grain": 0.014,
+   "params": {
+    "u_gap": 0.55,
+    "u_blend": 1.4,
+    "u_warp": 0.3,
+    "u_speed": 0.2
+   }
+  }
+ },
+ {
+  "slug": "sheen-satin",
+  "name": null,
+  "state": {
+   "mode": "sheen",
+   "colors": [
+    "#1a2a4a",
+    "#3a5a8a",
+    "#8aa8d0",
+    "#d0dcf0",
+    "#f4f7fc",
+    "#000000",
+    "#000000",
+    "#000000"
+   ],
+   "blobOffsets": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "blobCount": 5,
+   "brightness": 1.02,
+   "contrast": 1.02,
+   "saturation": 1.02,
+   "grain": 0.012,
+   "params": {
+    "u_angle": 60,
+    "u_soft": 0.9,
+    "u_sheen": 0.7,
+    "u_width": 1.8,
+    "u_speed": 0.25
+   }
+  }
+ }
+]

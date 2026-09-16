@@ -18,9 +18,9 @@
 
 ## ⚡ Active Projects (01-Projects)
 
-### 🧬 [[01-Projects/Clone-Website/Clone-Website|Clone-Website]] — Brainstorm complete → planning (asset window urgent)
+### 🧬 [[01-Projects/Clone-Website/Clone-Website|Clone-Website]] — World canon complete (Basel 1973 research · New York program · founder trio · 1,850 staff); copy v1 stamped through D34; asset sprint pending
 Fictional human-cloning company site played straight (White Desert skeleton, lab imagery, Lamalama motion). Raw: [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|voice notes + phone archive]]. SuperGrok asset-generation window expires ~09-15/16.
-**Blocker:** company name + footer style undecided.
+**Blockers:** Dolly beat, first-birth city, Antoine's role + Schönbächler's discipline, workforce numbers; SuperGrok asset window closing now.
 
 ### 🏎️ [[01-Projects/Driving-Game/Driving-Game|Driving Game]] — Stage 1 in progress (Schipper / DG-S1)
 
@@ -61,6 +61,7 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 ## 📚 Resources (03-Resources)
 - 🗺️ **[[03-Resources/MOC-UI-UX-Lessons|MOC: UI/UX Lessons]]** · [[03-Resources/MOCs/MOC-Projects|MOC: Projects]]
 - 🖼️ **[[03-Resources/Design/Web-Garnish/_index|Web design garnish]]** — footer/landing art direction collection (engraved vignette, sticker/scrapbook, rubber-stamp mark, watercolor art print, perspective typography)
+- 🌌 **[[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply]]** — full-bleed backdrop collection (31 cached freebies + sampled palettes, 7 style-family notes, 32-mode shader engine with 61 presets, verified code recipes)
 - ⚙️ Skills under `03-Resources/Skills/` (nav shell, dashboard, anti-slop watchlist, Frontend Awesomeness, …)
 - 🧰 **[[03-Resources/Vault-Ops/Session-Lesson-Extraction-Idea|Session lesson extraction (draft)]]**
 - 🧰 **[[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault improvement backlog]]**

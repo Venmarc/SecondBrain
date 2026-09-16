@@ -6,342 +6,435 @@
 <title>ACQUIRE — Provide your customers the assistance they need</title>
 <link rel="icon" href="data:,">
 <style>
-  :root {
-    --bg: #0c0c0c;
-    --ink: #f2f2f2;
-    --grey: #8f959d;
-    --grey-dim: #6a6f76;
-    --rule: #202326;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { background: var(--bg); color: var(--ink); font-family: -apple-system, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-  .page { min-height: 100vh; display: flex; flex-direction: column; position: relative; }
-  .scene { position: relative; width: 100%; height: clamp(340px, 44vh, 560px); overflow: hidden; }
-  #scene { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  :root { --bg:#0c0c0c; --ink:#f2f2f2; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { background:var(--bg); color:var(--ink); font-family:-apple-system,"Segoe UI",Inter,Arial,sans-serif; }
+  .footer { min-height:100vh; display:flex; flex-direction:column; }
+  .scene { position:relative; width:100%; height:clamp(340px,46vh,600px); overflow:hidden; }
+  #scene { position:absolute; inset:0; width:100%; height:100%; display:block; }
   .scene::after {
-    content: ""; position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(to bottom, transparent 84%, #0c0c0c 99%);
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(to bottom, transparent 72%, #0c0c0c 99%);
   }
-  .content { position: relative; width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
-  .cta-row { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 48px 0 40px; flex-wrap: wrap; }
-  h1 {
-    font-size: clamp(26px, 3.4vw, 42px);
-    font-weight: 720;
-    letter-spacing: -0.02em;
-    line-height: 1.12;
-    color: var(--grey);
-    max-width: 12em;
-    text-rendering: optimizeLegibility;
+  .hint {
+    position:absolute; bottom:18px; left:50%; transform:translateX(-50%);
+    font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#756f66;
+    pointer-events:none; transition:opacity .6s ease;
   }
-  h1 .hl { color: #ffffff; }
-  .btn {
-    flex: 0 0 auto;
-    background: #ffffff; color: #0c0c0c;
-    font-size: 15px; font-weight: 620; letter-spacing: 0.01em;
-    padding: 14px 30px; border-radius: 999px;
-    border: none; cursor: pointer; text-decoration: none; display: inline-block;
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 28px rgba(255,255,255,.14); }
-  .cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding: 40px 0 64px; }
-  .col h2 { font-size: 12px; font-weight: 680; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey-dim); margin-bottom: 18px; }
-  .col a { display: block; font-size: 14px; line-height: 2.1; color: #b6bac0; text-decoration: none; transition: color .12s ease; }
-  .col a:hover { color: #ffffff; }
-  .legal { border-top: 1px solid var(--rule); padding: 22px 0 30px; font-size: 12px; letter-spacing: 0.05em; color: var(--grey-dim); }
-  .grain {
-    position: absolute; inset: 0; pointer-events: none; opacity: .045; mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-  @media (max-width: 860px) {
-    .cols { grid-template-columns: repeat(2, 1fr); }
-    .cta-row { flex-direction: column; align-items: flex-start; }
-  }
+  .hint.gone { opacity:0; }
+  .content { position:relative; width:100%; max-width:1160px; margin:0 auto; padding:0 clamp(20px,4vw,48px); }
+  .cta-row { display:flex; align-items:center; justify-content:space-between; gap:32px; padding:48px 0 40px; flex-wrap:wrap; }
+  h1 { font-size:clamp(30px,4vw,54px); font-weight:600; letter-spacing:-.015em; color:#6b6b6b; line-height:1.12; max-width:15ch; text-wrap:balance; }
+  h1 .lit { color:#f2f2f2; }
+  .btn { background:#f2f2f2; color:#0c0c0c; border:none; cursor:pointer; font-size:15px; font-weight:600; padding:14px 26px; border-radius:4px; letter-spacing:.01em; transition:transform .18s ease, box-shadow .18s ease; }
+  .btn:hover { transform:translateY(-2px); box-shadow:0 12px 32px rgba(242,242,242,.16); }
+  .links-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; padding:24px 0 48px; border-top:1px solid #1b1b1b; }
+  .links-grid h3 { font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#5c5c5c; margin-bottom:14px; }
+  .links-grid a { display:block; font-size:14px; color:#8f8f8f; text-decoration:none; padding:5px 0; transition:color .15s ease; }
+  .links-grid a:hover { color:#f2f2f2; }
+  .legal { border-top:1px solid #1b1b1b; padding:20px 0 28px; display:flex; justify-content:space-between; gap:16px; font-size:12px; color:#4c4c4c; flex-wrap:wrap; }
 </style>
 </head>
 <body>
-<div class="page">
-  <div class="scene">
+<div class="footer">
+  <div class="scene" id="sceneWrap">
     <canvas id="scene"></canvas>
-    <div class="grain"></div>
+    <div class="hint" id="hint">Move your cursor through the field</div>
   </div>
   <div class="content">
     <div class="cta-row">
-      <h1>Provide your <span class="hl">customers</span> the assistance they need</h1>
-      <a class="btn" href="#">Schedule a demo</a>
+      <h1>Provide your <span class="lit">customers</span> the assistance they need</h1>
+      <button class="btn">Schedule a demo</button>
     </div>
-    <div class="cols">
-      <div class="col">
-        <h2>System</h2>
-        <a href="#">Interactive Chat</a><a href="#">Video &amp; Audio Calling</a><a href="#">Task Management</a><a href="#">Call Handling</a><a href="#">Email Support</a>
-      </div>
-      <div class="col">
-        <h2>Items</h2>
-        <a href="#">Chat Support</a><a href="#">Audio &amp; Video Calls</a><a href="#">Processes</a><a href="#">Call Redirection</a><a href="#">Messages</a>
-      </div>
-      <div class="col">
-        <h2>Help Center</h2>
-        <a href="#">Support Chat</a><a href="#">Video Calling &amp; Voice</a><a href="#">Task Flows</a><a href="#">Call Management</a><a href="#">Email Communication</a>
-      </div>
-      <div class="col">
-        <h2>Get Started Today</h2>
-        <a href="#">Customer Chat</a><a href="#">Video &amp; Voice Calls</a><a href="#">Automated Workflows</a><a href="#">Call Routing</a><a href="#">Correspondence</a>
-      </div>
+    <div class="links-grid">
+      <div><h3>System</h3><a href="#">Overview</a><a href="#">Features</a><a href="#">Integrations</a><a href="#">Security</a></div>
+      <div><h3>Items</h3><a href="#">Conversations</a><a href="#">Automations</a><a href="#">Contacts</a><a href="#">Insights</a></div>
+      <div><h3>Help Center</h3><a href="#">Documentation</a><a href="#">API reference</a><a href="#">Guides</a><a href="#">Status</a></div>
+      <div><h3>Get Started Today</h3><a href="#">Pricing</a><a href="#">Book a demo</a><a href="#">Talk to sales</a><a href="#">FAQ</a></div>
     </div>
-    <div class="legal">© 2026 ACQUIRE. ALL RIGHTS RESERVED.</div>
+    <div class="legal">
+      <span>© 2026 ACQUIRE. ALL RIGHTS RESERVED.</span>
+      <span>Privacy · Terms · Cookies</span>
+    </div>
   </div>
 </div>
-
 <script>
 (function () {
   "use strict";
+  /* Antigravity morph-field footer — mechanics per Effects_Glossary.md
+     "Morphing particle field (glyph/emoji reassembly)" entry:
+     permanent homes, 3s spawn/grow/shrink/die/respawn life cycle,
+     hoverProgress^2 assembly toward per-particle shape targets,
+     25% of particles never join (field stays alive), scale x1.5 near target. */
+
+  var wrap = document.getElementById("sceneWrap");
   var canvas = document.getElementById("scene");
   var ctx = canvas.getContext("2d");
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var hint = document.getElementById("hint");
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  var W = 0, H = 0, dpr = 1;
-  var figureBoxes = [];
-  var groups = { fig: [], crest: [], fill: [] };
-  var particles = [];
-  var trails = [];
-  var stars = [];
-  var emitters = [];
-  var runner = null;
+  /* ---------- embedded silhouette mask (public-domain-equivalent asset,
+     generated for this build; recipe in vault 09-Particle-Footer.md) ---------- */
+  var SHAPE_ASPECT = 0.83; // gen4 pair bbox w/h
+  var MASK_B64 = "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";
 
-  // ---------- geometry ----------
-  function drawFigure(g, mirror) {
-    var s = H / 520;
-    var cx = mirror ? W * 0.56 : W * 0.44;
-    var feetY = H * 0.84;
-    var mL = function (x) { return mirror ? -x : x; };
-    function pt(x, y) { return [cx + mL(x) * s, feetY + y * s]; }
-    var P = {};
-    P.head = pt(-6, -208); P.hip = pt(0, -118); P.neck = pt(-3, -182);
-    P.shL = pt(-22, -176); P.elL = pt(-52, -142); P.haL = pt(-66, -110);
-    P.shR = pt(13, -178); P.elR = pt(46, -162); P.haR = pt(92, -150);
-    P.kF = pt(9, -54); P.fF = pt(14, 0);
-    P.kB = pt(-9, -60); P.fB = pt(-13, 0);
-    function cap(a, b, w) {
-      g.lineCap = g.lineJoin = "round";
-      g.strokeStyle = "#fff"; g.lineWidth = w * s;
-      g.beginPath(); g.moveTo(P[a][0], P[a][1]); g.lineTo(P[b][0], P[b][1]); g.stroke();
-    }
-    cap("hip", "neck", 34);
-    g.fillStyle = "#fff";
-    g.beginPath(); g.arc(P.head[0], P.head[1], 17 * s, 0, Math.PI * 2); g.fill();
-    cap("shR", "elR", 13.5); cap("elR", "haR", 12);
-    cap("shL", "elL", 12); cap("elL", "haL", 10.5);
-    cap("hip", "kF", 17); cap("kF", "fF", 14);
-    cap("hip", "kB", 16); cap("kB", "fB", 13);
-    figureBoxes.push({ x: cx - 100 * s, y: feetY - 232 * s, w: 220 * s, h: 236 * s });
+  var W = 0, H = 0, DPR = 1;
+  var particles = [], stars = [];
+  var hoverProg = 0;
+  var mouse = { x: -1e4, y: -1e4 };
+  var hovering = false;
+  var shape = null;           // [{x,y}] shape target points (scene coords)
+  var imgShapeReady = false;
+  var running = false, raf = 0, t = 0;
+  var sandTones = ["#cfc19b","#b8a277","#9a8a63","#8f8468","#7d7054","#c2b28a"];
+
+  function resize() {
+    DPR = Math.min(window.devicePixelRatio || 1, 2);
+    var r = wrap.getBoundingClientRect();
+    W = Math.max(320, r.width); H = Math.max(240, r.height);
+    canvas.width = W * DPR; canvas.height = H * DPR;
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    buildField();
+    mapShape();
   }
 
-  function duneTopY(x, depth, ampScale, s) {
-    var t = H * (0.80 - depth);
-    var A = (24 + 26 * ampScale) * s * 0.5;
-    var B = (10 + 8 * ampScale) * s * 0.5;
-    var C = 6 * s * 0.5;
-    return t - A * Math.sin(x * 0.004 + depth * 3.1)
-             - B * Math.sin(x * 0.013 + depth * 5.7)
-             - C * Math.sin(x * 0.0011 + depth * 7.3);
+  /* decode embedded mask -> shape points (thresholded silhouette, no network) */
+  function decodeShape() {
+    try {
+      var im = new Image();
+      im.onload = function () {
+        var oc = document.createElement("canvas");
+        var iw = im.width, ih = im.height;
+        oc.width = iw; oc.height = ih;
+        var og = oc.getContext("2d");
+        og.drawImage(im, 0, 0);
+        var data = og.getImageData(0, 0, iw, ih).data;
+        var pts = [];
+        var step = 3;
+        for (var y = 0; y < ih; y += step) {
+          for (var x = 0; x < iw; x += step) {
+            var i = (y * iw + x) * 4;
+            if (data[i] < 128) pts.push({ x: x, y: y }); // dark = figure
+          }
+        }
+        if (pts.length < 100) return;
+        // normalize to 0..1 stage space
+        var minx = 1e9, miny = 1e9, maxx = -1e9, maxy = -1e9;
+        for (var k = 0; k < pts.length; k++) {
+          minx = Math.min(minx, pts[k].x); maxx = Math.max(maxx, pts[k].x);
+          miny = Math.min(miny, pts[k].y); maxy = Math.max(maxy, pts[k].y);
+        }
+        var sx = 1 / (maxx - minx), sy = 1 / (maxy - miny);
+        shape = [];
+        for (var k2 = 0; k2 < pts.length; k2++) {
+          shape.push({ x: (pts[k2].x - minx) * sx, y: (pts[k2].y - miny) * sy });
+        }
+        imgShapeReady = true;
+        mapShape();
+        assignTargets();
+      };
+      im.src = "data:image/png;base64," + MASK_B64;
+    } catch (e) { /* static fallback: particles never form shape */ }
   }
 
-  function strokeCrest(g, depth, ampScale, s, width) {
-    g.strokeStyle = "#fff"; g.lineWidth = Math.max(2, width * s * 0.5); g.lineCap = "round";
-    g.beginPath();
-    for (var x = 0; x <= W; x += 3) {
-      var y = duneTopY(x, depth, ampScale, s);
-      if (x === 0) g.moveTo(x, y); else g.lineTo(x, y);
+  /* place normalized shape into the scene: aspect-preserving,
+     height 42% of scene, feet at 87% height, centered */
+  function mapShape() {
+    if (!shape) return;
+    var sh = H * 0.48;
+    var sw = sh * SHAPE_ASPECT;
+    var ox = (W - sw) / 2;
+    // feet sit ON the front dune crest at the pair's center x
+    var crestY = duneTopY(W * 0.5, 0, 1.0);
+    var oy = crestY - sh;
+    for (var k = 0; k < shape.length; k++) {
+      shape[k].sx = ox + shape[k].x * sw;
+      shape[k].sy = oy + shape[k].y * sh;
     }
-    g.stroke();
   }
 
-  // ---------- mask layers ----------
-  function buildMask() {
-    var s = H / 520;
-    var fig = document.createElement("canvas"), crest = document.createElement("canvas"), fill = document.createElement("canvas");
-    [fig, crest, fill].forEach(function (c) { c.width = W; c.height = H; });
-    var gf = fig.getContext("2d"), gc = crest.getContext("2d"), gl = fill.getContext("2d");
-    gf.fillStyle = gc.strokeStyle = gl.fillStyle = "#fff";
-
-    // dunes: fill band under each crest
-    [0.10, 0.0].forEach(function (depth, idx) {
-      var amp = idx === 0 ? 0.5 : 1.0;
-      var w = idx === 0 ? 2.5 : 5.5;
-      gl.beginPath(); gl.moveTo(0, H);
-      for (var x = 0; x <= W; x += 3) gl.lineTo(x, duneTopY(x, depth, amp, s));
-      gl.lineTo(W, H); gl.closePath(); gl.fill();
-      strokeCrest(gc, depth, amp, s, w);
-    });
-
-    drawFigure(gf, false); drawFigure(gf, true);
-    var meetX = W * 0.5, meetY = H * 0.84 - 150 * s;
-    gf.beginPath(); gf.ellipse(meetX, meetY, 15 * s, 9 * s, 0, 0, Math.PI * 2); gf.fill();
-    return { fig: fig, crest: crest, fill: fill };
-  }
-
-  function collectFrom(cvs, step, budget, out) {
-    var g = cvs.getContext("2d");
-    var img = g.getImageData(0, 0, W, H).data;
-    var pts = [];
-    for (var y = 0; y < H; y += step) {
-      for (var x = 0; x < W; x += step) {
-        if (img[(y * W + x) * 4 + 3] !== 0) pts.push(x, y);
-      }
-    }
-    // shuffle and cap
-    for (var i = pts.length / 2 - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var t1 = pts[i * 2], t2 = pts[i * 2 + 1];
-      pts[i * 2] = pts[j * 2]; pts[i * 2 + 1] = pts[j * 2 + 1];
-      pts[j * 2] = t1; pts[j * 2 + 1] = t2;
-    }
-    var n = Math.min(budget, pts.length / 2);
-    for (i = 0; i < n; i++) out.push(pts[i * 2], pts[i * 2 + 1]);
-  }
-
-  function rebuild() {
-    var masks = buildMask();
-    groups = { fig: [], crest: [], fill: [] };
-    collectFrom(masks.fig, 2, 5800, groups.fig);
-    collectFrom(masks.crest, 2, 1700, groups.crest);
-    collectFrom(masks.fill, 5, 2000, groups.fill);
-
-    particles = [];
-    function push(list, bright, sizeBase, alphaMax) {
-      for (var i = 0; i < list.length / 2; i++) {
-        var tx = list[i * 2], ty = list[i * 2 + 1];
-        particles.push({
-          tx: tx, ty: ty, x: tx, y: ty, sx: Math.random() * W, sy: Math.random() * H,
-          t0: Math.random() * 800, dur: 900 + Math.random() * 800,
-          size: sizeBase + Math.random() * 1.4,
-          ph: Math.random() * Math.PI * 2, sp: 0.4 + Math.random() * 0.9,
-          a: alphaMax * (0.45 + Math.random() * 0.55),
-          col: bright ? (Math.random() < 0.78 ? "#ffffff" : "#d4dade")
-                      : (Math.random() < 0.5 ? "#aab1ba" : "#8a919a")
-        });
-      }
-    }
-    push(groups.fig, true, 2.3, 0.95);
-    push(groups.crest, true, 1.8, 0.85);
-    push(groups.fill, false, 1.4, 0.6);
-
-    // stream emitter behind the left figure
-    emitters = [{ x: W * 0.29, y: H * 0.56 }];
-    trails = [];
+  /* ---------- field ---------- */
+  function buildField() {
     stars = [];
-    for (var i = 0; i < 100; i++) {
-      stars.push({ x: Math.random() * W, y: Math.random() * H * 0.62, r: 0.4 + Math.random() * 0.9, ph: Math.random() * 6.28, sp: 0.4 + Math.random() * 1.1 });
+    for (var i = 0; i < 110; i++) {
+      stars.push({ x: Math.random() * W, y: Math.random() * H * 0.62, r: .4 + Math.random() * .9, ph: Math.random() * 6.92, sp: .4 + Math.random() * 1.1 });
+    }
+    streaks = [];
+    for (var s2 = 0; s2 < 240; s2++) {
+      var sy2 = Math.random() < 0.7
+        ? duneTopY(Math.random() * W, Math.random() < 0.5 ? 0 : 0.10, 1.0) - Math.random() * 26  // saltation band
+        : H * (0.25 + Math.random() * 0.35);                                                    // air haze
+      streaks.push({ x: Math.random() * W, y: sy2, len: 5 + Math.random() * 7, sp: 55 + Math.random() * 85, al: 0.04 + Math.random() * 0.08, wob: Math.random() * 6.28, arc: 0.6 + Math.random() * 1.4 });
+    }
+    particles = [];
+    var budget = Math.min(5200, Math.max(2600, Math.round(W * 3.4)));
+    for (var j = 0; j < budget; j++) particles.push(makeParticle(true));
+  }
+
+  function duneTopY(x, depth, amp) {
+    var t0 = H * (0.80 - depth), s = H / 520;
+    var A = (26 + 30 * amp) * s * .5, B = (16 + 14 * amp) * s * .5,
+        C = 7 * s * .5, D = 8 * s * .5;
+    return t0 - A * Math.sin(x * .004 + depth * 3.1)
+             - B * Math.sin(x * .011 + depth * 5.7)
+             - C * Math.sin(x * .026 + depth * 9.4)
+             - D * Math.sin(x * .0011 + depth * 7.3);
+  }
+
+  function makeParticle(scatter) {
+    // homes: on dune crests (the drift stream) + sky dust
+    var home;
+    if (Math.random() < 0.62) {
+      var depth = Math.random() < 0.45 ? 0.10 : 0;
+      var x = Math.random() * W;
+      home = { x: x, y: duneTopY(x, depth, depth ? 0.5 : 1.0) + Math.random() * 10 };
+    } else {
+      home = { x: Math.random() * W, y: Math.random() * H * 0.55 };
+    }
+    return {
+      home: home,
+      pos: scatter ? { x: home.x + (Math.random() - .5) * W * .7, y: home.y - Math.random() * H * .5 }
+                   : { x: home.x, y: home.y },
+      size: .9 + Math.random() * 1.3,
+      tone: sandTones[(Math.random() * 6) | 0],
+      seed: Math.random(),
+      joins: Math.random() < 0.80,
+      target: null,
+      hf: 0.5,          // height fraction on the shape (1 = head, 0 = feet)
+      pluck: 0,         // frames left streaming as a plucked grain
+      pvx: 0, pvy: 0
+    };
+  }
+
+  /* grid-bucket nearest shape point (the glossary's worker assignment, cheaply) */
+  var buckets = null, bw = 48;
+  function assignTargets() {
+    if (!imgShapeReady || !particles.length) return;
+    buckets = {};
+    for (var k = 0; k < shape.length; k++) {
+      var key = ((shape[k].sx / bw) | 0) + "," + ((shape[k].sy / bw) | 0);
+      (buckets[key] = buckets[key] || []).push(shape[k]);
+    }
+    // unique shuffled assignment: every shape point gets exactly one owner
+    var order = [];
+    for (var q = 0; q < shape.length; q++) order.push(q);
+    for (var q2 = order.length - 1; q2 > 0; q2--) {
+      var j2 = (Math.random() * (q2 + 1)) | 0;
+      var tmp = order[q2]; order[q2] = order[j2]; order[j2] = tmp;
+    }
+    var joiners = [];
+    for (var p = 0; p < particles.length; p++) if (particles[p].joins) joiners.push(p);
+    for (var a = 0; a < order.length && a < joiners.length; a++) {
+      var sp = shape[order[a]];
+      particles[joiners[a]].target = { x: sp.sx, y: sp.sy };
+      particles[joiners[a]].hf = 1 - sp.y; // sp.y normalized 0=top
     }
   }
 
-  // ---------- sizing ----------
-  function sizeCanvas() {
-    var r = canvas.parentElement.getBoundingClientRect();
-    dpr = Math.min(2, window.devicePixelRatio || 1);
-    W = Math.max(320, Math.round(r.width));
-    H = Math.max(260, Math.round(r.height));
-    canvas.width = W * dpr; canvas.height = H * dpr;
-    canvas.style.width = W + "px"; canvas.style.height = H + "px";
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    rebuild();
-    ctx.clearRect(0, 0, W, H);
-    if (reduceMotion) { drawFrame(0); return; }
-    if (runner) { cancelAnimationFrame(runner); }
-    runner = requestAnimationFrame(frame);
+  function nearestShapePoint(pt) {
+    if (!buckets) return null;
+    var bx = (pt.x / bw) | 0, by = (pt.y / bw) | 0;
+    for (var r = 0; r <= 8; r++) {
+      var best = null, bestD = Infinity;
+      for (var dx = -r; dx <= r; dx++) for (var dy = -r; dy <= r; dy++) {
+        var cell = buckets[(bx + dx) + "," + (by + dy)];
+        if (!cell) continue;
+        for (var i = 0; i < cell.length; i++) {
+          var dd = (cell[i].sx - pt.x) * (cell[i].sx - pt.x) + (cell[i].sy - pt.y) * (cell[i].sy - pt.y);
+          if (dd < bestD) { bestD = dd; best = cell[i]; }
+        }
+      }
+      if (best) return { x: best.sx, y: best.sy };
+    }
+    return null;
   }
 
-  function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+  /* ---------- desert wind ---------- */
+  var streaks = [];
 
-  // ---------- frame ----------
-  function drawFrame(now) {
-    ctx.clearRect(0, 0, W, H);
-    ctx.globalCompositeOperation = "lighter";
-    // aura behind figures
-    var grd = ctx.createRadialGradient(W * 0.5, H * 0.58, 20, W * 0.5, H * 0.58, W * 0.52);
-    grd.addColorStop(0, "rgba(130,150,170,0.05)");
-    grd.addColorStop(1, "rgba(130,150,170,0)");
-    ctx.fillStyle = grd;
+  // gust envelope: slow surges + fast flutter; 0.35..1.3, never calm, never storm
+  function windAt(time) {
+    var surge = Math.pow(0.5 + 0.5 * Math.sin(time * 0.35), 2);          // ~18s breathing
+    var flutter = 0.5 + 0.5 * Math.sin(time * 2.3 + Math.sin(time * 0.8) * 1.5);
+    return 0.35 + surge * 0.75 + flutter * 0.2;
+  }
+
+  // static desert backdrop: dusk sky + dune masses + horizon glow (also used by reduced-motion)
+  function drawBackdrop() {
+    var sky = ctx.createLinearGradient(0, 0, 0, H);
+    sky.addColorStop(0, "#0c0c0c");
+    sky.addColorStop(0.58, "#0f0d0b");
+    sky.addColorStop(0.82, "#221a10");   // warm haze low over the dunes
+    sky.addColorStop(1, "#161209");
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = sky;
     ctx.fillRect(0, 0, W, H);
+    // dusk glow riding the far crest
+    var glow = ctx.createLinearGradient(0, H * 0.60, 0, H * 0.80);
+    glow.addColorStop(0, "rgba(140,100,55,0)");
+    glow.addColorStop(0.65, "rgba(150,108,58,0.10)");
+    glow.addColorStop(1, "rgba(140,100,55,0)");
+    ctx.fillStyle = glow;
+    ctx.fillRect(0, H * 0.60, W, H * 0.20);
+    // dune bodies: warm dark masses below each crest (far first, near over it)
+    var dunes2 = [{ depth: 0.10, amp: 0.5, fill: "rgba(38,29,17,0.85)" },
+                  { depth: 0.0, amp: 1.0, fill: "rgba(52,39,23,0.80)" }];
+    for (var d = 0; d < 2; d++) {
+      var du = dunes2[d];
+      ctx.beginPath(); ctx.moveTo(0, H);
+      for (var x = 0; x <= W; x += 6) ctx.lineTo(x, duneTopY(x, du.depth, du.amp));
+      ctx.lineTo(W, H); ctx.closePath();
+      ctx.fillStyle = du.fill; ctx.fill();
+    }
+  }
+
+  /* ---------- frame ---------- */
+  function frame() {
+    if (!running) return;
+    t += 0.016;
+
+    hoverProg += ((hovering ? 1 : 0) - hoverProg) * 0.05;
+    if (hoverProg > 0.02) hint.classList.add("gone");
+
+    ctx.clearRect(0, 0, W, H);
+    drawBackdrop();
 
     // stars
-    for (var i = 0; i < stars.length; i++) {
-      var st = stars[i];
-      var tw = reduceMotion ? 0.45 : 0.2 + 0.35 * (0.5 + 0.5 * Math.sin(now * 0.001 * st.sp + st.ph));
-      ctx.fillStyle = "rgba(238,242,246," + tw.toFixed(3) + ")";
-      ctx.fillRect(st.x, st.y, st.r, st.r);
+    for (var s = 0; s < stars.length; s++) {
+      var st = stars[s];
+      ctx.globalAlpha = Math.max(.05, (.25 + .5 * Math.sin(t * st.sp + st.ph)) * .5);
+      ctx.fillStyle = "#cfd6dd";
+      ctx.fillRect(st.x, st.y, st.r, isFinite(st.r) ? st.r : 1);
     }
 
-    // stream trails
-    if (!reduceMotion) {
-      var e = emitters[0];
-      while (trails.length < 340) {
-        trails.push({
-          x: e.x + (Math.random() - 0.5) * 16, y: e.y + (Math.random() - 0.5) * 12,
-          vx: 1.0 + Math.random() * 1.4, vy: 0.02 + Math.random() * 0.18,
-          ph: Math.random() * 6.28,
-          life: 0, max: 150 + Math.random() * 110, a0: 0.1 + Math.random() * 0.12
-        });
-      }
-      ctx.strokeStyle = "#c9d2dc";
-      for (i = trails.length - 1; i >= 0; i--) {
-        var tr = trails[i];
-        tr.life++;
-        if (tr.life > tr.max || tr.x > W + 20) { trails.splice(i, 1); continue; }
-        var fade = 1 - tr.life / tr.max;
-        ctx.globalAlpha = tr.a0 * fade;
-        ctx.lineWidth = 1;
-        var wy = tr.y + Math.sin(tr.life * 0.05 + tr.ph) * 0.6;
-        ctx.beginPath(); ctx.moveTo(tr.x - 7, wy + 2);
-        ctx.lineTo(tr.x, wy - 1); ctx.stroke();
-        tr.x += tr.vx; tr.y += tr.vy + tr.life * 0.0003;
-      }
-      ctx.globalAlpha = 1;
-    }
+    // (no aura — reference has none; a radial wash reads as a circular mask)
 
     // particles
-    for (i = 0; i < particles.length; i++) {
+    for (var i = 0, n = particles.length; i < n; i++) {
       var p = particles[i];
-      var prog = reduceMotion ? 1 : Math.min(1, (now - p.t0) / p.dur);
-      var e2 = easeOut(prog);
-      var jx = reduceMotion ? 0 : Math.sin(now * 0.001 * p.sp + p.ph) * 0.7;
-      var jy = reduceMotion ? 0 : Math.cos(now * 0.001 * p.sp * 0.9 + p.ph) * 0.7;
-      var x = p.sx + (p.tx - p.sx) * e2 + jx;
-      var y = p.sy + (p.ty - p.sy) * e2 + jy;
-      ctx.fillStyle = p.col;
-      ctx.globalAlpha = p.a * (0.5 + 0.5 * e2);
-      ctx.fillRect(x, y, p.size, p.size);
+      // 3s life cycle (glossary): spawn/grow/shrink/die/respawn
+      var cyc = (p.seed * 100 + t * 0.5) % 3;
+      var env = Math.max(0, Math.sin((cyc / 3) * Math.PI));
+      var env2 = env * env;
+
+      var wind = windAt(t);
+      var tx = p.home.x, ty = p.home.y, boost = 1;
+
+      // plucked grain: blown off the shape mid-gust, streams downwind, respawns at post
+      if (p.pluck > 0) {
+        p.pluck--;
+        p.pos.x += p.pvx * (0.6 + wind * 0.7);
+        p.pos.y += p.pvy;
+        p.pvy += 0.045;
+        ctx.globalAlpha = Math.min(1, 0.5 * p.pluck / 30) * (0.4 + env2 * 0.4);
+        ctx.fillStyle = "#d8c9a3";
+        ctx.fillRect(p.pos.x, p.pos.y, 4.5, 1); // streak while airborne
+        if (p.pluck === 0) {
+          p.pos.x = p.target ? p.target.x : p.home.x;
+          p.pos.y = p.target ? p.target.y : p.home.y;
+        }
+        continue;
+      }
+      // gusts occasionally pluck grains off the formed pair (sand blowing off the figures)
+      if (p.joins && p.target && hoverProg > 0.6 && Math.random() < wind * 0.0022) {
+        p.pluck = 30 + (Math.random() * 40) | 0;
+        p.pvx = 2.5 + Math.random() * 3.5;
+        p.pvy = -(0.2 + Math.random() * 0.5);
+        continue;
+      }
+
+      if (p.joins && p.target && hoverProg > 0.01) {
+        var hp2 = hoverProg * hoverProg;
+        tx = p.home.x + (p.target.x - p.home.x) * hp2;
+        ty = p.home.y + (p.target.y - p.home.y) * hp2;
+        // wind: gusty downstream lean, stronger toward the heads (cloth-like ripple)
+        tx += wind * (1.2 + 2.8 * Math.sin(t * 1.7 + p.seed * 9.4)) * (0.35 + 0.65 * p.hf);
+        boost = 1 + 0.5 * hoverProg;
+      } else {
+        // idle field: crests stream downwind (dunes migrating)
+        tx += wind * (1.0 + 1.6 * Math.sin(t * 0.5 + p.seed * 6.28)) * 0.9;
+      }
+      // wander
+      var wob = Math.sin(t * .8 + p.seed * 12.56) * 1.4;
+      var wob2 = Math.cos(t * .6 + p.seed * 21.98) * 1.4;
+      p.pos.x += (tx + wob - p.pos.x) * 0.055;
+      p.pos.y += (ty + wob2 - p.pos.y) * 0.055;
+
+      var sz = p.size * boost * (0.75 + env2 * 0.5);
+      var al = (0.35 + 0.45 * env2) * (p.joins && hoverProg > 0.5 ? 1.15 : 1);
+      ctx.globalAlpha = Math.min(1, al);
+      ctx.fillStyle = p.tone;
+      ctx.fillRect(p.pos.x - sz / 2, p.pos.y - sz / 2, sz, sz);
     }
-    ctx.globalCompositeOperation = "source-over";
+
+    // saltation: thin wind streaks OVER the picture (the scanty moving layer)
+    for (var k3 = 0; k3 < streaks.length; k3++) {
+      var sk = streaks[k3];
+      sk.x += sk.sp * (0.45 + windAt(t) * 0.9) * 0.016;
+      if (sk.x - sk.len > W) {
+        sk.x = -sk.len - Math.random() * 60;
+        sk.y = Math.random() < 0.7
+          ? duneTopY(Math.random() * W, Math.random() < 0.5 ? 0 : 0.10, 1.0) - Math.random() * 26
+          : H * (0.25 + Math.random() * 0.35);
+      }
+      var yy = sk.y + Math.sin(t * 3 + sk.wob) * 1.2;
+      // slight arc: two short segments with a curl instead of a flat dash
+      var bend = Math.sin(t * 2.2 + sk.wob) * sk.arc;
+      ctx.globalAlpha = sk.al * (0.30 + windAt(t) * 0.55);
+      ctx.fillStyle = "#d8c9a3";
+      ctx.fillRect(sk.x, yy - bend, sk.len * 0.55, 1);
+      ctx.globalAlpha *= 0.75;
+      ctx.fillRect(sk.x + sk.len * 0.55, yy + bend * 0.7, sk.len * 0.45, 1);
+    }
+
     ctx.globalAlpha = 1;
+    raf = requestAnimationFrame(frame);
   }
 
-  function frame(now) {
-    drawFrame(now);
-    if (!reduceMotion) runner = requestAnimationFrame(frame);
+  /* ---------- interaction ---------- */
+  wrap.addEventListener("pointermove", function (e) {
+    var rect = wrap.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left; mouse.y = e.clientY - rect.top;
+    hovering = true;
+    if (hint && !hint.classList.contains("gone")) hint.classList.add("gone");
+  });
+  wrap.addEventListener("pointerleave", function () { hovering = false; });
+
+  /* ---------- run ---------- */
+  function start() { if (!running) { running = true; raf = requestAnimationFrame(frame); } }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+
+  resize();
+  decodeShape();
+
+  if (reduced) {
+    // reduced motion: static field at homes (run one settle pass, no loop)
+    running = false;
+    for (var k = 0; k < particles.length; k++) {
+      particles[k].pos.x = particles[k].home.x;
+      particles[k].pos.y = particles[k].home.y;
+    }
+    ctx.clearRect(0, 0, W, H);
+    drawBackdrop();
+    for (var k2 = 0; k2 < particles.length; k2++) {
+      var p2 = particles[k2];
+      ctx.globalAlpha = 0.5;
+      ctx.fillStyle = p2.tone;
+      ctx.fillRect(p2.home.x, p2.home.y, p2.size, p2.size);
+    }
+    ctx.globalAlpha = 1;
+    return; // no loop, no hover morph
   }
 
-  // visibility control
-  function start() {
-    if (runner) return;
-    if (reduceMotion) { if (!started) { started = true; drawFrame(0); } return; }
-    started = true;
-    runner = requestAnimationFrame(frame);
-  }
-  function stop() { if (runner) { cancelAnimationFrame(runner); runner = null; } }
-  var started = false;
   if ("IntersectionObserver" in window) {
     new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) start(); else stop(); });
-    }, { rootMargin: "200px 0px" }).observe(canvas.parentElement);
-  }
-  var rz;
-  window.addEventListener("resize", function () { clearTimeout(rz); rz = setTimeout(sizeCanvas, 150); });
-  sizeCanvas();
-  if (!("IntersectionObserver" in window)) start();
-  else {
-    var r = canvas.parentElement.getBoundingClientRect();
-    if (r.bottom > 0 && r.top < window.innerHeight) start();
-  }
+      entries.forEach(function (en) { en.isIntersecting ? start() : stop(); });
+    }, { threshold: 0.05 }).observe(wrap);
+  } else start();
+
+  window.addEventListener("resize", (function () {
+    var tmr; return function () { clearTimeout(tmr); tmr = setTimeout(resize, 150); };
+  })());
 })();
 </script>
 </body>

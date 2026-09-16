@@ -6,8 +6,9 @@ tags: [project, active, clone-website, web-design, fiction-site]
 
 > **One-line Summary**: Fictional-but-believable human cloning company website, White Desert's skeleton with lab aesthetics, Lamalama motion effects, AI-generated twins imagery frontloaded before the SuperGrok sub expires. Brainstorm complete; planning next.
 
-**Status:** Brainstorm complete (2026-09-13) → research dig complete (2026-09-13) → awaiting name + pricing fork. Code: not started.
-**Raw sources:** [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|brainstorm raw archive]] (6 voice transcripts + phone note + seed note). White Desert reference shots in `Docs/assets/white-desert/`. Research digest: [[01-Projects/Clone-Website/Docs/research-cloning-shabang|The Whole Cloning Shabang]] (42 sources).
+**Status (2026-09-15):** all canon stamps landed. Codon Labs · $2M · speed roadmap · H1 stamped · staff 1,650 · founders final (Bea / Schönbächler / Antoine) · jurisdiction New York State · first birth New York City · Dolly complementary · terms clause yes · copy v1, generation ledger and slot map drafted. **Image generation runs on Victor's PC (Grok) from the generation ledger. This session owns the vault docs and the build-side work.** Code: not started.
+**Working agreement:** one owner (this session), one branch (`main`), the vault as the single source of truth. No feature branches, no parallel writers.
+**Raw sources:** [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|brainstorm raw archive]] (6 voice transcripts + phone note + seed note). White Desert reference shots in `Docs/assets/white-desert/`. Research digest: [[01-Projects/Clone-Website/Docs/research-cloning-shabang|The Whole Cloning Shabang]] (42 sources). World canon: [[01-Projects/Clone-Website/Docs/world-history-v1|world-history-v1]]. Copy: [[01-Projects/Clone-Website/Docs/copy-v1|copy-v1]]. Imagery: [[01-Projects/Clone-Website/Docs/slotmap-motion-v1|slotmap-motion-v1]] + `image-requirements-v1.md`.
 
 ## What this is
 
@@ -31,7 +32,32 @@ A fake company site for cloning **human beings** (not pets — see D2), played 1
 | D8 | **Pricing fork resolved by research: $5M = child donor / $10M = adult donor pricing (donor-age reading), clone output is always a baby.** Fallback ladder $1M/$5M if $5/10 reads too steep. | Real anchors: dog clone $50k, horse $85k, elite surrogacy $250k–$300k, genome sequencing $500. $5M is ~20x the top real-world reproduction price = believable first-of-its-kind premium. Output-adult clones (The Prestige/Moon) rejected as a different fiction. Victor's call whether to accept donor-age reading. |
 | D9 | Footer = **engraved vignette** (Web-Garnish style 01) | Victor approved 2026-09-13. Bio-luxury fit, LCP-safe, pure SVG + hatch pattern per runbook. |
 | D10 | Code lives in a **GitHub repo**; locally at `~/Projects` on this machine, `Documents` folder on Victor's PC | Victor 2026-09-13: "Code lives in GitHub. Here it lives in ~/Projects. When working on my PC, it'll be stored in the Documents folder." |
-| D11 | Name shortlist: **Codon** (preferred — no biotech collision found) vs **Chrom** (near-collisions: Chroma Medicine, nChroma Bio) | Victor researching names 2026-09-13; Tavily verification confirmed Codon is the cleaner mark. Victor's final call. |
+| D11 | Name: **Codon Labs** (Victor locked 2026-09-13) | "Codon inc / probably codon labs." Domain: codonlabs.com taken (Sav.com squatter, parked, registered 2024-10-18); codonlabs.io, codonlabs.ai, codon-labs.com OPEN. Formal trademark check still pending (defunct Codon Devices existed 2000s). |
+| D12 | Clone output is ALWAYS a baby; one product, one price. Adult-output clones (movies' version) explicitly rejected | Victor 2026-09-13: "they always start out as babies, not full-grown people. Movies make it seem like they start out as whatever result you want." |
+| D13 | Price: **$2,000,000 stamped**. Roadmap: **speed** (14 months today → 9 by 2028). Price-cut roadmap rejected (wasteful register). | Victor stamped 2026-09-13: "Roadmap: speed. 2M price." Copy drafted in copy-v1.md. |
+| D14 | FAQ carries BOTH registers: myth-debunking (gold) + plausible-questions (good) | Victor 2026-09-13. Myth material ready in research digest (aging myth, "same dog" myth, etc). |
+| D15 | Hero metaphor: frontier/space register, NOT continent talk. "The next frontier" direction; Apollo-line inversion candidate ("one giant leap… for him") | Victor 2026-09-13 rejected continent phrasing, kept the move. |
+| D16 | Image pipeline: requirements list → Tavily reference search → generate (Grok/Gemini) → Agy review/edit against requirements | Victor 2026-09-13. First reference haul done (twin portraits genre: Zlewski, Brunelle, Collette; embryo microscopy; lab interiors). |
+| D17 | Footer: engraved vignette stays baseline; Victor cracking a NEW footer style in a separate session, may supersede | Victor 2026-09-13. |
+| D18 | Hero H1: **"The next frontier is you."** stamped. Sub + CTAs locked. | Victor stamped 2026-09-13. |
+| D19 | **Consent rule: a continuation requires the donor's own written yes, given while living. Death does not withdraw a yes. Silence does.** No continuation of the unwilling, unaware, or never-asked. Grandfather scenario (banked cells + signed consent while alive) is valid in-world. | Victor 2026-09-13: "your grandpa died, and you cloned him as a kid and watched him grow as a new person" — validated via the consent-while-living frame rather than cloning-the-unconsenting. Grief-mill register (cloning the never-asked deceased) explicitly rejected. |
+| D20 | **In-world imagery law: no grown continuation appears in any present-day context** (first birth March 2025 in-world; oldest continuation ~18 months). Grown-continuation fantasy lives only as clearly-labeled age-progression projection. Multi-clone lineup imagery banned outside the movies-satire panel. | Copy-v1 world facts + imagery-v1 Three Laws, Victor informed. |
+| D21 | **Company history anchored: founded 1973 in Basel**, lab adjacent to the Biozentrum (Petersplatz). Animal Research Division + Preclinical Vivarium established 1980s–90s in **Allschwil (BL) or Saint-Louis (Alsace)**, 15-min commute to HQ. | Victor's Gemini/Google Earth research 2026-09-13 (Gemini deliberately told only "genetics and cell research company that later had an animal division"). Translated to clone canon in [[01-Projects/Clone-Website/Docs/world-history-v1|world-history-v1]]. Site pick (Allschwil vs Saint-Louis) pending. |
+| D22 | Founder roster: **Bea Vogel-Keller** (founder, CEO, early 80s) + two co-founders: one alive early 90s, one professor/coach who died in the 2000s. Recommended: Bea has no doctorate (two doctors plus one operator-friend reads better than three doctors). | Victor 2026-09-13. Name-to-role assignment pending: recommended Schönbächler = the deceased professor, de Montmollin = alive emeritus. |
+| D23 | Founder portraits: the **early-50s woman is the HISTORICAL portrait** (circa 1993, animal-division years, three years before Dolly); a current portrait of Bea at 82 is needed for /about. | Age math from D21 + D22 (founded 1973, Bea early 80s today). Pending Victor confirm. |
+| D24 | **Terms disclosure clause**: the fictional-company line buried at /terms clause 14 of 14. Recommended: include. | Pending Victor's yes (explained 2026-09-13). |
+| D25 | FAQ ships **16** (the 14 written + 2 Register-B extras: sample-after-death, meeting other families). | Decided 2026-09-13, low-stakes. |
+| D26 | Section 1 real-quote candidates (numbered in the research digest's source list): (1) Wilmut regret quote [38, NYT obituary], (2) Sinclair/Nottingham 13-sheep finding [11][12], (3) "delayed identical twin" phrasing [2, Psychology Today 1997]. | **Stamped 2026-09-15 (D33): quote 1 in Section 1; quote 2 reserved for a later page.** |
+| D27 | Founder roster final: **Dr. Beatrix "Bea" Vogel-Keller** (founder, CEO, early 80s, doctorate) · **Prof. Dr. Markus Schönbächler** (the middle name, the oldest, the mentor professor, **died in the 2000s**) · **Antoine de Montmollin** (**alive, early 90s, no doctorate** — the outlier friend, the engineer). | Corrected 2026-09-15 by D35. Victor: doctors keep their titles; the last name (Antoine) carries no doctorate; the mentor is Schönbächler and he is dead. |
+| D28 | Founder portraits: **both**, used with intention. Early-50s Bea = historical (circa 1993, archive treatment). Bea today = 82, /about. **No lookbook** (Victor's rule: images are arguments, not decoration). | Victor 2026-09-15. |
+| D29 | **Clinical program jurisdiction: New York State, United States.** No fictional law, no licence. Evidence: no US federal prohibition; New York does not directly prohibit reproductive cloning; parentage via the real 2021 Child-Parent Security Act (pre-birth parentage orders, licensed surrogacy organizations, escrow). Research stays Basel; animal division Allschwil (1988) + **Saint-Louis (2004)**. | Victor 2026-09-15: "We lean toward the second. Let's not make up a real-world law. No fiction license." + "Saint-Louis." |
+| D30 | Terms disclosure clause: **yes**, at /terms clause 14 of 14, plain language, draft written into the copy deck. | Victor 2026-09-15. |
+| D31 | Staff canon: group-wide **1,650** (Human Genetics 710, Animal Research 350, Bio-Data and AI 270, Corporate 320), the Program about 90; founding 1973 with 12 people; Allschwil 1988; Saint-Louis 2004. Funding story: contract research funds the Program; the Program is priced at the cost of one continuation, not market. | **Stamped 1,650 by Victor, 2026-09-15.** The figure passed through 1,850 then 1,600 during the day's reconciliations, which is why the canon now lives in one table. |
+| D36 | *(orphaned citation)* Referenced in the copy deck for the founder roster. No row was ever written. Superseded by D27 as corrected by D35. | Flagged 2026-09-15. |
+| D37 | Staff figure, closed: **1,650** group-wide (710/350/270/320) plus about 90 in the Program. The row was cited in the copy deck before it existed; it exists now. | Stamped by Victor 2026-09-15. |
+| D32 | **The founder's continuation**: **Markus Schönbächler** banked and consented (1999, the first person under the D19 rule), died in the 2000s, and his continuation is 18 months old, one of the 14. Appears on /about once, with intention. Not in the families look-book. | Victor 2026-09-15: "Add that founder-is-a-toddler story as well." Reattributed from Antoine to Schönbächler by D35. |
+| D35 | **Roster correction sweep.** "Swap." was misread as swapping the mentor role; it meant the doctorate. Canon: Bea doctor; Antoine alive, no doctorate; Schönbächler the mentor, dead, keeper of the 1999 line and of the continuation. Corrected in world canon, copy deck, slot map, D27, D32. | Victor 2026-09-15: "Antoine alive. Antoine no doctorate, bea doctorate, bea founder, middle doctor is the older dude, the mentor professor and he's passed away." The wrong version had already reached five documents, one via a parallel edit to the copy deck. |
+| D34 | Dolly: **complementary, not beaten.** Roslin showed an egg can host an adult nucleus; Codon Labs had spent twenty years on the other half of the question, how a nucleus is made to forget. Roslin helped them, indirectly. | **Stamped by Victor 2026-09-15**: "Complementary. Dolly. not beat. They didn't beat us; they just helped us further, indirectly." |
 
 ## Page structure (White Desert skeleton, remapped)
 
@@ -79,21 +105,33 @@ Store prompts + outputs in `Docs/assets/generated/` (to be created); keep prompt
 
 All documented `tried` in [[03-Resources/Tools/Effects_Glossary]] with GLSL technique notes; clone repo: `git clone https://github.com/Venmarc/rep-lamalama`.
 
-## Open decisions (for Victor)
+## Open decisions
 
-1. **Company name + brand voice** — nothing decided anywhere. Needed before hero copy and logo-grain intro (the intro literally renders the mark).
-2. **Footer style pick** — engraved vignette is my recommendation (bio-luxury fit, zero-image LCP-safe); sticker/stamp/watercolor sit less well on a $500k biotech fiction. Victor's call.
-3. **Pricing fiction** — real anchors exist; exact package prices TBD.
-4. **Waitlist email reveal copy** — the one place the mask comes off; needs careful tone (conversational, no-blame).
-5. **Where the code lives** — suggest `Documents/Port Sites/Category 5/<name>` per vault convention, or standalone repo if it's a portfolio fiction piece.
+**Stamped 2026-09-15:** staff **1,650** · Dolly **complementary** · first birth **New York City** · Antoine **the engineer** · disciplines **Bea: reproductive biology and embryology; Schönbächler: cytogenetics and chromatin biology** · terms clause **yes** · jurisdiction **New York State**.
+
+Still open:
+
+1. **Founder quote**: B drafted as stamped (the 1999 line, Schönbächler). Confirm or flip to A.
+2. **The mark**: does not exist. Blocks the grain intro, preloader, favicon, OG card. Three concepts drafted in the generation ledger; SVG drafting happens in this session.
+3. **Footer style**: engraved vignette baseline; newer footer styles may supersede.
+4. **Stack and repo location**, then scaffold.
+5. Workforce detail: founding headcount, Program team size, Schönbächler's death year.
+6. **Waitlist email mechanics**: sender domain and service (needs a domain decision).
 
 ## Next actions
 
-1. Victor: pick company name (blocks hero copy, logo, email sender name).
-2. Asset generation sprint in the SuperGrok window (D5) — prompts drafted from White Desert's imagery register.
-3. Clone rep-lamalama to this machine; port the four effects behind small wrappers.
-4. Scaffold site (Next.js per White Desert's stack, or Astro per Pastries habit) once assets exist.
-5. Waitlist: form + transactional email (Resend/SES) with the reveal copy; NO mailing-list subscription without explicit opt-in.
+1. Asset sprint in the SuperGrok window (closing now): the generation ledger's A-tier order, starting with the register test batch (the money macro, one portrait pair, the hand).
+2. Design the mark.
+3. Red-ink the copy deck (the stamps above).
+4. Clone rep-lamalama to this machine; port the four effects.
+5. Scaffold the site once assets exist.
+6. Waitlist form plus transactional email with the reveal copy. No mailing-list subscription.
+
+## Lessons log
+
+- AI research supplied without the project frame arrives coherent but wrongly anchored (Gemini placed the founding at 1975; canon is 1973, and it assumed a pure research enterprise). Re-anchor every number to the world facts table on entry.
+- Two agent sessions drafted imagery docs under near-identical names. Name docs by function and cross-link them (slot map vs generation ledger).
+- **One ambiguous stamp, five documents wrong.** "Swap." meant the doctorate, not the mentor role. When a stamp is a single word, restate the interpretation in one line and get a yes before cascading it into canon.
 
 ## Related
 

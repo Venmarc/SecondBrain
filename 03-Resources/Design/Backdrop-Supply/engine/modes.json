@@ -1,0 +1,1702 @@
+[
+ {
+  "id": "mesh",
+  "name": "Mesh",
+  "uniforms": [
+   {
+    "name": "u_noiseScale",
+    "label": "Noise scale",
+    "min": 0.5,
+    "max": 4.0,
+    "step": 0.05,
+    "default": 1.4,
+    "group": "shape"
+   },
+   {
+    "name": "u_softness",
+    "label": "Softness",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.7,
+    "group": "shape"
+   },
+   {
+    "name": "u_warp",
+    "label": "Warp",
+    "min": 0.0,
+    "max": 0.5,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "motion"
+   },
+   {
+    "name": "u_flowSpeed",
+    "label": "Flow speed",
+    "min": 0.0,
+    "max": 1.5,
+    "step": 0.01,
+    "default": 0.18,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform vec2  u_blobOffsets[8];\nuniform float u_noiseScale;\nuniform float u_flowSpeed;\nuniform float u_warp;\nuniform float u_softness;\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5);\n\n  float t = u_time * u_flowSpeed;\n\n  vec2 q = vec2(\n    snoise(p * u_noiseScale + vec2(t,        0.0)),\n    snoise(p * u_noiseScale + vec2(5.2,      t * 0.7) + vec2(1.3))\n  );\n  vec2 r = vec2(\n    snoise(p * u_noiseScale + 4.0 * q + vec2(1.7 + t * 0.4, 9.2)),\n    snoise(p * u_noiseScale + 4.0 * q + vec2(8.3, 2.8 + t * 0.5))\n  );\n  vec2 warped = p + r * u_warp;\n\n  vec3 col = vec3(0.0);\n  float totalWeight = 0.0;\n  float falloff = mix(12.0, 2.5, clamp(u_softness, 0.0, 1.0));\n  for (int i = 0; i < 8; i++) {\n    if (i >= u_blobCount) break;\n    float fi = float(i);\n    vec2 base = u_blobOffsets[i] * vec2(aspect, 1.0);\n    vec2 orbit = 0.32 * vec2(\n      sin(t * 0.5 + fi * 1.7) * aspect * 0.5,\n      cos(t * 0.6 + fi * 2.3) * 0.5\n    );\n    vec2 center = base + orbit;\n    float d = distance(warped, center);\n    float w = 1.0 / (d * d * falloff + 0.04);\n    col += u_colors[i] * w;\n    totalWeight += w;\n  }\n  col /= max(totalWeight, 1e-4);\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "soft",
+  "name": "Soft",
+  "uniforms": [
+   {
+    "name": "u_blur",
+    "label": "Blur",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.7,
+    "group": "shape"
+   },
+   {
+    "name": "u_spread",
+    "label": "Spread",
+    "min": 0.4,
+    "max": 1.6,
+    "step": 0.01,
+    "default": 1.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Drift",
+    "min": 0.0,
+    "max": 0.5,
+    "step": 0.002,
+    "default": 0.05,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform vec2  u_blobOffsets[8];\nuniform float u_blur;\nuniform float u_spread;\nuniform float u_speed;\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5);\n\n  float t = u_time * u_speed;\n\n  // No domain warp \u2014 just clean radial blending. Larger blur = softer falloff.\n  float falloff = mix(8.0, 1.2, clamp(u_blur, 0.0, 1.0));\n\n  vec3 col = vec3(0.0);\n  float total = 0.0;\n  for (int i = 0; i < 8; i++) {\n    if (i >= u_blobCount) break;\n    float fi = float(i);\n    vec2 base = u_blobOffsets[i] * vec2(aspect, 1.0) * u_spread * 1.4;\n    // Tiny breathing motion; mostly static.\n    vec2 drift = 0.04 * vec2(\n      sin(t + fi * 1.7),\n      cos(t * 1.1 + fi * 2.3)\n    );\n    vec2 center = base + drift;\n    float d = distance(p, center);\n    float w = 1.0 / (d * d * falloff + 0.012);\n    col += u_colors[i] * w;\n    total += w;\n  }\n  col /= max(total, 1e-4);\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "bands",
+  "name": "Bands",
+  "uniforms": [
+   {
+    "name": "u_angle",
+    "label": "Angle",
+    "min": 0.0,
+    "max": 360.0,
+    "step": 1.0,
+    "default": 30.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_softness",
+    "label": "Softness",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.85,
+    "group": "shape"
+   },
+   {
+    "name": "u_repeats",
+    "label": "Repeats",
+    "min": 0.5,
+    "max": 4.0,
+    "step": 0.05,
+    "default": 1.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Speed",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "motion"
+   },
+   {
+    "name": "u_wobble",
+    "label": "Wobble",
+    "min": 0.0,
+    "max": 0.4,
+    "step": 0.005,
+    "default": 0.08,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_angle;     // degrees\nuniform float u_softness;  // smoothness of band boundaries\nuniform float u_repeats;   // number of palette traversals across the canvas\nuniform float u_speed;\nuniform float u_wobble;\n\n#define PI 3.14159265359\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5);\n\n  float t = u_time * u_speed;\n\n  // Project p onto the angle direction \u2192 1D coordinate.\n  float a = u_angle * PI / 180.0;\n  vec2 dir = vec2(cos(a), sin(a));\n  float k = dot(p, dir);\n\n  // Add a slow noise wobble so it isn't a perfectly straight gradient.\n  k += snoise(p * 1.2 + t * 0.4) * u_wobble;\n\n  // Wrap into [0..1], scaled by repeats and shifted over time.\n  k = k * u_repeats + t * 0.3;\n  k = fract(k * 0.5 + 0.5);\n  // smoothstep for a softer palette blend.\n  float s = mix(k, smoothstep(0.0, 1.0, k), u_softness);\n\n  vec3 col = paletteAt(s);\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "glass",
+  "name": "Glass",
+  "uniforms": [
+   {
+    "name": "u_ribFreq",
+    "label": "Ribs",
+    "min": 8.0,
+    "max": 80.0,
+    "step": 1.0,
+    "default": 30.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_refract",
+    "label": "Refraction",
+    "min": 0.0,
+    "max": 0.3,
+    "step": 0.005,
+    "default": 0.07,
+    "group": "shape"
+   },
+   {
+    "name": "u_highlight",
+    "label": "Highlight",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.4,
+    "group": "shape"
+   },
+   {
+    "name": "u_angle",
+    "label": "Angle",
+    "min": 0.0,
+    "max": 360.0,
+    "step": 1.0,
+    "default": 90.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Drift",
+    "min": 0.0,
+    "max": 0.5,
+    "step": 0.005,
+    "default": 0.06,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_ribFreq;\nuniform float u_refract;\nuniform float u_highlight;\nuniform float u_angle;\nuniform float u_speed;\n\n#define PI 3.14159265359\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5);\n\n  float t = u_time * u_speed;\n  float a = u_angle * PI / 180.0;\n  vec2 dir  = vec2(cos(a), sin(a));     // along ribs\n  vec2 perp = vec2(-sin(a), cos(a));    // across ribs\n\n  // Rib coordinate \u2014 perpendicular distance from the rib axis.\n  float ribCoord = dot(p, perp);\n  float ribN = sin(ribCoord * u_ribFreq * PI);\n\n  // Refract: shift sample point along the rib direction by ribN.\n  vec2 sampleP = p + dir * ribN * u_refract;\n\n  // Underlying smooth gradient \u2014 radial-ish soft mesh of palette colors.\n  vec3 base = vec3(0.0);\n  float total = 0.0;\n  for (int i = 0; i < 8; i++) {\n    if (i >= u_blobCount) break;\n    float fi = float(i);\n    vec2 c = vec2(\n      cos(fi * 1.7 + t * 0.3) * 0.4 * aspect,\n      sin(fi * 1.3 + t * 0.4) * 0.4\n    );\n    float d = distance(sampleP, c);\n    float w = 1.0 / (d * d * 4.0 + 0.05);\n    base += u_colors[i] * w;\n    total += w;\n  }\n  base /= max(total, 1e-4);\n\n  // Specular highlight at rib peaks \u2014 sharp white sheen.\n  float hl = pow(max(0.0, ribN), 6.0) * u_highlight;\n  // Soft shadow at rib troughs.\n  float sh = pow(max(0.0, -ribN), 2.0) * 0.35;\n\n  vec3 col = base * (1.0 - sh) + vec3(hl);\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "concentric",
+  "name": "Concentric",
+  "uniforms": [
+   {
+    "name": "u_ringFreq",
+    "label": "Ring density",
+    "min": 20.0,
+    "max": 240.0,
+    "step": 1.0,
+    "default": 80.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_ringDepth",
+    "label": "Ring depth",
+    "min": 0.0,
+    "max": 0.5,
+    "step": 0.005,
+    "default": 0.12,
+    "group": "shape"
+   },
+   {
+    "name": "u_centerX",
+    "label": "Center X",
+    "min": -0.5,
+    "max": 0.5,
+    "step": 0.005,
+    "default": 0.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_centerY",
+    "label": "Center Y",
+    "min": -0.5,
+    "max": 0.5,
+    "step": 0.005,
+    "default": 0.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Pulse",
+    "min": 0.0,
+    "max": 1.5,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "motion"
+   },
+   {
+    "name": "u_warp",
+    "label": "Warp",
+    "min": 0.0,
+    "max": 0.3,
+    "step": 0.005,
+    "default": 0.06,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_ringFreq;\nuniform float u_ringDepth;\nuniform float u_centerX;\nuniform float u_centerY;\nuniform float u_speed;\nuniform float u_warp;\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5);\n\n  float t = u_time * u_speed;\n\n  // Ring origin (off-center capable).\n  vec2 origin = vec2(u_centerX * aspect, u_centerY);\n  vec2 d = p - origin;\n\n  // Tiny domain warp so rings aren't perfectly geometric.\n  vec2 q = d + vec2(\n    snoise(d * 1.5 + vec2(t * 0.4, 0.0)),\n    snoise(d * 1.5 + vec2(0.0, t * 0.5) + 4.0)\n  ) * u_warp;\n  float r = length(q);\n\n  // Base palette gradient by radius.\n  vec3 base = paletteAt(clamp(r * 1.2, 0.0, 1.0));\n\n  // Concentric rings \u2014 sharp sine modulating the base lightness.\n  float ring = sin(r * u_ringFreq - t * 2.5);\n  float depth = 1.0 + ring * u_ringDepth;\n\n  vec3 col = base * depth;\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "halftone",
+  "name": "Halftone",
+  "uniforms": [
+   {
+    "name": "u_dotDensity",
+    "label": "Dot density",
+    "min": 8.0,
+    "max": 80.0,
+    "step": 1.0,
+    "default": 32.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_dotScale",
+    "label": "Dot size",
+    "min": 0.4,
+    "max": 1.6,
+    "step": 0.01,
+    "default": 0.95,
+    "group": "shape"
+   },
+   {
+    "name": "u_zoom",
+    "label": "Zoom",
+    "min": 0.4,
+    "max": 3.0,
+    "step": 0.02,
+    "default": 1.4,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Speed",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "motion"
+   },
+   {
+    "name": "u_warp",
+    "label": "Warp",
+    "min": 0.0,
+    "max": 0.5,
+    "step": 0.005,
+    "default": 0.15,
+    "group": "motion"
+   },
+   {
+    "name": "u_invert",
+    "label": "Invert",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 1.0,
+    "default": 0.0,
+    "group": "extra"
+   }
+  ],
+  "fragment": "\nuniform float u_dotDensity;\nuniform float u_dotScale;\nuniform float u_zoom;\nuniform float u_speed;\nuniform float u_warp;\nuniform float u_invert;\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5) * u_zoom;\n\n  float t = u_time * u_speed;\n\n  // Domain-warped gradient field \u2014 same machinery as Mesh, simpler.\n  vec2 warp = vec2(\n    snoise(p + vec2(t, 0.0)),\n    snoise(p + vec2(0.0, t * 0.7) + 4.0)\n  ) * u_warp;\n  vec2 warped = p + warp;\n\n  // 0..1 scalar \u2014 drives both BG color AND dot size.\n  float k = 0.5 + 0.5 * snoise(warped * 1.2);\n  if (u_invert > 0.5) k = 1.0 - k;\n\n  // Background \u2014 smooth gradient through palette.\n  vec3 bg = paletteAt(k);\n\n  // Dot lattice. Use uv coordinates (NOT p) so dots stay at fixed\n  // screen-space positions \u2014 the gradient flows underneath them.\n  vec2 cell = uv * vec2(aspect, 1.0) * u_dotDensity;\n  vec2 cf = fract(cell) - 0.5;\n  float d = length(cf);\n\n  // Dot radius scales with darkness of the gradient at this point.\n  float radius = (1.0 - k) * 0.55 * u_dotScale;\n  // Antialiased dot edge.\n  float aa = 1.0 / max(u_dotDensity, 1.0);\n  float dot = 1.0 - smoothstep(radius - aa, radius + aa, d);\n\n  // Dot color \u2014 darkest palette entry.\n  vec3 dotCol = paletteAt(1.0);\n\n  vec3 col = mix(bg, dotCol, dot);\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "smoke",
+  "name": "Smoke",
+  "uniforms": [
+   {
+    "name": "u_density",
+    "label": "Density",
+    "min": 0.5,
+    "max": 4.0,
+    "step": 0.05,
+    "default": 1.6,
+    "group": "shape"
+   },
+   {
+    "name": "u_octaves",
+    "label": "Detail",
+    "min": 2.0,
+    "max": 7.0,
+    "step": 1.0,
+    "default": 5.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_contrast2",
+    "label": "Cloud bite",
+    "min": 0.5,
+    "max": 2.5,
+    "step": 0.02,
+    "default": 1.4,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Drift speed",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.005,
+    "default": 0.12,
+    "group": "motion"
+   },
+   {
+    "name": "u_swirl",
+    "label": "Swirl",
+    "min": 0.0,
+    "max": 1.5,
+    "step": 0.01,
+    "default": 0.5,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_density;\nuniform float u_octaves;   // float; cast to int\nuniform float u_contrast2;\nuniform float u_speed;\nuniform float u_swirl;\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5) * u_density;\n\n  float t = u_time * u_speed;\n\n  // Domain-warp the FBM input by another FBM evaluation \u2014 gives swirly\n  // smoke shapes instead of a uniform cloud field.\n  int oct = int(u_octaves);\n  vec2 warp = vec2(\n    fbm(p + vec2(t,         0.0), oct, 2.0, 0.5),\n    fbm(p + vec2(0.0,  t * 0.8) + vec2(5.2, 1.3), oct, 2.0, 0.5)\n  ) * u_swirl;\n\n  float n = fbm(p + warp + vec2(0.0, -t * 0.5), oct, 2.0, 0.5);\n\n  // Map noise [-1,1] \u2192 [0,1] and bias for cloudy bite.\n  float k = 0.5 + 0.5 * n;\n  k = clamp(pow(k, u_contrast2), 0.0, 1.0);\n\n  vec3 col = paletteAt(k);\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "aurora",
+  "name": "Aurora",
+  "uniforms": [
+   {
+    "name": "u_bandWidth",
+    "label": "Band width",
+    "min": 0.4,
+    "max": 4.0,
+    "step": 0.02,
+    "default": 1.6,
+    "group": "shape"
+   },
+   {
+    "name": "u_curtains",
+    "label": "Curtains",
+    "min": 0.2,
+    "max": 2.0,
+    "step": 0.02,
+    "default": 1.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_glow",
+    "label": "Glow",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.5,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Drift speed",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "motion"
+   },
+   {
+    "name": "u_wave",
+    "label": "Wave amount",
+    "min": 0.0,
+    "max": 0.5,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_bandWidth;\nuniform float u_curtains;\nuniform float u_glow;\nuniform float u_speed;\nuniform float u_wave;\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n\n  // Horizontal coordinate, scaled by aspect so bands are uniform width.\n  float x = (uv.x - 0.5) * aspect;\n  float y = uv.y;\n\n  float t = u_time * u_speed;\n\n  // Curtain wave \u2014 horizontal band position oscillates with height.\n  float wave = snoise(vec2(y * 2.5 - t, t * 0.5)) * u_wave;\n  float bandX = x + wave;\n\n  // Multi-frequency horizontal sweep gives that \"shifting curtain\" look.\n  float band =\n      0.6 * snoise(vec2(bandX * u_bandWidth - t, 0.7))\n    + 0.3 * snoise(vec2(bandX * u_bandWidth * 2.1 + t * 0.6, 1.7))\n    + 0.1 * snoise(vec2(bandX * u_bandWidth * 4.0 + t * 1.5, 3.7));\n\n  // Vertical curtain falloff \u2014 concentrated in the middle vertically.\n  // Tweakable via u_curtains: lower = tall curtains, higher = compressed band.\n  float verticalFall = 1.0 - pow(abs(y - 0.5) * 2.0, u_curtains);\n  verticalFall = clamp(verticalFall, 0.0, 1.0);\n\n  // 0..1 scalar through the palette \u2014 biased so darker palette entries\n  // dominate near the edges and brighter ones glow in the band's core.\n  float t01 = clamp(0.5 + band * 0.55, 0.0, 1.0);\n  vec3 base = paletteAt(t01);\n\n  // Multiply by curtain falloff so the band fades into darkness at top/bottom.\n  vec3 col = base * mix(0.15, 1.0, verticalFall);\n\n  // Soft additive glow at the band centerline.\n  float glowT = clamp(0.5 + band * 0.4, 0.0, 1.0);\n  vec3 glowCol = paletteAt(glowT);\n  float glowBand = exp(-pow((y - 0.5) * 3.5, 2.0)) * (0.5 + 0.5 * band);\n  col += glowCol * glowBand * u_glow;\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "plasma",
+  "name": "Plasma",
+  "uniforms": [
+   {
+    "name": "u_zoom",
+    "label": "Zoom",
+    "min": 0.3,
+    "max": 4.0,
+    "step": 0.05,
+    "default": 1.4,
+    "group": "shape"
+   },
+   {
+    "name": "u_complexity",
+    "label": "Complexity",
+    "min": 1.0,
+    "max": 6.0,
+    "step": 0.05,
+    "default": 3.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_smooth",
+    "label": "Smoothness",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.6,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Speed",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 0.01,
+    "default": 0.4,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_zoom;\nuniform float u_complexity;\nuniform float u_smooth;\nuniform float u_speed;\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5) * u_zoom;\n\n  float t = u_time * u_speed;\n\n  // Classic plasma \u2014 sum of multiple sinusoidal fields at different\n  // frequencies / orientations. u_complexity controls high-frequency mix.\n  float v = sin(p.x * 4.0 + t);\n  v += sin(4.0 * (p.y + 0.5 * sin(t * 0.7)));\n  v += sin(u_complexity * (p.x + p.y) + t * 1.3);\n  // Concentric ripple from the origin\n  float r = length(p + vec2(sin(t * 0.5), cos(t * 0.4)) * 0.4);\n  v += sin(r * (4.0 + u_complexity) - t * 1.2);\n\n  v *= 0.25; // average out the four contributions\n\n  // Map -1..1 \u2192 0..1, with optional smoothstep for a softer transition.\n  float k = 0.5 + 0.5 * v;\n  k = mix(k, smoothstep(0.0, 1.0, k), u_smooth);\n\n  vec3 col = paletteAt(k);\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "rays",
+  "name": "Rays",
+  "uniforms": [
+   {
+    "name": "u_density",
+    "label": "Ray density",
+    "min": 4.0,
+    "max": 80.0,
+    "step": 1.0,
+    "default": 24.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_intensity",
+    "label": "Intensity",
+    "min": 0.2,
+    "max": 2.0,
+    "step": 0.01,
+    "default": 0.9,
+    "group": "shape"
+   },
+   {
+    "name": "u_falloff",
+    "label": "Falloff",
+    "min": 0.4,
+    "max": 4.0,
+    "step": 0.02,
+    "default": 1.6,
+    "group": "shape"
+   },
+   {
+    "name": "u_focusJitter",
+    "label": "Focus drift",
+    "min": 0.0,
+    "max": 0.5,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "motion"
+   },
+   {
+    "name": "u_speed",
+    "label": "Speed",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 0.01,
+    "default": 0.4,
+    "group": "motion"
+   },
+   {
+    "name": "u_twist",
+    "label": "Twist",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_density;     // ray count\nuniform float u_intensity;   // overall ray brightness\nuniform float u_falloff;     // how fast rays fade outward\nuniform float u_focusJitter; // amount the focal point drifts\nuniform float u_speed;\nuniform float u_twist;       // angular noise modulation\n\n#define PI 3.14159265359\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5);\n\n  float t = u_time * u_speed;\n\n  // Drifting focal point.\n  vec2 focus = vec2(\n    sin(t * 0.4) * u_focusJitter * aspect,\n    cos(t * 0.5) * u_focusJitter\n  );\n  vec2 d = p - focus;\n  float r = length(d);\n  float a = atan(d.y, d.x);\n\n  // Twist the angle with noise so rays aren't perfectly straight.\n  float twistN = snoise(vec2(r * 4.0, t * 0.6));\n  float angle = a + twistN * u_twist;\n\n  // Rays \u2014 sin wave at u_density frequency, +rotation over time.\n  float ray = 0.5 + 0.5 * sin(angle * u_density + t);\n  ray = pow(ray, 3.0); // sharpen the spokes\n\n  // Radial falloff \u2014 bright at center, fading outward.\n  float rad = exp(-r * u_falloff);\n\n  // Background base color \u2014 palette index by radial distance.\n  vec3 base = paletteAt(clamp(r * 0.9, 0.0, 1.0));\n  // Bright ray color \u2014 from the brightest end of the palette.\n  vec3 rayCol = paletteAt(0.0);\n\n  vec3 col = base + rayCol * ray * rad * u_intensity;\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "prism",
+  "name": "Prism",
+  "uniforms": [
+   {
+    "name": "u_position",
+    "label": "Position",
+    "min": -0.5,
+    "max": 0.5,
+    "step": 0.005,
+    "default": 0.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_width",
+    "label": "Width",
+    "min": 0.05,
+    "max": 0.6,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "shape"
+   },
+   {
+    "name": "u_intensity",
+    "label": "Intensity",
+    "min": 0.4,
+    "max": 3.0,
+    "step": 0.02,
+    "default": 1.5,
+    "group": "shape"
+   },
+   {
+    "name": "u_chroma",
+    "label": "Chromatic",
+    "min": 0.0,
+    "max": 0.4,
+    "step": 0.005,
+    "default": 0.12,
+    "group": "shape"
+   },
+   {
+    "name": "u_streaks",
+    "label": "Streaks",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.6,
+    "group": "shape"
+   },
+   {
+    "name": "u_fade",
+    "label": "Top fade",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.4,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Speed",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 0.01,
+    "default": 0.7,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_position;\nuniform float u_width;\nuniform float u_intensity;\nuniform float u_chroma;\nuniform float u_streaks;\nuniform float u_fade;\nuniform float u_speed;\n\nfloat beamAt(vec2 p, float xOffset) {\n  // Horizontal Gaussian falloff \u2014 bright at column center, dark at edges.\n  float horiz = exp(-pow((p.x - u_position - xOffset) / u_width, 2.0));\n  // Fine vertical streaks via narrow noise.\n  float t = u_time * u_speed;\n  float n = snoise(vec2((p.x + xOffset) * 80.0, p.y * 6.0 + t * 3.5));\n  float streak = mix(0.55, 1.0, smoothstep(-1.0, 1.0, n) * u_streaks);\n  // Top fade so the beam dissolves into the sky.\n  float topFade = smoothstep(-0.5, -0.5 + u_fade, p.y);\n  // Bottom fade-out for a soft ground shadow.\n  float botFade = 1.0 - smoothstep(0.3, 0.5, p.y);\n  return horiz * streak * topFade * botFade;\n}\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5);\n\n  // Sample R, G, B channels at slightly offset positions for chromatic split.\n  float r = beamAt(p, -u_chroma);\n  float g = beamAt(p,  0.0);\n  float b = beamAt(p,  u_chroma);\n\n  // Tint each channel by a palette pull so user palette colors the rainbow.\n  vec3 hot = paletteAt(0.0);  // brightest palette entry tints peak\n  vec3 mid = paletteAt(0.5);\n  vec3 cold = paletteAt(1.0);\n\n  vec3 col =\n      r * mix(vec3(1.0, 0.6, 0.5), hot, 0.4) +\n      g * mix(vec3(0.6, 1.0, 0.7), mid, 0.4) +\n      b * mix(vec3(0.5, 0.7, 1.0), cold, 0.4);\n  col *= u_intensity;\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "vortex",
+  "name": "Vortex",
+  "uniforms": [
+   {
+    "name": "u_radius",
+    "label": "Radius",
+    "min": 0.1,
+    "max": 0.5,
+    "step": 0.005,
+    "default": 0.32,
+    "group": "shape"
+   },
+   {
+    "name": "u_thickness",
+    "label": "Thickness",
+    "min": 0.01,
+    "max": 0.2,
+    "step": 0.002,
+    "default": 0.04,
+    "group": "shape"
+   },
+   {
+    "name": "u_perspective",
+    "label": "Tilt",
+    "min": 0.2,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.42,
+    "group": "shape"
+   },
+   {
+    "name": "u_arms",
+    "label": "Arms",
+    "min": 1.0,
+    "max": 24.0,
+    "step": 1.0,
+    "default": 8.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_glow",
+    "label": "Glow",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 0.02,
+    "default": 1.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_chroma",
+    "label": "Chromatic",
+    "min": 0.0,
+    "max": 0.05,
+    "step": 0.001,
+    "default": 0.012,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Spin speed",
+    "min": 0.0,
+    "max": 3.0,
+    "step": 0.01,
+    "default": 1.0,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_radius;\nuniform float u_thickness;\nuniform float u_perspective;  // y-axis squash factor\nuniform float u_arms;         // number of bright streaks around the ring\nuniform float u_glow;\nuniform float u_chroma;\nuniform float u_speed;\n\n#define PI 3.14159265359\n\nfloat ringField(vec2 p, float xOffset) {\n  vec2 q = p + vec2(xOffset, 0.0);\n  // Squash y for perspective \u2014 gives the ring a tilted-disc appearance.\n  q.y /= u_perspective;\n  float r = length(q);\n  // Tube \u2014 distance from ring radius.\n  float ringDist = abs(r - u_radius);\n  float ring = exp(-pow(ringDist / u_thickness, 2.0));\n\n  // Flowing arms around the ring.\n  float angle = atan(q.y, q.x);\n  float t = u_time * u_speed;\n  float arm = 0.5 + 0.5 * sin(angle * u_arms + t * 4.0);\n  arm = pow(arm, 3.0);\n\n  // Halo \u2014 softer, wider than the ring core.\n  float halo = exp(-pow(ringDist / (u_thickness * 4.0), 2.0)) * 0.5;\n\n  return ring * (0.35 + 0.65 * arm) + halo * 0.4;\n}\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5);\n\n  // Chromatic split: R/G/B sampled with horizontal offsets.\n  float r = ringField(p, -u_chroma);\n  float g = ringField(p,  0.0);\n  float b = ringField(p,  u_chroma);\n\n  vec3 hot  = paletteAt(0.0);\n  vec3 mid  = paletteAt(0.4);\n  vec3 cold = paletteAt(0.8);\n\n  vec3 col =\n      r * mix(vec3(1.0, 0.55, 0.45), hot,  0.45) +\n      g * mix(vec3(0.55, 1.0, 0.7),  mid,  0.45) +\n      b * mix(vec3(0.45, 0.7, 1.0),  cold, 0.5);\n  col *= u_glow;\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "caustics",
+  "name": "Caustics",
+  "uniforms": [
+   {
+    "name": "u_zoom",
+    "label": "Zoom",
+    "min": 0.5,
+    "max": 6.0,
+    "step": 0.05,
+    "default": 2.5,
+    "group": "shape"
+   },
+   {
+    "name": "u_complexity",
+    "label": "Complexity",
+    "min": 1.0,
+    "max": 6.0,
+    "step": 0.05,
+    "default": 3.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_brightness2",
+    "label": "Light",
+    "min": 0.4,
+    "max": 2.5,
+    "step": 0.02,
+    "default": 1.4,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Speed",
+    "min": 0.0,
+    "max": 1.5,
+    "step": 0.005,
+    "default": 0.35,
+    "group": "motion"
+   },
+   {
+    "name": "u_chaos",
+    "label": "Chaos",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.4,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_zoom;\nuniform float u_complexity;\nuniform float u_brightness2;\nuniform float u_speed;\nuniform float u_chaos;\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5) * u_zoom;\n\n  float t = u_time * u_speed;\n\n  // Domain warp the input lightly with simplex noise \u2014 gives the\n  // \"drifting refraction\" rather than a static caustics grid.\n  vec2 warp = vec2(\n    snoise(p + vec2(t, 0.0)),\n    snoise(p + vec2(0.0, t * 1.1) + 5.2)\n  ) * u_chaos;\n  p += warp;\n\n  // Sum cross-bands of sine waves rotating at different angles.\n  float c = 0.0;\n  float a = 0.0;\n  for (int i = 0; i < 5; i++) {\n    if (float(i) > u_complexity) break;\n    float fi = float(i) + 1.0;\n    vec2 dir = vec2(cos(fi * 1.7), sin(fi * 1.3));\n    float v = sin(dot(p, dir) * (3.0 + fi) + t * (1.0 + fi * 0.2));\n    // Sharpen each band into bright lines: 1.0 - |v| then power.\n    c += pow(1.0 - abs(v), 8.0);\n    a += 1.0;\n  }\n  c /= a;\n  c *= u_brightness2;\n\n  // Background base from palette index (radial-ish), with caustics\n  // additively brightening on top \u2014 picks the brightest palette entry.\n  float r = clamp(length(p) * 0.18, 0.0, 1.0);\n  vec3 base = paletteAt(0.5 + r * 0.5);\n  vec3 light = paletteAt(0.0);\n  vec3 col = base + light * c;\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "marble",
+  "name": "Marble",
+  "uniforms": [
+   {
+    "name": "u_zoom",
+    "label": "Zoom",
+    "min": 0.5,
+    "max": 4.0,
+    "step": 0.05,
+    "default": 1.6,
+    "group": "shape"
+   },
+   {
+    "name": "u_turbulence",
+    "label": "Turbulence",
+    "min": 0.3,
+    "max": 4.0,
+    "step": 0.02,
+    "default": 1.8,
+    "group": "shape"
+   },
+   {
+    "name": "u_veining",
+    "label": "Veining",
+    "min": 0.5,
+    "max": 4.0,
+    "step": 0.02,
+    "default": 2.2,
+    "group": "shape"
+   },
+   {
+    "name": "u_sharpness",
+    "label": "Sharpness",
+    "min": 1.0,
+    "max": 30.0,
+    "step": 0.5,
+    "default": 8.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Speed",
+    "min": 0.0,
+    "max": 0.5,
+    "step": 0.002,
+    "default": 0.05,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_zoom;\nuniform float u_turbulence;\nuniform float u_veining;\nuniform float u_sharpness;\nuniform float u_speed;\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5) * u_zoom;\n\n  float t = u_time * u_speed;\n\n  // Domain-warp using FBM, then run a sine through it.\n  // Gives stretched, twisted veining unlike isotropic FBM clouds.\n  vec2 warp = vec2(\n    fbm(p + vec2(t * 0.6, 0.0), 5, 2.0, 0.5),\n    fbm(p + vec2(0.0, t * 0.5) + 5.2, 5, 2.0, 0.5)\n  ) * u_turbulence;\n\n  float v = sin(p.y * u_veining + warp.x * 4.0 + t);\n\n  // Bias: 1 - |v| then power to sharpen into thin bright veins.\n  float vein = pow(1.0 - abs(v), u_sharpness);\n\n  // Smooth body color across the palette.\n  float bodyT = clamp(0.5 + warp.x * 0.3, 0.0, 1.0);\n  vec3 body = paletteAt(bodyT);\n\n  // Vein color from the brightest palette entry.\n  vec3 vColor = paletteAt(0.0);\n\n  vec3 col = mix(body, vColor, vein);\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "waves",
+  "name": "Waves",
+  "uniforms": [
+   {
+    "name": "u_zoom",
+    "label": "Zoom",
+    "min": 0.4,
+    "max": 4.0,
+    "step": 0.05,
+    "default": 1.6,
+    "group": "shape"
+   },
+   {
+    "name": "u_frequency",
+    "label": "Frequency",
+    "min": 2.0,
+    "max": 40.0,
+    "step": 0.5,
+    "default": 14.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_decay",
+    "label": "Decay",
+    "min": 0.0,
+    "max": 3.0,
+    "step": 0.02,
+    "default": 1.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_count",
+    "label": "Sources",
+    "min": 1.0,
+    "max": 4.0,
+    "step": 1.0,
+    "default": 3.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Speed",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 0.01,
+    "default": 0.7,
+    "group": "motion"
+   },
+   {
+    "name": "u_drift",
+    "label": "Source drift",
+    "min": 0.0,
+    "max": 0.5,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_zoom;\nuniform float u_frequency;\nuniform float u_decay;\nuniform float u_count;   // 1..4\nuniform float u_speed;\nuniform float u_drift;\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5) * u_zoom;\n\n  float t = u_time * u_speed;\n  int count = int(u_count);\n\n  // Sum ripples from N drifting source points.\n  float wave = 0.0;\n  float totalWeight = 0.0;\n  for (int i = 0; i < 4; i++) {\n    if (i >= count) break;\n    float fi = float(i);\n    vec2 src = vec2(\n      sin(t * 0.3 + fi * 1.3) * aspect * u_drift,\n      cos(t * 0.4 + fi * 1.7) * u_drift\n    );\n    float r = distance(p, src);\n    float w = exp(-r * u_decay);\n    wave += sin(r * u_frequency - t * 2.0 - fi * 1.7) * w;\n    totalWeight += w;\n  }\n  wave /= max(totalWeight, 0.001);\n\n  float k = 0.5 + 0.5 * wave;\n  vec3 col = paletteAt(k);\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "ribbon",
+  "name": "Ribbon",
+  "uniforms": [
+   {
+    "name": "u_thickness",
+    "label": "Thickness",
+    "min": 0.02,
+    "max": 0.4,
+    "step": 0.005,
+    "default": 0.12,
+    "group": "shape"
+   },
+   {
+    "name": "u_amplitude",
+    "label": "Amplitude",
+    "min": 0.0,
+    "max": 0.5,
+    "step": 0.005,
+    "default": 0.22,
+    "group": "shape"
+   },
+   {
+    "name": "u_frequency",
+    "label": "Frequency",
+    "min": 0.5,
+    "max": 5.0,
+    "step": 0.05,
+    "default": 1.4,
+    "group": "shape"
+   },
+   {
+    "name": "u_complexity",
+    "label": "Complexity",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.5,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Speed",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 0.01,
+    "default": 0.45,
+    "group": "motion"
+   },
+   {
+    "name": "u_glow",
+    "label": "Glow",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.55,
+    "group": "extra"
+   }
+  ],
+  "fragment": "\nuniform float u_thickness;\nuniform float u_amplitude;\nuniform float u_frequency;\nuniform float u_complexity;\nuniform float u_speed;\nuniform float u_glow;\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5);\n\n  float t = u_time * u_speed;\n\n  // Multi-frequency sine ribbon centerline.\n  float curve =\n      u_amplitude * sin(p.x * u_frequency + t)\n    + u_amplitude * 0.5 * u_complexity * sin(p.x * u_frequency * 2.3 + t * 1.4 + 1.7)\n    + u_amplitude * 0.25 * u_complexity * sin(p.x * u_frequency * 4.7 + t * 2.1 + 3.3);\n\n  float d = abs(p.y - curve);\n\n  // Soft Gaussian-ish glow falloff.\n  float core = exp(-pow(d / u_thickness, 2.0));\n  // Wider outer halo.\n  float halo = exp(-pow(d / (u_thickness * 3.0), 2.0)) * 0.4;\n  float intensity = (core + halo) * u_glow;\n\n  // Color along ribbon length \u2014 palette swept by horizontal position+time.\n  float colT = clamp(0.5 + 0.5 * sin(p.x * 0.7 + t * 0.5), 0.0, 1.0);\n  vec3 ribbonCol = paletteAt(colT);\n\n  // Background \u2014 darkest palette entry, very dim.\n  vec3 bg = paletteAt(1.0) * 0.12;\n\n  vec3 col = bg + ribbonCol * intensity;\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "voronoi",
+  "name": "Voronoi",
+  "uniforms": [
+   {
+    "name": "u_zoom",
+    "label": "Cell density",
+    "min": 1.5,
+    "max": 12.0,
+    "step": 0.05,
+    "default": 5.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_softness",
+    "label": "Border soft",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.55,
+    "group": "shape"
+   },
+   {
+    "name": "u_jitter",
+    "label": "Jitter",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.85,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Drift",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_zoom;\nuniform float u_softness;\nuniform float u_jitter;\nuniform float u_speed;\n\nvec2 hash22(vec2 p) {\n  p = vec2(dot(p, vec2(127.1, 311.7)), dot(p, vec2(269.5, 183.3)));\n  return fract(sin(p) * 43758.5453);\n}\nfloat hash21(vec2 p) {\n  return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);\n}\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5) * u_zoom;\n\n  float t = u_time * u_speed;\n\n  vec2 cellId = floor(p);\n  vec2 frac = fract(p);\n\n  float minD = 8.0;\n  float secondD = 8.0;\n  vec2 closestCell = cellId;\n  for (int yi = -1; yi <= 1; yi++) {\n    for (int xi = -1; xi <= 1; xi++) {\n      vec2 nb = vec2(float(xi), float(yi));\n      vec2 hashed = hash22(cellId + nb);\n      // Animate seed positions for a slow boil.\n      vec2 seed = nb + 0.5 + u_jitter * (sin(t + hashed * 6.2831 * vec2(1.0, 1.7)) * 0.5);\n      float d = length(seed - frac);\n      if (d < minD) {\n        secondD = minD;\n        minD = d;\n        closestCell = cellId + nb;\n      } else if (d < secondD) {\n        secondD = d;\n      }\n    }\n  }\n\n  // Cell color via hash of lattice coord \u2014 assigns a palette index per cell.\n  float cellT = hash21(closestCell);\n  vec3 cellCol = paletteAt(cellT);\n\n  // Border darkening: where minD \u2248 secondD, we're near a Voronoi edge.\n  // u_softness controls how much border darkening is visible.\n  float edge = smoothstep(0.0, 0.2, secondD - minD);\n  float borderMix = mix(0.7, 1.0, edge);\n\n  vec3 col = cellCol * mix(borderMix, 1.0, u_softness);\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "strands",
+  "name": "Strands",
+  "uniforms": [
+   {
+    "name": "u_thickness",
+    "label": "Thickness",
+    "min": 0.005,
+    "max": 0.08,
+    "step": 0.001,
+    "default": 0.018,
+    "group": "shape"
+   },
+   {
+    "name": "u_amplitude",
+    "label": "Amplitude",
+    "min": 0.0,
+    "max": 0.5,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "shape"
+   },
+   {
+    "name": "u_frequency",
+    "label": "Frequency",
+    "min": 0.4,
+    "max": 5.0,
+    "step": 0.05,
+    "default": 1.6,
+    "group": "shape"
+   },
+   {
+    "name": "u_glow",
+    "label": "Glow",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.6,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Speed",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 0.01,
+    "default": 0.4,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_thickness;\nuniform float u_amplitude;\nuniform float u_frequency;\nuniform float u_glow;\nuniform float u_speed;\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5);\n\n  float t = u_time * u_speed;\n\n  // Background \u2014 almost-black, tinted by the darkest palette entry.\n  vec3 bg = paletteAt(1.0) * 0.08;\n  vec3 col = bg;\n\n  // Each active color = one strand. Distribute strand baseline Y values\n  // evenly across the vertical extent.\n  float n = float(max(u_blobCount, 1));\n  for (int i = 0; i < 8; i++) {\n    if (i >= u_blobCount) break;\n    float fi = float(i);\n    float baseY = (fi / max(n - 1.0, 1.0) - 0.5) * 0.85;\n    // Per-strand wave with unique phase so they don't move in lockstep.\n    float curveY = baseY\n      + u_amplitude * sin(p.x * u_frequency + t * (1.0 + fi * 0.07) + fi * 1.7)\n      + u_amplitude * 0.4 * sin(p.x * u_frequency * 2.3 + t * 0.7 + fi * 2.3);\n    float d = abs(p.y - curveY);\n    // Thin core + wider halo for that silk-glow look.\n    float core = exp(-pow(d / u_thickness, 2.0));\n    float halo = exp(-pow(d / (u_thickness * 4.0), 2.0)) * 0.35;\n    float intensity = (core + halo) * u_glow;\n    col += u_colors[i] * intensity;\n  }\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "tunnel",
+  "name": "Tunnel",
+  "uniforms": [
+   {
+    "name": "u_density",
+    "label": "Ring density",
+    "min": 2.0,
+    "max": 16.0,
+    "step": 0.1,
+    "default": 6.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_spokes",
+    "label": "Spokes",
+    "min": 0.0,
+    "max": 64.0,
+    "step": 1.0,
+    "default": 16.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_centerGlow",
+    "label": "Center glow",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 0.02,
+    "default": 0.85,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Speed",
+    "min": 0.0,
+    "max": 3.0,
+    "step": 0.01,
+    "default": 1.0,
+    "group": "motion"
+   },
+   {
+    "name": "u_swirl",
+    "label": "Swirl",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 0.01,
+    "default": 0.4,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_density;\nuniform float u_spokes;\nuniform float u_centerGlow;\nuniform float u_speed;\nuniform float u_swirl;\n\n#define PI 3.14159265359\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5);\n\n  float t = u_time * u_speed;\n  float r = max(length(p), 0.001);\n  float a = atan(p.y, p.x);\n\n  // Logarithmic radius so rings get tighter toward center \u2014 gives the\n  // illusion of infinite depth (each step inward is a smaller fraction\n  // of total radius).\n  float lr = log(r);\n\n  // Rings scroll outward (- t) so the user perceives forward motion.\n  float rings = 0.5 + 0.5 * sin(lr * u_density - t * 2.5);\n  rings = pow(rings, 2.5);\n\n  // Angular swirl \u2014 angle warped by radius creates a slight twist.\n  float angleWarped = a + u_swirl * sin(lr + t * 0.5);\n  // Spokes \u2014 alternating bright/dim arcs around the tube. u_spokes < 1\n  // disables the effect (everything multiplied by 1).\n  float spokeBand = u_spokes > 0.5 ? 0.5 + 0.5 * sin(angleWarped * u_spokes + t) : 1.0;\n\n  // Body color along radius \u2014 palette indexed by tunnel depth.\n  vec3 body = paletteAt(clamp(r * 1.1, 0.0, 1.0));\n\n  // Center glow \u2014 bright vignette pulling the eye into the tunnel mouth.\n  float core = exp(-r * 4.0) * u_centerGlow;\n  vec3 centerCol = paletteAt(0.0);\n\n  vec3 col = body * (0.25 + 0.85 * rings) * mix(0.55, 1.0, spokeBand) + centerCol * core;\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "iridescent",
+  "name": "Iridescent",
+  "uniforms": [
+   {
+    "name": "u_zoom",
+    "label": "Scale",
+    "min": 0.4,
+    "max": 4.0,
+    "step": 0.05,
+    "default": 1.2,
+    "group": "shape"
+   },
+   {
+    "name": "u_swirl",
+    "label": "Swirl",
+    "min": 0.0,
+    "max": 0.4,
+    "step": 0.005,
+    "default": 0.14,
+    "group": "shape"
+   },
+   {
+    "name": "u_filmDensity",
+    "label": "Film density",
+    "min": 1.0,
+    "max": 12.0,
+    "step": 0.05,
+    "default": 4.5,
+    "group": "shape"
+   },
+   {
+    "name": "u_shimmer",
+    "label": "Shimmer",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.55,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Speed",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_zoom;\nuniform float u_swirl;\nuniform float u_filmDensity;\nuniform float u_shimmer;\nuniform float u_speed;\n\nvoid main() {\n  vec2 uv = v_uv;\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5) * u_zoom;\n\n  float t = u_time * u_speed;\n\n  // Slow domain warp \u2014 gives the liquid film surface its drifting curvature.\n  vec2 q = vec2(\n    snoise(p + vec2(t, 0.0)),\n    snoise(p + vec2(0.0, t * 0.7) + 5.2)\n  );\n  vec2 warped = p + q * u_swirl;\n\n  // Slow base palette traversal \u2014 sets the dominant hue at each position.\n  float baseT = 0.5 + 0.5 * snoise(warped * 0.9);\n\n  // Thin-film interference \u2014 a much higher-frequency sine modulated by\n  // local FBM \"thickness\". Different surface \"thickness\" \u2192 different\n  // interference offset \u2192 palette traversal rolls fast in shimmery bands.\n  float thickness = fbm(warped * 1.4, 4, 2.0, 0.5);\n  float interference = sin(thickness * u_filmDensity * 6.2831 + t * 1.5);\n  float palT = fract(baseT + interference * u_shimmer * 0.32);\n\n  vec3 col = paletteAt(palT);\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "lava",
+  "name": "Lava",
+  "uniforms": [
+   {
+    "name": "u_zoom",
+    "label": "Zoom",
+    "min": 0.5,
+    "max": 4.0,
+    "step": 0.05,
+    "default": 1.6,
+    "group": "shape"
+   },
+   {
+    "name": "u_glow",
+    "label": "Glow",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 0.02,
+    "default": 1.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_crust",
+    "label": "Crust",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.5,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Flow",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_zoom;\nuniform float u_glow;\nuniform float u_crust;\nuniform float u_speed;\n\nvoid main() {\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((v_uv.x - 0.5) * aspect, v_uv.y - 0.5) * u_zoom;\n  float t = u_time * u_speed;\n\n  // Rising, slowly-churning heat field.\n  vec2 q = p + vec2(fbm(p * 0.8 - vec2(0.0, t), 4, 2.0, 0.5) * 0.6, -t);\n  float heat = fbm(q * 1.6, 6, 2.0, 0.55) * 0.5 + 0.5;\n\n  // Crust: darker where heat is low; threshold controlled by u_crust.\n  float core = smoothstep(0.35 + u_crust * 0.25, 0.85, heat);\n\n  vec3 crustCol = paletteAt(0.92);   // darkest palette entry = cooled rock\n  vec3 hotCol   = paletteAt(0.0);    // brightest = molten core\n  vec3 midCol   = paletteAt(0.35);\n\n  vec3 col = mix(crustCol, midCol, smoothstep(0.15, 0.6, heat));\n  col = mix(col, hotCol, core);\n  // Bright veins where the field peaks.\n  col += hotCol * pow(core, 3.0) * u_glow;\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "kaleidoscope",
+  "name": "Kaleidoscope",
+  "uniforms": [
+   {
+    "name": "u_segments",
+    "label": "Facets",
+    "min": 3.0,
+    "max": 16.0,
+    "step": 1.0,
+    "default": 8.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_zoom",
+    "label": "Zoom",
+    "min": 0.5,
+    "max": 4.0,
+    "step": 0.05,
+    "default": 1.6,
+    "group": "shape"
+   },
+   {
+    "name": "u_detail",
+    "label": "Detail",
+    "min": 1.0,
+    "max": 5.0,
+    "step": 0.05,
+    "default": 2.2,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Spin",
+    "min": 0.0,
+    "max": 1.5,
+    "step": 0.005,
+    "default": 0.3,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_segments;\nuniform float u_zoom;\nuniform float u_detail;\nuniform float u_speed;\n\nvoid main() {\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((v_uv.x - 0.5) * aspect, v_uv.y - 0.5) * u_zoom;\n  float t = u_time * u_speed;\n\n  float rad = length(p);\n  float ang = atan(p.y, p.x) + t * 0.3;\n\n  // Fold the angle into a single wedge, mirrored \u2014 the kaleidoscope core.\n  float seg = 6.2831853 / u_segments;\n  ang = mod(ang, seg);\n  ang = abs(ang - seg * 0.5);\n\n  vec2 q = vec2(cos(ang), sin(ang)) * rad;\n\n  // Drifting layered noise inside the folded wedge.\n  float n = fbm(q * u_detail + vec2(t * 0.4, -t * 0.3), 5, 2.0, 0.5);\n  n = fbm(q * u_detail * 1.7 + n + t * 0.2, 4, 2.0, 0.5);\n\n  vec3 col = paletteAt(fract(n * 1.4 + rad * 0.4 + t * 0.05));\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "embers",
+  "name": "Embers",
+  "uniforms": [
+   {
+    "name": "u_count",
+    "label": "Particles",
+    "min": 8.0,
+    "max": 140.0,
+    "step": 1.0,
+    "default": 55.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_sizeMin",
+    "label": "Min size",
+    "min": 0.002,
+    "max": 0.03,
+    "step": 0.001,
+    "default": 0.004,
+    "group": "shape"
+   },
+   {
+    "name": "u_sizeMax",
+    "label": "Max size",
+    "min": 0.004,
+    "max": 0.06,
+    "step": 0.001,
+    "default": 0.018,
+    "group": "shape"
+   },
+   {
+    "name": "u_trail",
+    "label": "Trail",
+    "min": 0.0,
+    "max": 0.35,
+    "step": 0.005,
+    "default": 0.07,
+    "group": "shape"
+   },
+   {
+    "name": "u_spread",
+    "label": "Spread",
+    "min": 0.2,
+    "max": 1.4,
+    "step": 0.02,
+    "default": 0.9,
+    "group": "shape"
+   },
+   {
+    "name": "u_glowShape",
+    "label": "Glow shape",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 1.0,
+    "default": 0.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_bed",
+    "label": "Glow reach",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 0.01,
+    "default": 0.9,
+    "group": "shape"
+   },
+   {
+    "name": "u_angle",
+    "label": "Direction",
+    "min": -80.0,
+    "max": 80.0,
+    "step": 1.0,
+    "default": 0.0,
+    "group": "motion"
+   },
+   {
+    "name": "u_rise",
+    "label": "Reach",
+    "min": 0.3,
+    "max": 1.6,
+    "step": 0.02,
+    "default": 1.0,
+    "group": "motion"
+   },
+   {
+    "name": "u_glow",
+    "label": "Glow",
+    "min": 0.2,
+    "max": 3.0,
+    "step": 0.02,
+    "default": 1.2,
+    "group": "motion"
+   },
+   {
+    "name": "u_bedFlicker",
+    "label": "Glow flicker",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.25,
+    "group": "motion"
+   },
+   {
+    "name": "u_speed",
+    "label": "Spark flicker",
+    "min": 0.0,
+    "max": 3.0,
+    "step": 0.02,
+    "default": 1.2,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_count;\nuniform float u_sizeMin;\nuniform float u_sizeMax;\nuniform float u_trail;\nuniform float u_spread;\nuniform float u_glowShape;\nuniform float u_bed;\nuniform float u_angle;\nuniform float u_rise;\nuniform float u_glow;\nuniform float u_bedFlicker;\nuniform float u_speed;\n\nfloat hash11(float n) { return fract(sin(n * 78.233) * 43758.5453); }\n\nvoid main() {\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((v_uv.x - 0.5) * aspect, v_uv.y);   // y: 0 bottom .. 1 top\n  float t = u_time;\n\n  // Direction of travel (0\\xb0 = straight up). dir.y stays positive so sparks\n  // always leave the bed; angle tilts the stream left/right.\n  float a = radians(u_angle);\n  vec2 dir = normalize(vec2(sin(a), cos(a)));\n  vec2 perp = vec2(dir.y, -dir.x);\n\n  // Bottom-anchored bed glow with a selectable shape (u_glowShape):\n  //   0 = band  \u2014 full width, fades bottom\u2192top (reach 2 fills to the top)\n  //   1 = cone  \u2014 bright at the bottom-centre, narrowing to a peak going up\n  //   2 = dome  \u2014 radial glow from the bottom-centre (a rising circle)\n  // u_bed is the reach (how high/far it climbs); u_bedFlicker its pulse.\n  vec3 col = paletteAt(0.95) * 0.22;\n  float gx = p.x;              // centred x (-aspect/2 .. aspect/2)\n  float gy = v_uv.y;          // 0 bottom .. 1 top\n  float reach = max(u_bed, 0.001);\n  float glowMask;\n  if (u_glowShape < 0.5) {\n    glowMask = smoothstep(reach, 0.0, gy);\n  } else if (u_glowShape < 1.5) {\n    float halfW = mix(0.7, 0.02, clamp(gy / reach, 0.0, 1.0));\n    float horiz = smoothstep(halfW, halfW * 0.25, abs(gx));\n    glowMask = smoothstep(reach, 0.0, gy) * horiz;\n  } else {\n    glowMask = smoothstep(reach, 0.0, length(vec2(gx, gy)));\n  }\n  float bedFlick = 1.0 - u_bedFlicker * 0.5 *\n    (0.5 + 0.5 * sin(t * 1.6 + fbm(vec2(v_uv.x * 4.0, t * 0.5), 2, 2.0, 0.5) * 3.0));\n  col += paletteAt(0.15) * glowMask * bedFlick * u_glow;\n\n  for (int i = 0; i < 140; i++) {\n    if (float(i) >= u_count) break;\n    float fi = float(i) + 1.0;\n    float s1 = hash11(fi);\n    float s2 = hash11(fi + 11.0);\n    float s3 = hash11(fi + 23.0);\n\n    // Life cycles 0->1; each particle has its own launch phase and speed.\n    float life = fract(t * u_rise * (0.18 + 0.30 * s1) + s1);\n    float travel = life * 1.35;                       // how far up the reach goes\n    float startX = (s2 - 0.5) * u_spread * aspect;\n    // Position = launch point + travel along dir + a little wander.\n    vec2 pos = vec2(startX, 0.0) + dir * travel;\n    pos += perp * 0.05 * sin(t * (1.0 + s3) + fi);\n\n    // Elongate the spark into a trail behind its direction of travel.\n    vec2 d = p - pos;\n    float along = dot(d, dir);       // >0 ahead, <0 behind (the trail)\n    float side  = dot(d, perp);\n    float size  = mix(u_sizeMin, u_sizeMax, s3);\n    float back  = max(u_trail * (0.4 + 0.6 * s1), size);\n    float len   = along < 0.0 ? back : size;\n    float dist  = length(vec2(side / size, along / len));\n\n    float spark = smoothstep(1.0, 0.0, dist);\n    float flick = 0.55 + 0.45 * sin(t * u_speed * 6.0 + fi * 3.1);\n    // Fade in just off the bed, fade out as it reaches the top.\n    float fade  = smoothstep(0.0, 0.06, life) * smoothstep(1.0, 0.45, life);\n    // Cooler colour as the ember ages/rises.\n    vec3 spCol  = paletteAt(mix(0.05, 0.42, s1 * 0.5 + life * 0.5));\n    col += spCol * spark * flick * fade * u_glow * 1.7;\n  }\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "holographic",
+  "name": "Holographic",
+  "uniforms": [
+   {
+    "name": "u_sheen",
+    "label": "Sheen",
+    "min": 1.0,
+    "max": 12.0,
+    "step": 0.1,
+    "default": 5.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_crinkle",
+    "label": "Crinkle",
+    "min": 0.0,
+    "max": 3.0,
+    "step": 0.02,
+    "default": 1.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_angle",
+    "label": "Angle",
+    "min": 0.0,
+    "max": 180.0,
+    "step": 1.0,
+    "default": 35.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Shift",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 0.01,
+    "default": 0.5,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_sheen;\nuniform float u_crinkle;\nuniform float u_angle;\nuniform float u_speed;\n\nvoid main() {\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((v_uv.x - 0.5) * aspect, v_uv.y - 0.5);\n  float t = u_time * u_speed;\n\n  // Diagonal axis the sheen sweeps along.\n  float a = radians(u_angle);\n  vec2 dir = vec2(cos(a), sin(a));\n  float axis = dot(p, dir);\n\n  // Foil crinkle: warped fbm perturbs the axis so the bands ripple.\n  float crink = fbm(p * 3.5 + t * 0.3, 4, 2.0, 0.5) * u_crinkle * 0.35;\n  float band = axis * u_sheen + crink + t;\n\n  // Rainbow sheen cycled through the palette, with a bright specular streak.\n  float hue = fract(band);\n  vec3 col = paletteAt(hue);\n  float spec = pow(0.5 + 0.5 * sin(band * 6.2831853), 6.0);\n  col += vec3(spec) * 0.5;\n\n  // Subtle darkening toward the edges for a metallic falloff.\n  col *= 1.0 - 0.25 * length(p);\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "nebula",
+  "name": "Nebula",
+  "uniforms": [
+   {
+    "name": "u_zoom",
+    "label": "Scale",
+    "min": 0.5,
+    "max": 4.0,
+    "step": 0.05,
+    "default": 1.6,
+    "group": "shape"
+   },
+   {
+    "name": "u_warp",
+    "label": "Billow",
+    "min": 0.0,
+    "max": 3.0,
+    "step": 0.02,
+    "default": 1.4,
+    "group": "shape"
+   },
+   {
+    "name": "u_gasContrast",
+    "label": "Contrast",
+    "min": 0.5,
+    "max": 3.0,
+    "step": 0.05,
+    "default": 1.6,
+    "group": "shape"
+   },
+   {
+    "name": "u_stars",
+    "label": "Stars",
+    "min": 0.0,
+    "max": 2.0,
+    "step": 0.02,
+    "default": 1.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Drift",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.005,
+    "default": 0.12,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_zoom;\nuniform float u_warp;\nuniform float u_gasContrast;\nuniform float u_stars;\nuniform float u_speed;\n\nfloat hash21(vec2 p) { return fract(sin(dot(p, vec2(41.3, 289.1))) * 43758.5453); }\n\n// Ridged fbm \u2014 folds the noise so bright filaments form along zero-crossings.\nfloat ridged(vec2 p) {\n  float v = 0.0, amp = 0.5;\n  for (int i = 0; i < 6; i++) {\n    float n = 1.0 - abs(snoise(p));\n    v += amp * n * n;\n    p *= 2.0; amp *= 0.5;\n  }\n  return v;\n}\n\n// Layer of stars on a grid; density/threshold set rarity, returns brightness.\nfloat starLayer(vec2 p, float cells, float thresh, float twinkle, float t) {\n  vec2 g = floor(p * cells);\n  float h = hash21(g);\n  if (h < thresh) return 0.0;\n  vec2 c = fract(p * cells) - 0.5;\n  float d = length(c);\n  float core = smoothstep(0.16, 0.0, d);\n  float tw = 0.6 + 0.4 * sin(t * 3.0 + h * 40.0) * twinkle;\n  return core * tw * (0.4 + 0.6 * hash21(g + 3.1));\n}\n\nvoid main() {\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((v_uv.x - 0.5) * aspect, v_uv.y - 0.5) * u_zoom;\n  float t = u_time * u_speed;\n\n  // Domain-warp so the gas billows, then carve filaments with ridged noise.\n  vec2 q = vec2(fbm(p + t * 0.2, 4, 2.0, 0.5), fbm(p + vec2(5.2, 1.3) - t * 0.15, 4, 2.0, 0.5));\n  float gas = ridged(p * 1.1 + u_warp * q);\n  gas = pow(clamp(gas - 0.2, 0.0, 1.0), u_gasContrast);\n\n  // Dark void base \u2192 gas colour by density, hot cores on the brightest ridges.\n  vec3 col = paletteAt(0.97) * 0.08;\n  col = mix(col, paletteAt(fract(0.15 + gas * 0.7)), smoothstep(0.02, 0.6, gas));\n  col += paletteAt(0.08) * pow(gas, 3.0) * 0.7;\n\n  // Two parallax star layers, drifting at different speeds.\n  vec2 sp = p + vec2(t * 0.3, 0.0);\n  col += vec3(1.0) * starLayer(sp, 26.0, 0.90, 1.0, u_time) * 0.7 * u_stars;         // fine dust\n  vec3 brightStar = vec3(1.0);\n  float bs = starLayer(p * 0.6 + vec2(t * 0.5, 0.0), 9.0, 0.972, 1.0, u_time);\n  // Cross-flare on the bright foreground stars.\n  vec2 fp = fract((p * 0.6 + vec2(t * 0.5, 0.0)) * 9.0) - 0.5;\n  float flare = (smoothstep(0.5, 0.0, abs(fp.x)) + smoothstep(0.5, 0.0, abs(fp.y))) * bs;\n  col += brightStar * (bs + flare * 0.4) * u_stars;\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "raindrops",
+  "name": "Raindrops",
+  "uniforms": [
+   {
+    "name": "u_count",
+    "label": "Drops",
+    "min": 2.0,
+    "max": 16.0,
+    "step": 1.0,
+    "default": 7.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_freq",
+    "label": "Ripple",
+    "min": 8.0,
+    "max": 60.0,
+    "step": 0.5,
+    "default": 26.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_depth",
+    "label": "Depth",
+    "min": 0.05,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.4,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Rate",
+    "min": 0.1,
+    "max": 3.0,
+    "step": 0.02,
+    "default": 1.0,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_count;\nuniform float u_freq;\nuniform float u_depth;\nuniform float u_speed;\n\nfloat hash11(float n) { return fract(sin(n * 78.233) * 43758.5453); }\nvec2  hash21(float n) { return vec2(hash11(n), hash11(n + 7.1)); }\n\nvoid main() {\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((v_uv.x - 0.5) * aspect, v_uv.y - 0.5);\n  float t = u_time * u_speed;\n\n  // Accumulate a height field from every active droplet's expanding ring.\n  float h = 0.0;\n  for (int i = 0; i < 16; i++) {\n    if (float(i) >= u_count) break;\n    float fi = float(i) + 1.0;\n    // Each drop re-lands at a fresh spot every cycle.\n    float cycle = floor(t * (0.3 + 0.2 * hash11(fi)) + fi);\n    vec2 c = (hash21(fi + cycle * 3.7) - 0.5) * vec2(aspect, 1.0) * 1.6;\n    float age = fract(t * (0.3 + 0.2 * hash11(fi)) + fi);\n\n    float d = length(p - c);\n    float front = age * 1.2;                       // ring radius grows with age\n    // Ring: a decaying sine wave trailing behind the wavefront.\n    float wave = sin((front - d) * u_freq) * exp(-6.0 * abs(front - d));\n    float fade = (1.0 - age) * smoothstep(0.0, 0.05, age);\n    h += wave * fade;\n  }\n\n  h *= u_depth;\n\n  // Shade the water surface by wave height; crests catch the light.\n  float shade = 0.5 + h;\n  vec3 col = paletteAt(clamp(shade, 0.0, 1.0));\n  col += vec3(1.0) * pow(clamp(h * 2.0, 0.0, 1.0), 2.0) * 0.3;  // glints on crests\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "aura",
+  "name": "Aura",
+  "uniforms": [
+   {
+    "name": "u_freq",
+    "label": "Waves",
+    "min": 0.5,
+    "max": 8.0,
+    "step": 0.05,
+    "default": 2.6,
+    "group": "shape"
+   },
+   {
+    "name": "u_strength",
+    "label": "Flow",
+    "min": 0.0,
+    "max": 2.5,
+    "step": 0.02,
+    "default": 1.1,
+    "group": "shape"
+   },
+   {
+    "name": "u_sheen",
+    "label": "Sheen",
+    "min": 0.0,
+    "max": 1.5,
+    "step": 0.02,
+    "default": 0.5,
+    "group": "shape"
+   },
+   {
+    "name": "u_angle",
+    "label": "Angle",
+    "min": 0.0,
+    "max": 180.0,
+    "step": 1.0,
+    "default": 45.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Drift",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_freq;\nuniform float u_strength;\nuniform float u_sheen;\nuniform float u_angle;\nuniform float u_speed;\n\nvoid main() {\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((v_uv.x - 0.5) * aspect, v_uv.y - 0.5);\n  float t = u_time * u_speed;\n\n  // Gradient axis (rotatable).\n  float a = radians(u_angle);\n  vec2 dir = vec2(cos(a), sin(a));\n  float axis = dot(p, dir);\n\n  // Gentle multi-wave warp \u2014 the soft \"water plane\" undulation.\n  float wave =\n      0.55 * sin(axis * u_freq + t) +\n      0.30 * sin(dot(p, vec2(-dir.y, dir.x)) * u_freq * 0.8 - t * 0.8) +\n      0.20 * fbm(p * 1.6 + t * 0.2, 3, 2.0, 0.5);\n  wave *= u_strength * 0.35;\n\n  // Smooth, single (non-repeating) colour sweep \u2014 soft and luminous.\n  float g = clamp(0.5 + axis * 0.9 + wave, 0.0, 1.0);\n  vec3 col = paletteAt(g);\n\n  // Broad satin sheen riding the crests (soft, not a hard line).\n  float crest = 0.5 + 0.5 * sin((axis + wave) * 6.2831853 * 1.5 + t * 0.5);\n  col += vec3(smoothstep(0.55, 1.0, crest)) * 0.14 * u_sheen;\n  // Airy lift so it never crushes to black.\n  col = mix(col, paletteAt(0.15), 0.06);\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "bloom",
+  "name": "Bloom",
+  "uniforms": [
+   {
+    "name": "u_spread",
+    "label": "Spread",
+    "min": 0.4,
+    "max": 2.0,
+    "step": 0.02,
+    "default": 1.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_offX",
+    "label": "Center X",
+    "min": -0.6,
+    "max": 0.6,
+    "step": 0.02,
+    "default": 0.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_offY",
+    "label": "Center Y",
+    "min": -0.6,
+    "max": 0.6,
+    "step": 0.02,
+    "default": 0.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_warp",
+    "label": "Warp",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.25,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Drift",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.005,
+    "default": 0.16,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_spread;\nuniform float u_offX;\nuniform float u_offY;\nuniform float u_warp;\nuniform float u_speed;\n\nvoid main() {\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((v_uv.x - 0.5) * aspect, v_uv.y - 0.5);\n  float t = u_time * u_speed;\n\n  vec2 c = vec2(u_offX, u_offY) + 0.06 * vec2(sin(t * 0.8), cos(t * 0.6));\n  float d = length(p - c);\n\n  // Soft warp so the bloom isn't a perfect circle.\n  float warp = fbm(p * 1.3 + t * 0.2, 3, 2.0, 0.5) * u_warp * 0.4;\n\n  // Single smooth radial sweep: centre = paletteAt(0), edge = paletteAt(1).\n  float g = clamp(d / u_spread + warp, 0.0, 1.0);\n  vec3 col = paletteAt(g);\n\n  // Gentle luminous lift near the core.\n  col += paletteAt(0.15) * smoothstep(u_spread, 0.0, d) * 0.12;\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "drape",
+  "name": "Drape",
+  "uniforms": [
+   {
+    "name": "u_folds",
+    "label": "Folds",
+    "min": 1.0,
+    "max": 12.0,
+    "step": 0.1,
+    "default": 4.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_depth",
+    "label": "Depth",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.4,
+    "group": "shape"
+   },
+   {
+    "name": "u_shade",
+    "label": "Shading",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.4,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Sway",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.005,
+    "default": 0.18,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_folds;\nuniform float u_depth;\nuniform float u_shade;\nuniform float u_speed;\n\nvoid main() {\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((v_uv.x - 0.5) * aspect, v_uv.y - 0.5);\n  float t = u_time * u_speed;\n\n  // Soft warp so folds sway like cloth.\n  float warp = fbm(p * 1.2 + t * 0.2, 3, 2.0, 0.5) * 0.4;\n  // Horizontal fold displacement.\n  float fold = sin(p.x * u_folds + warp * 2.0 + t);\n\n  // Smooth vertical colour sweep, pushed by the folds.\n  float g = clamp(0.5 + p.y * 0.85 + fold * u_depth * 0.35, 0.0, 1.0);\n  vec3 col = paletteAt(g);\n\n  // Soft shading in the fold valleys \u2192 the fabric feel.\n  float shade = 0.5 + 0.5 * sin(p.x * u_folds * 2.0 + warp * 2.0 + t);\n  col *= 1.0 - u_shade * 0.25 * (1.0 - shade);\n  // Satin highlight on the crests.\n  col += vec3(pow(shade, 6.0)) * 0.08 * u_shade;\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "conic",
+  "name": "Conic",
+  "uniforms": [
+   {
+    "name": "u_arms",
+    "label": "Arms",
+    "min": 1.0,
+    "max": 6.0,
+    "step": 1.0,
+    "default": 1.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_warp",
+    "label": "Curve",
+    "min": 0.0,
+    "max": 1.5,
+    "step": 0.02,
+    "default": 0.4,
+    "group": "shape"
+   },
+   {
+    "name": "u_zoom",
+    "label": "Scale",
+    "min": 0.3,
+    "max": 2.0,
+    "step": 0.02,
+    "default": 1.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Spin",
+    "min": 0.0,
+    "max": 1.5,
+    "step": 0.005,
+    "default": 0.2,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_arms;\nuniform float u_warp;\nuniform float u_zoom;\nuniform float u_speed;\n\nvoid main() {\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((v_uv.x - 0.5) * aspect, v_uv.y - 0.5) * u_zoom;\n  float t = u_time * u_speed;\n\n  float r = length(p);\n  // Soft warp curves the arms.\n  float warp = fbm(p * 1.3 + t * 0.3, 3, 2.0, 0.5) * u_warp;\n  float ang = atan(p.y, p.x) + t + warp + r * u_warp;\n\n  // Seamless mirror sweep \u2014 cos is periodic, so no hard 0/2\u03c0 seam.\n  float g = 0.5 + 0.5 * cos(ang * u_arms);\n  vec3 col = paletteAt(clamp(g, 0.0, 1.0));\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "duo",
+  "name": "Duo",
+  "uniforms": [
+   {
+    "name": "u_gap",
+    "label": "Spread",
+    "min": 0.2,
+    "max": 1.2,
+    "step": 0.02,
+    "default": 0.55,
+    "group": "shape"
+   },
+   {
+    "name": "u_blend",
+    "label": "Blend",
+    "min": 0.2,
+    "max": 3.0,
+    "step": 0.02,
+    "default": 1.4,
+    "group": "shape"
+   },
+   {
+    "name": "u_warp",
+    "label": "Warp",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.3,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Drift",
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.005,
+    "default": 0.2,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_gap;\nuniform float u_blend;\nuniform float u_warp;\nuniform float u_speed;\n\nvoid main() {\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((v_uv.x - 0.5) * aspect, v_uv.y - 0.5);\n  float t = u_time * u_speed;\n\n  // Two drifting pool centres.\n  vec2 c1 = vec2(-u_gap, 0.0) + 0.12 * vec2(sin(t), cos(t * 0.8));\n  vec2 c2 = vec2( u_gap, 0.0) + 0.12 * vec2(cos(t * 0.9), sin(t * 1.1));\n\n  float warp = fbm(p * 1.4 + t * 0.3, 3, 2.0, 0.5) * u_warp * 0.4;\n  float d1 = length(p - c1);\n  float d2 = length(p - c2);\n\n  // Smooth 0..1 field between the two centres \u2192 clean two-tone blend.\n  float g = clamp(pow(d1 / (d1 + d2 + 1e-3), u_blend) + warp, 0.0, 1.0);\n  vec3 col = paletteAt(g);\n  // Soft luminous lift where the pools are strongest.\n  col += paletteAt(0.15) * (smoothstep(0.7, 0.0, d1) + smoothstep(0.7, 0.0, d2)) * 0.06;\n\n  writeColor(col);\n}\n"
+ },
+ {
+  "id": "sheen",
+  "name": "Sheen",
+  "uniforms": [
+   {
+    "name": "u_angle",
+    "label": "Angle",
+    "min": 0.0,
+    "max": 180.0,
+    "step": 1.0,
+    "default": 60.0,
+    "group": "shape"
+   },
+   {
+    "name": "u_soft",
+    "label": "Blend",
+    "min": 0.3,
+    "max": 1.5,
+    "step": 0.02,
+    "default": 0.9,
+    "group": "shape"
+   },
+   {
+    "name": "u_sheen",
+    "label": "Sheen",
+    "min": 0.0,
+    "max": 1.5,
+    "step": 0.02,
+    "default": 0.7,
+    "group": "shape"
+   },
+   {
+    "name": "u_width",
+    "label": "Width",
+    "min": 0.5,
+    "max": 4.0,
+    "step": 0.05,
+    "default": 1.8,
+    "group": "shape"
+   },
+   {
+    "name": "u_speed",
+    "label": "Sweep",
+    "min": 0.0,
+    "max": 1.2,
+    "step": 0.005,
+    "default": 0.25,
+    "group": "motion"
+   }
+  ],
+  "fragment": "\nuniform float u_angle;\nuniform float u_soft;\nuniform float u_sheen;\nuniform float u_width;\nuniform float u_speed;\n\nvoid main() {\n  float aspect = u_resolution.x / u_resolution.y;\n  vec2 p = vec2((v_uv.x - 0.5) * aspect, v_uv.y - 0.5);\n  float t = u_time * u_speed;\n\n  float a = radians(u_angle);\n  vec2 dir = vec2(cos(a), sin(a));\n  float axis = dot(p, dir);\n\n  // Clean diagonal colour sweep.\n  float g = clamp(0.5 + axis * u_soft, 0.0, 1.0);\n  vec3 col = paletteAt(g);\n\n  // Soft light band travelling across (gaussian, gently oscillating).\n  float pos = sin(t) * 0.6;\n  float band = exp(-pow((axis - pos) / (0.18 * u_width), 2.0));\n  col += vec3(band) * 0.16 * u_sheen;\n\n  writeColor(col);\n}\n"
+ }
+]
