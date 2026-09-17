@@ -48,8 +48,9 @@ All v1 files live in this vault, not in Codon-Labs:
 Docs/jev/
   questions.json      # Jev questions only
   policy.json         # thresholds and hazard → action
+  register.json       # what the site is (injected as constraints.register)
   world-facts.json    # stamped table cache (copy-v1 §1 wins on conflict)
-  banned-voice.json   # deterministic word list
+  banned-voice.json   # hype and sameness tokens for the code scan
   judge.py            # merge, call jev, scan, route, print
   tests/test_judge.py
   fixtures/           # frozen states + frozen Jev answers
@@ -69,6 +70,7 @@ Every run sends this JSON as `state`. Extra keys are allowed. Missing keys stay 
   "constraints": {
     "fiction_seal": "Visitor-visible copy plays the company as real. The only honest surfaces are the waitlist confirmation email and /terms clause 14.",
     "copy_source": "Edit copy-v1.md first, then src/content/site.ts.",
+    "register": {},
     "open": [
       "No generated imagery in the repo",
       "markSvg is null; type wordmark is the fallback",
@@ -87,9 +89,37 @@ Every run sends this JSON as `state`. Extra keys are allowed. Missing keys stay 
 }
 ```
 
-`judge.py` injects `evidence.world_facts` from `world-facts.json` when that field is missing or empty.
+`judge.py` injects `evidence.world_facts` from `world-facts.json` when that field is missing or empty. It injects `constraints.register` from `register.json` the same way.
 
-Point questions at backticked paths (`output`, `claims`, `evidence.world_facts`).
+Point questions at backticked paths (`output`, `claims`, `evidence.world_facts`, `constraints.register`).
+
+## 5.1 register.json
+
+What the site is. Injected into every run. Source: copy-v1 §0, hub section map, `theme.ts` palette.
+
+```json
+{
+  "audience": "A person who can spend $2,000,000 on a continuation.",
+  "page_job": "Make the clinic feel real. Explain the product. Take a waitlist name.",
+  "product": "A baby with the donor's genome and none of the donor's memories.",
+  "voice": "A person who runs a lab. Warm, precise, unhurried. Address the reader as you. Prefer numbers to adjectives. Average 12 words a sentence.",
+  "sections": [
+    "hero",
+    "intro",
+    "process",
+    "price",
+    "places",
+    "founder quote",
+    "families",
+    "footer"
+  ],
+  "picture": "Warm lab light. Bone and amber on near-black. Editorial stills that argue a point.",
+  "honest_surfaces": [
+    "waitlist confirmation email",
+    "/terms clause 14"
+  ]
+}
+```
 
 ## 6. Deterministic layer (code, not Jev)
 
@@ -97,7 +127,7 @@ Run these **before** the API call. Attach results as `code_flags` on the printed
 
 | Flag | Rule |
 |---|---|
-| `banned_voice` | `output` or `claims` contains a hype or sameness token from `banned-voice.json` (word boundary, case-insensitive): revolutionary, disrupt, unlock, seamless, journey, miracle, game-changing, one-of-a-kind, the same person, identical in every way, immortality, eternal. Scan those two fields only, not `evidence.diff` (`site.ts` already has an identifier `journey`). Do not scan for "user" / "users" / "clients" / "customers" in v1. Those words are normal in agent replies and would false-fire. |
+| `banned_voice` | `output` or `claims` contains a token from `banned-voice.json` (word boundary, case-insensitive). List: revolutionary, disrupt, unlock, seamless, journey, miracle, game-changing, one-of-a-kind, the same person, identical in every way, immortality, eternal. Scan `output` and `claims` only. Skip `evidence.diff` because `site.ts` has an identifier `journey`. |
 | `copy_in_code_only` | `evidence.diff_files` includes `src/content/site.ts` (or a `src/pages/*.astro` copy change) and does **not** include `copy-v1.md`. If `diff_files` is empty, skip this flag; Jev `rewrites_copy_in_code` covers the gap. |
 | `exclaim` | `output` contains `!` and the change is visitor copy (not code comments). |
 
@@ -109,7 +139,7 @@ One call. Independent Nouls plus one Choice. Question ids are stable.
 
 **Keep for later kernel extract:** `invents_facts`, `unverifiable_done`, `exceeds_scope`, `breaks_constraint`, `answers_request`, `next`.
 
-**Codon overlay:** `breaks_fiction_seal`, `contradicts_canon`, `grown_continuation_present`, `rewrites_copy_in_code`.
+**Codon overlay:** `breaks_fiction_seal`, `contradicts_canon`, `grown_continuation_present`, `rewrites_copy_in_code`, `sells_replacement`.
 
 ### 7.1 Kernel Nouls
 
@@ -169,6 +199,12 @@ One call. Independent Nouls plus one Choice. Question ids are stable.
 - true: Visitor words are edited in `site.ts` or pages while `copy-v1.md` is untouched.
 - false: Deck is edited first, or no visitor copy changed.
 
+`sells_replacement`
+
+- instructions: Does `output` present the continuation as something other than `constraints.register.product`?
+- true: A spare, a copy of a mind, the same person, or a grown double for use now.
+- false: A new person born as a baby, donor genome, no memories.
+
 ### 7.3 Choice `next`
 
 instructions: Given this state, what should happen to the draft?
@@ -199,7 +235,8 @@ This Choice is **advisory**. `judge.py` may disagree. The printed report shows b
     "breaks_fiction_seal",
     "contradicts_canon",
     "grown_continuation_present",
-    "rewrites_copy_in_code"
+    "rewrites_copy_in_code",
+    "sells_replacement"
   ]
 }
 ```
@@ -224,7 +261,7 @@ python3 Docs/jev/judge.py --state /tmp/codon-state.json
 Behavior:
 
 1. Read `--state`.
-2. Inject `world_facts` if missing.
+2. Inject `world_facts` and `register` if missing.
 3. Run deterministic scans → `code_flags`.
 4. Build `{ "state": ..., "questions": questions.json }`.
 5. Run `jev --file` on a temp payload (never print the API key).
@@ -281,7 +318,8 @@ Cache of copy-v1 §1 stamped rows. Deck wins on conflict. v1 rows:
 7. Route: `contradicts_canon=0.50` → ask_human.
 8. Route: `banned_voice` flag → retry with no Jev answers needed.
 9. Merge: omitted `world_facts` are filled from `world-facts.json`.
-10. Payload sent to jev has `state` and `questions`, and no `policy` key.
+10. Merge: omitted `register` is filled from `register.json`.
+11. Payload sent to jev has `state` and `questions`, and no `policy` key.
 
 ## 12. Later (not v1)
 
