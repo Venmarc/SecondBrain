@@ -146,9 +146,12 @@ Still open:
 - **One ambiguous stamp, five documents wrong.** "Swap." meant the doctorate, not the mentor role. When a stamp is a single word, restate the interpretation in one line and get a yes before cascading it into canon.
 - **A missing logo is a design dependency, not a build dependency.** Isolate the mark behind one data slot (`markSvg`) and a type fallback, and nav/footer/preloader/favicon/OG stop waiting on it. Same for the ported effects: gate them behind flags instead of blocking the scaffold.
 - **Do not port a scroll-hijacking smoother into a real site.** The rep's `SmoothRoot` breaks native scroll, anchors, and keyboard access. Reuse the effect engines, drop the scroll hijack.
+- **A soft violation on a gating threshold flickers.** `breaks_constraint` reads near `review_threshold`, so the same good draft routed `accept` and `ask_human` on different runs. Hard violations gate; soft ones report as banners and let the composite decide.
 
 ## Related
 
+- [[01-Projects/Clone-Website/Docs/jev/2026-09-17-quality-battery-v1|Quality battery v1]] — the Jev judge: copy and image batteries, `judge.py`, `vision.py`. Sibling to the after-judge spec.
+- [[01-Projects/Clone-Website/Docs/2026-09-17-jev-after-judge-design|Jev after-judge design]] — the Phase 1 hazard judge spec.
 - [[03-Resources/Design/Web-Garnish/_index|Web-Garnish]] + [[03-Resources/Design/Web-Garnish/07-Build-Runbook|Build Runbook]] — footer kit, fonts, palettes, SVG/CSS idioms
 - [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] — decoded Lamalama/Antigravity/Fin effects with technique notes
 - [[00-Inbox/Sites To Extract|Sites To Extract]] — the extraction backlog this project draws from

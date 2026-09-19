@@ -1,0 +1,58 @@
+{
+  "register_match": {
+    "type": "score",
+    "instructions": "How well does the described image match the register in `constraints.register.picture`: warm lab light, bone and amber on near-black, editorial stills that argue a point?",
+    "criteria": [
+      "Neon sci-fi glow, cold clinical, or generic stock. Wrong register.",
+      "A generic lab or generic luxury image. Register unclear.",
+      "Warm, restrained, editorial. Matches the register.",
+      "Unmistakably this brand: warm lab light, bone and amber, one evidentiary subject."
+    ]
+  },
+  "slot_fit": {
+    "type": "score",
+    "instructions": "How well does the described subject satisfy the slot requirement in `request`?",
+    "criteria": [
+      "Wrong subject for the slot.",
+      "Related subject, but not what the slot asks for.",
+      "Correct subject; a detail is off.",
+      "Exactly the subject the slot asks for."
+    ]
+  },
+  "evidence": {
+    "type": "score",
+    "instructions": "Does the described image argue a point in its section, rather than decorate it?",
+    "criteria": [
+      "Pure decoration. Removing it changes nothing.",
+      "Pretty but unfocused. The argument is unclear.",
+      "Supports the section's argument.",
+      "The image is the section's argument; removing it breaks the point."
+    ]
+  },
+  "restraint": {
+    "type": "score",
+    "instructions": "How few competing focal points does the described scene contain?",
+    "criteria": [
+      "Many competing subjects and colors.",
+      "Several subjects competing for attention.",
+      "One clear subject, with some background noise.",
+      "A single subject and nothing competing."
+    ]
+  },
+  "grown_continuation_look": {
+    "type": "noul",
+    "instructions": "Given `request` and the described `evidence.image`, is a grown continuation presented as a present-day person?",
+    "criteria": {
+      "true": "An adult is presented as the donor's continuation, or as the donor's identical double, in a present-day scene.",
+      "false": "Any continuation shown is an infant or toddler, or the image shows only a donor, only a baby, or an age-progression pair labelled as projection."
+    }
+  },
+  "decorative_only": {
+    "type": "noul",
+    "instructions": "Given `request`, does the described image fail to serve the slot's evidentiary job?",
+    "criteria": {
+      "true": "The image anchors nothing the section needs.",
+      "false": "The image does the job its slot requires."
+    }
+  }
+}

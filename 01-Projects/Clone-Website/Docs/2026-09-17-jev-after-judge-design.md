@@ -68,15 +68,19 @@ Every run sends this JSON as `state`. Extra keys are allowed. Missing keys stay 
 {
   "request": "Victor's ask for this turn",
   "constraints": {
-    "fiction_seal": "Visitor-visible copy plays the company as real. The only honest surfaces are the waitlist confirmation email and /terms clause 14.",
-    "copy_source": "Edit copy-v1.md first, then src/content/site.ts.",
-    "register": {},
-    "open": [
-      "No generated imagery in the repo",
-      "markSvg is null; type wordmark is the fallback",
-      "Waitlist backend is not wired",
-      "effects.intro, effects.trail, effects.photo are false"
-    ]
+    "content": {
+      "fiction_seal": "Visitor-visible copy plays the company as real. The only honest surfaces are the waitlist confirmation email and /terms clause 14."
+    },
+    "process": {
+      "copy_source": "Edit copy-v1.md first, then src/content/site.ts.",
+      "open": [
+        "No generated imagery in the repo",
+        "markSvg is null; type wordmark is the fallback",
+        "Waitlist backend is not wired",
+        "effects.intro, effects.trail, effects.photo are false"
+      ]
+    },
+    "register": {}
   },
   "evidence": {
     "world_facts": [],
@@ -90,6 +94,8 @@ Every run sends this JSON as `state`. Extra keys are allowed. Missing keys stay 
 ```
 
 `judge.py` injects `evidence.world_facts` from `world-facts.json` when that field is missing or empty. It injects `constraints.register` from `register.json` the same way.
+
+`constraints` splits by kind. `constraints.content` holds rules the artifact must obey; `breaks_constraint` reads this. `constraints.process` holds where and how the work is done; `unverifiable_done` reads `constraints.process.open`. One flat bag made `breaks_constraint` fire on good copy.
 
 Point questions at backticked paths (`output`, `claims`, `evidence.world_facts`, `constraints.register`).
 
@@ -151,7 +157,7 @@ One call. Independent Nouls plus one Choice. Question ids are stable.
 
 `unverifiable_done`
 
-- instructions: Does `output` or `claims` say work is finished that `constraints.open` still lists as not done?
+- instructions: Does `output` or `claims` say work is finished that `constraints.process.open` still lists as not done?
 - true: It claims imagery, the mark, waitlist email, effects, or another open item exists or is complete.
 - false: It treats open items as open, or does not mention them.
 
@@ -163,9 +169,9 @@ One call. Independent Nouls plus one Choice. Question ids are stable.
 
 `breaks_constraint`
 
-- instructions: Does `output` violate a rule in `constraints`?
-- true: It breaks a named constraint.
-- false: It follows the supplied constraints.
+- instructions: Does `output` violate a rule in `constraints.content`?
+- true: It breaks a named content rule.
+- false: It follows the supplied content rules.
 
 `answers_request`
 

@@ -1,0 +1,66 @@
+{
+  "action_threshold": 0.70,
+  "review_threshold": 0.35,
+  "next_confidence_floor": 0.50,
+  "answers_request_floor": 0.50,
+  "gate_threshold": 0.50,
+  "composite_retry": 0.45,
+  "composite_review": 0.60,
+  "dimension_confidence_floor": 0.40,
+  "retry_ids": [
+    "invents_facts",
+    "unverifiable_done",
+    "exceeds_scope",
+    "breaks_fiction_seal",
+    "contradicts_canon",
+    "grown_continuation_present",
+    "rewrites_copy_in_code",
+    "sells_replacement"
+  ],
+  "banner_ids": [
+    "breaks_constraint"
+  ],
+  "code_gates": {
+    "image": [
+      "text_present",
+      "watermark_present",
+      "extra_fingers",
+      "identical_adults",
+      "recognizable_real_person",
+      "neon_or_scifi_glow",
+      "stock_photography_feel",
+      "cold_tones_outside_instruments"
+    ]
+  },
+  "batteries": {
+    "copy": {
+      "gate_ids": [
+        "promises_sameness",
+        "collective_benefit",
+        "hype_register"
+      ],
+      "weights": {
+        "voice_register": 0.15,
+        "desire_strength": 0.2,
+        "awareness_fit": 0.1,
+        "hook_strength": 0.15,
+        "cta_strength": 0.1,
+        "specificity": 0.1,
+        "emotional_steadiness": 0.1,
+        "sentence_discipline": 0.1
+      }
+    },
+    "image": {
+      "gate_ids": [
+        "grown_continuation_look",
+        "decorative_only"
+      ],
+      "weights": {
+        "register_match": 0.3,
+        "slot_fit": 0.3,
+        "evidence": 0.25,
+        "restraint": 0.15
+      }
+    }
+  }
+}

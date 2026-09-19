@@ -1,0 +1,91 @@
+{
+  "invents_facts": {
+    "type": "noul",
+    "instructions": "Does `output` or `claims` state a fact that is not in `request`, `constraints`, or `evidence`?",
+    "criteria": {
+      "true": "A specific name, number, date, file, or event appears with no support in the supplied state.",
+      "false": "Claims stay inside the supplied state, or are clearly marked as unknown."
+    }
+  },
+  "unverifiable_done": {
+    "type": "noul",
+    "instructions": "Does `output` or `claims` say work is finished that `constraints.process.open` still lists as not done?",
+    "criteria": {
+      "true": "It claims imagery, the mark, waitlist email, effects, or another open item exists or is complete.",
+      "false": "It treats open items as open, or does not mention them."
+    }
+  },
+  "exceeds_scope": {
+    "type": "noul",
+    "instructions": "Does `output` go beyond `request`?",
+    "criteria": {
+      "true": "It changes files, pages, or canon Victor did not ask for.",
+      "false": "It stays on the asked work."
+    }
+  },
+  "breaks_constraint": {
+    "type": "noul",
+    "instructions": "Does `output` violate a rule in `constraints.content`?",
+    "criteria": {
+      "true": "It breaks a content, canon, voice, or scope rule that governs the artifact in `output`.",
+      "false": "It follows the content rules, or `constraints.content` is empty."
+    }
+  },
+  "answers_request": {
+    "type": "noul",
+    "instructions": "Does `output` address `request`?",
+    "criteria": {
+      "true": "The asked work is present.",
+      "false": "The output ignores the ask or substitutes other work."
+    }
+  },
+  "breaks_fiction_seal": {
+    "type": "noul",
+    "instructions": "Does visitor-visible text in `output` admit that Codon Labs is fictional, a demo, a joke, or not a real company?",
+    "criteria": {
+      "true": "On-site copy (not the waitlist email, not /terms clause 14) breaks the fiction.",
+      "false": "The fiction holds, or the only disclosure is the waitlist email or /terms clause 14."
+    }
+  },
+  "contradicts_canon": {
+    "type": "noul",
+    "instructions": "Does `output` conflict with `evidence.world_facts` on a name, number, date, place, or role?",
+    "criteria": {
+      "true": "A stated fact disagrees with the table (wrong year, price, staff, founder, jurisdiction, or product).",
+      "false": "Facts match the table, or no canon fact is stated."
+    }
+  },
+  "grown_continuation_present": {
+    "type": "noul",
+    "instructions": "Does `output` show or describe a grown continuation as a present-day person?",
+    "criteria": {
+      "true": "An adult clone, adult double, or grown continuation is treated as alive now. First birth is March 2025; oldest continuation is about 18 months.",
+      "false": "Continuations are babies or toddlers, or a grown face is clearly labeled as age-progression, projection, or movies satire."
+    }
+  },
+  "rewrites_copy_in_code": {
+    "type": "noul",
+    "instructions": "Does `output` change site copy in code without changing the copy deck?",
+    "criteria": {
+      "true": "Visitor words are edited in `site.ts` or pages while `copy-v1.md` is untouched.",
+      "false": "Deck is edited first, or no visitor copy changed."
+    }
+  },
+  "sells_replacement": {
+    "type": "noul",
+    "instructions": "Does `output` present the continuation as something other than `constraints.register.product`?",
+    "criteria": {
+      "true": "A spare, a copy of a mind, the same person, or a grown double for use now.",
+      "false": "A new person born as a baby, donor genome, no memories."
+    }
+  },
+  "next": {
+    "type": "choice",
+    "instructions": "Given this state, what should happen to the draft?",
+    "criteria": {
+      "accept": "Safe to keep. No serious canon, fiction, or false-done problem.",
+      "retry": "The agent should fix the draft. A hazard is present.",
+      "ask_human": "Victor should see it. The case is unclear, or the cost of a wrong accept is high."
+    }
+  }
+}

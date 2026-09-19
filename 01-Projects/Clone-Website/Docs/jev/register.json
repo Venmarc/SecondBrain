@@ -1,0 +1,22 @@
+{
+  "audience": "A person who can spend $2,000,000 on a continuation.",
+  "audience_stage": "Product-aware and most-aware. They already accept that cloning is possible and are deciding who to trust. Lead with what they do not know, not with an introduction to the subject.",
+  "page_job": "Make the clinic feel real. Explain the product. Take a waitlist name.",
+  "product": "A baby with the donor's genome and none of the donor's memories.",
+  "voice": "A person who runs a lab. Warm, precise, unhurried. Address the reader as you. Prefer numbers to adjectives. Average 12 words a sentence, nothing over 25.",
+  "sections": [
+    "hero",
+    "intro",
+    "process",
+    "price",
+    "places",
+    "founder quote",
+    "families",
+    "footer"
+  ],
+  "picture": "Warm lab light. Bone and amber on near-black. Editorial stills that argue a point.",
+  "honest_surfaces": [
+    "waitlist confirmation email",
+    "/terms clause 14"
+  ]
+}

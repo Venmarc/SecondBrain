@@ -1,0 +1,106 @@
+{
+  "voice_register": {
+    "type": "score",
+    "instructions": "How well does `output` match the voice in `constraints.register.voice`: a person who runs a lab, warm, precise, unhurried, numbers over adjectives, about 12 words a sentence?",
+    "criteria": [
+      "Reads like marketing: superlatives, adverbs, urgency, hype.",
+      "Reads like a generic clinic. Correct and anonymous. Could belong to any company.",
+      "Reads like a careful lab writing to one person. Warm, precise, mostly concrete.",
+      "Reads like one steady person across every sentence. No line could move to another site."
+    ]
+  },
+  "desire_strength": {
+    "type": "score",
+    "instructions": "How strongly does `output` carry a life-force desire the buyer feels, such as a second chance, legacy, or meeting your own beginning?",
+    "criteria": [
+      "States a technical service. No human want.",
+      "Names a want but does not show it.",
+      "The want is personal and concrete; the reader can picture their own case.",
+      "The want is the argument of the piece; every paragraph drives one recognizable desire."
+    ]
+  },
+  "awareness_fit": {
+    "type": "score",
+    "instructions": "How well is `output` aimed at the audience stage in `constraints.register.audience_stage`?",
+    "criteria": [
+      "Re-explains what the reader already knows, or assumes knowledge the reader lacks.",
+      "Roughly the right stage, with padding.",
+      "Right stage; leads with what the reader does not yet know.",
+      "Written for exactly one stage and never drifts; the first line assumes the right knowledge."
+    ]
+  },
+  "hook_strength": {
+    "type": "score",
+    "instructions": "How well does the opening of `output` make the reader want the next line?",
+    "criteria": [
+      "Opens with the company, a greeting, or a definition.",
+      "Opens with a fact that implies no want.",
+      "Opens with a line that makes the reader want the next line.",
+      "Opens with a line both specific and surprising; it could only belong to this product."
+    ]
+  },
+  "cta_strength": {
+    "type": "score",
+    "instructions": "How well does the call to action in `output` move the reader to the next small step?",
+    "criteria": [
+      "No call to action, or a generic one.",
+      "Names the action but not the value.",
+      "Names the action and the value; reads as the next small step.",
+      "Names the action, the value, and a reason for now, with no urgency theatre."
+    ]
+  },
+  "specificity": {
+    "type": "score",
+    "instructions": "How much does `output` carry meaning in numbers, dates, places, and named things instead of adjectives?",
+    "criteria": [
+      "Adjectives carry the meaning.",
+      "Mixed: some numbers, some vague claims.",
+      "Numbers and named things carry the meaning.",
+      "Every claim resolves to a number, a date, a place, or a named fact."
+    ]
+  },
+  "emotional_steadiness": {
+    "type": "score",
+    "instructions": "How well does `output` hold a steady voice over emotional subject matter, so the reader can cry and the copy cannot?",
+    "criteria": [
+      "The copy performs emotion: exclamation, melodrama, celebration.",
+      "Flat and cold; the emotion is missing.",
+      "The subject is emotional; the sentences stay plain.",
+      "The subject's full weight is present and the prose never reaches for it."
+    ]
+  },
+  "sentence_discipline": {
+    "type": "score",
+    "instructions": "How well does `output` use short declaratives with controlled variation?",
+    "criteria": [
+      "Long, clause-heavy sentences.",
+      "Short but uniform; monotonous.",
+      "Mostly short, with some deliberate variation.",
+      "Short declaratives with controlled variation; reads clean aloud."
+    ]
+  },
+  "promises_sameness": {
+    "type": "noul",
+    "instructions": "Does `output` promise sameness, identity, or forever?",
+    "criteria": {
+      "true": "Claims the continuation is the same person, identical in every way, immortal, or eternal.",
+      "false": "Says genome, continuation, or second beginning instead."
+    }
+  },
+  "collective_benefit": {
+    "type": "noul",
+    "instructions": "Does `output` claim a benefit to mankind, humanity, or the world?",
+    "criteria": {
+      "true": "Frames the product as saving the world or helping humanity.",
+      "false": "Keeps the benefit private to the buyer."
+    }
+  },
+  "hype_register": {
+    "type": "noul",
+    "instructions": "Does `output` use hype or urgency theatre, even when it avoids the banned words?",
+    "criteria": {
+      "true": "Superlatives, countdown pressure, or a breathless tone.",
+      "false": "Stays plain and unhurried."
+    }
+  }
+}
