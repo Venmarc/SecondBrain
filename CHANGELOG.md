@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-20 — Clone-Website: canonical imagery generated, build errors resolved, email trade-offs logged
+
+#### Added
+- **Canonical visual assets**: Generated 8 canonical images (`hero-cell.jpg`, `the-hand.jpg`, `the-sample.jpg`, `the-reprogramming.jpg`, `founder-archive-1993.jpg`, `bea-today.jpg`, `schonbaechler-archive.jpg`, `antoine-archive.jpg`, `family-pair-ro.jpg`) in `public/images/`.
+- **Node runtime pinning**: Added `.nvmrc` pinning Node 24 for Astro 7 compatibility.
+- **Session summary log**: `06-Agent-Sessions/2026-09-20-gemini-codon-labs-image-audit.md`.
+
+#### Changed
+- **Page integrations**: Wired assets across `src/pages/index.astro`, `src/pages/process.astro`, and `src/pages/about.astro`.
+- **Effects toggled**: Enabled `effects.photo` and `effects.intro` in `src/theme.ts`.
+- **Decision log updated**: Stamped Resend sending via `mail.venmarcstudio.xyz` with "Built by Venmarc Studio" attribution.
+
+#### Fixed
+- **CSS Syntax**: Restored missing closing brace in `src/styles/global.css` under `.hero__foot`.
+
 ### 2026-09-16 — Clone-Website: build scaffolded on Astro, logo unblocked
 
 #### Added

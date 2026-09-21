@@ -128,7 +128,7 @@ Still open:
 3. **Footer style**: engraved vignette baseline; newer footer styles may supersede.
 4. **Stack and repo location**, then scaffold.
 5. Workforce detail: founding headcount, Program team size, Schönbächler's death year.
-6. **Waitlist email mechanics**: sender domain and service (needs a domain decision).
+6. **Waitlist email mechanics**: Resend verified and tested using domain `mail.venmarcstudio.xyz`. Trade-off accepted: attribution "Built by Venmarc Studio" will be included in the footer, legal terms, and transactional email.
 
 ## Next actions
 
@@ -147,6 +147,8 @@ Still open:
 - **A missing logo is a design dependency, not a build dependency.** Isolate the mark behind one data slot (`markSvg`) and a type fallback, and nav/footer/preloader/favicon/OG stop waiting on it. Same for the ported effects: gate them behind flags instead of blocking the scaffold.
 - **Do not port a scroll-hijacking smoother into a real site.** The rep's `SmoothRoot` breaks native scroll, anchors, and keyboard access. Reuse the effect engines, drop the scroll hijack.
 - **A soft violation on a gating threshold flickers.** `breaks_constraint` reads near `review_threshold`, so the same good draft routed `accept` and `ask_human` on different runs. Hard violations gate; soft ones report as banners and let the composite decide.
+- **Anchor master character portraits for multi-age and action generation**: Reference Dr. Bea Vogel-Keller against `founder-archive-1993.jpg` to preserve facial structure across young, middle-aged, and elderly representations.
+- **Astro 7 with Tailwind CSS v4 requires Node >= 22.12.0 and strict CSS block matching**: Enforce Node 24 via `.nvmrc` and verify closing braces in global styles to prevent parser halts.
 
 ## Related
 
