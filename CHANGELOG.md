@@ -715,3 +715,45 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 - docs: Clone-Website — decisions D11-D17 (name Codon Labs, baby output, $2M lean, FAQ registers, imag (ca25345)
 - build: ACQUIRE particle footer desert-wind layer (dusk dunes, gust envelope, saltation, plucked grai (d201579)
 
+## 2026-09-15
+
+- docs: Clone-Website — stamps closed (staff 1,650, Dolly complementary, first birth New York City, di (7e2175f)
+- docs: Clone-Website — D35 roster correction swept across canon, copy deck, slot map (Schönbächler ow (bb59feb)
+- docs: Clone-Website — New York jurisdiction (real law), staff model reconciled (1,850 group / 90 pro (d3e28a9)
+- docs: Clone-Website — world canon v1 (Basel 1973, founder trio, two campuses) + founder roster/portr (ec9fdaf)
+- docs: Backdrop Supply design collection (31 cached freebies + palettes, 7 family notes, 32-mode/61-p (9ea1d0a)
+
+
+## 2026-09-16
+
+- docs: add agent session log and update project index for Codon Labs Astro scaffold (9365642)
+- vault backup: 2026-09-16 20:09:39 (5e3cdd5)
+- vault backup: 2026-09-16 04:06:32 (3892f6a)
+- vault backup: 2026-09-16 03:51:25 (dc50526)
+- vault backup: 2026-09-16 02:37:31 (639e42e)
+- vault backup: 2026-09-16 02:33:25 (235dd3d)
+- vault backup: 2026-09-16 01:39:57 (c433c43)
+
+
+## 2026-09-17
+
+- Add Codon register to Jev after-judge spec (5c1c3a4)
+- Add Codon Jev after-judge spec (491bc52)
+- vault backup: 2026-09-17 00:27:13 (aa1c453)
+- vault backup: 2026-09-17 00:17:03 (d3e45a3)
+
+
+## 2026-09-19
+
+- feat: add JEV evaluation framework with vision scripts, policies, and quality battery docs (5893680)
+
+
+## 2026-09-21
+
+- docs: add audit and session logs, and update project notes and changelog for Clone-Website build set (23cadb9)
+
+
+## 2026-09-23
+
+- vault backup: 2026-09-23 18:11:24 (2daf0e8)
+
