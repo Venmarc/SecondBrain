@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-23 — Codon-Labs: visual motion polish micro-interactions merged to main
+
+#### Added
+- **Motion tokens and micro-interactions**: 9 visual motion effects across Codon Labs including 4mm/2500ms photo card sway, ambient non-harsh logo orb glow, sliding pill navigation indicator, morphing hamburger menu, text reveal, metric number pop-in, FAQ accordion plus-minus morph, and waitlist button morph.
+- **Session summary log**: Added `06-Agent-Sessions/2026-09-23-agy-codon-labs-visual-motion-polish.md`.
+
+#### Changed
+- **Branch status**: Merged completed feature changes locally into `main` after passing 24 unit tests and Astro production build. Deleted feature branch `feat/visual-motion-polish`.
+
 ### 2026-09-21 — UI Collections: four-library labels, component lists, locator page
 
 #### Added

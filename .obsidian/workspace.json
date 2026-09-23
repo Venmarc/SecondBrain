@@ -4,21 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "7904dc64e586befd",
+        "id": "e9855da942ffa6f3",
         "type": "tabs",
         "children": [
           {
-            "id": "ad82aac91fb17681",
+            "id": "536e1965b88b73e5",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
+                "file": "Codon-Labs-Review-2026-09-23.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "Codon-Labs-Review-2026-09-23"
             }
           }
         ]
@@ -80,7 +90,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 292.6311378479004
+    "width": 292.6311378479004,
+    "collapsed": true
   },
   "right": {
     "id": "e53b3649d4d785ff",
@@ -208,8 +219,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e62603f6e77f1f11",
+  "active": "536e1965b88b73e5",
   "lastOpenFiles": [
+    "Recording 20260923212723.m4a",
+    "Recording 20260923212407.m4a",
+    "Recording 20260923211551.m4a",
+    "Recording 20260923211200.m4a",
+    "Recording 20260923210831.m4a",
+    "Recording 20260923210534.m4a",
+    "Recording 20260923210321.m4a",
+    "Recording 20260923210118.m4a",
+    "Recording 20260923210016.m4a",
+    "Codon-Labs-Review-2026-09-23.md",
     "Assets/logo_variant_6.png",
     "Assets/logo_variant_6.svg",
     "Assets/logo-dna-c-flat.png",
@@ -220,7 +241,6 @@
     "Assets/logo_variant_4.svg",
     "Assets/logo_variant_3.jpg",
     "Assets/logo_variant_2.jpg",
-    "Assets/logo_variant_1.png",
     "06-Agent-Sessions/2026-09-16-opencode-codon-labs-astro-scaffold.md",
     "01-Projects/Clone-Website/Clone-Website.md",
     "06-Agent-Sessions/2026-09-16-grok-logo-tab-tester.md",
@@ -235,14 +255,6 @@
     "conflict-files-obsidian-git.md",
     "03-Resources/Design/Backdrop-Supply/demos/backdrop-foundry/index.html",
     "03-Resources/Design/Backdrop-Supply/engine/presets.json",
-    "03-Resources/Design/Backdrop-Supply/engine/modes.json",
-    "03-Resources/Design/Backdrop-Supply/engine/VERTEX.glsl",
-    "03-Resources/Design/Backdrop-Supply/engine/FRAG_HEADER.glsl",
-    "03-Resources/Design/Backdrop-Supply/demos/backdrop-foundry",
-    "03-Resources/Design/Backdrop-Supply/assets/zephyr",
-    "03-Resources/Design/Backdrop-Supply/assets/viridian",
-    "03-Resources/Design/Backdrop-Supply/assets/velvoura",
-    "03-Resources/Design/Backdrop-Supply/assets/velvex",
     "03-Resources/Design/Backdrop-Supply/_index.md",
     "03-Resources/Design/Backdrop-Supply/08-Build-Runbook.md",
     "03-Resources/Design/Backdrop-Supply/07-Animated-Loops.md",
@@ -255,7 +267,6 @@
     "01-Projects/Clone-Website/Docs/world-history-v1.md",
     "01-Projects/Clone-Website/Docs/slotmap-motion-v1.md",
     "01-Projects/Clone-Website/Docs/image-requirements-v1.md",
-    "01-Projects/Clone-Website/Docs/copy-v1.md",
     "Attachments/Untitled.canvas",
     "03-Resources/Skills/Frontend Awesomeness.canvas"
   ]
