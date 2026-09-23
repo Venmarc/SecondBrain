@@ -21,5 +21,6 @@ npx skills add <github-repo> --skill <skill-name>
 ## Vault action
 - Do **not** duplicate full skill content here — link to clipping + install when needed.
 - Prefer local skills in `~/.agents/skills/` and vault `03-Resources/Skills/` first.
+- Component libraries and clip galleries live in [[03-Resources/Design/UI-Collections/_index|UI Collections]], not here.
 
 **Tags:** #skill #design #moc

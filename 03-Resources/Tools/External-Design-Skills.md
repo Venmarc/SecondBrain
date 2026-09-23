@@ -16,6 +16,7 @@ The vault keeps **pointers and MOCs**, not a full duplicate of every external sk
 
 - [[03-Resources/MOC-Design-Skills-External|MOC: Design Skills External]]
 - [[03-Resources/Skills/Frontend-Awesomeness|Frontend Awesomeness]] (in-vault prompting)
+- [[03-Resources/Design/UI-Collections/_index|UI Collections]] — [Rare UI](https://www.rareui.com/), [Obsidian UI](https://www.obsidianui.dev/), [Transitions.dev](https://transitions.dev/), [Design Spells](https://www.designspells.com/)
 
 ## Agent note
 

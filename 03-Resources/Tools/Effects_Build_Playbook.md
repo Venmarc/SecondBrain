@@ -15,6 +15,7 @@ Companion to [[03-Resources/Tools/Effects_Playbook|Effects Playbook]]. The extra
 The agent loads these every build session, not just the playbook:
 
 - `[[03-Resources/Tools/Effects_Glossary|Effects Glossary]]` — what we're building; entries have Literal / Technique / Cost / status. Target statuses we promote from: `extracted` or `tried`. Goal: status `tried` (or `adopted` if we ship it).
+- `[[03-Resources/Design/UI-Collections/_index|UI Collections]]` — which library holds the piece ([Rare UI](https://www.rareui.com/), [Obsidian UI](https://www.obsidianui.dev/), [Transitions.dev](https://transitions.dev/), [Design Spells](https://www.designspells.com/)).
 - `[[Effects_Build_Playbook]]` (this file) — build workflow + gates.
 - `~/.agents/skills/_shared/MOTION-STANDARDS.md` — easing tokens (`--ease-out`, `--ease-in-out`, `--ease-drawer`), duration budgets, spring configs, gesture math, performance rules, Framer Motion avoid-by-default rule. **Any time a glossary entry's Technique line says "transition" or "animation", pull the canonical token from this file** — never invent a fresh cubic-bezier.
 - `~/.agents/skills/feel-router/SKILL.md` — the lane dispatcher. The Build lane loads this playbook; the Adopt lane loads the Adopt phase below.

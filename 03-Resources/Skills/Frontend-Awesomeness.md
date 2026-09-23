@@ -46,6 +46,7 @@ Explicitly ban mediocrity ("no generic AI slop", "feels magical", "ex-Principal 
 - [[03-Resources/Skills/Agent-Prompting-Masterclass|Agent Prompting Masterclass]]
 - [[03-Resources/Design/48-Laws-of-Web-Design|48 Laws of Web Design]]
 - [[03-Resources/Skills/Frontend-Awesomeness-Sample|Frontend Awesomeness Sample]]
+- [[03-Resources/Design/UI-Collections/_index|UI Collections]] — [Rare UI](https://www.rareui.com/), [Obsidian UI](https://www.obsidianui.dev/), [Transitions.dev](https://transitions.dev/), [Design Spells](https://www.designspells.com/)
 
 **Tags:** #skill #frontend #design #ui-ux
 

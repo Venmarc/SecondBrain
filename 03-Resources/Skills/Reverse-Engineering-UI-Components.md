@@ -6,7 +6,7 @@
 
 ## Workflow
 
-1. **Pick a reference** — a component or pattern from a UI library/site you respect (shadcn, Linear, Vercel, etc.).
+1. **Pick a reference** — a component or pattern from a UI library/site you respect (shadcn, Linear, Vercel, [[03-Resources/Design/UI-Collections/_index|UI Collections]]).
 2. **Deconstruct** — layout, spacing, motion, states (hover, focus, disabled), tokens (radius, blur, border).
 3. **Rebuild** — implement in your stack (Next.js + Tailwind + shadcn) without cargo-culting class strings; name variables.
 4. **Define** — document props, variants, and when to use it (mini spec in project `DESIGN.md` or a local component README).
@@ -25,6 +25,7 @@
 
 ## Related
 
+- [[03-Resources/Design/UI-Collections/_index|UI Collections]] — [Rare UI](https://www.rareui.com/), [Obsidian UI](https://www.obsidianui.dev/), [Transitions.dev](https://transitions.dev/), [Design Spells](https://www.designspells.com/)
 - [[01-Projects/Tempire/Tempire|Tempire]] (later)
 - [[01-Projects/Momentum/Momentum|Momentum]]
 - [[01-Projects/Ledger/Ledger|Ledger]]

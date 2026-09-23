@@ -134,6 +134,7 @@ The aesthetic framework Tempire is built on. Referenced in agent skills (ui-ux-p
 ## Related
 - [[03-Resources/Skills/Frontend-Awesomeness]]
 - [[03-Resources/Skills/Agent-Prompting-Masterclass]]
+- [[03-Resources/Design/UI-Collections/_index|UI Collections]]
 - [[01-Projects/Tempire/Tempire#Architecture decisions (condensed)|Tempire decisions]]
 
 **Tags:** #resource #design #ui-ux

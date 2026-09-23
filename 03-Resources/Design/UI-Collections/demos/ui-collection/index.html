@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UI collection</title>
+  <style>
+    :root {
+      --bg: #0c0c0c;
+      --paper: #141414;
+      --ink: #eceae4;
+      --muted: #8a877c;
+      --line: rgba(236, 234, 228, 0.12);
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --duration: 420ms;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); color: var(--ink); }
+    body {
+      font-family: "Söhne", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 22vh 1.5rem 18vh;
+    }
+    header { margin-bottom: 18vh; }
+    p.kicker {
+      margin: 0 0 2.5rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 420;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+    header .lede {
+      margin: 2.5rem 0 0;
+      max-width: 28ch;
+      font-size: 1.05rem;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+    article {
+      padding: 12vh 0;
+      border-top: 1px solid var(--line);
+    }
+    article h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+    article .copy {
+      margin: 0 0 4rem;
+      max-width: 34ch;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .stage {
+      min-height: 280px;
+      display: grid;
+      place-items: center;
+      background: var(--paper);
+      border-radius: 2px;
+    }
+    a.src {
+      display: inline-block;
+      margin-top: 2.5rem;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 0.2rem;
+    }
+    a.src:hover { border-color: var(--ink); }
+
+    .folder {
+      width: 140px;
+      height: 96px;
+      position: relative;
+    }
+    .folder span {
+      position: absolute;
+      inset: 0;
+      background: #2a2a28;
+      border-radius: 6px 6px 4px 4px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      transform-origin: 12% 100%;
+      transition: transform var(--duration) var(--ease);
+    }
+    .folder span:nth-child(1) { transform: rotate(-8deg) translateY(8px); background: #3a3934; }
+    .folder span:nth-child(2) { transform: rotate(0deg); }
+    .folder span:nth-child(3) {
+      height: 18px; top: -10px; width: 44px; left: 10px;
+      border-radius: 4px 8px 0 0; background: #4a4942;
+    }
+    .stage:hover .folder span:nth-child(1) { transform: rotate(-14deg) translateY(4px); }
+
+    .orb {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 32% 28%, #f4efe4 0%, #c4b8a0 28%, #3d3a34 70%, #0c0c0c 100%);
+      box-shadow: 0 0 40px rgba(196, 184, 160, 0.18);
+      animation: drift 7s var(--ease) infinite alternate;
+    }
+    @keyframes drift {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+
+    .spell {
+      width: min(70%, 280px);
+      padding: 2.2rem 1.6rem;
+      border: 1px solid var(--line);
+      text-align: center;
+      letter-spacing: 0.28em;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .bars {
+      display: flex;
+      gap: 6px;
+      align-items: flex-end;
+      height: 64px;
+    }
+    .bars i {
+      display: block;
+      width: 10px;
+      background: #d8d2c4;
+      transform-origin: bottom;
+      animation: rise 1.8s var(--ease) infinite alternate;
+    }
+    .bars i:nth-child(1) { height: 20px; animation-delay: 0s; }
+    .bars i:nth-child(2) { height: 48px; animation-delay: 0.12s; }
+    .bars i:nth-child(3) { height: 32px; animation-delay: 0.24s; }
+    .bars i:nth-child(4) { height: 56px; animation-delay: 0.08s; }
+    @keyframes rise {
+      from { transform: scaleY(0.55); opacity: 0.55; }
+      to { transform: scaleY(1); opacity: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .orb, .bars i { animation: none; }
+      .folder span { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="kicker">Collection</p>
+      <h1>Four libraries.<br>One quiet page.</h1>
+      <p class="lede">The post saved four places. This page holds them with room around each piece, so you can see the component.</p>
+    </header>
+
+    <article>
+      <h2>Rare UI</h2>
+      <p class="copy">Tasteful React pieces. Folder, orb, picker. Install one at a time. Leave space around the object.</p>
+      <div class="stage" aria-label="Folder stack">
+        <div class="folder"><span></span><span></span><span></span></div>
+      </div>
+      <a class="src" href="https://www.rareui.com/">rareui.com</a>
+    </article>
+
+    <article>
+      <h2>Obsidian UI</h2>
+      <p class="copy">Animated React catalogue. Copy the source. You own the markup after it lands.</p>
+      <div class="stage" aria-label="Soft orb">
+        <div class="orb"></div>
+      </div>
+      <a class="src" href="https://www.obsidianui.dev/">obsidianui.dev</a>
+    </article>
+
+    <article>
+      <h2>Design Spells</h2>
+      <p class="copy">Small decisions that read as expensive. One spell per screen. Do not crowd it.</p>
+      <div class="stage" aria-label="Spell card">
+        <div class="spell">One decision</div>
+      </div>
+      <a class="src" href="https://designspells.com">designspells.com</a>
+    </article>
+
+    <article>
+      <h2>Transitions.dev</h2>
+      <p class="copy">Motion between states. Transform and opacity only. The rest of the page stays still.</p>
+      <div class="stage" aria-label="Motion bars">
+        <div class="bars"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <a class="src" href="https://transitions.dev">transitions.dev</a>
+    </article>
+  </main>
+</body>
+</html>

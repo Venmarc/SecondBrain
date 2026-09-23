@@ -193,6 +193,7 @@ For graph traversal, these are the deliberate bidirectional connections:
 - **Antipatterns:** [[AI-UI-Antipatterns-Watchlist]] — add the new tells (single-blur shadow, default easing, max-height hack, fade-only entrance) if not present.
 - **Frontend Awesomeness (prompting philosophy):** [[Frontend-Awesomeness]] — adjacent prompting recipes.
 - **Extraction system:** [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] + [[03-Resources/Tools/Effects_Playbook|Effects Playbook]] + [[03-Resources/Tools/Effects_Build_Playbook|Effects Build Playbook]] — when you see one of these recipes on a real site, extract and tag it under the proper `[tag]` in the glossary.
+- **Library map:** [[03-Resources/Design/UI-Collections/_index|UI Collections]] — [Rare UI](https://www.rareui.com/), [Obsidian UI](https://www.obsidianui.dev/), [Transitions.dev](https://transitions.dev/), [Design Spells](https://www.designspells.com/).
 
 ---
 

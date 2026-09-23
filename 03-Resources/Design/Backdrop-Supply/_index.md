@@ -9,6 +9,8 @@ paid unlock, and 117 of them offered free as previews. This collection turns tha
 browse into something an agent can use: every free preview is cached here with its palette sampled, and the
 looks that can be rebuilt in code have a verified recipe.
 
+For widgets, page motion, named transitions, and real-app details, see [[03-Resources/Design/UI-Collections/_index|UI Collections]].
+
 ## The one thing to know
 
 The site splits into two kinds of asset and they need opposite handling:

@@ -6,6 +6,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-09-21 — UI Collections: four-library labels, component lists, locator page
+
+#### Added
+- **[[03-Resources/Design/UI-Collections/_index|UI Collections]]** — labels, jobs, and component lists for [Rare UI](https://www.rareui.com/), [Obsidian UI](https://www.obsidianui.dev/), [Transitions.dev](https://transitions.dev/), and [Design Spells](https://www.designspells.com/).
+- **Locator page** — `03-Resources/Design/UI-Collections/demos/ui-collection/index.html` (snapshot of `~/Pastries/rep-ui-collection/`).
+
+#### Changed
+- Linked the collection from `index.md`, [[03-Resources/MOC-UI-UX-Lessons|MOC: UI/UX Lessons]], [[03-Resources/Design/Web-Garnish/_index|Web Garnish]], [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply]], Effects Glossary/Playbook/Build Playbook, Reverse-Engineering, Frontend Awesomeness, Unique Direction, 48 Laws, UI Polish, and the external design-skills MOC.
+
+### 2026-09-21 — Clone-Website: visual polish, 1440px layout expansion, and process timeline connector
+
+#### Added
+- **ProcessTimeline component**: Added `src/components/ProcessTimeline.astro` with alternating desktop cards, dynamic SVG Bezier S-curve connector, and scroll-driven glowing puck tracer (`#7ab4f8`).
+- **Design specification & implementation plan**: Committed `docs/superpowers/specs/2026-09-21-visual-polish-and-layout-architecture-design.md` and `docs/superpowers/plans/2026-09-21-visual-polish-and-layout-architecture.md`.
+- **Session summary log**: Added `06-Agent-Sessions/2026-09-21-agy-codon-labs-visual-polish.md`.
+
+#### Changed
+- **Global layout width**: Expanded `--wrap` from 1180px to 1440px with responsive gutter `clamp(24px, 4vw, 64px)` in `src/styles/global.css`.
+- **Subtle divider rules**: Reduced line divider opacity to 0.045 (`rgba(244, 239, 230, 0.045)`) and removed bottom border on `.site-nav`.
+- **Hero section layout**: Bounded cleavage cell division image inside `.wrap.hero__inner` and feathered edges with an elliptical radial gradient mask into `#141210`.
+- **Origins section rebalancing**: Restructured into a balanced 2-column layout (narrative + quote on left, chart + follow-up on right) with a comfortable `66ch` measure.
+- **Branch status**: Merged completed feature changes locally into `main`.
+
 ### 2026-09-20 — Clone-Website: canonical imagery generated, build errors resolved, email trade-offs logged
 
 #### Added

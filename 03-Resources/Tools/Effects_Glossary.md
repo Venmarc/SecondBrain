@@ -1,6 +1,6 @@
 # Effects Glossary
 
-> **One-line Summary**: Visual effect names mapped to plain-language labels + techniques and performance cost — companion to [[03-Resources/Tools/Effects_Playbook|Effects Playbook]].
+> **One-line Summary**: Visual effect names mapped to plain-language labels + techniques and performance cost — companion to [[03-Resources/Tools/Effects_Playbook|Effects Playbook]]. Source libraries for widgets and motion: [[03-Resources/Design/UI-Collections/_index|UI Collections]].
 
 Translation table: **what you see** → **how it’s built**. Purpose is to eliminate vibe-based handoffs. Every entry must have **Literal**, **Technique**, and **Cost** filled in before it counts as “known” — if you can’t fill Technique/Cost, check devtools first, don’t guess.
 

@@ -9,7 +9,7 @@ tags:
   - web-design
 ---
 
-> **One-line Summary**: Collected X posts on making footers and landing pages feel hand-crafted — engraved vignettes, sticker/scrapbook footers, rubber-stamp marks, watercolor art prints, and perspective typography. Includes the copy-paste image prompts. See [[03-Resources/MOC-UI-UX-Lessons]] for the broader UI/UX graph.
+> **One-line Summary**: Collected X posts on making footers and landing pages feel hand-crafted — engraved vignettes, sticker/scrapbook footers, rubber-stamp marks, watercolor art prints, and perspective typography. Includes the copy-paste image prompts. See [[03-Resources/MOC-UI-UX-Lessons]] for the broader UI/UX graph. Component libraries: [[03-Resources/Design/UI-Collections/_index|UI Collections]].
 
 ## Why this collection exists
 Victor wants the hand-made, iconic art element in web footers/landing pages instead of the generic flat footer. The style he could not name is an **engraved vignette / pictorial mark** — see [[01-Engraved-Vignette-Footer]].
