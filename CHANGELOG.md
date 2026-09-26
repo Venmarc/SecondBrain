@@ -766,3 +766,8 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 
 - vault backup: 2026-09-23 18:11:24 (2daf0e8)
 
+
+
+## 2026-09-26
+
+- docs: add Web-Garnish note extracting five footer styles from the saved @ZACHEX video

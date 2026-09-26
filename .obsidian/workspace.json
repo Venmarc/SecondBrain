@@ -4,31 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "e9855da942ffa6f3",
+        "id": "3d756a4b9d3e4a17",
         "type": "tabs",
         "children": [
           {
-            "id": "536e1965b88b73e5",
+            "id": "a0f4f254de9dbbea",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "00-Inbox/RANT.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "03-Resources/Design/Backdrop-Supply/assets/zephyr/image-6.webp"
               },
-              "icon": "lucide-file",
-              "title": "RANT"
+              "icon": "lucide-image",
+              "title": "image-6"
             }
           }
         ]
@@ -218,13 +206,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e62603f6e77f1f11",
+  "active": "a0f4f254de9dbbea",
   "lastOpenFiles": [
+    "03-Resources/Design/Backdrop-Supply/assets/gradient-bgs/frame-3.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/high-exposure-gradients/1.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/horizon/image-6.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/iridescence/image-1.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/nebuluxe/image-6.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/nocturne/image-9.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/perplex/image-29.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/portals/image-20.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/prismal/image-3.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/reverie/image-26.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/serenox/image-0.webp",
+    "03-Resources/Design/Backdrop-Supply/01-Gradient-Mesh.md",
+    "03-Resources/Design/Backdrop-Supply/02-Glass-and-Iridescent.md",
+    "03-Resources/Design/Backdrop-Supply/03-Cosmic-and-Cavern.md",
+    "03-Resources/Design/Backdrop-Supply/04-Stylized-Landscape.md",
+    "03-Resources/Design/Backdrop-Supply/05-Dither-ASCII-Stipple.md",
+    "03-Resources/Design/Backdrop-Supply/06-Surreal-Collage.md",
+    "03-Resources/Design/Backdrop-Supply/07-Animated-Loops.md",
+    "03-Resources/Design/Backdrop-Supply/08-Build-Runbook.md",
+    "03-Resources/Design/Backdrop-Supply/_index.md",
+    "raw/How to Create Your UX-UI Portfolio (Without Much Experience) | by Erik D. Kenned.pdf",
+    "06-Agent-Sessions/2026-08-14-hermes-claude-bridge-webui-anthropic-lane.md",
+    "00-Inbox/RANT.md",
     "00-Inbox/Codon-Labs-Review-2026-09-23-Edited-Transcript.md",
     "00-Inbox/Codon-Labs-Review-2026-09-23-Raw-Transcript.md",
     "06-Agent-Sessions/2026-09-24-gemini-transcribe-audio.md",
     "00-Inbox/Codon-Labs-Review-2026-09-23.md",
-    "00-Inbox/RANT.md",
     "Recording 20260923212723.m4a",
     "Recording 20260923212407.m4a",
     "Recording 20260923211551.m4a",
@@ -234,16 +244,6 @@
     "Recording 20260923210321.m4a",
     "Recording 20260923210118.m4a",
     "Recording 20260923210016.m4a",
-    "Assets/logo_variant_6.png",
-    "Assets/logo_variant_6.svg",
-    "Assets/logo-dna-c-flat.png",
-    "Assets/logo_variant_1.svg",
-    "Assets/logo_variant_8.jpg",
-    "Assets/logo_variant_7.jpg",
-    "Assets/logo_variant_5.jpg",
-    "Assets/logo_variant_4.svg",
-    "Assets/logo_variant_3.jpg",
-    "Assets/logo_variant_2.jpg",
     "06-Agent-Sessions/2026-09-16-opencode-codon-labs-astro-scaffold.md",
     "01-Projects/Clone-Website/Clone-Website.md",
     "06-Agent-Sessions/2026-09-16-grok-logo-tab-tester.md",
@@ -254,18 +254,6 @@
     "01-Projects/Driving-Game/Driving-Game.md",
     "01-Projects/Driving-Game/Docs/driving-game-stage-1-goal.md",
     "00-Inbox/2026-09-13_active-particle-environments.md",
-    "00-Inbox/Pet Clone Website.md",
-    "conflict-files-obsidian-git.md",
-    "03-Resources/Design/Backdrop-Supply/demos/backdrop-foundry/index.html",
-    "03-Resources/Design/Backdrop-Supply/_index.md",
-    "03-Resources/Design/Backdrop-Supply/08-Build-Runbook.md",
-    "03-Resources/Design/Backdrop-Supply/07-Animated-Loops.md",
-    "03-Resources/Design/Backdrop-Supply/06-Surreal-Collage.md",
-    "03-Resources/Design/Backdrop-Supply/05-Dither-ASCII-Stipple.md",
-    "03-Resources/Design/Backdrop-Supply/04-Stylized-Landscape.md",
-    "03-Resources/Design/Backdrop-Supply/03-Cosmic-and-Cavern.md",
-    "03-Resources/Design/Backdrop-Supply/02-Glass-and-Iridescent.md",
-    "03-Resources/Design/Backdrop-Supply/01-Gradient-Mesh.md",
     "Attachments/Untitled.canvas",
     "03-Resources/Skills/Frontend Awesomeness.canvas"
   ]

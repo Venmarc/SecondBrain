@@ -29,6 +29,7 @@ Victor wants the hand-made, iconic art element in web footers/landing pages inst
 | [[09-Particle-Footer]] | [BenjaminUIX](https://x.com/BenjaminUIX/status/2071245795995836437) | Near-black page, particle silhouettes (handshake figures) + particle-text headline, canvas. ACQUIRE |
 | [[10-Night-Scene-Footer]] | [andrii](https://x.com/andriidesign1/status/2079542301966135441) | Dark navy + electric-blue glows, FAQ tier + rounded CTA/footer card, pure CSS. Afford |
 | [[11-Minimal-Gold-Footer]] | [amna](https://x.com/amnadesignn/status/2075962836036300876) | Cream + muted-gold strip, tiny tracked type, pure CSS |
+| [[12-Five-Footer-Styles-Video\|Five footer styles (video)]] | Saved reel ([@ZACHEX](https://www.instagram.com/zachex)) | Hero card · Silhouette · Large-type · Negative · Grounded — structural recipes, one viewport each |
 
 ## The key design insight (SVG vs image)
 These looks are **raster by nature** — the charm is the imperfection (hatching, grain, ink bleed, torn paper, offset registration). Do not try to reproduce that in SVG; you get sterile vector slop. Use SVG only for the *crisp* mark (logo, stamp glyph, icon) that must scale; use a compressed raster asset (WebP/AVIF) for the textured illustration. Full reasoning: [[01-Engraved-Vignette-Footer]] §"SVG vs image".
