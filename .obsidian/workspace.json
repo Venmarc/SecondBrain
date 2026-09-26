@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Codon-Labs-Review-2026-09-23.md",
+                "file": "00-Inbox/RANT.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Codon-Labs-Review-2026-09-23"
+              "title": "RANT"
             }
           }
         ]
@@ -90,8 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 292.6311378479004,
-    "collapsed": true
+    "width": 292.6311378479004
   },
   "right": {
     "id": "e53b3649d4d785ff",
@@ -219,8 +218,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "536e1965b88b73e5",
+  "active": "e62603f6e77f1f11",
   "lastOpenFiles": [
+    "00-Inbox/Codon-Labs-Review-2026-09-23-Edited-Transcript.md",
+    "00-Inbox/Codon-Labs-Review-2026-09-23-Raw-Transcript.md",
+    "06-Agent-Sessions/2026-09-24-gemini-transcribe-audio.md",
+    "00-Inbox/Codon-Labs-Review-2026-09-23.md",
+    "00-Inbox/RANT.md",
     "Recording 20260923212723.m4a",
     "Recording 20260923212407.m4a",
     "Recording 20260923211551.m4a",
@@ -230,7 +234,6 @@
     "Recording 20260923210321.m4a",
     "Recording 20260923210118.m4a",
     "Recording 20260923210016.m4a",
-    "Codon-Labs-Review-2026-09-23.md",
     "Assets/logo_variant_6.png",
     "Assets/logo_variant_6.svg",
     "Assets/logo-dna-c-flat.png",
@@ -254,7 +257,6 @@
     "00-Inbox/Pet Clone Website.md",
     "conflict-files-obsidian-git.md",
     "03-Resources/Design/Backdrop-Supply/demos/backdrop-foundry/index.html",
-    "03-Resources/Design/Backdrop-Supply/engine/presets.json",
     "03-Resources/Design/Backdrop-Supply/_index.md",
     "03-Resources/Design/Backdrop-Supply/08-Build-Runbook.md",
     "03-Resources/Design/Backdrop-Supply/07-Animated-Loops.md",
@@ -264,9 +266,6 @@
     "03-Resources/Design/Backdrop-Supply/03-Cosmic-and-Cavern.md",
     "03-Resources/Design/Backdrop-Supply/02-Glass-and-Iridescent.md",
     "03-Resources/Design/Backdrop-Supply/01-Gradient-Mesh.md",
-    "01-Projects/Clone-Website/Docs/world-history-v1.md",
-    "01-Projects/Clone-Website/Docs/slotmap-motion-v1.md",
-    "01-Projects/Clone-Website/Docs/image-requirements-v1.md",
     "Attachments/Untitled.canvas",
     "03-Resources/Skills/Frontend Awesomeness.canvas"
   ]
