@@ -766,3 +766,14 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 
 - vault backup: 2026-09-23 18:11:24 (2daf0e8)
 
+## 2026-09-24
+
+- Update Global-AGENTS.md. It can now be used in any machine as a global AGENTS.md rule set (a27d3a1)
+- Add global AGENTS.md to inbox (6a10e7d)
+
+
+## 2026-09-26
+
+- Merge remote-tracking branch 'origin/main' (52b6e4c)
+- vault backup: 2026-09-26 13:31:29 (f614c7d)
+
