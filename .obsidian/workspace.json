@@ -4,19 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "3d756a4b9d3e4a17",
+        "id": "9316c91d1e20814b",
         "type": "tabs",
         "children": [
           {
-            "id": "a0f4f254de9dbbea",
+            "id": "9713b4ec629c7efd",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "03-Resources/Design/Backdrop-Supply/assets/zephyr/image-6.webp"
+                "file": "03-Resources/Design/Footer-Design/Footer-Design-Research.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-image",
-              "title": "image-6"
+              "icon": "lucide-file",
+              "title": "Footer-Design-Research"
             }
           }
         ]
@@ -206,19 +218,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a0f4f254de9dbbea",
+  "active": "9713b4ec629c7efd",
   "lastOpenFiles": [
-    "03-Resources/Design/Backdrop-Supply/assets/gradient-bgs/frame-3.webp",
+    "03-Resources/Design/Footer-Design/Footer-Design-Addendum.md",
+    "Untitled.md",
+    "03-Resources/Design/Footer-Design/Footer-Design-Research.md",
+    "03-Resources/Design/Footer-Design",
+    "03-Resources/Design/Backdrop-Supply/assets/nocturne/image-9.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/bloomhaze/image-8.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/ascii/124-rectangle.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/aurorix/image-5.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/animated-backgrounds/ascii-art-2.webp",
     "03-Resources/Design/Backdrop-Supply/assets/high-exposure-gradients/1.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/zephyr/image-6.webp",
+    "03-Resources/Design/Backdrop-Supply/assets/gradient-bgs/frame-3.webp",
     "03-Resources/Design/Backdrop-Supply/assets/horizon/image-6.webp",
     "03-Resources/Design/Backdrop-Supply/assets/iridescence/image-1.webp",
-    "03-Resources/Design/Backdrop-Supply/assets/nebuluxe/image-6.webp",
-    "03-Resources/Design/Backdrop-Supply/assets/nocturne/image-9.webp",
-    "03-Resources/Design/Backdrop-Supply/assets/perplex/image-29.webp",
-    "03-Resources/Design/Backdrop-Supply/assets/portals/image-20.webp",
-    "03-Resources/Design/Backdrop-Supply/assets/prismal/image-3.webp",
-    "03-Resources/Design/Backdrop-Supply/assets/reverie/image-26.webp",
-    "03-Resources/Design/Backdrop-Supply/assets/serenox/image-0.webp",
     "03-Resources/Design/Backdrop-Supply/01-Gradient-Mesh.md",
     "03-Resources/Design/Backdrop-Supply/02-Glass-and-Iridescent.md",
     "03-Resources/Design/Backdrop-Supply/03-Cosmic-and-Cavern.md",
@@ -243,7 +258,6 @@
     "Recording 20260923210534.m4a",
     "Recording 20260923210321.m4a",
     "Recording 20260923210118.m4a",
-    "Recording 20260923210016.m4a",
     "06-Agent-Sessions/2026-09-16-opencode-codon-labs-astro-scaffold.md",
     "01-Projects/Clone-Website/Clone-Website.md",
     "06-Agent-Sessions/2026-09-16-grok-logo-tab-tester.md",
@@ -252,8 +266,6 @@
     "CHANGELOG.md",
     "01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw.md",
     "01-Projects/Driving-Game/Driving-Game.md",
-    "01-Projects/Driving-Game/Docs/driving-game-stage-1-goal.md",
-    "00-Inbox/2026-09-13_active-particle-environments.md",
     "Attachments/Untitled.canvas",
     "03-Resources/Skills/Frontend Awesomeness.canvas"
   ]
