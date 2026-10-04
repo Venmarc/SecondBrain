@@ -38,7 +38,7 @@ Codon Labs already wrote its standard:
 | `Docs/copy-v1.md` §1 World Facts | `world-facts.json` |
 | `Docs/image-requirements-v1.md` R1–R7, §1 | `questions.image.json` (later) |
 | `Docs/slotmap-motion-v1.md` Three Laws + Agy gate | `questions.image.json` (later) |
-| `03-Resources/Design/Web-Garnish/07-Build-Runbook.md` | image rubric, motion rules (later) |
+| `03-Resources/Design/Footer-Design/07-Build-Runbook.md` | image rubric, motion rules (later) |
 
 External authorities are optional, and only where a rule is silent. A reference site (White Desert) enters as a level `examples` anchor, never as the criterion. The instruction holds the property, so a result better than the reference still scores high.
 

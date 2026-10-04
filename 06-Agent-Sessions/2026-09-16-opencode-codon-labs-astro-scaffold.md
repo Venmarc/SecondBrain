@@ -26,7 +26,7 @@ Find and execute the parts of the Codon Labs build that are crucial but do not r
 - `[[01-Projects/Clone-Website/Docs/copy-v1|copy-v1]]` — stamped copy; the source for `src/content/site.ts`.
 - `[[01-Projects/Clone-Website/Docs/image-requirements-v1|image-requirements-v1]]` — palette default, §C1 mark spec, asset ledger.
 - `[[01-Projects/Clone-Website/Docs/slotmap-motion-v1|slotmap-motion-v1]]` — slots, motion budget, mark as design blocker.
-- `[[03-Resources/Design/Web-Garnish/07-Build-Runbook|Web-Garnish Build Runbook]]` — fonts, SVG idioms, engraved vignette recipe.
+- `[[03-Resources/Design/Footer-Design/07-Build-Runbook|Web-Garnish Build Runbook]]` — fonts, SVG idioms, engraved vignette recipe.
 - `~/Pastries/rep-lamalama-logo-grain` — the effect port source.
 - `06-Agent-Sessions/2026-09-16-grok-dna-c-logo-5color.md` — Victor's parallel mark work (not read in full; noted only).
 

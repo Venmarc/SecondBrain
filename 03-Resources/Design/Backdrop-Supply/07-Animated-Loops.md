@@ -29,4 +29,4 @@ The free tier exposes only still WebP previews of these, the MP4s sit behind the
 ## Related
 - [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply index]]
 - [[03-Resources/Design/Backdrop-Supply/08-Build-Runbook|Build runbook]]
-- [[03-Resources/Design/Web-Garnish/_index|Web-Garnish]] (sibling collection, decorative page furniture rather than full-bleed backdrops)
+- [[03-Resources/Design/Footer-Design/_index|Web-Garnish]] (sibling collection, decorative page furniture rather than full-bleed backdrops)

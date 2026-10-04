@@ -26,7 +26,7 @@ If story mode is on, use ~/oracle/ORACLE.md for the draw.
 ## Related
 
 - [[03-Resources/Design/UI-Collections/_index|UI Collections]] — pick the library before you extract
-- [[03-Resources/Design/Web-Garnish/_index|Web design garnish]]
+- [[03-Resources/Design/Footer-Design/_index|Web design garnish]]
 - [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply]]
 
 ## Checklist before review

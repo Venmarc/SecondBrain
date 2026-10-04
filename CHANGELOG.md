@@ -22,7 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **Locator page** — `03-Resources/Design/UI-Collections/demos/ui-collection/index.html` (snapshot of `~/Pastries/rep-ui-collection/`).
 
 #### Changed
-- Linked the collection from `index.md`, [[03-Resources/MOC-UI-UX-Lessons|MOC: UI/UX Lessons]], [[03-Resources/Design/Web-Garnish/_index|Web Garnish]], [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply]], Effects Glossary/Playbook/Build Playbook, Reverse-Engineering, Frontend Awesomeness, Unique Direction, 48 Laws, UI Polish, and the external design-skills MOC.
+- Linked the collection from `index.md`, [[03-Resources/MOC-UI-UX-Lessons|MOC: UI/UX Lessons]], [[03-Resources/Design/Footer-Design/_index|Web Garnish]], [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply]], Effects Glossary/Playbook/Build Playbook, Reverse-Engineering, Frontend Awesomeness, Unique Direction, 48 Laws, UI Polish, and the external design-skills MOC.
 
 ### 2026-09-21 — Clone-Website: visual polish, 1440px layout expansion, and process timeline connector
 
@@ -157,20 +157,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### 2026-09-13 — Web-Garnish: ACQUIRE particle footer rebuilt as antigravity morph-field (v2)
 
-- [[03-Resources/Design/Web-Garnish/09-Particle-Footer|09-Particle-Footer]] — v2 recipe: silhouette-sampled handshake pair replaces stickman; interaction model moved to the Effects_Glossary "Morphing particle field" mechanics (permanent homes, 3s life cycle, hoverProgress² assembly, 25% non-joiners). Pitfalls documented (nearest-home assignment starvation, per-axis bbox squash, aura artifact, clip-art busts, virtual-time screenshot lies).
+- [[03-Resources/Design/Footer-Design/09-Particle-Footer|09-Particle-Footer]] — v2 recipe: silhouette-sampled handshake pair replaces stickman; interaction model moved to the Effects_Glossary "Morphing particle field" mechanics (permanent homes, 3s life cycle, hoverProgress² assembly, 25% non-joiners). Pitfalls documented (nearest-home assignment starvation, per-axis bbox squash, aura artifact, clip-art busts, virtual-time screenshot lies).
 - `demos/acquire-particle-footer/` — index.html (self-contained: embedded silhouette mask, no network), preview.png (hover state), preview-idle.png (resting field).
 - `assets/` +2: `handshake-silhouette-pair.png` (generated target pair, AGY-verified proportions) + `handshake-silhouette-pair-mask.png` (thresholded binary mask, the sampling input).
-- [[03-Resources/Design/Web-Garnish/07-Build-Runbook|07-Build-Runbook]] — sand-particles row updated to v2.
+- [[03-Resources/Design/Footer-Design/07-Build-Runbook|07-Build-Runbook]] — sand-particles row updated to v2.
 
 ### 2026-09-13 — Web-Garnish batch 2: living & editorial footers
 
 #### Added
-- [[03-Resources/Design/Web-Garnish/08-Editorial-Scene-Footer]] — white page + warm arch-bridge scene at the bottom edge + animated smoke layer (replication recipe: photo/illustration/SVG scene, canvas smoke emitter, reduced-motion rules).
-- [[03-Resources/Design/Web-Garnish/09-Particle-Footer]] — near-black page, sand-particle text/shape on canvas (getImageData targets, 600–2000 grains), static feTurbulence fallback, perf rules.
-- [[03-Resources/Design/Web-Garnish/10-Night-Scene-Footer]] — 100% CSS night scene: navy gradient, one radial glow, flat silhouettes, star field, grain.
-- [[03-Resources/Design/Web-Garnish/11-Minimal-Gold-Footer]] — cream + muted-gold, pure CSS, palette-and-proportion only.
+- [[03-Resources/Design/Footer-Design/08-Editorial-Scene-Footer]] — white page + warm arch-bridge scene at the bottom edge + animated smoke layer (replication recipe: photo/illustration/SVG scene, canvas smoke emitter, reduced-motion rules).
+- [[03-Resources/Design/Footer-Design/09-Particle-Footer]] — near-black page, sand-particle text/shape on canvas (getImageData targets, 600–2000 grains), static feTurbulence fallback, perf rules.
+- [[03-Resources/Design/Footer-Design/10-Night-Scene-Footer]] — 100% CSS night scene: navy gradient, one radial glow, flat silhouettes, star field, grain.
+- [[03-Resources/Design/Footer-Design/11-Minimal-Gold-Footer]] — cream + muted-gold, pure CSS, palette-and-proportion only.
 - `assets/` +6: `alim-editorial-train-bridge.jpg`, `alim-editorial-alt.jpg`, `alim-smoke-animation.mp4`, `benjamin-sand-particles.jpg`, `andrii-night-footer.jpg`, `amna-gold-footer.jpg`. Pixel-sampled palettes in each note.
-- [[03-Resources/Design/Web-Garnish/07-Build-Runbook]] — Batch 2 section: per-style build approach + the motion-layer rule (off-viewport pause, reduced-motion killing, subtlety).
+- [[03-Resources/Design/Footer-Design/07-Build-Runbook]] — Batch 2 section: per-style build approach + the motion-layer rule (off-viewport pause, reduced-motion killing, subtlety).
 - Reference images verified via AGY gemini lane: benjamin = ACQUIRE particle-figures footer (handshake silhouettes + particle-text headline); andrii = Afford dark-mode FAQ tier + rounded CTA/footer card with electric-blue glows.
 - **First working replication**: `demos/acquire-particle-footer/index.html` — the ACQUIRE particle footer rebuilt as a single self-contained HTML file (canvas particles: two figure silhouettes + hand-clasp knot, dune crests, starfield, flowing stream, gather-in animation, off-viewport pause, reduced-motion static). Verified frame-stable via real-time Chromium capture + AGY vision review.
 
@@ -186,8 +186,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### 2026-09-13 — Web-Garnish: build kit (runbook + reference assets)
 
 #### Added
-- [[03-Resources/Design/Web-Garnish/07-Build-Runbook]] — recreate-any-style runbook: sampled swatches (duotone `#fdf9ef`/`#466eb4`, vermilion `#ee4032`), Google Fonts stacks, paste-ready SVG/CSS idioms (hatch pattern, duotone filter, paper grain, torn-paper, stamp perforation, sticker tilt), per-style readiness matrix.
-- `03-Resources/Design/Web-Garnish/assets/` — 21 reference images + interactive-stickers demo video from all 7 source posts (footers, stamp posters, watercolor prints, perspective-type posters).
+- [[03-Resources/Design/Footer-Design/07-Build-Runbook]] — recreate-any-style runbook: sampled swatches (duotone `#fdf9ef`/`#466eb4`, vermilion `#ee4032`), Google Fonts stacks, paste-ready SVG/CSS idioms (hatch pattern, duotone filter, paper grain, torn-paper, stamp perforation, sticker tilt), per-style readiness matrix.
+- `03-Resources/Design/Footer-Design/assets/` — 21 reference images + interactive-stickers demo video from all 7 source posts (footers, stamp posters, watercolor prints, perspective-type posters).
 
 ### 2026-09-08 — Assets consolidation (attachments → Assets/)
 
@@ -198,7 +198,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### 2026-09-07 — Web design garnish collection (footer/landing art direction)
 
 #### Added
-- [[03-Resources/Design/Web-Garnish/_index]] — collected X posts on hand-crafted footer/landing garnish. Theme notes: [[03-Resources/Design/Web-Garnish/01-Engraved-Vignette-Footer|engraved vignette footer]], [[03-Resources/Design/Web-Garnish/02-Sticker-Scrapbook-Footer|sticker/scrapbook footer]], [[03-Resources/Design/Web-Garnish/03-Rubber-Stamp-Mark|rubber-stamp mark]], [[03-Resources/Design/Web-Garnish/04-Watercolor-Art-Print|watercolor art print]], [[03-Resources/Design/Web-Garnish/05-Perspective-Typography|perspective typography]], [[03-Resources/Design/Web-Garnish/06-Hermes-Skill-Stack|Hermes skill stack]]. Full copy-paste image prompts preserved for the prompt-backed styles.
+- [[03-Resources/Design/Footer-Design/_index]] — collected X posts on hand-crafted footer/landing garnish. Theme notes: [[03-Resources/Design/Footer-Design/01-Engraved-Vignette-Footer|engraved vignette footer]], [[03-Resources/Design/Footer-Design/02-Sticker-Scrapbook-Footer|sticker/scrapbook footer]], [[03-Resources/Design/Footer-Design/03-Rubber-Stamp-Mark|rubber-stamp mark]], [[03-Resources/Design/Footer-Design/04-Watercolor-Art-Print|watercolor art print]], [[03-Resources/Design/Footer-Design/05-Perspective-Typography|perspective typography]], [[03-Resources/Design/Footer-Design/06-Hermes-Skill-Stack|Hermes skill stack]]. Full copy-paste image prompts preserved for the prompt-backed styles.
 
 ### 2026-09-06 — Jeremy CoS board
 
@@ -778,3 +778,9 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 - docs: add Web-Garnish note extracting five footer styles from the saved @ZACHEX video
 - vault backup: 2026-09-26 13:31:29 (f614c7d)
 - Merge remote-tracking branch 'origin/main' (52b6e4c)
+
+
+## 2026-10-04
+
+- Renamed `03-Resources/Design/Web-Garnish/` to `03-Resources/Design/Footer-Design/` (89f6882) — the folder now holds footer-design research and an addendum beyond the original garnish clips. All 45 tracked files kept.
+- Repointed every wikilink and path that still targeted the old folder (17 files): [[index|index.md]], [[03-Resources/MOC-UI-UX-Lessons|MOC: UI/UX Lessons]], the UI-Collections and Backdrop-Supply indexes, Clone-Website docs, and older changelog entries. Note titles keep the "Web Design Garnish" name; only the folder path moved.

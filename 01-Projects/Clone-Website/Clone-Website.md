@@ -154,7 +154,7 @@ Still open:
 
 - [[01-Projects/Clone-Website/Docs/jev/2026-09-17-quality-battery-v1|Quality battery v1]] — the Jev judge: copy and image batteries, `judge.py`, `vision.py`. Sibling to the after-judge spec.
 - [[01-Projects/Clone-Website/Docs/2026-09-17-jev-after-judge-design|Jev after-judge design]] — the Phase 1 hazard judge spec.
-- [[03-Resources/Design/Web-Garnish/_index|Web-Garnish]] + [[03-Resources/Design/Web-Garnish/07-Build-Runbook|Build Runbook]] — footer kit, fonts, palettes, SVG/CSS idioms
+- [[03-Resources/Design/Footer-Design/_index|Web-Garnish]] + [[03-Resources/Design/Footer-Design/07-Build-Runbook|Build Runbook]] — footer kit, fonts, palettes, SVG/CSS idioms
 - [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] — decoded Lamalama/Antigravity/Fin effects with technique notes
 - [[00-Inbox/Sites To Extract|Sites To Extract]] — the extraction backlog this project draws from
 - White Desert (live reference): https://white-desert.com — extracted skeleton in the raw archive's provenance section

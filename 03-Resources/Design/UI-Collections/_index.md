@@ -241,6 +241,6 @@ The HTML snapshot is [demos/ui-collection/index.html](demos/ui-collection/index.
 
 Live copy: `~/Pastries/rep-ui-collection/`. Glossary status for those objects stays short of `tried` until a Lighthouse 95+ pass and a feel check.
 
-Related collections: [[03-Resources/Design/Web-Garnish/_index|Web design garnish]] · [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply]] · [[03-Resources/MOC-UI-UX-Lessons|MOC: UI/UX Lessons]] · [[03-Resources/Design/Unique Direction|Unique Direction]] · [[03-Resources/Skills/Frontend-Awesomeness|Frontend Awesomeness]]
+Related collections: [[03-Resources/Design/Footer-Design/_index|Web design garnish]] · [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply]] · [[03-Resources/MOC-UI-UX-Lessons|MOC: UI/UX Lessons]] · [[03-Resources/Design/Unique Direction|Unique Direction]] · [[03-Resources/Skills/Frontend-Awesomeness|Frontend Awesomeness]]
 
 **Tags:** #design #inspiration #components #motion #ui-ux

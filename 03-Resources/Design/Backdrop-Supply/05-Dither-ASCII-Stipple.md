@@ -32,4 +32,4 @@ Sample a luminance field, then quantise it. A halftone grid modulates dot radius
 ## Related
 - [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply index]]
 - [[03-Resources/Design/Backdrop-Supply/08-Build-Runbook|Build runbook]]
-- [[03-Resources/Design/Web-Garnish/_index|Web-Garnish]] (sibling collection, decorative page furniture rather than full-bleed backdrops)
+- [[03-Resources/Design/Footer-Design/_index|Web-Garnish]] (sibling collection, decorative page furniture rather than full-bleed backdrops)

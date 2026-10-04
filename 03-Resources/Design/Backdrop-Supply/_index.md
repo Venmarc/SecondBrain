@@ -92,5 +92,5 @@ any parameter and the URL is not ours to depend on.
 - `demos/backdrop-foundry/` - self-contained demo page plus `preview.png`
 
 ## Related
-- [[03-Resources/Design/Web-Garnish/_index|Web-Garnish]] - footer and page garnish collection
+- [[03-Resources/Design/Footer-Design/_index|Web-Garnish]] - footer and page garnish collection
 - [[03-Resources/Design/48-Laws-of-Web-Design|48 Laws of Web Design]]

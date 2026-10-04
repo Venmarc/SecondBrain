@@ -54,8 +54,8 @@ Add wind to the handshake and you have proof the concept survives its first forc
 ## Where it connects in the vault
 
 - [[03-Resources/Tools/Effects_Glossary|Effects_Glossary]] — antigravity GPGPU swarm + morph-field entries (the mechanics reference)
-- [[03-Resources/Design/Web-Garnish/09-Particle-Footer|09-Particle-Footer]] — the working handshake build (wind layer being added now)
-- [[03-Resources/Design/Web-Garnish/07-Build-Runbook|07-Build-Runbook]] — motion-layer rule (off-viewport pause, reduced-motion death, screenshot test)
+- [[03-Resources/Design/Footer-Design/09-Particle-Footer|09-Particle-Footer]] — the working handshake build (wind layer being added now)
+- [[03-Resources/Design/Footer-Design/07-Build-Runbook|07-Build-Runbook]] — motion-layer rule (off-viewport pause, reduced-motion death, screenshot test)
 - FOOTER-1 mascot track (06-Agent-Sessions) — the cursor-reactive philosophy, different family
 
 ## Open decisions (later, not now)
