@@ -301,11 +301,63 @@ Rules:
   Artifacts: `~/Pastries/rep-antigravity-particles/` (`src/pages/Playground.tsx`, `src/components/particle-swarm/engine.ts` morph shaders, `screenshots/build-check/`).
 
 - **[Depth+Motion] Logo-cell grain intro** (lamalama.com) —
-  **Literal:** The first screen is a field of blocky grains that start large, then multiply into a much finer grid until they look like dust over a looping picture. The grains are tiny copies of the L mark, not random noise.
-  **Technique:** Custom WebGL 2 (`#version 300 es`), no Three. Shader `drawLLLogo` paints a 4×4 cell of the L mark. Intro class: `LOGO_START_GRID_SIZE=160` → `LOGO_GRID_SIZE=16`, `GRID_SIZE=16`. Pixel size is the uniform (`u_logo_pixel_size` / `u_pixel_size`). A progress pass writes logo/full/hide channels; a second pass tints those cells with the theme. Intro delay 3.2s (3.8s on the extended hero). Desktop only: `IS_WEBGL=!hasTouch`.
-  **Cost:** One fullscreen compositor + one progress target. Cheap if paused after the intro. Mobile: static first frame, no WebGL.
-  **Options:** start/end cell size; theme RGB; overlay a still or a short loop.
+  **Literal:** A percentage counter runs, then a blocky mark snaps into the centre. Blocks multiply outward until the whole screen is a block field. The field gets finer and darker, then dissolves and the real page shows through. Every block is a cell of the mark itself, never random noise.
+  **Technique:** Custom WebGL 2 (`#version 300 es`), no Three. Two fragment passes share one offscreen RGBA8 target.
+  1. *Progress pass* (`Ji.glsl`) writes `RGBA = (logo, full, hide)`. Each channel is `1.0 - smoothstep(0.0, 1.0, 1.0 - progress + noise * (1.0 - progress))`. The `noise` term is slow value noise sampled on the grid. It is what makes cells switch on in a scattered order instead of a left-to-right wipe.
+  2. *Display pass* (`Yi.glsl`) outputs `vec4(theme * opacity, 1.0 - hide)`.
+  The display pass stacks three layers, all drawn from the same tiled coordinate:
+  - `logo` = centre tile only, boxed by `gh` (a `u_logo_pixel_size` square at the middle), driven by `u_show_logo`.
+  - `logo_all` = `drawLLLogo(st, tex.r, 0.0, 0.0)` — full viewport, 7 of 16 cells.
+  - `logo_full` = `drawLLLogo(st, tex.g, 1.0, 0.0)` — full viewport, all 16 cells.
+  `opacity = min(1.0, logo + logo_all + logo_full)`.
+  **`drawLLLogo(rect, opacity, full, inverted)` is the engine.** It maps `rect` into a 4×4 cell index through `mod(rect.x, 1.0)`. That `mod` is the entire effect: it repeats one 4×4 tile across the whole viewport instead of drawing it once. `rect` is in cell units (`uv * resolution / pixel_size`), so the tile size equals `u_logo_pixel_size`. Inside, each of the 16 cells is `step(1.0 - opacity, progress * index)` with `progress = 1.0 / (7.0 + 9.0 * full)`, so cells light one at a time as the channel value rises. `return min(1.0, output) * ceil(opacity)` kills a layer outright when its opacity is 0.
+  **Naming trap:** `logo_all` and `logo_full` are not the mark. They are the full-screen block field. They are the only two full-viewport layers.
+  **Name:** `drawLLLogo` means *draw Lamalama logo*. The name is not a generic term — it is inherited from the site we copied this from, and `LL` is just Lamalama's initials. If you reuse this component system in another project, rename it to `draw<PROJECT_INITIALS>Logo`. Example: the C logo belongs to Codon Labs, so there it would be `drawCLLogo`. Do not carry `drawLLLogo` into a project that has nothing to do with lamalama.
+  `hide` is drawn on a fixed `u_pixel_size` grid (16px, not the animated one), then `opacity -= hide` and `alpha = 1.0 - hide`. That is the dissolve out.
+  Theme is `mix(u_theme, u_theme_second, u_color_progress) / 255.0`, `(255,255,255)` → `(26,28,28)`. Never a hard cut.
+  **Timeline** — one GSAP timeline, started when the counter hits 100%:
+
+  | tween | to | duration | ease | delay |
+  |---|---|---|---|---|
+  | `showLogo` | 1 | 0.35s | `none` | 0 |
+  | `LOGO_START_GRID_SIZE` | 16 | 3.75s | `power3.in` | 0 |
+  | `logoProgress` | 1 | 2.75s | `power3.in` | 0 |
+  | `fullProgress` | 1 | 3.25s | `power4.in` | 0.5s |
+  | `hideProgress` | 1 | 1.45s | `power4.in` | 2.35s |
+  | `colorProgress` | 1 | 4.25s | `power4.inOut` | 0 |
+  | loader `opacity` | 0 | 0.65s | `power4.out` | 0 |
+
+  Total **4.25s**. `LOGO_START_GRID_SIZE` starts at 160 and ends at 16; it feeds `u_logo_pixel_size` on both passes, so the tile shrinks from 160px to 16px (cells 40px → 4px). Intro delay 3.2s (3.8s on the extended hero). Desktop only: `IS_WEBGL = !hasTouch`.
+  **Cost:** Two fullscreen fragment passes + one RGBA8 target. JS writes uniforms only; no per-frame object churn. Pause it after the intro. Mobile: static first frame, no WebGL.
+  **Options:** start/end cell size; theme RGB pair; overlay a still or a short loop.
+  **Gotcha:** the start grid size must genuinely be 160. Initialise it to its own end value and the tween is a no-op — the tile never changes size and the field stays at 4px, so it reads as faint noise instead of blocks.
   — `tried`
+  Artifacts: `~/Pastries/rep-lamalama-logo/` (reference extraction) and `~/Pastries/rep-lamalama-logo/C-logo-lamalama/` (working rep).
+
+- **[Depth+Motion] Drop-in custom logo for the grain intro (mask swap)** (lab: a rounded C mark on the lamalama intro) —
+  **Literal:** The same blocky intro, but the centre mark is your own logo. A smooth vector logo arrives as hard-edged blocks that read as the logo, then dissolves into the field with everything else.
+  **Technique:** Keep the original intro untouched. Replace only the centre layer.
+  1. Rasterise the SVG once into an offscreen 2D canvas the size of the viewport. Fit it with `scale = min(w / imgW, h / imgH) * 0.45` (0.45 = this C's size relative to full contain; tune per logo), draw it centred, upload as `u_shape_mask` with `CLAMP_TO_EDGE` + `NEAREST`/`NEAREST`. `NEAREST` matters — `LINEAR` smears the cell edges and the block read disappears. Re-run on resize.
+  2. Snap the sample coordinates to cell centres before reading the texture:
+     `shapeUV = (floor(uv * vec2(res / u_pixel_size)) + 0.5) / vec2(res / u_pixel_size)`
+     then `shape = texture(u_shape_mask, shapeUV).a`. This floor-and-offset is the pixelation step. It turns a smooth vector into hard blocks. The cell size is `u_pixel_size`.
+  3. Centre layer only: `logo = shape * u_show_logo`.
+  4. **Leave `logo_all`, `logo_full` and `hide` on `drawLLLogo`.** Do not multiply them by the mask.
+  **The one rule:** the mask answers *where is my mark*. `drawLLLogo` answers *where is the repeating block field*. Never let the mask gate the field. Multiplying the two full-viewport layers by `shape` zeroes them everywhere outside the logo, so the screen never fills — this single mistake cost three failed iterations.
+  **Rename before reuse:** `drawLLLogo` = *draw Lamalama logo*; `LL` is Lamalama's initials, inherited from the source we copied. In your own project use `draw<PROJECT_INITIALS>Logo` — Codon Labs' C logo would be `drawCLLogo`.
+  **Three smoothness settings — pick per logo:**
+  | setting | how | use when |
+  |---|---|---|
+  | **Blocky all the way** | No mask. Let `drawLLLogo` draw its own 4×4 tile as the mark, as the original LL does. | The logo is already a chunky grid of squares. |
+  | **Partly blocky, still readable** | Mask route above, sampled on a coarse grid (8–24px). | The logo is curved or geometric but must stay recognisable. This C, at 16px. |
+  | **Smooth** | Sample the mask at full UV resolution, `LINEAR` filter, no grid snap. | Brand recognisability beats stylistic unity; the field behind can stay blocky. |
+  **How to choose:** render the logo at the size it will actually appear. If it already reads as a grid of squares, go blocky. If the outline would dissolve at 16px, go smooth or coarse-but-readable. Screenshot both and compare before committing.
+  **Trap 1:** sampling with `mod(st, 1.0)` instead of screen UV repeats the mark across the whole viewport — you get a screen full of tiny copies of your logo, one per tile.
+  **Trap 2:** decouple the mark grid from the field grid. Sampling the mask with `logo_columns` (`res / u_logo_pixel_size`) makes the mark's cell size animate with `LOGO_START_GRID_SIZE` 160 → 16, so the logo collapses into a shapeless blob early. The mark grid is fixed at `u_pixel_size`; only the background tile animates.
+  **Trap 3:** the centred `gh` box is only correct when the mark is exactly one tile. With a texture mask, drop `gh` and let the mask's alpha be the shape.
+  **Cost:** one texture upload on load and on resize. Zero extra per-frame cost.
+  — `tried`
+  Artifacts: `~/Pastries/rep-lamalama-logo/C-logo-lamalama/` (`src/shaders/Yi.glsl` mask sampling, `src/IntroCanvas.tsx` upload).
 
 - **[Motion] Cursor velocity-field trail** (lamalama.com) —
   **Literal:** Moving the pointer leaves a pale grain trail that closes slowly, not a particle that chases the cursor. The trail is a reveal of the grain field, not a follow.
@@ -579,6 +631,18 @@ Implementation notes: Escalation kiosk `rep-lamalama-logo-grain` — Oracle stor
 Performance check: Lighthouse mobile Brave incognito :4173 — perf **95**, a11y **95**, BP **100**, SEO **100**. FCP 1.7s, LCP 2.2s, TBT 130ms, CLS 0. Report: output/lighthouse/home.report.json.
 Result: tried (all five)
 Project applied: Pastries/rep-lamalama-logo-grain
+```
+
+```
+Date: 2026-10-03
+Source: https://lamalama.com (screencast) + ~/Pastries/rep-lamalama-logo + ~/Pastries/rep-lamalama-logo/C-logo-lamalama
+Entry: [Depth+Motion] Logo-cell grain intro (OVERWRITTEN) + [Depth+Motion] Drop-in custom logo for the grain intro (NEW)
+Literal name: counter → blocky mark snaps into centre → blocks multiply to a full-screen field → field darkens and dissolves to the scene; with a custom logo, a smooth C renders as blocky cells that fade out with the field.
+Technique used: two fragment passes on one RGBA8 target. Ji.glsl writes (logo, full, hide) with value-noise scattered switching. Yi.glsl: `opacity = min(1, logo + logo_all + logo_full)`; `drawLLLogo` tiles one 4×4 mark through `mod(rect.x, 1.0)`. Custom logo: SVG → offscreen 2D canvas at `contain-fit * 0.45`, centred, uploaded as `u_shape_mask` with NEAREST; sampled on the fixed `u_pixel_size` grid via floor-to-cell-centre; `logo = shape * u_show_logo`. `logo_all` / `logo_full` / `hide` left on `drawLLLogo`.
+Implementation notes: Three iterations failed because `logo_all` and `logo_full` were multiplied by the C mask — that mask is zero outside the logo, so the two full-viewport layers could never draw. Also restored `LOGO_START_GRID_SIZE` to start at 160 (it was initialised to its own end value 16, so the 3.75s `power3.in` tween was a no-op and the field stayed at 4px cells). Verification by Playwright pause/seek on `window.__introTimeline.progress(p)`, not wall-clock: p=0.48 sparse blocks + mark, p=0.60 dense field + grey mark, p=0.72 fine and dark, p=0.84+ scene.
+Performance check: Lighthouse mobile Brave incognito :4173 fresh context (Victor's run) — perf **99**, BP **100**, SEO **82**, a11y **77**. FCP 0.4s, LCP 0.5s, TBT 40ms, CLS 0, Speed Index 1.4s. Perf and BP clear the 95 gate; a11y 77 and SEO 82 sit under it and are still open.
+Result: tried
+Project applied: Pastries/rep-lamalama-logo, Pastries/rep-lamalama-logo/C-logo-lamalama
 ```
 
 ## Open gaps
