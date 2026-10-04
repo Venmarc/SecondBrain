@@ -14,7 +14,7 @@ tags:
 **Sources:** [Exploration post (2 variants)](https://x.com/alimdesigner_/status/2097218379480232086) — "sometimes the best direction appears only after exploring a few wrong ones first" (228 likes) · [Smoke follow-up](https://x.com/alimdesigner_/status/2098305548508684373) — "still a draft, but the smoke came out right" (100 likes, video).
 
 ## What it is (evidence)
-Two footer variants; the author picked the **second image, the train over a tall arch bridge** [[Web-Garnish assets|asset: `alim-editorial-train-bridge.jpg`]]. Pixel structure: ~62% white (`#fcfcfc`), scene row only at the very bottom in warm taupe/grey (`#a6988a`, `#a99b8d`). The rejected first variant (`alim-editorial-alt.jpg`) has more scene surface (large warm band, `#c0b0a1`-family). The follow-up adds a **smoke animation** streaming across the scene (`alim-smoke-animation.mp4`).
+Two footer variants; the author picked the **second image, the train over a tall arch bridge** [[03-Resources/Design/Footer-Design/assets/alim-editorial-train-bridge.jpg|Footer Design assets: alim-editorial-train-bridge.jpg]]. Pixel structure: ~62% white (`#fcfcfc`), scene row only at the very bottom in warm taupe/grey (`#a6988a`, `#a99b8d`). The rejected first variant (`alim-editorial-alt.jpg`) has more scene surface (large warm band, `#c0b0a1`-family). The follow-up adds a **smoke animation** streaming across the scene (`alim-smoke-animation.mp4`).
 
 ## Replication recipe
 **Layout**
