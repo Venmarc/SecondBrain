@@ -6,6 +6,33 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-10-07 — X voice corpus and source-backed content resources created
+
+#### Added
+- **[[raw/X-Reply-Tab-Voice-Corpus-2026-10-07|X Reply Tab Voice Corpus]]** — 149 authored cards from the authenticated X profile, with about 2,541 words of exact tweet text and provenance URLs.
+- **[[06-Agent-Sessions/2026-10-07-omnirush-x-voice-and-post-resources|Session log]]** — records the capture, source-quality correction, and evidence limits.
+- **[[02-Areas/Content-Creation/X-Voice-Reference|X Voice Reference]]** — observed voice patterns, task separation, drafting rules, and a reusable drafting prompt.
+- **[[03-Resources/Content-Creation/X-Voice-Sample-Size-Research|X Voice Sample Size Research]]** — primary-source research on word counts, prompting examples, fine-tuning examples, and evaluation.
+- **[[03-Resources/Content-Creation/X-Post-Resources|X Post Resources]]** — lessons from complete bookmark reads, Codon Labs post angles, idea inventory, and reusable post families.
+
+#### Changed
+- **[[02-Areas/Content-Creation/X-Account-Growth-Playbook|X Account Growth Playbook]]** — added the voice reference, full-source strategy patterns, and the updated evidence status.
+- Corrected stored shell-only Xtracticle records to `partial` so the library does not treat page chrome as source evidence.
+- Rebuilt clean report `747188dbf7a1d048b7e1` with nine complete sources and no partial sources included.
+- Linked the voice resources from `index.md`.
+
+### 2026-10-07 — X account growth playbook created
+
+#### Added
+- **[[02-Areas/Content-Creation/X-Account-Growth-Playbook|X Account Growth Playbook]]** — evidence-labeled posting strategy with timeline, series, story definitions, Codon Labs build loops, templates, and a seven-day starter queue.
+- Linked the playbook from `index.md`.
+
+### 2026-10-06 — X account growth strategy source captured
+
+#### Added
+- **[[raw/X-Account-Sucks-Has-Potential]]** — Immutable summary of the current X growth diagnosis and the reply-to-original content strategy. A tested playbook will be created in the Content Creation area after Bookmark Intelligence provides evidence.
+- Linked the new raw source from `index.md`.
+
 ### 2026-09-23 — Codon-Labs: visual motion polish micro-interactions merged to main
 
 #### Added

@@ -10,6 +10,7 @@
 - 📝 **[[CHANGELOG|CHANGELOG.md]]** — Structural changes
 - 🧾 **[[raw/2026-08-04-ledger-landing-page-audit]]** — Raw Ledger landing-page audit
 - 🧾 **[[raw/2026-08-15-grok-x-algorithm-viral-tactics]]** — Raw Grok X-algorithm extraction (see verified synthesis before use)
+- 🧾 **[[raw/X-Account-Sucks-Has-Potential]]** — X account growth diagnosis and reply-to-original strategy (raw source)
 - 🧰 **[[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|How Victor works with agents]]** — Supervisor model
 - 📋 **[[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault improvement backlog]]** — Deferred expansion work
 - 🩺 **[[LINT-REPORT|LINT-REPORT.md]]** — Latest vault lint (2026-07-31)
@@ -53,7 +54,7 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 - 🧭 **[[02-Areas/Ops/Jeremy-Board|Jeremy Board]]** — Chief of Staff ticket board (Ready → Done)
 - 👤 **[[02-Areas/Personal-Growth/RedMane|RedMane (Victor)]]** — Profile and working style
 - 🤖 **[[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|Agent Ops]]** — How agents are used now · **[[02-Areas/Agent-Ops/Provider-Model-Audit|Provider-Model-Audit]]** — historical canary audit · **[[02-Areas/Agent-Ops/Provider-Routing-Playbook|Provider Routing Playbook]]** — current cost/latency/quality dispatch policy
-- 📣 **[[02-Areas/Content-Creation/Content-Creation|Content Creation]]** — X/LinkedIn development publishing; sports clipping retained as an earlier lane
+- 📣 **[[02-Areas/Content-Creation/Content-Creation|Content Creation]]** — X/LinkedIn development publishing; sports clipping retained as an earlier lane; [[02-Areas/Content-Creation/X-Account-Growth-Playbook|X Account Growth Playbook]] and [[02-Areas/Content-Creation/X-Voice-Reference|X Voice Reference]] are the current experiment
 - 🧠 **[[02-Areas/Founder-Playbooks/Founder-Playbooks|Founder Playbooks]]** — Diana Hu AI-native + Hormozi leverage/first-$100K + Codie content business + YC Pocket Guide (extracted 2026-08-18)
 
 ---
@@ -70,13 +71,15 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 - 📝 **[[Templates/Decision Record Template|Decision record]]** · **[[Templates/Publishing Record Template|Publishing record]]**
 - 🗺️ **[[03-Resources/Vault-LLM-Wiki-Patterns|Vault LLM Wiki Patterns]]**
 - 📣 **[[03-Resources/SEO-Marketing/X-Algorithm-Ranking-Signals|X Algorithm Ranking Signals]]** — what the open-sourced X For You ranking actually rewards; weights verified against source, 3 corrections to the original extraction
+- 📚 **[[03-Resources/Content-Creation/X-Voice-Sample-Size-Research|X Voice Sample Size Research]]** — no universal 2,000-word minimum; use varied, task-matched authored examples and held-out checks
+- 🧰 **[[03-Resources/Content-Creation/X-Post-Resources|X Post Resources]]** — complete-read lessons, Codon Labs post angles, handwritten idea inventory, and post-family prompts
 - 🛠️ **[[03-Resources/Tools/Vault-Librarian-Interviewer|Vault Librarian]]** · [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] · [[03-Resources/Tools/Effects_Playbook|Effects Playbook]] · [[03-Resources/Tools/Effects_Build_Playbook|Effects Build Playbook]] · [[03-Resources/Tools/AgentMemory-Dual-Store-Tab-Write-Paths|AgentMemory dual-store + tab write paths]] · [[03-Resources/Tools/OpenCode-Vision-Provider-Default|OpenCode vision provider default]] — make any opencode-served model the vision tool's primary backend
 
 ---
 
 ## 🤖 Agent Sessions (06-Agent-Sessions)
 New sessions: `YYYY-MM-DD-<agent>-<slug>.md` via [[Templates/Agent-Session-Summary|template]]. Processed logs index: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].  
-Latest: [[06-Agent-Sessions/2026-09-16-opencode-codon-labs-astro-scaffold|Codon Labs Astro scaffold]] — logo isolated as a drop-in mark slot so the missing logo stops blocking the build; effects ported but gated; `astro check` clean. Prior: [[06-Agent-Sessions/2026-09-12-opencode-node24-upgrade|Node v24 upgrade]] — machine Node v20→v24.21.0 (nvm), global CLIs carried over, hermes-gateway systemd PATH pin fixed; nvm/systemd traps logged to ANTI_PATTERNS. Prior: [[06-Agent-Sessions/2026-09-03-bossman-overnight-jeremi-review|Overnight Jeremi / X / LinkedIn]] — content-system verdict + recruiter skip-test. Prior: [[06-Agent-Sessions/2026-08-15-hermes-provider-audit|Provider audit]] — full Hermes provider audit: the "everything failing" cascade traced to a global `model.base_url` override (not bridge contamination), unset and verified; every provider live-tested and the working-model matrix recorded (agentrouter OK, NVIDIA 29/102, Copilot 13, Nous 5 free, Vercel 2, Gemini removed). Prior: [[06-Agent-Sessions/2026-08-14-hermes-agentrouter-sensitive-words-block|AgentRouter sensitive-words block]]. Historical processed logs: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].
+Latest: [[06-Agent-Sessions/2026-10-07-omnirush-x-voice-and-post-resources|X voice corpus and post resources]] — 149 authored X cards captured, six complete bookmark sources converted into post resources, and shell-only records corrected. Prior: [[06-Agent-Sessions/2026-09-16-opencode-codon-labs-astro-scaffold|Codon Labs Astro scaffold]] — logo isolated as a drop-in mark slot so the missing logo stops blocking the build; effects ported but gated; `astro check` clean. Prior: [[06-Agent-Sessions/2026-09-12-opencode-node24-upgrade|Node v24 upgrade]] — machine Node v20→v24.21.0 (nvm), global CLIs carried over, hermes-gateway systemd PATH pin fixed; nvm/systemd traps logged to ANTI_PATTERNS. Prior: [[06-Agent-Sessions/2026-09-03-bossman-overnight-jeremi-review|Overnight Jeremi / X / LinkedIn]] — content-system verdict + recruiter skip-test. Prior: [[06-Agent-Sessions/2026-08-15-hermes-provider-audit|Provider audit]] — full Hermes provider audit: the "everything failing" cascade traced to a global `model.base_url` override (not bridge contamination), unset and verified; every provider live-tested and the working-model matrix recorded (agentrouter OK, NVIDIA 29/102, Copilot 13, Nous 5 free, Vercel 2, Gemini removed). Prior: [[06-Agent-Sessions/2026-08-14-hermes-agentrouter-sensitive-words-block|AgentRouter sensitive-words block]]. Historical processed logs: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].
 
 ---
 
