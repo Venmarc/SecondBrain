@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-10-11 — Web design taste extracted
+
+#### Added
+- **[[03-Resources/Design/taste|Victor's taste]]** — initial extraction interview covering web-design judgment, references, dealbreakers, signature moves, and undefined zones.
+- Linked the note from `index.md`.
+
 ### 2026-10-07 — X voice corpus and source-backed content resources created
 
 #### Added

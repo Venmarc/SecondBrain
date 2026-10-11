@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-Inbox/Idiom Idea.md",
+                "file": "03-Resources/Design/taste.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -47,12 +47,12 @@
                   "sortOrder": "alphabetical",
                   "showSearch": false,
                   "searchQuery": "",
-                  "backlinkCollapsed": true,
+                  "backlinkCollapsed": false,
                   "unlinkedCollapsed": true
                 }
               },
               "icon": "lucide-file",
-              "title": "Idiom Idea"
+              "title": "taste"
             }
           }
         ],
@@ -245,9 +245,11 @@
   },
   "active": "a95f7516e62980b2",
   "lastOpenFiles": [
+    "raw/Reframing_career_path_beyond_indie_hacking_-_Claude.pdf",
+    "00-Inbox/Idiom Idea.md",
+    "03-Resources/Design/taste.md",
     "Pasted image 20261008140912.png",
     "00-Inbox/review_prompt.md",
-    "00-Inbox/Idiom Idea.md",
     "06-Agent-Sessions/2026-10-07-omnirush-x-voice-and-post-resources.md",
     "03-Resources/Content-Creation/X-Post-Resources.md",
     "02-Areas/Content-Creation/X-Voice-Reference.md",
@@ -270,7 +272,6 @@
     "03-Resources/Design/Backdrop-Supply/assets/bloomhaze/image-8.webp",
     "03-Resources/Design/Backdrop-Supply/assets/ascii/124-rectangle.webp",
     "03-Resources/Design/Backdrop-Supply/assets/aurorix/image-5.webp",
-    "03-Resources/Design/Backdrop-Supply/assets/animated-backgrounds/ascii-art-2.webp",
     "03-Resources/Design/Backdrop-Supply/01-Gradient-Mesh.md",
     "03-Resources/Design/Backdrop-Supply/02-Glass-and-Iridescent.md",
     "03-Resources/Design/Backdrop-Supply/03-Cosmic-and-Cavern.md",
@@ -284,7 +285,6 @@
     "06-Agent-Sessions/2026-08-14-hermes-claude-bridge-webui-anthropic-lane.md",
     "00-Inbox/RANT.md",
     "00-Inbox/Codon-Labs-Review-2026-09-23-Edited-Transcript.md",
-    "00-Inbox/Codon-Labs-Review-2026-09-23-Raw-Transcript.md",
     "Recording 20260923212723.m4a",
     "Recording 20260923212407.m4a",
     "Recording 20260923211551.m4a",

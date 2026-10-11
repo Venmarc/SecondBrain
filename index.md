@@ -61,6 +61,7 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 
 ## 📚 Resources (03-Resources)
 - 🗺️ **[[03-Resources/MOC-UI-UX-Lessons|MOC: UI/UX Lessons]]** · [[03-Resources/MOCs/MOC-Projects|MOC: Projects]]
+- 🎨 **[[03-Resources/Design/taste|Victor's taste]]** — extracted web-design judgment, references, dealbreakers, and recurring patterns
 - 🖼️ **[[03-Resources/Design/Footer-Design/_index|Web design garnish]]** — footer/landing art direction collection (engraved vignette, sticker/scrapbook, rubber-stamp mark, watercolor art print, perspective typography)
 - 🧩 **[[03-Resources/Design/UI-Collections/_index|UI Collections]]** — labels and component lists for [Rare UI](https://www.rareui.com/), [Obsidian UI](https://www.obsidianui.dev/), [Transitions.dev](https://transitions.dev/), [Design Spells](https://www.designspells.com/)
 - 🌌 **[[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply]]** — full-bleed backdrop collection (31 cached freebies + sampled palettes, 7 style-family notes, 32-mode shader engine with 61 presets, verified code recipes)
