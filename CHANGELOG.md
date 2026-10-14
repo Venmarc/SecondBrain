@@ -6,6 +6,61 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-10-14 — Agent-session extraction and Clone-Website reset
+
+#### Added
+- **[[06-Agent-Sessions/extracted-sessions|Extracted Sessions]]** — reviewed all 75 remaining agent-session logs, recorded reusable lessons and current blockers, and recorded Clef's resource-folder routing decisions.
+- **[[03-Resources/Tools/Hermes-Provider-Bridge-Runbook|Hermes Provider Bridge Runbook]]** — consolidated Claude and Antigravity bridge mechanics, replay rules, image limits, request paths, and safety gates.
+- **[[03-Resources/Tools/Node-and-Systemd-Upgrade-Runbook|Node and Systemd Upgrade Runbook]]** — recorded the verified nvm, global CLI, systemd PATH, and project-directory upgrade procedure.
+
+#### Changed
+- Promoted session-derived lessons into Principles, UI Polish, Effects Build, design taste, and Footer Design notes.
+- Updated current references to use the extracted-session index instead of deleted source logs.
+- Deleted all reviewed source logs from `06-Agent-Sessions/`; kept the index, JSON tooling artifacts, and `.gitkeep`.
+- Deleted deprecated Clone-Website vault files and preserved its rewrite folder structure with `.gitkeep` placeholders.
+- Audited `04-Archive/` and `05-Daily/`; fixed clear historical links and stale daily-note template text without editing Inbox or immutable clips.
+- Updated `BRAIN.md`, `index.md`, and `LINT-REPORT.md` with the 2026-10-14 maintenance verification and its remaining link-classification limits.
+- Updated `README.md` and `ANTI_PATTERNS.md` to remove stale project status and deleted-session references found during adversarial verification.
+- Corrected the extracted HALDEN row for `2026-09-05-grok-halden-seed-ask.md` and recorded its ASK-wall result before treating source-log deletion as preserved.
+- Corrected the retained lint report's theme-toggle contradiction and flagged the stale Ledger `PHASES.md` mirror for source-of-truth sync.
+- Cleared all disposable and processed contents of `00-Inbox/`, keeping `.gitkeep` and the genuine `Idiom Idea.md` resource. This removed the pet-clone note, Lamalama capture, and `Jellyfish-swarm.html`.
+- Preserved the empty `01-Projects/Clone-Website/` folder structure and its `.gitkeep` placeholders for Victor's rewrite.
+- Repointed active references from deleted Inbox notes to extracted resources or plain historical text.
+- Deleted the vault-local `CLAUDE.md`; `AGENTS.md` remains the single vault instruction source.
+
+### 2026-10-13 — AI Hero v1.3 lessons extracted
+
+#### Added
+- **[[03-Resources/Principles/09-AI-Hero-v1.3-Next-Lessons-2026-10-13|AI Hero v1.3 next lessons]]** — current v1.3 closeout loop, PR evidence shape, retro categories, glossary migration, harness-neutral handoffs, and the recommended implementation order.
+
+### 2026-10-12 — X and agent-use-case exploration processed
+
+#### Added
+- **[[06-Agent-Sessions/2026-10-12-omnirush-agent-exploration|Session log]]** — records the extraction, source-quality handling, workflow mapping, and internet-timeout recovery.
+- **[[03-Resources/Agent-Exploration/2026-10-12/00-Exploration-Index|Agent exploration index]]** — processed 45 X bookmarks, 16 authored posts, 68 For You items, 13 full article reads, and an agentusecases.ai scan.
+- **[[03-Resources/Agent-Exploration/2026-10-12/01-X-Bookmark-Intelligence|X bookmark intelligence]]** — source-backed extracts and local replications for content, design, Jev, distribution, and paid-result tests.
+- **[[03-Resources/Agent-Exploration/2026-10-12/02-X-Feed-Signal-Scan|X feed signal scan]]** — authored-post and For You themes with stopping rule and implementation notes.
+- **[[03-Resources/Agent-Exploration/2026-10-12/03-AgentUseCases-Local-Replications|Agent use cases and local replications]]** — PC-feasible mappings, approval boundaries, and weak candidates.
+- **[[03-Resources/Agent-Exploration/2026-10-12/04-Workflow-Upgrade-Plan|Workflow upgrade plan]]** — decision-first research and publishing loop.
+- **[[03-Resources/Agent-Exploration/2026-10-12/05-Money-Experiments|Money experiments]]** — evidence-labeled productized service tests; no assured-income claims accepted.
+- **[[03-Resources/Agent-Exploration/2026-10-12/06-Evidence-and-Limits|Evidence and limits]]** — capture counts, provenance, and source-quality boundaries.
+- **[[03-Resources/Agent-Exploration/2026-10-12/07-X-Bookmark-Inventory|X bookmark inventory]]** — all 45 captured bookmark cards with source links and evidence labels.
+- **[[03-Resources/Agent-Exploration/2026-10-12/08-Local-Research-Queue-Spec|Local research queue spec]]** — duplicate-safe state machine, Jev routing, verification, and approval boundaries.
+
+### 2026-10-12 — AI Hero workflow extracted
+
+#### Added
+- **[[03-Resources/Principles/08-Shared-Router-Architecture-Draft|Shared router architecture draft]]** — Victor's nested-router direction, search lanes, browser session selection, mobile-first testing, cross-client loading, and Agent-Reach assessment. Runtime configuration remains a proposal.
+- **[[06-Agent-Sessions/2026-10-12-omnirush-ai-hero-workflow|AI Hero workflow session log]]** — records the first-party AI Hero extraction, local system comparison, source limits, and approval questions.
+- **[[03-Resources/Principles/00-AI-Hero-Workflow-Index|AI Hero workflow index]]** — the main idea-to-ship spine, route branches, human gates, and context policy.
+- **[[03-Resources/Principles/01-AI-Hero-Main-Flow|AI Hero main flow]]** — Matt Pocock's route from alignment through implementation, review, and retro.
+- **[[03-Resources/Principles/02-Agent-Document-Principles|Agent document principles]]** — progressive disclosure, context pointers, completion criteria, pruning, and deterministic guardrails.
+- **[[03-Resources/Principles/03-Execution-Quality-and-Autonomy|Execution quality and autonomy]]** — seams, TDD, tracer bullets, feedback loops, HITL, and bounded AFK work.
+- **[[03-Resources/Principles/04-Current-System-Gap-Analysis|Current system gap analysis]]** — local route, tool-selection, glossary, subagent, and closure gaps.
+- **[[03-Resources/Principles/05-Local-AI-Hero-Operating-Model-Draft|Local AI Hero operating model draft]]** — proposed task card, route table, tool policy, closure record, and success criteria.
+- **[[03-Resources/Principles/06-AI-Hero-Domain-Glossary|AI Hero domain glossary]]** — canonical terms for the proposed local operating model.
+- **[[03-Resources/Principles/07-AI-Hero-Source-Map|AI Hero source map]]** — first-party AI Hero pages and repository sources used for the extraction.
+
 ### 2026-10-11 — Web design taste extracted
 
 #### Added

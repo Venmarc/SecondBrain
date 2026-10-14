@@ -26,6 +26,6 @@ Raw highlights = flagged. Adding commentary, text overlay, or analysis = general
 Previous attempts at clipping never started. This window is concrete (June 11–July 19). Power instability in Nigeria is a real constraint — need to plan around it or use phone-only workflow.
 
 ## Decision Status
-⬜ Not decided. See [[02-Areas/Content-Creation/Content-Creation-Overview]]
+⬜ Not decided. This is historical archive material, not an active content lane.
 
 **Tags:** #saved-thread #content-creation #world-cup #idea

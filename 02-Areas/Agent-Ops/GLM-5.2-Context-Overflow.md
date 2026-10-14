@@ -11,7 +11,9 @@
 
 A long-running Build-lane session spanning scaffold → 4 primitives → 2-page compose → 8+ Lighthouse audits → review-animations lane → README write crashed with an **internal server error** at the z-ai/glm-5.2 API tier when the accumulated conversation context exceeded the provider's undocumented ceiling. The README (152 lines) survived on disk; three remaining steps (Playwright specs, glossary status promotion, session log) are incomplete but recoverable.
 
-This is the **second confirmed GLM-5.2 context-overflow crash** across two OpenCode sessions — the first occurred during Unit 6's Extract lane (see `Opencode_Agent_crash_session.md` for the prior crash).
+This is the **second confirmed GLM-5.2 context-overflow crash** across two OpenCode sessions. The first occurred during Unit 6's Extract lane.
+
+**Current status:** Historical incident. The source session was reviewed and deleted after extraction on 2026-10-14. The reusable context-budget lessons now live in [[03-Resources/Principles/03-Execution-Quality-and-Autonomy]] and [[03-Resources/Tools/Effects_Build_Playbook]].
 
 ---
 
@@ -66,7 +68,7 @@ When the assistant attempts to respond with another large action (reading + writ
 |------|--------|------------------------|
 | Playwright specs (`tests/effects.spec.mjs`) | **Not written** | Write 1 spec per glossary entry (4 specs) asserting the component exists in the DOM + has the correct attribute/element. |
 | Glossary status promotion to `tried` | **Not done** | Flip the 4 entries' status lines in `Effects_Glossary.md` from `untested`/`extracted` → `tried`. Add verified-log blocks with actual Lighthouse numbers. |
-| Session log (`06-Agent-Sessions/`) | **Not written** | Write the session log per the template at `06-Agent-Sessions/2026-07-19-opencode-antigravity-build.md`. |
+| Session log (`06-Agent-Sessions/`) | **Extracted** | The source log was reviewed and recorded in [[06-Agent-Sessions/extracted-sessions|Extracted Sessions]]. |
 
 Everything else — scaffold, primitives, pages, tokens, Lighthouse audits (home 99 / depth 99), review verdict, README — is on disk and verified.
 
@@ -83,7 +85,6 @@ Everything else — scaffold, primitives, pages, tokens, Lighthouse audits (home
 
 ## Related
 
-- `Opencode_Agent_crash_session.md` (prior crash — Unit 6 Extract lane, same error, same provider)
-- `~/prompt.md` — the user's handoff from the prior crash session
+- Prior Unit 6 Extract crash — same error class and provider; source details are preserved in this note's root-cause section.
 - `~/Pastries/rep-antigravity-swarm-typewriter/README.md` — the build that survived this crash
-- `~/Documents/SecondBrain/06-Agent-Sessions/2026-07-18-opencode-antigravity-extract.md` — Extract lane session log (completed before this build)
+- [[06-Agent-Sessions/extracted-sessions|Extracted Sessions]] — historical session index

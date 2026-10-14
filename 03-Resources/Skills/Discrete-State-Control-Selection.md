@@ -29,7 +29,7 @@ Discrete states are not made continuous by adding snap physics. The control shou
 ## Where This Appeared
 
 - **Ledger** — Transaction_UI_Spec §4 sized Type as a 3-way segmented (`All` / `Income` / `Expense`) instead of a slider/dimmer when it drives the Category list below it. Same reasoning applied to Date Range (`This Month` / `Last Month` / `3 Months` / `This Year` / `Custom`). Built 2026-07-19; verified during the Ledger UI polish audit session.
-- See session log: [[06-Agent-Sessions/2026-07-19-grok-ledger-ui-polish-audit-fixes]]
+- See the related extraction record: [[06-Agent-Sessions/extracted-sessions|Extracted Sessions]] — Ledger UI polish thread.
 
 ## Counter-example (when slider IS right)
 

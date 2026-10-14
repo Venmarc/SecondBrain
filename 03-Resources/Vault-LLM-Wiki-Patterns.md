@@ -18,7 +18,7 @@ Synthesized from [[Clippings/Vault Research|Vault Research]] (SpikeCalls X threa
 | Session continuity | agentmemory `memory_smart_search` + `06-Agent-Sessions/` |
 
 ## Victor-specific adaptations
-- **Boss agent:** Gemini/Antigravity + Grok (not Claude Code) — rules live in `BRAIN.md` + `AGENTS.md`.
+- **Agent-agnostic operation:** Victor supervises; any approved CLI may assist under the shared `BRAIN.md` + `AGENTS.md` rules.
 - **Immutable clippings:** Summaries in `03-Resources/`, never edit `Clippings/`.
 - **Machine + human memory:** agentmemory for recall; vault for journey notes.
 

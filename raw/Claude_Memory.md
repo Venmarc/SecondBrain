@@ -11,7 +11,7 @@ description: Who RedMane is — solo developer, studio, and what they build
 
 - Solo developer operating under the studio name [Venmarc Studio](https://venmarcstudio.xyz)
 
-- Builds consumer apps and agentic tooling systems
+- Builds websites, apps and agentic tooling systems
 
 - Does design work connected to a fashion brand called Daniel Élan
 
@@ -191,7 +191,7 @@ Scope:
 
 name: momentum
 
-description: Momentum habit and fitness tracker — stack, v1 decisions, ship target
+description: Momentum habit and fitness tracker — stack, v1 decisions
 
 ---
 
@@ -210,8 +210,6 @@ v1 decisions:
 - Sleep input as slider plus tap-to-type
 
 - Browser push notifications via Service Worker and VAPID keys in Phase 3
-
-- Realistic ship target of mid-September 2026
 
   
 

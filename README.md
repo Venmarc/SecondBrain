@@ -1,12 +1,12 @@
 # Victor's Second Brain (Personal Knowledge OS)
 
-> **One-line Summary**: Shared vault for Victor and agents — Momentum + Ledger Phase 0 complete, Ledger Phase 1 next, Tempire later. Product docs mirror Port Sites.
+> **One-line Summary**: Shared vault for Victor and agents — Momentum Phase 0 complete, Ledger Phase 3 in progress, and Tempire later. Product docs mirror Port Sites.
 
 ---
 
 ## Active projects
 - **[Momentum](https://peakmomentum.vercel.app)** — Personal habit + fitness daily OS · Phase 0 ✓ · [hub](01-Projects/Momentum/Momentum.md)
-- **[Ledger](https://legderix.vercel.app)** — Personal expense/budget tracker · Phase 1 next · [hub](01-Projects/Ledger/Ledger.md)
+- **[Ledger](https://ledgerix.vercel.app)** — Personal expense/budget tracker · Phase 3 in progress; P3-A complete and P3-B paused · [hub](01-Projects/Ledger/Ledger.md)
 - **[Tempire](https://tempire.xyz/)** — Template marketplace · **later** · [hub](01-Projects/Tempire/Tempire.md)
 
 Product source of truth: `Documents/Port Sites/Category 5/<Project>/`. Vault `Docs/` are dated mirrors.

@@ -17,7 +17,7 @@
 - **05-Daily/** — journal
 - **06-Agent-Sessions/** — session logs (kept; history is good)
 
-## Active focus (2026-08-03)
+## Active focus (reviewed 2026-10-14)
 - **skill-router** — top priority; agent-agnostic architecture proposed/decided, implementation unverified against the unfinished Gemini/Antigravity-specific source snapshot
 - **Momentum** — medium priority; Phase 0 complete; sidebar + auth refinement done (07-17); hydration jank + `ensureProfile()` blocking issue open
 - **Ledger** — medium priority; Phase 1 & 2 gates passed (Victor, 07-21 / 07-28); Phase 3 P3-A (analytics foundations) complete 07-30, P3-B (analytics UI) plan paused mid-review on Victor's "STOP"
@@ -45,5 +45,5 @@
 - Keep [[index|index.md]] and [[CHANGELOG|CHANGELOG.md]] current on structural change.
 - Deferred density work: [[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault Improvement Backlog]]
 
-**Last updated**: 2026-08-03
-**Changelog**: skill-router promoted to top priority with architecture/implementation evidence states; Better Me, Better Vault decision-support and publishing loop added.
+**Last updated**: 2026-10-14
+**Changelog**: Active-focus metadata refreshed after agent-session extraction and the Archive/Daily audit. The skill-router priority, Better Me, Better Vault decision-support, and publishing loop remain current.

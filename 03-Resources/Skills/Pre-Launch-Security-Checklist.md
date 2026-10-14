@@ -3,8 +3,6 @@ title: Pre-Launch Security Checklist
 date: 2026-06-28
 tags:
   - security
-  - tempire
-  - momentum
   - todo
   - skill
   - compliance
@@ -218,21 +216,6 @@ headers: async () => [{
 
 ---
 
-## Tempire-Specific Action List
-
-| Issue | Tempire Status | Action |
-|-------|--------------|--------|
-| RLS on all tables | ✅ Documented | ✅ Verify policies aren't `USING (true)` |
-| Service role key server-only | ✅ TRD rule | ✅ Grep to verify |
-| Download proxy rate limiting | ❌ Not mentioned | 🔴 Add Upstash rate limiting to `/api/download` |
-| ToS + Privacy Policy | ❌ `#todo/research` | 🔴 Generate and deploy |
-| CORS config | ❓ Unknown | 🟠 Audit `proxy.ts` and any API routes |
-| Stack trace leak | ✅ global-error.tsx documented | ✅ Verify in production |
-| Input sanitization | ✅ Zod on forms | 🟠 Grep for `dangerouslySetInnerHTML` |
-| Auth vs. Authorization | ✅ Role-based Clerk | ✅ Manual test: buyer → seller route |
-| Storage bucket visibility | ✅ Documented | ✅ Verify in actual Supabase project |
-| Dependency audit | ❌ Not mentioned | 🟡 Run `npm audit` |
-
 ---
 
 ## The 30-Minute Execution Order
@@ -249,8 +232,6 @@ headers: async () => [{
 ## Related Resources in Vault
 - [[03-Resources/Skills/Secure-Downloads-Middleware]] — download proxy and RLS audit guide
 - [[03-Resources/Skills/Theme-Switching-Foundation]] — auth race condition patterns
-- [[01-Projects/Tempire/Tempire#TODO (when revived)|Tempire TODO]] — add rate limiting and ToS to 🔴 Critical when revived
-- [[01-Projects/Tempire/Tempire#Architecture decisions (condensed)|Tempire decisions]] — document CORS and rate limit when implemented
-- [[01-Projects/Momentum/Lessons-from-DEV_NOTES]] — mentions ToS gap and privacy policy concern
+- Apply this checklist to the active project's own security docs and phase gate.
 
-**Tags:** #security #tempire #momentum #todo #skill #compliance #supabase #rls
+**Tags:** #security #todo #skill #compliance #supabase #rls

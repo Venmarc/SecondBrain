@@ -299,7 +299,7 @@ I realized, over the past week, that I've been straying away AGAIN from my proje
 
 ---
 ## Related
-- [[01-Projects/Momentum/Docs/PRD|PRD]] · [[01-Projects/Momentum/Notes|Notes]]
-- [[02-Areas/Health-Fitness/Personal-Health-OS|Personal Health OS]] (dogfood)
+- [[01-Projects/Momentum/Docs/PRD|PRD]] · [[01-Projects/Momentum/Docs/NOTES|Notes]]
+- Personal Health OS (historical reference; no current vault note)
 - [[03-Resources/MOCs/MOC-Projects|MOC: Projects]]
-- [[02-Areas/Vision/North-Star|North Star]]
+- North Star (historical reference; no current vault note)

@@ -1,6 +1,6 @@
 ---
 title: MOC: Projects
-date: 2026-07-09
+date: 2026-10-14
 tags:
   - moc
   - projects
@@ -11,12 +11,14 @@ tags:
 
 > **One-line Summary**: Graph hub for active and paused build projects — status, hubs, and doc entry points.
 
-## Active (Phase 0)
+## Active and paused
 
 | Project | Hub | Phase doc | UI lessons |
 |---------|-----|-----------|------------|
+| skill-router | [[01-Projects/skill-router/skill-router]] | — | [[03-Resources/Skills/Skill-Router-Hook]] |
 | Momentum | [[01-Projects/Momentum/Momentum]] | [[01-Projects/Momentum/Docs/PHASES]] | [[03-Resources/MOC-UI-UX-Lessons]] |
 | Ledger | [[01-Projects/Ledger/Ledger]] | [[01-Projects/Ledger/Docs/PHASES]] | [[01-Projects/Ledger/Docs/DESIGN]] · [[01-Projects/Ledger/Docs/UIUX_BRIEF]] |
+| Driving Game | [[01-Projects/Driving-Game/Driving-Game]] | [[01-Projects/Driving-Game/Docs/driving-game-stage-1-goal]] | — |
 
 ## Later
 
@@ -31,5 +33,3 @@ tags:
 - Session lessons: [[03-Resources/Vault-Ops/Session-Lesson-Extraction-Idea]]
 
 **Tags:** #moc #projects
-
-- [[01-Projects/Driving-Game/Driving-Game|Driving Game]] — Stage 1 (Godot / Linux)

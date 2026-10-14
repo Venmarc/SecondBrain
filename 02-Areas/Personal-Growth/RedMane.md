@@ -1,6 +1,6 @@
 # RedMane (Profile & System Context)
 
-> **One-line Summary**: Victor Mario (RedMane) — builder in Nigeria; supervises 1–2 agents; active on Momentum + Ledger Phase 0; Tempire later for frontend growth.
+> **One-line Summary**: Victor Mario (RedMane) — builder in Nigeria; supervises 1–2 agents; prioritizes skill-router, Ledger Phase 3, frontend craft, and evidence-led publishing.
 
 ## 1. Identity
 - **Name**: Victor Mario (RedMane)
@@ -20,11 +20,12 @@
 ---
 
 ## 3. Goals & roadmap
-1. Ship **Momentum** as a real daily driver + portfolio piece (honest phases → mid-Sep 2026 class timeline in PHASES).
-2. Build **Ledger** for personal NGN expense discipline (parallel Phase 0).
-3. Revisit **Tempire** after frontend level-up.
-4. Compound knowledge in this vault so the same bugs aren't relearned.
-5. Content creation runway when bandwidth allows.
+1. Verify and advance **skill-router** as the top machine-wide priority.
+2. Continue **Ledger** Phase 3 with explicit gates and evidence.
+3. Keep **Momentum** healthy as a daily-driver project.
+4. Revisit **Tempire** after frontend level-up.
+5. Compound knowledge in this vault so the same bugs are not relearned.
+6. Publish evidence from real work without starting projects only to create content.
 
 ---
 

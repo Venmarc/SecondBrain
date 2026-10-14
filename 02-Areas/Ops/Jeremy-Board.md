@@ -13,4 +13,4 @@ Status moves: Ready → Doing → Blocked → Review → Done (or Cancelled).
 ## Conventions
 - Owner is a bot name (Schipper, Clarity, Next Steps, Critiquito, figma bro, Copy Humanizer, Game Art Director, dr eggbot, Alfred) or Emmanuel.
 - Blocked always needs a one-line Block reason and who unblocks.
-- Prefer linking a dated detail note under `06-Agent-Sessions/` for anything bigger than a one-liner.
+- Prefer linking the relevant project hub, resource note, or [[06-Agent-Sessions/extracted-sessions|Extracted Sessions]] row for anything bigger than a one-liner.

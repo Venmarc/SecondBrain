@@ -39,7 +39,7 @@ defuddle parse https://example.com/article --markdown
 
 ## 4. Integration with Second Brain Ingestion Pipeline
 When ingesting new web resources or processing browser clips:
-1. **Source:** Web Clipper saves a clip into the [Clippings](file:///home/redmane/Documents/SecondBrain/Clippings) folder.
+1. **Source:** Web Clipper saves a clip into the vault-relative `Clippings/` folder.
 2. **Extraction:** Use `defuddle` to clean the raw source or pull transcript files for video clips:
    ```bash
    defuddle parse <url> --markdown > 03-Resources/Saved-Threads/<note-name>.md
@@ -52,4 +52,3 @@ When ingesting new web resources or processing browser clips:
 - [[03-Resources/Clippings-Ingest-Log|Clippings Ingest Log]]
 - [[03-Resources/Vault-LLM-Wiki-Patterns|Vault LLM Wiki Patterns]]
 - [[AGENTS|AGENTS.md]]
-

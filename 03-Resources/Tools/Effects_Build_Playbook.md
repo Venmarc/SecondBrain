@@ -263,6 +263,19 @@ The Adopt phase:
 - **Skipping Step 6 (mobile/touch fallback).** A web hover effect that "works on desktop" and ships without a touch decision is broken in 60%+ of user sessions. This is silent failure; only the Step 6 decision gates it.
 - **Going straight from extraction to adoption.** If a session jumps from a freshly-extracted technique directly into a project build, skip Step 7 Lighthouse and you'll regress both the source-of-truth glossary and the destination project at once.
 
+## Session-derived corrections
+
+These rules came from repeated effect build failures and are now part of the build gate:
+
+- Lighthouse and DOM visibility do not prove that a canvas painted. Add a pixel or painted-content assertion.
+- Read shader and program info logs before naming a root cause. A plausible precision fix can hide invalid GLSL.
+- Use a positive hardware-GPU allowlist. An empty or unknown renderer string must take the slow path.
+- Gate expensive WebGL or GSAP work on interaction or viewport need, not a timer that moves the cost into the audit window.
+- Keep a logo mask separate from a full-screen block field. A mark mask must not gate the field outside the mark.
+- Keep native scroll, anchors, and keyboard behavior unless the project explicitly accepts a different contract.
+
+Source details live in [[Effects_Glossary|Effects Glossary]] and [[ANTI_PATTERNS|ANTI_PATTERNS.md]]. The session state and deletion record live in [[06-Agent-Sessions/extracted-sessions|Extracted Sessions]].
+
 ---
 
 ## Standing handoff note

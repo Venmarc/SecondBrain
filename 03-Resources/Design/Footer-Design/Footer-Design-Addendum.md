@@ -13,6 +13,20 @@
 - **The main finding about animated footers:** each one is defined by its **trigger** (ambient, entry, scroll-linked, cursor proximity, click/drag, sound) as much as by how it looks. The trigger is a sixth design variable on top of the five from the first document.
 - **10 new styles (31–40)** cover what you asked for: subtle motion, cursor reaction, activation when you reach the footer, animated characters, googly eyes, particles, mountains with a waterfall, ASCII rendered from images or video, plus sound, weather, growth and scroll-stretch.
 
+## FOOTER-1 / North Loft mascot track
+
+This is a separate direction from the illustrated Web-Garnish styles above.
+
+- Use one strong art direction, not a generic multi-column footer with decoration added later.
+- Keep the mascot's eyes, head, and body as separate layers. Clamp cursor tracking and use a slower head rate than eye rate.
+- Start with a real browser blink test. The default state must be open, then the eyelid covers the eye for a short blink.
+- Keep the copy human and remove product metadata or process labels from the visible surface.
+- Use Astro and a small island when the effect remains simple. Use Rive only when the character state machine needs it.
+- Disable or simplify cursor interaction on touch. Preserve a static, readable footer under reduced motion.
+- Verify the final build on a production preview. A feel check remains separate from Lighthouse and Playwright results.
+
+The direction came from the FOOTER-1 research, North Loft polish, product-feel, Sloth look, Yellowcoil, and Derek footer sessions. The current state and deletion record live in [[06-Agent-Sessions/extracted-sessions|Extracted Sessions]].
+
 ---
 
 ## 1. Gap-fill results (retry log)

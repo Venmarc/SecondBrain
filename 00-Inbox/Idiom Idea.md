@@ -19,7 +19,7 @@ I’m genuinely not familiar with this stuff to begin with. So I’ll have my ag
 
 Make digital art with moving pixels, like a grid of images and how do I explain this. 
 
-![[ScreenRecording_08-29-2026 01-24-06_1.mov]]
+￼![[ScreenRecording_08-29-2026 01-24-06_1.mov]]
 
 Oh. Just learnt ASCII is just letters/characters grouped together to form an image or moving together to form a video like the one above. So I’ll like to apply that somewhere. Ofc not everything can work with ASCII, but it can work on a dark-themed portfolio.
 
@@ -33,7 +33,7 @@ Landing page hero image of a Lego/minecraft style image. Could be a boy standing
 
 My go to for content websites: marketing, portfolio, images, text made easier.
 
-![[Pasted image 20261007034116.png]]
+￼![[Pasted image 20261007034116.png]]
 I can build the complex web app part with Next.js and attach it to a Vercel project. apps/app for the app.domain.com subdomain. While I do the landings page part with Astro. app/… for the domain.com domain. My explanation might be complex but the concept is understandable.
 
 It’s easier to build a portfolio or multi page site with Astro. And build the complex part with Next.js. While Next.js can handle both, it’s far easier on Astro for the visitor facing side. This style, I will adopt going forward.
@@ -51,7 +51,7 @@ In the Unive website.
 	
 	![[Pasted image 20261007034308.png]]
 	![[Pasted image 20261007034607.png]]
-	
+￼
 	U can see the contents, zoomed in appear like parts of apps themselves instead of images. So they just duplicated the components, rendered them inactive, and used them as app screenshots. Genius.
 	•	The image intensive parts, are the student reviews at the later parts of the page. Those ones are text and images, all 5-star btw
 	•	The got an faq section, and an expanded tab/question closes when u open another, so no multiple tabs open that have to close one by one. Some websites make that mistake and make have u close them individually.
@@ -86,8 +86,3 @@ While recording, I get out of my car, run into my house, enter the bathroom and 
 
 U can purchase if u live in an area with constant pest visits, u can buy permanently to deploy weekly or monthly to find em and kill em.
 U can hire if u just moved into a place and not sure if there are pests in ur house. U can deploy em to go search for pests and eradicate em from ur house. 
-
-## Neo-brutalism website References
-
-Gumroad and Buffalo Wild Wings are the two that caught my eye, though I haven't visited them all. Gumroad got thick border, and BWW got no thick borders. Both are considers neo-brutalism tho. So thick borders aren't their only definition
-![[Pasted image 20261008140912.png|206]]

@@ -30,7 +30,7 @@ The current corpus is already useful:
 - 149 authored items captured from the authenticated X Replies tab.
 - About 2,541 words of exact authored X text.
 - 1,552 words in [[00-Inbox/Idiom Idea]].
-- 534 words in [[00-Inbox/Reference Prompt]].
+- 534 words in the extracted Reference Prompt source.
 - About 4,627 words across the three sources before overlap and task differences.
 
 Use this as a style bank, not as a claim that the model has learned a permanent voice.

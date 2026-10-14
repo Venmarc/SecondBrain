@@ -25,7 +25,7 @@ When you're starting a new project, read this page. When you discover a new less
 
 ---
 
-## ⚡ Phase 0 focus (Momentum + Ledger, 2026-07)
+## ⚡ Foundational patterns (Momentum + Ledger, retained reference)
 
 Prioritize these during foundation — not theme showcases or feature sprawl:
 
@@ -122,15 +122,17 @@ These are architectural traps that produce subtle bugs that are hard to reproduc
 
 ---
 
-## Lessons Queued for Documentation
+## Documentation status
 
-These lessons exist in the vault but haven't been written as atomic notes yet. Process when time allows:
+The former documentation queue is closed. Each item now has a destination:
 
-- [ ] **Back button hierarchy** (L10): Victor defined 2026-07-09 — `/today` is tree root; top-level pages back → Today; nested pages back → parent (not browser history). Mobile needs in-app Back. Raw notes: `Documents/Research_files/Back_button_hierarchy.md` + Justinmind nav/dashboard articles (ingest after knowledge-extractor; do not distill yet).
-- [ ] **Sticky nav scroll pattern** (L02): data-heavy pages (Progress, Analytics) benefit from headers that become sticky nav on scroll
-- [ ] **Settings unsaved state detection** (L07): prompt on navigation when unsaved changes exist
-- [ ] **Agent skill activation** (L20): must explicitly name skill in prompt prefix (`Using your ui-ux-pro-max skill...`)
-- [ ] **45 Claude Design Skills distillation** (L28-L31): motion rules, taste dials, anti-pattern rules — distill from clipping
+- Back-button hierarchy → [[03-Resources/Skills/Back-Button-Hierarchy]]
+- Sticky navigation → [[03-Resources/Skills/Sticky-Top-Bar-Navigation]]
+- Settings unsaved state → [[03-Resources/Skills/Settings-Preview-Then-Save]]
+- Skill activation and routing → [[03-Resources/Skills/Skill-Router-Hook]]
+- External design-skill catalog → [[03-Resources/MOC-Design-Skills-External]]
+
+Add a new queue item only when the lesson has no existing destination.
 
 ---
 

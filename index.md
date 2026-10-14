@@ -13,15 +13,14 @@
 - 🧾 **[[raw/X-Account-Sucks-Has-Potential]]** — X account growth diagnosis and reply-to-original strategy (raw source)
 - 🧰 **[[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|How Victor works with agents]]** — Supervisor model
 - 📋 **[[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault improvement backlog]]** — Deferred expansion work
-- 🩺 **[[LINT-REPORT|LINT-REPORT.md]]** — Latest vault lint (2026-07-31)
+- 🩺 **[[LINT-REPORT|LINT-REPORT.md]]** — Maintenance verification (2026-10-14); prior full classification 2026-07-31
 
 ---
 
 ## ⚡ Active Projects (01-Projects)
 
-### 🧬 [[01-Projects/Clone-Website/Clone-Website|Clone-Website]] — Canon complete; **Astro build scaffolded** (repo `codon-labs`); mark isolated as a drop-in slot so the logo does not block the build; effects ported but gated; PC-side asset sprint pending
-Fictional human-cloning company site played straight (White Desert skeleton, lab imagery, Lamalama motion). Raw: [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|voice notes + phone archive]]. Build: [[06-Agent-Sessions/2026-09-16-opencode-codon-labs-astro-scaffold|Astro scaffold session]].
-**Blockers:** the mark (Victor, in flight; the build proceeds without it), generated imagery, and the waitlist sender domain.
+### 🧬 Clone-Website — deprecated; rewrite slot retained
+The previous Clone-Website vault files were deleted on 2026-10-14 at Victor's request. The empty folder structure remains under `01-Projects/Clone-Website/` for a future rewrite.
 
 ### 🏎️ [[01-Projects/Driving-Game/Driving-Game|Driving Game]] — Stage 1 in progress (Schipper / DG-S1)
 
@@ -55,12 +54,14 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 - 👤 **[[02-Areas/Personal-Growth/RedMane|RedMane (Victor)]]** — Profile and working style
 - 🤖 **[[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|Agent Ops]]** — How agents are used now · **[[02-Areas/Agent-Ops/Provider-Model-Audit|Provider-Model-Audit]]** — historical canary audit · **[[02-Areas/Agent-Ops/Provider-Routing-Playbook|Provider Routing Playbook]]** — current cost/latency/quality dispatch policy
 - 📣 **[[02-Areas/Content-Creation/Content-Creation|Content Creation]]** — X/LinkedIn development publishing; sports clipping retained as an earlier lane; [[02-Areas/Content-Creation/X-Account-Growth-Playbook|X Account Growth Playbook]] and [[02-Areas/Content-Creation/X-Voice-Reference|X Voice Reference]] are the current experiment
-- 🧠 **[[02-Areas/Founder-Playbooks/Founder-Playbooks|Founder Playbooks]]** — Diana Hu AI-native + Hormozi leverage/first-$100K + Codie content business + YC Pocket Guide (extracted 2026-08-18)
+- 🧠 **[[03-Resources/Principles/Founder-Playbooks|Founder Playbooks]]** — Diana Hu AI-native + Hormozi leverage/first-$100K + Codie content business + YC Pocket Guide (extracted 2026-08-18)
 
 ---
 
 ## 📚 Resources (03-Resources)
 - 🗺️ **[[03-Resources/MOC-UI-UX-Lessons|MOC: UI/UX Lessons]]** · [[03-Resources/MOCs/MOC-Projects|MOC: Projects]]
+- 🧭 **[[03-Resources/Agent-Exploration/2026-10-12/00-Exploration-Index|Agent exploration — X and agent use cases — 2026-10-12]]** — bookmark intelligence, local replications, workflow upgrades, and money experiments
+- 🦸 **[[03-Resources/Principles/00-AI-Hero-Workflow-Index|AI Hero principles and local operating model]]** — Matt Pocock's idea-to-ship flow, agent-document rules, execution quality, system gaps, and a draft machine-wide route · [[03-Resources/Principles/09-AI-Hero-v1.3-Next-Lessons-2026-10-13|v1.3 next lessons]]
 - 🎨 **[[03-Resources/Design/taste|Victor's taste]]** — extracted web-design judgment, references, dealbreakers, and recurring patterns
 - 🖼️ **[[03-Resources/Design/Footer-Design/_index|Web design garnish]]** — footer/landing art direction collection (engraved vignette, sticker/scrapbook, rubber-stamp mark, watercolor art print, perspective typography)
 - 🧩 **[[03-Resources/Design/UI-Collections/_index|UI Collections]]** — labels and component lists for [Rare UI](https://www.rareui.com/), [Obsidian UI](https://www.obsidianui.dev/), [Transitions.dev](https://transitions.dev/), [Design Spells](https://www.designspells.com/)
@@ -74,19 +75,19 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. F
 - 📣 **[[03-Resources/SEO-Marketing/X-Algorithm-Ranking-Signals|X Algorithm Ranking Signals]]** — what the open-sourced X For You ranking actually rewards; weights verified against source, 3 corrections to the original extraction
 - 📚 **[[03-Resources/Content-Creation/X-Voice-Sample-Size-Research|X Voice Sample Size Research]]** — no universal 2,000-word minimum; use varied, task-matched authored examples and held-out checks
 - 🧰 **[[03-Resources/Content-Creation/X-Post-Resources|X Post Resources]]** — complete-read lessons, Codon Labs post angles, handwritten idea inventory, and post-family prompts
-- 🛠️ **[[03-Resources/Tools/Vault-Librarian-Interviewer|Vault Librarian]]** · [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] · [[03-Resources/Tools/Effects_Playbook|Effects Playbook]] · [[03-Resources/Tools/Effects_Build_Playbook|Effects Build Playbook]] · [[03-Resources/Tools/AgentMemory-Dual-Store-Tab-Write-Paths|AgentMemory dual-store + tab write paths]] · [[03-Resources/Tools/OpenCode-Vision-Provider-Default|OpenCode vision provider default]] — make any opencode-served model the vision tool's primary backend
+- 🛠️ **[[03-Resources/Tools/Vault-Librarian-Interviewer|Vault Librarian]]** · [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] · [[03-Resources/Tools/Effects_Playbook|Effects Playbook]] · [[03-Resources/Tools/Effects_Build_Playbook|Effects Build Playbook]] · [[03-Resources/Tools/Hermes-Provider-Bridge-Runbook|Hermes provider bridge runbook]] · [[03-Resources/Tools/Node-and-Systemd-Upgrade-Runbook|Node and systemd upgrade runbook]] · [[03-Resources/Tools/AgentMemory-Dual-Store-Tab-Write-Paths|AgentMemory dual-store + tab write paths]] · [[03-Resources/Tools/OpenCode-Vision-Provider-Default|OpenCode vision provider default]] — make any opencode-served model the vision tool's primary backend
 
 ---
 
 ## 🤖 Agent Sessions (06-Agent-Sessions)
 New sessions: `YYYY-MM-DD-<agent>-<slug>.md` via [[Templates/Agent-Session-Summary|template]]. Processed logs index: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].  
-Latest: [[06-Agent-Sessions/2026-10-07-omnirush-x-voice-and-post-resources|X voice corpus and post resources]] — 149 authored X cards captured, six complete bookmark sources converted into post resources, and shell-only records corrected. Prior: [[06-Agent-Sessions/2026-09-16-opencode-codon-labs-astro-scaffold|Codon Labs Astro scaffold]] — logo isolated as a drop-in mark slot so the missing logo stops blocking the build; effects ported but gated; `astro check` clean. Prior: [[06-Agent-Sessions/2026-09-12-opencode-node24-upgrade|Node v24 upgrade]] — machine Node v20→v24.21.0 (nvm), global CLIs carried over, hermes-gateway systemd PATH pin fixed; nvm/systemd traps logged to ANTI_PATTERNS. Prior: [[06-Agent-Sessions/2026-09-03-bossman-overnight-jeremi-review|Overnight Jeremi / X / LinkedIn]] — content-system verdict + recruiter skip-test. Prior: [[06-Agent-Sessions/2026-08-15-hermes-provider-audit|Provider audit]] — full Hermes provider audit: the "everything failing" cascade traced to a global `model.base_url` override (not bridge contamination), unset and verified; every provider live-tested and the working-model matrix recorded (agentrouter OK, NVIDIA 29/102, Copilot 13, Nous 5 free, Vercel 2, Gemini removed). Prior: [[06-Agent-Sessions/2026-08-14-hermes-agentrouter-sensitive-words-block|AgentRouter sensitive-words block]]. Historical processed logs: [[06-Agent-Sessions/extracted-sessions|extracted-sessions]].
+Latest extraction: [[06-Agent-Sessions/extracted-sessions|full agent-session extraction, 2026-10-14]] — all 75 remaining session logs reviewed, reusable lessons routed with Clef, and source logs deleted after state capture. New work starts a fresh session log; historical details live in the extracted index.
 
 ---
 
 ## 🩺 Vault Health
 - **Weekly review:** [[05-Daily/weekly/2026-08-09|2026-08-09 first live trial]] — prepared, not yet run
-- **Last lint:** 2026-07-31 — [[LINT-REPORT|LINT-REPORT.md]]  (post 26-file orphan extraction, post Ledger P1-P3A/Momentum closure)
+- **Last full classified lint:** 2026-07-31 — [[LINT-REPORT|LINT-REPORT.md]]; **maintenance verification:** 2026-10-14
 - **Prior pass:** [[03-Resources/Vault-Ops/Vault-Health-2026-07-09|Vault health 2026-07-09]] (Phase B)
 - **Backlog:** [[03-Resources/Vault-Ops/Vault-Improvement-Backlog|full skills expansion deferred]]  
 - **Projects MOC:** [[03-Resources/MOCs/MOC-Projects|MOC: Projects]]

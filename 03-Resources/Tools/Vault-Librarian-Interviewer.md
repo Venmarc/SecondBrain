@@ -4,7 +4,7 @@
 ## 🧭 Overview
 Victor's Second Brain uses two distinct automation tools to support personal knowledge management:
 1. **Librarian (`vault-librarian.js`)**: Focuses on vault maintenance, structural auditing (broken links, orphans, missing docs), and static lint questions.
-2. **Knowledge Extractor (`harvest.js`)**: Focuses on mind elicitation, scanning daily notes and dev logs for lesson fingerprints, and generating dynamic prompts for aggressive interview sessions.
+2. **Knowledge Extractor (`harvest.js`)**: Focuses on mind elicitation, scanning daily notes and dev logs for lesson fingerprints, and generating focused interview prompts.
 
 ---
 
@@ -34,10 +34,10 @@ node scripts/harvest.js --record "1,2,3"   # Mark candidates 1, 2, and 3 as harv
 | 2026-06-25 | Librarian | 0 | None (Initialized) |
 | 2026-06-28 | Extractor | 10 | Created 10 UI/UX atomic notes and 1 MOC |
 | 2026-07-09 | Librarian | 7 | Daily note, 3 skills, clippings archive, Momentum hub |
+| 2026-10-14 | Session extraction | 75 agent-session logs | Promoted reusable lessons, routed clusters with Clef, deleted source logs, and updated [[06-Agent-Sessions/extracted-sessions|Extracted Sessions]] |
 
 
 ## Related
 - [[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|How Victor Works With Agents]]
 - [[AGENTS|AGENTS.md]]
 - [[03-Resources/Skills/Knowledge-Extraction-Interviewer|Knowledge Extraction]]
-

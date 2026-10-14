@@ -9,5 +9,4 @@ Notable Comments:
 - 
 ## Related
 - [[04-Archive/World-Cup-Clipping/World-Cup-Clipping-Guide|Guide]]
-- [[02-Areas/Content-Creation/Content-Creation-Overview|Content Overview]]
-
+- [[04-Archive/World-Cup-Clipping/World-Cup-Clipping-Guide|World Cup Clipping Guide]]

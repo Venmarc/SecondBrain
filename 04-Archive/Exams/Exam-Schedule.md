@@ -17,9 +17,6 @@
 | 7 | GNT 221 | 18/06/2026 | ✅ Done |
 | 8 | MTH 221 | 19/06/2026 | ✅ Done |
 
-
-> Fill in subject names and dates as they're confirmed.
-
 ## Strategy
 - PC used for both studying and building — that's fine, just time-box.
 - NotebookLM for each subject: upload materials, quiz yourself.
@@ -27,6 +24,6 @@
 
 ## After June 19
 - Full focus shifts to Tempire UI/UX overhaul + content creation runway.
-- Archive this note to [[04-Archive/]] when done.
+- Archive status: archived after the June 19 exam.
 
 **Tags:** #exams #area

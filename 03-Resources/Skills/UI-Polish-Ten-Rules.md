@@ -25,23 +25,6 @@ Three quarters of the article's rules overlap with the skills cluster (easing va
 
 ---
 
-## Hard orientation: this article vs the feel-router system
-
-| Article rule | Where it lives |
-|---|---|
-| Rule 1 (banned default ease, house easing set) | [`~/.agents/skills/_shared/MOTION-STANDARDS.md`](../../../../home/redmane/.agents/skills/_shared/MOTION-STANDARDS.md) §Easing. Don't duplicate here — use the tokens (`--ease-out`, `--ease-in-out`, `--ease-drawer`). |
-| Rule 2 (design system variables first) | Below — **Design tokens first**. |
-| Rule 3 (real physics for draggables) | `~/.agents/skills/apple-design/SKILL.md` §3–§6 (interruptibility, springs, velocity handoff, momentum projection) + the shared standards' spring section. Don't duplicate. |
-| Rule 4 (snap points, magnetic, label pulse) | Below — **Two-zone magnetic snap**. The feel-router loads this note specifically because no skill carries the pull-in/release-zone pattern. |
-| Rule 5 (entrance = fade + rise + blur-that-clears) | Below — **The triple entrance recipe**. The shared standards file carries it as a one-liner under §Physicality; the full recipe lives here. |
-| Rule 6 (layered light, hairline ring instead of border) | Below — **Layered shadow stack**. The apple-design materials section discusses translucency, not concrete shadow recipes. |
-| Rule 7 (press should be felt) | `~/.agents/skills/emil-design-eng/SKILL.md` §"Buttons must feel responsive" + shared standards §Physicality. Note: article uses `scale(0.98)`; emil uses `scale(0.97)`. Either is fine; the shared standards file says 0.95–0.98. |
-| Rule 8 (grid-rows reveal, FLIP) | Grid-rows lives in the shared standards' §Transforms & clip-path. FLIP is also documented there. Don't duplicate. |
-| Rule 9 (reduced motion + GPU-friendly properties) | `~/.agents/skills/_shared/MOTION-STANDARDS.md` §Accessibility + §Performance. Not duplicated. |
-| Rule 10 (state-driven design is the actual job) | Below — **State-driven design as discovery**. The skills cluster treats states more statically ("name the states"); this is about *finding* them mid-build. |
-
----
-
 ## Design tokens first (Rule 2 + Figma section)
 
 Polish reads as **consistency**. Consistency comes from a shared vocabulary: design tokens for colors, corner radius, durations, motion curves, and shadow stacks. Define them before any component.
@@ -188,12 +171,18 @@ For graph traversal, these are the deliberate bidirectional connections:
 
 - **Source of truth:** [[Clippings/Rules on UI Polish]] — never edit; this note distills it.
 - **Dispatcher:** `~/.agents/skills/feel-router/SKILL.md` (Build-an-entrance-or-transition, Build-a-snap-point, Build-depth-or-material lanes).
-- **Standards (easing tokens spring configs):** `~/.agents/skills/_shared/MOTION-STANDARDS.md` — Motion overlap with Rules 1, 3, 7, 8, 9.
 - **Skills cluster (motion):** [[../Skills/Reverse-Engineering-UI-Components|Reverse-Engineering UI Components]], `~/.agents/skills/emil-design-eng/SKILL.md`, `~/.agents/skills/apple-design/SKILL.md`.
 - **Antipatterns:** [[AI-UI-Antipatterns-Watchlist]] — add the new tells (single-blur shadow, default easing, max-height hack, fade-only entrance) if not present.
 - **Frontend Awesomeness (prompting philosophy):** [[Frontend-Awesomeness]] — adjacent prompting recipes.
 - **Extraction system:** [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] + [[03-Resources/Tools/Effects_Playbook|Effects Playbook]] + [[03-Resources/Tools/Effects_Build_Playbook|Effects Build Playbook]] — when you see one of these recipes on a real site, extract and tag it under the proper `[tag]` in the glossary.
 - **Library map:** [[03-Resources/Design/UI-Collections/_index|UI Collections]] — [Rare UI](https://www.rareui.com/), [Obsidian UI](https://www.obsidianui.dev/), [Transitions.dev](https://transitions.dev/), [Design Spells](https://www.designspells.com/).
+
+## Session-derived confirmations
+
+- Define tokens before component polish. Keep unproven effects outside the active phase.
+- Use real browser and keyboard checks for interaction geometry. A paint fix does not prove that the hit area or responsive layout works.
+- Use native controls and small CSS or JavaScript when they satisfy the brief. Do not add a heavy library to solve a narrow interaction.
+- A page can pass build checks and still fail the visual review. Keep the human feel gate separate from automated verification.
 
 ---
 

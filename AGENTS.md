@@ -104,10 +104,12 @@ Scan the entire vault and flag/fix:
 **Operating model:** Victor supervises. Agents assist. No multi-agent orchestration engine. See [[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|How Victor Works With Agents]].
 
 **Session boot:**
-1. If agentmemory is available: confirm health (`agentmemory status` / `:3111` or viewer `:3113`), then `memory_smart_search` for the task topic. **Do not block** the whole session if MCP is down.
-2. **Vault work:** read [[BRAIN|BRAIN.md]] and [[AGENTS|AGENTS.md]], then [[index|index.md]].
-3. **Project work:** read `01-Projects/<Name>/<Name>.md` hub + active `PHASES.md`. Product source of truth is usually the Port Sites codebase; vault docs are synced mirrors with a date banner.
-4. Do not auto-start round-table or multi-CLI pipelines unless Victor asks.
+1. Start with the shared `work-router`. Classify the request as project or non-project work and select the next route.
+2. If the work crosses phases or sessions, create or resume a `workflow-runner` state file. The runner tracks handoffs; it does not start agents or external actions.
+3. If agentmemory is available: confirm health (`agentmemory status` / `:3111` or viewer `:3113`), then `memory_smart_search` for the task topic. **Do not block** the whole session if MCP is down.
+4. **Vault work:** read [[BRAIN|BRAIN.md]] and [[AGENTS|AGENTS.md]], then [[index|index.md]].
+5. **Project work:** read `01-Projects/<Name>/<Name>.md` hub + active `PHASES.md`. Product source of truth is usually the Port Sites codebase; vault docs are synced mirrors with a date banner.
+6. Do not auto-start round-table or multi-CLI pipelines unless Victor asks.
 
 **Context management (compact vs. summarize — these are two separate things, don't conflate them):**
 - **Compact ≈ Claude Code's `/compact`** (or the equivalent context-compression feature on whichever
@@ -144,7 +146,7 @@ Agents should map these simple phrases in user prompts to their corresponding wo
 When executing actions, utilize these tools and capabilities:
 - **`defuddle`**: A command-line utility for managing markdown links and formatting. Set it up and verify availability before running lint tasks. See [[03-Resources/Skills/Defuddle-Clipping|Defuddle skill guide]] for commands.
 - **Obsidian Skills**: Utilize any project-level templates or styles defined in `Templates/`.
-- **Long-Term Memory (agentmemory)**: Session boot requires `memory_smart_search`; session shutdown requires `memory_save`. See **§E Session Boot & Shutdown**.
+- **Long-Term Memory (agentmemory)**: Session boot requires `memory_smart_search`; session shutdown requires `memory_save`. See **§F Session Boot & Shutdown**.
 
 ---
 

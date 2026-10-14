@@ -4,59 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "9316c91d1e20814b",
+        "id": "66479931f789ae88",
         "type": "tabs",
         "children": [
           {
-            "id": "9713b4ec629c7efd",
+            "id": "efa895da92e757c0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00-Inbox/Reference Prompt.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Reference Prompt"
-            }
-          },
-          {
-            "id": "a95f7516e62980b2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03-Resources/Design/taste.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "taste"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -115,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 292.6311378479004
+    "width": 200
   },
   "right": {
     "id": "e53b3649d4d785ff",
@@ -193,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03-Resources/Tools/Effects_Playbook.md",
+                "file": "00-Inbox/Update_Update.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -227,7 +188,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 221.5
+    "width": 274.6270751953125
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -243,54 +204,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a95f7516e62980b2",
+  "active": "3a113242ab7071ae",
   "lastOpenFiles": [
-    "raw/Reframing_career_path_beyond_indie_hacking_-_Claude.pdf",
-    "00-Inbox/Idiom Idea.md",
-    "03-Resources/Design/taste.md",
-    "Pasted image 20261008140912.png",
+    "Untitled.md",
+    "00-Inbox/Sites To Extract.md",
     "00-Inbox/review_prompt.md",
-    "06-Agent-Sessions/2026-10-07-omnirush-x-voice-and-post-resources.md",
-    "03-Resources/Content-Creation/X-Post-Resources.md",
-    "02-Areas/Content-Creation/X-Voice-Reference.md",
-    "03-Resources/Content-Creation/X-Voice-Sample-Size-Research.md",
+    "00-Inbox/Reference Prompt.md",
+    "00-Inbox/RANT.md",
+    "00-Inbox/Pet Clone Website.md",
+    "00-Inbox/Idiom Idea.md",
+    "00-Inbox/GPT-5.6-Sol-Audit.md",
+    "00-Inbox/Global-AGENTS.md",
+    "00-Inbox/Codon-Labs-Review-2026-09-23-Raw-Transcript.md",
+    "00-Inbox/Codon-Labs-Review-2026-09-23-Edited-Transcript.md",
+    "00-Inbox/Codon-Labs-Review-2026-09-23.md",
+    "00-Inbox/Antigravity Swarm.md",
+    "00-Inbox/2026-09-13_active-particle-environments.md",
+    "00-Inbox/2026-08-04_brainstorm-cross-machine-session-awareness.md",
+    "03-Resources/Design/taste.md",
+    "03-Resources/Principles/08-Shared-Router-Architecture-Draft.md",
+    "06-Agent-Sessions/2026-10-12-omnirush-ai-hero-workflow.md",
+    "03-Resources/Principles/07-AI-Hero-Source-Map.md",
+    "03-Resources/Principles/06-AI-Hero-Domain-Glossary.md",
+    "03-Resources/Principles/05-Local-AI-Hero-Operating-Model-Draft.md",
+    "03-Resources/Principles/04-Current-System-Gap-Analysis.md",
+    "03-Resources/Principles/03-Execution-Quality-and-Autonomy.md",
+    "03-Resources/Principles/02-Agent-Document-Principles.md",
+    "03-Resources/Principles/01-AI-Hero-Main-Flow.md",
+    "03-Resources/Principles/00-AI-Hero-Workflow-Index.md",
+    "raw/Reframing_career_path_beyond_indie_hacking_-_Claude.pdf",
+    "Pasted image 20261008140912.png",
     "03-Resources/Content-Creation",
-    "raw/X-Reply-Tab-Voice-Corpus-2026-10-07.md",
     "Pasted image 20261007034812.png",
     "Pasted image 20261007034738.png",
     "Pasted image 20261007034607.png",
     "Pasted image 20261007034308.png",
     "Pasted image 20261007034116.png",
     "ScreenRecording_08-29-2026 01-24-06_1.mov",
-    "00-Inbox/Reference Prompt.md",
-    "02-Areas/Content-Creation/X-Account-Growth-Playbook.md",
-    "03-Resources/Design/Footer-Design/Footer-Design-Research.md",
-    "03-Resources/Design/Footer-Design/Footer-Design-Addendum.md",
-    "Untitled.md",
     "03-Resources/Design/Footer-Design",
     "03-Resources/Design/Backdrop-Supply/assets/nocturne/image-9.webp",
     "03-Resources/Design/Backdrop-Supply/assets/bloomhaze/image-8.webp",
     "03-Resources/Design/Backdrop-Supply/assets/ascii/124-rectangle.webp",
     "03-Resources/Design/Backdrop-Supply/assets/aurorix/image-5.webp",
-    "03-Resources/Design/Backdrop-Supply/01-Gradient-Mesh.md",
-    "03-Resources/Design/Backdrop-Supply/02-Glass-and-Iridescent.md",
-    "03-Resources/Design/Backdrop-Supply/03-Cosmic-and-Cavern.md",
-    "03-Resources/Design/Backdrop-Supply/04-Stylized-Landscape.md",
-    "03-Resources/Design/Backdrop-Supply/05-Dither-ASCII-Stipple.md",
-    "03-Resources/Design/Backdrop-Supply/06-Surreal-Collage.md",
-    "03-Resources/Design/Backdrop-Supply/07-Animated-Loops.md",
-    "03-Resources/Design/Backdrop-Supply/08-Build-Runbook.md",
-    "03-Resources/Design/Backdrop-Supply/_index.md",
     "raw/How to Create Your UX-UI Portfolio (Without Much Experience) | by Erik D. Kenned.pdf",
-    "06-Agent-Sessions/2026-08-14-hermes-claude-bridge-webui-anthropic-lane.md",
-    "00-Inbox/RANT.md",
-    "00-Inbox/Codon-Labs-Review-2026-09-23-Edited-Transcript.md",
     "Recording 20260923212723.m4a",
     "Recording 20260923212407.m4a",
     "Recording 20260923211551.m4a",
     "Recording 20260923211200.m4a",
     "Recording 20260923210831.m4a",
-    "Recording 20260923210534.m4a",
     "Attachments/Untitled.canvas",
     "03-Resources/Skills/Frontend Awesomeness.canvas"
   ]

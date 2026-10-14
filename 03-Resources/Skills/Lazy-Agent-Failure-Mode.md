@@ -1,4 +1,4 @@
-> **One-line Summary**: Agents skip relevant skills despite knowing they apply — fixed by PreInvocation skill-router hook, not stronger prompts alone.
+> **One-line Summary**: Agents skip relevant skills despite knowing they apply; Antigravity's PreInvocation route helps, while Claude Code needs a separate trust-aware approach.
 
 # Lazy Agent Failure Mode
 
@@ -13,11 +13,13 @@ Agents recognize a skill applies ("this needs UI/UX Pro Max") but proceed withou
 3. **Context dilution** — skill list at top loses attention as conversation grows.
 4. **Literal description matching** — user wording doesn't match skill trigger phrases.
 
-## Fix (implemented)
-[[03-Resources/Skills/Skill-Router-Hook|Skill Router Hook]] — separate classifier on `PreInvocation` injects matching skill links before the main agent runs.
+## Current fix and limit
+[[03-Resources/Skills/Skill-Router-Hook|Skill Router Hook]] — a separate classifier can inject matching skill pointers before the main agent runs in the Antigravity route.
+
+Claude Code native matching can find genuine matches, but live tests showed that `UserPromptSubmit` is advisory and `PreToolUse` is treated as an injection signal. Do not claim that a generic hook forces Claude Code to invoke a skill.
 
 ## Do not rely on
 - Stronger system prompts alone (Victor tested — insufficient).
 - Inlining all skills in every session (context bloat).
 
-**Tags:** #skill #antigravity #decision
+**Tags:** #skill #routing #agent-agnostic #decision

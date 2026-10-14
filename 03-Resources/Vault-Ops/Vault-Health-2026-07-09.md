@@ -41,6 +41,6 @@
 
 - [[LINT-REPORT|LINT-REPORT]]  
 - [[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Backlog]]  
-- [[06-Agent-Sessions/2026-07-09-grok-phase-b|Phase B session log]]
+- [[06-Agent-Sessions/extracted-sessions|Extracted Sessions]] — historical session record
 
 **Tags:** #vault-health #phase-b

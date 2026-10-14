@@ -21,7 +21,7 @@ Use these sources for different tasks:
 
 - [[raw/X-Reply-Tab-Voice-Corpus-2026-10-07]] — 149 authored X cards, about 2,541 words.
 - [[00-Inbox/Idiom Idea]] — a longer idea note, about 1,552 words.
-- [[00-Inbox/Reference Prompt]] — the earlier Codon Labs concept prompt, about 534 words.
+- Extracted Reference Prompt source — the earlier Codon Labs concept prompt, about 534 words.
 
 The combined count is about 4,627 words before overlap and task differences. This is enough to create a useful working reference. It is not a permanent model training event.
 

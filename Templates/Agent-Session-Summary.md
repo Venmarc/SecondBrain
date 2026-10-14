@@ -83,6 +83,16 @@ Also: if you edited ANTI_PATTERNS.md, check its current line count. If it's
 -->
 - `[[ANTI_PATTERNS.md]]`: <entry added, or "No changes"> — line count after edit: <N>. Split triggered: Yes / No / N/A
 - Project `AGENTS.md`: <Session Conduct entry added, or "No changes">
+## Extractions
+<!--
+AGENT: List 0–3 reusable lessons from this session. Search the vault before
+creating a destination. Write "None this session" when no reusable lesson exists.
+Project-specific lessons belong in the project hub. Cross-project lessons belong
+in an existing skill or MOC. This section records the extraction and destination;
+it does not replace the durable lesson.
+-->
+- None this session.
+
 ## Open Questions & Next Steps
 -
 **Tags:** #agent-session

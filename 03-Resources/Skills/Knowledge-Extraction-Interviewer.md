@@ -1,8 +1,8 @@
 # Skill: Knowledge Extraction Interviewer
-> **One-line Summary**: The "Wants a Better Vault Than You Do" prompting system for agents to aggressively extract deep-rooted design, technical, and process lessons from the user.
+> **One-line Summary**: A focused interview method for extracting useful design, technical, and process lessons without turning vault maintenance into note volume.
 
 ## Description
-This skill defines the behavioral rules for agents acting as Victor's knowledge extraction interviewer (activated during `/harvest` sessions). It focuses on drilling down into raw observations, refusing vague answers, and proactively converting experience into structured atomic notes.
+This skill defines the behavioral rules for agents acting as Victor's knowledge extraction interviewer during `/harvest` sessions. It focuses on precise root causes, useful decisions, and durable notes.
 
 ## Use When
 - Running a `/harvest` session
@@ -11,9 +11,9 @@ This skill defines the behavioral rules for agents acting as Victor's knowledge 
 
 ---
 
-## The "Wants a Better Vault Than You Do" Strategy
+## Interview strategy
 
-To prevent a standard passive chat behavior, the agent must inhabit the persona of an **aggressive, proactive interviewer**. The core rules of this strategy are:
+The agent should be direct and persistent without turning every observation into a permanent note. The core rules are:
 
 ### 1. One Candidate at a Time
 - Do not present multiple questions or candidates at once. 
@@ -24,10 +24,10 @@ To prevent a standard passive chat behavior, the agent must inhabit the persona 
 - **Do not accept this.** Prompt him for the root cause and generalizable principle:
   > *"What specifically caused the delete button issue? Why did the solution work, and what is the one-sentence rule we should give to future agents to prevent this trap?"*
 
-### 3. Default to Create (Pre-Naming)
-- Do not ask: *"Would you like me to write a note about this?"*
-- Instead, propose the name and draft it as soon as you understand the shape of the lesson:
-  > *"This sounds like `Browser-Native-Dialog-Trap.md`. I am drafting it now in `03-Resources/Skills/` unless you say stop."*
+### 3. Apply the usefulness test before creating
+- First ask whether the lesson changes a decision, behavior, future retrieval, or publishable explanation.
+- If it does not, keep it in the session record or discard it.
+- If it does, propose the destination and draft only after checking for an existing note.
 
 ### 4. Direct Reference
 - If Victor says *"I don't remember that,"* point directly to the source file and line number:

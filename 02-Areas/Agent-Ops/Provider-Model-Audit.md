@@ -2,7 +2,7 @@
 
 > **One-line Summary**: Historical provider audit from 2026-08-15. It measured catalog access and tiny canaries, but did **not** establish durable quality, billing, or rate-limit truth for every free-tagged model. Use [[Provider-Routing-Playbook]] for current dispatch policy.
 
-**Audit date:** 2026-08-15 · **Tester:** Hermes agent (via real Hermes CLI lane, not raw API for Cloudflare-protected providers) · **Source log:** [[06-Agent-Sessions/2026-08-15-hermes-provider-audit]]
+**Audit date:** 2026-08-15 · **Tester:** Hermes agent (via real Hermes CLI lane, not raw API for Cloudflare-protected providers) · **Source record:** [[06-Agent-Sessions/extracted-sessions|Extracted Sessions]] · **Bridge mechanics:** [[03-Resources/Tools/Hermes-Provider-Bridge-Runbook|Hermes Provider Bridge Runbook]]
 
 ---
 

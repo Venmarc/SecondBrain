@@ -119,7 +119,7 @@ Rule for batch 2: any motion layer must (1) pause when off-viewport, (2) die und
 
 ## Related
 - [[_index]] · [[01-Engraved-Vignette-Footer]] · [[02-Sticker-Scrapbook-Footer]] · [[03-Rubber-Stamp-Mark]] · [[04-Watercolor-Art-Print]] · [[05-Perspective-Typography]] · [[06-Hermes-Skill-Stack]]
-- Halden-seed footer (photo + clear-band type) is a **different** footer direction — see `06-Agent-Sessions/2026-09-05-grok-halden-seed-footer.md`. Do not mix the two.
-- **FOOTER-1 mascot track** (interactive CSS mascot-eyes footer for North Loft) is a third, separate footer direction — see `06-Agent-Sessions/2026-09-07-footer-1-research-brief.md` + `2026-09-08-footer-1-north-loft-polish.md`. This runbook covers the *illustrated art-direction* garnish only.
+- Halden-seed footer (photo + clear-band type) is a **different** footer direction. Its extracted rules are recorded in [[Footer-Design-Addendum#FOOTER-1 / North Loft mascot track|the session-derived footer section]] only where they generalize; do not mix it with the illustrated art-direction garnish.
+- **FOOTER-1 mascot track** (interactive CSS mascot-eyes footer for North Loft) is a third, separate footer direction. Its research, blink, copy, and touch rules are recorded in [[Footer-Design-Addendum#FOOTER-1 / North Loft mascot track|the session-derived footer section]]. This runbook covers the *illustrated art-direction* garnish only.
 
 **Tags:** #design #footer #runbook #svg #css #build

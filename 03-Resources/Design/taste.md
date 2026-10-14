@@ -94,3 +94,11 @@ Topics marked [UNDEFINED] in the interview. My taste here does not exist yet. AI
 
 ## 9. Revision Log
 - 2026-10-11 Rev 1: initial extraction interview.
+
+## 10. Session-derived visual judgment
+
+- Repeating one treatment across every section can make a polished page read as a template.
+- A critic score is capped by weak photography, unclear page structure, or a visual direction that does not match the brief.
+- Freeze a trusted baseline before isolated visual iteration. Keep experiments in a separate worktree or copy.
+- A footer, mascot, or effect must have a job in the story or information hierarchy. Do not add it because the reference looked interesting.
+- A real-feeling fictional surface keeps process labels and implementation notes out of the UI. Those belong in project notes and conversation.

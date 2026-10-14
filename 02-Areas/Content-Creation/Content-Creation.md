@@ -1,8 +1,8 @@
 # Content Creation
 
-> **One-line Summary**: Victor's development-publishing area for consistently documenting personal and technical growth on X and LinkedIn, while retaining the earlier sports-clipping lane.
+> **One-line Summary**: Victor's development-publishing area for documenting personal and technical growth on X and LinkedIn.
 
-**Status:** August publishing trial active; shipping matters more than perfect positioning.
+**Status:** Active development-publishing experiment; shipping matters more than perfect positioning.
 **Primary platforms:** X first, LinkedIn second.
 
 ## Development Publishing
@@ -32,30 +32,8 @@ See [[03-Resources/Vault-Ops/Better-Me-Better-Vault|Better Me, Better Vault]] an
 
 Victor's July vault grew from one graph node to hundreds, then exposed a harder truth: it remembered agent sessions better than it represented Victor or improved his decisions. The graph timelapse is evidence for the first X post and a later LinkedIn adaptation.
 
-## Sports Clipping Lane
-
-## The Idea
-Short-form content clipping — football highlights, reactions, drama — during high-traffic sports events (World Cup, etc.). Monetized through view-based payouts, platform monetization, brand deals.
-
-## What's Holding It Back
-- No consistent system yet
-- Previous attempts never started properly
-- Unclear on the copyright line (raw clips vs. original commentary)
-
-## The Copyright Rule (Figured Out)
-Raw match highlights reposted = flagged.
-Adding original commentary, reaction, text overlays, or analysis = generally safe.
-The value-add is the protection.
-
-## Tools to Use
-- **CapCut** — free editing
-- **Opus Clip** — AI clipping
-- **Whop / Reach** — clipping marketplaces, pay-per-view campaigns
-
-## World Cup Window
-June 11 – July 19, 2026. That's the big opportunity if content creation starts.
-
 ## Related
-- [[04-Archive/World-Cup-Clipping/World-Cup-Clipping-Guide|World Cup Clipping Guide]] — the X thread breakdown
+- [[03-Resources/Vault-Ops/Better-Me-Better-Vault|Better Me, Better Vault]] — decision and publishing loop
+- [[02-Areas/Content-Creation/X-Account-Growth-Playbook|X Account Growth Playbook]] — current experiment
 
 **Tags:** #content #area #clipping #youtube
