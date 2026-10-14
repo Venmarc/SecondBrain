@@ -872,3 +872,13 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 
 - Renamed `03-Resources/Design/Web-Garnish/` to `03-Resources/Design/Footer-Design/` (89f6882) — the folder now holds footer-design research and an addendum beyond the original garnish clips. All 45 tracked files kept.
 - Repointed every wikilink and path that still targeted the old folder (17 files): [[index|index.md]], [[03-Resources/MOC-UI-UX-Lessons|MOC: UI/UX Lessons]], the UI-Collections and Backdrop-Supply indexes, Clone-Website docs, and older changelog entries. Note titles keep the "Web Design Garnish" name; only the folder path moved.
+
+## 2026-10-08
+
+- vault backup: 2026-10-08 14:12:33 (ff21129)
+
+
+## 2026-10-11
+
+- vault backup: 2026-10-11 01:25:50 (5c76005)
+
