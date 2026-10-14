@@ -64,7 +64,7 @@ The chain logic: the **first** strategy is tried sequentially first (12s timeout
 
 ## Related
 
-- [[02-Areas/Agent-Ops/Agent-Ops|Agent Ops]] — how vision-tool-style providers are used in this agent stack.
+- Provider mechanics are historical machine notes, not a current vault policy.
 - [[03-Resources/Vault-LLM-Wiki-Patterns|Vault LLM Wiki Patterns]] — vault conventions for agent-relevant notes.
 
 ## Tags

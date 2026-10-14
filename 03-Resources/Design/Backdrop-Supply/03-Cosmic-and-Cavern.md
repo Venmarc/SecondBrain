@@ -34,12 +34,12 @@ Demo tiles `aurora` and `nebula` verified as polished designed backdrops by visi
 Ridged or absolute-value fbm for the filaments so bright lines form along noise zero crossings, plus a strong vignette to keep the edges dark. The demo tiles `aurora` and `nebula` are this, and both came back from the vision pass as polished backdrops. Watch overall brightness: the first nebula attempt read as an empty black frame with dim tendrils and needed brightness up around 1.75 with gas contrast pulled down near 1.05.
 
 ## Cached assets
-- `assets/aether-glow/kailashsr-looking-up-from-underwater-theres-sun-rays-shining-th-01453f23-1eee-4534-83b5-df0be7d3d03b.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/aether-glow/kailashsr-looking-up-from-underwater-theres-sun-rays-shining-th-01453f23-1eee-4534-83b5-df0be7d3d03b.webp`)
-- `assets/portals/image-20.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/portals/image-20.webp`)
-- `assets/dreamor/image-4.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/dreamor/image-4.webp`)
-- `assets/horizon/image-6.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/horizon/image-6.webp`)
-- `assets/nebuluxe/image-6.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/nebuluxe/image-6.webp`)
-- `assets/etherial/image-2.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/etherial/image-2.webp`)
+- `Assets/Backdrop-Supply/assets/aether-glow/kailashsr-looking-up-from-underwater-theres-sun-rays-shining-th-01453f23-1eee-4534-83b5-df0be7d3d03b.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/aether-glow/kailashsr-looking-up-from-underwater-theres-sun-rays-shining-th-01453f23-1eee-4534-83b5-df0be7d3d03b.webp`)
+- `Assets/Backdrop-Supply/assets/portals/image-20.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/portals/image-20.webp`)
+- `Assets/Backdrop-Supply/assets/dreamor/image-4.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/dreamor/image-4.webp`)
+- `Assets/Backdrop-Supply/assets/horizon/image-6.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/horizon/image-6.webp`)
+- `Assets/Backdrop-Supply/assets/nebuluxe/image-6.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/nebuluxe/image-6.webp`)
+- `Assets/Backdrop-Supply/assets/etherial/image-2.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/etherial/image-2.webp`)
 
 ## Related
 - [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply index]]

@@ -1,5 +1,5 @@
 ---
-title: MOC: Assets
+title: "MOC: Assets"
 date: 2026-07-20
 tags:
   - moc
@@ -13,19 +13,19 @@ aliases:
 
 # MOC: Assets
 
-> **One-line Summary**: Map of Content for every image, screenshot, screencast, and audio attachment in the vault's `Assets/` folder — the inventory + reverse-index of which note embeds each file.
+> **One-line Summary**: Map of Content for every image, screenshot, screencast, and audio attachment in the vault's `Assets/` folder — the inventory and reverse-index of which note uses each file.
 
 ---
 
 ## What This Is
 
-This note has no content of its own. Its job is to make the `Assets/` folder graph-visible: every binary attachment in this vault lives in `Assets/`, and is wikilinked into one or more notes (`![[file]]` embeds). Without an MOC, every one of those attachments looks like an "orphan" to the lint pass because Obsidian's graph indexer counts them as nodes with no incoming markdown links (their callers resolve the file but don't count as a backlink by strict rules).
+This note has no content of its own. Its job is to make the `Assets/` folder graph-visible: every binary attachment in this vault lives in `Assets/` or one of its asset subfolders. Without an MOC, attachments look like orphans to the lint pass because Obsidian's graph indexer counts binary nodes separately from their callers.
 
 **Convention:**
-- All pasted / dropped attachments → `Assets/` (configured in Obsidian under `Files & Links → Default location for new attachments → "In subfolder under current folder"` is NOT used; use the vault-wide `Assets/` setting instead).
+- All pasted / dropped attachments → `Assets/` (configured in Obsidian under `Files & Links`).
 - A file might not necessarily contain the attachments physically — it can have a link pointing to them here in `Assets/`.
 - All attachments are listed in this file, but their physical form lives in the folder.
-- Raw image / video binaries are **tracked in git** (the earlier "gitignored" claim was stale — no `.gitignore` exists in the repo and `git ls-files Assets/` lists the binaries). This MOC remains the human-readable inventory and reverse-index of what lives in the folder.
+- Raw image, video, and voice binaries are **tracked in git**. This MOC remains the human-readable inventory and reverse-index of what lives in the folder.
 
 ---
 
@@ -88,26 +88,33 @@ Captured 2026-09-06/07, pasted at vault root (default paste location was misconf
 
 ### Demo artifact images — Footer-Non-Boring mascot MVP (4 files)
 
-Moved flat into `Assets/` on 2026-09-08 from `03-Resources/Design/Footer-Non-Boring/demo/mascot-css-mvp/` (and its `shots/` subfolder, since removed). The runnable demo itself (`index.html`, `README.md`) still lives in the demo folder — it is code, not an attachment.
+Moved flat into `Assets/` on 2026-09-08 from the former `03-Resources/Design/Footer-Non-Boring/demo/mascot-css-mvp/` folder. The source note and runnable demo were removed during the later cleanup; these four files remain as historical artifacts.
 
 | File | Embedded in | Context / Caption |
 |------|-------------|-------------------|
-| `shot-footer-eyes.webp` | [[03-Resources/Design/Footer-Non-Boring/01-cursor-follow-mascot]] | mascot demo screenshot — footer with eye-tracking mascot |
-| `01-full.png` | [[03-Resources/Design/Footer-Non-Boring/01-cursor-follow-mascot]] | full footer view |
-| `02-eyes-top-left.png` | [[03-Resources/Design/Footer-Non-Boring/01-cursor-follow-mascot]] | pupils tracking top-left |
-| `03-eyes-near-mascot.png` | [[03-Resources/Design/Footer-Non-Boring/01-cursor-follow-mascot]] | cursor near the mascot |
+| `shot-footer-eyes.webp` | Former mascot source note (deleted) | mascot demo screenshot — footer with eye-tracking mascot |
+| `01-full.png` | Former mascot source note (deleted) | full footer view |
+| `02-eyes-top-left.png` | Former mascot source note (deleted) | pupils tracking top-left |
+| `03-eyes-near-mascot.png` | Former mascot source note (deleted) | cursor near the mascot |
 
 ---
 
+## Relocated media
+
+- Root captures and voice recordings now live directly under `Assets/`.
+- Backdrop Supply media now lives under `Assets/Backdrop-Supply/`.
+- Footer Design media now lives under `Assets/Footer-Design/`.
+- Current notes use the new `Assets/` paths. The old resource-local media folders no longer contain binary attachments.
+
 ## Coverage
 
-All 42 assets in `Assets/` are currently embedded in exactly **4 vault notes**:
+The original 42 attachments remain indexed below. The relocated design collections and voice recordings are indexed by collection above and by their calling notes.
 - [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] — 13 png + 6 mp4 from the antigravity.google research thread. The erratic-swarm Extract/Build lane closed 2026-07-20 with Lighthouse 99/99; the raw research note was deleted after extraction.
 - [[04-Archive/Inbox/Bug In Ledger]] — 1 png (sidebar icon drift bug, fixed 2026-07-19; both bugs resolved and verified, archived 2026-07-31).
 - Lamalama research capture — 18 png from lamalama.com, 2026-09-06/07. The temporary Inbox source was deleted after extraction.
-- [[03-Resources/Design/Footer-Non-Boring/01-cursor-follow-mascot]] — 3 png + 1 webp (CSS dual-eye mascot MVP screenshots, consolidated from the demo folder 2026-09-08).
+- Former Footer-Non-Boring mascot source note — 3 png + 1 webp retained as historical artifacts; the source note was deleted during cleanup.
 
-When the Antigravity Swarm inbox note is eventually processed (see [[LINT-REPORT|2026-07-20 lint Suggestions §5]]), the captions above are the canonical record of what each image shows — don't delete this MOC row when the inbox note is archived.
+The captions above remain the canonical record for the original attachment set. Do not delete rows when a temporary source note is archived.
 
 ---
 

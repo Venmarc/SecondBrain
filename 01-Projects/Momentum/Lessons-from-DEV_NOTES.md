@@ -70,7 +70,7 @@
 ## Related
 
 - [[01-Projects/Momentum/Momentum|Momentum hub]]
-- [[01-Projects/Momentum/Docs/PRD|PRD]] · [[01-Projects/Momentum/Docs/PHASES|PHASES]]
+- Current Momentum documents live under `Documents/Port-Sites/Category-5/Momentum/`.
 - [[04-Archive/Momentum/DEV_NOTES|Archived DEV_NOTES]]
 
 **Tags:** #momentum #lesson #extraction

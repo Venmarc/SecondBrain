@@ -67,7 +67,7 @@ Source: Socket.dev incident report, npm `keyv`/`cacheable` namespace compromise 
 
 ## Where This Appeared
 - Harvest Q5 (2026-07-13)
-- [[Clippings/45 Claude Design Skills That Kill AI Slop]]
+- [[04-Archive/Clippings/45 Claude Design Skills That Kill AI Slop]]
 - `~/.agents/design-skills/`
 - npm `keyv`/`cacheable` supply-chain compromise, Socket.dev incident report (2026-08-04)
 

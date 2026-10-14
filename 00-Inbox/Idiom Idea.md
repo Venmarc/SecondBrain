@@ -19,7 +19,7 @@ I’m genuinely not familiar with this stuff to begin with. So I’ll have my ag
 
 Make digital art with moving pixels, like a grid of images and how do I explain this. 
 
-￼![[ScreenRecording_08-29-2026 01-24-06_1.mov]]
+￼![[Assets/ScreenRecording_08-29-2026 01-24-06_1.mov]]
 
 Oh. Just learnt ASCII is just letters/characters grouped together to form an image or moving together to form a video like the one above. So I’ll like to apply that somewhere. Ofc not everything can work with ASCII, but it can work on a dark-themed portfolio.
 
@@ -33,7 +33,7 @@ Landing page hero image of a Lego/minecraft style image. Could be a boy standing
 
 My go to for content websites: marketing, portfolio, images, text made easier.
 
-￼![[Pasted image 20261007034116.png]]
+￼![[Assets/Pasted image 20261007034116.png]]
 I can build the complex web app part with Next.js and attach it to a Vercel project. apps/app for the app.domain.com subdomain. While I do the landings page part with Astro. app/… for the domain.com domain. My explanation might be complex but the concept is understandable.
 
 It’s easier to build a portfolio or multi page site with Astro. And build the complex part with Next.js. While Next.js can handle both, it’s far easier on Astro for the visitor facing side. This style, I will adopt going forward.
@@ -49,8 +49,8 @@ In the Unive website.
 	•	The buttons and image components in the page. The white space of the cloud above the campus served as a good place to add a hero text, and they did just that and added a CTA as well. It has a top bar without a bottom border, a hamburger menu left and get started CTA right. The hero page has the 100dvh whatever that keeps the landing page in view even if u zoom out. It goes away when u scroll—I have used it before.
 	•	Scrolling up. The app screenshot/image looks like the app was made with Astro cos of how smooth the components are. But because of complexity—roles, auth, DB, security, I assume Next.js was used. But going down, the feature screenshots aren’t actually screenshots or images, they’re components that display a piece of the app. And because they’re texts and icons, u don’t have to worry about image rendering and stuff taking time. Just to confirm, I did zoom in and the text, buttons, layout looked smooth. Unless everything there is a huge svg, I think it’s just html, some borders, icons, and texts. I’m saying components like it’s Next.js—It could be, but I’ll just say it’s Astro.
 	
-	![[Pasted image 20261007034308.png]]
-	![[Pasted image 20261007034607.png]]
+	![[Assets/Pasted image 20261007034308.png]]
+	![[Assets/Pasted image 20261007034607.png]]
 ￼
 	U can see the contents, zoomed in appear like parts of apps themselves instead of images. So they just duplicated the components, rendered them inactive, and used them as app screenshots. Genius.
 	•	The image intensive parts, are the student reviews at the later parts of the page. Those ones are text and images, all 5-star btw
@@ -58,7 +58,7 @@ In the Unive website.
 	•	The footer. No black, different color, or images (svg or similar to hero image style) like other websites. Just plain with links and footer stuff—foot stuff haha.
 	•	Back to the hero page, it does have this dark shadow at the bottom-third that serves as a background for the reference websites like Forbes, Business insider, msn, that are placed on it, tho it extends to where the boy is. That shadow actually loads first before the image.
 	
-	![[Pasted image 20261007034738.png]]
+	![[Assets/Pasted image 20261007034738.png]]
 
 ## Image search and image editing
 
@@ -69,7 +69,7 @@ My agent ran a test urself and it came back successfully.
 
 ## LockedIn with 4.8 stars
 
-![[Pasted image 20261007034812.png]]
+![[Assets/Pasted image 20261007034812.png]]
 	⁃	Location activated.
 	⁃	Gives a summary of what u kissed while in class.
 	⁃	Might help reply ur messages.

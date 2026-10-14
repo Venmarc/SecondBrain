@@ -2,7 +2,7 @@
 
 # Vault LLM Wiki Patterns
 
-Synthesized from [[Clippings/Vault Research|Vault Research]] (SpikeCalls X thread + Grok analysis).
+Synthesized from [[04-Archive/Clippings/Vault Research|Vault Research]] (SpikeCalls X thread + Grok analysis).
 
 ## Core loop
 1. Drop sources (clips, chats, articles) into inbox or Clippings.

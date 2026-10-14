@@ -1,5 +1,5 @@
 ---
-title: Lesson: Browser Native Dialog Trap
+title: "Lesson: Browser Native Dialog Trap"
 date: 2026-06-28
 tags:
   - lesson

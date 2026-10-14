@@ -10,7 +10,7 @@ tags:
   - build
 ---
 
-> **One-line Summary**: How to recreate any Web-Garnish footer/landing style in real code — fonts, swatches (sampled from the reference assets), ready-to-paste SVG/CSS idioms, and the asset pipeline. All references live in `assets/`.
+> **One-line Summary**: How to recreate any Web-Garnish footer/landing style in real code — fonts, swatches (sampled from the reference assets), ready-to-paste SVG/CSS idioms, and the asset pipeline. All references live in `Assets/Footer-Design/assets/`.
 
 ## Readiness: can a build reproduce these?
 
@@ -34,11 +34,11 @@ tags:
 
 ## Palettes (sampled from reference assets)
 
-- **Engraved duotone** (adi footers): paper `#fdf9ef` (warm ivory), ink `#466eb4` (line blue), deep ink `#33507a` for hairlines/shadow. Text = ink color, 1px hairlines at 60–80% opacity for depth. Ref: `assets/adi-giaux-footer.jpg`, `assets/adi-village-footer.jpg`.
-- **Postrail sticker footer** (harshit): vermilion block `#ee4032`, paper white `#ffffff`, ink black/`#1a1a1a`. Ref: `assets/harshit-postrail-footer.jpg`.
-- **Wandor sticker footer**: light sky blue field, terracotta/ochre landmarks, teal accent button — sample exact swatches from `assets/harshit-wandor-footer.jpg` at build time rather than trusting memory.
-- **Stamp posters** (hamburgerai): cream panel ≈ `#f5ead6`-family (varies per poster), spot inks desaturated — charcoal `#3b3b3b`, brick `#8a4b38`, ochre `#b08d4f`, deep green `#4a5d3a`. Refs: `assets/stamp-*.jpg`.
-- **Watercolor prints** (alina): ivory paper + deep cobalt/icy blue + one warm golden accent; handwritten ink = dark blue-grey. Refs: `assets/alina-*.jpg`.
+- **Engraved duotone** (adi footers): paper `#fdf9ef` (warm ivory), ink `#466eb4` (line blue), deep ink `#33507a` for hairlines/shadow. Text = ink color, 1px hairlines at 60–80% opacity for depth. Ref: `Assets/Footer-Design/assets/adi-giaux-footer.jpg`, `Assets/Footer-Design/assets/adi-village-footer.jpg`.
+- **Postrail sticker footer** (harshit): vermilion block `#ee4032`, paper white `#ffffff`, ink black/`#1a1a1a`. Ref: `Assets/Footer-Design/assets/harshit-postrail-footer.jpg`.
+- **Wandor sticker footer**: light sky blue field, terracotta/ochre landmarks, teal accent button — sample exact swatches from `Assets/Footer-Design/assets/harshit-wandor-footer.jpg` at build time rather than trusting memory.
+- **Stamp posters** (hamburgerai): cream panel ≈ `#f5ead6`-family (varies per poster), spot inks desaturated — charcoal `#3b3b3b`, brick `#8a4b38`, ochre `#b08d4f`, deep green `#4a5d3a`. Refs: `Assets/Footer-Design/assets/stamp-*.jpg`.
+- **Watercolor prints** (alina): ivory paper + deep cobalt/icy blue + one warm golden accent; handwritten ink = dark blue-grey. Refs: `Assets/Footer-Design/assets/alina-*.jpg`.
 
 ## Code idioms (ready to paste)
 
@@ -99,7 +99,7 @@ Layer: base silhouette in ink at 15% opacity + hatch pattern = engraved vignette
 2. **Sticker footer**: SVG stickers (flat shapes + `#stamp` mask + `.sticker` tilt). Zero images.
 3. **Stamp / watercolor / perspective type**: run the saved prompt (notes 03/04/05) through image-gen, export WebP/AVIF ≤150KB, `loading="lazy"` + explicit `width`/`height`, `content-visibility:auto`.
 
-## Asset manifest (`assets/`)
+## Asset manifest (`Assets/Footer-Design/assets/`)
 - Footers: `adi-giaux-footer.jpg`, `adi-village-footer.jpg`, `adi-3col-footer.jpg`, `harshit-postrail-footer.jpg`, `harshit-wandor-footer.jpg`, `harshit-landmarks-slide.jpg`
 - Interactive sticker demo: `harshit-interactive-stickers.mp4` (the "make stickers interactive" result)
 - Stamp posters: `stamp-venice.jpg`, `stamp-snow-village.jpg`, `stamp-pagoda.jpg`, `stamp-coast.jpg`

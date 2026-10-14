@@ -25,7 +25,7 @@ Two related failure modes that look like "agentmemory is broken":
 
 ## Related
 
-- [[02-Areas/Agent-Ops/GLM-5.2-Context-Overflow]] — adjacent agent-ops note on this vault's previous context-overflow crashes
+- The former GLM context-overflow note was removed during the Agent-Ops cleanup.
 - `~/.agentmemory/patches/README.md` — durable UI-patch reapply + per-tab write-path map (outside vault, linked here)
 - [[ANTI_PATTERNS]] — NOT promoted there; this is install-local infra, not a cross-project code anti-pattern
 

@@ -15,7 +15,7 @@ date: 2026-07-01
 
 # Skill Router Hook
 
-**Implementation:** `~/.gemini/config/skill-router/` · **Related:** [[03-Resources/Skills/Lazy-Agent-Failure-Mode|Lazy Agent Failure Mode]] · [[Clippings/Agent Skill Problem|clipping]]
+**Implementation:** `~/.gemini/config/skill-router/` · **Related:** [[03-Resources/Skills/Lazy-Agent-Failure-Mode|Lazy Agent Failure Mode]] · [[04-Archive/Clippings/Agent Skill Problem|clipping]]
 
 The **Skill Router** is a lightweight, pre-invocation hook system for Google Antigravity. It intercepts incoming user prompts, evaluates them against a catalog of available agent skills, and dynamically injects direct markdown references to matching skills into the prompt context. This ensures that the agent utilizes relevant project-specific instructions without wasting context window space on irrelevant skills.
 
@@ -177,4 +177,3 @@ The following architectural questions and tentative feedback represent open desi
 ### Q4: Hook Latency Budget
 * **Question**: What is the acceptable maximum latency budget for the pre-invocation hook?
 * **Tentative Feedback (Inadequate/Unverified)**: The hook has a budget of 5 to 10 seconds.
-

@@ -1,5 +1,5 @@
 ---
-title: MOC: UI/UX Lessons
+title: "MOC: UI/UX Lessons"
 date: 2026-06-28
 tags:
   - moc
@@ -40,7 +40,7 @@ Prioritize these during foundation — not theme showcases or feature sprawl:
 - [[03-Resources/Skills/AI-UI-Antipatterns-Watchlist]] — anti-slop review
 
 **Ledger**
-- [[01-Projects/Ledger/Docs/DESIGN]] — restraint, tabular nums, budget threshold colors
+- Ledger design rules live in the current project documents under `Documents/Port-Sites/Category-5/Ledger/`.
 - [[03-Resources/Skills/Sticky-Top-Bar-Navigation]] · [[03-Resources/Skills/Dashboard-As-Overview]]
 - [[03-Resources/Skills/Collapsible-Desktop-Sidebar]] — edge-to-edge shell, portal tooltips
 - [[03-Resources/Skills/Theme-Switching-Foundation]] — flash prevention, hydration guards

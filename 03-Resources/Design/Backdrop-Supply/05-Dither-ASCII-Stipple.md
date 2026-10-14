@@ -26,8 +26,8 @@ Direct vision comparison of the demo `halftone` tile against cached freebie `asc
 Sample a luminance field, then quantise it. A halftone grid modulates dot radius by local luminance; an ASCII version maps luminance to a character ramp drawn into a canvas. The demo tile `halftone` is the dot-grid version. To match their figurative stipple pieces, feed a silhouette mask in as the luminance source instead of a noise field, and drop the palette to monochrome; the vision comparison named exactly those two changes as what would make it a drop-in match.
 
 ## Cached assets
-- `assets/ascii/124-rectangle.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/ascii/124-rectangle.webp`)
-- `assets/nocturne/image-9.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/nocturne/image-9.webp`)
+- `Assets/Backdrop-Supply/assets/ascii/124-rectangle.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/ascii/124-rectangle.webp`)
+- `Assets/Backdrop-Supply/assets/nocturne/image-9.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/nocturne/image-9.webp`)
 
 ## Related
 - [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply index]]

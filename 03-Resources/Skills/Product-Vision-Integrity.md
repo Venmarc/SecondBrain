@@ -85,8 +85,8 @@ Add to every project's `PRD.md` under a visible section:
 - [[01-Projects/Tempire/Tempire#Session log (condensed)|Tempire sessions]] — "product journey > marketing" (2026-05-11)
 
 ## Related
-- [[01-Projects/Momentum/Docs/PRD]] — the tagline this note references
-- [[01-Projects/Tempire/Docs/PRD]]
+- Momentum's tagline lives in the current project documents under `Documents/Port-Sites/Category-5/Momentum/`.
+- Tempire's product requirements live in the current project documents under `Documents/Port-Sites/Category-4/Tempire/`.
 - [[03-Resources/MOC-UI-UX-Lessons]]
 
 **Tags:** #lesson #product #vision #testing #momentum #generalizable

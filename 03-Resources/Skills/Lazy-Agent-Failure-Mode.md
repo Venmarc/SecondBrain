@@ -2,7 +2,7 @@
 
 # Lazy Agent Failure Mode
 
-**Sources:** [[04-Archive/Voice-Notes/Voice Note 36 Transcript|Voice Note 36]] · [[Clippings/Agent Skill Problem|Agent Skill Problem clipping]]
+**Sources:** [[04-Archive/Voice-Notes/Voice Note 36 Transcript|Voice Note 36]] · [[04-Archive/Clippings/Agent Skill Problem|Agent Skill Problem clipping]]
 
 ## Problem
 Agents recognize a skill applies ("this needs UI/UX Pro Max") but proceed without loading `SKILL.md` unless the user names it explicitly.

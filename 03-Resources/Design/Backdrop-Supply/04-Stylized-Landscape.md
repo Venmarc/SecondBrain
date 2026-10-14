@@ -32,11 +32,11 @@ Not attempted in the demo, deliberately. The demo tested procedural techniques o
 No shader recipe. These carry composition and subject, which is exactly what a procedural gradient cannot produce. Treat the cached previews as art direction references and generate a replacement through the image tool, or build the scene if it needs to animate.
 
 ## Cached assets
-- `assets/zephyr/image-6.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/zephyr/image-6.webp`)
-- `assets/velvex/image-2.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/velvex/image-2.webp`)
-- `assets/viridian/image-1.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/viridian/image-1.webp`)
-- `assets/perplex/image-29.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/perplex/image-29.webp`)
-- `assets/serenox/image-0.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/serenox/image-0.webp`)
+- `Assets/Backdrop-Supply/assets/zephyr/image-6.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/zephyr/image-6.webp`)
+- `Assets/Backdrop-Supply/assets/velvex/image-2.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/velvex/image-2.webp`)
+- `Assets/Backdrop-Supply/assets/viridian/image-1.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/viridian/image-1.webp`)
+- `Assets/Backdrop-Supply/assets/perplex/image-29.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/perplex/image-29.webp`)
+- `Assets/Backdrop-Supply/assets/serenox/image-0.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/serenox/image-0.webp`)
 
 ## Related
 - [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply index]]

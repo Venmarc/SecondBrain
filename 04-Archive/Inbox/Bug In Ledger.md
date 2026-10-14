@@ -10,7 +10,7 @@ Also, I tried to delete the transaction from the transaction page, using the 3 d
 > - Victor: re-verify in browser (edit delete, ⋮ delete, swipe, undo) before treating as gate-closed.
 
 **Another thing. Misalignment with of icons on the sidebar.**
-The agent implemented a feature correction I asked it to fix where the sidebar first pulls in the icons before collapsing, making the collapse not look smooth. It fixed it by shifting the icons to the left edge (touching the wall), with no padding. ![[Pasted image 20260720062129.png]]
+The agent implemented a feature correction I asked it to fix where the sidebar first pulls in the icons before collapsing, making the collapse not look smooth. It fixed it by shifting the icons to the left edge (touching the wall), with no padding. ![[Assets/Pasted image 20260720062129.png]]
 But the sidebar expands smoothly just as I wanted, but it doesn't not look good. 
 - The sidebar icons are supposed to be canter aligned--not achieved.
 - The highlight around the icons are supposed to be centered--not achieved

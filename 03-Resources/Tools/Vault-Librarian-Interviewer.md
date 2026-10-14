@@ -38,6 +38,6 @@ node scripts/harvest.js --record "1,2,3"   # Mark candidates 1, 2, and 3 as harv
 
 
 ## Related
-- [[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|How Victor Works With Agents]]
+- [[AGENTS|Vault agent rules]]
 - [[AGENTS|AGENTS.md]]
 - [[03-Resources/Skills/Knowledge-Extraction-Interviewer|Knowledge Extraction]]

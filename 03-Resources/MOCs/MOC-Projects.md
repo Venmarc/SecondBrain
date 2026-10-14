@@ -1,5 +1,5 @@
 ---
-title: MOC: Projects
+title: "MOC: Projects"
 date: 2026-10-14
 tags:
   - moc
@@ -9,27 +9,26 @@ tags:
 
 # MOC: Projects
 
-> **One-line Summary**: Graph hub for active and paused build projects — status, hubs, and doc entry points.
+> **One-line Summary**: Graph hub for active and paused build projects — status and hub notes; full documents stay beside each project in Documents.
 
 ## Active and paused
 
-| Project | Hub | Phase doc | UI lessons |
-|---------|-----|-----------|------------|
+| Project | Hub | External project documents | UI lessons |
+|---------|-----|----------------------------|------------|
 | skill-router | [[01-Projects/skill-router/skill-router]] | — | [[03-Resources/Skills/Skill-Router-Hook]] |
-| Momentum | [[01-Projects/Momentum/Momentum]] | [[01-Projects/Momentum/Docs/PHASES]] | [[03-Resources/MOC-UI-UX-Lessons]] |
-| Ledger | [[01-Projects/Ledger/Ledger]] | [[01-Projects/Ledger/Docs/PHASES]] | [[01-Projects/Ledger/Docs/DESIGN]] · [[01-Projects/Ledger/Docs/UIUX_BRIEF]] |
-| Driving Game | [[01-Projects/Driving-Game/Driving-Game]] | [[01-Projects/Driving-Game/Docs/driving-game-stage-1-goal]] | — |
+| Momentum | [[01-Projects/Momentum/Momentum]] | `Documents/Port-Sites/Category-5/Momentum/` | [[03-Resources/MOC-UI-UX-Lessons]] |
+| Ledger | [[01-Projects/Ledger/Ledger]] | `Documents/Port-Sites/Category-5/Ledger/` | [[03-Resources/MOC-UI-UX-Lessons]] |
+| Driving Game | [[01-Projects/Driving-Game/Driving-Game]] | `Documents/Driving-Game/` | — |
 
 ## Later
 
 | Project | Hub | Notes |
 |---------|-----|-------|
-| Tempire | [[01-Projects/Tempire/Tempire]] | Formal specs: `01-Projects/Tempire/Docs/` |
+| Tempire | [[01-Projects/Tempire/Tempire]] | `Documents/Port-Sites/Category-4/Tempire/` |
 
 ## Cross-project rules
 
-- Product truth: Port Sites folders; vault `Docs/` are dated mirrors.
-- Victor supervises: [[02-Areas/Agent-Ops/How-Victor-Works-With-Agents]]
+- Product truth: project folders under `Documents/`; vault hubs record current state.
 - Session lessons: [[03-Resources/Vault-Ops/Session-Lesson-Extraction-Idea]]
 
 **Tags:** #moc #projects

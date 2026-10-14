@@ -26,7 +26,7 @@ See [[03-Resources/Vault-Ops/Better-Me-Better-Vault|Better Me, Better Vault]] an
 
 ### Distribution Reality (X)
 
-[[03-Resources/SEO-Marketing/X-Algorithm-Ranking-Signals|X Algorithm Ranking Signals]] documents what the open-sourced For You ranking actually rewards, verified against source. Short version: copy-link shares, DM shares and quotes carry the heaviest weights, the largest conditional boost applies only to *original* posts shown to mutual follows, out-of-network reach is discounted 25%, and the retrieval window is ~48 hours. Weights multiply *predicted probabilities*, not engagement counts — so they indicate direction, not a growth formula.
+[[02-Areas/Content-Creation/X-Algorithm-Ranking-Signals|X Algorithm Ranking Signals]] documents what the open-sourced For You ranking actually rewards, verified against source. Short version: copy-link shares, DM shares and quotes carry the heaviest weights, the largest conditional boost applies only to *original* posts shown to mutual follows, out-of-network reach is discounted 25%, and the retrieval window is ~48 hours. Weights multiply *predicted probabilities*, not engagement counts — so they indicate direction, not a growth formula.
 
 ### First Story
 

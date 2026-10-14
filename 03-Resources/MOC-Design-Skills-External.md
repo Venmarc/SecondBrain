@@ -2,7 +2,7 @@
 
 # MOC: External Design Skills (Anti-Slop)
 
-**Source (immutable):** [[Clippings/45 Claude Design Skills That Kill AI Slop|45 Claude Design Skills That Kill AI Slop]]
+**Source (immutable):** [[04-Archive/Clippings/45 Claude Design Skills That Kill AI Slop|45 Claude Design Skills That Kill AI Slop]]
 
 ## Why this exists
 Victor's vault already has ingested UI/UX lessons under `03-Resources/Skills/`. This MOC tracks the external 45-skill catalog for cross-reference when evaluating new skills to install.

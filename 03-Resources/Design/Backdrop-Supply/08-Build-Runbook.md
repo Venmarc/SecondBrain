@@ -33,7 +33,7 @@ full uniform spec with ranges and defaults. `engine/presets.json` carries the ar
 `engine/FRAG_HEADER.glsl` carries the shared uniform block, the simplex and fbm helpers, `paletteAt` and
 `writeColor`. Paste a mode's GLSL under the header and you have that look.
 
-**Route 3, generate.** For anything with subject, depth or composition. Cached previews in `assets/` are the
+**Route 3, generate.** For anything with subject, depth or composition. Cached previews in `Assets/Backdrop-Supply/assets/` are the
 reference images.
 
 ## Pitfalls, all hit for real while building the demo

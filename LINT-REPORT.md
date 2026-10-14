@@ -6,8 +6,8 @@
 **Prior full audit:** [[LINT-REPORT|2026-07-31 pass]] (classification retained below)
 **Audit trigger:** Post-extraction verification and the ordered `04-Archive` / `05-Daily` audit
 **Methods:**
-1. **Obsidian CLI** — unavailable because Obsidian is not running. Not used.
-2. **Temporary Python wikilink scanner** — 216 Markdown files, exact-path and unique-basename resolution, with raw unresolved targets reported without classifying historical links, examples, bylines, or binary embeds.
+1. **Obsidian CLI** — unavailable in this environment. Not used.
+2. **Temporary Python wikilink scanner** — exact-path and unique-basename resolution, with raw unresolved targets reported without classifying historical links, examples, bylines, or binary embeds.
 3. **Targeted folder scans** — separate checks for `04-Archive/` and `05-Daily/` after edits.
 4. **`git diff --check`** — targeted check passed for this maintenance pass. The full worktree check reports an existing trailing-space line in the intentionally retained `00-Inbox/Idiom Idea.md`.
 5. **Defuddle** — available at version 0.19.1; no ingest was run.
@@ -16,22 +16,20 @@
 
 ### Scope and result
 
-- The prior raw-scan run inspected **216 Markdown files**.
-- That run reported **146 unresolved target instances** and **1 ambiguous basename** before manual classification. This is recorded as provenance, not as a reproducible current full-lint result.
+- A fresh local scanner inspected **148 Markdown files**.
+- It reported **47 unresolved target instances across 41 targets**, with no ambiguous basenames, no missing binary embeds, and no stale qualified paths after the repairs below.
 - These raw results include historical links to deleted session logs, report examples, author bylines, code paths, and binary embeds. They are not all actionable broken links.
 - `04-Archive/` reported four raw targets. They are known historical or immutable cases: one image embed, two clipping bylines, and one deleted clipping source.
-- `05-Daily/` reported **zero unresolved links** after this audit.
-- The targeted diff check passed. The full diff check remains blocked by the existing trailing-space line in `00-Inbox/Idiom Idea.md`; that source was intentionally not rewritten.
+- `05-Daily/` is currently absent and has no unresolved links.
+- Both targeted and full `git diff --check` passed. The retained Inbox source was not rewritten for whitespace cleanup.
 - `agentmemory status` reported a healthy local service. No memory result was needed to classify these file changes.
-- `00-Inbox/` now contains `.gitkeep` and the intentionally retained `Idiom Idea.md`. All other prior Inbox contents were explicitly cleared after extraction or because they were no longer needed.
+- `00-Inbox/` now contains `.gitkeep`, the intentionally retained `Idiom Idea.md`, and the new `Hunch_related to productivity and posting.md` note.
 
 ### Changes in this pass
 
-- `04-Archive/Momentum/DEV_NOTES.md` now points to the current Momentum `Docs/NOTES.md` file and marks two unwritten historical references as plain text.
+- `04-Archive/Momentum/DEV_NOTES.md` points to the current Momentum hub and marks two unwritten historical references as plain text.
 - `04-Archive/Exams/Exam-Schedule.md` no longer contains unfinished template instructions. It records its archived status.
-- `05-Daily/2026-06-03.md` now uses the archived World Cup post path.
-- `05-Daily/2026-06-25.md` now has a fixed date heading and no broken `Future Projects` link.
-- `05-Daily/2026-07-20.md` now records that the Antigravity Swarm source was extracted and deleted.
+- Former daily-note repairs were completed before the 2026-10-14 Daily cleanup. Those notes are now deleted by explicit scope.
 - `BRAIN.md` and `index.md` now show the 2026-10-14 maintenance review date.
 - `ANTI_PATTERNS.md` now points eight extracted WebGL and performance lessons to the retained session-extraction index instead of deleted source logs.
 - `README.md` now matches the current Ledger Phase 3 status and canonical live URL.
@@ -39,19 +37,20 @@
 - `06-Agent-Sessions/extracted-sessions.md` now includes the deleted 2026-09-05 HALDEN ASK session and its implementation result.
 - The prior theme-toggle contradiction is corrected in this report: Victor resolved it on 2026-07-31.
 - All deleted Inbox-only references now point to extracted resource notes or plain historical text. `Idiom Idea.md` remains a valid active source link.
+- Moved asset verification matched all 89 media files byte-for-byte. The Backdrop Supply manifest contains 31 records with no missing or size-mismatched files. The three Driving Game source documents match their copies under `Documents/Driving-Game/`.
 
 ### Scope boundary
 
 - The daily audit means **link and obvious template-residue checks**. It does not complete the weekly review, infer missing dates, or rewrite historical note titles.
-- `04-Archive/World-Cup-Clipping/World-Cup-Clipping-Guide.md`, `04-Archive/World-Cup-Clipping/X World Cup Clipping Post.md`, and `05-Daily/weekly/2026-08-09.md` were already modified before this continuation. They remain outside this pass's ownership.
+- `04-Archive/World-Cup-Clipping/World-Cup-Clipping-Guide.md` and `04-Archive/World-Cup-Clipping/X World Cup Clipping Post.md` remain outside this pass's ownership. The former `05-Daily/weekly/2026-08-09.md` note was later removed in the approved Daily cleanup.
 
 ### Deferred
 
 - Do not edit immutable files under `04-Archive/Clippings/`.
 - Do not delete the duplicate World Cup post without explicit approval.
 - Do not move `Transaction_UI_Spec.md`; `CHANGELOG.md` records it as a historical Ledger specification intentionally kept in Archive.
-- The prior full orphan/dead-end classification is stale after session-log deletion. Run a new classified full lint when Obsidian is available or when a replacement scanner can separate intentional history from actionable links.
-- `01-Projects/Ledger/Docs/PHASES.md` remains a stale mirror from 2026-07-21. Do not overwrite it from the hub until the Port Sites source is checked and the sync banner can be refreshed.
+- The fresh local scan found one active-scope orphan and 29 active-scope dead ends. The orphan is the new Inbox note. The dead ends are intentional leaf notes, Inbox material, or this report. They are not deletion candidates. Most unresolved targets are deleted historical session logs, template placeholders, archive bylines, or outside-vault paths.
+- The former `01-Projects/Ledger/Docs/PHASES.md` mirror was deleted during the 2026-10-14 project-library cleanup. Use the Ledger documents beside the project in `Documents/`.
 - An external `Research_files/Jellyfish-swarm.html` copy was not touched. It is outside the vault and deletion scope.
 
 ---
@@ -65,7 +64,7 @@
 | Dead-end notes (no outgoing) | 30 | 46 | Down — mirror docs + archive still dominate, all acceptable-by-design |
 | Actionable (real, fixable problems) | **0** | 5 | All 5 prior actionable items resolved or confirmed non-issues this session — see §Unresolved below |
 | Stale project phase claims | 0 | 1 (BRAIN.md date) | Fixed — [[BRAIN]] refreshed to 2026-07-31 this session |
-| Inbox backlog | 3 items, 0 dangling links | 4 items, 1 dangling link | [[00-Inbox/Antigravity Swarm]] dangling ref fixed this session |
+| Inbox backlog | 2 active notes plus `.gitkeep`; no current dangling links | 4 items, 1 dangling link | Former `00-Inbox/Antigravity Swarm` note was deleted after its extracted state was retained |
 | Empty/typo junk notes | 0 | 1 (`ASSETS.md.md`) | Confirmed already renamed to `ASSETS.md` (fixed pre-compaction, verified this session) |
 
 ---
@@ -80,7 +79,7 @@
 | Second orphan pocket of 5 leftover session logs (07-14/07-15, not part of the original 26-file extraction batch) | Triaged via background agent — all confirmed redundant with content already in [[01-Projects/Ledger/Ledger]], [[ANTI_PATTERNS]], [[03-Resources/Skills/Collapsible-Desktop-Sidebar]], [[03-Resources/Tools/Effects_Glossary]]/[[03-Resources/Tools/Effects_Playbook]] — deleted, row added to [[06-Agent-Sessions/extracted-sessions]] | Manual `ls` sweep of `06-Agent-Sessions/` against `extracted-sessions.md` |
 | `03-Resources/Skills/Defuddle-Clipping.md` — long-orphaned skill note | Wired inbound link from [[AGENTS]] §3 defuddle bullet | Python scanner (carried over from 2026-07-20 report) |
 | `03-Resources/Skills/Pre-Launch-Security-Checklist.md` — long-orphaned skill note | Wired inbound link from [[03-Resources/MOC-UI-UX-Lessons]] §Product Thinking | Python scanner (carried over from 2026-07-20 report) |
-| Theme-toggle icon spec/code discrepancy (session on 2026-07-15 reversed the toggle ternary; [[01-Projects/Ledger/Docs/UIUX_BRIEF]] §6.10 / [[01-Projects/Ledger/Docs/APP_FLOW]] §3.2 still document the opposite) | **Resolved 2026-07-31.** Victor fixed the toggle back to spec; the docs were correct as written. | Background triage agent and Victor verification |
+| Theme-toggle icon spec/code discrepancy (session on 2026-07-15 reversed the toggle ternary; former Ledger UIUX_BRIEF §6.10 / APP_FLOW §3.2 documents recorded the opposite) | **Resolved 2026-07-31.** Victor fixed the toggle back to spec; the documents were correct as written. | Background triage agent and Victor verification |
 | `03-Resources/Saved-Threads/` — flagged 2026-07-20 as a link to a nonexistent folder | Re-checked: folder exists on disk with `.gitkeep` (created 2026-07-08) — **already resolved**, just not yet populated with saved threads. No action needed. | Manual `ls` |
 | Python scanner basename-ambiguity bug (multiple files sharing a basename, e.g. `AGENTS.md`/`PRD.md` across project `Docs/` folders, were attributed to whichever file an unordered `set` iteration hit first) | Fixed: exact-path match now preferred before basename fallback; multi-match cases marked `AMBIGUOUS:` instead of guessed | Self-caught while auditing an implausible orphan list (34 orphans pre-fix on a smaller/older scan, later corrected) |
 
@@ -114,7 +113,7 @@
 |------|---------|
 | `00-Inbox/Sites To Extract.md` | Inbox planning backlog — leave, process when next emptying inbox |
 | `04-Archive/Voice-Notes/Voice Notes 37 Transcript.md` | Historical raw transcript — archive orphan is acceptable |
-| `05-Daily/2026-05-11.md`, `2026-06-25.md`, `2026-07-20.md` | Periodic dailies — orphans by convention, unchanged |
+| Former `05-Daily/2026-05-11.md`, `2026-06-25.md`, and `2026-07-20.md` | Periodic dailies in the historical 2026-07-31 baseline; deleted during the approved 2026-10-14 Daily cleanup |
 | `06-Agent-Sessions/2026-07-19-grok-portfolio-phase-1-identity.md` | **Deferred (decided 2026-07-31, Victor)** — content closed, no project hub. `mario-dev-portfolio` isn't wired into the vault project structure like Momentum/Ledger yet (just loose `venmarcstudio.xyz` mentions) — deliberately not creating `01-Projects/Portfolio/Portfolio.md` now; link it in later. See [[06-Agent-Sessions/extracted-sessions]] "Held open" note. |
 | `06-Agent-Sessions/2026-07-20-grok-antigravity-reactive-build-checkpoint-0-3.md`, `2026-07-20-grok-antigravity-reactive-build.md`, `2026-07-21-grok-antigravity-jellyfish-organism.md` | **Held open** — jellyfish-ring rewrite awaiting Victor's review/sign-off before glossary promotion. Do not extract. |
 | `06-Agent-Sessions/2026-07-30-opencode-ledger-p3-b-plan.md` | **Held open** — paused mid implementer-review pass on Victor's explicit "STOP"; awaiting `docs/P3-B-HOLES.md` + his approval. Do not extract. |
@@ -128,8 +127,8 @@
 
 | Note | Verdict |
 |------|---------|
-| All `01-Projects/Ledger/Docs/*.md` (12 files) + `01-Projects/Momentum/Docs/*.md` (10 files) | Mirror docs from Port Sites — outgoing-link responsibility belongs to the hub ([[01-Projects/Ledger/Ledger]] / [[01-Projects/Momentum/Momentum]]), which link to them. Acceptable. |
-| `02-Areas/Agent-Ops/GLM-5.2-Context-Overflow.md` | Permanent reference note — outbound refs are plain paths, not wikilinks, by design. Acceptable. |
+| Former `01-Projects/Ledger/Docs/*.md` and `01-Projects/Momentum/Docs/*.md` mirrors | Deleted during the 2026-10-14 project-library cleanup. Full documents now live beside each project; project hubs remain in the vault. |
+| Former `02-Areas/Agent-Ops/GLM-5.2-Context-Overflow.md` | Deleted during the 2026-10-14 Area cleanup. Retained technical evidence is in [[ANTI_PATTERNS]] and [[06-Agent-Sessions/extracted-sessions]]. |
 | `04-Archive/Clippings/Agent Skill Problem.md`, `04-Archive/Inbox/Transaction_UI_Spec.md`, `04-Archive/Voice-Notes/Voice Note 36 Transcript.md`, `Voice Notes 37 Transcript.md` | Historical/immutable archived originals — no outgoing wikilinks by design, preserves provenance. Acceptable. |
 | `06-Agent-Sessions/2026-07-20-grok-antigravity-reactive-build.md`, `2026-07-21-grok-antigravity-jellyfish-organism.md` | Held-open session logs (see §Orphans) — will gain/lose outgoing links once Victor's review resolves the thread. Not touched. |
 | `README.md` | Vault root README — standard markdown paths, no wikilinks by design. Acceptable. |
@@ -157,7 +156,7 @@ No actionable dead-ends this pass.
 | [[01-Projects/Ledger/Ledger]] phase status | Fixed this session — now correctly shows Phase 1/2 gates passed, P3-A complete, P3-B paused |
 | [[BRAIN]] "Active focus: 2026-07-15" | Fixed this session — refreshed to 2026-07-31 |
 | [[index]] project headings + lint pointer | Fixed this session — refreshed to 2026-07-31 |
-| Theme-toggle icon behavior — [[01-Projects/Ledger/Docs/UIUX_BRIEF]] §6.10 / [[01-Projects/Ledger/Docs/APP_FLOW]] §3.2 vs. a 2026-07-15 session that reversed the toggle ternary | **Resolved 2026-07-31.** Victor fixed the toggle back to spec (icon shows current state, not target) — docs were correct as written, no doc changes needed. |
+| Theme-toggle icon behavior — former Ledger UIUX_BRIEF §6.10 / APP_FLOW §3.2 vs. a 2026-07-15 session that reversed the toggle ternary | **Resolved 2026-07-31.** Victor fixed the toggle back to spec (icon shows current state, not target) — documents were correct as written, no document changes needed. |
 
 ---
 

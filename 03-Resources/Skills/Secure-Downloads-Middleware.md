@@ -29,7 +29,7 @@ Use this skill when designing digital product download flows, setting up Supabas
 
 ## Related Links
 *   [[03-Resources/Skills/Theme-Switching-Foundation|Theme Switching Foundation]]
-*   [[01-Projects/Tempire/Docs/SCHEMA|Tempire Schema]]
+*   Tempire schema lives in the current project documents under `Documents/Port-Sites/Category-4/Tempire/`.
 *   [[index|Master Hub Index]]
 
 **Tags:** #skill #security #supabase #rls #compliance #todo/research #tempire

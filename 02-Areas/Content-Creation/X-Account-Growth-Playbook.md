@@ -237,7 +237,7 @@ Use this five-part shape for build posts:
 
 ## Voice reference
 
-The authored corpus now includes [[raw/X-Reply-Tab-Voice-Corpus-2026-10-07]], [[00-Inbox/Idiom Idea]], and the extracted Reference Prompt source. Together they provide about 4,627 words before accounting for overlap and different writing tasks.
+The authored corpus now includes [[02-Areas/Content-Creation/X-Reply-Tab-Voice-Corpus-2026-10-07]], [[00-Inbox/Idiom Idea]], and the extracted Reference Prompt source. Together they provide about 4,627 words before accounting for overlap and different writing tasks.
 
 Use the short X corpus for reply and short-post drafting. Use [[00-Inbox/Idiom Idea]] and the extracted reference prompt for concept development, systems thinking, and design language. Do not flatten them into one style. They serve different tasks.
 
@@ -353,9 +353,9 @@ The verified ranking notes support optimising for useful, saveable, and sendable
 
 ### Confirmed inputs
 
-- The account diagnosis identifies low original output, weak focused value, and reply-to-original conversion as the main constraints. Source: [[raw/X-Account-Sucks-Has-Potential]].
+ - The account diagnosis identifies low original output, weak focused value, and reply-to-original conversion as the main constraints. Source: [[02-Areas/Content-Creation/X-Account-Sucks-Has-Potential]].
 - The current publishing area calls for development publishing, at least two X posts or threads each week, and shipping selected ideas within 48 hours. Source: [[02-Areas/Content-Creation/Content-Creation]].
-- The verified ranking note supports useful, sendable work, real mutual connections, a roughly 48-hour retrieval window, and caution against treating ranking weights as a formula. Source: [[03-Resources/SEO-Marketing/X-Algorithm-Ranking-Signals]].
+ - The verified ranking note supports useful, sendable work, real mutual connections, a roughly 48-hour retrieval window, and caution against treating ranking weights as a formula. Source: [[02-Areas/Content-Creation/X-Algorithm-Ranking-Signals]].
 - Codon Labs already contains a clear process, footer, fictional-company boundary, and active visual work. Source: the current `Codon-Labs` repository in Documents.
 - Full sources now support several practical patterns: explain the insight behind a checklist, make a demo video prove the product or workflow, use specific “avoid” constraints instead of generic anti-style language, and turn one niche into multiple question-shaped angles. Sources: `jev-browser/data/sources/source-3a552525caefb6c65733.md`, `source-925dd508b8800394cf05.md`, `source-8e729031ff5fea4e88b4.md`, and `source-fcddd24ddffad549e3f3.md`.
 

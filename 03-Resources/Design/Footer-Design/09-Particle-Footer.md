@@ -19,7 +19,7 @@ Real design: **ACQUIRE** (chat/automation SaaS) dark footer. Two human silhouett
 ## Replication recipe (v2 — antigravity morph-field, built & verified 2026-09-13)
 **Interaction model**: field of drifting sand grains (homes on dune crests + sky dust) that assemble into the handshake pair on cursor hover, disperse on exit. Mechanics per [[03-Resources/Tools/Effects_Glossary|Effects_Glossary]] "Morphing particle field" entry: permanent homes; 3s spawn/grow/shrink/die/respawn life cycle per particle; `hoverProgress²` assembly easing; ~20–25% of particles never join (field stays alive); 1.5× scale boost near target.
 
-1. **Silhouette target**: generate a flat black-on-white pair (image tool, prompt in `assets/handshake-silhouette-pair.png` provenance below; realistic proportions — inner arms clasped at center, outer arms relaxed at sides). Threshold to a binary mask (`ffmpeg geq lum<128 → black`), downscale ~640w, embed as base64 PNG (~4.4KB) — no network dependency, canvas never tainted.
+1. **Silhouette target**: generate a flat black-on-white pair (image tool, prompt in `Assets/Footer-Design/assets/handshake-silhouette-pair.png` provenance below; realistic proportions — inner arms clasped at center, outer arms relaxed at sides). Threshold to a binary mask (`ffmpeg geq lum<128 → black`), downscale ~640w, embed as base64 PNG (~4.4KB) — no network dependency, canvas never tainted.
 2. **Decode + sample**: draw mask to offscreen canvas, `getImageData`, sample dark pixels at step 3 → ~3.9k shape points. Normalize to 0–1 stage space.
 3. **Map to scene**: aspect-preserving fit (`SHAPE_ASPECT = bbox w/h ≈ 0.83`), height 48% of scene, **feet anchored on the front dune crest** at center (`oy = crestY - shapeH`).
 4. **Assignment**: unique shuffled 1:1 (every shape point owned by exactly one particle) — NOT nearest-home, which starves torsos. Joiner pool sized ≈ shape-point count.
@@ -33,9 +33,9 @@ Real design: **ACQUIRE** (chat/automation SaaS) dark footer. Two human silhouett
 - Clip-art silhouettes are busts (close-up hands / pictograms / waist-up) — generate the pair instead, verify proportions via vision before use.
 - `--virtual-time-budget` screenshots catch frame 1–2 (scattered dust); only real-time waits verify a morph.
 
-**Reference scale** (measured from `assets/benjamin-sand-particles.jpg`): figure zone = 15.3–34.4% of footer height (pair ~322px tall on a 1440px footer), feet planted on the front dune crest, handshake centered.
+**Reference scale** (measured from `Assets/Footer-Design/assets/benjamin-sand-particles.jpg`): figure zone = 15.3–34.4% of footer height (pair ~322px tall on a 1440px footer), feet planted on the front dune crest, handshake centered.
 
-**Working build**: `demos/acquire-particle-footer/index.html` (+ `preview.png` = hover state, `preview-idle.png` = resting field).
+**Working build**: `demos/acquire-particle-footer/index.html` (+ `Assets/Footer-Design/demos/acquire-particle-footer/preview.png` = hover state, `Assets/Footer-Design/demos/acquire-particle-footer/preview-idle.png` = resting field).
 
 **Wind layer (v2.1)**: gust envelope `0.35–1.3` (slow sin² surges ~18s + fast flutter — never calm, never storm); height-weighted downstream lean `wind·(1.2+2.8·sin)·(0.35+0.65·heightFraction)` so the pair streams like cloth; plucked grains (streak 4.5×1px, gravity 0.045, respawn at post) at `wind·0.0022`/frame; saltation streaks in a 26px band above the crests + air haze above. Dunes got a mid-frequency harmonic (`x·0.011`) + third (`x·0.026`) so ridges roll instead of reading flat. The broader environment idea was extracted and the temporary Inbox source was deleted.
 

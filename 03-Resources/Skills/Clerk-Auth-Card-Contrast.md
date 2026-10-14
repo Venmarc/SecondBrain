@@ -16,7 +16,7 @@ Looks like a "face smeared with charcoal" — inputs/labels unreadable on dark a
 
 ## Fix direction (when scheduled)
 
-1. Set Clerk `appearance.variables` / `elements` for card background, text, input, primary button to match [[01-Projects/Momentum/Docs/UIUX_BRIEF|UIUX_BRIEF]] (or Ledger DESIGN).
+1. Set Clerk `appearance.variables` / `elements` for card background, text, input, and primary button to match the current Momentum or Ledger project documents.
 2. Test sign-in/sign-up on real device, not only desktop devtools.
 3. Prefer branded auth phase only after contrast baseline is correct.
 
@@ -27,7 +27,7 @@ Looks like a "face smeared with charcoal" — inputs/labels unreadable on dark a
 
 ## Related
 
-- [[05-Daily/2026-07-09|Daily 2026-07-09]]
+- Historical source: daily note `2026-07-09` (deleted during the 2026-10-14 cleanup).
 - [[01-Projects/Momentum/Momentum|Momentum hub]]
 
 **Tags:** #skill #clerk #auth #momentum #ledger #a11y

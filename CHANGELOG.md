@@ -27,6 +27,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Preserved the empty `01-Projects/Clone-Website/` folder structure and its `.gitkeep` placeholders for Victor's rewrite.
 - Repointed active references from deleted Inbox notes to extracted resources or plain historical text.
 - Deleted the vault-local `CLAUDE.md`; `AGENTS.md` remains the single vault instruction source.
+- Consolidated project records to one hub per project, moved full project documents to the external `Documents/` locations, and verified the three Driving Game document copies.
+- Moved 89 media files into the vault `Assets/` tree, rewrote active references, and verified byte-for-byte matches plus the Backdrop Supply manifest.
+- Moved the approved X source notes into `02-Areas/Content-Creation/`, retained the portfolio PDF in `raw/`, and deleted the other explicitly approved raw sources.
+- Reviewed `03-Resources/` without deletion and added [[03-Resources/Vault-Ops/Resources-Action-Report-2026-10-14|Resources Action Report]].
+- Repaired post-cleanup links in live notes, historical records, and asset indexes. Obsidian CLI remained unavailable, so the local scanner and targeted checks provide the current evidence.
 
 ### 2026-10-13 — AI Hero v1.3 lessons extracted
 
@@ -70,7 +75,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### 2026-10-07 — X voice corpus and source-backed content resources created
 
 #### Added
-- **[[raw/X-Reply-Tab-Voice-Corpus-2026-10-07|X Reply Tab Voice Corpus]]** — 149 authored cards from the authenticated X profile, with about 2,541 words of exact tweet text and provenance URLs.
+- **[[02-Areas/Content-Creation/X-Reply-Tab-Voice-Corpus-2026-10-07|X Reply Tab Voice Corpus]]** — 149 authored cards from the authenticated X profile, with about 2,541 words of exact tweet text and provenance URLs. Moved from `raw/` during the 2026-10-14 cleanup.
 - **[[06-Agent-Sessions/2026-10-07-omnirush-x-voice-and-post-resources|Session log]]** — records the capture, source-quality correction, and evidence limits.
 - **[[02-Areas/Content-Creation/X-Voice-Reference|X Voice Reference]]** — observed voice patterns, task separation, drafting rules, and a reusable drafting prompt.
 - **[[03-Resources/Content-Creation/X-Voice-Sample-Size-Research|X Voice Sample Size Research]]** — primary-source research on word counts, prompting examples, fine-tuning examples, and evaluation.
@@ -91,7 +96,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### 2026-10-06 — X account growth strategy source captured
 
 #### Added
-- **[[raw/X-Account-Sucks-Has-Potential]]** — Immutable summary of the current X growth diagnosis and the reply-to-original content strategy. A tested playbook will be created in the Content Creation area after Bookmark Intelligence provides evidence.
+- **[[02-Areas/Content-Creation/X-Account-Sucks-Has-Potential|X Account Sucks Has Potential]]** — Summary of the current X growth diagnosis and the reply-to-original content strategy. Moved from `raw/` during the 2026-10-14 cleanup.
 - Linked the new raw source from `index.md`.
 
 ### 2026-09-23 — Codon-Labs: visual motion polish micro-interactions merged to main
@@ -183,7 +188,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **Lesson**: two writers in one file need one owner per document. Edits landed mid-sweep and had to be reconciled twice.
 
 #### Added
-- [[01-Projects/Clone-Website/Docs/world-history-v1|World canon v2]] — rewritten: timeline re-anchored to 1973, the two-campi legal table (Basel research, Allschwil 1988, Saint-Louis 2004, New York program), the re-anchored workforce table, the founder's continuation (D32), open questions.
+- World canon v2 (`01-Projects/Clone-Website/Docs/world-history-v1`, since deleted) — rewritten: timeline re-anchored to 1973, the two-campi legal table (Basel research, Allschwil 1988, Saint-Louis 2004, New York program), the re-anchored workforce table, the founder's continuation (D32), open questions.
 
 #### Changed
 - Copy deck: world facts table (clinical program = New York State, staff 1,850 group + ~90 program, funding line), FAQ answers for geography, legality and legal parentage rewritten on real law, the review line de-"61 scientists"-ed, founder quote section (attribution B recommended, two Bea portraits plus the founder's continuation image, use-once rule), /terms clause 14 drafted.
@@ -194,8 +199,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **Lesson**: two agent sessions drafted imagery documents in parallel under near-identical names. Name docs by function (slot map vs generation ledger) and cross-link them.
 
 #### Added
-- [[01-Projects/Clone-Website/Docs/world-history-v1|World history canon v1]] — 1973 Basel founding adjacent to the Biozentrum (Petersplatz), 1980s–90s animal division (Allschwil or Saint-Louis, 15 min from HQ), the Dolly-era beat, the three founders (Bea Vogel-Keller + two co-founders, one deceased 2000s), two campuses, open world questions. Translated from Victor's Gemini/Google Earth research (Gemini was told only "genetics and cell research company that later had an animal division", never "clone company").
-- [[01-Projects/Clone-Website/Docs/image-requirements-v1|Generation ledger v1]] — sibling session: paste-ready per-asset prompts, A/B/C tiers, sprint order against the SuperGrok window. Companion to the slot map.
+- World history canon v1 (`01-Projects/Clone-Website/Docs/world-history-v1`, since deleted) — 1973 Basel founding adjacent to the Biozentrum (Petersplatz), 1980s–90s animal division (Allschwil or Saint-Louis, 15 min from HQ), the Dolly-era beat, the three founders (Bea Vogel-Keller + two co-founders, one deceased 2000s), two campuses, open world questions. Translated from Victor's Gemini/Google Earth research (Gemini was told only "genetics and cell research company that later had an animal division", never "clone company").
+- Generation ledger v1 (`01-Projects/Clone-Website/Docs/image-requirements-v1`, since deleted) — sibling session: paste-ready per-asset prompts, A/B/C tiers, sprint order against the SuperGrok window. Companion to the slot map.
 
 #### Changed
 - Copy deck: H1 stamped ("The next frontier is you"), Dolly FAQ given an identifying clause + verified Nottingham 13-sheep sourcing, consent FAQ gains the grandfather carve-out (D19: "Death does not withdraw a yes. Silence does."), grandfather review drafted, world facts table re-anchored to the 1973 Basel canon, founder quote attribution options added.
@@ -231,9 +236,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### 2026-09-13 — Clone-Website: research dig, decisions D8–D17, copy deck v1
 
 #### Added
-- [[01-Projects/Clone-Website/Docs/research-cloning-shabang|Research digest "The Whole Cloning Shabang"]] — 42 sourced sources (Tavily): Clonaid anti-pattern (credibility recipe), grief register (ViaGen customers, Streisand), twins' lived reality (Psychiatric Times twin-perspective), law/jurisdiction, science failure modes + aging-myth debunk, Colossal/ViaGen brand registers, elite-reproduction price anchors, self-cloning demand (Theos/YouGov 11%/4%), fiction reference points (Never Let Me Go's Hailsham, Mortyplicity).
-- [[01-Projects/Clone-Website/Docs/copy-v1|Copy Deck v1]] — voice spec (14 rules), world facts table, all 5 sections drafted to final quality, 14-item FAQ (myth + plausible registers), pricing + speed-roadmap module, fictional founder quote, two-step realism page map (layers 0–2), the reveal email drafted in full. Red-ink pass pending: hero H1 pick, world numbers, geography, terms-disclosure clause.
-- [[01-Projects/Clone-Website/Docs/slotmap-motion-v1|Slot map & motion requirements v1]] — every visual slot by page/section with aspects and counts (companion to the sibling session's generation ledger `image-requirements-v1.md`), the Three In-World Laws (no grown continuations in present-day, no doubles site-wide, fictional faces only), motion/video slots, build-not-generate asset list, Agy gate checklist, generation budget and sequencing.
+- Research digest "The Whole Cloning Shabang" (`01-Projects/Clone-Website/Docs/research-cloning-shabang`, since deleted) — 42 sourced sources (Tavily): Clonaid anti-pattern (credibility recipe), grief register (ViaGen customers, Streisand), twins' lived reality (Psychiatric Times twin-perspective), law/jurisdiction, science failure modes + aging-myth debunk, Colossal/ViaGen brand registers, elite-reproduction price anchors, self-cloning demand (Theos/YouGov 11%/4%), fiction reference points (Never Let Me Go's Hailsham, Mortyplicity).
+- Copy Deck v1 (`01-Projects/Clone-Website/Docs/copy-v1`, since deleted) — voice spec (14 rules), world facts table, all 5 sections drafted to final quality, 14-item FAQ (myth + plausible registers), pricing + speed-roadmap module, fictional founder quote, two-step realism page map (layers 0–2), the reveal email drafted in full. Red-ink pass pending: hero H1 pick, world numbers, geography, terms-disclosure clause.
+- Slot map & motion requirements v1 (`01-Projects/Clone-Website/Docs/slotmap-motion-v1`, since deleted) — every visual slot by page/section with aspects and counts (companion to the sibling session's generation ledger `image-requirements-v1.md`), the Three In-World Laws (no grown continuations in present-day, no doubles site-wide, fictional faces only), motion/video slots, build-not-generate asset list, Agy gate checklist, generation budget and sequencing.
 
 #### Changed
 - Hub decision log D8–D17: name **Codon Labs** (codonlabs.com squatter-held; .io/.ai/codon-labs.com open, trademark check pending), clone output always a baby (one product, one price), $2M price stamped, roadmap = speed (14 months → 9 by 2028), FAQ dual registers, frontier metaphor (not continents), image pipeline (requirements → Tavily refs → generate → Agy review), footer baseline engraved vignette with sibling footer session as live alternative.
@@ -265,22 +270,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### 2026-09-13 — Clone-Website project created (brainstorm consolidated)
 
 #### Added
-- [[01-Projects/Clone-Website/Clone-Website|Clone-Website hub]] — structured plan + decision log (D1–D7) from the 2026-09-12 voice notes and the phone continuation: human-clone fiction company site, White Desert skeleton, zero on-site fiction-break (reveal only in waitlist email), assets AI-generated inside the SuperGrok window, effects ported from rep-lamalama.
-- [[01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw|brainstorm raw archive]] — verbatim transcripts of the six 2026-09-12 voice recordings (transcribed via Hermes STT), the phone "Clone Website" continuation, provenance; 7 White Desert reference screenshots in `01-Projects/Clone-Website/Docs/assets/white-desert/`.
+- Clone-Website hub (`01-Projects/Clone-Website/Clone-Website`, since deleted) — structured plan + decision log (D1–D7) from the 2026-09-12 voice notes and the phone continuation: human-clone fiction company site, White Desert skeleton, zero on-site fiction-break (reveal only in waitlist email), assets AI-generated inside the SuperGrok window, effects ported from rep-lamalama.
+- Brainstorm raw archive (`01-Projects/Clone-Website/Docs/brainstorm-2026-09-12-raw`, since deleted) — verbatim transcripts of the six 2026-09-12 voice recordings (transcribed via Hermes STT), the phone "Clone Website" continuation, provenance; 7 White Desert reference screenshots in the former `01-Projects/Clone-Website/Docs/assets/white-desert/`.
 
 #### Changed
-- [[00-Inbox/Pet Clone Website.md]] — added completion pointer to the raw archive (note truncated mid-sentence when the PC battery died; lives on in the phone continuation).
+- `00-Inbox/Pet Clone Website.md` — former Inbox note with a completion pointer to the raw archive; deleted during the 2026-10-14 Inbox cleanup.
 
 ### 2026-09-13 — Web-Garnish: build kit (runbook + reference assets)
 
 #### Added
 - [[03-Resources/Design/Footer-Design/07-Build-Runbook]] — recreate-any-style runbook: sampled swatches (duotone `#fdf9ef`/`#466eb4`, vermilion `#ee4032`), Google Fonts stacks, paste-ready SVG/CSS idioms (hatch pattern, duotone filter, paper grain, torn-paper, stamp perforation, sticker tilt), per-style readiness matrix.
-- `03-Resources/Design/Footer-Design/assets/` — 21 reference images + interactive-stickers demo video from all 7 source posts (footers, stamp posters, watercolor prints, perspective-type posters).
+- `03-Resources/Design/Footer-Design/assets/` — former media location for 21 reference images + interactive-stickers demo video from all 7 source posts. Current location: `Assets/Footer-Design/assets/`.
 
 ### 2026-09-08 — Assets consolidation (attachments → Assets/)
 
 #### Changed
-- Moved 22 stray attachments into `Assets/`: 18 root-level `Pasted image 2026-09-06/07` pngs (embedded by [[00-Inbox/Update_Update]], lamalama.com research) and 4 mascot-demo images out of `03-Resources/Design/Footer-Non-Boring/demo/mascot-css-mvp/` + its `shots/` subfolder (embedded by [[03-Resources/Design/Footer-Non-Boring/01-cursor-follow-mascot]]). Caller links rewritten to path-qualified `![[Assets/<file>]]` form. `raw/` PDF untouched (immutable).
+- Moved 22 stray attachments into `Assets/`: 18 root-level `Pasted image 2026-09-06/07` pngs from a deleted Lamalama capture and 4 mascot-demo images from the former `03-Resources/Design/Footer-Non-Boring/demo/mascot-css-mvp/` folder. Caller links were rewritten to path-qualified `![[Assets/<file>]]` form. `raw/` PDF was untouched at the time.
 - [[Assets/ASSETS.md]] — inventory 20 → 42; corrected stale "binaries are gitignored" claim (they are git-tracked; no `.gitignore` exists); maintenance log entry added.
 
 ### 2026-09-07 — Web design garnish collection (footer/landing art direction)
@@ -291,7 +296,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### 2026-09-06 — Jeremy CoS board
 
 #### Added
-- [[02-Areas/Ops/Jeremy-Board]] — ticket board for Chief of Staff (SecondBrain source of record).
+- `02-Areas/Ops/Jeremy-Board` — former ticket board for Chief of Staff; deleted during the 2026-10-14 cleanup.
 
 
 ### 2026-09-03 — Overnight review, signed-in pass (Next Steps)
@@ -310,10 +315,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Victor challenged the audit's false precision: Vercel's earlier 2-model result was incomplete, many Vercel free-tagged modes consume the monthly $5 credit, NVIDIA's accessible set is much larger than its consistently useful set, and Nous LongCat's 1M context does not establish intelligence. The historical audit is now explicitly labeled as a canary/accessibility snapshot, and a new routing playbook separates listed, accessible, zero-cost, responsive, capable, and reliable states. It defaults bounded delegated work to a real-probed Nous Step 3.7 Flash Free lane while reserving scarce OpenCodeGo models for explicit overrides.
 
 #### Added
-- [[02-Areas/Agent-Ops/Provider-Routing-Playbook]] — operational routing table, dispatch algorithm, budgets, fallback rules, and open measurements.
+- `02-Areas/Agent-Ops/Provider-Routing-Playbook` (since deleted) — operational routing table, dispatch algorithm, budgets, fallback rules, and open measurements.
 
 #### Changed
-- [[02-Areas/Agent-Ops/Provider-Model-Audit]] — corrected Vercel/NVIDIA claims and removed the implication that catalog access equals quality or billing safety.
+- `02-Areas/Agent-Ops/Provider-Model-Audit` (since deleted) — corrected Vercel/NVIDIA claims and removed the implication that catalog access equals quality or billing safety.
 - [[index]] — linked the routing playbook from Agent Ops.
 
 ### 2026-08-21 — Vision tool default backend → MiMo-V2.5 Free via OpenCode Zen (OpenCode)
@@ -331,7 +336,7 @@ Made OpenCode Zen's free `mimo-v2.5-free` model the **first** backend of the vis
 Victor asked for a persistent 02-Areas add-on from the four videos he studied (Diana Hu's AI-native company, Hormozi ×2, Codie Sanchez) plus the YC Pocket Guide. All sources re-fetched for accuracy (youtubesummary.com + third-party talk notes for Diana Hu; Pocket Guide re-transcribed from Victor's screenshot) — every point extracted, with **[solo]** application sections mapped to his 11-day opencode window.
 
 #### Added
-- [[02-Areas/Founder-Playbooks/Founder-Playbooks]] — full extraction: Diana Hu (AI as operating system, closed loops, queryable company, software factories → specs+tests, 1,000x engineer / token-maxing, middle management → IC/DRI/AI-founder, startup edge); Hormozi (leverage stack that AI doesn't cancel, wrong-bottleneck trap, "has AI made me more money?", decisions as highest leverage; six-step first-$100K roadmap: cut costs → time blocks → research paid skill → deliberate practice → three spend buckets → no lifestyle creep; 1-1-1 rule, 444 split); Codie Sanchez (six C's with real attribution: newsletter 30% / YouTube 27%+11% / TikTok <12 tickets at 2M followers / LinkedIn ~2.4% / X ~1%; per-platform KPIs; product ladder $0→$5k+; ship at 85%); YC Pocket Guide 22/22; cross-cutting thesis + distilled 8-rule operating system for the 11-day window; decision hooks (fight/kill on photographer-gallery, avatar selection, channel choice).
+- [[03-Resources/Principles/Founder-Playbooks|Founder Playbooks]] — full extraction: Diana Hu (AI as operating system, closed loops, queryable company, software factories → specs+tests, 1,000x engineer / token-maxing, middle management → IC/DRI/AI-founder, startup edge); Hormozi (leverage stack that AI doesn't cancel, wrong-bottleneck trap, "has AI made me more money?", decisions as highest leverage; six-step first-$100K roadmap: cut costs → time blocks → research paid skill → deliberate practice → three spend buckets → no lifestyle creep; 1-1-1 rule, 444 split); Codie Sanchez (six C's with real attribution: newsletter 30% / YouTube 27%+11% / TikTok <12 tickets at 2M followers / LinkedIn ~2.4% / X ~1%; per-platform KPIs; product ladder $0→$5k+; ship at 85%); YC Pocket Guide 22/22; cross-cutting thesis + distilled 8-rule operating system for the 11-day window; decision hooks (fight/kill on photographer-gallery, avatar selection, channel choice).
 
 #### Changed
 - [[index]] — registered Founder Playbooks under Ongoing Areas (02-Areas).
@@ -341,8 +346,8 @@ Victor asked for a persistent 02-Areas add-on from the four videos he studied (D
 Victor pasted a Grok extraction of "how to go viral on X" derived from the newly open-sourced X ranking code. Rather than storing it as-is, the published source (`home-mixer/params/param.rs`, `home-mixer/scorers/ranking_scorer.rs`, README/filter tables) was pulled and checked line-by-line. Most weights matched, but three material claims were wrong and are corrected in the synthesis note: (1) author-diversity decay is `(1-floor)·decay^k + floor` → the 2nd post is discounted ~37%, not "halved", and `k` is an occurrence index within a single score-ordered candidate slate — **not** a time-based posting-cadence penalty, so the extraction's "rapid-fire posting hurts" mechanism does not exist in the code; (2) the +15 reply boost requires the candidate to be an original post (not a reply, not a retweet) from a mutual-follow author — it's a property of the post/viewer pair, not a reward for replying to people, and the parallel dwell boost defaults to 0.0 (inactive); (3) the 48-hour rule is a candidate-pipeline `AgeFilter` dropping posts older than 48h, not advice about posting cadence. Also captured the repo's own explicit warning that weights multiply *predicted probabilities*, not engagement counts (so "one report cancels N likes" is wrong), and that block/report brigading does not meaningfully suppress reach. Unsupported claims ("early traction matters", author-side new-author boosts — the new-user OON override is viewer-side) flagged rather than absorbed as fact.
 
 #### Added
-- [[raw/2026-08-15-grok-x-algorithm-viral-tactics]] — immutable raw Grok extraction, headed with an accuracy warning pointing to the verified synthesis.
-- [[03-Resources/SEO-Marketing/X-Algorithm-Ranking-Signals]] — verified synthesis: full default-weight table, the probability-vs-counts caveat, three corrections with source excerpts, unverified-claims section, and implications for Victor's publishing lane. First note in the previously empty `03-Resources/SEO-Marketing/`.
+- `raw/2026-08-15-grok-x-algorithm-viral-tactics` — deleted raw Grok extraction; the verified synthesis survives at [[02-Areas/Content-Creation/X-Algorithm-Ranking-Signals|X Algorithm Ranking Signals]].
+- [[02-Areas/Content-Creation/X-Algorithm-Ranking-Signals|X Algorithm Ranking Signals]] — verified synthesis: full default-weight table, the probability-vs-counts caveat, three corrections with source excerpts, unverified-claims section, and implications for Victor's publishing lane. Moved from `03-Resources/SEO-Marketing/` during the 2026-10-14 cleanup.
 
 #### Changed
 - [[index]] — registered the synthesis under Resources and the raw source under Quick Navigation.
@@ -355,7 +360,7 @@ Every default-lane model was failing (500s then connection errors) and the suspe
 #### Added
 - [[06-Agent-Sessions/2026-08-15-hermes-provider-audit]] — full audit log: root-cause table, per-provider working-model matrix, sweep methodology, decisions, follow-ups.
 - [[ANTI_PATTERNS]] §Hermes / Provider Config — 1st confirmed row: global `model.base_url` poisons the default lane of all providers; scope per-lane.
-- [[02-Areas/Agent-Ops/Provider-Model-Audit]] — X-ready audit doc: 868 catalog models → 65 working across 9 providers; exact IDs, context windows, latency, rate-limit behavior, Victor's model preferences.
+- `02-Areas/Agent-Ops/Provider-Model-Audit` (since deleted) — X-ready audit doc: 868 catalog models → 65 working across 9 providers; exact IDs, context windows, latency, rate-limit behavior, Victor's model preferences.
 
 
 ### 2026-08-14 (pm) — Claude bridge: attachments fixed — tool-result replay + image routing (Hermes)
@@ -425,7 +430,7 @@ Made `/recurring` reachable by fixing the desktop sidebar (missing nav item per 
 Added the raw, unchanged audit of the Ledger landing page, including browser evidence, prioritized findings, and remediation order.
 
 #### Added
-- [[raw/2026-08-04-ledger-landing-page-audit]] — immutable audit source.
+- `raw/2026-08-04-ledger-landing-page-audit` — deleted raw audit source.
 
 ### 2026-08-04 — AgentRouter Claude routing and model-catalog correction (OpenCode)
 
@@ -448,7 +453,7 @@ Added the first behavior-driven vault layer: a decision-support loop and a devel
 - [[Templates/Decision Record Template]] — compact rationale, evidence, action, and outcome-review record.
 - [[Templates/Publishing Record Template]] — compact source, deadline, one-revision, publication, and learning record.
 - [[01-Projects/skill-router/skill-router]] — restored the missing project hub from verifiable repository state after cloning `https://github.com/Venmarc/skill-router`; records architecture as decided but implementation as unverified.
-- [[05-Daily/weekly/2026-08-09]] — prepared the first live review and three-input trial without inventing decisions, sources, or publication results.
+- `05-Daily/weekly/2026-08-09` — prepared the first live review and three-input trial without inventing decisions, sources, or publication results; the note was later removed in the 2026-10-14 Daily cleanup.
 
 #### Changed
 - [[AGENTS]] — added the Better Me, Better Vault workflow and the rule that deliberately pushed vault material is available for agent processing.
@@ -496,7 +501,7 @@ Closed the 4 open items from the 2026-08-01 memory-migration session: reconciled
 - [[AGENTS]] — replaced all `file:///home/redmane/Documents/SecondBrain/...` absolute links with vault-relative links (`00-Inbox`, `01-Projects`, `index.md`, `CHANGELOG.md`, etc.) so the doc works correctly on any machine the vault is cloned to.
 
 #### Known gaps (not actioned this pass, flagged for later)
-- ~15 other vault files still contain `/home/redmane/...` hardcodes (mostly historical session logs under `06-Agent-Sessions/`, plus a few live project docs — `01-Projects/Ledger/Ledger.md` "Codebase:" line, `01-Projects/Momentum/Momentum.md` "Codebase:" line, `01-Projects/Ledger/Docs/AGENTS.md`, `01-Projects/Ledger/Docs/DESIGN.md`, `01-Projects/Tempire/Docs/README.md`, `03-Resources/Skills/Skill-Router-Hook.md`, `03-Resources/Skills/UI-Polish-Ten-Rules.md`, `03-Resources/Skills/Defuddle-Clipping.md`). Out of scope for this pass (only AGENTS.md was requested) — worth a dedicated pass since Port Sites codebase paths genuinely live on the PC and need either the host-table treatment or a policy decision on whether project "Codebase:" lines should stay machine-specific by design.
+- ~15 other vault files contained `/home/redmane/...` hardcodes at the time. Most were historical session logs. The former project mirror paths listed here were later deleted; remaining live project locations use generic `Documents/` paths or require a separate machine-path policy decision.
 ### 2026-07-31 — Vault maintenance pass (Claude)
 Full lint/cleanup pass: refreshed hub docs to current project state, closed a second leftover pocket of unprocessed session logs, fixed a dangling wikilink, wired two long-orphaned skill notes, and flagged a spec/code contradiction for Victor rather than silently resolving it.
 
@@ -504,12 +509,12 @@ Full lint/cleanup pass: refreshed hub docs to current project state, closed a se
 - [[06-Agent-Sessions/extracted-sessions]] — new row for second orphan pocket (5 files: agent-sessions-handoff, phase-0-layout-revisions, fin-com-effects-audit/lab, vault-lint-venmarc-pastries-lighthouse); Processor line updated to credit Claude 2026-07-31 for this batch.
 - [[AGENTS]] §3 — wikilink from the `defuddle` bullet to [[03-Resources/Skills/Defuddle-Clipping|Defuddle skill guide]] (previously-orphaned note now has an inbound link).
 - [[03-Resources/MOC-UI-UX-Lessons]] — new bullet under 🔵 Product Thinking linking [[03-Resources/Skills/Pre-Launch-Security-Checklist]] (previously-orphaned note now has an inbound link).
-- [[01-Projects/Ledger/Ledger]] `## Lessons log` — new 2026-07-15 bullet flagging an unresolved theme-toggle icon spec/code discrepancy (session reversed the toggle ternary; [[01-Projects/Ledger/Docs/UIUX_BRIEF]] §6.10 / [[01-Projects/Ledger/Docs/APP_FLOW]] §3.2 still document the opposite behavior) — surfaced for Victor's decision, not resolved unilaterally.
+- [[01-Projects/Ledger/Ledger]] `## Lessons log` — new 2026-07-15 bullet flagging an unresolved theme-toggle icon spec/code discrepancy (session reversed the toggle ternary; former Ledger `UIUX_BRIEF` §6.10 / `APP_FLOW` §3.2 documented the opposite behavior) — surfaced for Victor's decision, not resolved unilaterally. The vault mirrors were later removed.
 
 #### Changed
 - [[BRAIN]] — `## Active focus` refreshed from stale 2026-07-15 snapshot to 2026-07-31 (Momentum sidebar+auth done/hydration issue open; Ledger Phase 1/2 gates passed, P3-A complete, P3-B paused on Victor's "STOP"); footer last-updated date + changelog summary refreshed.
 - [[index]] — top summary, Momentum/Ledger project headings, Vault Health lint date, and LINT-REPORT pointer all refreshed to 2026-07-31 state; stale "pending processing" line (pointing at an already-resolved file) replaced, then after this session's deletion pass replaced again with a closed-out note pointing at `extracted-sessions.md`.
-- [[00-Inbox/Antigravity Swarm]] — dangling reference to deleted `2026-07-20-grok-antigravity-step5c-perf-gate` repointed to [[06-Agent-Sessions/extracted-sessions]].
+- Former `00-Inbox/Antigravity Swarm` note — its dangling reference to deleted `2026-07-20-grok-antigravity-step5c-perf-gate` was repointed to [[06-Agent-Sessions/extracted-sessions]] before the Inbox note was deleted.
 
 #### Removed
 - `06-Agent-Sessions/2026-07-14-grok-agent-sessions-handoff.md`, `2026-07-15-agy-phase-0-layout-revisions.md`, `2026-07-15-grok-fin-com-effects-audit.md`, `2026-07-15-grok-fin-com-effects-lab.md`, `2026-07-15-grok-vault-lint-venmarc-pastries-lighthouse.md` — second orphan pocket, triaged via background agent and confirmed redundant with already-extracted content in [[01-Projects/Ledger/Ledger]], [[ANTI_PATTERNS]], [[03-Resources/Skills/Collapsible-Desktop-Sidebar]], [[03-Resources/Tools/Effects_Glossary]], [[03-Resources/Tools/Effects_Playbook]].
@@ -521,11 +526,11 @@ Obsidian CLI (`unresolved`/`orphans`/`deadends`) was unavailable this session (`
 Applied confirmed documentation patches for the Lucide icon category system across core Ledger project docs and synchronized to vault mirrors.
 
 #### Changed
-- [[01-Projects/Ledger/Docs/APP_FLOW|APP_FLOW]] — Added §3.3 Back Navigation Pattern; updated Category pill selector description in Flow 1.
-- [[01-Projects/Ledger/Docs/PAGE_SPECS|PAGE_SPECS]] — Updated Goal Detail and Category Management back links to icon-only chevrons; updated row icon circle specs; updated Add Category sheet to require curated Lucide icon picker split by type.
-- [[01-Projects/Ledger/Docs/UIUX_BRIEF|UIUX_BRIEF]] — Added §6.11 Category Pill / Selector spec, §8.1 Default Category Icon Assignments table (13 icons), §8.2 Curated Icon Picker table (14 expense + 8 income options), and updated category icons rendering paragraph.
-- [[01-Projects/Ledger/Docs/SCHEMA|SCHEMA]] — Dropped `color` column from `categories` table DDL; made `icon` required text; updated default seed table with Lucide import names.
-- [[01-Projects/Ledger/Docs/PHASES|PHASES]] — Added 24/07/2026 Documentation Changelog entry.
+- `01-Projects/Ledger/Docs/APP_FLOW` (former mirror) — Added §3.3 Back Navigation Pattern; updated Category pill selector description in Flow 1.
+- `01-Projects/Ledger/Docs/PAGE_SPECS` (former mirror) — Updated Goal Detail and Category Management back links to icon-only chevrons; updated row icon circle specs; updated Add Category sheet to require curated Lucide icon picker split by type.
+- `01-Projects/Ledger/Docs/UIUX_BRIEF` (former mirror) — Added §6.11 Category Pill / Selector spec, §8.1 Default Category Icon Assignments table (13 icons), §8.2 Curated Icon Picker table (14 expense + 8 income options), and updated category icons rendering paragraph.
+- `01-Projects/Ledger/Docs/SCHEMA` (former mirror) — Dropped `color` column from `categories` table DDL; made `icon` required text; updated default seed table with Lucide import names.
+- `01-Projects/Ledger/Docs/PHASES` (former mirror) — Added 24/07/2026 Documentation Changelog entry.
 - [[01-Projects/Ledger/Ledger|Ledger]] — Updated Vault sync date banner to 2026-07-24.
 - [[06-Agent-Sessions/2026-07-24-agy-ledger-icon-category-doc-patches]] — Session summary created.
 
@@ -540,21 +545,21 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 
 #### Changed
 - [[01-Projects/Ledger/Ledger]] `## Lessons log` — appended 2026-07-19 UI polish block (dual SnapSlider month picker — abs overlay not in-flow push; Transactions filter rebuild per Transaction_UI_Spec — search + filter sheet + chips + Type segmented per new skill; `MIN_YEAR = 2025` product-start bound; 4 audit-fix regressions: tablet header crush, sidebar icon drift, Clerk localhost-vs-127.0.0.1, `keepPreviousData` skeleton flash). Wikilinks to `Discrete-State-Control-Selection` + `ANTI_PATTERNS` §Clerk.
-- [[01-Projects/Ledger/Docs/PAGE_SPECS]] — Transactions FILTER BAR build-revision block aligned with Transaction_UI_Spec §4 (segmented Type, abs overlay month, sheet pattern). Wikilinks to `Discrete-State-Control-Selection`.
+- `01-Projects/Ledger/Docs/PAGE_SPECS` (former mirror) — Transactions FILTER BAR build-revision block aligned with Transaction_UI_Spec §4 (segmented Type, abs overlay month, sheet pattern). Wikilinks to `Discrete-State-Control-Selection` were added at the time.
 - [[03-Resources/MOC-UI-UX-Lessons]] — 2 new skill links (Phase 0 Ledger + §Agent Traps).
 - [[04-Archive/Inbox/Transaction_UI_Spec]] — moved here from `00-Inbox/` (extracted spec for the 2026-07-19 build; kept as historical reference, not active inbox).
-- [[00-Inbox/Bug In Ledger]] — status lines updated (audited under extract-work; bugs resolved/relocated to `ANTI_PATTERNS.md` §Clerk).
+- `00-Inbox/Bug In Ledger` (now [[04-Archive/Inbox/Bug In Ledger|archived Bug In Ledger]]) — status lines updated; bugs resolved and relocated to `ANTI_PATTERNS.md` §Clerk.
 - [[ANTI_PATTERNS]] — Phase 3a added §Clerk row (Clerk dev-handshake requires `localhost`). Phase 2 left §WebGL/Three.js alone (already closed lane). File at 76 lines — split threshold 200 not triggered.
 - [[index]] — refreshed lint pointer to 2026-07-20 pass; added new AgentMemory Tools note to the Tools row.
-- [[CHANGELOG]] — historical lint pointer repaired: 2026-07-19 "Unit 6 Build lane" entry's wikilink to the old crash doc path `06-Agent-Sessions/GLM-5.2_Context-Overflow_Crash` repointed to the new permanent home `[[02-Areas/Agent-Ops/GLM-5.2-Context-Overflow]]` (see also §Moved below).
+- [[CHANGELOG]] — historical lint pointer repaired in 2026-07-20. The old crash doc path `06-Agent-Sessions/GLM-5.2_Context-Overflow_Crash` and its former Agent-Ops destination were later deleted; retained evidence is in [[ANTI_PATTERNS]] and [[06-Agent-Sessions/extracted-sessions]].
 - [[LINT-REPORT]] — full refresh against post-extraction vault state (see file dated 2026-07-20).
 
 #### Moved
 - `00-Inbox/Transaction_UI_Spec.md` → [[04-Archive/Inbox/Transaction_UI_Spec]] (Phase 1 — extracted spec consumed by Ledger 2026-07-19 build, then archived).
-- `06-Agent-Sessions/GLM-5.2_Context-Overflow_Crash.md` → [[02-Areas/Agent-Ops/GLM-5.2-Context-Overflow]] (Phase 2 — promoted to permanent Agent-Ops reference; recurring provider-tier failure mode; survival rules).
+- `06-Agent-Sessions/GLM-5.2_Context-Overflow_Crash.md` → former `02-Areas/Agent-Ops/GLM-5.2-Context-Overflow.md` (Phase 2 — promoted to Agent-Ops reference; recurring provider-tier failure mode; survival rules). The destination note was later deleted in the approved Area cleanup.
 
 #### Removed
-- **10 raw antigravity session logs** (Phase 2) — built/extract/crash/Step-1/Step-2/Step-4/Step-5a/Step-5b×2/handoff — extracted to [[03-Resources/Tools/Effects_Glossary]] (4 promotions), [[ANTI_PATTERNS]] §WebGL (3 rows), `~/Pastries/AGENTS.md` Hard Rules 9–10 (outside vault), [[02-Areas/Agent-Ops/GLM-5.2-Context-Overflow]] crash doc moved-not-deleted. Combined row in `extracted-sessions`.
+- **10 raw antigravity session logs** (Phase 2) — built/extract/crash/Step-1/Step-2/Step-4/Step-5a/Step-5b×2/handoff — extracted to [[03-Resources/Tools/Effects_Glossary]] (4 promotions), [[ANTI_PATTERNS]] §WebGL (3 rows), `~/Pastries/AGENTS.md` Hard Rules 9–10 (outside vault), and a former crash note now deleted. Combined row in `extracted-sessions`.
 - **2 raw Ledger UI polish logs** (Phase 3d) — `2026-07-19-grok-ledger-ui-polish.md` + `2026-07-19-grok-ledger-ui-polish-audit-fixes.md` — single thread, 1 combined row in `extracted-sessions`, 1 block in `Ledger.md` `## Lessons log`.
 - **3 raw agentmemory session logs** (Phase 4) — `2026-07-19-grok-agentmemory-search-import-ui-handoff.md` + `2026-07-19-grok-agentmemory-viewer-nav-chrome-fix.md` + `2026-07-19-grok-agentmemory-turn-rest-on.md` — single thread → new `03-Resources/Tools/AgentMemory-Dual-Store-Tab-Write-Paths.md` Tools note (durable pattern warranted) + combined row in `extracted-sessions`.
 - **NOT touched (active handoffs):** `2026-07-19-grok-portfolio-phase-0-tokens.md` + `2026-07-19-grok-portfolio-phase-1-identity.md` + `2026-07-16-grok-ledger-phase-1.md` + `2026-07-16-grok-ledger-phase-1-full.md` remain in `06-Agent-Sessions/` (different threads; portfolio Phase 2/3 still open). Pre-existing pending file `2026-07-15-agy-phase-0-layout-revisions.md` left as-is — known lint item from 2026-07-15 pass, not in scope for this cleanup.
@@ -566,7 +571,7 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 - [[06-Agent-Sessions/2026-07-19-opencode-antigravity-step1-playwright|Step 1 checkpoint]] — Playwright specs written, 4 passing.
 - [[06-Agent-Sessions/2026-07-19-opencode-antigravity-step2-glossary|Step 2 checkpoint]] — 4 glossary entries promoted, verified logs appended.
 - [[06-Agent-Sessions/2026-07-19-opencode-antigravity-build|Build-lane final session log]] — consolidated log over the original build + 3 recovery sub-sessions.
-- [[06-Agent-Sessions/GLM-5.2_Context-Overflow_Crash|Crash diagnosis]] — root cause + mitigation rules for the GLM-5.2 context-overflow 500s. Second confirmed instance of this provider-tier issue. *(Note 2026-07-20: crash doc promoted to permanent reference at [[02-Areas/Agent-Ops/GLM-5.2-Context-Overflow]]; this historical wikilink kept as audit trail — see §Moved in the 2026-07-20 cleanup entry.)*
+- Crash diagnosis (`06-Agent-Sessions/GLM-5.2_Context-Overflow_Crash`, since deleted) — root cause + mitigation rules for the GLM-5.2 context-overflow 500s. Second confirmed instance of this provider-tier issue. The note moved to Agent-Ops on 2026-07-20; that destination was later deleted.
 - [[06-Agent-Sessions/2026-07-19_opencode_Handoff|Build-lane handoff]] — state at crash time (file inventory, gates passed, Lighthouse numbers, user prompts).
 - `~/Pastries/rep-antigravity-swarm-typewriter/` — new replication; two pages (`/`, `/depth`) exercising particle swarm, blinking cursor, soft mesh background, film grain. Lighthouse 99/99 perf, 100 SEO, 100 best-practices, 95 a11y on both routes. review-animations approved with 1 minor fix applied.
 
@@ -603,7 +608,7 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 #### Changed
 - [[LINT-REPORT|LINT-REPORT.md]] — full refresh via Obsidian CLI + wikilink scan
 - [[index|index.md]], [[BRAIN|BRAIN.md]], [[README|README.md]] — phase status, lint pointer, Effects tools
-- [[01-Projects/Momentum/Docs/AGENTS|Momentum AGENTS mirror]] — fixed dead Related links
+- `01-Projects/Momentum/Docs/AGENTS` — former Momentum AGENTS mirror; fixed dead Related links before the mirror was removed.
 - [[03-Resources/Tools/Vault-Librarian-Interviewer|Vault Librarian]] — fixed MOC link
 - [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] · [[03-Resources/Tools/Effects_Playbook|Effects Playbook]] — cross-linked
 #### Removed
@@ -611,10 +616,10 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 
 ### 2026-07-15 — Ledger doc sync + NOTES lessons (Grok)
 #### Changed
-- Vault mirror: [[01-Projects/Ledger/Docs/APP_FLOW|APP_FLOW]], [[01-Projects/Ledger/Docs/PAGE_SPECS|PAGE_SPECS]], [[01-Projects/Ledger/Docs/PHASES|PHASES]], [[01-Projects/Ledger/Docs/UIUX_BRIEF|UIUX_BRIEF]], [[01-Projects/Ledger/Docs/NOTES|NOTES]] from Port Sites
+- Former vault mirror set: `01-Projects/Ledger/Docs/APP_FLOW`, `PAGE_SPECS`, `PHASES`, `UIUX_BRIEF`, and `NOTES`. Full documents now live beside Ledger in `Documents/`.
 - [[01-Projects/Ledger/Ledger|Ledger hub]] — theme-toggle doc alignment + cross-project NOTES lessons
 - [[03-Resources/Skills/Theme-Switching-Foundation|Theme Switching Foundation]] — toggle placement + Phase 0/4 split
-- [[02-Areas/Agent-Ops/Victor-Standing-Directives|Victor standing directives]] — doc hierarchy, living docs, hero viewport pattern
+- `02-Areas/Agent-Ops/Victor-Standing-Directives` (since deleted) — doc hierarchy, living docs, hero viewport pattern. Consult [[AGENTS]] for current vault rules, not a copy of all former directives.
 - [[03-Resources/Tools/Effects_Glossary|Effects Glossary]] — hero viewport lock entry (untested)
 - [[index|index.md]] — Ledger sync date; removed dead Momentum/Notes link
 
@@ -626,7 +631,7 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 ### 2026-07-14 — Session log extraction + Port Sites AGENTS (Grok)
 #### Added
 - [[03-Resources/Skills/Collapsible-Desktop-Sidebar|Collapsible Desktop Sidebar]] skill
-- [[02-Areas/Agent-Ops/Victor-Standing-Directives|Victor standing directives]]
+- `02-Areas/Agent-Ops/Victor-Standing-Directives` (since deleted).
 - [[06-Agent-Sessions/extracted-sessions|Extracted sessions index]] (replaces 60+ raw session logs)
 #### Changed
 - [[ANTI_PATTERNS|ANTI_PATTERNS.md]] — Clerk, Next.js, Supabase, CSS token entries; sources point to project hubs
@@ -634,7 +639,7 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 - [[01-Projects/Ledger/Ledger|Ledger hub]] — Phase 0 complete; layout/theme lessons
 - [[03-Resources/Skills/Theme-Switching-Foundation|Theme Switching Foundation]] — flash prevention, hydration guards
 - Port Sites: `Ledger/AGENTS.md` (full agent context); `Momentum/.agents/AGENTS.md` (auth + session conduct updates)
-- Vault mirror: [[01-Projects/Ledger/Docs/AGENTS|Ledger AGENTS]] synced 2026-07-14
+- Former vault mirror: `01-Projects/Ledger/Docs/AGENTS`, synced 2026-07-14 before the mirror was removed.
 #### Removed
 - 63 files from `06-Agent-Sessions/` after knowledge extraction (see extracted-sessions index)
 
@@ -651,7 +656,7 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 
 ### 2026-07-09 — Librarian interview (Grok)
 #### Added
-- [[05-Daily/2026-07-09]], skills: [[03-Resources/Skills/Clerk-Auth-Card-Contrast]], [[03-Resources/Skills/Reverse-Engineering-UI-Components]], [[03-Resources/Tools/External-Design-Skills]]
+- Deleted daily note `05-Daily/2026-07-09`; skills: [[03-Resources/Skills/Clerk-Auth-Card-Contrast]], [[03-Resources/Skills/Reverse-Engineering-UI-Components]], [[03-Resources/Tools/External-Design-Skills]]
 - Session: [[06-Agent-Sessions/2026-07-09-grok-vault-interview]]
 #### Changed
 - Clippings processed → [[04-Archive/Clippings]]; deleted Prompts and Thoughts
@@ -677,12 +682,12 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 - [[01-Projects/Momentum/Momentum|Momentum hub]] + full doc sync from Port Sites (banner dated 2026-07-09), including INSIGHTS/NOTES.
 - [[01-Projects/Ledger/Ledger|Ledger]] project onboarded with Docs mirror from Port Sites.
 - [[01-Projects/Momentum/Lessons-from-DEV_NOTES|Lessons-from-DEV_NOTES]] extracted before archive.
-- [[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|How Victor Works With Agents]].
+- Former `02-Areas/Agent-Ops/How-Victor-Works-With-Agents` note; current operating rules live in [[AGENTS]].
 - [[03-Resources/Vault-Ops/Session-Lesson-Extraction-Idea|Session lesson extraction (draft)]].
 - [[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault improvement backlog]] (full skills expansion deferred).
 - Session log [[06-Agent-Sessions/2026-07-09-grok-vault-realignment|2026-07-09-grok-vault-realignment]].
 #### Changed
-- Rewrote [[index|index.md]], [[BRAIN|BRAIN.md]], [[AGENTS|AGENTS.md]] §E, [[README|README.md]], [[02-Areas/Personal-Growth/RedMane|RedMane]] for supervisor model + Phase 0 focus.
+- Rewrote [[index|index.md]], [[BRAIN|BRAIN.md]], [[AGENTS|AGENTS.md]] §E, and [[README|README.md]] for the supervisor model and Phase 0 focus. Former `02-Areas/Personal-Growth/RedMane` was removed in the 2026-10-14 cleanup.
 - Consolidated Tempire Notes/Decisions/Logs/TODO into [[01-Projects/Tempire/Tempire|Tempire.md]]; demoted Tempire to later.
 - `~/.grok/AGENTS.md` and `~/AGENTS.md` rewritten (no orchestration engine boot).
 - Removed `~/.grok/skills/orchestrate` skill.
@@ -703,7 +708,7 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 - Added mandatory session boot/shutdown rules to [[BRAIN|BRAIN.md]], [[AGENTS|AGENTS.md]], and [[Templates/Agent-Session-Summary|Agent-Session-Summary]] template.
 - Ingested [[03-Resources/Skills/Skill-Router-Hook|Skill-Router-Hook]] from inbox; archived voice note transcripts to `04-Archive/Voice-Notes/`.
 - Created [[03-Resources/Vault-LLM-Wiki-Patterns]], [[03-Resources/MOC-Design-Skills-External]], [[03-Resources/Skills/Lazy-Agent-Failure-Mode]], [[03-Resources/Clippings-Ingest-Log]].
-- Linked Momentum doc set from [[01-Projects/Momentum/Docs/PRD|PRD]]; added one-line summaries across Momentum Docs.
+- Linked the former Momentum document set from `01-Projects/Momentum/Docs/PRD`; full documents now live beside the project in `Documents/`.
 ### Changed
 - Updated database migration schema in `supabase/migrations/20260705000000_init.sql` to secure RLS policies for `habit_logs` and `exercise_logs` tables and added drop policy statements for idempotency.
 - Updated `scripts/migrate.js` to dynamically load environment variables and locate token from `mcp_config.json`.
@@ -717,9 +722,9 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 - Ingested 9 atomic UI/UX lesson notes under `03-Resources/Skills/` and 1 Map of Content (MOC) note at `03-Resources/MOC-UI-UX-Lessons.md` to map them together.
 - Ingested the pre-launch security audit guide into a permanent skill note at `03-Resources/Skills/Pre-Launch-Security-Checklist.md`.
 - Staged and integrated the newly created notes into the Master Hub index.md and updated cross-links to projects.
-- Committed the premium digital creator marketplace README for `Tempire` under `01-Projects/Tempire/Docs/README.md`.
-- Processed and moved `00-Inbox/Future Projects.md` to `05-Daily/2026-06-25.md`.
-- Processed and moved `00-Inbox/Today's Notes.md` to `05-Daily/2026-06-27.md`.
+- Committed the premium digital creator marketplace README for `Tempire` under the former `01-Projects/Tempire/Docs/README.md` mirror.
+- Processed and moved `00-Inbox/Future Projects.md` to the now-deleted `05-Daily/2026-06-25.md`.
+- Processed and moved `00-Inbox/Today's Notes.md` to the now-deleted `05-Daily/2026-06-27.md`.
 - Processed and moved `00-Inbox/Vault-Population-Questions.md` to `06-Agent-Sessions/Grok-Vault-Population-Discussion.md`.
 - Documented new developer guidelines and architectural lessons from Tempire (`Theme-Switching-Foundation.md` and `Secure-Downloads-Middleware.md`).
 - Updated `AGENTS.md` rules on relative markdown links, immutable raw files, and quick commands.
@@ -881,4 +886,3 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 ## 2026-10-11
 
 - vault backup: 2026-10-11 01:25:50 (5c76005)
-

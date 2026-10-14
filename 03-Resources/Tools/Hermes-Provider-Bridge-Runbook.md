@@ -63,7 +63,7 @@ Verify all of these before enabling a lane:
 
 ## State boundary
 
-This runbook records verified bridge mechanics. Current provider availability, subscription status, model quality, and automatic routing belong in [[02-Areas/Agent-Ops/Provider-Routing-Playbook|Provider Routing Playbook]] and [[02-Areas/Agent-Ops/Provider-Model-Audit|Provider Model Audit]].
+This runbook records verified bridge mechanics. Current provider availability, subscription status, model quality, and automatic routing are not maintained in the vault.
 
 ## Source extraction
 

@@ -128,8 +128,8 @@
 ## 7. Related
 
 - [[02-Areas/Content-Creation/Content-Creation|Content Creation]] — the publishing lane Codie's playbook feeds
-- [[02-Areas/Agent-Ops/Provider-Model-Audit|Provider Model Audit]] — the token budget / tooling reality
-- [[03-Resources/SEO-Marketing/X-Algorithm-Ranking-Signals|X Algorithm Ranking Signals]] — verified mechanics for the X lane
+- Provider model audit — historical token budget and tooling evidence was removed with the old Agent-Ops notes.
+- [[02-Areas/Content-Creation/X-Algorithm-Ranking-Signals|X Algorithm Ranking Signals]] — verified mechanics for the X lane
 - [[03-Resources/Vault-Ops/Better-Me-Better-Vault|Better Me, Better Vault]] — decision + publishing loop
 
 ## 8. Decision hooks (open)

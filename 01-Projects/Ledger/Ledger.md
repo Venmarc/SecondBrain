@@ -3,10 +3,10 @@
 # Ledger
 
 **Status:** Active — **Phase 3 in progress** — Phase 1 **gate passed** (Victor, 2026-07-21). Phase 2 **gate passed** (Victor, 2026-07-28). Phase 3 P3-A (Analytics foundations) **complete** 2026-07-30; awaiting Victor sign-off on P3-A then P3-B (Analytics UI). Multi-select transaction filters remain a backlog design note in NOTES.md (not blocking).  
-**Codebase:** `/home/redmane/Documents/Port Sites/Category 5/Ledger`  
+**Codebase and documents:** `Documents/Port-Sites/Category-5/Ledger/`
 **Live:** [Ledger](https://ledgerix.vercel.app)
 **Repo URL:** [Ledger](https://github.com/Venmarc/Ledger)
-**Vault sync:** Port Sites docs are origin. Hub updated **2026-07-30** (P3-A foundations shipped + lint baseline cleared).
+**Hub updated:** 2026-07-30 (P3-A foundations shipped + lint baseline cleared).
 
 ## Purpose
 
@@ -20,11 +20,11 @@ Lightweight, fast expense logging, category budgets, and clear money-leak visibi
 
 ## Active phase
 
-Read [[01-Projects/Ledger/Docs/PHASES|PHASES]] every session.
+Read the current project documents under `Documents/Port-Sites/Category-5/Ledger/` every session.
 
 **Phase 1:** Complete (gate passed 2026-07-21).  
 **Phase 2:** Complete (gate passed 2026-07-28).  
-**Phase 3 (current):** Analytics, Recurring & Completion. P3-A (foundations) **complete** 2026-07-30; P3-B (Analytics UI) next. Full chunk map in `docs/PHASE-3-OVERVIEW.md` (Port Sites) and the Phase 3 implementation log in [[01-Projects/Ledger/Docs/PHASES|PHASES]].
+**Phase 3 (current):** Analytics, Recurring & Completion. P3-A (foundations) **complete** 2026-07-30; P3-B (Analytics UI) next. Full chunk map and implementation log live in the project folder.
 
 ### Phase 1 gate — closed
 
@@ -32,24 +32,11 @@ Victor sign-off 2026-07-21 after delete-confirm fix + polish; no open Phase 1 bu
 
 ### Phase 2 gate — closed
 
-Victor sign-off 2026-07-28 ("I declare phase 2 complete for now"). 8 chunks (P2-A through P2-H) landed; see [[01-Projects/Ledger/Docs/PHASES|PHASES]] Phase 2 implementation log.
+ Victor sign-off 2026-07-28 ("I declare phase 2 complete for now"). 8 chunks (P2-A through P2-H) landed; see the current project implementation log.
 
-## Doc set (synced)
+## Project documents
 
-| Doc | Link |
-|-----|------|
-| README | [[01-Projects/Ledger/Docs/README|README]] (vault mirror) |
-| PRODUCT | [[01-Projects/Ledger/Docs/PRODUCT|PRODUCT]] |
-| PRD | [[01-Projects/Ledger/Docs/PRD|PRD]] |
-| TRD | [[01-Projects/Ledger/Docs/TRD|TRD]] |
-| PHASES | [[01-Projects/Ledger/Docs/PHASES|PHASES]] |
-| PAGE_SPECS | [[01-Projects/Ledger/Docs/PAGE_SPECS|PAGE_SPECS]] |
-| APP_FLOW | [[01-Projects/Ledger/Docs/APP_FLOW|APP_FLOW]] |
-| UIUX_BRIEF | [[01-Projects/Ledger/Docs/UIUX_BRIEF|UIUX_BRIEF]] |
-| DESIGN | [[01-Projects/Ledger/Docs/DESIGN|DESIGN]] |
-| SCHEMA | [[01-Projects/Ledger/Docs/SCHEMA|SCHEMA]] |
-| NOTES | [[01-Projects/Ledger/Docs/NOTES|NOTES]] |
-| AGENTS | [[01-Projects/Ledger/Docs/AGENTS|AGENTS]] |
+Full project documents live under `Documents/Port-Sites/Category-5/Ledger/`. The vault keeps this hub and durable lessons only.
 
 ## Related skills
 
@@ -59,7 +46,7 @@ Victor sign-off 2026-07-28 ("I declare phase 2 complete for now"). 8 chunks (P2-
 - [[03-Resources/Skills/Browser-Native-Dialog-Trap|Browser native dialog trap]]
 - [[03-Resources/Skills/State-Isolation-Per-Record|State isolation per record]]
 - [[03-Resources/Skills/Theme-Aware-Component-Checklist|Theme-aware components]]
-- [[01-Projects/Ledger/Docs/DESIGN|DESIGN]] · [[01-Projects/Ledger/Docs/UIUX_BRIEF|UIUX_BRIEF]]
+- Current design documents live in the project folder.
 
 ## Lessons log (from sessions)
 
@@ -69,7 +56,7 @@ Victor sign-off 2026-07-28 ("I declare phase 2 complete for now"). 8 chunks (P2-
 
 - **2026-07-14 — Layout revisions:** Collapsible sidebar via `--sidebar-width` + `LayoutShell` + portal tooltips. Mobile-only Settings link in Clerk `UserButton.MenuItems`. Auth layout stripped. WCAG: orange button text token, light-mode azure override.
 
-- **2026-07-15 — Theme toggle icon (resolved 2026-07-31):** A 2026-07-15 session had reversed the toggle ternary to show the target mode, contradicting [[01-Projects/Ledger/Docs/UIUX_BRIEF|UIUX_BRIEF]] §6.10 and [[01-Projects/Ledger/Docs/APP_FLOW|APP_FLOW]] §3.2 ("icon shows current active mode"). Victor fixed the toggle back to spec — icon shows current state, not target. Docs were correct as written; no doc changes needed.
+- **2026-07-15 — Theme toggle icon (resolved 2026-07-31):** A 2026-07-15 session had reversed the toggle ternary to show the target mode, contradicting the current Ledger UI documents §6.10 and §3.2 ("icon shows current active mode"). Victor fixed the toggle back to spec — icon shows current state, not target.
 
 - **2026-07-16 — Phase 1 build + auth bridge:** Chunked P1-A→H (Quick Add, list, edit/delete/undo, categories, dashboard v1). Supabase pause does not wipe migrations; post-resume “authorize” error was **zero Clerk JWT templates** named `supabase`. Fix: service-role fallback after Clerk auth + `scripts/setup-clerk-supabase-jwt.mjs` for HS256 JWT secret. Auto-seed 13 categories when user has none. See [[ANTI_PATTERNS|ANTI_PATTERNS]] Clerk row.
 
@@ -91,7 +78,7 @@ Victor sign-off 2026-07-28 ("I declare phase 2 complete for now"). 8 chunks (P2-
 
 - **2026-07-28 — Phase 2 gate passed** (Victor: "I declare phase 2 complete for now"). Budget mini-card + transaction-row date fix landed; 8 chunks P2-A→H complete.
 
-- **2026-07-29/30 — Plan-review-before-implement workflow:** Every Phase 3 chunk gets its own `docs/P#-#.md` (never inline in a session). Before saving: run an "implementer-hat" self-review prompt ("list every assumption/ambiguity/edge case you'd guess at with zero context — don't fix, just list") and close every hole with an explicit `closes X` reference; only then does a separate agent implement. Recharts chart colors must be **resolved hex literals**, not `var(--...)` — Recharts SVG `fill` doesn't reliably resolve CSS custom properties cross-browser. See [[02-Areas/Agent-Ops/Victor-Standing-Directives|Victor Standing Directives]].
+- **2026-07-29/30 — Plan-review-before-implement workflow:** Every Phase 3 chunk gets its own project document. Before saving: run an implementer-hat self-review, close every hole with an explicit reference, and use resolved hex literals for Recharts SVG colors.
 
 - **2026-07-30 — Lint fix:** `react-hooks/set-state-in-effect`, `react-hooks/static-components` — see [[ANTI_PATTERNS|ANTI_PATTERNS]] §React.
 

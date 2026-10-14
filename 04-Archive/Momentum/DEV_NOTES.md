@@ -299,7 +299,7 @@ I realized, over the past week, that I've been straying away AGAIN from my proje
 
 ---
 ## Related
-- [[01-Projects/Momentum/Docs/PRD|PRD]] · [[01-Projects/Momentum/Docs/NOTES|Notes]]
+- Current Momentum documents live under `Documents/Port-Sites/Category-5/Momentum/`.
 - Personal Health OS (historical reference; no current vault note)
 - [[03-Resources/MOCs/MOC-Projects|MOC: Projects]]
 - North Star (historical reference; no current vault note)

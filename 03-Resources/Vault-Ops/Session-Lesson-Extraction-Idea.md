@@ -37,6 +37,6 @@ End of any session that touched **Momentum**, **Ledger**, **Tempire**, or vault 
 
 - [[AGENTS|AGENTS.md]] §E  
 - [[Templates/Agent-Session-Summary|Agent-Session-Summary]]  
-- [[02-Areas/Agent-Ops/How-Victor-Works-With-Agents]]
+- [[AGENTS|Vault agent rules]]
 
 **Tags:** #vault-ops #agent-session #rule

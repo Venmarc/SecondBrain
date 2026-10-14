@@ -26,8 +26,8 @@ Not attempted. The look depends on discrete sourced imagery rather than a field 
 No shader recipe. This is compositing, so the workflow is generate the components then arrange them, and the cached previews are the reference for the arrangement and palette.
 
 ## Cached assets
-- `assets/elysian/image-5.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/elysian/image-5.webp`)
-- `assets/reverie/image-26.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/reverie/image-26.webp`)
+- `Assets/Backdrop-Supply/assets/elysian/image-5.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/elysian/image-5.webp`)
+- `Assets/Backdrop-Supply/assets/reverie/image-26.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/reverie/image-26.webp`)
 
 ## Related
 - [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply index]]

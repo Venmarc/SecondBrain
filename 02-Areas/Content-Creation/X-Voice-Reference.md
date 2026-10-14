@@ -19,7 +19,7 @@ aliases:
 
 Use these sources for different tasks:
 
-- [[raw/X-Reply-Tab-Voice-Corpus-2026-10-07]] — 149 authored X cards, about 2,541 words.
+- [[02-Areas/Content-Creation/X-Reply-Tab-Voice-Corpus-2026-10-07]] — 149 authored X cards, about 2,541 words.
 - [[00-Inbox/Idiom Idea]] — a longer idea note, about 1,552 words.
 - Extracted Reference Prompt source — the earlier Codon Labs concept prompt, about 534 words.
 

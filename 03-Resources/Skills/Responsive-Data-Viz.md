@@ -111,6 +111,6 @@ No silent overflow. No layout-breaking horizontal scrollbar on the page.
 ## Related
 - [[03-Resources/Skills/Tooltip-Edge-Overflow]]
 - [[03-Resources/MOC-UI-UX-Lessons]]
-- [[01-Projects/Momentum/Docs/UIUX_BRIEF]] — mobile-first rule
+- Momentum's mobile-first rule lives in the current project documents under `Documents/Port-Sites/Category-5/Momentum/`.
 
 **Tags:** #lesson #ui-ux #mobile #charts #pattern #momentum #generalizable

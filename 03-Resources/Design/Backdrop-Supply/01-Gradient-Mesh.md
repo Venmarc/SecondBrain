@@ -34,12 +34,12 @@ Vision comparison of the demo CSS/mesh tiles against cached freebie `gradient-bg
 Radial gradients stacked at different origins on a base linear ramp, blurred so the individual stops stop being readable. Grain on top, because flat gradients band on wide gamut displays. The demo tile `pure-css` does this in about eight lines of CSS with no JS at all, and the `mesh` shader does the animated version by summing weighted blobs against a noise field.
 
 ## Cached assets
-- `assets/gradient-bgs/frame-3.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/gradient-bgs/frame-3.webp`)
-- `assets/high-exposure-gradients/1.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/high-exposure-gradients/1.webp`)
-- `assets/gradience/image-4.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/gradience/image-4.webp`)
-- `assets/swirl/image-15.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/swirl/image-15.webp`)
-- `assets/smudge/image-81.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/smudge/image-81.webp`)
-- `assets/bloomhaze/image-8.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/bloomhaze/image-8.webp`)
+- `Assets/Backdrop-Supply/assets/gradient-bgs/frame-3.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/gradient-bgs/frame-3.webp`)
+- `Assets/Backdrop-Supply/assets/high-exposure-gradients/1.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/high-exposure-gradients/1.webp`)
+- `Assets/Backdrop-Supply/assets/gradience/image-4.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/gradience/image-4.webp`)
+- `Assets/Backdrop-Supply/assets/swirl/image-15.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/swirl/image-15.webp`)
+- `Assets/Backdrop-Supply/assets/smudge/image-81.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/smudge/image-81.webp`)
+- `Assets/Backdrop-Supply/assets/bloomhaze/image-8.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/bloomhaze/image-8.webp`)
 
 ## Related
 - [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply index]]

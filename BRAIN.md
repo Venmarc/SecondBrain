@@ -4,17 +4,17 @@
 
 ## Core Philosophy
 - Mutual intelligence: Victor feeds experience; agents maintain links, extract lessons, flag gaps, ask questions.
-- Raw sources (`Clippings/`, `raw/`) are immutable. Wiki/summary layers are living.
+- Raw sources (`Clippings/`, `raw/`) are immutable by default. Victor may authorize a named cleanup or move. Wiki and summary layers are living.
 - Atomic notes + strong wikilinks. A clean graph beats a bloated wiki.
-- Product truth for apps lives in **Port Sites** project folders; vault **mirrors** docs with a sync date.
+- Product truth for apps lives in the project folders under `Documents/`; vault hubs record status without mirroring full document sets.
 
 ## Vault Structure (PARA + Extensions)
 - **00-Inbox/** — capture; process quickly
-- **01-Projects/** — active work (hub note + `Docs/`)
-- **02-Areas/** — ongoing responsibilities (incl. Agent-Ops)
+- **01-Projects/** — active work (one hub note per project)
+- **02-Areas/** — current area work; `Content-Creation` is the retained area in this cleanup
 - **03-Resources/** — skills, snippets, vault-ops
 - **04-Archive/** — inactive / historical (e.g. old Momentum DEV_NOTES)
-- **05-Daily/** — journal
+- **05-Daily/** — optional journal space; currently cleared
 - **06-Agent-Sessions/** — session logs (kept; history is good)
 
 ## Active focus (reviewed 2026-10-14)
@@ -22,7 +22,7 @@
 - **Momentum** — medium priority; Phase 0 complete; sidebar + auth refinement done (07-17); hydration jank + `ensureProfile()` blocking issue open
 - **Ledger** — medium priority; Phase 1 & 2 gates passed (Victor, 07-21 / 07-28); Phase 3 P3-A (analytics foundations) complete 07-30, P3-B (analytics UI) plan paused mid-review on Victor's "STOP"
 - **Tempire** — later (frontend skill-up first)
-- **Victor supervises agents** — see [[02-Areas/Agent-Ops/How-Victor-Works-With-Agents|How Victor Works With Agents]]
+- **Victor supervises agents** — operating rules live in [[AGENTS|AGENTS.md]]
 
 ## Style & Tone
 - Clear, actionable, coder-friendly. Code fences with language tags.
@@ -46,4 +46,4 @@
 - Deferred density work: [[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault Improvement Backlog]]
 
 **Last updated**: 2026-10-14
-**Changelog**: Active-focus metadata refreshed after agent-session extraction and the Archive/Daily audit. The skill-router priority, Better Me, Better Vault decision-support, and publishing loop remain current.
+**Changelog**: Active-focus metadata refreshed after agent-session extraction, the Archive/Daily audit, and the project-hub cleanup. The skill-router priority, Better Me, Better Vault decision-support, and publishing loop remain current.

@@ -24,7 +24,7 @@ The freebies page exposes 10 files for this collection and all 10 are WebP still
 The free tier exposes only still WebP previews of these, the MP4s sit behind the paid unlock. For a build, do not chase the video: the shader engine animates by default, every mode takes a speed or flow uniform, and a shader loop ships as a few KB of GLSL instead of a multi-megabyte video file with an LCP cost. Only reach for video when the motion is genuinely not procedural.
 
 ## Cached assets
-- `assets/animated-backgrounds/ascii-art-2.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/animated-backgrounds/ascii-art-2.webp`)
+- `Assets/Backdrop-Supply/assets/animated-backgrounds/ascii-art-2.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/animated-backgrounds/ascii-art-2.webp`)
 
 ## Related
 - [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply index]]

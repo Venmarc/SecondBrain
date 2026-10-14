@@ -1,6 +1,6 @@
 # Victor's Second Brain (Personal Knowledge OS)
 
-> **One-line Summary**: Shared vault for Victor and agents — Momentum Phase 0 complete, Ledger Phase 3 in progress, and Tempire later. Product docs mirror Port Sites.
+> **One-line Summary**: Shared vault for Victor and agents — project hubs stay here, while full project documents stay beside each project in Documents.
 
 ---
 
@@ -9,7 +9,7 @@
 - **[Ledger](https://ledgerix.vercel.app)** — Personal expense/budget tracker · Phase 3 in progress; P3-A complete and P3-B paused · [hub](01-Projects/Ledger/Ledger.md)
 - **[Tempire](https://tempire.xyz/)** — Template marketplace · **later** · [hub](01-Projects/Tempire/Tempire.md)
 
-Product source of truth: `Documents/Port Sites/Category 5/<Project>/`. Vault `Docs/` are dated mirrors.
+Product source of truth: project folders under `Documents/`. This vault keeps project hubs, not project documentation libraries.
 
 ---
 
@@ -18,11 +18,11 @@ Product source of truth: `Documents/Port Sites/Category 5/<Project>/`. Vault `Do
 ```
 SecondBrain/
 ├── 00-Inbox/
-├── 01-Projects/          # Momentum, Ledger, Tempire
-├── 02-Areas/             # RedMane, Agent-Ops, Content, …
+├── 01-Projects/          # One hub per project
+├── 02-Areas/             # Content Creation
 ├── 03-Resources/         # Skills, Vault-Ops, MOCs
 ├── 04-Archive/
-├── 05-Daily/
+├── 05-Daily/             # Optional, currently cleared
 ├── 06-Agent-Sessions/    # Kept history (including older multi-CLI sessions)
 ├── Clippings/            # Immutable
 ├── scripts/
@@ -33,7 +33,7 @@ SecondBrain/
 
 ## Agent quickstart
 1. Read [BRAIN.md](BRAIN.md) + [AGENTS.md](AGENTS.md) + [index.md](index.md) for vault work.
-2. For app work: project hub + `PHASES.md`. Victor supervises; no orchestration engine.
+2. For app work: project hub + the current documents beside the project in `Documents/`. Victor supervises; no orchestration engine.
 3. Session end: session log under `06-Agent-Sessions/`; extract durable lessons when real.
 
-See [How Victor Works With Agents](02-Areas/Agent-Ops/How-Victor-Works-With-Agents.md).
+See [AGENTS.md](AGENTS.md) for the operating rules.

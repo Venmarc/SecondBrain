@@ -4,7 +4,7 @@
 
 **Status:** Weights verified against published defaults. Treat as *directional incentives*, not a viral formula.
 **Source repo:** github.com/xai-org/x-algorithm (Apache-2.0, first published ~2026-08-13, HEAD checked 2026-08-14)
-**Raw source:** [[raw/2026-08-15-grok-x-algorithm-viral-tactics|Grok extraction (immutable)]]
+**Raw source:** Deleted after this verified synthesis was retained.
 **Tags:** #x-algorithm #content #reference #verified
 
 ---
@@ -140,6 +140,6 @@ Filtered through §0, most of the "tactics" collapse into a short list:
 
 ## Related
 
-- [[raw/2026-08-15-grok-x-algorithm-viral-tactics|Raw Grok extraction (immutable source)]]
+- Raw Grok extraction was deleted after this verified synthesis was retained.
 - [[02-Areas/Content-Creation/Content-Creation|Content Creation]] — publishing cadence and weekly minimum
 - [[03-Resources/Vault-Ops/Better-Me-Better-Vault|Better Me, Better Vault]] — publishing loop

@@ -3,9 +3,8 @@
 # Momentum
 
 **Status:** Active — **Phase 0 (Foundation)** — *complete as of 2026-07-12* (Victor confirmed; auth page card-only cleanup deferred)  
-**Codebase:** `/home/redmane/Documents/Port Sites/Category 5/Momentum`  
+**Codebase and documents:** `Documents/Port-Sites/Category-5/Momentum/`
 **Live:** [Momentum](https://peakmomentum.vercel.app)
-**Vault sync:** Docs mirrored from Port Sites on **2026-07-09**. Edit project folder first.
 
 ## The one goal
 
@@ -14,25 +13,9 @@ If it doesn't serve daily personal use or portfolio impact → it does not exist
 
 **Not this project:** multi-user SaaS, social, heavy wellness modules, complex AI chatbot, over-engineered goals systems.
 
-## Active phase
+## Project documents
 
-Read [[01-Projects/Momentum/Docs/PHASES|PHASES]] every session. Agents: state the active phase before building. Nothing outside the active phase.
-
-## Doc set (synced)
-
-| Doc | Link |
-|-----|------|
-| README | [[01-Projects/Momentum/Docs/README|README]] |
-| PRD | [[01-Projects/Momentum/Docs/PRD|PRD]] |
-| TRD | [[01-Projects/Momentum/Docs/TRD|TRD]] |
-| PHASES | [[01-Projects/Momentum/Docs/PHASES|PHASES]] |
-| PAGE_SPECS | [[01-Projects/Momentum/Docs/PAGE_SPECS|PAGE_SPECS]] |
-| APP_FLOW | [[01-Projects/Momentum/Docs/APP_FLOW|APP_FLOW]] |
-| UIUX_BRIEF | [[01-Projects/Momentum/Docs/UIUX_BRIEF|UIUX_BRIEF]] |
-| SCHEMA | [[01-Projects/Momentum/Docs/SCHEMA|SCHEMA]] |
-| INSIGHTS | [[01-Projects/Momentum/Docs/INSIGHTS|INSIGHTS]] |
-| NOTES (project) | [[01-Projects/Momentum/Docs/NOTES|NOTES]] |
-| Agent guide (codebase) | [[01-Projects/Momentum/Docs/AGENTS|AGENTS]] |
+Full project documents live under `Documents/Port-Sites/Category-5/Momentum/`. The vault keeps this hub and durable lessons only.
 
 ## Vault-only
 

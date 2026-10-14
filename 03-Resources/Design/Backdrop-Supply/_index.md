@@ -24,7 +24,7 @@ See [[03-Resources/Design/Backdrop-Supply/04-Stylized-Landscape|04-Stylized-Land
 ## How an agent uses this
 
 1. **Pick a look by description, not by filename.** The family notes are grouped so you can ask "glowing cavern" or "gradient mesh" and land in the right note.
-2. **Cache first.** Files live in `assets/<collection>/`. Read `assets/manifest.json` for the local path,the source URL, the sampled palette and the resolution. Nothing needs re-scraping.
+2. **Cache first.** Files live in `Assets/Backdrop-Supply/assets/<collection>/`. Read the local manifest for the source URL, sampled palette, and resolution. Nothing needs re-scraping.
 3. **To pull a specific preview live**, the URL pattern is
    `https://app.backgrounds.supply/api/r2-public/previews/<collection>/<filename>.webp`, no auth needed.
    `assets/inventory-all-previews.json` lists all 117 filenames. Any extra query parameter returns 403, so

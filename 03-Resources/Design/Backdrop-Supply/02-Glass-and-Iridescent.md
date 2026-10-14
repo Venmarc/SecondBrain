@@ -40,15 +40,15 @@ Two independent vision passes compared a locally built iridescent/glass shader a
 For the flat film: sine interference modulated by an fbm thickness field, mapped through a palette, plus grain to break up the banding that `fract()` palette wrapping causes. The demo tile `holographic` is this technique. Keep shimmer low and keep black out of the palette or every wrap becomes a hard dark band. For the volumetric renders there is no shader recipe, generate them instead: the image tool takes reference images, so feed it a cached preview and ask for the same material and lighting at full resolution.
 
 ## Cached assets
-- `assets/chromatica/image-4.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/chromatica/image-4.webp`)
-- `assets/prismal/image-3.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/prismal/image-3.webp`)
-- `assets/iridescence/image-1.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/iridescence/image-1.webp`)
-- `assets/velvoura/image-8.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/velvoura/image-8.webp`)
-- `assets/aurorix/image-5.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/aurorix/image-5.webp`)
-- `assets/flora/image-5.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/flora/image-5.webp`)
-- `assets/surrealis-1/image-10.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/surrealis-1/image-10.webp`)
-- `assets/surrealis-2/image-15.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/surrealis-2/image-15.webp`)
-- `assets/surrealis-3/image-6.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/surrealis-3/image-6.webp`)
+- `Assets/Backdrop-Supply/assets/chromatica/image-4.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/chromatica/image-4.webp`)
+- `Assets/Backdrop-Supply/assets/prismal/image-3.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/prismal/image-3.webp`)
+- `Assets/Backdrop-Supply/assets/iridescence/image-1.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/iridescence/image-1.webp`)
+- `Assets/Backdrop-Supply/assets/velvoura/image-8.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/velvoura/image-8.webp`)
+- `Assets/Backdrop-Supply/assets/aurorix/image-5.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/aurorix/image-5.webp`)
+- `Assets/Backdrop-Supply/assets/flora/image-5.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/flora/image-5.webp`)
+- `Assets/Backdrop-Supply/assets/surrealis-1/image-10.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/surrealis-1/image-10.webp`)
+- `Assets/Backdrop-Supply/assets/surrealis-2/image-15.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/surrealis-2/image-15.webp`)
+- `Assets/Backdrop-Supply/assets/surrealis-3/image-6.webp` (source `https://app.backgrounds.supply/api/r2-public/previews/surrealis-3/image-6.webp`)
 
 ## Related
 - [[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply index]]

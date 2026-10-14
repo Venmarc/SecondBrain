@@ -75,13 +75,20 @@ Power-loss git corruption → recovery via reflog/object cleanup. Secure downloa
 
 Solves blank-page problem for creators. Vetted excellence vs random marketplace quality. Buyers get a real library; sellers get a pro dashboard. Shortcut from idea to launch.
 
-## Formal docs (kept separate — full specs)
+## Project documents
 
-Do not dump entire specs into this hub. When Tempire is active again, use:
+The vault keeps this hub only. The current external source is distributed across the project files and codebase:
 
-- [[01-Projects/Tempire/Docs/README|README]] · [[01-Projects/Tempire/Docs/PRD|PRD]] · [[01-Projects/Tempire/Docs/TRD|TRD]]  
-- [[01-Projects/Tempire/Docs/PAGE_SPECS|PAGE_SPECS]] · [[01-Projects/Tempire/Docs/APP_FLOW|APP_FLOW]] · [[01-Projects/Tempire/Docs/UIUX_BRIEF|UIUX_BRIEF]]  
-- [[01-Projects/Tempire/Docs/SCHEMA|SCHEMA]] · [[01-Projects/Tempire/Docs/PHASES|PHASES]]  
+| Former vault document | Current source of truth |
+|---|---|
+| `APP_FLOW.md` | `PROJECT.md`, `PHASES.md`, `proxy.ts`, and the current `app/` route tree |
+| `PAGE_SPECS.md` | `DESIGN.md`, `specs/features/SPEC_product-detail.md`, and the current `app/` and `components/` tree |
+| `PRD.md` | `PROJECT.md` and `README.md` |
+| `SCHEMA.md` | `supabase/migrations/`, `types/`, and `server/services/` |
+| `TRD.md` | `PROJECT.md`, `CONSTITUTION.md`, and the current application structure |
+| `UIUX_BRIEF.md` | `DESIGN.md`, `globals.css`, and the current UI components |
+
+These former vault mirrors were removed during the 2026-10-14 cleanup. The external Tempire repository was not modified by this cleanup.
 
 ## Related skills
 

@@ -68,7 +68,7 @@ X is the primary experimentation surface. LinkedIn is the more contextual develo
 
 ## Weekly Review: 30 Minutes
 
-Run one review each week under `05-Daily/weekly/`. Thirty minutes is the minimum commitment; continue only while the review remains useful.
+Run one review each week in a weekly review note. Keep it under `05-Daily/weekly/` when that optional space is in use. Thirty minutes is the minimum commitment; continue only while the review remains useful.
 
 1. Review unfinished decisions and evidence from previous actions.
 2. Ask what changed, what matters, what should be cut, and what Victor is avoiding.
