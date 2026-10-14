@@ -9,7 +9,7 @@
 1. **Obsidian CLI** — unavailable in this environment. Not used.
 2. **Temporary Python wikilink scanner** — exact-path and unique-basename resolution, with raw unresolved targets reported without classifying historical links, examples, bylines, or binary embeds.
 3. **Targeted folder scans** — separate checks for `04-Archive/` and `05-Daily/` after edits.
-4. **`git diff --check`** — targeted check passed for this maintenance pass. The full worktree check reports an existing trailing-space line in the intentionally retained `00-Inbox/Idiom Idea.md`.
+4. **`git diff --check`** — full and targeted checks passed for this maintenance pass, including the committed cleanup diff.
 5. **Defuddle** — available at version 0.19.1; no ingest was run.
 
 ## 2026-10-14 Maintenance Addendum
