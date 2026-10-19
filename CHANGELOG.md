@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### 2026-10-14 — Direct lesson loop
+
+#### Added
+- **[[03-Resources/Vault-Ops/Lesson-Loop|Lesson Loop]]** — direct extraction into project hubs, Resources, Skills, Areas, or Inbox decisions; no retro archive.
+- A replay-safe lesson-loop CLI with correction correlation, Clef routing, evidence-backed writes, Inbox resolution, and a 09:00 systemd timer.
+
+#### Changed
+- Session lesson extraction now promotes supported facts and rules directly to their durable destinations.
+- Unclear extraction destinations remain in `00-Inbox` until Victor decides.
+
 ### 2026-10-14 — Agent-session extraction and Clone-Website reset
 
 #### Added
@@ -886,3 +896,9 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 ## 2026-10-11
 
 - vault backup: 2026-10-11 01:25:50 (5c76005)
+
+## 2026-10-18
+
+- Marked Gap 5 (no task contract) and Gap 8 (no closed retro loop) as addressed in [[03-Resources/Principles/04-Current-System-Gap-Analysis|Current System Gap Analysis]], with per-gap status lines.
+- The fixes live outside the vault, in the shared agent runtime: the router contract, the work-router skill, the lesson-loop skill, and the lesson-loop tool. This changelog records the vault-side status change only.
+- Open and recorded in the runtime lesson log: workflow-runner gives non-project work no elevation phase, and nothing enforces the new route-card fields yet.

@@ -2,6 +2,8 @@
 
 # Current System Gap Analysis
 
+> **Status (2026-10-18):** Gap 5 and Gap 8 are addressed. Each carries a status line below. No other gap was re-verified in this pass.
+
 ## What already works
 
 - A universal constitution exists for all session types.
@@ -60,6 +62,8 @@ Stronger alternative: define a tool policy that selects by source shape and task
 
 ## Gap 5: No task contract
 
+> **Status (2026-10-18): addressed in the router documents.** The route card now carries `Novelty`, `Standard`, and `Oracle`, and `Read next` requires the specialist skill plus the name of the rejected generalist. `Standard` and `Oracle` are required when novelty is partial or first-time. Nothing enforces the fields yet, so cold-start verification is still pending.
+
 Most prompts contain an idea, but not always a goal, scope, risk, evidence target, stop condition, or allowed external effects.
 
 Result: the agent must infer the operating contract and may stop at a plausible intermediate result.
@@ -83,6 +87,8 @@ Result: a final summary can list actions without proving the intended behavior.
 Stronger alternative: every non-trivial task ends with goal status, changed files, checks run, observed evidence, unresolved gaps, and merge or external-effect danger.
 
 ## Gap 8: The environment has no closed retro loop
+
+> **Status (2026-10-18): addressed in the tool and the skill.** The destination vocabulary now includes the shared agent runtime (skills and reference docs) when a candidate is a rule about agent behavior, and `lesson-loop resolve --destination runtime` writes there. The lesson-loop skill gained a four-outcome promotion table and the rule that a skill never lives in the vault. Verified with a temp-root test on 2026-10-18.
 
 `retro` exists, but it is not yet a standard closing route for hard sessions. The current system can record what happened without always turning the cause into a pointer, check, standard, or tool improvement.
 

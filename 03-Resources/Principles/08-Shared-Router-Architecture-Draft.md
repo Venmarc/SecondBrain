@@ -2,7 +2,7 @@
 
 # Shared Router Architecture Draft
 
-**Status:** Design discussion. Runtime files and tools have not been installed or changed.
+**Status:** Design discussion with the shared router runtime installed locally; this note remains the architecture reference.
 
 ## Direction supplied by Victor
 

@@ -59,6 +59,7 @@ Marketplace at https://tempire.xyz/ — demoted until frontend skills improve. C
 - 🌌 **[[03-Resources/Design/Backdrop-Supply/_index|Backdrop Supply]]** — full-bleed backdrop collection (31 cached freebies + sampled palettes, 7 style-family notes, 32-mode shader engine with 61 presets, verified code recipes)
 - ⚙️ Skills under `03-Resources/Skills/` (nav shell, dashboard, anti-slop watchlist, Frontend Awesomeness, …)
 - 🧰 **[[03-Resources/Vault-Ops/Session-Lesson-Extraction-Idea|Session lesson extraction (draft)]]**
+- 🧠 **[[03-Resources/Vault-Ops/Lesson-Loop|Lesson loop]]** — direct fact and rule extraction, Clef routing, Inbox decisions, and daily processing
 - 🧾 **[[03-Resources/Vault-Ops/Resources-Action-Report-2026-10-14|Resources action report]]** — keep now; review Skills, Principles, Tools, and Design clusters later
 - 🧰 **[[03-Resources/Vault-Ops/Vault-Improvement-Backlog|Vault improvement backlog]]**
 - 🧭 **[[03-Resources/Vault-Ops/Better-Me-Better-Vault|Better Me, Better Vault]]** — Decision support + development publishing

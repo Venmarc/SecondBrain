@@ -128,7 +128,8 @@ Scan the entire vault and flag/fix:
 1. If agentmemory is up: `memory_save` — decisions, fixes, reusable patterns (`concepts` + `files`).
 2. Write `06-Agent-Sessions/YYYY-MM-DD-<agent>-<slug>.md` using [[Templates/Agent-Session-Summary|Agent-Session-Summary]] (mandatorily documenting user prompts verbatim, reference files/media with context, and failures/subagent snags).
 3. Append [[CHANGELOG|CHANGELOG.md]] if structure changed; update [[index|index.md]] if new notes were added.
-4. **Lesson extraction (minimal rule):** after project sessions, promote **0–3** reusable lessons to the project hub `## Lessons log` or an existing skill (grep first). See [[03-Resources/Vault-Ops/Session-Lesson-Extraction-Idea|Session Lesson Extraction]].
+4. **Lesson extraction:** after project sessions, run the lesson loop when available. Promote **0–3** evidence-backed facts or rules directly to the narrowest existing project, Resources, Skills, or Areas destination. Put unclear routing decisions in `00-Inbox`. See [[03-Resources/Vault-Ops/Lesson-Loop|Lesson Loop]].
+   During a session, queue a direct correction with `lesson-loop record --triage --only-correction`; the post-session run correlates it with evidence before writing.
 
 **Bridge rule:** When a vault note documents a reusable fix (not journey-only), also `memory_save` the core insight when agentmemory is healthy.
 
