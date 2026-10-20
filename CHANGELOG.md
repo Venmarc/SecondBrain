@@ -902,3 +902,17 @@ Two-session cleanup pass over `06-Agent-Sessions/` (raw logs → extracted knowl
 - Marked Gap 5 (no task contract) and Gap 8 (no closed retro loop) as addressed in [[03-Resources/Principles/04-Current-System-Gap-Analysis|Current System Gap Analysis]], with per-gap status lines.
 - The fixes live outside the vault, in the shared agent runtime: the router contract, the work-router skill, the lesson-loop skill, and the lesson-loop tool. This changelog records the vault-side status change only.
 - Open and recorded in the runtime lesson log: workflow-runner gives non-project work no elevation phase, and nothing enforces the new route-card fields yet.
+
+## 2026-10-14
+
+- docs: correct lint evidence (4e8c533)
+- docs: finalize vault cleanup (a0b7da7)
+- vault backup: 2026-10-14 11:15:20 (b77767f)
+- Merge remote-tracking branch 'origin/main' (81dc10a)
+- vault backup: 2026-10-14 05:22:29 (8859912)
+
+
+## 2026-10-20
+
+- vault backup: 2026-10-20 00:42:39 (0b97886)
+
